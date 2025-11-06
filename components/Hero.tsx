@@ -74,14 +74,14 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Government Seal */}
-        <div ref={sealRef} className="mb-8 flex justify-center opacity-0">
+        <div ref={sealRef} className="mb-6 md:mb-8 flex justify-center opacity-0">
           <Image
             src="/logo.png"
             alt="Department of Gambling Official Seal"
-            width={180}
-            height={180}
+            width={120}
+            height={120}
             priority
-            className="filter drop-shadow-2xl"
+            className="filter drop-shadow-2xl md:w-[180px] md:h-[180px]"
           />
         </div>
 
@@ -95,7 +95,7 @@ export default function Hero() {
         {/* Main Title */}
         <h1
           ref={titleRef}
-          className="text-6xl md:text-8xl font-semibold text-white mb-4 opacity-0"
+          className="text-4xl sm:text-6xl md:text-8xl font-semibold text-white mb-4 opacity-0 leading-tight"
         >
           DEPARTMENT OF
           <br />
@@ -105,7 +105,7 @@ export default function Hero() {
         {/* Subtitle */}
         <p
           ref={subtitleRef}
-          className="text-xl md:text-2xl font-medium text-secondary-light mb-6 opacity-0"
+          className="text-lg sm:text-xl md:text-2xl font-medium text-secondary-light mb-6 opacity-0"
           style={{ letterSpacing: '0.04em' }}
         >
           Office of Odds & Wagers
@@ -130,7 +130,7 @@ export default function Hero() {
         <button
           ref={ctaRef}
           onClick={handleScrollToPortfolio}
-          className="group relative px-8 py-4 bg-transparent border-2 border-accent text-white font-bold text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:border-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)] opacity-0"
+          className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-accent text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:border-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)] opacity-0"
         >
           VIEW PORTFOLIO
           <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">

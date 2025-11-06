@@ -68,20 +68,20 @@ export default function QuantitativeMetrics() {
       <div className="max-w-6xl mx-auto relative z-10">
         <div
           ref={contentRef}
-          className="bg-primary-dark bg-opacity-40 backdrop-blur-sm border border-secondary-light border-opacity-20 rounded-sm p-10 md:p-12 opacity-0"
+          className="bg-primary-dark bg-opacity-40 backdrop-blur-sm border border-secondary-light border-opacity-20 rounded-sm p-6 sm:p-8 md:p-12 opacity-0"
         >
           {/* Header */}
-          <h2 className="text-4xl md:text-5xl font-semibold text-white text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-white text-center mb-8 md:mb-12">
             QUANTITATIVE ANALYSIS
           </h2>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-10">
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Sharpe Ratio
               </div>
-              <div className="text-3xl data-value text-white mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
                 {sharpeRatio ? sharpeRatio.toFixed(2) : (sharpeRatioNote || 'N/A')}
               </div>
               {!sharpeRatio && sharpeRatioNote && (
@@ -92,53 +92,53 @@ export default function QuantitativeMetrics() {
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Max Drawdown
               </div>
-              <div className="text-3xl data-value text-loss mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
                 {formatCurrency(maxDrawdown)}
               </div>
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Avg Win
               </div>
-              <div className="text-3xl data-value text-success mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-success mono-number">
                 {formatCurrency(avgWin, false)}
               </div>
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Avg Loss
               </div>
-              <div className="text-3xl data-value text-loss mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
                 {formatCurrency(avgLoss)}
               </div>
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Profit Factor
               </div>
-              <div className="text-3xl data-value text-white mono-number">{profitFactor.toFixed(2)}</div>
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">{profitFactor.toFixed(2)}</div>
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Unit Efficiency
               </div>
-              <div className="text-3xl data-value text-success mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-success mono-number">
                 {unitEfficiency.toFixed(1)}%
               </div>
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Closing Line Value
               </div>
-              <div className="text-3xl data-value text-white mono-number">
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
                 +{closingLineValue.toFixed(1)}¢
               </div>
               {closingLineValueNote && (
@@ -149,10 +149,10 @@ export default function QuantitativeMetrics() {
             </div>
 
             <div>
-              <div className="text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Kelly Utilization
               </div>
-              <div className="text-3xl data-value text-white mono-number">{kellyUtilization}%</div>
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">{kellyUtilization}%</div>
             </div>
           </div>
 

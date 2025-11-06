@@ -167,8 +167,8 @@ export default function PortfolioChart() {
     <section ref={sectionRef} className="py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary mb-4">
             PORTFOLIO GROWTH
           </h2>
         </div>
@@ -176,15 +176,15 @@ export default function PortfolioChart() {
         {/* Chart Container */}
         <div
           ref={chartContainerRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-8 shadow-lg opacity-0"
+          className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-6 md:p-8 shadow-lg opacity-0"
         >
           <Line data={chartData} options={options} />
 
           {/* Timeframe Toggle */}
-          <div className="flex justify-center gap-4 mt-8 pt-6 border-t border-gray-200">
+          <div className="flex justify-center gap-2 sm:gap-4 mt-6 sm:mt-8 pt-6 border-t border-gray-200">
             <button
               onClick={() => setTimeframe('30days')}
-              className={`px-6 py-2 font-bold text-sm tracking-wide transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 ${
                 timeframe === '30days'
                   ? 'bg-primary text-white'
                   : 'bg-gray-100 text-text hover:bg-gray-200'
@@ -194,7 +194,7 @@ export default function PortfolioChart() {
             </button>
             <button
               onClick={() => setTimeframe('60days')}
-              className={`px-6 py-2 font-bold text-sm tracking-wide transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 ${
                 timeframe === '60days'
                   ? 'bg-primary text-white'
                   : 'bg-gray-100 text-text hover:bg-gray-200'
@@ -205,7 +205,7 @@ export default function PortfolioChart() {
             </button>
             <button
               onClick={() => setTimeframe('alltime')}
-              className={`px-6 py-2 font-bold text-sm tracking-wide transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 ${
                 timeframe === 'alltime'
                   ? 'bg-primary text-white'
                   : 'bg-gray-100 text-text hover:bg-gray-200'

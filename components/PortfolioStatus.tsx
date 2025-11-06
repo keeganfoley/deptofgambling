@@ -51,10 +51,10 @@ function StatCard({ label, value, subLabel, subValue, colorClass = 'text-primary
       ref={cardRef}
       className="bg-white rounded-sm shadow-md border border-gray-200 p-6 card-float opacity-0"
     >
-      <div className="data-label text-sm uppercase mb-3">
+      <div className="data-label text-xs sm:text-sm uppercase mb-3">
         {label}
       </div>
-      <div className={`text-3xl md:text-4xl data-value mono-number mb-2 ${colorClass}`}>
+      <div className={`text-2xl sm:text-3xl md:text-4xl data-value mono-number mb-2 ${colorClass}`}>
         {displayValue || value}
       </div>
       {subLabel && (
@@ -83,11 +83,11 @@ export default function PortfolioStatus() {
     <section id="portfolio" ref={sectionRef} className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary mb-4">
             PORTFOLIO STATUS
           </h2>
-          <p className="text-text-muted text-lg font-normal">
+          <p className="text-text-muted text-base sm:text-lg font-normal">
             As of {formatDate(asOfDate)}
           </p>
         </div>

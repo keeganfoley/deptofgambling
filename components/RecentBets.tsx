@@ -80,7 +80,7 @@ function BetCard({ bet, index }: BetCardProps) {
 
       {/* Bet Details */}
       <div className="mb-4">
-        <div className="text-lg font-bold text-primary mb-1">
+        <div className="text-base sm:text-lg font-bold text-primary mb-1">
           {bet.description} ({formatOdds(bet.odds)})
         </div>
         <div className="text-sm text-text-muted">
@@ -187,7 +187,7 @@ export default function RecentBets() {
             className="h-[2px] bg-primary mb-6"
             style={{ transformOrigin: 'center' }}
           />
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
             RECENT POSITIONS
           </h2>
           <div

@@ -22,6 +22,12 @@ body {
   color: #2C3E50;
   font-family: var(--font-geist-sans);
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal overflow on mobile */
+html {
+  overflow-x: hidden;
 }
 
 /* Grid pattern that appears more prominently on dark sections */

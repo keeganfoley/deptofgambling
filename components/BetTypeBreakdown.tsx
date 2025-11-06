@@ -105,8 +105,8 @@ export default function BetTypeBreakdown() {
     <section ref={sectionRef} className="py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary mb-4">
             PERFORMANCE BY CATEGORY
           </h2>
         </div>

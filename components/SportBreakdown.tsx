@@ -198,7 +198,7 @@ export default function SportBreakdown() {
             className="h-[2px] bg-primary mb-6"
             style={{ transformOrigin: 'center' }}
           />
-          <h2 className="text-4xl md:text-5xl font-semibold text-primary text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
             THE SPORTS
           </h2>
           <div

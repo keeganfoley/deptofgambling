@@ -113,21 +113,21 @@ export default async function BetDetailPage({
         </Link>
 
         {/* Header Card */}
-        <div className={`card-float p-8 mb-8 border-l-4 ${isWin ? 'border-success' : 'border-loss'}`}>
-          <div className="flex items-start justify-between mb-4">
-            <div>
-              <h1 className="text-3xl font-bold text-primary mb-2">
+        <div className={`card-float p-6 sm:p-8 mb-8 border-l-4 ${isWin ? 'border-success' : 'border-loss'}`}>
+          <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 mb-4">
+            <div className="flex-1">
+              <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
                 {analysis.player} {analysis.line}
               </h1>
-              <p className="text-steel text-lg">
+              <p className="text-steel text-base sm:text-lg">
                 {analysis.gameDetails.matchup} • {formatDate(analysis.gameDetails.date)}
               </p>
             </div>
-            <div className={`text-right ${isWin ? 'text-success' : 'text-loss'}`}>
-              <div className="text-4xl font-bold mb-1">
+            <div className={`text-left sm:text-right ${isWin ? 'text-success' : 'text-loss'}`}>
+              <div className="text-3xl sm:text-4xl font-bold mb-1">
                 {isWin ? '✅ HIT' : '❌ MISS'}
               </div>
-              <div className="text-2xl font-bold">
+              <div className="text-xl sm:text-2xl font-bold">
                 {formatCurrency(analysis.profit, true)}
               </div>
             </div>
@@ -156,8 +156,8 @@ export default async function BetDetailPage({
         </div>
 
         {/* Pre-Game Analysis */}
-        <section className="card-float p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
             📊 Pre-Game Analysis
           </h2>
 
@@ -233,8 +233,8 @@ export default async function BetDetailPage({
         </section>
 
         {/* Game Results */}
-        <section className="card-float p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
             📈 Game Results
           </h2>
 
@@ -299,8 +299,8 @@ export default async function BetDetailPage({
         </section>
 
         {/* Post-Game Analysis */}
-        <section className="card-float p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
             🔍 Post-Game Analysis
           </h2>
 
@@ -356,8 +356,8 @@ export default async function BetDetailPage({
         </section>
 
         {/* Closing Line Value */}
-        <section className="card-float p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
             💰 Closing Line Value (CLV)
           </h2>
 
@@ -391,8 +391,8 @@ export default async function BetDetailPage({
         </section>
 
         {/* Key Takeaways */}
-        <section className="card-float p-8 mb-8">
-          <h2 className="text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
             📝 Key Takeaways
           </h2>
 
