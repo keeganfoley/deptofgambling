@@ -72,6 +72,17 @@ html {
   backface-visibility: hidden;
 }
 
+/* Mobile performance optimization - reduce GPU usage */
+@media (max-width: 768px) {
+  * {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  .card-float:hover {
+    transform: none;
+  }
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

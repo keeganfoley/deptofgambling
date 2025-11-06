@@ -14,54 +14,66 @@ export default function Hero() {
   const ctaRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+    const isMobile = window.innerWidth < 768;
 
-    // Seal fade in
-    tl.fromTo(
-      sealRef.current,
-      { opacity: 0, scale: 0.8 },
-      { opacity: 1, scale: 1, duration: 1 }
-    );
+    if (isMobile) {
+      // Simpler, faster animations for mobile
+      gsap.set([sealRef.current, lineTopRef.current, lineBottomRef.current, titleRef.current, subtitleRef.current, taglineRef.current, ctaRef.current], { opacity: 1 });
+      gsap.fromTo(
+        [sealRef.current, titleRef.current, subtitleRef.current, taglineRef.current, ctaRef.current],
+        { opacity: 0, y: 15 },
+        { opacity: 1, y: 0, duration: 0.5, stagger: 0.08, ease: 'power2.out' }
+      );
+      gsap.fromTo(
+        [lineTopRef.current, lineBottomRef.current],
+        { scaleX: 0 },
+        { scaleX: 1, duration: 0.4, ease: 'power2.out', delay: 0.2 }
+      );
+    } else {
+      // Full desktop animations
+      const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
 
-    // Lines draw from center outward
-    tl.fromTo(
-      [lineTopRef.current, lineBottomRef.current],
-      { scaleX: 0, transformOrigin: 'center' },
-      { scaleX: 1, duration: 0.8 },
-      '-=0.5'
-    );
+      tl.fromTo(
+        sealRef.current,
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 1 }
+      );
 
-    // Title type-in effect (character by character would be too complex, so we'll use a reveal)
-    tl.fromTo(
-      titleRef.current,
-      { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.6 },
-      '-=0.4'
-    );
+      tl.fromTo(
+        [lineTopRef.current, lineBottomRef.current],
+        { scaleX: 0, transformOrigin: 'center' },
+        { scaleX: 1, duration: 0.8 },
+        '-=0.5'
+      );
 
-    // Subtitle fade in
-    tl.fromTo(
-      subtitleRef.current,
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.5 },
-      '-=0.2'
-    );
+      tl.fromTo(
+        titleRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6 },
+        '-=0.4'
+      );
 
-    // Tagline fade in
-    tl.fromTo(
-      taglineRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 0.5 },
-      '-=0.2'
-    );
+      tl.fromTo(
+        subtitleRef.current,
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.5 },
+        '-=0.2'
+      );
 
-    // CTA button
-    tl.fromTo(
-      ctaRef.current,
-      { opacity: 0, y: 10 },
-      { opacity: 1, y: 0, duration: 0.4 },
-      '-=0.1'
-    );
+      tl.fromTo(
+        taglineRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5 },
+        '-=0.2'
+      );
+
+      tl.fromTo(
+        ctaRef.current,
+        { opacity: 0, y: 10 },
+        { opacity: 1, y: 0, duration: 0.4 },
+        '-=0.1'
+      );
+    }
   }, []);
 
   const handleScrollToPortfolio = () => {

@@ -21,23 +21,43 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Slide in from right with staggered delay
-    gsap.fromTo(
-      cardRef.current,
-      { x: 100, opacity: 0 },
-      {
-        x: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: index * 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      // Minimal mobile animation
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.3,
+          delay: index * 0.08,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 92%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        cardRef.current,
+        { x: 100, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: index * 0.15,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }
   }, [index]);
 
   // Add subtle glow for best performer (Props has highest ROI)

@@ -40,17 +40,19 @@ export default function PortfolioChart() {
   const [timeframe, setTimeframe] = useState<TimeframeType>('30days');
 
   useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
     gsap.fromTo(
       chartContainerRef.current,
-      { y: 50, opacity: 0 },
+      { y: isMobile ? 20 : 50, opacity: 0 },
       {
         y: 0,
         opacity: 1,
-        duration: 1,
-        ease: 'power3.out',
+        duration: isMobile ? 0.5 : 1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 75%',
+          start: 'top 80%',
           toggleActions: 'play none none none',
         },
       }

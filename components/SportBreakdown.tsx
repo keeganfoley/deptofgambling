@@ -36,41 +36,75 @@ function SportCard({
   const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Card fade in from bottom
-    gsap.fromTo(
-      cardRef.current,
-      { y: 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.6,
-        delay: index * 0.2,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
-
-    // Progress bar animation
+    const isMobile = window.innerWidth < 768;
     const progressPercent = (gamesAnalyzed / totalGames) * 100;
-    gsap.fromTo(
-      progressBarRef.current,
-      { width: '0%' },
-      {
-        width: `${progressPercent}%`,
-        duration: 1.5,
-        delay: index * 0.2 + 0.3,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+
+    if (isMobile) {
+      // Simpler mobile animations
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.4,
+          delay: index * 0.08,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+      gsap.fromTo(
+        progressBarRef.current,
+        { width: '0%' },
+        {
+          width: `${progressPercent}%`,
+          duration: 0.8,
+          delay: index * 0.08 + 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    } else {
+      // Full desktop animations
+      gsap.fromTo(
+        cardRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          delay: index * 0.2,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+      gsap.fromTo(
+        progressBarRef.current,
+        { width: '0%' },
+        {
+          width: `${progressPercent}%`,
+          duration: 1.5,
+          delay: index * 0.2 + 0.3,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 85%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }
   }, [index, gamesAnalyzed, totalGames]);
 
   return (

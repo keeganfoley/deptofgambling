@@ -36,22 +36,43 @@ function BetCard({ bet, index }: BetCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      cardRef.current,
-      { y: 30, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.5,
-        delay: index * 0.1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: cardRef.current,
-          start: 'top 90%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      // Minimal animation on mobile for performance
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 0.3,
+          delay: index * 0.05,
+          ease: 'power1.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 95%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    } else {
+      gsap.fromTo(
+        cardRef.current,
+        { y: 30, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          delay: index * 0.1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: 'top 90%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    }
   }, [index]);
 
   const isWin = bet.result === 'win';
@@ -134,7 +155,7 @@ function BetCard({ bet, index }: BetCardProps) {
       <Link href={`/bets/${bet.slug}`}>
         <div
           ref={cardRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
+          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer md:transform md:hover:-translate-y-1"
         >
           {cardContent}
         </div>
