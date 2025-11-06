@@ -78,10 +78,11 @@ export default function Hero() {
           <Image
             src="/logo.png"
             alt="Department of Gambling Official Seal"
-            width={120}
-            height={120}
+            width={180}
+            height={180}
+            quality={95}
             priority
-            className="filter drop-shadow-2xl md:w-[180px] md:h-[180px]"
+            className="filter drop-shadow-2xl w-[120px] h-[120px] md:w-[180px] md:h-[180px]"
           />
         </div>
 
