@@ -11,7 +11,7 @@ export default function Hero() {
   const taglineRef = useRef<HTMLParagraphElement>(null);
   const lineTopRef = useRef<HTMLDivElement>(null);
   const lineBottomRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLButtonElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
@@ -81,6 +81,11 @@ export default function Hero() {
     portfolioSection?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const handleScrollToSignup = () => {
+    const signupSection = document.getElementById('email-signup');
+    signupSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center bg-primary grid-background overflow-hidden">
       {/* Content */}
@@ -139,17 +144,27 @@ export default function Hero() {
           style={{ transformOrigin: 'center' }}
         />
 
-        {/* CTA Button */}
-        <button
-          ref={ctaRef}
-          onClick={handleScrollToPortfolio}
-          className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-accent text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:border-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)] opacity-0"
-        >
-          VIEW PORTFOLIO
-          <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">
-            ↓
-          </span>
-        </button>
+        {/* CTA Buttons */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0" ref={ctaRef}>
+          <button
+            onClick={handleScrollToPortfolio}
+            className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-accent text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:border-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)]"
+          >
+            VIEW PORTFOLIO
+            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">
+              ↓
+            </span>
+          </button>
+          <button
+            onClick={handleScrollToSignup}
+            className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-gradient-to-r from-[#c5a572] to-[#d4b886] border-2 border-[#d4b886] text-[#0a1f44] font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:shadow-[0_0_30px_rgba(212,184,134,0.5)]"
+          >
+            GET EARLY ACCESS
+            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">
+              ↓
+            </span>
+          </button>
+        </div>
       </div>
 
       {/* Subtle gradient overlay */}

@@ -9,6 +9,7 @@ import QuantitativeMetrics from '@/components/QuantitativeMetrics';
 import PortfolioChart from '@/components/PortfolioChart';
 import TwitterCTA from '@/components/TwitterCTA';
 import Disclaimer from '@/components/Disclaimer';
+import EmailSignup from '@/components/EmailSignup';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       <QuantitativeMetrics />
       <PortfolioChart />
       <Disclaimer />
+      <EmailSignup />
       <Footer />
     </main>
   );

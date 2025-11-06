@@ -42,13 +42,6 @@ export default function Footer() {
           </a>
           <span className="text-secondary-light opacity-40">|</span>
           <a
-            href="#contact"
-            className="text-secondary-light hover:text-accent transition-colors duration-300 font-semibold tracking-wide"
-          >
-            Contact
-          </a>
-          <span className="text-secondary-light opacity-40">|</span>
-          <a
             href="https://x.com/DeptOfGambling"
             target="_blank"
             rel="noopener noreferrer"
