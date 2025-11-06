@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import SystemIntro from '@/components/SystemIntro';
 import PortfolioStatus from '@/components/PortfolioStatus';
 import SportBreakdown from '@/components/SportBreakdown';
 import BetTypeBreakdown from '@/components/BetTypeBreakdown';
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden">
       <Hero />
+      <SystemIntro />
       <TwitterCTA />
       <PortfolioStatus />
       <SportBreakdown />
