@@ -44,7 +44,21 @@ export default function QuantitativeMetrics() {
     closingLineValue,
     closingLineValueNote,
     kellyUtilization,
-  } = metricsData;
+  } = metricsData as {
+    sharpeRatio: number | null;
+    sharpeRatioNote: string;
+    maxDrawdown: number;
+    avgWin: number;
+    avgLoss: number;
+    avgProfitPerBet: number;
+    largestWin: number;
+    largestLoss: number;
+    profitFactor: number;
+    unitEfficiency: number;
+    closingLineValue: number;
+    closingLineValueNote: string;
+    kellyUtilization: number;
+  };
 
   return (
     <section ref={sectionRef} className="py-20 px-4 bg-primary grid-background relative">

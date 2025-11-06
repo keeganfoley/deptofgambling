@@ -158,7 +158,7 @@ export default function RecentBets() {
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
   // Show only the most recent 5 bets
-  const recentBets = betsData.slice(0, 5);
+  const recentBets = (betsData as Bet[]).slice(0, 5);
 
   useEffect(() => {
     gsap.fromTo(
