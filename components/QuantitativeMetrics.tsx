@@ -61,7 +61,7 @@ export default function QuantitativeMetrics() {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-primary grid-background relative">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-primary grid-background relative">
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-secondary opacity-90 pointer-events-none" />
 
@@ -76,7 +76,7 @@ export default function QuantitativeMetrics() {
           </h2>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-10">
             <div>
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Sharpe Ratio

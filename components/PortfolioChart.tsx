@@ -78,10 +78,10 @@ export default function PortfolioChart() {
           gradient.addColorStop(1, 'rgba(74, 144, 226, 0)');
           return gradient;
         },
-        borderWidth: 3,
-        tension: 0.1,
+        borderWidth: 2.5,
+        tension: 0.2,
         pointRadius: 0,
-        pointHoverRadius: 6,
+        pointHoverRadius: 5,
         pointHoverBackgroundColor: '#FF0080',
         pointHoverBorderColor: '#FFFFFF',
         pointHoverBorderWidth: 2,
@@ -96,6 +96,9 @@ export default function PortfolioChart() {
     interaction: {
       mode: 'index',
       intersect: false,
+    },
+    animation: {
+      duration: 750,
     },
     plugins: {
       legend: {
@@ -164,7 +167,7 @@ export default function PortfolioChart() {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-background">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">

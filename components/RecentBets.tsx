@@ -134,7 +134,7 @@ function BetCard({ bet, index }: BetCardProps) {
       <Link href={`/bets/${bet.slug}`}>
         <div
           ref={cardRef}
-          className="bg-white rounded-sm border border-gray-200 p-6 hover:shadow-lg hover:border-accent/30 transition-all duration-300 cursor-pointer"
+          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer transform hover:-translate-y-1"
         >
           {cardContent}
         </div>
@@ -145,7 +145,7 @@ function BetCard({ bet, index }: BetCardProps) {
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300"
+      className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-lg transition-all duration-300"
     >
       {cardContent}
     </div>
@@ -178,7 +178,7 @@ export default function RecentBets() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-white">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="mb-16">
@@ -198,7 +198,7 @@ export default function RecentBets() {
         </div>
 
         {/* Bet Timeline */}
-        <div className="space-y-6">
+        <div className="space-y-5 sm:space-y-6">
           {recentBets.map((bet, index) => (
             <BetCard key={bet.id} bet={bet} index={index} />
           ))}

@@ -46,13 +46,13 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
   return (
     <div
       ref={cardRef}
-      className={`bg-white rounded-sm border-2 p-6 transition-all duration-300 opacity-0 ${
+      className={`bg-white rounded-sm border-2 p-5 sm:p-6 transition-all duration-300 opacity-0 ${
         isBest
           ? 'border-accent shadow-[0_0_20px_rgba(255,0,128,0.2)]'
           : 'border-gray-200 card-float'
       }`}
     >
-      <h3 className="text-2xl font-medium text-primary mb-6" style={{ letterSpacing: '0.02em' }}>{type}</h3>
+      <h3 className="text-xl sm:text-2xl font-medium text-primary mb-6" style={{ letterSpacing: '0.02em' }}>{type}</h3>
 
       <div className="space-y-4">
         <div>
@@ -102,7 +102,7 @@ export default function BetTypeBreakdown() {
   const betTypes = metricsData.betTypeBreakdown;
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-background">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
@@ -112,7 +112,7 @@ export default function BetTypeBreakdown() {
         </div>
 
         {/* Bet Type Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {Object.values(betTypes).map((betType, index) => (
             <BetTypeCard
               key={betType.type}

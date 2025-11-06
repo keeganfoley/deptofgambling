@@ -70,7 +70,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center bg-primary grid-background overflow-hidden">
+    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center bg-primary grid-background overflow-hidden">
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Government Seal */}
@@ -89,7 +89,7 @@ export default function Hero() {
         {/* Top horizontal line */}
         <div
           ref={lineTopRef}
-          className="h-[2px] bg-gradient-to-r from-transparent via-secondary-light to-transparent mb-12 max-w-2xl mx-auto"
+          className="h-[1.5px] sm:h-[2px] bg-gradient-to-r from-transparent via-secondary-light to-transparent mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto"
           style={{ transformOrigin: 'center' }}
         />
 
@@ -123,7 +123,7 @@ export default function Hero() {
         {/* Bottom horizontal line */}
         <div
           ref={lineBottomRef}
-          className="h-[2px] bg-gradient-to-r from-transparent via-secondary-light to-transparent mb-12 max-w-2xl mx-auto"
+          className="h-[1.5px] sm:h-[2px] bg-gradient-to-r from-transparent via-secondary-light to-transparent mb-8 sm:mb-12 max-w-xl sm:max-w-2xl mx-auto"
           style={{ transformOrigin: 'center' }}
         />
 

@@ -22,19 +22,21 @@ function StatCard({ label, value, subLabel, subValue, colorClass = 'text-primary
   const [displayValue, setDisplayValue] = useState('');
 
   useEffect(() => {
-    // Staggered slide-in from left
+    const isMobile = window.innerWidth < 768;
+
+    // Lighter animation on mobile for performance
     gsap.fromTo(
       cardRef.current,
-      { x: -100, opacity: 0 },
+      { y: isMobile ? 20 : -100, opacity: 0 },
       {
-        x: 0,
+        y: 0,
         opacity: 1,
-        duration: 0.6,
-        delay: index * 0.1,
-        ease: 'power3.out',
+        duration: isMobile ? 0.4 : 0.6,
+        delay: index * (isMobile ? 0.05 : 0.1),
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: cardRef.current,
-          start: 'top 85%',
+          start: 'top 90%',
           toggleActions: 'play none none none',
         },
       }
@@ -43,13 +45,13 @@ function StatCard({ label, value, subLabel, subValue, colorClass = 'text-primary
     // Animate the value counting up
     setTimeout(() => {
       setDisplayValue(value);
-    }, 300 + index * 100);
+    }, 200 + index * (isMobile ? 50 : 100));
   }, [value, index]);
 
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm shadow-md border border-gray-200 p-6 card-float opacity-0"
+      className="bg-white rounded-sm shadow-md border-2 border-gray-200 p-5 sm:p-6 card-float opacity-0"
     >
       <div className="data-label text-xs sm:text-sm uppercase mb-3">
         {label}
@@ -80,7 +82,7 @@ export default function PortfolioStatus() {
   const asOfDate = portfolioData.asOfDate;
 
   return (
-    <section id="portfolio" ref={sectionRef} className="py-20 px-4 bg-background">
+    <section id="portfolio" ref={sectionRef} className="py-16 sm:py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
@@ -93,7 +95,7 @@ export default function PortfolioStatus() {
         </div>
 
         {/* Top Row: 3 Main Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6 mb-5 sm:mb-6">
           <StatCard
             label="Balance"
             value={formatCurrency(balance, false)}
@@ -121,7 +123,7 @@ export default function PortfolioStatus() {
         </div>
 
         {/* Bottom Row: 3 Secondary Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
           <StatCard
             label="Record"
             value={formatRecord(record.wins, record.losses)}

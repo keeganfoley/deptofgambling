@@ -105,11 +105,11 @@ function SportCard({
       </div>
 
       {/* Content */}
-      <div className="p-6">
-        <h3 className="text-2xl font-medium text-primary mb-4" style={{ letterSpacing: '0.02em' }}>{sport}</h3>
+      <div className="p-5 sm:p-6">
+        <h3 className="text-xl sm:text-2xl font-medium text-primary mb-4" style={{ letterSpacing: '0.02em' }}>{sport}</h3>
 
         <div className="border-t border-gray-200 pt-4">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-4 sm:gap-5">
             <div>
               <div className="data-label text-xs uppercase mb-1">Record</div>
               <div className="text-lg data-value text-primary mono-number">
@@ -189,7 +189,7 @@ export default function SportBreakdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 bg-white">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
         {/* Section Header with Lines (Government Doc Aesthetic) */}
         <div className="mb-16">
@@ -209,7 +209,7 @@ export default function SportBreakdown() {
         </div>
 
         {/* Sport Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {Object.values(sports).map((sport, index) => (
             <SportCard
               key={sport.sport}
