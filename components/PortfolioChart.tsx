@@ -144,7 +144,6 @@ export default function PortfolioChart() {
       y: {
         grid: {
           color: 'rgba(10, 31, 68, 0.05)',
-          borderColor: 'rgba(10, 31, 68, 0.05)',
           borderWidth: 0,
         },
         ticks: {
