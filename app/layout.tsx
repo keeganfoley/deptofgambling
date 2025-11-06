@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "Department of Gambling | Quantitative Sports Research",
   description: "Systematic. Transparent. Mathematically Driven. Professional sports betting portfolio management with quantitative analysis.",
   keywords: ["sports betting", "quantitative analysis", "portfolio management", "sports research", "data-driven betting"],
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
 };
 
 export default function RootLayout({

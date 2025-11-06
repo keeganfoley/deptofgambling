@@ -32,6 +32,7 @@ export default function QuantitativeMetrics() {
 
   const {
     sharpeRatio,
+    sharpeRatioNote,
     maxDrawdown,
     avgWin,
     avgLoss,
@@ -41,6 +42,7 @@ export default function QuantitativeMetrics() {
     profitFactor,
     unitEfficiency,
     closingLineValue,
+    closingLineValueNote,
     kellyUtilization,
   } = metricsData;
 
@@ -66,8 +68,13 @@ export default function QuantitativeMetrics() {
                 Sharpe Ratio
               </div>
               <div className="text-3xl data-value text-white mono-number">
-                {sharpeRatio.toFixed(2)}
+                {sharpeRatio ? sharpeRatio.toFixed(2) : (sharpeRatioNote || 'N/A')}
               </div>
+              {!sharpeRatio && sharpeRatioNote && (
+                <div className="text-xs text-secondary-light mt-1">
+                  {sharpeRatioNote}
+                </div>
+              )}
             </div>
 
             <div>
@@ -118,8 +125,13 @@ export default function QuantitativeMetrics() {
                 Closing Line Value
               </div>
               <div className="text-3xl data-value text-white mono-number">
-                +{closingLineValue.toFixed(1)}
+                +{closingLineValue.toFixed(1)}¢
               </div>
+              {closingLineValueNote && (
+                <div className="text-xs text-secondary-light mt-1">
+                  {closingLineValueNote}
+                </div>
+              )}
             </div>
 
             <div>
