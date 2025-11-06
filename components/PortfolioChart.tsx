@@ -112,7 +112,9 @@ export default function PortfolioChart() {
         displayColors: false,
         callbacks: {
           label: function (context) {
-            return `$${context.parsed.y.toLocaleString('en-US', {
+            const value = context.parsed?.y;
+            if (value == null) return '';
+            return `$${value.toLocaleString('en-US', {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}`;
