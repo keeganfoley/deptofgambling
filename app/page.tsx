@@ -3,7 +3,7 @@ import PortfolioStatus from '@/components/PortfolioStatus';
 import SportBreakdown from '@/components/SportBreakdown';
 import BetTypeBreakdown from '@/components/BetTypeBreakdown';
 import RecentBets from '@/components/RecentBets';
-import BankrollMethodology from '@/components/BankrollMethodology';
+import MethodologyTeaser from '@/components/MethodologyTeaser';
 import QuantitativeMetrics from '@/components/QuantitativeMetrics';
 import PortfolioChart from '@/components/PortfolioChart';
 import TwitterCTA from '@/components/TwitterCTA';
@@ -19,7 +19,7 @@ export default function Home() {
       <SportBreakdown />
       <BetTypeBreakdown />
       <RecentBets />
-      <BankrollMethodology />
+      <MethodologyTeaser />
       <QuantitativeMetrics />
       <PortfolioChart />
       <Disclaimer />
