@@ -1,0 +1,136 @@
+{
+  "slug": "maxey-nov4-2025",
+  "player": "Tyrese Maxey",
+  "line": "OVER 3.5 3-pointers",
+  "odds": 100,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "6 threes",
+  "profit": 100.00,
+  "gameDetails": {
+    "matchup": "Philadelphia 76ers vs New York Knicks",
+    "date": "November 4, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Wells Fargo Center",
+    "finalScore": "76ers 112, Knicks 106"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 36.0,
+    "estimatedProbability": 68,
+    "impliedProbability": 50.0,
+    "recentPerformance": {
+      "hitRate": "7 of 9 games (77.8%)",
+      "seasonAverage": "4.2 3PM per game",
+      "last5Games": "4.6 3PM per game",
+      "cushion": "+1.1 threes above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Recent 3PT Shooting",
+        "description": "Maxey shooting 51.3% from three over last 9 games (37-72 FG). Red-hot stretch with consistent volume (8.0 attempts per game)."
+      },
+      {
+        "title": "Embiid OUT - Primary Scoring Option",
+        "description": "Joel Embiid sidelined with knee management. Maxey becomes undisputed first option, historically averaging +3.2 FGA and +1.8 3PA when Embiid sits."
+      },
+      {
+        "title": "Knicks' Perimeter Defense Weakness",
+        "description": "Knicks ranked 23rd in opponent 3PT% (37.8%). Consistently allow high-volume three-point shooting. Missing Anunoby (ankle) - their best perimeter defender."
+      },
+      {
+        "title": "Pace and Volume Advantage",
+        "description": "Game total 221.5 points. 76ers pace increases significantly without Embiid (transition opportunities). Maxey averaging 9.1 3PA in home games."
+      },
+      {
+        "title": "Historical Success vs Knicks",
+        "description": "Maxey 4+ threes in 4 of last 6 meetings vs NYK. Averages 4.8 3PM vs Knicks (best vs any opponent). Familiarity with division rival."
+      }
+    ],
+    "riskFactors": [
+      "Brunson backcourt battle could increase defensive attention",
+      "Knicks elite at limiting transition (may slow pace)",
+      "Variance inherent in three-point shooting"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "threePointers": "6-11 from three (54.5%)",
+      "points": 31,
+      "minutes": 38,
+      "shooting": "11-21 FG (52.4%)",
+      "assists": 7,
+      "turnovers": 3
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Maxey came out aggressive, hitting 2-3 from deep early. 76ers jumped to 30-22 lead.",
+        "threes": "2"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Hit ONE OVER line midway through 2nd quarter. Another three from top of key. 55-51 76ers at half.",
+        "threes": "2",
+        "halftimeTotal": "4 threes at half (OVER ✓)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Knicks rallied, Maxey went cold from three (0-2). Focused on playmaking (4 assists in quarter).",
+        "threes": "0"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Clutch three from 27 feet with 4:12 left extended lead to 8. Dagger three with 1:08 remaining sealed victory.",
+        "threes": "2"
+      }
+    ],
+    "whenHit": "Hit OVER (4 threes) with 6:47 remaining in 2nd quarter. Added 2 more in 4th quarter for insurance.",
+    "gamePace": "217 total points (under 221.5 total). Slightly slower pace than projected, but still 106 possessions.",
+    "defenseAdjustment": "Knicks switched defensive assignments in 3rd quarter (Bridges on Maxey). Limited effectiveness but Maxey adjusted by facilitating."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Early Aggression (PRIMARY FACTOR)",
+        "description": "Hit OVER by halftime (4 threes in first half). Took 7 three-point attempts in first 24 minutes. Secured bet before Knicks could adjust defensively."
+      },
+      {
+        "title": "Clean Looks from Elite Spacing",
+        "description": "76ers ran horns sets with Maxey as ball-handler. Created open threes via screen actions. 6 of 11 attempts classified as 'open' or 'wide open' (NBA tracking)."
+      },
+      {
+        "title": "Hot Shooting Continued",
+        "description": "54.5% from three extended red-hot streak to 10 games. When a shooter is in rhythm, variance works in your favor. Maxey clearly in zone."
+      },
+      {
+        "title": "High Volume Maintained",
+        "description": "11 three-point attempts matched season average without Embiid. Volume is predictive edge - got the attempts we anticipated."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+1.8 threes (+42.9% above 4.2 3PM average)",
+      "vsRecentForm": "+1.4 threes (+30.4% above 4.6 3PM last 5 games)",
+      "vsPropLine": "+2.5 threes (OVER by 2.5)",
+      "percentileRanking": "Top 15th percentile of season games"
+    },
+    "wasNormalVariance": "Positive but expected outcome. 6 threes with 11 attempts at 54.5% is above-average efficiency, but within normal variance for a hot shooter. More importantly, hit rate (77.8% over 9 games) suggested strong underlying edge. This was not luck - this was edge realization."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -130,
+    "clvCents": 30,
+    "clvPercentage": 6.13,
+    "verdict": "Excellent CLV (+30 cents). Massive line movement toward OVER. Early bet captured significant value before sharp money moved line. Market validated our edge assessment."
+  },
+  "keyTakeaways": [
+    "Early bet placement crucial when injury news (Embiid OUT) still being priced in",
+    "Hot shooting streaks are REAL and exploitable (51.3% over 9 games = significant edge)",
+    "Usage rate increases without star teammate are highly predictive for volume props",
+    "Division rivals provide familiarity edge (historical performance vs opponent matters)",
+    "Hitting OVER by halftime provides emotional hedge against variance - bet was never in danger",
+    "This is textbook value betting: identified edge, got best available price, variance worked in our favor"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Process and results aligned. Model correctly identified mispriced line."
+}

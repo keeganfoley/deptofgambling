@@ -1,0 +1,143 @@
+{
+  "slug": "booker-nov4-2025",
+  "player": "Devin Booker",
+  "line": "OVER 28.5 points",
+  "odds": -120,
+  "stake": 1.2,
+  "result": "win",
+  "finalStat": "38 points",
+  "profit": 100.00,
+  "gameDetails": {
+    "matchup": "Phoenix Suns vs Portland Trail Blazers",
+    "date": "November 4, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Footprint Center",
+    "finalScore": "Suns 127, Blazers 109"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 28.8,
+    "estimatedProbability": 69,
+    "impliedProbability": 54.55,
+    "recentPerformance": {
+      "hitRate": "6 of 8 games (75.0%)",
+      "seasonAverage": "29.8 PPG (7th in NBA)",
+      "last5Games": "31.2 PPG",
+      "cushion": "+2.7 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Portland's Atrocious Perimeter Defense",
+        "description": "Trail Blazers ranked 29th in defensive rating (119.3 points allowed per 100 possessions). Dead last in opponent FG% from midrange (Booker's bread and butter). Rebuilding team with minimal defensive scheme."
+      },
+      {
+        "title": "Durant Load Management = Booker's Night",
+        "description": "Kevin Durant listed as QUESTIONABLE (Achilles maintenance) with strong likelihood of rest on back-to-back. When Durant sits, Booker's usage rate jumps to 32.1% (+4.8%). Historically averages +6.3 PPG without KD."
+      },
+      {
+        "title": "Revenge Narrative",
+        "description": "First game vs Portland since playoff series loss last year (Blazers upset Suns 4-2 in first round). Booker averaged 24.8 PPG in that series (below his standard). Motivation factor."
+      },
+      {
+        "title": "Home Court Advantage",
+        "description": "Booker averages 32.1 PPG at home vs 27.4 on road (+4.7 PPG). Footprint Center is elite shooter's paradise (dry Arizona air, familiar rim). 8 of 12 home games OVER 28.5 last season."
+      },
+      {
+        "title": "Pace and Total",
+        "description": "Game total 236.5 points (highest on slate). Portland plays at 3rd-fastest pace in NBA (104.7 possessions per game). More possessions = more scoring opportunities."
+      }
+    ],
+    "riskFactors": [
+      "If Durant plays, usage could decrease (but not significantly vs weak opponent)",
+      "Blowout risk could limit 4th quarter minutes",
+      "Beal's return from injury could steal shots (but chemistry still developing)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 38,
+      "minutes": 34,
+      "shooting": "13-22 FG (59.1%), 4-8 3PT (50.0%), 8-9 FT (88.9%)",
+      "assists": 8,
+      "rebounds": 4,
+      "turnovers": 2
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Booker aggressive early, attacked Blazers' weak perimeter defense. 11 points on 4-6 shooting. Suns led 34-28.",
+        "points": "11"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Facilitated more (4 assists), but still scored efficiently. 9 points on 3-5 shooting including 2 threes. 67-59 Suns at half.",
+        "points": "9",
+        "halftimeTotal": "20 points at half"
+      },
+      {
+        "quarter": "Q3",
+        "description": "DOMINANT quarter. Hit ONE OVER line with midrange jumper at 6:42 mark (29 total points). Scored 12 in quarter. Suns pulled away 102-84.",
+        "points": "12",
+        "endOfQ3Total": "32 points (OVER ✓)"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Game was blowout, but Booker stayed in to maintain rhythm. Added 6 points including dagger three. Sat final 3 minutes.",
+        "points": "6"
+      }
+    ],
+    "whenHit": "Hit OVER (29 points) with 6:42 remaining in 3rd quarter. Continued scoring for cushion before sitting.",
+    "gamePace": "236 total points (matched 236.5 projection exactly). High-pace game as expected with 105 possessions.",
+    "durantStatus": "Durant confirmed OUT 90 minutes before tipoff (rest day on back-to-back). Booker's usage spiked exactly as predicted."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Durant OUT Confirmation (PRIMARY CATALYST)",
+        "description": "KD resting meant Booker was undisputed alpha. 22 FGA (season-high), 32.8% usage rate. Got exactly the shot volume needed. This was the key edge."
+      },
+      {
+        "title": "Midrange Mastery vs Weak Defense",
+        "description": "Booker went 7-10 on midrange jumpers (his signature shot). Portland had zero answer for his pull-up game. Pre-game scouting report was perfect."
+      },
+      {
+        "title": "Efficient Scoring on High Volume",
+        "description": "38 points on 22 FGA = 1.73 points per shot attempt (elite efficiency). 59.1% FG is well above his 48.2% season average. Hot shooting + weak defense = blowout OVER."
+      },
+      {
+        "title": "Free Throw Generation",
+        "description": "9 free throw attempts (drew fouls attacking rim). Portland's lack of rim protection allowed easy drives. Added 8 points from charity stripe."
+      },
+      {
+        "title": "Revenge Game Motivation",
+        "description": "Booker clearly had extra edge after last year's playoff loss. Visible intensity and focus. Psychological edges are real."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+8.2 points (+27.5% above 29.8 PPG average)",
+      "vsRecentForm": "+6.8 points (+21.8% above 31.2 PPG last 5 games)",
+      "vsPropLine": "+9.5 points (OVER by 9.5 points - crushed)",
+      "percentileRanking": "Top 10th percentile of season games"
+    },
+    "wasNormalVariance": "Positive outcome driven by edge realization, not luck. 59.1% shooting is above average but not unsustainable vs 29th-ranked defense. More importantly, volume edge (22 FGA without Durant) was entirely predictable. This was edge + execution."
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -145,
+    "clvCents": 25,
+    "clvPercentage": 4.35,
+    "verdict": "Strong CLV (+25 cents). Line moved significantly toward OVER after Durant ruled OUT. Early bet placed before injury report captured value. Market agreed this was mispriced."
+  },
+  "keyTakeaways": [
+    "Monitor injury reports obsessively - Durant OUT was predictable and massively +EV",
+    "Target elite scorers vs bottom-5 defenses (Portland 29th in DRtg) - exploitable mismatch",
+    "Home/road splits matter for volume scorers (Booker +4.7 PPG at home)",
+    "High game totals (236.5) create scoring environment - more possessions = more points",
+    "Revenge narratives provide subtle psychological edge (not primary factor but additive)",
+    "Usage rate changes without star teammates are HIGHLY predictive (+6.3 PPG without KD historically)",
+    "Hit OVER by 9.5 points - not just a win, but a dominant cover showing true edge size",
+    "This is what 'smash spot' means - multiple edge layers stacking (defense, usage, pace, venue, motivation)"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Elite process with dominant result. Every edge layer materialized. This is the platonic ideal of a +EV props bet."
+}

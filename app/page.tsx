@@ -1,0 +1,29 @@
+import Hero from '@/components/Hero';
+import PortfolioStatus from '@/components/PortfolioStatus';
+import SportBreakdown from '@/components/SportBreakdown';
+import BetTypeBreakdown from '@/components/BetTypeBreakdown';
+import RecentBets from '@/components/RecentBets';
+import BankrollMethodology from '@/components/BankrollMethodology';
+import QuantitativeMetrics from '@/components/QuantitativeMetrics';
+import PortfolioChart from '@/components/PortfolioChart';
+import TwitterCTA from '@/components/TwitterCTA';
+import Disclaimer from '@/components/Disclaimer';
+import Footer from '@/components/Footer';
+
+export default function Home() {
+  return (
+    <main className="overflow-x-hidden">
+      <Hero />
+      <TwitterCTA />
+      <PortfolioStatus />
+      <SportBreakdown />
+      <BetTypeBreakdown />
+      <RecentBets />
+      <BankrollMethodology />
+      <QuantitativeMetrics />
+      <PortfolioChart />
+      <Disclaimer />
+      <Footer />
+    </main>
+  );
+}

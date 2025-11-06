@@ -1,0 +1,33 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Outer circle -->
+  <circle cx="60" cy="60" r="58" stroke="#0A1F44" stroke-width="2" fill="none"/>
+
+  <!-- Inner decorative circle -->
+  <circle cx="60" cy="60" r="52" stroke="#0A1F44" stroke-width="1" fill="none"/>
+
+  <!-- Star points (simplified 5-point star) -->
+  <path d="M60 20 L65 40 L85 40 L70 52 L75 72 L60 60 L45 72 L50 52 L35 40 L55 40 Z"
+        fill="#0A1F44" stroke="#0A1F44" stroke-width="1"/>
+
+  <!-- Inner circle for center -->
+  <circle cx="60" cy="60" r="15" fill="none" stroke="#0A1F44" stroke-width="1.5"/>
+
+  <!-- Center dot -->
+  <circle cx="60" cy="60" r="3" fill="#0A1F44"/>
+
+  <!-- Decorative lines (technical aesthetic) -->
+  <line x1="20" y1="60" x2="40" y2="60" stroke="#0A1F44" stroke-width="1"/>
+  <line x1="80" y1="60" x2="100" y2="60" stroke="#0A1F44" stroke-width="1"/>
+  <line x1="60" y1="20" x2="60" y2="40" stroke="#0A1F44" stroke-width="1"/>
+  <line x1="60" y1="80" x2="60" y2="100" stroke="#0A1F44" stroke-width="1"/>
+
+  <!-- Text path for circular text -->
+  <defs>
+    <path id="circlePath" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+  </defs>
+  <text font-family="Inter, sans-serif" font-size="8" font-weight="700" letter-spacing="2" fill="#0A1F44">
+    <textPath href="#circlePath" startOffset="50%" text-anchor="middle">
+      DEPARTMENT OF GAMBLING
+    </textPath>
+  </text>
+</svg>

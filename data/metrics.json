@@ -1,0 +1,62 @@
+{
+  "sharpeRatio": 2.15,
+  "maxDrawdown": -100.00,
+  "avgWin": 92.77,
+  "avgLoss": -100.00,
+  "avgProfitPerBet": 54.21,
+  "largestWin": 127.12,
+  "largestLoss": -100.00,
+  "profitFactor": 3.71,
+  "totalCapitalRisked": 550.00,
+  "unitsRisked": 5.5,
+  "unitEfficiency": 49.3,
+  "closingLineValue": 4.8,
+  "kellyUtilization": 38,
+  "stakeBreakdown": {
+    "1.0u": {
+      "record": {
+        "wins": 3,
+        "losses": 1,
+        "total": 4
+      },
+      "winRate": 75.0
+    },
+    "1.5u": {
+      "record": {
+        "wins": 1,
+        "losses": 0,
+        "total": 1
+      },
+      "winRate": 100.0
+    }
+  },
+  "sportBreakdown": {
+    "NBA": {
+      "sport": "NBA",
+      "emoji": "🏀",
+      "record": {
+        "wins": 4,
+        "losses": 1,
+        "total": 5
+      },
+      "roi": 2.71,
+      "netPL": 271.06,
+      "unitsWon": 2.71,
+      "gamesAnalyzed": 5,
+      "totalGames": 5
+    }
+  },
+  "betTypeBreakdown": {
+    "props": {
+      "type": "Props",
+      "record": {
+        "wins": 4,
+        "losses": 1,
+        "total": 5
+      },
+      "winRate": 80.0,
+      "netPL": 271.06,
+      "roi": 2.71
+    }
+  }
+}

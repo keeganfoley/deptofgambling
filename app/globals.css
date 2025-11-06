@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import geometric sans-serif font - using Inter as it's highly geometric */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* Root variables */
+:root {
+  --font-geist-sans: 'Inter', system-ui, sans-serif;
+  --font-geist-mono: 'Courier New', monospace;
+  --font-geometric: 'Inter', system-ui, sans-serif;
+}
+
+/* Body styling with grid background from Prompt A */
+body {
+  background: #F8F9FA;
+  background-image:
+    linear-gradient(to right, rgba(10, 31, 68, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(10, 31, 68, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: #2C3E50;
+  font-family: var(--font-geist-sans);
+  min-height: 100vh;
+}
+
+/* Grid pattern that appears more prominently on dark sections */
+.grid-background {
+  position: relative;
+}
+
+.grid-background::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Monospace numbers styling */
+.mono-number {
+  font-family: var(--font-geist-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4A90E2;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0A1F44;
+}
+
+/* Horizontal rule styling for government doc aesthetic */
+.govt-rule {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #0A1F44 20%, #0A1F44 80%, transparent);
+  margin: 2rem 0;
+}
+
+/* Card shadow effects - subtle depth from Prompt A */
+.card-float {
+  box-shadow:
+    0 2px 8px rgba(10, 31, 68, 0.08),
+    0 0 0 1px rgba(10, 31, 68, 0.04);
+  transition: all 0.3s ease;
+}
+
+.card-float:hover {
+  box-shadow:
+    0 8px 24px rgba(10, 31, 68, 0.12),
+    0 0 0 1px rgba(255, 0, 128, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Magenta accent glow effect */
+.magenta-glow {
+  position: relative;
+}
+
+.magenta-glow::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border: 2px solid #FF0080;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.magenta-glow:hover::after {
+  opacity: 1;
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.4);
+}
+
+/* Typography scale - engineered clarity with professional hierarchy */
+h1 {
+  font-weight: 600; /* Semibold - confident without being aggressive */
+  letter-spacing: 0.06em; /* Airy, sophisticated spacing for all-caps */
+  line-height: 1;
+}
+
+h2 {
+  font-weight: 500; /* Medium - denotes importance without shouting */
+  letter-spacing: 0.04em; /* Refined spacing */
+  line-height: 1.1;
+}
+
+h3 {
+  font-weight: 500; /* Medium - clean and professional */
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+/* Data points - the hero of financial dashboards */
+.data-value {
+  font-weight: 700; /* Bold - data should be the heaviest element */
+  letter-spacing: -0.01em; /* Tight for numbers */
+}
+
+/* Labels - should recede into background */
+.data-label {
+  font-weight: 400; /* Regular - provides context without demanding attention */
+  letter-spacing: 0.08em; /* Wide tracking for small all-caps labels */
+  color: #6B7280; /* Gray-navy - lighter than primary text */
+}
+
+/* Button reset with sharp interaction */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Utility classes */
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Print statement section headers */
+.section-header {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #0A1F44;
+}
