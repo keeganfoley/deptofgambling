@@ -75,7 +75,7 @@ export default function SystemIntro() {
                 </span>
                 , and{' '}
                 <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#d4b886] to-[#f4e4c1] drop-shadow-[0_0_20px_rgba(212,184,134,0.5)]">
-                  AI-trained qualitative insights
+                  AI-trained quantitative insights
                 </span>{' '}
                 to build the most mathematically disciplined betting system in sports. Every pick is driven by probability, designed for long-term, compounding profitability.
               </p>
