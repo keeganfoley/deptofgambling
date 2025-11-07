@@ -1,13 +1,14 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { formatCurrency, formatPercent, formatOdds, formatDate } from '@/lib/utils';
 import betsData from '@/data/bets.json';
-import CheckCircle from './icons/CheckCircle';
-import XCircle from './icons/XCircle';
+import CheckCircle from '@/components/icons/CheckCircle';
+import XCircle from '@/components/icons/XCircle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -173,13 +174,27 @@ function BetCard({ bet, index }: BetCardProps) {
   );
 }
 
-export default function RecentBets() {
+function BetsContent() {
+  const searchParams = useSearchParams();
+  const sportFilter = searchParams?.get('sport') || 'All';
+  const [currentFilter, setCurrentFilter] = useState(sportFilter);
+
   const sectionRef = useRef<HTMLElement>(null);
   const headerLineTopRef = useRef<HTMLDivElement>(null);
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
-  // Show only the most recent 5 bets
-  const recentBets = (betsData as Bet[]).slice(0, 5);
+  const allBets = betsData as Bet[];
+
+  // Filter bets based on sport
+  const filteredBets = currentFilter === 'All'
+    ? allBets
+    : allBets.filter(bet => bet.sport === currentFilter);
+
+  const sports = ['All', 'NBA', 'NFL', 'NCAAB'];
+
+  useEffect(() => {
+    setCurrentFilter(sportFilter);
+  }, [sportFilter]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -199,18 +214,21 @@ export default function RecentBets() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white">
+    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="mb-16">
+        <div className="mb-12">
           <div
             ref={headerLineTopRef}
             className="h-[2px] bg-primary mb-6"
             style={{ transformOrigin: 'center' }}
           />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
-            RECENT POSITIONS
-          </h2>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center mb-2">
+            ALL BETS
+          </h1>
+          <p className="text-center text-text-muted text-sm sm:text-base">
+            Every position we&apos;ve entered into the portfolio
+          </p>
           <div
             ref={headerLineBottomRef}
             className="h-[2px] bg-primary mt-6"
@@ -218,26 +236,63 @@ export default function RecentBets() {
           />
         </div>
 
-        {/* Bet Timeline */}
-        <div className="space-y-5 sm:space-y-6">
-          {recentBets.map((bet, index) => (
-            <BetCard key={bet.id} bet={bet} index={index} />
+        {/* Sport Filter Buttons */}
+        <div className="flex flex-wrap justify-center gap-3 mb-12">
+          {sports.map((sport) => (
+            <Link
+              key={sport}
+              href={sport === 'All' ? '/bets' : `/bets?sport=${sport}`}
+              className={`px-6 py-3 rounded-sm font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
+                currentFilter === sport
+                  ? 'bg-secondary text-white'
+                  : 'bg-gray-100 text-primary hover:bg-gray-200'
+              }`}
+            >
+              {sport}
+            </Link>
           ))}
         </div>
 
-        {/* See All Button */}
+        {/* Bet Count */}
+        <div className="text-center mb-8">
+          <p className="text-text-muted text-sm">
+            Showing <span className="font-bold text-primary">{filteredBets.length}</span> bet{filteredBets.length !== 1 ? 's' : ''}
+            {currentFilter !== 'All' && ` in ${currentFilter}`}
+          </p>
+        </div>
+
+        {/* Bet Timeline */}
+        <div className="space-y-5 sm:space-y-6">
+          {filteredBets.length > 0 ? (
+            filteredBets.map((bet, index) => (
+              <BetCard key={bet.id} bet={bet} index={index} />
+            ))
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-text-muted text-lg">No bets found for {currentFilter}</p>
+            </div>
+          )}
+        </div>
+
+        {/* Back to Home */}
         <div className="text-center mt-12">
           <Link
-            href="/bets"
+            href="/"
             className="text-secondary hover:text-accent font-bold text-lg tracking-wide transition-colors duration-300 group inline-flex items-center gap-2"
           >
-            See All Bets
-            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
+            <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
+            Back to Portfolio
           </Link>
         </div>
       </div>
     </section>
+  );
+}
+
+export default function BetsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <BetsContent />
+    </Suspense>
   );
 }

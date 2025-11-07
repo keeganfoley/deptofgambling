@@ -72,21 +72,25 @@ export default function PortfolioChart() {
         label: 'Portfolio Balance',
         data: data.map((item) => item.balance),
         fill: true,
-        borderColor: '#4A90E2', // Steel Blue
+        borderColor: '#FF0080', // Magenta
         backgroundColor: (context: any) => {
           const ctx = context.chart.ctx;
-          const gradient = ctx.createLinearGradient(0, 0, 0, 300);
-          gradient.addColorStop(0, 'rgba(74, 144, 226, 0.2)');
-          gradient.addColorStop(1, 'rgba(74, 144, 226, 0)');
+          const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+          gradient.addColorStop(0, 'rgba(255, 0, 128, 0.3)');
+          gradient.addColorStop(0.5, 'rgba(255, 0, 128, 0.1)');
+          gradient.addColorStop(1, 'rgba(255, 0, 128, 0)');
           return gradient;
         },
-        borderWidth: 2.5,
-        tension: 0.2,
-        pointRadius: 0,
-        pointHoverRadius: 5,
+        borderWidth: 3,
+        tension: 0.4,
+        pointRadius: 6,
+        pointBackgroundColor: '#FF0080',
+        pointBorderColor: '#FFFFFF',
+        pointBorderWidth: 3,
+        pointHoverRadius: 8,
         pointHoverBackgroundColor: '#FF0080',
         pointHoverBorderColor: '#FFFFFF',
-        pointHoverBorderWidth: 2,
+        pointHoverBorderWidth: 3,
       },
     ],
   };
@@ -108,18 +112,27 @@ export default function PortfolioChart() {
       },
       tooltip: {
         enabled: true,
-        backgroundColor: '#0A1F44',
+        backgroundColor: 'rgba(10, 31, 68, 0.95)',
         titleColor: '#FFFFFF',
-        bodyColor: '#7CB9E8',
-        borderColor: '#4A90E2',
-        borderWidth: 1,
-        padding: 12,
+        bodyColor: '#FFFFFF',
+        borderColor: '#FF0080',
+        borderWidth: 2,
+        padding: 16,
         displayColors: false,
+        titleFont: {
+          size: 14,
+          weight: 'bold',
+        },
+        bodyFont: {
+          size: 16,
+          family: "'Courier New', monospace",
+          weight: 'bold',
+        },
         callbacks: {
           label: function (context) {
             const value = context.parsed?.y;
             if (value == null) return '';
-            return `$${value.toLocaleString('en-US', {
+            return `Balance: $${value.toLocaleString('en-US', {
               minimumFractionDigits: 2,
               maximumFractionDigits: 2,
             })}`;
@@ -130,39 +143,49 @@ export default function PortfolioChart() {
     scales: {
       x: {
         grid: {
-          display: false,
+          display: true,
+          color: 'rgba(255, 0, 128, 0.05)',
+          lineWidth: 1,
         },
         ticks: {
-          color: '#6B7280',
+          color: '#0A1F44',
           font: {
             family: "'Courier New', monospace",
-            size: 11,
+            size: 12,
+            weight: 'bold',
           },
           maxRotation: 0,
           autoSkip: true,
           maxTicksLimit: 8,
+          padding: 8,
         },
         border: {
-          display: false,
+          display: true,
+          color: 'rgba(10, 31, 68, 0.1)',
+          width: 2,
         },
       },
       y: {
         grid: {
-          color: 'rgba(10, 31, 68, 0.05)',
+          color: 'rgba(255, 0, 128, 0.08)',
+          lineWidth: 1,
         },
         ticks: {
-          color: '#6B7280',
+          color: '#0A1F44',
           font: {
             family: "'Courier New', monospace",
-            size: 12,
+            size: 13,
+            weight: 'bold',
           },
           callback: function (value) {
             return `$${(value as number).toLocaleString()}`;
           },
-          padding: 10,
+          padding: 12,
         },
         border: {
-          display: false,
+          display: true,
+          color: 'rgba(10, 31, 68, 0.1)',
+          width: 2,
         },
       },
     },
@@ -181,7 +204,7 @@ export default function PortfolioChart() {
         {/* Chart Container */}
         <div
           ref={chartContainerRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-6 md:p-8 shadow-lg opacity-0"
+          className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-6 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.1)] magenta-glow opacity-0"
         >
           <Line data={chartData} options={options} />
 

@@ -32,12 +32,9 @@ function SportCard({
   index,
 }: SportCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
-  const progressRef = useRef<HTMLDivElement>(null);
-  const progressBarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
-    const progressPercent = (gamesAnalyzed / totalGames) * 100;
 
     if (isMobile) {
       // Simpler mobile animations
@@ -48,21 +45,6 @@ function SportCard({
           opacity: 1,
           duration: 0.4,
           delay: index * 0.08,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-      gsap.fromTo(
-        progressBarRef.current,
-        { width: '0%' },
-        {
-          width: `${progressPercent}%`,
-          duration: 0.8,
-          delay: index * 0.08 + 0.2,
           ease: 'power2.out',
           scrollTrigger: {
             trigger: cardRef.current,
@@ -89,31 +71,16 @@ function SportCard({
           },
         }
       );
-      gsap.fromTo(
-        progressBarRef.current,
-        { width: '0%' },
-        {
-          width: `${progressPercent}%`,
-          duration: 1.5,
-          delay: index * 0.2 + 0.3,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
     }
-  }, [index, gamesAnalyzed, totalGames]);
+  }, [index]);
 
   return (
     <div
       ref={cardRef}
       className="bg-white rounded-sm overflow-hidden card-float magenta-glow opacity-0"
     >
-      {/* Header with icon and progress */}
-      <div className="bg-primary px-6 py-4 flex items-center justify-between">
+      {/* Header with icon */}
+      <div className="bg-primary px-6 py-4 flex items-center justify-center">
         <div className="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full">
           {sport === 'NBA' || sport === 'NCAAB' ? (
             <Basketball className="w-7 h-7 text-accent" />
@@ -121,21 +88,6 @@ function SportCard({
             <Football className="w-7 h-7 text-accent" />
           )}
         </div>
-        <div className="text-white text-right">
-          <div className="text-sm font-semibold opacity-80">Games Analyzed</div>
-          <div className="text-lg font-bold mono-number">
-            {gamesAnalyzed}/{totalGames}
-          </div>
-        </div>
-      </div>
-
-      {/* Progress bar */}
-      <div ref={progressRef} className="h-2 bg-gray-200 relative">
-        <div
-          ref={progressBarRef}
-          className="absolute inset-y-0 left-0 bg-accent"
-          style={{ width: '0%' }}
-        />
       </div>
 
       {/* Content */}
@@ -148,6 +100,9 @@ function SportCard({
               <div className="data-label text-xs uppercase mb-1">Record</div>
               <div className="text-lg data-value text-primary mono-number">
                 {formatRecord(record.wins, record.losses)}
+              </div>
+              <div className="text-xs text-gray-600 mt-1 mono-number">
+                {((record.wins / record.total) * 100).toFixed(2)}% Win Rate
               </div>
             </div>
             <div>
@@ -185,12 +140,15 @@ function SportCard({
 
         {/* View Bets CTA */}
         <div className="mt-6 pt-4 border-t border-gray-200">
-          <button className="text-secondary hover:text-accent font-semibold text-sm transition-colors duration-300 flex items-center group">
+          <a
+            href={`/bets?sport=${sport}`}
+            className="text-secondary hover:text-accent font-semibold text-sm transition-colors duration-300 flex items-center group"
+          >
             View Bets
             <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
               →
             </span>
-          </button>
+          </a>
         </div>
       </div>
     </div>

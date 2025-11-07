@@ -157,16 +157,6 @@ export default function QuantitativeMetrics() {
               <div className="text-2xl sm:text-3xl data-value text-white mono-number">{kellyUtilization}%</div>
             </div>
           </div>
-
-          {/* Download Report Button */}
-          <div className="text-center mt-10 pt-8 border-t border-secondary-light border-opacity-20">
-            <button className="px-8 py-4 bg-transparent border-2 border-accent text-white font-bold text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)] group">
-              Download Full Report
-              <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">
-                ↓
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </section>
