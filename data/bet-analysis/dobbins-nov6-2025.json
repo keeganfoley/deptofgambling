@@ -1,0 +1,136 @@
+{
+  "slug": "dobbins-nov6-2025",
+  "player": "J.K. Dobbins",
+  "line": "OVER 70.5 rushing yards",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "77 yards (18 carries)",
+  "profit": 150.00,
+  "gameDetails": {
+    "matchup": "Las Vegas Raiders @ Denver Broncos",
+    "date": "November 6, 2025",
+    "gameTime": "7:25 PM ET",
+    "venue": "Empower Field at Mile High",
+    "finalScore": "Broncos 10, Raiders 7"
+  },
+  "preGameAnalysis": {
+    "edge": 26,
+    "expectedValue": 44.9,
+    "estimatedProbability": 76,
+    "impliedProbability": 50.00,
+    "recentPerformance": {
+      "hitRate": "Hit rushing over in 8 of 9 games (88.9%)",
+      "seasonAverage": "77.2 YPG (6.7 yards above line)",
+      "last5Games": "78 carries, 372 yards (4.8 YPC)",
+      "cushion": "+6.7 yards above 70.5 line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Consistency (88.9% Over Rate)",
+        "description": "695 yards (77.2 YPG, 5th in NFL). Hit rushing over in 8 of 9 games. 70+ yard games in 6 of 9 games (66.7%). Required only 4.2 YPC on 17 touches to hit over."
+      },
+      {
+        "title": "Workhorse Role - 85%+ Touch Share",
+        "description": "135 carries (15.0 per game). Backup RJ Harvey minimal role (3 carries, 9 yards in game). Dobbins handled 85%+ of RB touches season-long. Sean Payton's trust: 'He's a warrior.'"
+      },
+      {
+        "title": "Raiders' 6th-Worst EPA Run Defense",
+        "description": "Raiders run defense ranked 16th in NFL (109.4 YPG allowed) but 6th-worst in EPA against run (exploitable). No 100-yard rushers allowed in 2025 before this game but vulnerable to physical backs."
+      },
+      {
+        "title": "Favorable Game Script",
+        "description": "Broncos -9.5 favorites (clock control expected). Expected 16-20 carries. Week 4: 101 yards vs. Cincinnati (first Broncos 100-yard rusher in 38 games). Denver expected to lean on ground game with lead."
+      },
+      {
+        "title": "Plus-Money Value (+100)",
+        "description": "Plus-money odds (+100) on a bet with 75-78% true win probability = exceptional value. Historical data strongly supported over with massive implied probability edge."
+      }
+    ],
+    "riskFactors": [
+      "4-game touchdown drought (concern for scoring props, not yardage)",
+      "Receiving role limited (only 1 target in 5 of last 6 games)",
+      "Brief injury history - need to monitor in-game"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushingYards": "77 yards",
+      "rushAttempts": "18 carries",
+      "yardsPerCarry": "4.3 YPC",
+      "receptions": 0,
+      "targets": 0,
+      "touchdowns": 0
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Dobbins carried 5 times for 23 yards. Broncos established ground game early. Physical running style wore down Raiders' defense.",
+        "rushingYards": "23"
+      },
+      {
+        "quarter": "Q2",
+        "description": "6 carries for 28 yards. Steady volume as Broncos controlled clock. 51 yards at half (on pace for 102-yard game).",
+        "rushingYards": "28",
+        "halftimeTotal": "51 yards at half (on pace to OVER)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Hit OVER with 4:17 remaining in 3rd quarter. Brief injury scare but returned immediately. 4 carries for 18 yards in quarter.",
+        "rushingYards": "18"
+      },
+      {
+        "quarter": "Q4",
+        "description": "3 carries for 8 yards. Broncos kneeled inside Raiders 20-yard line rather than scoring (conservative approach). Sean Payton post-game: 'Wouldn't have that W without him.'",
+        "rushingYards": "8"
+      }
+    ],
+    "whenCleared": "Hit OVER (70.5 yards) with 4:17 remaining in 3rd quarter on 17th carry. Cleared line by 6.5 yards with room to spare.",
+    "gamePace": "Low-scoring defensive game (17 total points). Bo Nix threw 2 INTs, 11 penalties for 78 yards meant offense relied heavily on Dobbins to sustain drives.",
+    "foulTrouble": "Brief injury scare in Q3 but Dobbins returned immediately and finished strong with 18 total carries."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Workhorse Role Delivered (PRIMARY FACTOR)",
+        "description": "18 carries vs. Harvey's 3 (85.7% snap share). Volume guarantee exceeded projection (16-17 expected). Got the touches needed to hit over comfortably."
+      },
+      {
+        "title": "Raiders' EPA-Weighted Defensive Weakness",
+        "description": "Raiders' 6th-worst EPA run defense struggled with Dobbins' physicality. 4.3 YPC below season average (5.1) but sufficient volume compensated."
+      },
+      {
+        "title": "Game Script Execution Perfect",
+        "description": "Broncos led throughout after Q1, leaned on ground game. Passing game struggles (Bo Nix 2 INTs, 11 penalties for 78 yards) meant offense relied on Dobbins."
+      },
+      {
+        "title": "Clock Management Favored Run Game",
+        "description": "Broncos kneeled inside Raiders 20-yard line rather than scoring (conservative approach). Game plan prioritized ball control over explosive plays."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-0.2 yards (-0.3% below 77.2 YPG average)",
+      "vsRecentForm": "+2.7 yards (+3.6% above last 5 games)",
+      "vsPropLine": "+6.5 yards (OVER by 9.2%)",
+      "percentileRanking": "Right at season average (50th percentile)"
+    },
+    "wasNormalVariance": "Expected outcome based on elite consistency. The 70.5 line significantly undervalued Dobbins' 88.9% over rate and failed to account for Raiders' EPA-weighted defensive weakness. Required only 4.2 YPC with expected volume - well within capability against exploitable run defense. Plus-money odds (+100) on a bet with 75-78% true win probability represented exceptional value."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -108,
+    "clvCents": 8,
+    "clvPercentage": 1.69,
+    "verdict": "Positive CLV (+8 cents). Line moved toward Over as market recognized Dobbins' elite consistency and favorable matchup. Capturing plus-money value crucial for maximizing expected value."
+  },
+  "keyTakeaways": [
+    "88.9% over rate over 9 games = legitimate edge, not variance",
+    "Volume is king - 18 carries guaranteed hitting over with modest efficiency",
+    "EPA-weighted defensive rankings more predictive than traditional yards allowed",
+    "Plus-money odds (+100) on high-probability outcomes (75-78%) = exceptional value",
+    "Game script execution (Broncos leading, clock control) played out exactly as projected",
+    "Maintained 88.9% over rate (now 9 of 10 games) - consistency edge remains exploitable"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook value bet. Process and results aligned perfectly. The 70.5 line dramatically undervalued Dobbins' elite consistency and EPA-weighted matchup advantage. Plus-money odds created 25+ percentage point edge over market."
+}
