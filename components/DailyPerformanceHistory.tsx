@@ -30,7 +30,6 @@ interface DailyData {
 type FilterType = 'all' | '30' | '7';
 
 const STARTING_BALANCE = 10000;
-const GENESIS_DATE = '2025-11-03';
 
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
@@ -41,8 +40,11 @@ export default function DailyPerformanceHistory() {
   const getDailyData = (): DailyData[] => {
     const grouped = new Map<string, Bet[]>();
 
+    // ONLY USE FIRST 5 BETS (REAL DATA - Nov 4 and Nov 5)
+    const realBets = betsData.slice(0, 5);
+
     // Group bets by date (extract just the date part)
-    betsData.forEach((bet) => {
+    realBets.forEach((bet) => {
       const dateStr = new Date(bet.date).toISOString().split('T')[0];
       if (!grouped.has(dateStr)) {
         grouped.set(dateStr, []);
@@ -182,17 +184,6 @@ export default function DailyPerformanceHistory() {
 
         {/* Daily Cards */}
         <div className="space-y-3">
-          {/* Genesis Day */}
-          <div className="bg-gradient-to-r from-[#1a2f54]/40 to-[#0f1f3a]/40 border-2 border-[#c5a572]/30 p-4 sm:p-5 backdrop-blur-sm">
-            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-base font-mono">
-              <span className="text-gray-400">▪</span>
-              <span className="text-[#c5a572] font-bold min-w-[120px]">{formatDate(GENESIS_DATE)}</span>
-              <span className="text-white font-bold">${STARTING_BALANCE.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
-              <span className="text-[#c5a572] font-bold">GENESIS</span>
-              <span className="text-gray-500">—</span>
-            </div>
-          </div>
-
           {/* Daily Performance Cards */}
           {filteredData.map((day) => (
             <div key={day.date} className="border-2 border-gray-700 hover:border-gray-600 transition-all duration-200">
@@ -221,38 +212,41 @@ export default function DailyPerformanceHistory() {
 
               {/* Expanded View */}
               {expandedDay === day.date && (
-                <div className="bg-[#0a1624] p-4 sm:p-6 space-y-3 border-t-2 border-gray-700">
+                <div className="bg-[#0a1624] p-4 sm:p-6 space-y-4 border-t-2 border-gray-700">
                   {day.bets.map((bet) => (
                     <div
                       key={bet.id}
-                      className={`border-l-4 ${
-                        bet.result === 'win' ? 'border-[#22c55e] bg-[#22c55e]/5' : 'border-[#ef4444] bg-[#ef4444]/5'
-                      } p-4 sm:p-5`}
+                      className={`border-2 ${
+                        bet.result === 'win'
+                          ? 'border-[#22c55e] bg-[#22c55e]/5'
+                          : 'border-[#ef4444] bg-[#ef4444]/5'
+                      } p-5 sm:p-6 rounded-lg`}
                     >
-                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
-                        <div className="flex-1">
-                          <div className="flex items-start gap-2 mb-2">
-                            <span className={`text-lg ${bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                              {bet.result === 'win' ? '✓' : '✗'}
-                            </span>
-                            <div>
-                              <p className="text-white font-semibold text-base sm:text-lg">
-                                {bet.description} ({bet.odds > 0 ? '+' : ''}{bet.odds})
-                              </p>
-                              <p className="text-gray-400 text-sm font-mono mt-1">
-                                Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
-                              </p>
-                            </div>
+                      <div className="flex items-start justify-between gap-4 mb-3">
+                        <div className="flex items-start gap-3 flex-1">
+                          <span className={`text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                            {bet.result === 'win' ? '✓' : '✗'}
+                          </span>
+                          <div>
+                            <p className="text-white font-bold text-lg sm:text-xl">
+                              {bet.description} ({bet.odds > 0 ? '+' : ''}{bet.odds})
+                            </p>
                           </div>
                         </div>
-                        <div className="text-right sm:text-left">
-                          <p className="text-gray-400 text-sm font-mono mb-1">{bet.stake}u</p>
-                          <p className={`font-bold text-lg font-mono ${
-                            bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'
-                          }`}>
-                            {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
-                          </p>
+                        <div className="text-right">
+                          <span className="text-gray-400 font-mono font-semibold">{bet.stake}u</span>
                         </div>
+                      </div>
+
+                      <div className="ml-9 sm:ml-11 space-y-2">
+                        <p className="text-gray-300 text-sm sm:text-base font-mono">
+                          Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
+                        </p>
+                        <p className={`font-bold text-2xl sm:text-3xl font-mono ${
+                          bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'
+                        }`}>
+                          {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
+                        </p>
                       </div>
                     </div>
                   ))}
