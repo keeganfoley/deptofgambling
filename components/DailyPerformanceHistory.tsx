@@ -1,0 +1,267 @@
+'use client';
+
+import { useState, useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import betsData from '@/data/bets.json';
+
+interface Bet {
+  id: number;
+  date: string;
+  sport: string;
+  description: string;
+  odds: number;
+  stake: number;
+  result: 'win' | 'loss';
+  finalStat: string;
+  edge: number;
+  expectedValue: number;
+  profit: number;
+  betType: string;
+}
+
+interface DailyData {
+  date: string;
+  bets: Bet[];
+  dailyPL: number;
+  endingBalance: number;
+  record: { wins: number; losses: number };
+}
+
+type FilterType = 'all' | '30' | '7';
+
+const STARTING_BALANCE = 10000;
+const GENESIS_DATE = '2025-11-03';
+
+export default function DailyPerformanceHistory() {
+  const [expandedDay, setExpandedDay] = useState<string | null>(null);
+  const [filter, setFilter] = useState<FilterType>('all');
+  const sectionRef = useRef<HTMLElement>(null);
+
+  // Group bets by day and calculate daily stats
+  const getDailyData = (): DailyData[] => {
+    const grouped = new Map<string, Bet[]>();
+
+    // Group bets by date (extract just the date part)
+    betsData.forEach((bet) => {
+      const dateStr = new Date(bet.date).toISOString().split('T')[0];
+      if (!grouped.has(dateStr)) {
+        grouped.set(dateStr, []);
+      }
+      grouped.get(dateStr)!.push(bet as Bet);
+    });
+
+    // Convert to array and sort by date (newest first)
+    const sortedDates = Array.from(grouped.keys()).sort((a, b) =>
+      new Date(b).getTime() - new Date(a).getTime()
+    );
+
+    // Calculate running balance and daily stats
+    let runningBalance = STARTING_BALANCE;
+    const dailyDataReversed: DailyData[] = [];
+
+    // Process in chronological order (oldest first) for balance calculation
+    const chronologicalDates = [...sortedDates].reverse();
+
+    chronologicalDates.forEach((date) => {
+      const bets = grouped.get(date)!;
+      const dailyPL = bets.reduce((sum, bet) => sum + bet.profit, 0);
+      runningBalance += dailyPL;
+
+      const wins = bets.filter(b => b.result === 'win').length;
+      const losses = bets.filter(b => b.result === 'loss').length;
+
+      dailyDataReversed.push({
+        date,
+        bets,
+        dailyPL,
+        endingBalance: runningBalance,
+        record: { wins, losses }
+      });
+    });
+
+    // Reverse back to newest first for display
+    return dailyDataReversed.reverse();
+  };
+
+  const dailyData = getDailyData();
+
+  // Filter data based on selected timeframe
+  const getFilteredData = (): DailyData[] => {
+    if (filter === 'all') return dailyData;
+
+    const daysToShow = filter === '30' ? 30 : 7;
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - daysToShow);
+
+    return dailyData.filter(day => new Date(day.date) >= cutoffDate);
+  };
+
+  const filteredData = getFilteredData();
+
+  // Format date for display
+  const formatDate = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
+    }).toUpperCase();
+  };
+
+  // Toggle day expansion
+  const toggleDay = (date: string) => {
+    setExpandedDay(expandedDay === date ? null : date);
+  };
+
+  // Animation on mount
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    if (isMobile) {
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' }
+      );
+    } else {
+      gsap.fromTo(
+        sectionRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }
+      );
+    }
+  }, []);
+
+  return (
+    <section
+      ref={sectionRef}
+      className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#0a1f44] to-[#061429]"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section Header */}
+        <div className="mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 tracking-tight font-mono">
+            DAILY PERFORMANCE HISTORY
+          </h2>
+          <div className="h-[2px] bg-gradient-to-r from-[#c5a572] via-[#c5a572]/50 to-transparent mb-6"></div>
+
+          {/* Filter Tabs */}
+          <div className="flex gap-2 sm:gap-3">
+            <button
+              onClick={() => setFilter('all')}
+              className={`px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold transition-all duration-200 border-2 ${
+                filter === 'all'
+                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
+                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
+              }`}
+            >
+              ALL TIME
+            </button>
+            <button
+              onClick={() => setFilter('30')}
+              className={`px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold transition-all duration-200 border-2 ${
+                filter === '30'
+                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
+                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
+              }`}
+            >
+              30 DAYS
+            </button>
+            <button
+              onClick={() => setFilter('7')}
+              className={`px-4 sm:px-6 py-2 text-sm sm:text-base font-semibold transition-all duration-200 border-2 ${
+                filter === '7'
+                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
+                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
+              }`}
+            >
+              7 DAYS
+            </button>
+          </div>
+        </div>
+
+        {/* Daily Cards */}
+        <div className="space-y-3">
+          {/* Genesis Day */}
+          <div className="bg-gradient-to-r from-[#1a2f54]/40 to-[#0f1f3a]/40 border-2 border-[#c5a572]/30 p-4 sm:p-5 backdrop-blur-sm">
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-base font-mono">
+              <span className="text-gray-400">▪</span>
+              <span className="text-[#c5a572] font-bold min-w-[120px]">{formatDate(GENESIS_DATE)}</span>
+              <span className="text-white font-bold">${STARTING_BALANCE.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+              <span className="text-[#c5a572] font-bold">GENESIS</span>
+              <span className="text-gray-500">—</span>
+            </div>
+          </div>
+
+          {/* Daily Performance Cards */}
+          {filteredData.map((day) => (
+            <div key={day.date} className="border-2 border-gray-700 hover:border-gray-600 transition-all duration-200">
+              {/* Collapsed View */}
+              <button
+                onClick={() => toggleDay(day.date)}
+                className="w-full bg-gradient-to-r from-[#1a2f54]/60 to-[#0f1f3a]/60 p-4 sm:p-5 text-left hover:from-[#1a2f54]/80 hover:to-[#0f1f3a]/80 transition-all duration-200 backdrop-blur-sm"
+              >
+                <div className="flex flex-wrap items-center gap-3 sm:gap-4 text-sm sm:text-base font-mono">
+                  <span className="text-gray-400">{expandedDay === day.date ? '▾' : '▸'}</span>
+                  <span className="text-white font-bold min-w-[120px]">{formatDate(day.date)}</span>
+                  <span className="text-white font-bold">
+                    ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                  </span>
+                  <span className={`font-bold ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                    {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {day.dailyPL >= 0 ? '▲' : '▼'}
+                  </span>
+                  <span className="text-gray-400">
+                    {day.record.wins}-{day.record.losses}
+                  </span>
+                  <span className="ml-auto text-gray-500 text-xs sm:text-sm">
+                    {expandedDay === day.date ? '[Collapse ▲]' : '[Expand ▼]'}
+                  </span>
+                </div>
+              </button>
+
+              {/* Expanded View */}
+              {expandedDay === day.date && (
+                <div className="bg-[#0a1624] p-4 sm:p-6 space-y-3 border-t-2 border-gray-700">
+                  {day.bets.map((bet) => (
+                    <div
+                      key={bet.id}
+                      className={`border-l-4 ${
+                        bet.result === 'win' ? 'border-[#22c55e] bg-[#22c55e]/5' : 'border-[#ef4444] bg-[#ef4444]/5'
+                      } p-4 sm:p-5`}
+                    >
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 sm:gap-4">
+                        <div className="flex-1">
+                          <div className="flex items-start gap-2 mb-2">
+                            <span className={`text-lg ${bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                              {bet.result === 'win' ? '✓' : '✗'}
+                            </span>
+                            <div>
+                              <p className="text-white font-semibold text-base sm:text-lg">
+                                {bet.description} ({bet.odds > 0 ? '+' : ''}{bet.odds})
+                              </p>
+                              <p className="text-gray-400 text-sm font-mono mt-1">
+                                Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="text-right sm:text-left">
+                          <p className="text-gray-400 text-sm font-mono mb-1">{bet.stake}u</p>
+                          <p className={`font-bold text-lg font-mono ${
+                            bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'
+                          }`}>
+                            {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

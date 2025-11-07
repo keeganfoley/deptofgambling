@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import SystemIntro from '@/components/SystemIntro';
 import PortfolioStatus from '@/components/PortfolioStatus';
+import DailyPerformanceHistory from '@/components/DailyPerformanceHistory';
 import SportBreakdown from '@/components/SportBreakdown';
 import BetTypeBreakdown from '@/components/BetTypeBreakdown';
 import RecentBets from '@/components/RecentBets';
@@ -19,6 +20,7 @@ export default function Home() {
       <SystemIntro />
       <TwitterCTA />
       <PortfolioStatus />
+      <DailyPerformanceHistory />
       <SportBreakdown />
       <BetTypeBreakdown />
       <RecentBets />
