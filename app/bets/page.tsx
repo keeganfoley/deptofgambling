@@ -5,8 +5,10 @@ import { useSearchParams } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
-import { formatCurrency, formatPercent, formatOdds, formatDate } from '@/lib/utils';
+import { formatCurrency, formatPercent, formatOdds, formatDate, formatRecord } from '@/lib/utils';
 import betsData from '@/data/bets.json';
+import portfolioData from '@/data/portfolio.json';
+import metricsData from '@/data/metrics.json';
 import CheckCircle from '@/components/icons/CheckCircle';
 import XCircle from '@/components/icons/XCircle';
 
@@ -178,6 +180,7 @@ function BetsContent() {
   const searchParams = useSearchParams();
   const sportFilter = searchParams?.get('sport') || 'All';
   const [currentFilter, setCurrentFilter] = useState(sportFilter);
+  const [showAnalysis, setShowAnalysis] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
   const headerLineTopRef = useRef<HTMLDivElement>(null);
@@ -191,6 +194,38 @@ function BetsContent() {
     : allBets.filter(bet => bet.sport === currentFilter);
 
   const sports = ['All', 'NBA', 'NFL', 'NCAAB'];
+
+  // Calculate stats for current filter
+  const calculateFilteredStats = () => {
+    if (currentFilter === 'All') {
+      return {
+        record: portfolioData.record,
+        netPL: portfolioData.netPL,
+        roi: portfolioData.roi,
+        winRate: portfolioData.winRate,
+        unitsWon: portfolioData.unitsWon,
+        totalExposure: filteredBets.reduce((sum, bet) => sum + (bet.stake * 100), 0),
+        unitsRisked: filteredBets.reduce((sum, bet) => sum + bet.stake, 0),
+      };
+    } else {
+      const sportStats = (metricsData as any).sportBreakdown[currentFilter];
+      const sportBets = filteredBets;
+      const totalExposure = sportBets.reduce((sum, bet) => sum + (bet.stake * 100), 0);
+      const unitsRisked = sportBets.reduce((sum, bet) => sum + bet.stake, 0);
+
+      return {
+        record: sportStats.record,
+        netPL: sportStats.netPL,
+        roi: sportStats.roi,
+        winRate: (sportStats.record.wins / sportStats.record.total) * 100,
+        unitsWon: sportStats.unitsWon,
+        totalExposure,
+        unitsRisked,
+      };
+    }
+  };
+
+  const stats = calculateFilteredStats();
 
   useEffect(() => {
     setCurrentFilter(sportFilter);
@@ -236,6 +271,56 @@ function BetsContent() {
           />
         </div>
 
+        {/* Portfolio Stats Summary */}
+        <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-sm p-6 sm:p-8 mb-12 shadow-lg">
+          <h3 className="text-xl sm:text-2xl font-bold text-primary text-center mb-6">
+            {currentFilter === 'All' ? 'PORTFOLIO OVERVIEW' : `${currentFilter} PERFORMANCE`}
+          </h3>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            <div className="text-center">
+              <div className="data-label text-xs uppercase mb-2">Record</div>
+              <div className="text-2xl sm:text-3xl data-value text-primary mono-number font-bold">
+                {formatRecord(stats.record.wins, stats.record.losses)}
+              </div>
+              <div className="text-xs text-gray-600 mt-1 mono-number">
+                {stats.winRate.toFixed(2)}% Win Rate
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="data-label text-xs uppercase mb-2">Net P/L</div>
+              <div className={`text-2xl sm:text-3xl data-value mono-number font-bold ${
+                stats.netPL >= 0 ? 'text-success' : 'text-loss'
+              }`}>
+                {formatCurrency(stats.netPL)}
+              </div>
+              <div className="text-xs text-gray-600 mt-1 mono-number">
+                {stats.unitsWon >= 0 ? '+' : ''}{stats.unitsWon.toFixed(2)}u
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="data-label text-xs uppercase mb-2">ROI</div>
+              <div className={`text-2xl sm:text-3xl data-value mono-number font-bold ${
+                stats.roi >= 0 ? 'text-success' : 'text-loss'
+              }`}>
+                {formatPercent(stats.roi)}
+              </div>
+            </div>
+
+            <div className="text-center">
+              <div className="data-label text-xs uppercase mb-2">Total Exposure</div>
+              <div className="text-2xl sm:text-3xl data-value text-primary mono-number font-bold">
+                {formatCurrency(stats.totalExposure, false)}
+              </div>
+              <div className="text-xs text-gray-600 mt-1 mono-number">
+                {stats.unitsRisked.toFixed(2)}u Risked
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Sport Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {sports.map((sport) => (
@@ -259,6 +344,126 @@ function BetsContent() {
             Showing <span className="font-bold text-primary">{filteredBets.length}</span> bet{filteredBets.length !== 1 ? 's' : ''}
             {currentFilter !== 'All' && ` in ${currentFilter}`}
           </p>
+        </div>
+
+        {/* Detailed Analysis Section (Expandable) */}
+        <div className="mb-8 border-2 border-gray-200 rounded-sm overflow-hidden">
+          <button
+            onClick={() => setShowAnalysis(!showAnalysis)}
+            className="w-full px-6 py-4 bg-gradient-to-r from-gray-50 to-white hover:from-gray-100 hover:to-gray-50 transition-all duration-300 flex items-center justify-between"
+          >
+            <div className="flex items-center gap-3">
+              <span className="text-lg font-bold text-primary uppercase tracking-wide">
+                📊 Detailed Mathematical Analysis
+              </span>
+            </div>
+            <span className={`text-2xl transition-transform duration-300 ${showAnalysis ? 'rotate-180' : ''}`}>
+              ↓
+            </span>
+          </button>
+
+          {showAnalysis && (
+            <div className="px-6 py-8 bg-white border-t-2 border-gray-200">
+              <div className="prose prose-sm max-w-none">
+                <h3 className="text-xl font-bold text-primary mb-4">
+                  {currentFilter === 'All' ? 'Full Portfolio Analysis' : `${currentFilter} Performance Breakdown`}
+                </h3>
+
+                {/* Performance Metrics */}
+                <div className="bg-gray-50 p-6 rounded-sm mb-6">
+                  <h4 className="font-bold text-primary mb-3">Performance Metrics</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <strong>Win Rate:</strong> {stats.winRate.toFixed(2)}%
+                      ({stats.record.wins} wins out of {stats.record.total} total bets)
+                    </li>
+                    <li>
+                      <strong>Net Profit/Loss:</strong> {formatCurrency(stats.netPL)}
+                      ({stats.netPL >= 0 ? 'profit' : 'loss'})
+                    </li>
+                    <li>
+                      <strong>Return on Investment (ROI):</strong> {formatPercent(stats.roi)}
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        Formula: (Net P/L ÷ Total Exposure) × 100 = ({formatCurrency(stats.netPL)} ÷ {formatCurrency(stats.totalExposure)}) × 100
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Units Won:</strong> {stats.unitsWon >= 0 ? '+' : ''}{stats.unitsWon.toFixed(2)}u
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        Units are calculated as: Profit ÷ 100 (since 1 unit = $100)
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Exposure Analysis */}
+                <div className="bg-gray-50 p-6 rounded-sm mb-6">
+                  <h4 className="font-bold text-primary mb-3">Exposure & Risk Management</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <strong>Total Capital Risked:</strong> {formatCurrency(stats.totalExposure)}
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        Sum of all stake amounts across {filteredBets.length} bets
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Units Risked:</strong> {stats.unitsRisked.toFixed(2)}u
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        Average stake per bet: {(stats.unitsRisked / filteredBets.length).toFixed(2)}u ({formatCurrency((stats.totalExposure / filteredBets.length), false)} per bet)
+                      </span>
+                    </li>
+                    <li>
+                      <strong>Exposure as % of Starting Bankroll:</strong> {((stats.totalExposure / 10000) * 100).toFixed(2)}%
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        Starting bankroll: $10,000. Total risked represents {((stats.totalExposure / 10000) * 100).toFixed(2)}% of initial capital.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Bet Distribution */}
+                <div className="bg-gray-50 p-6 rounded-sm">
+                  <h4 className="font-bold text-primary mb-3">Betting History & Context</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <strong>Total Bets Placed:</strong> {filteredBets.length} positions
+                    </li>
+                    <li>
+                      <strong>Wins:</strong> {stats.record.wins} ({stats.winRate.toFixed(2)}% success rate)
+                    </li>
+                    <li>
+                      <strong>Losses:</strong> {stats.record.losses} ({(100 - stats.winRate).toFixed(2)}% of bets)
+                    </li>
+                    {currentFilter === 'All' && (
+                      <>
+                        <li>
+                          <strong>Sport Distribution:</strong>
+                          <ul className="ml-4 mt-1 space-y-1 text-xs text-gray-600">
+                            <li>NBA: {allBets.filter(b => b.sport === 'NBA').length} bets</li>
+                            <li>NFL: {allBets.filter(b => b.sport === 'NFL').length} bets</li>
+                            <li>NCAAB: {allBets.filter(b => b.sport === 'NCAAB').length} bets</li>
+                          </ul>
+                        </li>
+                      </>
+                    )}
+                    <li className="pt-2 border-t border-gray-300">
+                      <strong className="text-primary">Transparency Note:</strong>
+                      <br />
+                      <span className="text-gray-600 text-xs">
+                        All calculations are based on actual betting data. Every bet shown represents a real position taken with actual capital at risk.
+                        We maintain complete transparency with our portfolio - no fake or simulated bets.
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Bet Timeline */}

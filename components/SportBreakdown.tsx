@@ -142,12 +142,9 @@ function SportCard({
         <div className="mt-6 pt-4 border-t border-gray-200">
           <a
             href={`/bets?sport=${sport}`}
-            className="text-secondary hover:text-accent font-semibold text-sm transition-colors duration-300 flex items-center group"
+            className="inline-block w-full text-center px-6 py-3 bg-secondary hover:bg-accent text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 rounded-sm"
           >
-            View Bets
-            <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
+            View {sport} Bets →
           </a>
         </div>
       </div>
