@@ -115,7 +115,7 @@ function SportCard({
       {/* Header with icon and progress */}
       <div className="bg-primary px-6 py-4 flex items-center justify-between">
         <div className="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full">
-          {sport === 'NBA' ? (
+          {sport === 'NBA' || sport === 'NCAAB' ? (
             <Basketball className="w-7 h-7 text-accent" />
           ) : (
             <Football className="w-7 h-7 text-accent" />

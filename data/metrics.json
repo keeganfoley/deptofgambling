@@ -46,19 +46,69 @@
       "unitsWon": 2.71,
       "gamesAnalyzed": 5,
       "totalGames": 5
+    },
+    "NFL": {
+      "sport": "NFL",
+      "emoji": "🏈",
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "total": 3
+      },
+      "roi": 0.91,
+      "netPL": 90.91,
+      "unitsWon": 0.91,
+      "gamesAnalyzed": 3,
+      "totalGames": 3
+    },
+    "NCAAB": {
+      "sport": "NCAAB",
+      "emoji": "🏀",
+      "record": {
+        "wins": 1,
+        "losses": 2,
+        "total": 3
+      },
+      "roi": -2.07,
+      "netPL": -207.14,
+      "unitsWon": -2.07,
+      "gamesAnalyzed": 3,
+      "totalGames": 3
     }
   },
   "betTypeBreakdown": {
     "props": {
       "type": "Props",
       "record": {
-        "wins": 4,
-        "losses": 1,
-        "total": 5
+        "wins": 6,
+        "losses": 2,
+        "total": 8
       },
-      "winRate": 80.0,
-      "netPL": 271.06,
-      "roi": 2.71
+      "winRate": 75.0,
+      "netPL": 361.97,
+      "roi": 3.62
+    },
+    "spreads": {
+      "type": "Spreads",
+      "record": {
+        "wins": 1,
+        "losses": 1,
+        "total": 2
+      },
+      "winRate": 50.0,
+      "netPL": -7.14,
+      "roi": -0.07
+    },
+    "totals": {
+      "type": "Totals",
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "total": 1
+      },
+      "winRate": 0.0,
+      "netPL": -200.00,
+      "roi": -2.00
     }
   }
 }
