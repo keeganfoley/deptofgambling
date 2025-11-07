@@ -1,35 +1,43 @@
 {
   "sharpeRatio": null,
-  "sharpeRatioNote": "N/A (5/30 bets needed)",
-  "maxDrawdown": 100.00,
-  "avgWin": 92.77,
-  "avgLoss": 100.00,
-  "avgProfitPerBet": 54.21,
-  "largestWin": 127.12,
-  "largestLoss": 100.00,
-  "profitFactor": 3.71,
-  "totalCapitalRisked": 550.00,
-  "unitsRisked": 5.5,
-  "unitEfficiency": 49.3,
+  "sharpeRatioNote": "N/A (11/30 bets needed)",
+  "maxDrawdown": 200.00,
+  "avgWin": 107.83,
+  "avgLoss": 150.00,
+  "avgProfitPerBet": 14.08,
+  "largestWin": 150.00,
+  "largestLoss": 200.00,
+  "profitFactor": 1.26,
+  "totalCapitalRisked": 1450.00,
+  "unitsRisked": 14.5,
+  "unitEfficiency": 10.68,
   "closingLineValue": 4.8,
   "closingLineValueNote": "Average: +4.8¢",
   "kellyUtilization": 38,
   "stakeBreakdown": {
     "1.0u": {
       "record": {
-        "wins": 3,
+        "wins": 4,
         "losses": 1,
-        "total": 4
+        "total": 5
       },
-      "winRate": 75.0
+      "winRate": 80.0
     },
     "1.5u": {
       "record": {
-        "wins": 1,
-        "losses": 0,
+        "wins": 3,
+        "losses": 2,
+        "total": 5
+      },
+      "winRate": 60.0
+    },
+    "2.0u": {
+      "record": {
+        "wins": 0,
+        "losses": 1,
         "total": 1
       },
-      "winRate": 100.0
+      "winRate": 0.0
     }
   },
   "sportBreakdown": {
