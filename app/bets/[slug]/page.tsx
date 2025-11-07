@@ -181,7 +181,7 @@ export default async function BetDetailPage({
             </div>
             <div className="bg-gray-50 p-4 rounded">
               <div className="data-label">Implied Probability</div>
-              <div className="data-value">{analysis.preGameAnalysis.impliedProbability.toFixed(1)}%</div>
+              <div className="data-value">{analysis.preGameAnalysis.impliedProbability.toFixed(2)}%</div>
             </div>
           </div>
 

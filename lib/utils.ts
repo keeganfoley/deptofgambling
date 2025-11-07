@@ -16,7 +16,7 @@ export function formatCurrency(value: number, showSign: boolean = true): string 
 /**
  * Format percentage with proper sign
  */
-export function formatPercent(value: number, showSign: boolean = true, decimals: number = 1): string {
+export function formatPercent(value: number, showSign: boolean = true, decimals: number = 2): string {
   const sign = showSign && value > 0 ? '+' : '';
   return `${sign}${value.toFixed(decimals)}%`;
 }

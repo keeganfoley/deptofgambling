@@ -132,7 +132,7 @@ export default function QuantitativeMetrics() {
                 Unit Efficiency
               </div>
               <div className="text-2xl sm:text-3xl data-value text-success mono-number">
-                {unitEfficiency.toFixed(1)}%
+                {unitEfficiency.toFixed(2)}%
               </div>
             </div>
 
@@ -141,7 +141,7 @@ export default function QuantitativeMetrics() {
                 Closing Line Value
               </div>
               <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                +{closingLineValue.toFixed(1)}¢
+                +{closingLineValue.toFixed(2)}¢
               </div>
               {closingLineValueNote && (
                 <div className="text-xs text-secondary-light mt-1">
