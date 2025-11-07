@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
@@ -178,6 +178,7 @@ function BetCard({ bet, index }: BetCardProps) {
 
 function BetsContent() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const sportFilter = searchParams?.get('sport') || 'All';
   const [currentFilter, setCurrentFilter] = useState(sportFilter);
   const [showAnalysis, setShowAnalysis] = useState(false);
@@ -324,9 +325,13 @@ function BetsContent() {
         {/* Sport Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {sports.map((sport) => (
-            <Link
+            <button
               key={sport}
-              href={sport === 'All' ? '/bets' : `/bets?sport=${sport}`}
+              onClick={() => {
+                setCurrentFilter(sport);
+                const url = sport === 'All' ? '/bets' : `/bets?sport=${sport}`;
+                router.replace(url, { scroll: false });
+              }}
               className={`px-6 py-3 rounded-sm font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
                 currentFilter === sport
                   ? 'bg-secondary text-white'
@@ -334,7 +339,7 @@ function BetsContent() {
               }`}
             >
               {sport}
-            </Link>
+            </button>
           ))}
         </div>
 

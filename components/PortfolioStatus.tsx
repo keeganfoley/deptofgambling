@@ -146,12 +146,12 @@ export default function PortfolioStatus() {
 
         {/* View Full Breakdown CTA */}
         <div className="text-center mt-12">
-          <button className="text-secondary hover:text-accent font-bold text-lg tracking-wide transition-colors duration-300 group">
-            View Full Breakdown
-            <span className="ml-2 inline-block transition-transform duration-300 group-hover:translate-y-1">
-              ↓
-            </span>
-          </button>
+          <a
+            href="/portfolio/breakdown"
+            className="inline-block px-8 py-4 bg-secondary hover:bg-accent text-white font-bold text-lg uppercase tracking-wide transition-all duration-300 rounded-sm shadow-lg hover:shadow-xl"
+          >
+            View Full Breakdown →
+          </a>
         </div>
       </div>
     </section>
