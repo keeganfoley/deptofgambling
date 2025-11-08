@@ -193,27 +193,47 @@ export default function DailyPerformanceHistory() {
                 className="w-full bg-gradient-to-r from-[#1a2f54]/60 to-[#0f1f3a]/60 p-4 sm:p-5 text-left hover:from-[#1a2f54]/80 hover:to-[#0f1f3a]/80 transition-all duration-200 backdrop-blur-sm"
               >
                 {/* Mobile Layout: Stacked */}
-                <div className="flex flex-col gap-2 sm:hidden font-mono">
+                <div className="flex flex-col gap-2.5 sm:hidden font-mono">
+                  {/* Row 1: Date Header */}
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-gray-400 text-sm">{expandedDay === day.date ? '▾' : '▸'}</span>
-                      <span className="text-white font-bold text-sm">{formatDate(day.date)}</span>
+                    <div className="flex items-center gap-2.5">
+                      <span className="text-gray-400 text-sm w-4">{expandedDay === day.date ? '▾' : '▸'}</span>
+                      <span className="text-white font-bold text-sm tracking-tight">{formatDate(day.date)}</span>
                     </div>
-                    <span className="text-gray-500 text-xs">
-                      {expandedDay === day.date ? '[Collapse ▲]' : '[Expand ▼]'}
+                    <span className="text-gray-500 text-xs tracking-tight">
+                      {expandedDay === day.date ? 'COLLAPSE' : 'EXPAND'}
                     </span>
                   </div>
-                  <div className="flex items-center justify-between pl-6">
-                    <span className="text-white font-bold text-sm">
-                      ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                    </span>
-                    <span className="text-gray-400 text-sm">
-                      {day.record.wins}-{day.record.losses}
-                    </span>
+
+                  {/* Divider */}
+                  <div className="h-[1px] bg-gray-600/30 my-0.5"></div>
+
+                  {/* Row 2: Balance & Record */}
+                  <div className="flex items-baseline justify-between">
+                    <div className="flex flex-col">
+                      <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Balance</span>
+                      <span className="text-white font-bold text-sm tracking-tight">
+                        ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </span>
+                    </div>
+                    <div className="flex flex-col items-end">
+                      <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Record</span>
+                      <span className="text-gray-400 font-bold text-sm tracking-tight">
+                        {day.record.wins}-{day.record.losses}
+                      </span>
+                    </div>
                   </div>
-                  <div className="pl-6">
-                    <span className={`font-bold text-sm ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                      {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {day.dailyPL >= 0 ? '▲' : '▼'}
+
+                  {/* Row 3: Daily P/L */}
+                  <div className="flex items-baseline justify-between">
+                    <div className="flex flex-col flex-1">
+                      <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Daily P/L</span>
+                      <span className={`font-bold text-base tracking-tight ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                        {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                      </span>
+                    </div>
+                    <span className={`text-2xl ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                      {day.dailyPL >= 0 ? '▲' : '▼'}
                     </span>
                   </div>
                 </div>
