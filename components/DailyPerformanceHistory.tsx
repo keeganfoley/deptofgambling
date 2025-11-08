@@ -17,6 +17,7 @@ interface Bet {
   expectedValue: number;
   profit: number;
   betType: string;
+  slug: string;
 }
 
 interface DailyData {
@@ -261,13 +262,14 @@ export default function DailyPerformanceHistory() {
               {expandedDay === day.date && (
                 <div className="bg-[#0a1624] p-4 sm:p-6 space-y-3 sm:space-y-4 border-t-2 border-gray-700">
                   {day.bets.map((bet) => (
-                    <div
+                    <a
                       key={bet.id}
-                      className={`border-2 ${
+                      href={`/bets/${bet.slug}`}
+                      className={`block border-2 ${
                         bet.result === 'win'
-                          ? 'border-[#22c55e] bg-[#22c55e]/5'
-                          : 'border-[#ef4444] bg-[#ef4444]/5'
-                      } p-4 sm:p-6 rounded-lg`}
+                          ? 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10'
+                          : 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10'
+                      } p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
                     >
                       <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
                         <div className="flex items-start gap-2 sm:gap-3 flex-1">
@@ -295,7 +297,7 @@ export default function DailyPerformanceHistory() {
                           {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
                         </p>
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               )}
