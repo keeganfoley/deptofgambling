@@ -1,0 +1,126 @@
+{
+  "slug": "thompson-points-nov7-2025",
+  "player": "Amen Thompson",
+  "line": "UNDER 16.5 points",
+  "odds": 105,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "14 points",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Houston Rockets @ San Antonio Spurs",
+    "date": "November 7, 2025",
+    "gameTime": "8:30 PM ET",
+    "venue": "Frost Bank Center",
+    "finalScore": "Spurs 121, Rockets 110"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24.6,
+    "estimatedProbability": 61,
+    "impliedProbability": 48.78,
+    "recentPerformance": {
+      "hitRate": "4 consecutive games over 16.5",
+      "seasonAverage": "18.6 PPG",
+      "last3Games": "27+ points in last 2 (28 vs MEM, 27 vs DAL)",
+      "cushion": "+2.1 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Hot Scoring Streak",
+        "description": "Entered averaging 18.6 PPG with 27+ points in previous two games, both shooting over 50% FG. Had cleared 16.5 in four straight games."
+      },
+      {
+        "title": "Elevated Role",
+        "description": "Operating as hybrid point guard following Fred VanVleet's season-ending ACL injury. Primary ball-handler during 5-game winning streak."
+      },
+      {
+        "title": "San Antonio #2 Defense",
+        "description": "Spurs ranked 2nd in defensive rating (109.6), but Thompson's athleticism suggested he could navigate."
+      },
+      {
+        "title": "Plus Odds Value",
+        "description": "At +105, getting favorable odds despite Thompson's recent explosion."
+      }
+    ],
+    "riskFactors": [
+      "San Antonio's elite defense (2nd ranked)",
+      "Spurs slow pace (24th at 102.8 possessions/game)",
+      "Thompson's shot volume inconsistency",
+      "Loss environment could alter touches"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 14,
+      "fieldGoals": "4-12 (33.3%)",
+      "threePointers": "2-4 (50.0%)",
+      "freeThrows": "4-4 (100%)",
+      "rebounds": 7,
+      "assists": 3,
+      "steals": 1,
+      "blocks": 1,
+      "minutes": 39
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Struggled to find rhythm against Spurs' defense. Houston trailed by 13 in Q2, fell behind early. 50-50 at halftime."
+      },
+      {
+        "quarter": "Q3",
+        "description": "San Antonio executed 22-4 run to seize control. Thompson became tertiary option as Durant (24 pts, 18 FGA) and Sengun (25 pts, 22 FGA) dominated touches."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Despite playing 39 minutes, shot volume disappeared. Only 12 total FGA (vs 26 previous game). Efficiency cratered to career-worst 33.3% FG."
+      }
+    ],
+    "whenMissed": "Never threatened the line - dramatic shot volume collapse from 26 FGA to just 12 attempts",
+    "gamePace": "Spurs' deliberate half-court style (24th in pace) limited Thompson's primary strength: transition scoring",
+    "foulTrouble": "No foul trouble - played 39 minutes freely but touches evaporated"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Catastrophic Shot Volume Collapse",
+        "description": "44% reduction in field goal attempts - from 26 FGA vs Memphis to only 12 vs San Antonio. Even with normal 45-47% efficiency, needed 15+ attempts to clear 16.5."
+      },
+      {
+        "title": "Efficiency Regression",
+        "description": "Career-worst 33.3% FG (vs 50%+ in previous games). Combination of fewer shots AND poor conversion doomed the prop."
+      },
+      {
+        "title": "Game Script Disaster",
+        "description": "Loss environment shifted offensive hierarchy. Durant and Sengun dominated touches, fragmenting scoring opportunities. Reed Sheppard (16 pts) and Josh Okogie (12 pts) also absorbed shots."
+      },
+      {
+        "title": "San Antonio's Defensive Execution",
+        "description": "#2 defense executed perfectly, slowing pace dramatically and limiting fast-break opportunities Thompson thrives in."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-4.6 points (-24.7% below 18.6 PPG average)",
+      "vsRecentForm": "-13+ points below 27-28 PPG last 2 games",
+      "vsPropLine": "-2.5 points (-15.2% below 16.5 line)",
+      "percentileRanking": "Bottom 20th percentile of season - worst scoring performance"
+    },
+    "wasNormalVariance": "No - this was predictable game script issue, not variance. Shot volume collapse (26→12 FGA) was the killer, not bad luck."
+  },
+  "closingLineValue": {
+    "ourOdds": 105,
+    "closingOdds": 105,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Pre-game reasoning was sound but unpredictable volume collapse proved fatal. Can't predict 44% FGA reduction."
+  },
+  "keyTakeaways": [
+    "Shot volume is king - no amount of efficiency overcomes 44% reduction in attempts (26→12)",
+    "Elite defenses (#2 ranked) combined with slow pace (24th) dangerous for volume-dependent scorers",
+    "Loss environment risk materialized - teammates (Durant, Sengun) dominated touches in catch-up mode",
+    "Recent hot streak (27-28 points) created recency bias - regression was due",
+    "Even sound analysis loses to unpredictable game script shifts"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Sound pre-game analysis defeated by unpredictable shot volume collapse and game flow. Textbook bad beat - right process, wrong outcome."
+}

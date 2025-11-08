@@ -1,43 +1,43 @@
 {
   "sharpeRatio": null,
-  "sharpeRatioNote": "N/A (11/30 bets needed)",
+  "sharpeRatioNote": "N/A (17/30 bets needed)",
   "maxDrawdown": 200.00,
-  "avgWin": 107.83,
+  "avgWin": 119.77,
   "avgLoss": 150.00,
-  "avgProfitPerBet": 14.08,
-  "largestWin": 150.00,
+  "avgProfitPerBet": 8.69,
+  "largestWin": 165.00,
   "largestLoss": 200.00,
-  "profitFactor": 1.26,
-  "totalCapitalRisked": 1450.00,
-  "unitsRisked": 14.5,
-  "unitEfficiency": 10.68,
+  "profitFactor": 1.14,
+  "totalCapitalRisked": 2400.00,
+  "unitsRisked": 24.0,
+  "unitEfficiency": 6.15,
   "closingLineValue": 4.8,
   "closingLineValueNote": "Average: +4.8¢",
   "kellyUtilization": 38,
   "stakeBreakdown": {
     "1.0u": {
       "record": {
-        "wins": 4,
+        "wins": 5,
         "losses": 1,
-        "total": 5
+        "total": 6
       },
-      "winRate": 80.0
+      "winRate": 83.33
     },
     "1.5u": {
       "record": {
-        "wins": 3,
-        "losses": 2,
-        "total": 5
+        "wins": 4,
+        "losses": 5,
+        "total": 9
       },
-      "winRate": 60.0
+      "winRate": 44.44
     },
     "2.0u": {
       "record": {
-        "wins": 0,
+        "wins": 1,
         "losses": 1,
-        "total": 1
+        "total": 2
       },
-      "winRate": 0.0
+      "winRate": 50.0
     }
   },
   "sportBreakdown": {
@@ -45,15 +45,15 @@
       "sport": "NBA",
       "emoji": "🏀",
       "record": {
-        "wins": 4,
-        "losses": 1,
-        "total": 5
+        "wins": 7,
+        "losses": 4,
+        "total": 11
       },
-      "roi": 2.71,
-      "netPL": 271.06,
-      "unitsWon": 2.71,
-      "gamesAnalyzed": 5,
-      "totalGames": 5
+      "roi": 2.64,
+      "netPL": 263.91,
+      "unitsWon": 2.64,
+      "gamesAnalyzed": 11,
+      "totalGames": 11
     },
     "NFL": {
       "sport": "NFL",
@@ -88,13 +88,13 @@
     "props": {
       "type": "Props",
       "record": {
-        "wins": 6,
-        "losses": 2,
-        "total": 8
+        "wins": 9,
+        "losses": 5,
+        "total": 14
       },
-      "winRate": 75.0,
-      "netPL": 361.97,
-      "roi": 3.62
+      "winRate": 64.29,
+      "netPL": 354.82,
+      "roi": 3.55
     },
     "spreads": {
       "type": "Spreads",

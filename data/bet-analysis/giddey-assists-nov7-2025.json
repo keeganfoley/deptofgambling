@@ -1,0 +1,122 @@
+{
+  "slug": "giddey-assists-nov7-2025",
+  "player": "Josh Giddey",
+  "line": "OVER 8.5 assists",
+  "odds": -130,
+  "stake": 2.0,
+  "result": "win",
+  "finalStat": "14 assists",
+  "profit": 153.85,
+  "gameDetails": {
+    "matchup": "Chicago Bulls @ Milwaukee Bucks",
+    "date": "November 7, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Fiserv Forum",
+    "finalScore": "Bucks 126, Bulls 110"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 31.8,
+    "estimatedProbability": 74,
+    "impliedProbability": 56.52,
+    "recentPerformance": {
+      "hitRate": "5 of 7 games over 8.5 (71.4%)",
+      "seasonAverage": "9.1 APG (5th in NBA)",
+      "last3Games": "12+ assists in 3 of last 4",
+      "cushion": "+0.6 assists above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Consecutive Triple-Doubles",
+        "description": "Recorded back-to-back triple-doubles entering this game (29-15-12 vs PHI, 23-12-12 vs NYK). First Bulls player since Michael Jordan (April 1989) to achieve consecutive triple-doubles."
+      },
+      {
+        "title": "Coby White Out All Season",
+        "description": "With White sidelined (right calf strain), Giddey operated as Chicago's undisputed primary ball-handler, dramatically elevating playmaking responsibilities."
+      },
+      {
+        "title": "Milwaukee's Weak Defense",
+        "description": "Bucks ranked 22nd in defensive rating (119.1 PPG allowed), coming off 100-128 blowout loss to Toronto. High-tempo style suited Giddey's transition playmaking."
+      },
+      {
+        "title": "Bulls Team Ball Movement",
+        "description": "Chicago ranked 3rd in NBA at 29.6 APG as a team, creating abundant assist opportunities in their offensive system."
+      }
+    ],
+    "riskFactors": [
+      "Loss environment could limit minutes",
+      "Milwaukee's home court advantage",
+      "Potential for Bulls to abandon game plan in blowout"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "assists": 14,
+      "points": 16,
+      "rebounds": 7,
+      "fieldGoals": "6-14 (42.9%)",
+      "threePointers": "2-5 (40.0%)",
+      "minutes": 35,
+      "fouls": 1,
+      "turnovers": "N/A"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Set playmaking tone early, distributing to Vucevic and Buzelis. Bulls stayed competitive, trailing 58-54 at half."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Continued facilitating despite Bucks pulling ahead. Game remained competitive enough to keep starters engaged."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Bucks pulled away late but Giddey played heavy minutes throughout, racking up assists as Bulls tried to mount comeback."
+      }
+    ],
+    "whenCleared": "Mid-Q3 (reached 9 assists), finished with dominant 14",
+    "gamePace": "Bulls shot 41% from three (16-39), providing plenty of made baskets. Team finished with 34 total assists."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Perfect Role Execution",
+        "description": "As undisputed primary ball-handler with White out, Giddey distributed across entire roster. Nearly missed third consecutive triple-double by 1-2 assists."
+      },
+      {
+        "title": "Line Set Below Average",
+        "description": "8.5 line was 0.6 assists below his 9.1 season average. Pre-game analysis from Covers.com highlighted this as strong value."
+      },
+      {
+        "title": "Ideal Matchup",
+        "description": "Milwaukee's 22nd-ranked defense and high-tempo style created perfect environment for transition playmaking."
+      },
+      {
+        "title": "Full Rest",
+        "description": "2 days of rest (not on back-to-back), no injury concerns beyond minor sprained finger. Fresh legs for 35 minutes."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+4.9 assists (+53.8% above 9.1 APG average)",
+      "vsRecentForm": "+1-2 assists above recent triple-double pace",
+      "vsPropLine": "+5.5 assists (+64.7% above 8.5 line)",
+      "percentileRanking": "Career-high facilitation performance"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -130,
+    "closingOdds": -128,
+    "clvCents": 2,
+    "clvPercentage": 1.5,
+    "verdict": "Slight positive CLV - line should have been closer to 9.5 given role and recent form. Market undervalued Giddey's elevated usage."
+  },
+  "keyTakeaways": [
+    "When primary ball-handler's line is set below season average AND key teammate (White) out = exceptional value",
+    "Consecutive triple-doubles created momentum - first Bulls player since MJ (1989)",
+    "High-tempo matchups vs weak defenses (22nd ranked) ideal for assist props",
+    "Cleared by 5.5 assists - dominant performance validated analysis",
+    "Proper staking (2.0u) on high-confidence play maximized profit"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook example of identifying value when market underprices elevated role. Career-high facilitation against perfect matchup."
+}

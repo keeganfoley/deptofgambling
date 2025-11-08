@@ -1,0 +1,127 @@
+{
+  "slug": "mitchell-points-nov7-2025",
+  "player": "Donovan Mitchell",
+  "line": "UNDER 26.5 points",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "24 points",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Cleveland Cavaliers vs Washington Wizards",
+    "date": "November 7, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Rocket Mortgage FieldHouse",
+    "finalScore": "Cavaliers 148, Wizards 114"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 30.6,
+    "estimatedProbability": 68,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "5 of 7 games over 26.5 (71.4%)",
+      "seasonAverage": "31.9 PPG (7th in NBA)",
+      "last3Games": "46 pts vs PHI, 37 vs ATL, 35 vs DET",
+      "cushion": "+5.4 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Recent 46-Point Explosion",
+        "description": "Just erupted for season-high 46 points on 15-21 shooting (71.4% FG) vs Philadelphia 2 days earlier (Nov 5). Marked his 20th career 40-point game with Cleveland."
+      },
+      {
+        "title": "Elite Scoring Form",
+        "description": "Scored 35+ in three consecutive games before PHI game. Averaging ridiculous 57.6% FG, 45.5% from three on the season."
+      },
+      {
+        "title": "Dream Matchup",
+        "description": "Washington ranked 29th in defensive rating (119.1), dead last allowing 130.3 PPG (30th). Entered 1-7 on six-game losing streak with historically poor perimeter defense."
+      },
+      {
+        "title": "High-Tempo Game",
+        "description": "Both teams ranked top-5 in tempo. Projected 241.5 total suggested high-possession game with ample scoring opportunities. Dimers.com projected Mitchell at 28 points."
+      }
+    ],
+    "riskFactors": [
+      "Potential blowout could limit minutes",
+      "Darius Garland's return (2nd game back from toe surgery) might distribute usage",
+      "Back-to-back situation (2 days after 46-point outburst)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 24,
+      "fieldGoals": "8-20 (40.0%)",
+      "threePointers": "4-10 (40.0%)",
+      "freeThrows": "4-4 (100%)",
+      "rebounds": 5,
+      "assists": 5,
+      "steals": 4,
+      "blocks": 1,
+      "minutes": 26,
+      "plusMinus": 23,
+      "fouls": 0
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Cleveland jumped ahead early and never looked back. Led 76-59 at halftime - already massive 17-point advantage. Mitchell scored efficiently but game script was set."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Cavs extended to 109-86 after three quarters (23-point lead). Mitchell continued efficiency but minutes management began."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Pulled early as bench dominated garbage time. Tyrese Proctor (17 pts career-high), Sam Merrill (14 pts, 4-5 from three) absorbed fourth quarter minutes."
+      }
+    ],
+    "whenMissed": "Missing 7-8 minutes cost approximately 6-8 points. At his scoring rate, would have easily cleared 26.5 with normal minutes.",
+    "gamePace": "262 total points (crushed projected 241.5 by 20.5). Cleveland shot 47.3% as team, 20-45 from three (44.4%). Final score: 148-114 blowout.",
+    "foulTrouble": "Zero fouls - no foul trouble. Simply pulled due to blowout."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "34-Point Blowout Robbed Minutes",
+        "description": "Played only 26 minutes vs 33.9 season average. Missing 8 minutes cost 6-8 points at his per-36 pace of ~33 points. Game was over by mid-third quarter."
+      },
+      {
+        "title": "Balanced Attack",
+        "description": "Garland (20 pts, 9 ast), Mobley (18 pts, 10 reb), Allen (16 pts, 14 reb) meant Mitchell didn't need to carry load. Depth dominated garbage time."
+      },
+      {
+        "title": "Too Efficient for Own Good",
+        "description": "Team shot so well (47.3% FG, 44.4% from three) that game became non-competitive. Ironically, the dream matchup created a nightmare scenario."
+      },
+      {
+        "title": "Cruel Timing",
+        "description": "Came 2 days after 46-point explosion, highlighting volatility of player props and unpredictability of blowouts."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-7.9 points (-24.8% below 31.9 PPG average)",
+      "vsRecentForm": "-13+ points below recent 35-46 PPG stretch",
+      "vsPropLine": "-2.5 points (-9.4% below 26.5 line)",
+      "percentileRanking": "Bottom 30th percentile when adjusted for minutes - actually on pace for ~33 points per 36"
+    },
+    "wasNormalVariance": "No - pure game script. Per-36 minute pace extrapolated to ~33 points, well over prop. Lost solely due to blowout minute reduction, not performance."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Market accurately priced Mitchell's scoring potential. No one predicted 34-point blowout that would bench starters entire Q4."
+  },
+  "keyTakeaways": [
+    "Blowouts are the ultimate enemy of star player props - no amount of analysis predicts 34-point victories",
+    "When team shoots 47%/44% from three, stars sit early. Efficiency paradox.",
+    "Dream matchups (29th defense, 130 PPG allowed) can backfire via blowouts",
+    "Per-minute production was on pace (~33 points per 36), but missing 8 minutes fatal",
+    "Impossible to predict when elite scorers will be benched due to game flow"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Classic 'bad beat.' Every pre-game metric screamed OVER - 31.9 PPG average, 46 points 2 days prior, facing worst defense in NBA. Lost purely to unpredictable blowout. Right process, cruel outcome."
+}

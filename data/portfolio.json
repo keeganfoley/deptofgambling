@@ -1,14 +1,14 @@
 {
-  "balance": 10154.83,
+  "balance": 10147.68,
   "startingBalance": 10000.00,
-  "netPL": 154.83,
-  "roi": 1.55,
+  "netPL": 147.68,
+  "roi": 1.48,
   "record": {
-    "wins": 7,
-    "losses": 4,
-    "total": 11
+    "wins": 10,
+    "losses": 7,
+    "total": 17
   },
-  "winRate": 63.64,
-  "unitsWon": 1.55,
-  "asOfDate": "2025-11-07T03:00:00.000Z"
+  "winRate": 58.82,
+  "unitsWon": 1.48,
+  "asOfDate": "2025-11-08T03:00:00.000Z"
 }
