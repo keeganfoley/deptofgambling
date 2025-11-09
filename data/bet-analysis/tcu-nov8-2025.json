@@ -1,0 +1,140 @@
+{
+  "slug": "tcu-nov8-2025",
+  "team": "TCU",
+  "opponent": "Iowa State",
+  "line": "TCU -7.5",
+  "odds": -105,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "Lost by 3 points (17-20)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "TCU vs Iowa State",
+    "date": "November 8, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Amon G. Carter Stadium, Fort Worth, TX",
+    "finalScore": "Iowa State 20, TCU 17"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 27.2,
+    "estimatedProbability": 68,
+    "impliedProbability": 51.22,
+    "situationalFactors": {
+      "homeField": "TCU undefeated at home (5-0) entering game",
+      "revenge": "Iowa State embarrassed TCU 42-14 in Ames last season",
+      "offensiveTempo": "TCU's up-tempo offense averaged 82.3 plays/game at home",
+      "iowaStateRoadRecord": "Cyclones 2-3 in true road games with losses by 10, 7, 3"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Dominance",
+        "description": "TCU entered 5-0 at Amon G. Carter Stadium with average margin of victory of 15.6 points. Home crowd created significant advantage for up-tempo offense."
+      },
+      {
+        "title": "Offensive Firepower",
+        "description": "TCU averaged 38.4 PPG at home vs 28.1 on road. QB Josh Hoover threw for 2,847 yards with 24 TDs and just 6 INTs at home over last 2 seasons."
+      },
+      {
+        "title": "Iowa State Secondary Struggles",
+        "description": "Cyclones ranked 89th in pass defense efficiency, allowing 8.2 yards/attempt in Big 12 road games. TCU's air raid offense designed to exploit this weakness."
+      },
+      {
+        "title": "Revenge Motivation",
+        "description": "TCU still angry from 42-14 blowout loss in Ames last November. Revenge games historically cover at 58% rate when home team has offense advantage."
+      }
+    ],
+    "riskFactors": [
+      "Iowa State's ball-control offense could limit TCU possessions",
+      "TCU's defense ranked 72nd nationally - vulnerable to clock management",
+      "Weather conditions (30 mph winds) could disrupt passing game"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "tcuOffense": {
+        "points": 17,
+        "totalYards": 342,
+        "passingYards": 267,
+        "rushingYards": 75,
+        "turnovers": 3,
+        "timeOfPossession": "23:48"
+      },
+      "iowaStateOffense": {
+        "points": 20,
+        "totalYards": 389,
+        "passingYards": 145,
+        "rushingYards": 244,
+        "turnovers": 0,
+        "timeOfPossession": "36:12"
+      }
+    },
+    "scoringBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "TCU TD 7-0 - Fast start for Horned Frogs. 4-play, 75-yard TD drive in 1:42. Josh Hoover 38-yard TD strike."
+      },
+      {
+        "quarter": "Q2",
+        "description": "ISU FG 7-3, TCU FG 10-3, ISU TD 10-10 - Iowa State responded with methodical drives. Cyclones tied game on 14-play, 7:18 TD drive consuming clock. Half: 10-10."
+      },
+      {
+        "quarter": "Q3",
+        "description": "ISU FG 10-13, TCU FG 13-13 - Defensive struggle. Both teams exchanged FGs. Iowa State dominated TOP 9:22 to 5:38."
+      },
+      {
+        "quarter": "Q4",
+        "description": "ISU TD 13-20, TCU FG 17-20 - DISASTER. TCU fumbled at ISU 23-yard line while driving for go-ahead TD. Iowa State responded with game-winning 12-play, 6:47 TD drive. TCU's last-second FG attempt from 52 yards fell short. Final: 20-17."
+      }
+    ],
+    "whenCleared": "Never covered - lost outright by 3 points",
+    "gamePace": "Iowa State controlled tempo completely - 36:12 time of possession (60.3%). TCU's up-tempo offense neutralized by ball control."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Catastrophic Turnovers",
+        "description": "TCU committed 3 turnovers (2 fumbles, 1 INT) vs Iowa State's 0. Most devastating: fumble at ISU 23-yard line in Q4 while driving for potential go-ahead TD. 10-point swing."
+      },
+      {
+        "title": "Time of Possession Massacre",
+        "description": "Iowa State held ball for 36:12 (60.3%) vs TCU's 23:48. Cyclones ran 78 plays vs TCU's 61. Up-tempo offense completely neutralized by ball control."
+      },
+      {
+        "title": "Rushing Defense Collapse",
+        "description": "Iowa State rushed for 244 yards on 52 carries (4.7 YPC). TCU's 72nd-ranked defense couldn't stop ground game, allowing 7+ minute drives repeatedly."
+      },
+      {
+        "title": "Red Zone Failures",
+        "description": "TCU went 1-for-4 in red zone (1 TD, 2 FGs, 1 fumble). Iowa State went 2-for-3 (2 TDs, 1 FG). Red zone efficiency 5-point swing directly decided outcome."
+      }
+    ],
+    "statisticalContext": {
+      "vsSpread": "Lost by 10.5 points vs -7.5 line (failed to cover by 150%)",
+      "vsProjection": "TCU scored 21.4 below home average (38.4 PPG), Iowa State scored 3.3 above road avg",
+      "turnoverImpact": "-3 turnover margin = approximately -10.5 expected point swing",
+      "percentileRanking": "8th percentile offensive performance for TCU at home"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 2.8,
+    "verdict": "Slight positive CLV - line held steady despite public money on TCU home favorite. Market correctly priced Iowa State's ball-control threat."
+  },
+  "lessonsLearned": [
+    "Up-tempo offenses vulnerable to ball-control opponents who limit possessions",
+    "Turnover margin (-3) is nearly impossible to overcome regardless of home field advantage",
+    "Red zone efficiency matters more than total yardage - TCU outgained ISU 342-389 but went 1-for-4 in RZ",
+    "72nd-ranked defense is fatal flaw when opponent commits 0 turnovers and controls clock",
+    "Weather conditions (30 mph winds) disrupted TCU's passing attack (Hoover 23-of-38, 60.5%)"
+  ],
+  "whatCouldHaveChanged": [
+    "If TCU doesn't fumble at ISU 23-yard line in Q4 → likely TCU 24, ISU 13 (covers)",
+    "If TCU converts even 2-of-4 red zone trips instead of 1-of-4 → likely TCU 24-27 (covers)",
+    "If TCU's defense forces even 1 turnover → completely changes time of possession battle"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Analytically sound pre-game case crushed by execution failures. Turnovers, red zone inefficiency, and time of possession dominance created perfect storm. Iowa State's game plan (ball control + 0 turnovers) was textbook."
+}

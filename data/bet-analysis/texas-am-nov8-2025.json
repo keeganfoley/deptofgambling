@@ -1,0 +1,135 @@
+{
+  "slug": "texas-am-nov8-2025",
+  "team": "Texas A&M",
+  "opponent": "Missouri",
+  "line": "Texas A&M -6.5",
+  "odds": -115,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Covered by 14.5 points (38-17)",
+  "profit": 130.43,
+  "gameDetails": {
+    "matchup": "Texas A&M vs Missouri",
+    "date": "November 8, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Kyle Field, College Station, TX",
+    "finalScore": "Texas A&M 38, Missouri 17"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 33.9,
+    "estimatedProbability": 72,
+    "impliedProbability": 53.49,
+    "situationalFactors": {
+      "homeFieldAdvantage": "Kyle Field 12th Man - one of college football's most intimidating venues",
+      "momentumShift": "Texas A&M riding 3-game win streak after slow start",
+      "mizzouStruggles": "Missouri 1-4 in road SEC games, averaging 17.2 PPG away from home",
+      "motivationEdge": "A&M fighting for SEC Championship Game berth"
+    },
+    "keyFactors": [
+      {
+        "title": "Kyle Field Dominance",
+        "description": "Texas A&M was 6-0 at home entering this game, winning by average margin of 18.3 points. The 12th Man crowd creates massive home field advantage in SEC play."
+      },
+      {
+        "title": "Missouri Road Woes",
+        "description": "Mizzou entered 1-4 in true road games (excluding neutral sites), with losses by 14, 10, 21, and 7. Road SEC environment historically crushing for Tigers' up-tempo offense."
+      },
+      {
+        "title": "Defensive Mismatch",
+        "description": "Texas A&M ranked 12th in total defense (302.1 YPG allowed). Missouri ranked 68th in offensive efficiency. A&M's defensive line averaged 3.2 sacks/game, targeting Mizzou's inconsistent pass protection."
+      },
+      {
+        "title": "Rushing Attack Advantage",
+        "description": "A&M's Le'Veon Moss averaged 6.2 YPC at home vs 4.1 on road. Missouri allowed 178.3 rushing yards/game in SEC play - exploitable weakness."
+      }
+    ],
+    "riskFactors": [
+      "Missouri's dual-threat QB capable of explosive plays",
+      "A&M tendency to start slow before halftime adjustments",
+      "Weather conditions (potential rain) could tighten game"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "texasAMOffense": {
+        "points": 38,
+        "totalYards": 452,
+        "passingYards": 218,
+        "rushingYards": 234,
+        "turnovers": 0,
+        "timeOfPossession": "34:17"
+      },
+      "missouriOffense": {
+        "points": 17,
+        "totalYards": 318,
+        "passingYards": 195,
+        "rushingYards": 123,
+        "turnovers": 3,
+        "timeOfPossession": "25:43"
+      }
+    },
+    "scoringBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "A&M TD 7-0 - Dominant opening drive (78 yards, 6:42 TOP). Le'Veon Moss 3-yard TD run capped 10-play march."
+      },
+      {
+        "quarter": "Q2",
+        "description": "A&M FG 10-0, Mizzou TD 10-7, A&M TD 17-7 - A&M extended lead before Mizzou answered with TD. A&M responded immediately with 4-play, 75-yard TD drive. Half: 17-7."
+      },
+      {
+        "quarter": "Q3",
+        "description": "A&M TD 24-7, A&M FG 27-7, Mizzou FG 27-10 - A&M dominated time of possession (9:47 vs 5:13), extending lead to 20 points before Mizzou FG."
+      },
+      {
+        "quarter": "Q4",
+        "description": "A&M TD 34-10, Mizzou TD 34-17, A&M FG 38-17 - A&M sealed victory with 12-play, 6:18 TD drive. Mizzou scored garbage-time TD before A&M added late FG. Final: 38-17."
+      }
+    ],
+    "whenCleared": "Late Q3 (A&M led 27-10, covering spread with 3:22 left in quarter)",
+    "gamePace": "A&M controlled tempo completely - 34:17 time of possession. Missouri's up-tempo offense stifled by Kyle Field noise and A&M's ball control."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Kyle Field Erupted",
+        "description": "12th Man forced 4 Missouri false starts and 2 delay of game penalties. Crowd noise disrupted Mizzou's up-tempo rhythm, forcing 3 turnovers (2 INT, 1 fumble)."
+      },
+      {
+        "title": "Le'Veon Moss Dominated",
+        "description": "A&M's RB posted 187 rushing yards on 28 carries (6.7 YPC) with 2 TDs. Exactly exploited Missouri's run defense weakness (178.3 YPG allowed in SEC play)."
+      },
+      {
+        "title": "Time of Possession Stranglehold",
+        "description": "A&M held ball for 34:17 (57.2%), limiting Missouri to just 8 offensive possessions. Ball control suffocated Mizzou's explosive offense."
+      },
+      {
+        "title": "Defensive Line Dominance",
+        "description": "A&M recorded 5 sacks and 11 QB hurries, neutralizing Missouri's passing attack. Mizzou QB completed just 18-of-34 (52.9%) under constant pressure."
+      }
+    ],
+    "statisticalContext": {
+      "vsSpread": "+14.5 points above -6.5 line (covered by 223%)",
+      "vsProjection": "A&M scored 5.8 above season avg, Mizzou scored 9.2 below road avg",
+      "homeFieldImpact": "+11.5 point swing vs A&M's neutral site performance",
+      "percentileRanking": "92nd percentile margin of victory for A&M home games"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -118,
+    "clvCents": 3,
+    "clvPercentage": 2.5,
+    "verdict": "Slight positive CLV - line moved toward A&M as public money pounded home favorite. Sharp action recognized Kyle Field value early."
+  },
+  "keyTakeaways": [
+    "Kyle Field home atmosphere is worth 8-10 points vs SEC road opponents",
+    "Missouri's road struggles (1-4 in true road games) were systemic, not variance",
+    "Targeting teams with rushing attack advantage (6.2 YPC) vs weak run defenses (178.3 YPG) = consistent edge",
+    "Time of possession dominance (34:17 vs 25:43) suffocates explosive offenses",
+    "Covered by 14.5 points - dominated wire-to-wire exactly as projected"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect home favorite spot. Kyle Field advantage + Missouri road woes + rushing mismatch = dominant cover performance."
+}
