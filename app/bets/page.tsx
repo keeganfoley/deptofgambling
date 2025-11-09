@@ -194,7 +194,7 @@ function BetsContent() {
     ? allBets
     : allBets.filter(bet => bet.sport === currentFilter);
 
-  const sports = ['All', 'NBA', 'NFL', 'NCAAB'];
+  const sports = ['All', 'NBA', 'NFL', 'NCAAB', 'NCAAF'];
 
   // Calculate stats for current filter
   const calculateFilteredStats = () => {
@@ -452,6 +452,7 @@ function BetsContent() {
                             <li>NBA: {allBets.filter(b => b.sport === 'NBA').length} bets</li>
                             <li>NFL: {allBets.filter(b => b.sport === 'NFL').length} bets</li>
                             <li>NCAAB: {allBets.filter(b => b.sport === 'NCAAB').length} bets</li>
+                            <li>NCAAF: {allBets.filter(b => b.sport === 'NCAAF').length} bets</li>
                           </ul>
                         </li>
                       </>
