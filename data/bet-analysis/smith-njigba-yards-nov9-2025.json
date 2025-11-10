@@ -19,11 +19,11 @@
     "expectedValue": 38.0,
     "estimatedProbability": 72,
     "impliedProbability": 52.38,
-    "situationalFactors": {
-      "jsnStatus": "NFL's leading receiver with 948 yards, on pace for 2,015-yard season (would shatter single-season record)",
-      "consistency": "75+ yards in all 8 previous games",
-      "matchup": "Arizona ranked 29th in pass defense (261.4 YPG allowed)",
-      "targetShare": "Commanded 44.7% of receiving production"
+    "recentPerformance": {
+      "hitRate": "8 of 8 games over 75 yards (100%)",
+      "seasonAverage": "118.5 YPG (NFL leader)",
+      "last3Games": "126.7 YPG",
+      "cushion": "+22.0 yards above line (historic pace)"
     },
     "keyFactors": [
       {
@@ -59,7 +59,7 @@
       "catchRate": "83.3% (5-for-6)",
       "longestReception": 43
     },
-    "gameFlow": [
+    "quarterBreakdown": [
       {
         "quarter": "Q1",
         "description": "JSN caught 43-yard TD on opening drive, instantly putting him at 43 yards. Seattle jumped ahead 7-0 and appeared headed for shootout."
@@ -96,10 +96,10 @@
       }
     ],
     "statisticalContext": {
-      "vsLine": "-3.5 yards below 96.5 line (-3.6%)",
-      "efficiency": "18.6 yards per reception (excellent)",
-      "targetShare": "6 targets on 12 attempts = 50% of passes (even higher than 44.7% average)",
-      "comparableGames": "In competitive games, JSN averages 112.3 yards. This blowout limited plays, not production."
+      "vsSeasonAverage": "-25.5 yards below 118.5 YPG average (-21.5%)",
+      "vsRecentForm": "-33.7 yards below 126.7 YPG last 3 games (-26.6%)",
+      "vsPropLine": "-3.5 yards below 96.5 line (-3.6%)",
+      "percentileRanking": "Bottom 25% of season performances despite 18.6 YPR efficiency"
     },
     "alternateOutcomes": {
       "ifCompetitive": "In normal game script with Darnold attempting 28-32 passes, JSN likely finishes with 120-140 yards given his efficiency (18.6 YPR)",

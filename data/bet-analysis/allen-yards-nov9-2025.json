@@ -19,6 +19,12 @@
     "expectedValue": 30.0,
     "estimatedProbability": 68,
     "impliedProbability": 53.49,
+    "recentPerformance": {
+      "hitRate": "7 of 9 games under 44.5 yards (77.8%)",
+      "seasonAverage": "42.3 YPG",
+      "last3Games": "38.7 YPG (5 targets avg)",
+      "cushion": "-2.2 yards below line"
+    },
     "keyFactors": [
       {
         "title": "Target Share Decline",
@@ -48,6 +54,20 @@
       "catchRate": "40%",
       "milestoneAchieved": "956th career reception (franchise record)"
     },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Allen caught 1 reception for 9 yards in first half as Chargers built 17-7 lead. Limited targets in run-heavy approach."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Added 1 more reception for 10 yards. Cleared under at this point with 19 total yards."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Chargers run out clock with blowout lead. Allen finished with just 2 catches on 5 targets."
+      }
+    ],
     "whenCleared": "Mid-Q3 (stayed well under throughout)",
     "gamePace": "Chargers dominated 25-10, limiting pass volume overall. Lowest yardage game of season."
   },
@@ -67,8 +87,10 @@
       }
     ],
     "statisticalContext": {
-      "vsLine": "-25.5 yards below 44.5 line",
-      "targetTrend": "5th consecutive game with 5 or fewer targets"
+      "vsSeasonAverage": "-23.3 yards below 42.3 YPG average (-55.1%)",
+      "vsRecentForm": "-19.7 yards below 38.7 YPG last 3 games (-50.9%)",
+      "vsPropLine": "-25.5 yards below 44.5 line (-57.3%)",
+      "percentileRanking": "Bottom 10% of season receiving yards performances"
     }
   },
   "closingLineValue": {

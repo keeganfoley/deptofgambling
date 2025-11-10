@@ -19,11 +19,11 @@
     "expectedValue": 36.0,
     "estimatedProbability": 68,
     "impliedProbability": 49.50,
-    "situationalFactors": {
-      "whiteRole": "Averaging 3.2 receptions per game with expanding receiving role",
-      "patriotsRunDefense": "Elite 1st-ranked run defense (75.4 YPG allowed)",
-      "patriotsRBDefense": "Worst pass-catching RB defense (7.11 targets, 6.11 rec allowed per game)",
-      "injuryImpact": "Bucky Irving (shoulder/foot) ruled OUT, expanding White's role"
+    "recentPerformance": {
+      "hitRate": "5 of 9 games over 3.5 receptions (55.6%)",
+      "seasonAverage": "3.2 receptions per game",
+      "last3Games": "2.7 receptions per game",
+      "cushion": "-0.3 receptions below line (expanding role trend)"
     },
     "keyFactors": [
       {
@@ -59,7 +59,7 @@
       "rushingYards": 38,
       "yardsPerCarry": 3.8
     },
-    "gameFlow": [
+    "quarterBreakdown": [
       {
         "quarter": "Q1-Q2",
         "description": "Patriots took early control with 166 rushing yards total. White caught 2 early targets as Tampa Bay fell behind. Mayfield attempted 21 first-half passes as run game stalled."
