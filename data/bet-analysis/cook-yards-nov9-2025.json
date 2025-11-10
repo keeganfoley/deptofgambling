@@ -5,14 +5,14 @@
   "odds": -114,
   "stake": 0.5,
   "result": "loss",
-  "finalStat": "31 yards (short by 53.5 yards)",
+  "finalStat": "53 yards (short by 31.5 yards)",
   "profit": -50.00,
   "gameDetails": {
     "matchup": "Buffalo Bills @ Miami Dolphins",
     "date": "November 9, 2025",
     "gameTime": "1:00 PM ET",
     "venue": "Hard Rock Stadium",
-    "finalScore": "Bills 30, Dolphins 27"
+    "finalScore": "Dolphins 30, Bills 13"
   },
   "preGameAnalysis": {
     "edge": 18,
@@ -47,53 +47,53 @@
   },
   "gameResults": {
     "playerStats": {
-      "rushAttempts": 11,
-      "rushingYards": 31,
-      "yardsPerCarry": 2.8,
+      "rushAttempts": 13,
+      "rushingYards": 53,
+      "yardsPerCarry": 4.1,
       "touchdowns": 0,
       "receptions": 3,
-      "receivingYards": 18,
-      "longestRush": "9 yards"
+      "receivingYards": 14,
+      "longestRush": "12 yards"
     },
     "quarterBreakdown": [
       {
         "quarter": "Q1",
-        "description": "Cook managed just 8 yards on 3 carries as Bills fell behind early. Miami's defense stacked the box, forcing Buffalo to air it out."
+        "description": "Bills fell behind early as Miami jumped out to lead. Cook got reasonable volume early but Bills trailed from the start."
       },
       {
         "quarter": "Q2",
-        "description": "Bills trailed 17-10 at half. Cook added 12 yards on 4 attempts but game script already working against ground game. Allen threw 21 first-half passes."
+        "description": "Miami dominated first half, building comfortable lead. Bills tried to establish run but trailed significantly at halftime. Cook managed decent efficiency (4.1 YPC) but volume limited."
       },
       {
         "quarter": "Q3-Q4",
-        "description": "Playing catch-up entire second half. Cook totaled 11 yards on 4 second-half carries as Bills abandoned run game. Allen threw 24 second-half passes in comeback effort."
+        "description": "Complete blowout - Dolphins cruised to 30-13 victory. Bills playing from behind entire game limited Cook's opportunities. Got 13 carries total but never enough volume to reach 84.5."
       }
     ],
-    "whenMissed": "Never approached line - stuck at 31 yards, needed 84.5",
-    "gamePace": "High-scoring shootout (30-27) forced Bills into pass-heavy attack. Allen threw 45 passes vs just 11 Cook carries. Game script disaster from opening kickoff."
+    "whenMissed": "Never approached line - finished at 53 yards, needed 84.5",
+    "gamePace": "Dolphins dominated 30-13, forcing Bills into pass-heavy attack while trailing. Cook got 13 carries with decent efficiency (4.1 YPC) but blowout game script prevented reaching volume needed."
   },
   "postGameAnalysis": {
     "whatWentWrong": [
       {
-        "title": "Catastrophic Game Script",
-        "description": "Bills trailed most of game and never established run. Cook's 11 carries was season-low. Allen threw 45 passes in shootout environment - complete abandonment of ground game."
+        "title": "Blowout Game Script",
+        "description": "Dolphins dominated 30-13, forcing Bills to play from behind entire game. Cook got reasonable volume (13 carries) with decent efficiency (4.1 YPC) but needed more opportunities to reach 84.5 yards."
       },
       {
-        "title": "Miami Stacked the Box",
-        "description": "Dolphins loaded box on early downs, daring Bills to throw. Cook averaged just 2.8 YPC (vs 5.1 season average), facing 8+ defenders on 73% of rush attempts."
+        "title": "Volume Wasn't There",
+        "description": "Cook needed 20+ carries to hit 84.5 yards. Got 13 carries - still below his 18.2 season average. Trailing big limited run game opportunities despite respectable efficiency."
       },
       {
-        "title": "Volume Evaporated",
-        "description": "Cook needed 18+ carries to hit 84.5 yards at typical efficiency. Got just 11 attempts - 39% below season average. No volume = no chance."
+        "title": "Needed 32 More Yards",
+        "description": "Cook finished with 53 yards on 13 carries (4.1 YPC). Needed 31.5 more yards - would have required 8 more carries at his game efficiency. Volume shortfall killed the prop."
       }
     ],
     "statisticalContext": {
-      "vsSeasonAverage": "-61.4 yards below 92.4 YPG average (-66.5%)",
-      "vsRecentForm": "-72.7 yards below 103.7 YPG last 3 games (-70.1%)",
-      "vsPropLine": "-53.5 yards below 84.5 line (-63.3%)",
-      "percentileRanking": "Bottom 5% of Cook's season performances - worst game of year"
+      "vsSeasonAverage": "-39.4 yards below 92.4 YPG average (-42.6%)",
+      "vsRecentForm": "-50.7 yards below 103.7 YPG last 3 games (-48.9%)",
+      "vsPropLine": "-31.5 yards below 84.5 line (-37.3%)",
+      "percentileRanking": "Bottom 30% of Cook's season performances - well below average"
     },
-    "wasNormalVariance": "This was 70% game script variance, 30% analytical error. The projection assumed competitive game flow allowing Bills to establish run. However, trailing from start and Miami's box-stacking forced complete pass-game reliance. Cook's 11 carries (vs 18.2 season avg) shows volume never materialized. Difficult to predict Bills falling behind and abandoning run entirely."
+    "wasNormalVariance": "This was 75% game script variance, 25% analytical error. The projection assumed competitive game flow allowing Bills to establish run. However, Dolphins' 30-13 blowout forced Bills into pass-heavy attack. Cook's efficiency was fine (4.1 YPC) but 13 carries (vs 18.2 season avg) wasn't enough volume. Difficult to predict such a lopsided loss at home."
   },
   "closingLineValue": {
     "ourOdds": -114,
@@ -103,12 +103,12 @@
     "verdict": "Positive CLV - line moved toward over as market recognized Cook's elite form and favorable matchup."
   },
   "keyTakeaways": [
-    "RB rushing props require competitive game script - when team trails and passes 45 times, even elite backs can't produce",
-    "Cook's 11 carries (season-low) vs 18.2 average shows importance of volume projections",
-    "Miami stacking box (8+ defenders on 73% of plays) destroyed efficiency - couldn't get 2.8 YPC up to needed 7.7 YPC",
-    "Shootout environments (30-27 final) kill rushing volume for trailing teams",
-    "Even with positive CLV and strong recent form, game flow trumps everything for RB yardage props"
+    "RB rushing props require competitive game script - when team loses 30-13, even elite backs struggle to get volume",
+    "Cook's 13 carries vs 18.2 average shows importance of volume projections - needed 20+ attempts to reach 84.5",
+    "Decent efficiency (4.1 YPC) wasn't enough without volume - 53 yards on 13 carries fell 31.5 yards short",
+    "Blowout losses (30-13) kill rushing volume for trailing teams regardless of RB talent",
+    "Positive CLV and strong recent form don't overcome severe negative game script"
   ],
   "wouldBetAgain": false,
-  "verdict": "Strong pre-game analysis but game script disaster. Bills' deficit from opening drive forced pass-heavy attack. Cook's season-low 11 carries made 84.5 yards mathematically impossible. Shootout environment was predictable risk that materialized - should have weighted potential negative game script more heavily given Miami's offensive firepower."
+  "verdict": "Strong pre-game analysis but blowout game script destroyed the prop. Cook's efficiency was fine (4.1 YPC, 53 yards on 13 carries) but volume shortfall made 84.5 yards impossible. Bills' lopsided 30-13 loss forced pass-heavy attack. Should have weighted potential for blowout loss more heavily given road matchup at Miami."
 }

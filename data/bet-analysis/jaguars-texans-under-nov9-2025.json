@@ -12,7 +12,7 @@
     "date": "November 9, 2025",
     "gameTime": "1:00 PM ET",
     "venue": "NRG Stadium",
-    "finalScore": "Texans 38, Jaguars 27"
+    "finalScore": "Texans 36, Jaguars 29"
   },
   "preGameAnalysis": {
     "edge": 12,
@@ -51,8 +51,8 @@
   },
   "gameResults": {
     "playerStats": {
-      "texansPoints": 38,
-      "jaguarsPoints": 27,
+      "texansPoints": 36,
+      "jaguarsPoints": 29,
       "totalPoints": 65,
       "texansYards": 448,
       "jaguarsYards": 402,
@@ -74,7 +74,7 @@
       },
       {
         "quarter": "Q4",
-        "description": "Final: 38-27 (65 points). Texans pulled away but Jags kept scoring. Finished 27.5 points over the total - complete defensive meltdown."
+        "description": "Final: 36-29 (65 points). Texans completed dramatic comeback but Jags kept scoring. Finished 27.5 points over the total - complete defensive meltdown."
       }
     ],
     "whenMissed": "Over hit in Q2 (41 points at halftime vs 37.5 total)",
@@ -84,7 +84,7 @@
     "whatWentWrong": [
       {
         "title": "Defensive Meltdown",
-        "description": "Both defenses completely failed. Texans allowed 27 (vs 19.4 PPG average), Jags allowed 38. Combined 850 yards and 8 TDs - no resistance whatsoever."
+        "description": "Both defenses completely failed. Texans allowed 29 (vs 19.4 PPG average), Jags allowed 36. Combined 850 yards and 8 TDs - no resistance whatsoever."
       },
       {
         "title": "Over Hit by Halftime",
@@ -92,7 +92,7 @@
       },
       {
         "title": "Offensive Explosion from Struggling Jaguars",
-        "description": "Jaguars entered averaging 19.8 PPG (28th in NFL) but erupted for 27. Trevor Lawrence posted season-high 318 yards with 3 TDs. Complete outlier performance."
+        "description": "Jaguars entered averaging 19.8 PPG (28th in NFL) but erupted for 29. Trevor Lawrence posted season-high 318 yards with 3 TDs. Complete outlier performance."
       },
       {
         "title": "Weather Conditions Never Materialized",
@@ -105,7 +105,7 @@
       "vsPropLine": "+27.5 points above 37.5 total (173% of line)",
       "percentileRanking": "98th percentile scoring output - complete outlier game"
     },
-    "wasNormalVariance": "This was 30% variance, 70% analytical error. While defensive meltdowns happen, both teams significantly exceeded season scoring averages in same game. Jaguars' 27 points (vs 19.8 average) and Texans' 38 (vs 24.3 average) represents 47.5% increase over typical output. The under thesis relied on Jaguars' offensive struggles continuing, but they posted season-best performance. Additionally, weather conditions that were supposed to suppress scoring never materialized. This was a clear miss on underestimating offensive potential."
+    "wasNormalVariance": "This was 30% variance, 70% analytical error. While defensive meltdowns happen, both teams significantly exceeded season scoring averages in same game. Jaguars' 29 points (vs 19.8 average) and Texans' 36 (vs 24.3 average) represents 47.5% increase over typical output. The under thesis relied on Jaguars' offensive struggles continuing, but they posted season-best performance. Additionally, weather conditions that were supposed to suppress scoring never materialized. This was a clear miss on underestimating offensive potential."
   },
   "closingLineValue": {
     "ourOdds": -110,
@@ -119,7 +119,7 @@
     "65 points (27.5 over) with 41 at halftime shows complete defensive breakdown from both sides",
     "Weather forecasts are unreliable - projected rain/wind never impacted game",
     "Division game trends (41.2 PPG average) didn't hold - outliers happen 2% of the time",
-    "Jaguars' season-high 27 points (vs 19.8 PPG avg) was unpredictable but possible"
+    "Jaguars' season-high 29 points (vs 19.8 PPG avg) was unpredictable but possible"
   ],
   "wouldBetAgain": false,
   "verdict": "Clear analytical miss. While division game trends and Jaguars' offensive struggles supported under, the total was too low given both teams' offensive talent. Texans' CJ Stroud + Nico Collins and Jaguars' desperation created perfect storm for scoring. The 37.5 number assumed both defenses would perform to season averages, but variance went wrong direction. Should have recognized 37.5 was trap number given offensive weapons on both sides."

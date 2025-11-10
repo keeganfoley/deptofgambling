@@ -12,7 +12,7 @@
     "date": "November 9, 2025",
     "gameTime": "1:00 PM ET",
     "venue": "MetLife Stadium",
-    "finalScore": "Browns 24, Jets 17"
+    "finalScore": "Jets 27, Browns 20"
   },
   "preGameAnalysis": {
     "edge": 16,
@@ -47,9 +47,9 @@
   },
   "gameResults": {
     "playerStats": {
-      "rushAttempts": 21,
+      "rushAttempts": 22,
       "rushingYards": 75,
-      "yardsPerCarry": 3.6,
+      "yardsPerCarry": 3.4,
       "touchdowns": 2,
       "receptions": 1,
       "receivingYards": 4,
@@ -62,29 +62,29 @@
       },
       {
         "quarter": "Q2",
-        "description": "Added 19 yards on 5 attempts. Browns led 14-7 at half. Judkins on pace for 84 yards through two quarters but efficiency dropped (3.8 YPC)."
+        "description": "Browns and Jets battled back and forth. Judkins added 19 yards on 5 attempts. Game remained competitive at halftime."
       },
       {
         "quarter": "Q3",
-        "description": "Jets tightened defense. Judkins managed 18 yards on 6 carries. Jets stacked box on 82% of Browns' rush attempts."
+        "description": "Jets began to take control. Judkins managed 18 yards on 6 carries. Jets stacked box on majority of Browns' rush attempts to slow ground game."
       },
       {
         "quarter": "Q4",
-        "description": "Final 15 yards on 4 carries including 1-yard TD plunge. Browns won 24-17 but Judkins finished with 75 yards - 6.5 short."
+        "description": "Final 15 yards on 5 carries including 1-yard TD plunge. Browns lost 27-20 but Judkins finished with 75 yards - 6.5 short."
       }
     ],
     "whenMissed": "Stuck at 75 yards - needed just 7 more yards to cash",
-    "gamePace": "Browns controlled clock (33:18 TOP) but Jets' box-stacking limited efficiency. Judkins got volume (21 carries) but averaged just 3.6 YPC vs 4.5 season average."
+    "gamePace": "Browns lost 27-20 as Jets pulled away late. Jets' box-stacking limited efficiency. Judkins got volume (22 carries) but averaged just 3.4 YPC vs 4.5 season average."
   },
   "postGameAnalysis": {
     "whatWentWrong": [
       {
         "title": "Microscopic Miss",
-        "description": "Judkins needed 81.5 yards and finished with 75 - missed by just 6.5 yards. One more 7+ yard run would have cashed. Got the volume (21 carries) but not quite the efficiency."
+        "description": "Judkins needed 81.5 yards and finished with 75 - missed by just 6.5 yards. One more 7+ yard run would have cashed. Got the volume (22 carries) but not quite the efficiency."
       },
       {
         "title": "Jets Stacked the Box",
-        "description": "New York put 8+ defenders in box on 82% of Judkins' carries, daring Winston to throw. Limited Browns to 3.6 YPC as Jets sold out to stop run."
+        "description": "New York put 8+ defenders in box on most of Judkins' carries, daring Winston to throw. Limited Browns to 3.4 YPC as Jets sold out to stop run."
       },
       {
         "title": "Goal-Line Work Helped Stats, Not Yardage",
@@ -97,7 +97,7 @@
       "vsPropLine": "-6.5 yards below 81.5 line (-8.0%)",
       "percentileRanking": "38th percentile performance - below average but not disastrous"
     },
-    "wasNormalVariance": "This was 60% bad luck, 40% analytical miss. Judkins got the projected volume (21 carries) and scored 2 TDs in Browns win. However, missing by 6.5 yards when he needed 81.5 is just variance - one broken tackle or one additional first down converts this easily. Jets' box-stacking (8+ defenders on 82% of plays) was somewhat predictable given Winston's limitations, but 21 carries usually produces 81.5+ yards."
+    "wasNormalVariance": "This was 60% bad luck, 40% analytical miss. Judkins got the projected volume (22 carries) and scored 2 TDs despite Browns losing 27-20. However, missing by 6.5 yards when he needed 81.5 is just variance - one broken tackle or one additional first down converts this easily. Jets' defensive approach (stacking box) was somewhat predictable given Winston's limitations, but 22 carries usually produces 81.5+ yards."
   },
   "closingLineValue": {
     "ourOdds": -118,
@@ -107,12 +107,12 @@
     "verdict": "Positive CLV - line moved toward over as market recognized Judkins' workhorse role and Browns' run-first approach."
   },
   "keyTakeaways": [
-    "Missing by 6.5 yards on 21 carries is pure variance - one additional broken tackle cashes this prop",
-    "Jets' box-stacking (8+ defenders on 82% of plays) with Winston at QB was predictable but hard to quantify",
+    "Missing by 6.5 yards on 22 carries is pure variance - one additional broken tackle cashes this prop",
+    "Jets' box-stacking with Winston at QB was predictable but hard to quantify impact",
     "Judkins' 2 TDs (great for game, bad for yardage prop) came on short runs that didn't help reach 81.5",
-    "3.6 YPC vs 4.5 season average shows efficiency dip, but volume (21 carries) was exactly as projected",
+    "3.4 YPC vs 4.5 season average shows efficiency dip, but volume (22 carries) was exactly as projected",
     "Positive CLV and correct volume projection - just needed one more chunk play"
   ],
   "wouldBetAgain": true,
-  "verdict": "Brutal 6.5-yard miss but process was sound. Judkins got workhorse volume (21 carries) in Browns win with 2 TDs. Missing by 8% of the line with expected volume is variance, not analytical failure. Jets' defensive approach (stacking box) limited efficiency but one broken tackle converts. Would bet this spot again with same information."
+  "verdict": "Brutal 6.5-yard miss but process was sound. Judkins got workhorse volume (22 carries) with 2 TDs despite Browns losing 27-20. Missing by 8% of the line with expected volume is variance, not analytical failure. Jets' defensive approach (stacking box) limited efficiency but one broken tackle converts. Would bet this spot again with same information."
 }
