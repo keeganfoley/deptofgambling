@@ -173,7 +173,7 @@
   },
   {
     "id": 26,
-    "date": "2025-11-08T01:00:00.000Z",
+    "date": "2025-11-09T01:00:00.000Z",
     "sport": "NCAAF",
     "description": "Oregon @ Iowa U41.5",
     "odds": -110,
@@ -190,7 +190,7 @@
   },
   {
     "id": 27,
-    "date": "2025-11-08T00:30:00.000Z",
+    "date": "2025-11-09T00:30:00.000Z",
     "sport": "NCAAF",
     "description": "Texas A&M -6.5",
     "odds": -115,
@@ -207,7 +207,7 @@
   },
   {
     "id": 28,
-    "date": "2025-11-08T00:00:00.000Z",
+    "date": "2025-11-09T00:00:00.000Z",
     "sport": "NCAAF",
     "description": "TCU -7.5",
     "odds": -105,
@@ -224,7 +224,7 @@
   },
   {
     "id": 20,
-    "date": "2025-11-07T03:00:00.000Z",
+    "date": "2025-11-08T03:00:00.000Z",
     "sport": "NBA",
     "description": "Giddey O8.5 assists",
     "odds": -130,
@@ -242,7 +242,7 @@
   },
   {
     "id": 21,
-    "date": "2025-11-07T02:30:00.000Z",
+    "date": "2025-11-08T02:30:00.000Z",
     "sport": "NBA",
     "description": "Thompson U16.5 points",
     "odds": 105,
@@ -260,7 +260,7 @@
   },
   {
     "id": 22,
-    "date": "2025-11-07T02:00:00.000Z",
+    "date": "2025-11-08T02:00:00.000Z",
     "sport": "NBA",
     "description": "Mitchell U26.5 points",
     "odds": -110,
@@ -278,7 +278,7 @@
   },
   {
     "id": 23,
-    "date": "2025-11-07T01:30:00.000Z",
+    "date": "2025-11-08T01:30:00.000Z",
     "sport": "NBA",
     "description": "Banchero O8.5 rebounds",
     "odds": 110,
@@ -296,7 +296,7 @@
   },
   {
     "id": 24,
-    "date": "2025-11-07T01:00:00.000Z",
+    "date": "2025-11-08T01:00:00.000Z",
     "sport": "NBA",
     "description": "Jokić U12.5 rebounds",
     "odds": -105,
@@ -314,7 +314,7 @@
   },
   {
     "id": 25,
-    "date": "2025-11-07T00:30:00.000Z",
+    "date": "2025-11-08T00:30:00.000Z",
     "sport": "NBA",
     "description": "Barrett O3.5 assists",
     "odds": 124,
@@ -438,7 +438,7 @@
   },
   {
     "id": 1,
-    "date": "2025-11-06T03:00:00.000Z",
+    "date": "2025-11-05T03:00:00.000Z",
     "sport": "NBA",
     "description": "Wembanyama O12.5 rebounds",
     "odds": -114,
@@ -457,7 +457,7 @@
   },
   {
     "id": 2,
-    "date": "2025-11-06T00:30:00.000Z",
+    "date": "2025-11-05T00:30:00.000Z",
     "sport": "NBA",
     "description": "Randle O20.5 points",
     "odds": -118,
@@ -476,7 +476,7 @@
   },
   {
     "id": 3,
-    "date": "2025-11-05T00:00:00.000Z",
+    "date": "2025-11-04T00:00:00.000Z",
     "sport": "NBA",
     "description": "Maxey O3.5 3-pointers",
     "odds": 100,
@@ -495,7 +495,7 @@
   },
   {
     "id": 4,
-    "date": "2025-11-05T01:00:00.000Z",
+    "date": "2025-11-04T01:00:00.000Z",
     "sport": "NBA",
     "description": "Murphy III O2.5 3-pointers",
     "odds": -165,
@@ -514,7 +514,7 @@
   },
   {
     "id": 5,
-    "date": "2025-11-05T03:00:00.000Z",
+    "date": "2025-11-04T03:00:00.000Z",
     "sport": "NBA",
     "description": "Booker O28.5 points",
     "odds": -120,
