@@ -1,0 +1,90 @@
+{
+  "slug": "allen-yards-nov9-2025",
+  "player": "Keenan Allen",
+  "line": "UNDER 44.5 receiving yards",
+  "odds": -115,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "19 yards (cleared by 25.5 yards)",
+  "profit": 130.43,
+  "gameDetails": {
+    "matchup": "Los Angeles Chargers @ Pittsburgh Steelers",
+    "date": "November 9, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Acrisure Stadium",
+    "finalScore": "Chargers 25, Steelers 10"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 30.0,
+    "estimatedProbability": 68,
+    "impliedProbability": 53.49,
+    "keyFactors": [
+      {
+        "title": "Target Share Decline",
+        "description": "Allen averaged only 5 targets over previous 3 games with route share dipping to 50.7% as Chargers rotated receivers."
+      },
+      {
+        "title": "Offensive Distribution",
+        "description": "Chargers balanced philosophy emphasized spreading the ball rather than force-feeding veteran receivers."
+      },
+      {
+        "title": "Matchup Misdirection",
+        "description": "Despite Pittsburgh ranking last in pass defense, Steelers game plan prioritized limiting explosive plays to top receivers."
+      }
+    ],
+    "riskFactors": [
+      "Pittsburgh poor pass defense could create opportunities",
+      "Allen veteran savvy in red zone",
+      "Potential garbage time usage"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 2,
+      "targets": 5,
+      "receivingYards": 19,
+      "yardsPerReception": 9.5,
+      "catchRate": "40%",
+      "milestoneAchieved": "956th career reception (franchise record)"
+    },
+    "whenCleared": "Mid-Q3 (stayed well under throughout)",
+    "gamePace": "Chargers dominated 25-10, limiting pass volume overall. Lowest yardage game of season."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Usage Trend Validated",
+        "description": "Allen declining target share continued exactly as projected. Only 5 targets despite blowout."
+      },
+      {
+        "title": "Game Script Perfect",
+        "description": "25-10 blowout allowed Chargers to control tempo and limit overall pass volume."
+      },
+      {
+        "title": "Market Mispricing",
+        "description": "The -115 under offered value because market overweighted Pittsburgh poor pass defense."
+      }
+    ],
+    "statisticalContext": {
+      "vsLine": "-25.5 yards below 44.5 line",
+      "targetTrend": "5th consecutive game with 5 or fewer targets"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -112,
+    "clvCents": 3,
+    "clvPercentage": 2.7,
+    "verdict": "Slight positive CLV - line held steady as public expected Allen to exploit poor defense"
+  },
+  "keyTakeaways": [
+    "Target share trends trump defensive rankings",
+    "Offensive philosophy matters - Chargers balanced approach limited Allen role",
+    "Game script awareness - 25-10 blowout reduced pass volume",
+    "Market mispricing created value on the under",
+    "Cleared by 25.5 yards - dominant performance"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook example of identifying value when market overweights opponent weakness without accounting for usage trends."
+}

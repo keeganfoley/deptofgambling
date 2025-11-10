@@ -41,8 +41,8 @@ export default function DailyPerformanceHistory() {
   const getDailyData = (): DailyData[] => {
     const grouped = new Map<string, Bet[]>();
 
-    // USE ALL REAL BETS (Nov 4, Nov 5, Nov 6, Nov 7, Nov 8, Nov 9)
-    const realBets = betsData.slice(0, 20);
+    // USE ALL REAL BETS (Nov 4, Nov 5, Nov 6, Nov 7, Nov 8, Nov 9, Nov 10)
+    const realBets = betsData.slice(0, 30);
 
     // Group bets by date (extract just the date part)
     realBets.forEach((bet) => {
