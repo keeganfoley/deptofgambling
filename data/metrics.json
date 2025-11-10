@@ -1,16 +1,16 @@
 {
   "sharpeRatio": null,
   "sharpeRatioNote": "N/A (30 bets needed for 30-day calc)",
-  "maxDrawdown": 592.60,
-  "avgWin": 119.26,
-  "avgLoss": 126.56,
-  "avgProfitPerBet": -7.76,
+  "maxDrawdown": 360.75,
+  "avgWin": 117.31,
+  "avgLoss": 120.31,
+  "avgProfitPerBet": -9.42,
   "largestWin": 181.82,
   "largestLoss": 200.00,
-  "profitFactor": 0.82,
-  "totalCapitalRisked": 3975.00,
-  "unitsRisked": 39.75,
-  "unitEfficiency": -5.85,
+  "profitFactor": 0.85,
+  "totalCapitalRisked": 3925.00,
+  "unitsRisked": 39.25,
+  "unitEfficiency": -7.20,
   "closingLineValue": 4.8,
   "closingLineValueNote": "Average: +4.8¢",
   "kellyUtilization": 38,
@@ -79,9 +79,9 @@
         "losses": 9,
         "total": 13
       },
-      "roi": -32.90,
-      "netPL": -501.69,
-      "unitsWon": -5.02,
+      "roi": -37.19,
+      "netPL": -541.66,
+      "unitsWon": -5.42,
       "gamesAnalyzed": 13,
       "totalGames": 13
     },
@@ -124,7 +124,7 @@
       },
       "winRate": 47.83,
       "netPL": -187.75,
-      "roi": -6.01
+      "roi": -6.40
     },
     "spreads": {
       "type": "Spreads",
@@ -135,7 +135,7 @@
       },
       "winRate": 60.0,
       "netPL": 23.29,
-      "roi": 4.23
+      "roi": 9.32
     },
     "totals": {
       "type": "Totals",
@@ -146,7 +146,7 @@
       },
       "winRate": 33.33,
       "netPL": -118.18,
-      "roi": -23.64
+      "roi": -39.39
     }
   }
 }
