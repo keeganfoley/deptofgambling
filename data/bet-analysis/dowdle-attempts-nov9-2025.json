@@ -1,0 +1,114 @@
+{
+  "slug": "dowdle-attempts-nov9-2025",
+  "player": "Rico Dowdle",
+  "line": "OVER 19.5 rush attempts",
+  "odds": -118,
+  "stake": 2.0,
+  "result": "loss",
+  "finalStat": "18 attempts (short by 2)",
+  "profit": -200.00,
+  "gameDetails": {
+    "matchup": "Carolina Panthers @ New Orleans Saints",
+    "date": "November 9, 2025",
+    "gameTime": "1:00 PM ET",
+    "venue": "Caesars Superdome",
+    "finalScore": "Saints 17, Panthers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 28.0,
+    "estimatedProbability": 65,
+    "impliedProbability": 54.11,
+    "recentPerformance": {
+      "hitRate": "6 of 9 games over 17 attempts (66.7%)",
+      "seasonAverage": "17.8 carries per game",
+      "last3Games": "19.3 carries per game (expanding usage)",
+      "cushion": "+2.2 attempts above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Expanding Usage Trend",
+        "description": "Dowdle entered averaging 17.8 carries with expanding usage trends. Last 3 games showed 19.3 carries per game, indicating increased role in Carolina's offense."
+      },
+      {
+        "title": "Perfect Matchup",
+        "description": "Saints allowed 24.1 carries per game to opposing RBs, ranking 28th in run defense. Vulnerable to volume RB performances."
+      },
+      {
+        "title": "Run-First Identity",
+        "description": "Carolina's new OC emphasized run-first approach with backup QB Bryce Young limiting pass volume, creating ideal environment for 20+ RB attempts."
+      }
+    ],
+    "riskFactors": [
+      "Backup QB Bryce Young's offensive limitations could stall drives",
+      "Saints' ball control could limit Carolina's total possessions",
+      "Potential negative game script if Panthers trail early"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushAttempts": 18,
+      "rushingYards": 68,
+      "yardsPerCarry": 3.8,
+      "touchdowns": 1,
+      "receptions": 2,
+      "receivingYards": 9,
+      "longestRush": "13 yards"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Dowdle rushed for 5-yard TD on opening 67-yard drive. Strong start suggested volume would materialize. Received 5 early carries."
+      },
+      {
+        "quarter": "Q2",
+        "description": "DISASTER. Carolina gained just 36 yards over next 5 first-half possessions. Young threw INT and fumbled on botched handoff. Offensive implosion began."
+      },
+      {
+        "quarter": "Q3-Q4",
+        "description": "Trailing 17-7, Panthers managed season-low 175 total yards. Young completed 17-of-25 for 124 yards with 2 turnovers. Negative game script prevented Dowdle volume."
+      }
+    ],
+    "whenMissed": "Never cleared - stuck at 18 attempts, needed 2 more carries",
+    "gamePace": "Saints dominated time of possession. Carolina's offensive incompetence (83 first-half yards) forced abandonment of run game despite trailing by only 10 points."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Offensive Implosion",
+        "description": "After opening drive TD, Carolina gained just 36 yards over next 5 first-half possessions. Young's 2 turnovers (INT, fumble) created catastrophic game flow."
+      },
+      {
+        "title": "Volume Prevented by Incompetence",
+        "description": "Dowdle got 18 attempts with Carolina's offensive output was actually impressive given circumstances. The volume was there initially, but offensive execution killed drives."
+      },
+      {
+        "title": "Microscopic Miss",
+        "description": "Needed only 2 more carries. The carry projection assumed competent offense maintaining competitive game script. Saints 17, Panthers 7 wasn't massive blowout, but Carolina couldn't sustain drives."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+0.2 attempts above 17.8 season average (+1.1%)",
+      "vsRecentForm": "-1.3 attempts below 19.3 last 3 games (-6.7%)",
+      "vsPropLine": "-2 attempts below 19.5 line (-10.2%)",
+      "percentileRanking": "Bottom 40% of Dowdle's season performances for attempts"
+    },
+    "wasNormalVariance": "This was 75% bad luck, 25% analytical miss. The carry projection assumed competent offense maintaining competitive game script. Dowdle's 18 attempts with Carolina's offensive output was actually impressive—the volume was there initially, but catastrophic execution killed drives. No model predicts a team scoring 7 points while getting stuffed after the opening possession."
+  },
+  "closingLineValue": {
+    "ourOdds": -118,
+    "closingOdds": -122,
+    "clvCents": 4,
+    "clvPercentage": 3.3,
+    "verdict": "Slight positive CLV - line moved toward over as market recognized Dowdle's expanding role and favorable matchup."
+  },
+  "keyTakeaways": [
+    "Volume-based props require offensive competence floors - when Young generated 5.0 yards per attempt with 2 turnovers, no RB hits carry projections",
+    "The 2-carry miss stings but reflects game reality, not analytical failure",
+    "Carolina's season-low 175 total yards prevented Dowdle from reaching 20 attempts despite favorable matchup",
+    "Opening drive TD created false hope - offensive collapse after prevented volume materialization",
+    "Saints' ball control (time of possession dominance) limited total Carolina possessions"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Right process, wrong outcome. Volume projection was sound given usage trends and matchup, but catastrophic offensive execution prevented volume materialization. Dowdle getting 18 attempts while Carolina scored 7 points actually shows strong RB usage - the offense just couldn't sustain drives."
+}

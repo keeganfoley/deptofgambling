@@ -1,0 +1,114 @@
+{
+  "slug": "gainwell-receptions-nov9-2025",
+  "player": "Kenneth Gainwell",
+  "line": "OVER 2.5 receptions",
+  "odds": -105,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "2 receptions (short by 1)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Pittsburgh Steelers @ Los Angeles Chargers",
+    "date": "November 9, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "SoFi Stadium",
+    "finalScore": "Chargers 25, Steelers 10"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 27.0,
+    "estimatedProbability": 64,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "5 of 8 games over 2.5 receptions (62.5%)",
+      "seasonAverage": "2.8 receptions per game",
+      "last3Games": "3.3 receptions per game",
+      "cushion": "+0.5 receptions above line (passing-down role)"
+    },
+    "keyFactors": [
+      {
+        "title": "Passing-Down Role",
+        "description": "Gainwell transitioned to Pittsburgh in 2025 as clear No. 2 back behind Jaylen Warren. His passing-down role suggested 3+ receptions achievable."
+      },
+      {
+        "title": "Negative Game Script Expected",
+        "description": "Pittsburgh likely to trail Chargers, creating need for passing and checkdowns. Aaron Rodgers' tendency to check down under pressure favored Gainwell usage."
+      },
+      {
+        "title": "Snap Share Dominance",
+        "description": "Gainwell led Steelers RBs with 52% offensive snaps, indicating significant role in offensive game plan."
+      }
+    ],
+    "riskFactors": [
+      "Chargers' aggressive pass rush could prevent checkdown opportunities",
+      "Potential blowout could limit overall offensive plays",
+      "Rodgers' struggles could affect all passing-game participants"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 2,
+      "targets": 3,
+      "receivingYards": 4,
+      "yardsPerReception": 2.0,
+      "catchRate": "66.7%",
+      "rushingAttempts": 0,
+      "snapShare": "52%"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Steelers fell behind early. Gainwell caught 1 reception as Chargers' defense dominated. Rodgers pressured constantly by LA pass rush."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Chargers extended lead. Gainwell added 1 more catch but Steelers' offensive collapse prevented volume. Never established rhythm."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Trailing 25-10 in blowout, Gainwell's usage remained limited. Recorded zero carries for first time all season, indicating complete game script disaster."
+      }
+    ],
+    "whenMissed": "Never cleared - stuck at 2 receptions despite 52% snap share",
+    "gamePace": "Chargers' defense swarmed backfield. Rodgers had worst game of 2025 season under constant pressure. Steelers' offense couldn't sustain drives or protect QB."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Offensive Collapse",
+        "description": "Steelers' offense couldn't protect Rodgers or generate plays, limiting all passing-game participants. Despite 52% snap share, Gainwell saw only 3 targets."
+      },
+      {
+        "title": "One Catch Away",
+        "description": "Gainwell needed just one more reception to cash but only saw 3 targets in blowout loss. Missed by smallest possible margin despite being on field majority of game."
+      },
+      {
+        "title": "Checkdowns Never Materialized",
+        "description": "Chargers' defense swarmed backfield preventing Rodgers from checking down to Gainwell. Pass protection breakdown eliminated designed RB routes."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-0.8 receptions below 2.8 season average (-28.6%)",
+      "vsRecentForm": "-1.3 receptions below 3.3 last 3 games (-39.4%)",
+      "vsPropLine": "-1 reception below 2.5 line (-40.0%)",
+      "percentileRanking": "Bottom 30% of Gainwell's season performances"
+    },
+    "wasNormalVariance": "This was 50% variance, 50% error. While Gainwell's role as passing-down back was correctly identified, the error lay in overestimating Pittsburgh's offensive competence on Sunday Night Football against dominant Chargers defense. However, missing by one catch in a blowout loss is also variance—one more target or completion swings result despite poor game script."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 2.8,
+    "verdict": "Slight positive CLV - line moved toward over as market recognized Gainwell's passing-down role and expected negative game script."
+  },
+  "keyTakeaways": [
+    "Passing-down back reception props require offensive functionality - when opposing defense dominates and QB is under constant pressure, even workhorse snap shares don't translate to production",
+    "Gainwell's 52% snaps with 2 catches shows he was on field but ineffective - crucial distinction between opportunity and production",
+    "Primetime games against elite defenses warrant extra caution for volume-dependent props",
+    "Missing by 1 catch is brutal but reflects both poor game script and slight variance",
+    "Zero carries for first time all season signals complete offensive dysfunction"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Marginal prop that relied too heavily on assumed offensive competence. While Gainwell's role was real, Sunday Night Football against Chargers' elite defense created environment where even passing-down backs couldn't produce. Should have weighted Steelers' offensive limitations more heavily."
+}

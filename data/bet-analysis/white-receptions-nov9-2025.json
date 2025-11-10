@@ -97,9 +97,9 @@
     ],
     "statisticalContext": {
       "vsSeasonAverage": "+1.8 receptions above 3.2 season average (+56.3%)",
-      "vsLine": "+1.5 receptions above 3.5 line (+42.9%)",
-      "vsPatriotsDefense": "Patriots allowed 6.11 rec/game to RBs; White's 5 rec fit within expected range",
-      "catchRateExcellence": "100% catch rate (5-for-5) vs 82.4% season average"
+      "vsRecentForm": "+2.3 receptions above 2.7 last 3 games (+85.2%)",
+      "vsPropLine": "+1.5 receptions above 3.5 line (+42.9%)",
+      "percentileRanking": "Top 20% receiving performance - 100% catch rate excellence"
     }
   },
   "closingLineValue": {

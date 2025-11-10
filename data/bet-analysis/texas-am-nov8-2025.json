@@ -1,7 +1,6 @@
 {
   "slug": "texas-am-nov8-2025",
-  "team": "Texas A&M",
-  "opponent": "Missouri",
+  "player": "Texas A&M",
   "line": "Texas A&M -6.5",
   "odds": -115,
   "stake": 1.5,
@@ -20,11 +19,11 @@
     "expectedValue": 33.9,
     "estimatedProbability": 72,
     "impliedProbability": 53.49,
-    "situationalFactors": {
-      "homeFieldAdvantage": "Kyle Field 12th Man - one of college football's most intimidating venues",
-      "momentumShift": "Texas A&M riding 3-game win streak after slow start",
-      "mizzouStruggles": "Missouri 1-4 in road SEC games, averaging 17.2 PPG away from home",
-      "motivationEdge": "A&M fighting for SEC Championship Game berth"
+    "recentPerformance": {
+      "hitRate": "6 of 8 games covered spread (75%)",
+      "seasonAverage": "Texas A&M 31.4 PPG, allowed 20.1 PPG",
+      "last3Games": "A&M won by avg 19.7 points at home",
+      "cushion": "+13.2 points above spread (home dominance)"
     },
     "keyFactors": [
       {
@@ -51,25 +50,17 @@
     ]
   },
   "gameResults": {
-    "teamStats": {
-      "texasAMOffense": {
-        "points": 38,
-        "totalYards": 452,
-        "passingYards": 218,
-        "rushingYards": 234,
-        "turnovers": 0,
-        "timeOfPossession": "34:17"
-      },
-      "missouriOffense": {
-        "points": 17,
-        "totalYards": 318,
-        "passingYards": 195,
-        "rushingYards": 123,
-        "turnovers": 3,
-        "timeOfPossession": "25:43"
-      }
+    "playerStats": {
+      "texasAMPoints": 38,
+      "missouriPoints": 17,
+      "marginOfVictory": 21,
+      "texasAMYards": 452,
+      "missouriYards": 318,
+      "texasAMTurnovers": 0,
+      "missouriTurnovers": 3,
+      "texasAMTOP": "34:17 (57.2%)"
     },
-    "scoringBreakdown": [
+    "quarterBreakdown": [
       {
         "quarter": "Q1",
         "description": "A&M TD 7-0 - Dominant opening drive (78 yards, 6:42 TOP). Le'Veon Moss 3-yard TD run capped 10-play march."
@@ -110,10 +101,10 @@
       }
     ],
     "statisticalContext": {
-      "vsSpread": "+14.5 points above -6.5 line (covered by 223%)",
-      "vsProjection": "A&M scored 5.8 above season avg, Mizzou scored 9.2 below road avg",
-      "homeFieldImpact": "+11.5 point swing vs A&M's neutral site performance",
-      "percentileRanking": "92nd percentile margin of victory for A&M home games"
+      "vsSeasonAverage": "A&M 38 points vs 31.4 PPG avg (+6.6 points, +21.0%)",
+      "vsRecentForm": "Won by 21 vs avg +19.7 margin at home (+1.3 point improvement)",
+      "vsPropLine": "+14.5 points above -6.5 spread (covered by 223%)",
+      "percentileRanking": "92nd percentile margin of victory for A&M home games - elite performance"
     }
   },
   "closingLineValue": {

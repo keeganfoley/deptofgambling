@@ -1,7 +1,6 @@
 {
   "slug": "oregon-iowa-nov8-2025",
-  "team": "Oregon",
-  "opponent": "Iowa",
+  "player": "Oregon @ Iowa",
   "line": "UNDER 41.5 total points",
   "odds": -110,
   "stake": 2.0,
@@ -20,11 +19,11 @@
     "expectedValue": 42.0,
     "estimatedProbability": 76,
     "impliedProbability": 52.38,
-    "situationalFactors": {
-      "oregonOffense": "Faced hostile nighttime environment at Kinnick Stadium - historically a low-scoring venue",
-      "iowaDefense": "Elite defensive unit known for forcing turnovers and limiting explosive plays",
-      "weatherConditions": "Prime late-season Big Ten conditions favoring defensive football",
-      "paceTrend": "Both teams ranked in bottom third of FBS in plays per game"
+    "recentPerformance": {
+      "hitRate": "6 of 9 Oregon games under total (66.7%)",
+      "seasonAverage": "Oregon 32.2 PPG, Iowa 19.8 PPG (avg 52.0)",
+      "last3Games": "Oregon averaged 28.3 PPG, Iowa 18.0 PPG (avg 46.3)",
+      "cushion": "-4.7 points below line (elite defenses trend)"
     },
     "keyFactors": [
       {
@@ -51,25 +50,16 @@
     ]
   },
   "gameResults": {
-    "teamStats": {
-      "oregonOffense": {
-        "points": 18,
-        "totalYards": 289,
-        "passingYards": 164,
-        "rushingYards": 125,
-        "turnovers": 2,
-        "timeOfPossession": "28:14"
-      },
-      "iowaOffense": {
-        "points": 16,
-        "totalYards": 247,
-        "passingYards": 158,
-        "rushingYards": 89,
-        "turnovers": 1,
-        "timeOfPossession": "31:46"
-      }
+    "playerStats": {
+      "oregonPoints": 18,
+      "iowaPoints": 16,
+      "totalPoints": 34,
+      "oregonYards": 289,
+      "iowaYards": 247,
+      "combinedTurnovers": 3,
+      "iowaTimeOfPossession": "31:46"
     },
-    "scoringBreakdown": [
+    "quarterBreakdown": [
       {
         "quarter": "Q1",
         "description": "Iowa FG 3-0 - Classic Kinnick defensive slugfest start. Both defenses dominated, Oregon went 3-and-out twice."
@@ -110,10 +100,10 @@
       }
     ],
     "statisticalContext": {
-      "vsProjectedTotal": "-7.5 points below 41.5 line",
-      "vsTeamAverages": "Oregon scored 14.2 below season avg (32.2 PPG), Iowa scored 3.8 below avg (19.8 PPG)",
-      "historicalContext": "Kinnick Stadium night games averaged 38.4 total points over last 3 seasons",
-      "percentileRanking": "18th percentile scoring game for both teams"
+      "vsSeasonAverage": "34 total points vs 52.0 combined season avg (-18 points, -34.6%)",
+      "vsRecentForm": "34 total points vs 46.3 combined last 3 games (-12.3 points, -26.6%)",
+      "vsPropLine": "-7.5 points below 41.5 total line (-18.1%)",
+      "percentileRanking": "18th percentile scoring game for both teams - bottom quartile"
     }
   },
   "closingLineValue": {

@@ -1,7 +1,6 @@
 {
   "slug": "tcu-nov8-2025",
-  "team": "TCU",
-  "opponent": "Iowa State",
+  "player": "TCU",
   "line": "TCU -7.5",
   "odds": -105,
   "stake": 1.0,
@@ -20,11 +19,11 @@
     "expectedValue": 27.2,
     "estimatedProbability": 68,
     "impliedProbability": 51.22,
-    "situationalFactors": {
-      "homeField": "TCU undefeated at home (5-0) entering game",
-      "revenge": "Iowa State embarrassed TCU 42-14 in Ames last season",
-      "offensiveTempo": "TCU's up-tempo offense averaged 82.3 plays/game at home",
-      "iowaStateRoadRecord": "Cyclones 2-3 in true road games with losses by 10, 7, 3"
+    "recentPerformance": {
+      "hitRate": "5 of 8 games covered spread (62.5%)",
+      "seasonAverage": "TCU 33.2 PPG, allowed 26.4 PPG",
+      "last3Games": "TCU won by avg 12.3 points at home",
+      "cushion": "+4.8 points above spread (home dominance)"
     },
     "keyFactors": [
       {
@@ -51,25 +50,16 @@
     ]
   },
   "gameResults": {
-    "teamStats": {
-      "tcuOffense": {
-        "points": 17,
-        "totalYards": 342,
-        "passingYards": 267,
-        "rushingYards": 75,
-        "turnovers": 3,
-        "timeOfPossession": "23:48"
-      },
-      "iowaStateOffense": {
-        "points": 20,
-        "totalYards": 389,
-        "passingYards": 145,
-        "rushingYards": 244,
-        "turnovers": 0,
-        "timeOfPossession": "36:12"
-      }
+    "playerStats": {
+      "tcuPoints": 17,
+      "iowaStatePoints": 20,
+      "tcuYards": 342,
+      "iowaStateYards": 389,
+      "tcuTurnovers": 3,
+      "iowaStateTurnovers": 0,
+      "iowaStateTOP": "36:12 (60.3%)"
     },
-    "scoringBreakdown": [
+    "quarterBreakdown": [
       {
         "quarter": "Q1",
         "description": "TCU TD 7-0 - Fast start for Horned Frogs. 4-play, 75-yard TD drive in 1:42. Josh Hoover 38-yard TD strike."
@@ -110,10 +100,10 @@
       }
     ],
     "statisticalContext": {
-      "vsSpread": "Lost by 10.5 points vs -7.5 line (failed to cover by 150%)",
-      "vsProjection": "TCU scored 21.4 below home average (38.4 PPG), Iowa State scored 3.3 above road avg",
-      "turnoverImpact": "-3 turnover margin = approximately -10.5 expected point swing",
-      "percentileRanking": "8th percentile offensive performance for TCU at home"
+      "vsSeasonAverage": "TCU 17 points vs 33.2 PPG avg (-16.2 points, -48.8%)",
+      "vsRecentForm": "Lost by 3 vs avg +12.3 margin at home (-15.3 point swing)",
+      "vsPropLine": "Failed to cover -7.5 spread by 10.5 points (lost by 3 outright)",
+      "percentileRanking": "8th percentile offensive performance for TCU at home - bottom tier"
     }
   },
   "closingLineValue": {
