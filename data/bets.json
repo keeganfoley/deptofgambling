@@ -12,7 +12,6 @@
     "expectedValue": 25.0,
     "profit": -100.00,
     "betType": "props",
-    "slug": "gadsden-yards-nov9-2025",
     "player": "Oronde Gadsden II",
     "team": "Los Angeles Chargers",
     "opponent": "Pittsburgh Steelers"
@@ -30,7 +29,6 @@
     "expectedValue": 27.0,
     "profit": -100.00,
     "betType": "props",
-    "slug": "gainwell-receptions-nov9-2025",
     "player": "Kenneth Gainwell",
     "team": "Pittsburgh Steelers",
     "opponent": "Los Angeles Chargers"
@@ -55,7 +53,7 @@
   },
   {
     "id": 32,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "Cook O84.5 rushing yards",
     "odds": -114,
@@ -66,14 +64,13 @@
     "expectedValue": 34.0,
     "profit": -50.00,
     "betType": "props",
-    "slug": "cook-rushing-nov9-2025",
     "player": "James Cook",
     "team": "Buffalo Bills",
     "opponent": "Miami Dolphins"
   },
   {
     "id": 33,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "Collins Anytime TD",
     "odds": 165,
@@ -84,14 +81,13 @@
     "expectedValue": 45.0,
     "profit": -75.00,
     "betType": "props",
-    "slug": "collins-td-nov9-2025",
     "player": "Nico Collins",
     "team": "Houston Texans",
     "opponent": "Jacksonville Jaguars"
   },
   {
     "id": 34,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "Judkins O81.5 rushing yards",
     "odds": -118,
@@ -102,14 +98,13 @@
     "expectedValue": 30.0,
     "profit": -100.00,
     "betType": "props",
-    "slug": "judkins-rushing-nov9-2025",
     "player": "Quinshon Judkins",
     "team": "Cleveland Browns",
     "opponent": "New York Jets"
   },
   {
     "id": 35,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "Jaguars @ Texans U37.5",
     "odds": -110,
@@ -120,13 +115,12 @@
     "expectedValue": 23.0,
     "profit": -100.00,
     "betType": "totals",
-    "slug": "jaguars-texans-nov9-2025",
     "team": "Jacksonville Jaguars",
     "opponent": "Houston Texans"
   },
   {
     "id": 36,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "White O3.5 receptions",
     "odds": 102,
@@ -144,7 +138,7 @@
   },
   {
     "id": 37,
-    "date": "2025-11-08T21:05:00.000Z",
+    "date": "2025-11-09T21:05:00.000Z",
     "sport": "NFL",
     "description": "Smith-Njigba O96.5 receiving yards",
     "odds": -110,
@@ -162,7 +156,7 @@
   },
   {
     "id": 38,
-    "date": "2025-11-08T18:00:00.000Z",
+    "date": "2025-11-09T18:00:00.000Z",
     "sport": "NFL",
     "description": "Dowdle O19.5 rush attempts",
     "odds": -118,
@@ -173,7 +167,6 @@
     "expectedValue": 28.0,
     "profit": -200.00,
     "betType": "props",
-    "slug": "dowdle-rush-attempts-nov9-2025",
     "player": "Rico Dowdle",
     "team": "Carolina Panthers",
     "opponent": "New Orleans Saints"
