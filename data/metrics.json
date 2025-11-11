@@ -1,16 +1,16 @@
 {
   "sharpeRatio": null,
-  "sharpeRatioNote": "N/A (30 bets needed for 30-day calc)",
-  "maxDrawdown": 592.60,
-  "avgWin": 117.31,
-  "avgLoss": 120.31,
-  "avgProfitPerBet": -9.42,
+  "sharpeRatioNote": "N/A (35 bets needed for 30-day calc)",
+  "maxDrawdown": 858.46,
+  "avgWin": 130.48,
+  "avgLoss": 135.53,
+  "avgProfitPerBet": -13.93,
   "largestWin": 181.82,
-  "largestLoss": 200.00,
-  "profitFactor": 0.85,
-  "totalCapitalRisked": 3925.00,
-  "unitsRisked": 39.25,
-  "unitEfficiency": -7.20,
+  "largestLoss": 250.00,
+  "profitFactor": 0.81,
+  "totalCapitalRisked": 4925.00,
+  "unitsRisked": 49.25,
+  "unitEfficiency": -9.90,
   "closingLineValue": 4.8,
   "closingLineValueNote": "Average: +4.8¢",
   "kellyUtilization": 38,
@@ -34,10 +34,10 @@
     "1.0u": {
       "record": {
         "wins": 6,
-        "losses": 6,
-        "total": 12
+        "losses": 7,
+        "total": 13
       },
-      "winRate": 50.00
+      "winRate": 46.15
     },
     "1.5u": {
       "record": {
@@ -49,9 +49,17 @@
     },
     "2.0u": {
       "record": {
-        "wins": 2,
-        "losses": 2,
-        "total": 4
+        "wins": 3,
+        "losses": 3,
+        "total": 6
+      },
+      "winRate": 50.00
+    },
+    "2.5u": {
+      "record": {
+        "wins": 1,
+        "losses": 1,
+        "total": 2
       },
       "winRate": 50.00
     }
@@ -65,7 +73,7 @@
         "losses": 4,
         "total": 11
       },
-      "roi": 2.64,
+      "roi": 18.20,
       "netPL": 263.91,
       "unitsWon": 2.64,
       "gamesAnalyzed": 11,
@@ -75,15 +83,15 @@
       "sport": "NFL",
       "emoji": "🏈",
       "record": {
-        "wins": 4,
-        "losses": 9,
-        "total": 13
+        "wins": 6,
+        "losses": 12,
+        "total": 18
       },
-      "roi": -37.19,
-      "netPL": -541.66,
-      "unitsWon": -5.42,
-      "gamesAnalyzed": 13,
-      "totalGames": 13
+      "roi": -29.96,
+      "netPL": -756.42,
+      "unitsWon": -7.56,
+      "gamesAnalyzed": 18,
+      "totalGames": 18
     },
     "NCAAB": {
       "sport": "NCAAB",
@@ -93,7 +101,7 @@
         "losses": 2,
         "total": 3
       },
-      "roi": -2.07,
+      "roi": -41.43,
       "netPL": -207.14,
       "unitsWon": -2.07,
       "gamesAnalyzed": 3,
@@ -118,24 +126,24 @@
     "props": {
       "type": "Props",
       "record": {
-        "wins": 11,
-        "losses": 12,
-        "total": 23
+        "wins": 12,
+        "losses": 15,
+        "total": 27
       },
-      "winRate": 47.83,
-      "netPL": -187.75,
-      "roi": -6.40
+      "winRate": 44.44,
+      "netPL": -559.18,
+      "roi": -15.22
     },
     "spreads": {
       "type": "Spreads",
       "record": {
-        "wins": 3,
+        "wins": 4,
         "losses": 2,
-        "total": 5
+        "total": 6
       },
-      "winRate": 60.0,
-      "netPL": 23.29,
-      "roi": 9.32
+      "winRate": 66.67,
+      "netPL": 189.96,
+      "roi": 25.33
     },
     "totals": {
       "type": "Totals",
@@ -146,7 +154,7 @@
       },
       "winRate": 33.33,
       "netPL": -118.18,
-      "roi": -39.39
+      "roi": -23.64
     }
   }
 }

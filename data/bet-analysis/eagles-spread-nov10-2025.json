@@ -1,0 +1,118 @@
+{
+  "slug": "eagles-spread-nov10-2025",
+  "player": "Philadelphia Eagles",
+  "line": "+1.5 spread",
+  "odds": -120,
+  "stake": 2.0,
+  "result": "win",
+  "finalStat": "Won 10-7 (covered by 4.5 points)",
+  "profit": 166.67,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles @ Green Bay Packers",
+    "date": "November 10, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lambeau Field",
+    "finalScore": "Eagles 10, Packers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 26.0,
+    "estimatedProbability": 61,
+    "impliedProbability": 54.55,
+    "recentPerformance": {
+      "hitRate": "Eagles 6-2 ATS this season (75%)",
+      "seasonAverage": "Eagles +4.2 points vs spread",
+      "last3Games": "Covered 2 of last 3 spreads",
+      "cushion": "Getting points as road underdog with 6-3 record"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Defensive Front",
+        "description": "Eagles ranked 5th in QB pressures and just acquired Jaelan Phillips from Miami. Defensive line featuring Phillips, Jalyx Hunt, and Nakobe Dean posed major threat to Jordan Love."
+      },
+      {
+        "title": "Getting Points with Better Record",
+        "description": "Eagles entered 6-3 while Packers were 5-4. Philadelphia getting +1.5 points despite superior record and coming off bye week preparation."
+      },
+      {
+        "title": "Road Underdog Value",
+        "description": "NFL road underdogs getting 1-3 points historically cover at 53% rate. Eagles' defense travels well."
+      }
+    ],
+    "riskFactors": [
+      "Lambeau Field in November creates significant home-field advantage",
+      "Jordan Love's efficiency at home (9-2 career at Lambeau)",
+      "Eagles' offense coming off bye could be rusty"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "eaglesPoints": 10,
+      "packersPoints": 7,
+      "spreadMargin": 4.5,
+      "eaglesTotalYards": 294,
+      "packersTotalYards": 261,
+      "eaglesSacks": 3,
+      "packersTurnovers": 2,
+      "timeOfPossession": "32:05 Eagles, 27:55 Packers"
+    },
+    "scoringBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Scoreless through halftime - first 0-0 halftime NFL game since December 2023. Defensive dominance on both sides."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Jake Elliott 39-yard FG gave Eagles 3-0 lead to open second half. Defense continued shutout."
+      },
+      {
+        "quarter": "Q4",
+        "description": "DeVonta Smith 36-yard TD reception from Jalen Hurts extended lead to 10-0 with 10:35 left. Josh Jacobs 6-yard TD cut it to 10-7 with 5:49 remaining. Eagles sealed win with 4th-and-1 stop (Jacobs fumble) at 1:26."
+      }
+    ],
+    "whenCleared": "Q4 - Eagles won outright 10-7, covering +1.5 by 4.5 points",
+    "gamePace": "Defensive struggle throughout. Eagles' pass rush (3 sacks of Love, 8 QB hits) and ball control (32:05 TOP) dominated. Philadelphia improved to 7-2, Packers fell to 5-3-1."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Jaelan Phillips Debut Dominated",
+        "description": "Phillips' Eagles debut was spectacular - 7 QB pressures, fumble recovery, constant disruption of Jordan Love. Trade acquisition paid immediate dividends."
+      },
+      {
+        "title": "Won Outright as Road Underdog",
+        "description": "Eagles didn't just cover +1.5, they won outright 10-7. Margin of 4.5 points exceeded spread comfortably despite low-scoring affair."
+      },
+      {
+        "title": "Defensive Dominance",
+        "description": "Held Packers to 7 points, 261 total yards, forced 2 turnovers. Critical 4th-and-1 stop (Jacobs fumble) with 1:26 left sealed victory."
+      },
+      {
+        "title": "DeVonta Smith Game-Winner",
+        "description": "Smith's 36-yard TD catch gave Eagles 10-0 cushion with 10:35 left. Crucial score in low-scoring game."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Eagles improved to 7-2 ATS (77.8%)",
+      "vsRecentForm": "3rd straight cover as road underdog",
+      "vsPropLine": "+4.5 points vs +1.5 spread (covered by 300%)",
+      "percentileRanking": "92nd percentile defensive performance - held Packers to 7 points"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -122,
+    "clvCents": 2,
+    "clvPercentage": 1.6,
+    "verdict": "Slight positive CLV - line barely moved, showing sharp money on Eagles."
+  },
+  "keyTakeaways": [
+    "Road underdogs +1.5 with better records provide excellent value - Eagles 6-3 vs Packers 5-4",
+    "Defensive line dominance translates to spread covers - Phillips' 7 pressures led to outright win",
+    "Low-scoring games favor underdogs - 10-7 final made +1.5 cushion comfortable",
+    "Bye week preparation showed - Eagles' game plan dominated Packers",
+    "Critical 4th-and-1 stop sealed cover and outright victory"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect road underdog spot. Eagles' superior record (6-3 vs 5-4), elite defensive front, and bye week preparation made +1.5 excellent value. Phillips' dominant debut (7 pressures) and Smith's TD catch delivered outright 10-7 win. Defensive slugfests favor underdogs - Eagles covered by 4.5 points despite just 10 points scored."
+}

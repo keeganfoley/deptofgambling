@@ -1,0 +1,115 @@
+{
+  "slug": "smith-receptions-nov10-2025",
+  "player": "DeVonta Smith",
+  "line": "OVER 4.5 receptions",
+  "odds": -114,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "4 receptions (short by 1)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles @ Green Bay Packers",
+    "date": "November 10, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lambeau Field",
+    "finalScore": "Eagles 10, Packers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 28.0,
+    "estimatedProbability": 64,
+    "impliedProbability": 53.27,
+    "recentPerformance": {
+      "hitRate": "4 of last 5 games over 4.5 receptions (80%)",
+      "seasonAverage": "6.2 receptions per game",
+      "last3Games": "6.7 receptions per game in last 3",
+      "cushion": "+1.7 receptions above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Recent Volume",
+        "description": "Smith averaged 6.2 receptions per game entering Week 11, well above 4.5 line. Last 5 games featured 99.8 yards per game average."
+      },
+      {
+        "title": "Jalen Hurts' Top Target",
+        "description": "Smith commanded 28% target share in Eagles' passing attack. Clear WR1 with consistent usage regardless of game script."
+      },
+      {
+        "title": "A.J. Brown Injury Return",
+        "description": "Brown returned from hamstring injury but expected to be limited. Smith projected to maintain elite target share."
+      }
+    ],
+    "riskFactors": [
+      "Monday Night Football defensive environment could limit pass volume",
+      "Cold weather at Lambeau Field might suppress passing game",
+      "A.J. Brown's return could steal targets despite injury limitations"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 4,
+      "targets": 7,
+      "receivingYards": 69,
+      "yardsPerReception": 17.3,
+      "touchdowns": 1,
+      "longestReception": 36,
+      "thirdDownConversions": 3,
+      "contestedCatches": 1
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q3",
+        "description": "Scoreless through three quarters. Smith caught 3 receptions on 5 targets for 33 yards. Hurts attempted just 18 passes through Q3 in defensive struggle."
+      },
+      {
+        "quarter": "Q4",
+        "description": "TOUCHDOWN! Smith's 36-yard TD reception (contested catch over Evan Williams) gave Eagles 10-0 lead with 10:35 left. Added 1 more catch (16 yards on 3rd-and-12). Finished 4-for-7, 69 yards, 1 TD."
+      }
+    ],
+    "whenMissed": "Stuck at 4 receptions - needed exactly 1 more catch",
+    "gamePace": "Ultra-low-volume passing game. Hurts attempted just 26 total passes in 10-7 defensive slugfest. First 0-0 halftime NFL game since December 2023 limited all offensive stats."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Extreme Pass Volume Suppression",
+        "description": "Hurts attempted just 26 passes total in historically low-scoring game (0-0 halftime, 10-7 final). Smith's 7 targets represented 27% target share but volume evaporated."
+      },
+      {
+        "title": "Quality Over Quantity",
+        "description": "Smith's 4 catches were all high-leverage plays: 36-yard TD (contested), three 3rd-down conversions including clutch 16-yarder on 3rd-and-12 late. Impactful performance but one catch short."
+      },
+      {
+        "title": "One Catch Away",
+        "description": "Needed exactly 5 receptions, finished with 4. Missed by smallest possible margin despite 69 yards and game-winning TD catch."
+      },
+      {
+        "title": "A.J. Brown Return Minimal Impact",
+        "description": "Brown caught just 2 passes for 13 yards, showing injury limitations. Didn't steal targets but overall pass volume (26 attempts) was historically low."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-2.2 receptions below 6.2 season average (-35.5%)",
+      "vsRecentForm": "-2.7 receptions below 6.7 last 3 games (-40.3%)",
+      "vsPropLine": "-1 reception below 4.5 line (-22.2%)",
+      "percentileRanking": "Bottom 30% of Smith's reception performances despite TD catch"
+    },
+    "wasNormalVariance": "This was 75% variance, 25% analytical error. Smith's 6.2 receptions per game average and recent 6.7 RPG form supported the over, but the 10-7 defensive slugfest (0-0 halftime) created extreme variance. Missing by exactly 1 catch when Hurts attempted just 26 passes (vs typical 35+) is bad luck. However, betting reception overs in MNF game with extreme defensive potential (Eagles' elite pass rush vs Love) was analytical risk. Should have weighted potential for low-volume passing environment."
+  },
+  "closingLineValue": {
+    "ourOdds": -114,
+    "closingOdds": -118,
+    "clvCents": 4,
+    "clvPercentage": 3.4,
+    "verdict": "Positive CLV - line moved toward Smith over as market recognized his target volume."
+  },
+  "keyTakeaways": [
+    "Reception props require pass volume - when QB throws just 26 times (vs 35+ typical), even elite WRs underperform",
+    "Quality over quantity: Smith's 4 catches included 36-yard TD and three 3rd-down conversions, but needed 5",
+    "Missing by exactly 1 reception (22.2% below line) in 10-7 game is variance, not total analytical failure",
+    "0-0 halftime games destroy all volume-based props across the board",
+    "Hurts praised Smith post-game but 26 pass attempts prevented volume ceiling"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Brutal one-catch miss in historically low-scoring game. Smith's 6.2 RPG average and 28% target share supported the over, but 10-7 defensive slugfest (26 Hurts attempts vs typical 35+) killed volume. His 4 catches (69 yards, 1 TD, 3 third-down conversions) were impactful but one short. Defensive MNF environments (0-0 halftime) warrant extreme caution on reception overs regardless of player talent."
+}

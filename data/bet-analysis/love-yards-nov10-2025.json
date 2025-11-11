@@ -1,0 +1,123 @@
+{
+  "slug": "love-yards-nov10-2025",
+  "player": "Jordan Love",
+  "line": "OVER 225.5 passing yards",
+  "odds": -117,
+  "stake": 2.5,
+  "result": "loss",
+  "finalStat": "176 passing yards (short by 49.5)",
+  "profit": -250.00,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles @ Green Bay Packers",
+    "date": "November 10, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lambeau Field",
+    "finalScore": "Eagles 10, Packers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 34.0,
+    "estimatedProbability": 66,
+    "impliedProbability": 53.91,
+    "recentPerformance": {
+      "hitRate": "6 of 9 games over 225 yards (66.7%)",
+      "seasonAverage": "267.3 passing yards per game",
+      "last3Games": "283.7 yards per game in last 3",
+      "cushion": "+41.8 yards above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Passing Volume",
+        "description": "Love averaged 267.3 passing YPG entering Week 11, well above the 225.5 line. Top-10 QB in pass attempts per game (37.4)."
+      },
+      {
+        "title": "Jaelan Phillips Trade Impact",
+        "description": "Eagles acquired Phillips from Miami at deadline but expected integration time. Green Bay offensive line ranked 8th in pass protection."
+      },
+      {
+        "title": "Monday Night Shootout Potential",
+        "description": "Primetime game between 6-3 Eagles and 5-4 Packers suggested high-scoring affair. Over/under at 45.5 points indicated offensive opportunities."
+      }
+    ],
+    "riskFactors": [
+      "Cold weather at Lambeau Field could impact passing efficiency",
+      "Eagles' defensive front ranked 5th in QB pressures",
+      "Potential for run-heavy game script in frigid conditions"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "completions": 20,
+      "attempts": 36,
+      "passingYards": 176,
+      "touchdowns": 0,
+      "interceptions": 0,
+      "sacks": 3,
+      "sacksYardsLost": 19,
+      "completionPercentage": 55.6,
+      "yardsPerAttempt": 4.9,
+      "passerRating": 68.8,
+      "firstHalfYards": 20,
+      "qbHits": 8
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "DISASTER. Love posted just 20 net passing yards in scoreless first half. Jaelan Phillips (7 pressures in Eagles debut) and Jalyx Hunt (11-yard sack on opening drive) dominated. Averaged 2.2 YPA in H1."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Slight improvement but still limited. Love added 68 yards on 12 attempts. Eagles' pass rush continued generating pressure (3 sacks total for game). Still 0-0 entering Q4."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Green Bay's only scoring drive featured 88 passing yards. Love finished 20/36 for 176 yards total. Fumbled before halftime (Nakobe Dean forced, Phillips recovered) when in FG range. Never got rhythm."
+      }
+    ],
+    "whenMissed": "Never approached line - finished 49.5 yards short at 176",
+    "gamePace": "First scoreless-at-halftime NFL game since December 2023. Defensive slugfest (10-7 final) with frigid temps and relentless Eagles pass rush. Green Bay prioritized run game (27 rush attempts)."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Jaelan Phillips Dominated",
+        "description": "Phillips' Eagles debut was spectacular - 7 QB pressures, recovered fumble, constant disruption. The trade acquisition had immediate impact despite integration concerns."
+      },
+      {
+        "title": "20 First-Half Passing Yards",
+        "description": "Love posted just 20 net yards in scoreless first half. Averaged 2.2 YPA through two quarters as Eagles' front seven completely shut down passing attack."
+      },
+      {
+        "title": "Run-Heavy Game Script",
+        "description": "Packers attempted only 36 passes vs 27 rushes in defensive struggle. Cold weather + 0-0 halftime score forced conservative approach limiting pass volume."
+      },
+      {
+        "title": "Critical Fumble Killed Momentum",
+        "description": "Love fumbled (Dean forced, Phillips recovered) right before halftime when GB was in FG range. Momentum-killer prevented any offensive rhythm."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-91.3 yards below 267.3 YPG average (-34.2%)",
+      "vsRecentForm": "-107.7 yards below 283.7 YPG last 3 games (-38.0%)",
+      "vsPropLine": "-49.5 yards below 225.5 line (-22.0%)",
+      "percentileRanking": "Bottom 10% of Love's season performances - worst game of year"
+    },
+    "wasNormalVariance": "This was 30% variance, 70% analytical error. While Phillips' 7-pressure debut was variance, the defensive nature of this MNF matchup (0-0 halftime, 10-7 final) was predictable given weather and Eagles' elite pass rush. Should have weighted potential for defensive slugfest more heavily. Love's 20 first-half yards and 4.9 YPA show complete offensive collapse. The 225.5 line assumed competitive scoring environment - didn't account for historically low-scoring affair."
+  },
+  "closingLineValue": {
+    "ourOdds": -117,
+    "closingOdds": -120,
+    "clvCents": 3,
+    "clvPercentage": 2.5,
+    "verdict": "Slight positive CLV - line moved toward over but not enough to offset game script disaster."
+  },
+  "keyTakeaways": [
+    "Defensive primetime games kill QB yardage props - 0-0 halftime, 10-7 final destroyed pass volume",
+    "Jaelan Phillips' 7-pressure debut proved trade acquisitions can have immediate impact",
+    "20 first-half passing yards (2.2 YPA) shows complete offensive breakdown",
+    "Cold weather MNF games warrant extreme caution on QB passing overs",
+    "Missing by 49.5 yards (22% below line) reflects analytical failure, not just bad luck"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Major analytical miss. While Love's season average (267.3 YPG) supported the over, the MNF defensive environment (Eagles' elite pass rush + frigid Lambeau weather) created perfect storm for under. Phillips' debut dominance (7 pressures) and 0-0 halftime score showed game script disaster from opening kickoff. Should have respected potential for defensive slugfest more heavily."
+}

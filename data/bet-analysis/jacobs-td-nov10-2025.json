@@ -1,0 +1,115 @@
+{
+  "slug": "jacobs-td-nov10-2025",
+  "player": "Josh Jacobs",
+  "line": "Anytime TD",
+  "odds": -140,
+  "stake": 2.5,
+  "result": "win",
+  "finalStat": "1 TD (6-yard rushing TD)",
+  "profit": 178.57,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles @ Green Bay Packers",
+    "date": "November 10, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lambeau Field",
+    "finalScore": "Eagles 10, Packers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 32.0,
+    "estimatedProbability": 62,
+    "impliedProbability": 58.33,
+    "recentPerformance": {
+      "hitRate": "5 straight games with TD (100%)",
+      "seasonAverage": "11 rushing TDs in 9 games (1.22 per game)",
+      "last3Games": "3 rushing TDs in last 3 games",
+      "cushion": "Elite goal-line usage in Packers' offense"
+    },
+    "keyFactors": [
+      {
+        "title": "Red-Hot TD Streak",
+        "description": "Jacobs entered on a 5-game touchdown streak, scoring in every game since Week 5. With 11 rushing TDs in 9 games, he was one of NFL's most reliable RB scorers."
+      },
+      {
+        "title": "Workhorse Role",
+        "description": "Jacobs commanded 78% of Packers' RB touches, averaging 21 carries per game. Clear bellcow back with no timeshare concerns in short-yardage situations."
+      },
+      {
+        "title": "Eagles' Run Defense Vulnerability",
+        "description": "Philadelphia ranked 18th against the run (4.3 YPC allowed). Despite strong overall defense, they allowed goal-line TDs to feature backs."
+      }
+    ],
+    "riskFactors": [
+      "Monday Night Football primetime environment could feature conservative game script",
+      "Cold weather at Lambeau Field might favor field goals over TDs",
+      "Jordan Love's rushing ability could vulture goal-line carries"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushAttempts": 21,
+      "rushingYards": 74,
+      "yardsPerCarry": 3.5,
+      "touchdowns": 1,
+      "receptions": 5,
+      "receivingYards": 33,
+      "totalTouches": 26,
+      "scrimmageYards": 107,
+      "redZoneCarries": 4
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q3",
+        "description": "Scoreless defensive struggle through three quarters. Jacobs got heavy volume (16 carries for 52 yards through Q3) but Packers couldn't reach end zone."
+      },
+      {
+        "quarter": "Q4",
+        "description": "TOUCHDOWN! Jacobs scored on 6-yard rushing TD with 5:54 remaining, cutting Eagles lead to 10-7. Extended TD streak to 6 straight games (11th rushing TD of season)."
+      },
+      {
+        "quarter": "Final Drive",
+        "description": "Jacobs fumbled on crucial 4th-and-1 at GB 44 with 1:30 left. Reed Blankenship forced fumble after Jaelan Phillips hit. Ended Packers' comeback attempt but TD already secured."
+      }
+    ],
+    "whenCleared": "Q4 - 5:54 remaining (Jacobs 6-yard rushing TD)",
+    "gamePace": "Historically low-scoring game (10-7 final) with first scoreless-at-halftime NFL game since December 2023. Defensive slugfest limited both offenses."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "TD Streak Extended to Six Games",
+        "description": "Jacobs scored his 11th rushing TD of the season, cashing the anytime TD prop despite the defensive grind. Only TD of game for Green Bay showed his goal-line dominance."
+      },
+      {
+        "title": "Workhorse Volume Delivered",
+        "description": "26 total touches (21 carries, 5 receptions) for 107 scrimmage yards. Jacobs dominated Packers' offensive touches in run-first game script."
+      },
+      {
+        "title": "Late Fumble Didn't Matter",
+        "description": "While Jacobs fumbled on final drive with 1:30 left (ending comeback), the TD at 5:54 already secured this prop. Fumble was unfortunate but didn't affect bet outcome."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "1 TD matches 1.22 per game average (82%)",
+      "vsRecentForm": "Extended 5-game TD streak to 6 games",
+      "vsPropLine": "Cashed anytime TD at -140 odds",
+      "percentileRanking": "85th percentile - scored only TD in low-scoring affair"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -140,
+    "closingOdds": -145,
+    "clvCents": 5,
+    "clvPercentage": 3.4,
+    "verdict": "Positive CLV - line moved toward Jacobs TD as market recognized his hot streak."
+  },
+  "keyTakeaways": [
+    "TD streaks are real - Jacobs extended to 6 straight games with his 11th rushing TD",
+    "Workhorse backs deliver TDs even in low-scoring games - only 17 total points but Jacobs scored GB's lone TD",
+    "Late fumble was unfortunate but irrelevant to prop outcome - TD at 5:54 already cashed",
+    "Defensive games favor elite RB goal-line usage over QB/WR scores",
+    "-140 odds provided value given 6-game streak and 78% touch share"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution despite defensive slugfest. Jacobs' 6-game TD streak and workhorse role (26 touches) made this prop cash-worthy even in 10-7 game. The late fumble ended Packers' comeback but didn't affect bet outcome. Defensive game scripts favor elite RB goal-line work."
+}
