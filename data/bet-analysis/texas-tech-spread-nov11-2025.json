@@ -1,0 +1,132 @@
+{
+  "slug": "texas-tech-spread-nov11-2025",
+  "player": "Texas Tech @ Illinois",
+  "line": "Texas Tech +3.5",
+  "odds": -104,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "Lost 77-81 (missed by 0.5)",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Texas Tech @ Illinois",
+    "date": "November 11, 2025",
+    "gameTime": "9:00 PM ET",
+    "venue": "State Farm Center",
+    "finalScore": "Illinois 81, Texas Tech 77"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 6.0,
+    "estimatedProbability": 58,
+    "impliedProbability": 52.0,
+    "recentPerformance": {
+      "hitRate": "N/A",
+      "seasonAverage": "Illinois 3-0, Texas Tech strong",
+      "last3Games": "JT Toppin coming off 31 pts/14 reb game",
+      "cushion": "Line moved only 3 points with Ivisic out (should've moved 5-6)"
+    },
+    "keyFactors": [
+      {
+        "title": "Tomislav Ivisic OUT (Significant Injury)",
+        "description": "Illinois's 7-foot starting center (13 PPG) sidelined. Massive interior presence lost."
+      },
+      {
+        "title": "JT Toppin Advantage",
+        "description": "Texas Tech's best big man coming off dominant 31 pts/14 reb game. Expected to dominate without Ivisic."
+      },
+      {
+        "title": "Line Underreaction",
+        "description": "Line moved only 3 points with Ivisic out when 5-6 point move was appropriate. Market underreacted to injury impact."
+      },
+      {
+        "title": "Projected Margin",
+        "description": "Models showed Illinois win by only 1-2 points, making +3.5 valuable."
+      }
+    ],
+    "riskFactors": [
+      "Illinois depth could compensate for Ivisic's absence",
+      "Home court advantage for Illinois",
+      "Texas Tech 3PT shooting could go cold on road"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "toppin": "35 pts, 11 reb on 17-25 shooting (68%)",
+      "watts": "21 pts (16 in 2nd half)",
+      "anderson": "0-6 from three (limiting Tech's perimeter threat)",
+      "stojakovic": "23 pts off bench for Illinois (first full game back from knee)",
+      "zvonimir": "11 pts, 7 reb (Tomislav's twin brother stepped up)",
+      "boswell": "22 pts for Illinois"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Texas Tech started 7-0, then Illinois responded with 11-0 run. Competitive start."
+      },
+      {
+        "quarter": "Halftime",
+        "description": "Illinois 45, Texas Tech 32 (13-point deficit). Free throw disparity already emerging."
+      },
+      {
+        "quarter": "Q3-Q4",
+        "description": "Texas Tech shot 11-12 to start half, took 56-55 lead. Illinois responded with 8-0 run to 72-65 lead in final 5 minutes. Tech cut to 76-73 with 50 seconds left but couldn't complete comeback."
+      }
+    ],
+    "whenMissed": "Final: Illinois 81, Texas Tech 77 (4-point margin, needed 3 or less to cover +3.5)",
+    "gamePace": "Both teams had 13 turnovers, but Illinois scored 29 points off turnovers vs Tech's 16 (13-point gap).",
+    "criticalStats": {
+      "freeThrows": "Illinois 16-23, Texas Tech 3-4 (13-point FT advantage in 4-point game)",
+      "secondChance": "Illinois 14, Texas Tech 6 (8-point gap)",
+      "turnovers": "Both 13, but Illinois scored 29 pts off TOs vs Tech's 16 (13-point conversion gap)",
+      "rebounding": "Illinois 34, Tech 30 (despite missing 7-foot center)"
+    }
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Free Throw Massacre (PRIMARY FACTOR)",
+        "description": "Illinois shot 16-23 FT, Texas Tech shot 3-4 FT. 13-point disparity in made free throws decided 4-point game. Texas Tech coach: 'They were more physical than we were at getting to the basket and getting fouls.'"
+      },
+      {
+        "title": "Illinois Depth Without Ivisic",
+        "description": "Andrej Stojakovic (23 pts off bench, first full game back from knee), twin brother Zvonimir Ivisic (11 pts, 7 reb), Kylan Boswell (22 pts) all stepped up. Depth covered injury."
+      },
+      {
+        "title": "Turnover Conversion Gap",
+        "description": "Both had 13 turnovers, but Illinois scored 29 points off turnovers vs Texas Tech's 16. 13-point gap in conversion was decisive."
+      },
+      {
+        "title": "First Half Deficit Too Large",
+        "description": "Down 13 at halftime (45-32), Tech expended enormous energy to come back and briefly take lead, but couldn't sustain effort."
+      },
+      {
+        "title": "Texas Tech 3PT Struggles",
+        "description": "6-22 from three (27.3%), especially 4-12 in first half when they fell behind. Christian Anderson went 0-6 from three."
+      }
+    ],
+    "statisticalContext": {
+      "vsProjection": "Lost by 4 on +3.5 spread (0.5 points off)",
+      "toppinDelivered": "35 pts, 11 reb on 17-25 shooting as predicted",
+      "illinoisBreakthrough": "First ranked non-conference home win under Brad Underwood (hired 2017)",
+      "historicalContext": "The 'Illinois home curse' narrative was from PREVIOUS season (2024-25), not current year—misleading framing"
+    },
+    "wasNormalVariance": "Partially. JT Toppin delivered exactly as predicted (35 pts, 11 reb). But 13-point free throw advantage and 13-point turnover conversion gap were not foreseeable. Missed by half a point (0.5) in what could've been a push or cover."
+  },
+  "closingLineValue": {
+    "ourOdds": -104,
+    "closingOdds": -108,
+    "clvCents": 4,
+    "clvPercentage": 0.8,
+    "verdict": "Neutral CLV. Line held steady around +3.5 throughout."
+  },
+  "keyTakeaways": [
+    "Free throw differential is often decisive: 13-point FT advantage neutralized strong performance from Toppin",
+    "Depth matters when stars miss: Illinois's bench (Stojakovic 23 pts) and twin center (Zvonimir) covered Ivisic's absence",
+    "Verify historical context carefully: 'Home curse' narrative was from previous season, not current year—misleading framing",
+    "Turnover quality matters more than quantity: Both had 13 turnovers, but Illinois scored 13 more points off them",
+    "Close-but-no-cigar losses sting most: Losing by 4 on +3.5 spread (half-point) after coming back from 13 down",
+    "Toppin delivered as predicted but team couldn't overcome free throw/hustle gaps"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Analysis was partially sound (Toppin delivered, Ivisic absence mattered) but missed free throw/depth factors. Grade: C+"
+}

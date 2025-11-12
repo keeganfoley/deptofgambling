@@ -1,0 +1,136 @@
+{
+  "slug": "brunson-assists-nov11-2025",
+  "player": "Jalen Brunson",
+  "line": "OVER 6.5 assists",
+  "odds": -122,
+  "stake": 2.0,
+  "result": "win",
+  "finalStat": "10 assists (cleared by 3.5)",
+  "profit": 163.93,
+  "gameDetails": {
+    "matchup": "New York Knicks vs Memphis Grizzlies",
+    "date": "November 11, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Madison Square Garden",
+    "finalScore": "Knicks 133, Grizzlies 120"
+  },
+  "preGameAnalysis": {
+    "edge": 20,
+    "expectedValue": 25.0,
+    "estimatedProbability": 75,
+    "impliedProbability": 55.0,
+    "recentPerformance": {
+      "hitRate": "3 straight games with 7+ assists",
+      "seasonAverage": "7.3 APG",
+      "last5Games": "7.8 APG (10, 7, 10, 9 in last 4)",
+      "cushion": "+1.3 assists above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Memphis League-Worst Assist Defense",
+        "description": "Grizzlies allowing 31.0 assists per game (32nd in NBA, dead last). Catastrophically bad at limiting playmaking opportunities."
+      },
+      {
+        "title": "Memphis Injury Depleted",
+        "description": "Missing 4 rotation players: Edey, Clarke, Pippen Jr., Jerome. Gutted defensive depth created assist opportunities."
+      },
+      {
+        "title": "Brunson Hot Form",
+        "description": "Averaging 7.8 APG over last 5 games with 10, 7, 10, 9 assists in previous four. Elevated playmaking role in current stretch."
+      },
+      {
+        "title": "Knicks Offensive Firepower",
+        "description": "Averaging 130.2 PPG during 5-game win streak. Multiple weapons (Towns, Bridges, Anunoby) created diverse assist opportunities."
+      },
+      {
+        "title": "Home Court Dominance",
+        "description": "7-0 at Madison Square Garden with +17.7 scoring margin. MSG environment provided comfort and familiarity."
+      }
+    ],
+    "riskFactors": [
+      "Blowout could limit Brunson's minutes in 4th quarter",
+      "High-scoring game might favor Brunson's scoring over facilitating",
+      "Memphis's fast pace (6th in NBA) could create turnover opportunities"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "assists": 10,
+      "points": 32,
+      "rebounds": 5,
+      "shooting": "11-19 FG (57.9%)",
+      "threePointers": "6-9 3PT (66.7%)",
+      "minutes": 36,
+      "turnovers": "N/A"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Brunson facilitated early, Knicks closed on 12-0 run for 42-30 lead. Set aggressive playmaking tone."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Assisted on Towns and Bridges buckets, built 23-point halftime lead (77-54). Multiple assist opportunities in flow."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Hit 7th assist late in quarter at 2:14 remaining, clearing OVER ✓. Continued facilitating with comfortable lead."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Added 3 more assists for final total of 10. Lead allowed pure facilitating without forcing shots."
+      }
+    ],
+    "whenCleared": "Late Q3 at 2:14 remaining (7th assist), finished with 10",
+    "gamePace": "Knicks assisted on 35 of 47 field goals (74.5%). Fast Memphis pace (6th fastest tempo) created numerous possessions.",
+    "teamOffense": "Brunson distributed to Towns (21 pts), Bridges (22 pts), Anunoby (16 pts). Natural assist opportunities throughout."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Perfect Matchup Exploitation",
+        "description": "Memphis's league-worst assist defense (31 APG allowed) was completely exploited. Brunson picked apart depleted backcourt with ease."
+      },
+      {
+        "title": "Recent Form Was Predictive",
+        "description": "7.8 APG in last 5 games indicated elevated playmaking role. This wasn't random variance—it was sustainable current form."
+      },
+      {
+        "title": "Blowout Script Favored Facilitating",
+        "description": "23-point halftime lead meant Brunson could focus on distributing rather than forcing scoring. Perfect game flow for assists."
+      },
+      {
+        "title": "Multiple Scoring Weapons",
+        "description": "Towns, Bridges, Anunoby all scored efficiently, creating diverse assist opportunities. Knicks' balanced attack helped Brunson."
+      },
+      {
+        "title": "Home Court Advantage",
+        "description": "7-0 at MSG with +17.7 margin provided comfort. Brunson controls tempo at home and distributes freely."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+2.7 assists (+37% above 7.3 APG average)",
+      "vsRecentForm": "+2.2 assists (+28% above 7.8 APG last 5 games)",
+      "vsPropLine": "+3.5 assists (OVER by 3.5)",
+      "percentileRanking": "80th percentile performance (elite playmaking game)"
+    },
+    "wasNormalVariance": "This was expected outcome, not variance. Elite matchup (league-worst defense) + hot form (7.8 APG in last 5) + home court + depleted opponent = perfect storm for assists. Model correctly identified edge."
+  },
+  "closingLineValue": {
+    "ourOdds": -122,
+    "closingOdds": -136,
+    "clvCents": 14,
+    "clvPercentage": 2.9,
+    "verdict": "Excellent CLV (+14 cents). Line moved toward OVER as sharp money recognized the value. Early bet captured significant market inefficiency."
+  },
+  "keyTakeaways": [
+    "Elite matchup-based edges pay off: When worst defensive team meets hot offensive form, statistical models prove reliable",
+    "Recent form matters more than season averages: Brunson's 7.8 APG in last 5 games was far more predictive than 7.3 season average",
+    "Game script cooperation: Blowout created ideal conditions for assist accumulation without needing to force offense",
+    "Injury intelligence provides alpha: Understanding Memphis's depleted roster (4 rotation players out) was critical context",
+    "Home court matters for facilitators: 7-0 at MSG showed Brunson controls tempo and distributes freely in comfort zone",
+    "This is textbook value betting: Identified edge, got best available price, variance worked in our favor"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution of matchup-based betting philosophy. Process and results aligned. Grade: A+"
+}

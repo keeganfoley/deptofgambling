@@ -1,0 +1,130 @@
+{
+  "slug": "white-threes-nov11-2025",
+  "player": "Derrick White",
+  "line": "UNDER 3.5 three-pointers made",
+  "odds": -165,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "4 threes made (missed by 0.5)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Boston Celtics vs Philadelphia 76ers",
+    "date": "November 11, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "TD Garden",
+    "finalScore": "Celtics 100, 76ers 102"
+  },
+  "preGameAnalysis": {
+    "edge": 25,
+    "expectedValue": 25.0,
+    "estimatedProbability": 77,
+    "impliedProbability": 62.0,
+    "recentPerformance": {
+      "hitRate": "91% under rate (10 of 11 games failed to hit 4+ threes)",
+      "seasonAverage": "27% from three (171st of 178 qualified players)",
+      "last11Games": "10 of 11 under 3.5 threes",
+      "cushion": "Career-worst shooting streak"
+    },
+    "keyFactors": [
+      {
+        "title": "Career-Worst Three-Point Shooting",
+        "description": "27% from three vs 36.9% career average. Shooting 171st out of 178 qualified players—historically poor."
+      },
+      {
+        "title": "Elite Recent Under Rate",
+        "description": "91% under rate (10 of 11 games failed to hit 4+ threes). Consistent pattern of staying under line."
+      },
+      {
+        "title": "Volume Decline",
+        "description": "Dropped from 10.2 3PA in October to 7.0 in November. Both volume and efficiency trending down."
+      },
+      {
+        "title": "Philadelphia Defense",
+        "description": "76ers ranked 8th in opponent 3PT% (34.8%). Solid perimeter defense to limit White's attempts."
+      },
+      {
+        "title": "Role Change",
+        "description": "Both volume and efficiency declining indicated changing role in Celtics' offense."
+      }
+    ],
+    "riskFactors": [
+      "Close game could increase volume attempts",
+      "White is career 36.9% shooter capable of variance",
+      "Matchup history—could have prior success vs Philadelphia"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 18,
+      "shooting": "7-20 FG (35%)",
+      "threePointers": "4-11 3PT (36.4%)",
+      "assists": 7,
+      "rebounds": 5,
+      "blocks": 2,
+      "minutes": 35
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q3",
+        "description": "White took elevated volume (11 three-point attempts) despite poor overall shooting. Game stayed competitive throughout."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Close game (final 102-100) kept White on floor for 35 minutes and hunting shots despite cold overall shooting (7-20 FG, 35%)."
+      }
+    ],
+    "whenMissed": "White hit 4th three during game, clearing UNDER by exactly 0.5 threes.",
+    "gamePace": "Final score 102-100 (close game) meant White stayed on floor and kept shooting. Celtics needed scoring (Brown only 24 pts), so White's 18 on 7-20 shooting was necessary despite inefficiency.",
+    "volumeSpike": "White took 11 three-point attempts, tied for 2nd-most of season. This was 57% above his November average (7.0 attempts) and matched opening-night attempt total."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Volume Spike Was the Killer (PRIMARY FACTOR)",
+        "description": "White took 11 three-point attempts, 57% above his November average (7.0 attempts). This volume spike created opportunity despite poor shooting."
+      },
+      {
+        "title": "Close Game Kept Him Shooting",
+        "description": "Final score 102-100 meant White stayed on floor for 35 minutes and kept hunting shots despite cold overall shooting (7-20 FG, 35%)."
+      },
+      {
+        "title": "Slight Efficiency Improvement",
+        "description": "36.4% (4-11) was above his 27% season average, though still well below career 36.9%. This was only his 3rd game all season shooting above 33% from three."
+      },
+      {
+        "title": "Celtics Needed Scoring",
+        "description": "Brown led with only 24 points. White's 18 on 7-20 shooting was needed despite inefficiency."
+      },
+      {
+        "title": "Matchup History",
+        "description": "Opening night vs Philadelphia, White went 4-13 from three (his other 4+ three game). Something about this matchup generated higher volume."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "36.4% shooting vs 27.1% season avg (improvement)",
+      "vsNovemberVolume": "11 3PA vs 7.0 November avg (57% increase)",
+      "vsPropLine": "+0.5 threes (OVER by 0.5)",
+      "percentileRanking": "This wasn't a breakout—still inefficient (35% FG overall)",
+      "historicalContext": "Boston.com recap noted shooting 'felt like progress' given brutal cold streak"
+    },
+    "wasNormalVariance": "Partially. White wasn't 'hot'—he shot just 36.4% from three (barely above 27% average) and 35% overall. The under failed due to VOLUME SPIKE (11 attempts vs 7 average) rather than efficiency breakout. One fewer make (3-11) would have cashed the under easily."
+  },
+  "closingLineValue": {
+    "ourOdds": -165,
+    "closingOdds": -170,
+    "clvCents": 5,
+    "clvPercentage": 1.0,
+    "verdict": "Neutral to slight positive CLV. Line held steady around -165 to -170."
+  },
+  "keyTakeaways": [
+    "Volume matters more than efficiency for three-point props: 11 attempts vs 7-attempt average created opportunity despite poor shooting",
+    "Close games increase shot volume: 102-100 final meant White kept shooting despite cold night (7-20 FG)",
+    "Well-reasoned bets can lose narrowly: Lost by exactly 0.5 threes despite all analysis pointing toward under",
+    "Career-worst streaks eventually regress: Even at 27%, White is career 36.9% shooter; one decent night was inevitable",
+    "Matchup history matters: Both 4+ three games came vs Philadelphia, suggesting something about this opponent generated volume",
+    "White debuted new celebration (covering eyes/ears = see/hear no evil) acknowledging struggles",
+    "This wasn't a breakout—still inefficient (35% FG) with slightly improved 3PT%"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Excellent analysis with strong edge, but volume spike in close game created narrow bad beat. Grade: B+"
+}

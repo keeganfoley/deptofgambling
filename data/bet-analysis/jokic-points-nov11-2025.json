@@ -1,0 +1,137 @@
+{
+  "slug": "jokic-points-nov11-2025",
+  "player": "Nikola Jokic",
+  "line": "OVER 26.5 points",
+  "odds": -115,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "35 points (cleared by 8.5)",
+  "profit": 86.96,
+  "gameDetails": {
+    "matchup": "Denver Nuggets vs Sacramento Kings",
+    "date": "November 11, 2025",
+    "gameTime": "9:00 PM ET",
+    "venue": "Ball Arena",
+    "finalScore": "Nuggets 122, Kings 108"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 21.0,
+    "estimatedProbability": 72,
+    "impliedProbability": 53.5,
+    "recentPerformance": {
+      "hitRate": "4 of 4 games over 26.5 points",
+      "seasonAverage": "25.2 PPG",
+      "last4Games": "31.25 PPG (32, 26, 33, 34)",
+      "cushion": "+4.75 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Recent Scoring Form",
+        "description": "Averaging 31.25 PPG over last 4 games including all OVER 26.5. Red-hot stretch indicated elevated scoring role."
+      },
+      {
+        "title": "Previous Meeting Blueprint",
+        "description": "34 points vs same Sacramento team on November 3 (8 days prior). Established successful scoring blueprint against this defense."
+      },
+      {
+        "title": "Sacramento League-Worst Defense",
+        "description": "Kings ranked 27th in defensive rating (111.5), 28th in points allowed. Recently allowed 144 to Minnesota—porous interior defense."
+      },
+      {
+        "title": "Elite Shooting Efficiency",
+        "description": "64.4% FG overall through 9 games, absurd 78.6% on two-pointers. Healthy wrist enabling elite touch around rim."
+      },
+      {
+        "title": "Sabonis Playing Injured",
+        "description": "Domantas Sabonis clutching side throughout game, unable to provide usual resistance. Removed primary interior defender."
+      }
+    ],
+    "riskFactors": [
+      "Blowout could limit minutes in 4th quarter",
+      "National TV showcase might change gameplan",
+      "Sacramento could deploy zone defense to limit interior scoring"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 35,
+      "rebounds": 15,
+      "assists": 7,
+      "shooting": "16-19 FG (84.2%)",
+      "threePointers": "1-2 3PT",
+      "freeThrows": "2-2 FT",
+      "minutes": 36
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Game was competitive early, Kings led by 1. Jokic established interior dominance with floaters and hook shots."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Nuggets took lead for good with 1:45 left in quarter. Jokic efficient around rim, exploiting Sabonis's injury."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Hit 27 points at 2:14 mark, OVER CASHES ✓. Continued dominating with tip-ins and layups. Made only one shot outside paint entire game."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Nuggets pulled away with 16-2 run. Jokic added to total, finished with historic 35 pts, 15 reb on 84.2% shooting."
+      }
+    ],
+    "whenCleared": "Late Q3 at 2:14 remaining (27 points), finished with 35",
+    "shotChartExcellence": "Made only ONE shot outside the paint entire game (late 3-pointer). Dominated with floaters, hook shots, tip-ins, layups around rim. At halftime, only miss was buzzer-beater half-court heave.",
+    "historicEfficiency": "16-19 FG (84.2%) - first career game with 35+ points, 15+ rebounds, and 80%+ shooting. Complete mastery of weakened interior defense."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Recent Form Was Predictive",
+        "description": "31.25 PPG in last 4 games indicated current elevated scoring role. This was sustainable form, not random variance."
+      },
+      {
+        "title": "Sacramento Defensive Futility Exploited",
+        "description": "27th in rating, 28th in points allowed. Kings allowed 276 points in previous 2 games—completely porous defense."
+      },
+      {
+        "title": "Sabonis Injury Removed Resistance",
+        "description": "Primary interior defender playing injured, clutching side. Unable to provide usual resistance to Jokic's drives."
+      },
+      {
+        "title": "Previous Meeting Provided Blueprint",
+        "description": "34 points vs Sacramento 8 days prior showed this was repeatable success, not one-time fluke."
+      },
+      {
+        "title": "Historic Efficiency",
+        "description": "84.2% shooting (16-19 FG) showcased complete mismatch. Kings had no answer for Jokic's touch around rim."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+9.8 points (+38.9% above 25.2 PPG average)",
+      "vsRecentForm": "+3.75 points (+12% above 31.25 PPG last 4 games)",
+      "vsPropLine": "+8.5 points (OVER by 8.5)",
+      "percentileRanking": "95th percentile performance (career-defining game)",
+      "historicalContext": "First career game with 35+ pts, 15+ reb, 80%+ FG. Historic dominance."
+    },
+    "wasNormalVariance": "This was expected outcome based on matchup and form. Elite scorer on hot streak (31.25 PPG) facing league-worst defense (27th rating) with injured primary defender = massive edge. Variance worked in our favor, but edge was real."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -120,
+    "clvCents": 5,
+    "clvPercentage": 1.04,
+    "verdict": "Positive CLV (+5 cents). Line moved toward OVER as market recognized value. Got slightly better price than closing."
+  },
+  "keyTakeaways": [
+    "Recent form trumps season averages: Jokic's 4-game scoring tear (31.25 PPG) was far more predictive than season average (25.2)",
+    "Matchup history provides blueprint: 34 points vs same opponent 8 days prior indicated repeatable success",
+    "Opponent defensive struggles are exploitable: Sacramento's league-worst defense (27th rating) wasn't random variance",
+    "Health matters: Sabonis playing injured removed primary interior resistance",
+    "Elite efficiency showcased complete mismatch: 84.2% shooting was historic dominance",
+    "National TV games incentivize star performances: NBC showcase created motivation for aggressive play"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect convergence of hot form, favorable matchup, and opponent weakness. Grade: A+"
+}
