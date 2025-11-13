@@ -1,0 +1,176 @@
+{
+  "slug": "lakers-spread-nov12-2025",
+  "team": "Los Angeles Lakers",
+  "line": "Lakers +8.5",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "Lost 92-121 (missed by 20.5 points)",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Los Angeles Lakers @ Oklahoma City Thunder",
+    "date": "November 12, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Paycom Center, Oklahoma City, OK",
+    "finalScore": "Thunder 121, Lakers 92"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 18.0,
+    "estimatedProbability": 61,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Lakers covering spreads in competitive games",
+      "lakersOffense": "Averaging 116+ PPG all season",
+      "lakersRecent": "Luka Doncic averaging 37.1 PPG in last 3 games",
+      "cushion": "8.5 points is significant cushion for Lakers"
+    },
+    "keyFactors": [
+      {
+        "title": "Doncic's Scorching Form",
+        "description": "Luka Doncic averaging 37.1 PPG entering this game, absolutely on fire. Elite scoring threat should keep Lakers competitive even in loss."
+      },
+      {
+        "title": "Lakers' Scoring Consistency",
+        "description": "Lakers had scored 116+ points in every single game this season. Reliable offensive floor suggested they'd stay within number."
+      },
+      {
+        "title": "Large Spread Cushion",
+        "description": "8.5 points is a substantial cushion. Lakers only needed to lose by 8 or fewer to cover. Felt like significant margin of error."
+      },
+      {
+        "title": "Austin Reaves' Hot Streak",
+        "description": "Reaves averaging 30.3 PPG recently, providing elite secondary scoring alongside Doncic. Dual-threat backcourt."
+      },
+      {
+        "title": "Thunder Without Lu Dort",
+        "description": "OKC missing defensive specialist Lu Dort (trapezius strain), potentially weakening their elite perimeter defense."
+      }
+    ],
+    "riskFactors": [
+      "LeBron James still out (hadn't played yet this season)",
+      "Thunder 11-1 record (league-best) showed elite form",
+      "OKC's elite defense even without Dort could stifle Lakers",
+      "Road game at hostile Paycom Center environment"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "lakersPoints": 92,
+      "thunderPoints": 121,
+      "lakersFieldGoals": "31-77 FG (40.3%)",
+      "thunderFieldGoals": "45-91 FG (49.5%)",
+      "lakersThreePointers": "8-29 3PT (27.6%)",
+      "thunderThreePointers": "15-40 3PT (37.5%)",
+      "lakersRebounds": 42,
+      "thunderRebounds": 53
+    },
+    "keyPlayers": {
+      "sga": {
+        "points": 30,
+        "rebounds": 7,
+        "assists": 9,
+        "shooting": "11-18 FG",
+        "minutes": 31,
+        "impact": "Dominated in just 3 quarters, sat entire 4th with game already over. Elite efficiency."
+      },
+      "doncic": {
+        "points": 19,
+        "rebounds": 5,
+        "assists": 4,
+        "shooting": "7-20 FG (35%)",
+        "impact": "Completely shut down by Thunder defense. Entered averaging 37.1 PPG, held to just 19 on terrible shooting."
+      },
+      "reaves": {
+        "points": 13,
+        "rebounds": 3,
+        "assists": 2,
+        "shooting": "4-12 FG (33.3%)",
+        "impact": "Entered averaging 30.3 PPG, held to just 13 on poor efficiency. Thunder defense smothered both stars."
+      },
+      "isaiahJoe": {
+        "points": 21,
+        "threePointers": "7-11 3PT",
+        "impact": "Sharpshooter went nuclear from beyond the arc, burying Lakers early."
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "score": "Thunder 30, Lakers 18",
+        "description": "Thunder jumped out fast, Lakers missed first 11 shots and looked completely overwhelmed. 12-point deficit early."
+      },
+      {
+        "quarter": "Q2",
+        "score": "Thunder 70, Lakers 38 (Halftime 70-38)",
+        "description": "COMPLETE BLOWOUT. Lakers couldn't hit anything, missed first 11 shots of quarter. Thunder led 70-38 at half—32-point massacre. Game essentially over."
+      },
+      {
+        "quarter": "Q3",
+        "score": "Thunder 100, Lakers 64",
+        "description": "Thunder cruised, SGA scored at will. Isaiah Joe hit buzzer-beater three off SGA's behind-the-back pass for 100-64 lead entering Q4."
+      },
+      {
+        "quarter": "Q4",
+        "score": "Thunder 121, Lakers 92 (Final)",
+        "description": "Garbage time. SGA sat entire quarter. Thunder starters rested. Lakers couldn't even make it respectable, losing by 29 points."
+      }
+    ],
+    "turningPoint": "Q2: Lakers' 11 missed shots to start quarter. Fell behind 70-38 at halftime. Game was over before intermission. Never competitive.",
+    "gamePace": "Thunder completely controlled tempo. Lakers had no rhythm offensively, shooting just 40.3% from field and 27.6% from three.",
+    "teamOffense": "Lakers' offense completely collapsed. First game all season scoring under 116 points—they managed just 92. Thunder's elite defense suffocated everything."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Doncic Completely Neutralized",
+        "description": "Luka Doncic held to 19 points on 7-20 shooting (35%). Entered averaging 37.1 PPG, Thunder's elite defense made him look pedestrian. Without LeBron, Lakers had no Plan B."
+      },
+      {
+        "title": "Historic Offensive Collapse",
+        "description": "Lakers scored just 92 points—their first game under 116 points all season. Shot 40.3% from field, 27.6% from three. Offense completely evaporated against Thunder's elite D."
+      },
+      {
+        "title": "First Half Massacre",
+        "description": "70-38 halftime deficit was insurmountable. Lakers missed first 11 shots of Q2, looked completely lost. Game was over before halftime, no chance to cover."
+      },
+      {
+        "title": "No LeBron James Safety Net",
+        "description": "LeBron still hadn't played this season. Lakers had zero veteran leadership or secondary playmaking. Doncic isolated with no help = disaster."
+      },
+      {
+        "title": "Thunder's Elite Defense Even Without Dort",
+        "description": "Despite missing Lu Dort, Thunder's defense was suffocating. Held Doncic (37.1 PPG) to 19 and Reaves (30.3 PPG) to 13. Multi-faceted defensive scheme."
+      },
+      {
+        "title": "Isaiah Joe's Three-Point Barrage",
+        "description": "Thunder role player Isaiah Joe went 7-11 from three for 21 points. Buried Lakers early, stretched lead to unrecoverable margin."
+      }
+    ],
+    "statisticalContext": {
+      "spreadResult": "Lakers +8.5 → Lost 92-121 (missed by 20.5 points)",
+      "expectedMargin": "Lakers lose by 5-7 points, cover +8.5 comfortably",
+      "actualMargin": "Lakers lost by 29 points (!!!)",
+      "percentileRanking": "Lakers' 92 points = 2nd percentile offensive performance (season-worst)"
+    },
+    "wasNormalVariance": "This was NOT variance—this was complete system failure. Lakers' worst offensive game of season (92 pts vs 116+ PPG average) combined with Doncic's worst game (19 pts vs 37.1 PPG average) and Thunder's elite defense clicking perfectly. This was catastrophic outcome, not normal loss. Everything went wrong simultaneously."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -108,
+    "clvCents": 2,
+    "clvPercentage": 0.4,
+    "verdict": "Minimal CLV (+2 cents). Line barely moved, suggesting market already priced Lakers as live underdogs. No real edge captured."
+  },
+  "keyTakeaways": [
+    "Recent form without context is dangerous: Doncic's 37.1 PPG meant nothing against elite Thunder defense. Form doesn't travel vs top defenses",
+    "Scoring averages don't account for defense quality: Lakers' 116+ PPG streak was against weaker defenses. Thunder (12-1, elite D) was different beast",
+    "Missing superstar matters more on road: No LeBron meant Lakers had zero veteran presence in hostile OKC environment. Leadership vacuum was obvious",
+    "Large spreads aren't safe when elite teams click: 8.5 points felt like cushion, but Thunder's 29-point blowout showed elite teams can destroy",
+    "Blowouts kill spread bets quickly: 70-38 halftime meant game was over by intermission. No chance for garbage-time cover",
+    "Thunder's defense elite even without Dort: Assumed missing Lu Dort would weaken defense. Wrong. They have multiple elite defenders (SGA, others)",
+    "This was worst-case scenario execution: Lakers' season-low 92 points + Doncic's season-worst game + 32-point halftime deficit = perfect storm"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Brutal blowout loss. Lakers' offense (92 pts vs 116+ average) and Doncic (19 vs 37.1 average) completely collapsed against Thunder's elite defense. 70-38 halftime deficit made +8.5 spread irrelevant by intermission. Underestimated Thunder's defensive dominance and Lakers' dependence on LeBron. 1.5U stake was manageable but still painful. Grade: F"
+}

@@ -4,7 +4,8 @@ import { formatCurrency, formatPercent, formatDate, formatOdds } from '@/lib/uti
 
 interface BetAnalysis {
   slug: string;
-  player: string;
+  player?: string;
+  team?: string;
   line: string;
   odds: number;
   stake: number;
@@ -25,8 +26,11 @@ interface BetAnalysis {
     impliedProbability: number;
     recentPerformance: {
       hitRate: string;
-      seasonAverage: string;
-      last3Games: string;
+      seasonAverage?: string;
+      last3Games?: string;
+      last5Games?: string;
+      homeRecord?: string;
+      recentForm?: string;
       cushion: string;
     };
     keyFactors: Array<{
@@ -36,9 +40,13 @@ interface BetAnalysis {
     riskFactors: string[];
   };
   gameResults: {
-    playerStats: Record<string, string | number>;
+    playerStats?: Record<string, string | number>;
+    teamStats?: Record<string, string | number>;
+    keyPlayers?: Record<string, any>;
     quarterBreakdown: Array<{
       quarter: string;
+      score?: string;
+      points?: number;
       description: string;
       estimatedPoints?: string;
       estimatedRebounds?: string;
@@ -46,7 +54,9 @@ interface BetAnalysis {
     }>;
     whenCleared?: string;
     whenMissed?: string;
+    turningPoint?: string;
     gamePace: string;
+    teamOffense?: string;
     foulTrouble?: string;
   };
   postGameAnalysis: {
@@ -117,7 +127,7 @@ export default async function BetDetailPage({
           <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 mb-4">
             <div className="flex-1">
               <h1 className="text-2xl sm:text-3xl font-bold text-primary mb-2">
-                {analysis.player} {analysis.line}
+                {analysis.player || analysis.team} {analysis.line}
               </h1>
               <p className="text-steel text-base sm:text-lg">
                 {analysis.gameDetails.matchup} • {formatDate(analysis.gameDetails.date)}
@@ -193,14 +203,36 @@ export default async function BetDetailPage({
                 <div className="data-label">Hit Rate</div>
                 <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.hitRate}</div>
               </div>
-              <div>
-                <div className="data-label">Season Average</div>
-                <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.seasonAverage}</div>
-              </div>
-              <div>
-                <div className="data-label">Last 3 Games</div>
-                <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.last3Games}</div>
-              </div>
+              {analysis.preGameAnalysis.recentPerformance.seasonAverage && (
+                <div>
+                  <div className="data-label">Season Average</div>
+                  <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.seasonAverage}</div>
+                </div>
+              )}
+              {analysis.preGameAnalysis.recentPerformance.homeRecord && (
+                <div>
+                  <div className="data-label">Home Record</div>
+                  <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.homeRecord}</div>
+                </div>
+              )}
+              {analysis.preGameAnalysis.recentPerformance.last3Games && (
+                <div>
+                  <div className="data-label">Last 3 Games</div>
+                  <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.last3Games}</div>
+                </div>
+              )}
+              {analysis.preGameAnalysis.recentPerformance.last5Games && (
+                <div>
+                  <div className="data-label">Last 5 Games</div>
+                  <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.last5Games}</div>
+                </div>
+              )}
+              {analysis.preGameAnalysis.recentPerformance.recentForm && (
+                <div>
+                  <div className="data-label">Recent Form</div>
+                  <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.recentForm}</div>
+                </div>
+              )}
               <div>
                 <div className="data-label">Cushion</div>
                 <div className="text-sm text-gray-700">{analysis.preGameAnalysis.recentPerformance.cushion}</div>
@@ -238,20 +270,65 @@ export default async function BetDetailPage({
             📈 Game Results
           </h2>
 
-          {/* Player Stats */}
-          <div className="mb-6">
-            <h3 className="text-lg font-bold text-gray-900 mb-3">Player Stats</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {Object.entries(analysis.gameResults.playerStats).map(([key, value]) => (
-                <div key={key} className="bg-gray-50 p-3 rounded">
-                  <div className="data-label capitalize">
-                    {key.replace(/([A-Z])/g, ' $1').trim()}
+          {/* Player Stats - for player props */}
+          {analysis.gameResults.playerStats && (
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Player Stats</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {Object.entries(analysis.gameResults.playerStats).map(([key, value]) => (
+                  <div key={key} className="bg-gray-50 p-3 rounded">
+                    <div className="data-label capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                    <div className="text-sm font-medium text-gray-900">{value}</div>
                   </div>
-                  <div className="text-sm font-medium text-gray-900">{value}</div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
+          )}
+
+          {/* Team Stats - for spreads/totals */}
+          {analysis.gameResults.teamStats && (
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Team Stats</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                {Object.entries(analysis.gameResults.teamStats).map(([key, value]) => (
+                  <div key={key} className="bg-gray-50 p-3 rounded">
+                    <div className="data-label capitalize">
+                      {key.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                    <div className="text-sm font-medium text-gray-900">{value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Key Players - for spreads/totals */}
+          {analysis.gameResults.keyPlayers && (
+            <div className="mb-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">Key Performances</h3>
+              <div className="space-y-4">
+                {Object.entries(analysis.gameResults.keyPlayers).map(([playerKey, player]: [string, any]) => (
+                  <div key={playerKey} className="bg-gray-50 p-4 rounded">
+                    <div className="font-bold text-gray-900 mb-2 capitalize">
+                      {playerKey.replace(/([A-Z])/g, ' $1').trim()}
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                      {Object.entries(player).map(([statKey, statValue]) => (
+                        <div key={statKey}>
+                          <div className="data-label capitalize text-xs">
+                            {statKey.replace(/([A-Z])/g, ' $1').trim()}
+                          </div>
+                          <div className="font-medium text-gray-900">{statValue as string}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Quarter Breakdown */}
           <div className="mb-6">
@@ -285,10 +362,22 @@ export default async function BetDetailPage({
 
           {/* Game Context */}
           <div className="space-y-3">
+            {analysis.gameResults.turningPoint && (
+              <div className="bg-accent bg-opacity-10 p-4 rounded border border-accent">
+                <div className="font-bold text-gray-900 mb-1">🔄 Turning Point</div>
+                <div className="text-sm text-gray-700">{analysis.gameResults.turningPoint}</div>
+              </div>
+            )}
             <div className="bg-gray-50 p-4 rounded">
               <div className="font-bold text-gray-900 mb-1">Game Pace</div>
               <div className="text-sm text-gray-700">{analysis.gameResults.gamePace}</div>
             </div>
+            {analysis.gameResults.teamOffense && (
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="font-bold text-gray-900 mb-1">Team Offense</div>
+                <div className="text-sm text-gray-700">{analysis.gameResults.teamOffense}</div>
+              </div>
+            )}
             {analysis.gameResults.foulTrouble && (
               <div className="bg-red-50 p-4 rounded border border-red-200">
                 <div className="font-bold text-red-900 mb-1">⚠️ Foul Trouble</div>
