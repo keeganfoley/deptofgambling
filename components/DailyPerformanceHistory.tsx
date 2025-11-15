@@ -101,13 +101,14 @@ export default function DailyPerformanceHistory() {
 
   const filteredData = getFilteredData();
 
-  // Format date for display
+  // Format date for display (UTC to avoid timezone issues)
   const formatDate = (dateStr: string): string => {
     const date = new Date(dateStr);
     return date.toLocaleDateString('en-US', {
       month: 'short',
       day: 'numeric',
-      year: 'numeric'
+      year: 'numeric',
+      timeZone: 'UTC'
     }).toUpperCase();
   };
 

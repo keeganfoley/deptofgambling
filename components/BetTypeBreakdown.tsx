@@ -72,7 +72,9 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
           : 'border-gray-200 card-float'
       }`}
     >
-      <h3 className="text-xl sm:text-2xl font-medium text-primary mb-6" style={{ letterSpacing: '0.02em' }}>{type}</h3>
+      <h3 className="text-xl sm:text-2xl font-medium text-primary mb-6" style={{ letterSpacing: '0.02em' }}>
+        {type.charAt(0).toUpperCase() + type.slice(1)}
+      </h3>
 
       <div className="space-y-4">
         <div>

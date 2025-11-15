@@ -25,6 +25,7 @@ interface Bet {
   profit: number;
   betType: string;
   slug?: string;
+  analysis?: string;
 }
 
 interface BetCardProps {
@@ -178,8 +179,13 @@ export default function RecentBets() {
   const headerLineTopRef = useRef<HTMLDivElement>(null);
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
-  // Show only the most recent 5 bets
-  const recentBets = (betsData as Bet[]).slice(0, 5);
+  // Show only the most recent 5 bets (sort by date descending, then ID descending)
+  const recentBets = (betsData as Bet[])
+    .sort((a, b) => {
+      const dateCompare = b.date.localeCompare(a.date);
+      return dateCompare !== 0 ? dateCompare : b.id - a.id;
+    })
+    .slice(0, 5);
 
   useEffect(() => {
     gsap.fromTo(

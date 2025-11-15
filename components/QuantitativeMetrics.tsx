@@ -48,18 +48,18 @@ export default function QuantitativeMetrics() {
     kellyUtilization,
   } = metricsData as {
     sharpeRatio: number | null;
-    sharpeRatioNote: string;
+    sharpeRatioNote?: string;
     maxDrawdown: number;
-    avgWin: number;
-    avgLoss: number;
-    avgProfitPerBet: number;
-    largestWin: number;
-    largestLoss: number;
-    profitFactor: number;
-    unitEfficiency: number;
-    closingLineValue: number;
-    closingLineValueNote: string;
-    kellyUtilization: number;
+    avgWin?: number;
+    avgLoss?: number;
+    avgProfitPerBet?: number;
+    largestWin?: number;
+    largestLoss?: number;
+    profitFactor?: number;
+    unitEfficiency?: number;
+    closingLineValue?: number;
+    closingLineValueNote?: string;
+    kellyUtilization?: number;
   };
 
   return (
@@ -107,7 +107,7 @@ export default function QuantitativeMetrics() {
                 Avg Win
               </div>
               <div className="text-2xl sm:text-3xl data-value text-success mono-number">
-                {formatCurrency(avgWin, false)}
+                {avgWin !== undefined ? formatCurrency(avgWin, false) : 'N/A'}
               </div>
             </div>
 
@@ -116,7 +116,7 @@ export default function QuantitativeMetrics() {
                 Avg Loss
               </div>
               <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
-                {formatCurrency(avgLoss)}
+                {avgLoss !== undefined ? formatCurrency(avgLoss) : 'N/A'}
               </div>
             </div>
 
@@ -124,7 +124,9 @@ export default function QuantitativeMetrics() {
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Profit Factor
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">{profitFactor.toFixed(2)}</div>
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
+                {profitFactor !== undefined ? profitFactor.toFixed(2) : 'N/A'}
+              </div>
             </div>
 
             <div>
@@ -132,7 +134,7 @@ export default function QuantitativeMetrics() {
                 Unit Efficiency
               </div>
               <div className="text-2xl sm:text-3xl data-value text-success mono-number">
-                {unitEfficiency.toFixed(2)}%
+                {unitEfficiency !== undefined ? `${unitEfficiency.toFixed(2)}%` : 'N/A'}
               </div>
             </div>
 
@@ -141,7 +143,7 @@ export default function QuantitativeMetrics() {
                 Closing Line Value
               </div>
               <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                +{closingLineValue.toFixed(2)}¢
+                {closingLineValue !== undefined ? `+${closingLineValue.toFixed(2)}¢` : 'N/A'}
               </div>
               {closingLineValueNote && (
                 <div className="text-xs text-secondary-light mt-1">
@@ -154,7 +156,9 @@ export default function QuantitativeMetrics() {
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Kelly Utilization
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">{kellyUtilization}%</div>
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
+                {kellyUtilization !== undefined ? `${kellyUtilization}%` : 'N/A'}
+              </div>
             </div>
           </div>
         </div>

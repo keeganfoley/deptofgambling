@@ -37,7 +37,7 @@ export function formatRecord(wins: number, losses: number): string {
 }
 
 /**
- * Format date to readable format
+ * Format date to readable format (UTC)
  */
 export function formatDate(dateString: string): string {
   const date = new Date(dateString);
@@ -45,6 +45,7 @@ export function formatDate(dateString: string): string {
     month: 'short',
     day: 'numeric',
     year: 'numeric',
+    timeZone: 'UTC',
   });
 }
 
