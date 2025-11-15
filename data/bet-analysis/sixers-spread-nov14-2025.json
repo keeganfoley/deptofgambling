@@ -1,0 +1,191 @@
+{
+  "slug": "sixers-spread-nov14-2025",
+  "team": "Philadelphia 76ers",
+  "line": "+2",
+  "odds": -110,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Pistons 114, 76ers 105 - missed by 7 points",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Philadelphia 76ers @ Detroit Pistons",
+    "date": "November 14, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Little Caesars Arena, Detroit, MI",
+    "finalScore": "Pistons 114, 76ers 105"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24,
+    "estimatedProbability": 54,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Philadelphia 9-2 ATS (81.8%), one of best in NBA",
+      "recentForm": "76ers had covered 3 straight games despite missing stars",
+      "homeRecord": "Pistons missing 4 regular starters: Cunningham, Duren, Harris, Thompson",
+      "cushion": "Line moved 4.5 points from Pistons -6.5 to -2, massive sharp money on 76ers"
+    },
+    "keyFactors": [
+      {
+        "title": "Maxey's MVP-Level Performance",
+        "description": "Tyrese Maxey averaging 32+ PPG over recent stretch, playing at elite level. With Joel Embiid out (knee) and Paul George out for season (knee), Maxey carrying entire offensive load. Sharps betting Maxey's brilliance could keep it close against depleted Pistons."
+      },
+      {
+        "title": "Pistons Missing Four Starters",
+        "description": "Detroit without Cade Cunningham (27.5 PPG, 9.9 APG), Jalen Duren (19.4 PPG, 12.0 RPG), Tobias Harris (ankle, 6th game), and Ausar Thompson (elite perimeter defender). Four regular starters out suggests thin roster that 76ers could exploit."
+      },
+      {
+        "title": "Massive Line Movement (4.5 Points)",
+        "description": "Line opened Pistons -6.5, moved to -2 on heavy sharp action. This dramatic 4.5-point movement indicated sophisticated money betting 76ers. Sharps saw value in Philly's 9-2 ATS record and Pistons' injury situation despite Detroit's 8-game win streak."
+      },
+      {
+        "title": "Philadelphia's Elite ATS Record",
+        "description": "76ers entered 9-2 ATS (81.8%), one of best records in NBA. Pattern suggested team consistently exceeds expectations even without stars. Three straight ATS covers indicated systemic ability to keep games close."
+      },
+      {
+        "title": "Fading Hot Team (Pistons' 8-Game Win Streak)",
+        "description": "Pistons on 8-game win streak (10-2 overall, best in East). Sharps betting against hot team due to mean reversion theory - teams on long streaks 'due to lose.' Getting +2 represented value in fade spot."
+      }
+    ],
+    "riskFactors": [
+      "76ers offense entirely dependent on Maxey - no secondary scoring threat",
+      "Pistons' 8-game win streak reflects organizational depth and coaching, not just luck",
+      "Detroit beat Philadelphia 111-108 just 5 days earlier (November 9)",
+      "NBA Cup Group Play game provides extra motivation for Pistons at home",
+      "Coach J.B. Bickerstaff's defensive system doesn't require elite talent",
+      "One-man teams struggle on road in hostile environments"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "sixersFieldGoalPercentage": "43.0% (38-88)",
+      "pistonsFieldGoalPercentage": "45.0% (42-93)",
+      "sixersThreePointPercentage": "36.0% (9-25)",
+      "pistonsThreePointPercentage": "41.0% (13-32)",
+      "sixersRebounds": 46,
+      "pistonsRebounds": 46,
+      "sixersTurnovers": 15,
+      "pistonsTurnovers": 14,
+      "sixersFourthQuarterPoints": 15,
+      "pistonsFourthQuarterPoints": 26
+    },
+    "keyPlayers": {
+      "tyreseMaxey": {
+        "team": "76ers",
+        "points": 31,
+        "rebounds": 4,
+        "assists": 5,
+        "shooting": "13-31 FG (41.9%)",
+        "note": "Inefficient volume - needed 31 shots to score 31 points, only 6 in 4th quarter"
+      },
+      "javenteGreen": {
+        "team": "Pistons",
+        "points": 21,
+        "rebounds": 6,
+        "shooting": "5-12 FG, 8-9 FT",
+        "note": "First start since 2023-24 with Philadelphia (ironic) - led Pistons"
+      },
+      "danissJenkins": {
+        "team": "Pistons",
+        "points": 19,
+        "note": "Hit game-changing 52-55 foot buzzer-beater at end of Q3 (cut 5-pt lead to 2)"
+      },
+      "duncanRobinson": {
+        "team": "Pistons",
+        "points": 15,
+        "note": "Timely three-pointers in second half"
+      },
+      "carisLeVert": {
+        "team": "Pistons",
+        "points": 14,
+        "note": "Clutch 4th quarter plays including sealing dunk with 1:44 left"
+      },
+      "isaiahStewart": {
+        "team": "Pistons",
+        "points": 14,
+        "note": "Energy off bench, rebounding"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "First Quarter",
+        "score": "PHI 27, DET 28",
+        "description": "Competitive start with 76ers trailing by just 1 point. Maxey scoring early but no secondary help. Detroit's depth showing early as 5 different players contributed."
+      },
+      {
+        "quarter": "Second Quarter",
+        "score": "PHI 54, DET 63",
+        "description": "Pistons extended lead to 9 behind Javonte Green's 15 first-half points and Duncan Robinson's 13. Maxey had just 12 points on 4-13 shooting in first half - bad sign. VJ Edgecombe led 76ers with 13 points, indicating Maxey needed more help."
+      },
+      {
+        "quarter": "Third Quarter - 76ers' Only Success",
+        "score": "PHI 90, DET 88 entering 4th",
+        "description": "Philadelphia opened with 14-0 run to take 12-point lead midway through quarter. Pistons went 0-5 with 5 turnovers in first 4 minutes. Andre Drummond double-dribbled on uncontested fast break. But then: Daniss Jenkins hit 52-55 foot three-pointer at buzzer to cut PHI lead from 90-85 to 90-88. Miraculous shot completely shifted momentum."
+      },
+      {
+        "quarter": "Fourth Quarter - The Massacre",
+        "score": "DET 26, PHI 15 (outscored by 11)",
+        "description": "Detroit opened with 10-2 run to take 98-92 lead. Philadelphia managed just 15 POINTS IN ENTIRE FOURTH QUARTER - catastrophic offensive collapse. Maxey tallied only 6 fourth-quarter points despite carrying team all night. Detroit's bench and depth players dominated final frame 26-15. Caris LeVert's dunk with 1:44 left gave Pistons 114-103 lead (11 points), effectively ending game."
+      }
+    ],
+    "whenMissed": "Fourth quarter collapse. Philadelphia's 15-point output in entire fourth quarter represented season-low for any quarter. When game tightened after Q3 (PHI led 90-88), 76ers needed Maxey to elevate - but he managed just 6 points on isolation-heavy possessions. Detroit's depth overwhelmed one-man show. Never threatened in final 2 minutes, trailing by double digits.",
+    "turningPoint": "Daniss Jenkins' 52-55 foot buzzer-beater at end of third quarter. Philadelphia had fought back from 9-point halftime deficit to lead 90-85 with seconds left in Q3. Jenkins' miraculous heave cut lead to 90-88, completely shifting energy at Little Caesars Arena. Pistons rode that momentum to dominant fourth quarter (26-15) while Philly's offense stagnated.",
+    "gamePace": "Pistons controlled pace and execution in crucial fourth quarter. Five Detroit players scored 14+ points (Green 21, Jenkins 19, Robinson 15, LeVert 14, Stewart 14) vs Philadelphia's Maxey 31 and nothing else. That disparity told entire story - team depth beats individual brilliance in close games.",
+    "teamOffense": "Philadelphia's offense devolved into Maxey isolation with four teammates standing still. His 31 points on 31 shots (41.9% FG) represented inefficient volume. No 76ers role player could create their own shot. Detroit's ball movement and cutting found easy baskets - shot 45% overall and 41% from three despite missing four starters."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Overvalued Individual Talent Over Team Depth",
+        "description": "Critical handicapping error: assumed Maxey's 32+ PPG brilliance could overcome Philadelphia's complete lack of secondary scoring. Detroit's five players with 14+ points crushed 76ers' one-man show. Basketball is team sport - one player can't win on road against well-coached, deep opponent."
+      },
+      {
+        "title": "Underestimated Organizational Culture and Coaching",
+        "description": "Pistons' 9-game win streak (longest since 2008) wasn't luck - it reflected Coach J.B. Bickerstaff's defensive system and organizational depth. Missing four starters didn't matter because system empowers role players. Javonte Green (first start since last season with PHI, ironically) led with 21 points. Next-man-up mentality proved real."
+      },
+      {
+        "title": "Ignored Recent Head-to-Head Result",
+        "description": "Detroit beat Philadelphia 111-108 just five days earlier (November 9). Betting 76ers to cover +2 in Detroit after losing by 3 in Philadelphia made little sense. Pistons had already proven they could beat this version of the 76ers. Recent H2H data should've been weighted heavily."
+      },
+      {
+        "title": "Catastrophic 15-Point Fourth Quarter",
+        "description": "Philadelphia's 15 fourth-quarter points exposed one-man team limitations. Maxey's 6 points in Q4 insufficient when no teammate could create. Detroit's defense keyed on Maxey, and Philly had zero counters. Predictable isolation offense became stagnant."
+      },
+      {
+        "title": "Faded Hot Team Without Specific Reason",
+        "description": "Sharp money (and this bet) faded Pistons' 8-game win streak based on generic mean reversion theory ('they're due to lose'). But there was no specific reason: no key injury, no difficult matchup, no road fatigue. Pistons were hot because of organizational excellence, not variance."
+      },
+      {
+        "title": "Situational Motivation Ignored",
+        "description": "Detroit had massive NBA Cup Group Play motivation at home, protecting 10-2 record. Philadelphia was 0-1 in Cup, third road game, depleted roster. Motivation imbalance was enormous but not factored into handicapping."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Maxey's 31 points actually below his recent 32+ PPG average, but efficiency was terrible (31 shots for 31 points, 41.9% FG). Normally elite scorer became inefficient volume shooter.",
+      "vsRecentForm": "Philadelphia's 15-point fourth quarter was catastrophic outlier - worst quarter of season. Detroit's five players scoring 14+ points represented elite depth performance.",
+      "vsPropLine": "Missed +2 by 7 points. Final margin of 9 (114-105) was comfortable Pistons win. Never close in final 2 minutes - Detroit led by 11 with 1:44 left (114-103).",
+      "percentileRanking": "Detroit's bench scoring distribution (5 players with 14+ pts) ranked in 92nd percentile for team depth. Philadelphia's one-player offensive reliance ranked in 8th percentile (extremely rare)."
+    },
+    "wasNormalVariance": "No. This was process failure, not variance. The sharp money (4.5-point line move toward 76ers) collectively misread the situation. Overvalued Maxey's individual brilliance while underestimating Pistons' organizational culture, coaching system, and depth. Jenkins' 52-foot buzzer-beater was lucky, but Philadelphia's 15-point fourth quarter was systemic failure - not bad luck. The thesis (one star can keep road game close against depleted opponent) was fundamentally flawed. Lesson: organizational depth beats individual talent in close road games."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV but misleading. Line opened Pistons -6.5, moved massively to -2 on sharp money betting 76ers. We bet at +2 (-110), matching close. But this 4.5-point line move represented collective market error - sharps overvalued Maxey's individual brilliance and underestimated Pistons' depth. When sharp money moves a line 4+ points and loses badly, it signals systemic market misread. Lesson: fade sharp money when line movement reflects betting individual talent over organizational culture."
+  },
+  "keyTakeaways": [
+    "NEVER bet one-man teams on the road against deep, well-coached opponents - Maxey's 31 points on 31 shots couldn't overcome four teammates who couldn't score in fourth quarter",
+    "Organizational culture and coaching systems are real, not variance - Pistons' 9-game win streak reflected Bickerstaff's defensive structure that doesn't require stars",
+    "Recent head-to-head (within 7 days) is critical data point - Detroit beat Philadelphia 111-108 five days earlier, should've been heavily weighted",
+    "Don't fade hot teams without SPECIFIC reason (injury, difficult opponent, fatigue) - 'they're due to lose' is not valid thesis",
+    "Massive line movement (4+ points) can signal collective market error - when sharps all move line and lose badly, they misread situation together",
+    "Situational motivation (NBA Cup home game) matters - Detroit protecting 10-2 record had extra edge over depleted road team",
+    "Fourth quarter scoring distribution predicts covers - teams with one scorer struggle vs teams with 4-5 contributors in crunch time",
+    "For quantitative models: develop 'culture metrics' - track bench scoring variance, 4th quarter net rating in close games, ATS records in adversity spots",
+    "This wasn't variance - this was process failure requiring model adjustment to capture team depth factors"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Process failure requiring immediate adjustment. This bet ignored critical factors: (1) Philadelphia's one-man offense couldn't sustain on road, (2) Pistons' organizational depth and Bickerstaff's coaching system were real advantages, (3) Recent head-to-head (Pistons won 111-108 five days earlier) was ignored, (4) Fading hot team (8-game win streak) without specific reason was flawed, (5) Situational motivation (NBA Cup home game) favored Detroit heavily. The sharp money moved line 4.5 points toward 76ers and was collectively wrong - classic market misread of individual talent vs organizational culture. Key lesson for quantitative operations: avoid one-man road teams against deep opponents, weight recent H2H heavily, don't fade hot teams without cause. Would NOT bet 76ers +2 under these circumstances again. This exposed gap in handicapping process that must be fixed."
+}

@@ -1,0 +1,171 @@
+{
+  "slug": "arizona-spread-nov14-2025",
+  "team": "Arizona Wildcats",
+  "line": "-1.5",
+  "odds": -110,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Arizona 69, UCLA 65 (covered by 2.5 points)",
+  "profit": 181.82,
+  "gameDetails": {
+    "matchup": "Arizona Wildcats vs UCLA Bruins",
+    "date": "November 14, 2025",
+    "gameTime": "10:30 PM ET",
+    "venue": "Intuit Dome, Inglewood, CA (Neutral Site)",
+    "finalScore": "Arizona 69, UCLA 65"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 32,
+    "estimatedProbability": 58,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Arizona 4-0 to start season with quality win over defending champion Florida",
+      "recentForm": "UCLA 0-3 ATS, failed to cover against Eastern Washington, Pepperdine, and West Georgia",
+      "homeRecord": "Neutral site at Intuit Dome negates UCLA's Pauley Pavilion advantage",
+      "cushion": "Arizona favored by 1.5-2 points, line moved toward UCLA on some sharp money"
+    },
+    "keyFactors": [
+      {
+        "title": "Veteran Leadership vs Youth",
+        "description": "Arizona's senior core (Dell'Orso and Bradley) provides crucial experience in close games. Dell'Orso averaging 14.3 PPG, Bradley 11.8 PPG with proven clutch-time execution. UCLA's roster is significantly younger and untested in high-pressure neutral-site environments."
+      },
+      {
+        "title": "Rebounding and Paint Dominance",
+        "description": "Arizona ranks 34th nationally in adjusted tempo and excels at controlling the glass. Expected to dominate paint points and second-chance opportunities against UCLA's less physical frontcourt. Krivas (6'11\") and Awaka (6'9\") provide size advantage."
+      },
+      {
+        "title": "UCLA's ATS Futility",
+        "description": "UCLA entered 0-3 ATS, consistently failing to meet expectations against inferior competition. Pattern suggests team struggles with execution under pressure and against competent opposition. Arizona represents significant step up in quality."
+      },
+      {
+        "title": "Bench Depth Advantage",
+        "description": "Arizona's deep rotation allows them to maintain intensity throughout game. Dell'Orso coming off bench as sixth man provides scoring punch. UCLA's bench lacks proven contributors beyond starting five."
+      },
+      {
+        "title": "Neutral Site Dynamics",
+        "description": "Intuit Dome in Inglewood (near UCLA campus) draws pro-UCLA crowd but doesn't provide true home-court advantage. Arizona better suited to neutral-site environment with veteran composure. Fresh matchup favors Arizona's up-tempo style."
+      }
+    ],
+    "riskFactors": [
+      "Arizona's freshmen (Peat, Burries) prone to turnovers and inconsistency",
+      "UCLA's three-point shooting could get hot (have capable shooters in Bilodeau, Dailey)",
+      "First half could be sloppy with both teams adjusting to neutral site",
+      "Line moved toward UCLA suggesting some sharp money on Bruins"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "arizonaPaintPoints": 38,
+      "uclaPaintPoints": 20,
+      "arizonaRebounds": 35,
+      "uclaRebounds": 28,
+      "arizonaSecondChancePoints": 12,
+      "uclaSecondChancePoints": 4,
+      "arizonaBenchPoints": 28,
+      "uclaBenchPoints": 3,
+      "arizonaTurnovers": 15,
+      "uclaTurnovers": 16,
+      "arizonaFGPercentage": "47.3% (25-53)",
+      "uclaFGPercentage": "42.6% (20-47)",
+      "arizonaThreePointPercentage": "35.3% (6-17)",
+      "uclaThreePointPercentage": "52.9% (9-17)"
+    },
+    "keyPlayers": {
+      "anthonyDellOrso": {
+        "points": 20,
+        "rebounds": 3,
+        "shooting": "6-11 FG (54.5%), 4-7 3PT, 4-4 FT",
+        "minutes": 28,
+        "note": "Led Arizona scoring, extended FT streak to 32 consecutive"
+      },
+      "jadenBradley": {
+        "points": 15,
+        "rebounds": 4,
+        "assists": 3,
+        "shooting": "6-14 FG, 2-5 3PT",
+        "note": "13 second-half points, 11 in final 5:17 - clutch takeover"
+      },
+      "tylerBilodeau": {
+        "team": "UCLA",
+        "points": 19,
+        "rebounds": 6,
+        "shooting": "7-10 FG (70%)",
+        "note": "Kept UCLA competitive but couldn't sustain in crunch time"
+      },
+      "ericDaileyJr": {
+        "team": "UCLA",
+        "points": 13,
+        "shooting": "5-11 FG, 3-5 3PT",
+        "note": "Provided secondary scoring but faded in second half"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "First Half",
+        "score": "Arizona 28, UCLA 25",
+        "description": "UCLA exploded early with 15-2 run (three early threes) to lead 15-5. Arizona responded with 14-3 run powered by Dell'Orso's 8 points to take 19-18 lead. UCLA held scoreless nearly five minutes to end half. Arizona's 12 turnovers (all from freshmen) vs UCLA's 8 kept it close despite rebounding advantage."
+      },
+      {
+        "quarter": "Second Half Start",
+        "score": "UCLA briefly leads",
+        "description": "Five lead changes characterized early second half. UCLA's Bilodeau hit three-pointer to give Bruins 57-49 lead with 7:18 remaining - their largest lead of half. This set up Arizona's veteran takeover."
+      },
+      {
+        "quarter": "Final 7:17 - Arizona's Closing Run",
+        "score": "Arizona outscored UCLA 20-8",
+        "description": "Bradley's 11 points in final 5:17 completely flipped momentum. Clutch three-pointer, then high-arcing floater with 28 seconds left gave Arizona 67-63 lead. Dell'Orso sealed it with free throws (extending 32-game FT streak). UCLA had no answer for Arizona's veteran execution."
+      }
+    ],
+    "whenCleared": "Arizona covered -1.5 with 28 seconds remaining when Bradley hit the dagger floater. UCLA never threatened in final 30 seconds. Final margin of 4 points covered spread by 2.5 points.",
+    "turningPoint": "Bradley's 11-point explosion in final 5:17 was the decisive moment. When UCLA led 57-49 with 7:18 left, game appeared in doubt. Bradley's veteran takeover + Dell'Orso's clutch FTs epitomized the pre-game thesis: experience beats youth in close games.",
+    "gamePace": "Arizona's up-tempo style (34th nationally in adjusted tempo) eventually wore down UCLA's younger roster. Second-half shooting (60%) vs first-half (36.7%) showed Arizona's conditioning and composure. UCLA couldn't match intensity over 40 minutes.",
+    "teamOffense": "Arizona dominated interior with 38-20 paint advantage. Krivas (10 pts on 5-6 shooting) and Awaka (8 pts, 10 reb) controlled lane. UCLA's reliance on three-point shooting (52.9% from deep) wasn't sustainable - only 39% on two-pointers exposed inability to score at rim."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Veteran Clutch Performance",
+        "description": "Dell'Orso (20 pts) and Bradley (15 pts, 11 in final 5:17) combined for 35 points exactly as handicapped. Their senior leadership in crunch time validated the entire thesis. Bradley's late-game takeover was textbook veteran execution."
+      },
+      {
+        "title": "Paint and Rebounding Dominance",
+        "description": "38-20 paint advantage and 35-28 rebounding edge materialized exactly as projected. Arizona's physicality overwhelmed UCLA's smaller, less experienced frontcourt. 12-4 second-chance point advantage directly impacted final margin."
+      },
+      {
+        "title": "Bench Depth Crushed UCLA",
+        "description": "Arizona's bench outscored UCLA's 28-3 - a staggering 25-point advantage. Dell'Orso's 20 off the pine proved decisive. UCLA's thin rotation couldn't sustain competitiveness over 40 minutes."
+      },
+      {
+        "title": "UCLA's ATS Pattern Continued",
+        "description": "UCLA fell to 0-4 ATS on season. Pattern of failing to cover spreads validated pre-game analysis. Team consistently underperforms expectations, even against Arizona's 4-0 start."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Dell'Orso's 20 points exceeded his 14.3 PPG average. Bradley's 11 points in final 5:17 showcased clutch ability. Both seniors elevated in high-pressure moment.",
+      "vsRecentForm": "Arizona's second-half shooting (60%) represented season-high efficiency in critical stretch. Closing 20-8 run was statement of veteran composure.",
+      "vsPropLine": "Covered -1.5 by 2.5 points. Line movement toward UCLA (from -2.5 to -1.5) proved misguided - sharp money on Bruins was wrong.",
+      "percentileRanking": "Arizona's 38 paint points ranked in 88th percentile for college basketball games this season. Bench scoring differential of +25 was elite."
+    },
+    "wasNormalVariance": "No. This was pure skill-based execution. Arizona's veterans delivered in crunch time exactly as modeled. The 20-8 closing run wasn't luck - it was Dell'Orso hitting clutch FTs (32-game streak) and Bradley taking over (11 pts in 5:17). UCLA's youth couldn't match composure. Textbook handicapping success."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Line opened -2.5 to -3.0 and moved to -1.5 to -2.0 on sharp money testing UCLA. We bet at -1.5 (-110), which matched closing number. The sharp money on UCLA proved wrong - Arizona's veteran edge was real. Even without CLV, this bet showcased superior handicapping of veteran execution vs youth in neutral-site environment."
+  },
+  "keyTakeaways": [
+    "Veteran execution in close games is quantifiable edge - Dell'Orso and Bradley combined for 35 points, with Bradley's 11 in final 5:17 sealing cover",
+    "Rebounding and paint dominance (38-20 paint points, 35-28 boards) directly translated to spread cover - physicality matters in tight games",
+    "Bench depth is underrated factor - Arizona's 28-3 bench scoring advantage over UCLA proved decisive in 40-minute game",
+    "UCLA's 0-4 ATS pattern validated thesis - teams that consistently fail to cover have systemic execution issues, not just bad luck",
+    "Neutral site environments favor veteran teams - Arizona's seniors thrived while UCLA's youth struggled with pressure",
+    "Closing 20-8 run exemplified pre-game thesis - when game tightened (UCLA led 57-49), experience beat talent",
+    "Line movement toward UCLA (from -2.5 to -1.5) was fade opportunity - sharp money collectively misread veteran edge",
+    "For quantitative operations: track veteran minutes, clutch-time scoring, and bench depth as predictive factors in close spread situations"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook handicapping success. Every element of pre-game thesis materialized: veteran clutch performance, paint dominance, bench depth advantage, and UCLA's ATS futility. The 20-8 closing run validated the core insight that experience beats youth in high-pressure neutral-site games. Arizona's seniors (Dell'Orso 20 pts, Bradley 15 pts with late takeover) delivered exactly as modeled. This represents sound process producing expected results. Would make this bet 100 times out of 100 under identical circumstances."
+}

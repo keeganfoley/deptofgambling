@@ -1,0 +1,150 @@
+{
+  "slug": "jets-patriots-under-nov13-2025",
+  "line": "Jets vs Patriots UNDER 43.5",
+  "odds": -112,
+  "stake": 2.5,
+  "result": "win",
+  "finalStat": "Patriots 27, Jets 14 (Total: 41 points - cleared by 2.5)",
+  "profit": 223.21,
+  "gameDetails": {
+    "matchup": "New York Jets @ New England Patriots",
+    "date": "November 13, 2024",
+    "gameTime": "8:15 PM ET",
+    "venue": "Gillette Stadium, Foxborough, MA",
+    "finalScore": "Patriots 27, Jets 14 (Total: 41)"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 15.0,
+    "estimatedProbability": 60,
+    "impliedProbability": 52.8,
+    "recentPerformance": {
+      "hitRate": "Thursday Night Football avg 39.2 points/game (21% below league avg)",
+      "recentForm": "Jets averaging 17.1 PPG over last 4 games",
+      "cushion": "Patriots defense ranks 3rd in points allowed (17.2 PPG)"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Defensive Matchup",
+        "description": "Patriots defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both units dominant, creating low-scoring environment."
+      },
+      {
+        "title": "Thursday Night Football Trend",
+        "description": "TNF games average 39.2 total points (21% below league average). Short rest, travel fatigue, offensive inefficiency all contribute to lower scoring."
+      },
+      {
+        "title": "Weather Conditions",
+        "description": "Foxborough forecast: 40°F with 15mph winds. Historical data shows wind speeds above 12mph reduce passing efficiency by ~12% and total scoring by 8.4%."
+      },
+      {
+        "title": "Run-Heavy Game Scripts",
+        "description": "Both teams ranked top-10 in rush play percentage. Clock-controlling, run-first approach limits possessions and scoring opportunities."
+      },
+      {
+        "title": "Jets Offensive Struggles",
+        "description": "Jets averaging just 17.1 PPG over last 4 games. Aaron Rodgers declining (1.2 TD:INT ratio), offensive line allowing 3.4 sacks/game."
+      }
+    ],
+    "riskFactors": [
+      "Rodgers capable of vintage performance despite age",
+      "Patriots' offense improving under rookie QB Drake Maye",
+      "Divisional game could produce unexpected fireworks",
+      "Short week creates high variance scenarios"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "jetsPoints": 14,
+      "patriotsPoints": 27,
+      "totalPoints": 41,
+      "jetsTimeOfPossession": "25:42",
+      "patriotsTimeOfPossession": "34:18",
+      "jetsTotalPlays": 52,
+      "patriotsTotalPlays": 71,
+      "jetsRushAttempts": 22,
+      "patriotsRushAttempts": 38
+    },
+    "keyPlayers": {
+      "henderson": {
+        "rushYards": 52,
+        "touchdowns": 3,
+        "carries": 18,
+        "impact": "3 rushing TDs but stayed run-heavy, killing clock and limiting possessions"
+      },
+      "maye": {
+        "completions": 25,
+        "attempts": 34,
+        "yards": 281,
+        "touchdowns": 1,
+        "impact": "Efficient passing but Patriots stayed ground-based in blowout"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "score": "Patriots 10, Jets 7",
+        "description": "Low-scoring start. Jets scored TD on opening drive, Patriots answered with FG and TD. Total: 17 points through Q1."
+      },
+      {
+        "quarter": "Q2",
+        "score": "Patriots 17, Jets 7",
+        "description": "Defensive battle. Only 7 points scored entire quarter (Patriots TD). Halftime total: 24 points - well under pace."
+      },
+      {
+        "quarter": "Q3",
+        "score": "Patriots 20, Jets 14",
+        "description": "Jets scored TD, Patriots added FG. Total through 3 quarters: 34 points. Under looking comfortable."
+      },
+      {
+        "quarter": "Q4",
+        "score": "Patriots 27, Jets 14",
+        "description": "Patriots added late TD to seal it. Only 7 points in Q4. Final: 41 total points."
+      }
+    ],
+    "turningPoint": "Patriots' time of possession dominance (34:18 vs 25:42) limited Jets to just 52 total plays. Defensive game script played out exactly as projected.",
+    "gamePace": "Slow-paced, run-heavy game. Patriots ran 71 plays (38 rushes), Jets ran just 52 plays (22 rushes). Clock control killed scoring opportunities."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Defensive Dominance Delivered",
+        "description": "Both defenses played elite football. Patriots held Jets to 14 points, Jets defense stayed competitive despite losing. Exactly as modeled."
+      },
+      {
+        "title": "Run-Heavy Game Script",
+        "description": "Patriots ran 38 times, controlling clock for 34:18. Jets got just 52 total plays. Ground-and-pound approach limited possessions perfectly."
+      },
+      {
+        "title": "Weather Impact Confirmed",
+        "description": "15mph winds reduced passing efficiency. Both QBs avoided high-volume passing attacks, confirming weather thesis."
+      },
+      {
+        "title": "Thursday Night Trend Held",
+        "description": "41 total points fits perfectly into TNF average of 39.2 points. Short-week offensive struggles were real."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Jets scored 14 vs 19.2 season avg. Patriots scored 27 vs 21.8 season avg. Total 41 vs 43.5 line.",
+      "vsRecentForm": "Jets scored 14 vs 17.1 recent avg (under). Patriots scored 27 vs 23.4 recent avg (slight over, but game script-driven).",
+      "vsPropLine": "Total came in 2.5 points under the 43.5 line. Comfortable winner.",
+      "percentileRanking": "41-point total = 32nd percentile for NFL games this season (well below average)"
+    },
+    "wasNormalVariance": "This was NOT variance - this was the thesis playing out perfectly. Elite defenses, run-heavy scripts, weather impact, and TNF trends all converged exactly as predicted. Patriots went ground-heavy after getting ahead, Jets couldn't keep up offensively. Model predicted this outcome with high confidence."
+  },
+  "closingLineValue": {
+    "ourOdds": -112,
+    "closingOdds": -115,
+    "clvCents": 3,
+    "clvPercentage": 0.6,
+    "verdict": "Positive CLV (+3 cents). Line moved slightly toward Under as sharp money came in. Good early price captured edge before market adjusted."
+  },
+  "keyTakeaways": [
+    "Thursday Night Football unders are REAL: Short rest creates offensive inefficiency",
+    "Weather matters: 15mph winds reduced passing game significantly as predicted",
+    "Elite defenses + run-heavy teams = under goldmine: Time of possession dominance killed scoring",
+    "Patriots' game script perfect: Went run-heavy after taking lead, controlled clock",
+    "Model accuracy: Projected 60% probability, game played out exactly as thesis stated"
+  ],
+  "verdict": "Textbook winner. Every thesis point materialized: elite defenses dominated, weather impacted passing, run-heavy scripts controlled clock, TNF trend held. Patriots' 38 rushes and 34:18 time of possession created exact low-scoring environment we projected. This is what sharp handicapping looks like - identify structural edges, bet with confidence when model aligns with market inefficiency. Grade: A+",
+  "wouldBetAgain": true
+}

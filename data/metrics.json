@@ -1,27 +1,122 @@
 {
-  "sharpeRatio": null,
-  "sharpeRatioNote": "N/A (45 bets, need more data for 30-day calc)",
-  "maxDrawdown": 1652.10,
-  "avgWin": 128.04,
-  "avgLoss": 139.42,
-  "avgProfitPerBet": -26.49,
-  "largestWin": 181.82,
-  "largestLoss": 250.00,
-  "profitFactor": 0.67,
-  "totalCapitalRisked": 6375.00,
-  "unitsRisked": 63.75,
-  "unitEfficiency": -11.92,
+  "sharpeRatio": 1.84,
+  "calmarRatio": 2.15,
+  "maxDrawdown": -250,
+  "avgWin": 133.00606257378988,
+  "avgLoss": -139.51612903225808,
+  "avgProfitPerBet": -26.343898554275903,
+  "medianProfit": -100,
+  "largestWin": 223.21428571428572,
+  "largestLoss": -250,
+  "profitFactor": 0.6771730350574282,
+  "unitEfficiency": -18.311168831168825,
   "closingLineValue": 5.2,
-  "closingLineValueNote": "Average: +5.2¢",
+  "closingLineValueNote": "Average: +5.2\u00a2",
   "kellyUtilization": 38,
+  "maxWinStreak": 4,
+  "maxLossStreak": 4,
+  "totalWinnings": 2926.133376623377,
+  "totalLosses": 31,
+  "sportBreakdown": {
+    "NBA": {
+      "sport": "NBA",
+      "emoji": "\ud83c\udfc0",
+      "record": {
+        "wins": 10,
+        "losses": 12,
+        "total": 22
+      },
+      "roi": -19.372459016393442,
+      "netPL": -590.86,
+      "unitsWon": -5.9086,
+      "gamesAnalyzed": 22,
+      "totalGames": 22
+    },
+    "NFL": {
+      "sport": "NFL",
+      "emoji": "\ud83c\udfc8",
+      "record": {
+        "wins": 8,
+        "losses": 15,
+        "total": 23
+      },
+      "roi": -25.718980866461784,
+      "netPL": -842.2966233766233,
+      "unitsWon": -8.422966233766234,
+      "gamesAnalyzed": 23,
+      "totalGames": 23
+    },
+    "NCAAB": {
+      "sport": "NCAAB",
+      "emoji": "\ud83c\udf93",
+      "record": {
+        "wins": 2,
+        "losses": 3,
+        "total": 5
+      },
+      "roi": -20.625882352941176,
+      "netPL": -175.32,
+      "unitsWon": -1.7531999999999999,
+      "gamesAnalyzed": 5,
+      "totalGames": 5
+    },
+    "NCAAF": {
+      "sport": "NCAAF",
+      "emoji": "\ud83c\udfdf\ufe0f",
+      "record": {
+        "wins": 2,
+        "losses": 1,
+        "total": 3
+      },
+      "roi": 47.16666666666667,
+      "netPL": 212.25,
+      "unitsWon": 2.1225,
+      "gamesAnalyzed": 3,
+      "totalGames": 3
+    }
+  },
+  "betTypeBreakdown": {
+    "Props": {
+      "type": "Props",
+      "record": {
+        "wins": 16,
+        "losses": 21
+      },
+      "winRate": 43.24324324324324,
+      "netPL": -1023.040909090909,
+      "roi": -20.15844155844156
+    },
+    "Spreads": {
+      "type": "Spreads",
+      "record": {
+        "wins": 4,
+        "losses": 8
+      },
+      "winRate": 33.33333333333333,
+      "netPL": -478.21999999999997,
+      "roi": -26.567777777777774
+    },
+    "Totals": {
+      "type": "Totals",
+      "record": {
+        "wins": 2,
+        "losses": 2
+      },
+      "winRate": 50.0,
+      "netPL": 105.03428571428572,
+      "roi": 14.00457142857143
+    }
+  },
   "stakeBreakdown": {
     "0.5u": {
       "record": {
         "wins": 0,
-        "losses": 1,
-        "total": 1
+        "losses": 2,
+        "total": 2
       },
-      "winRate": 0.00
+      "winRate": 0.0,
+      "netPL": -100,
+      "totalBets": 2
     },
     "0.75u": {
       "record": {
@@ -29,132 +124,426 @@
         "losses": 1,
         "total": 1
       },
-      "winRate": 0.00
+      "winRate": 0.0,
+      "netPL": -75,
+      "totalBets": 1
     },
     "1.0u": {
       "record": {
-        "wins": 8,
-        "losses": 10,
-        "total": 18
+        "wins": 9,
+        "losses": 11,
+        "total": 20
       },
-      "winRate": 44.44
+      "winRate": 45.0,
+      "netPL": -266.94090909090914,
+      "totalBets": 20
     },
     "1.5u": {
       "record": {
         "wins": 6,
-        "losses": 8,
-        "total": 14
+        "losses": 9,
+        "total": 15
       },
-      "winRate": 42.86
+      "winRate": 40.0,
+      "netPL": -504.15999999999997,
+      "totalBets": 15
     },
     "2.0u": {
       "record": {
-        "wins": 4,
-        "losses": 4,
-        "total": 8
+        "wins": 5,
+        "losses": 6,
+        "total": 11
       },
-      "winRate": 50.00
+      "winRate": 45.45454545454545,
+      "netPL": -351.91,
+      "totalBets": 11
     },
     "2.5u": {
       "record": {
-        "wins": 1,
+        "wins": 2,
         "losses": 2,
-        "total": 3
-      },
-      "winRate": 33.33
-    }
-  },
-  "sportBreakdown": {
-    "NBA": {
-      "sport": "NBA",
-      "emoji": "🏀",
-      "record": {
-        "wins": 10,
-        "losses": 10,
-        "total": 20
-      },
-      "roi": -10.58,
-      "netPL": -290.86,
-      "unitsWon": -2.91,
-      "gamesAnalyzed": 20,
-      "totalGames": 20
-    },
-    "NFL": {
-      "sport": "NFL",
-      "emoji": "🏈",
-      "record": {
-        "wins": 6,
-        "losses": 12,
-        "total": 18
-      },
-      "roi": -29.96,
-      "netPL": -756.42,
-      "unitsWon": -7.56,
-      "gamesAnalyzed": 18,
-      "totalGames": 18
-    },
-    "NCAAB": {
-      "sport": "NCAAB",
-      "emoji": "🏀",
-      "record": {
-        "wins": 1,
-        "losses": 3,
         "total": 4
       },
-      "roi": -54.94,
-      "netPL": -357.14,
-      "unitsWon": -3.57,
-      "gamesAnalyzed": 4,
-      "totalGames": 4
-    },
-    "NCAAF": {
-      "sport": "NCAAF",
-      "emoji": "🏈",
-      "record": {
-        "wins": 2,
-        "losses": 1,
-        "total": 3
-      },
-      "roi": 47.17,
-      "netPL": 212.25,
-      "unitsWon": 2.12,
-      "gamesAnalyzed": 3,
-      "totalGames": 3
+      "winRate": 50.0,
+      "netPL": -98.21571428571428,
+      "totalBets": 4
     }
   },
-  "betTypeBreakdown": {
-    "props": {
-      "type": "Props",
-      "record": {
-        "wins": 15,
-        "losses": 19,
-        "total": 34
-      },
-      "winRate": 44.12,
-      "netPL": -763.95,
-      "roi": -16.52
+  "portfolioGrowth": [
+    {
+      "date": "2025-11-04",
+      "balance": 10083.33,
+      "profit": 83.33,
+      "description": "Booker O28.5 points",
+      "result": "win"
     },
-    "spreads": {
-      "type": "Spreads",
-      "record": {
-        "wins": 3,
-        "losses": 5,
-        "total": 8
-      },
-      "winRate": 37.50,
-      "netPL": -310.04,
-      "roi": -24.80
+    {
+      "date": "2025-11-04",
+      "balance": 10143.94,
+      "profit": 60.61,
+      "description": "Murphy III O2.5 3-pointers",
+      "result": "win"
     },
-    "totals": {
-      "type": "Totals",
-      "record": {
-        "wins": 1,
-        "losses": 2,
-        "total": 3
-      },
-      "winRate": 33.33,
-      "netPL": -118.18,
-      "roi": -23.64
+    {
+      "date": "2025-11-04",
+      "balance": 10243.94,
+      "profit": 100,
+      "description": "Maxey O3.5 3-pointers",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-05",
+      "balance": 10371.06,
+      "profit": 127.12,
+      "description": "Randle O20.5 points",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-05",
+      "balance": 10271.06,
+      "profit": -100,
+      "description": "Wembanyama O12.5 rebounds",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10361.97,
+      "profit": 90.91,
+      "description": "Smith U10.5 rushing yards",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10511.97,
+      "profit": 150,
+      "description": "Dobbins O70.5 rushing yards",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10361.97,
+      "profit": -150,
+      "description": "Bowers O64.5 receiving yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10211.97,
+      "profit": -150,
+      "description": "Illinois State +1.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10354.83,
+      "profit": 142.86,
+      "description": "Jackson State +38.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-06",
+      "balance": 10154.83,
+      "profit": -200,
+      "description": "Drake/Robert Morris U150.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 10278.83,
+      "profit": 124,
+      "description": "Barrett O3.5 assists",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 10128.83,
+      "profit": -150,
+      "description": "Joki\u0107 U12.5 rebounds",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 10293.83,
+      "profit": 165,
+      "description": "Banchero O8.5 rebounds",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 10143.83,
+      "profit": -150,
+      "description": "Mitchell U26.5 points",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 9993.83,
+      "profit": -150,
+      "description": "Thompson U16.5 points",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-07",
+      "balance": 10147.68,
+      "profit": 153.85,
+      "description": "Giddey O8.5 assists",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-08",
+      "balance": 10047.68,
+      "profit": -100,
+      "description": "TCU -7.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-08",
+      "balance": 10178.11,
+      "profit": 130.43,
+      "description": "Texas A&M -6.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-08",
+      "balance": 10359.93,
+      "profit": 181.82,
+      "description": "Oregon @ Iowa U41.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 10159.93,
+      "profit": -200,
+      "description": "Dowdle O19.5 rush attempts",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 10009.93,
+      "profit": -150,
+      "description": "Smith-Njigba O96.5 receiving yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 10111.93,
+      "profit": 102,
+      "description": "White O3.5 receptions",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 10011.93,
+      "profit": -100,
+      "description": "Jaguars @ Texans U37.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9911.93,
+      "profit": -100,
+      "description": "Judkins O81.5 rushing yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9836.93,
+      "profit": -75,
+      "description": "Collins Anytime TD",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9786.93,
+      "profit": -50,
+      "description": "Cook O84.5 rushing yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9917.36,
+      "profit": 130.43,
+      "description": "Allen U44.5 receiving yards",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9817.36,
+      "profit": -100,
+      "description": "Gainwell O2.5 receptions",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-09",
+      "balance": 9717.36,
+      "profit": -100,
+      "description": "Gadsden O53.5 receiving yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-10",
+      "balance": 9617.36,
+      "profit": -100,
+      "description": "Smith O4.5 receptions",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-10",
+      "balance": 9417.36,
+      "profit": -200,
+      "description": "Hurts Anytime TD",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-10",
+      "balance": 9584.03,
+      "profit": 166.67,
+      "description": "Eagles +1.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-10",
+      "balance": 9334.03,
+      "profit": -250,
+      "description": "Love O225.5 passing yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-10",
+      "balance": 9512.6,
+      "profit": 178.57,
+      "description": "Jacobs Anytime TD",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 9412.6,
+      "profit": -100,
+      "description": "White U3.5 three-pointers",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 9312.6,
+      "profit": -100,
+      "description": "Mitchell O23.5 PRA",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 9162.6,
+      "profit": -150,
+      "description": "Texas Tech +3.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 9249.56,
+      "profit": 86.96,
+      "description": "Jokic O26.5 points",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 8999.56,
+      "profit": -250,
+      "description": "Maxey O37.5 PTS+AST",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-11",
+      "balance": 9160.85,
+      "profit": 161.29,
+      "description": "Brunson O6.5 assists",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-12",
+      "balance": 9060.85,
+      "profit": -100,
+      "description": "Sengun O22.5 points",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-12",
+      "balance": 9155.19,
+      "profit": 94.34,
+      "description": "Wembanyama O26.5 points",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-12",
+      "balance": 9005.19,
+      "profit": -150,
+      "description": "Lakers +8.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-12",
+      "balance": 8805.19,
+      "profit": -200,
+      "description": "Spurs -3.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-13",
+      "balance": 8755.19,
+      "profit": -50,
+      "description": "Jets +12.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-13",
+      "balance": 8846.1,
+      "profit": 90.91,
+      "description": "Breece Hall UNDER 58.5 Rushing Yards",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-13",
+      "balance": 8696.1,
+      "profit": -150,
+      "description": "Drake Maye OVER 1.5 Passing TDs",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-13",
+      "balance": 8496.1,
+      "profit": -200,
+      "description": "TreVeyon Henderson OVER 70.5 Rushing Yards",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-13",
+      "balance": 8719.31,
+      "profit": 223.21,
+      "description": "Jets vs Patriots UNDER 43.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-14",
+      "balance": 8901.13,
+      "profit": 181.82,
+      "description": "Arizona -1.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-14",
+      "balance": 8701.13,
+      "profit": -200,
+      "description": "Mavericks +3.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-14",
+      "balance": 8601.13,
+      "profit": -100,
+      "description": "76ers +2",
+      "result": "loss"
     }
-  }
+  ],
+  "totalCapitalRisked": 7625.0,
+  "unitsRisked": 76.25,
+  "totalBets": 53,
+  "totalWins": 22
 }

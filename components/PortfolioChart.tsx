@@ -60,17 +60,18 @@ export default function PortfolioChart() {
   }, []);
 
   // Get data based on timeframe (for now, only 30days is available)
-  const data = chartDataFile.thirtyDays;
+  const data = Array.isArray(chartDataFile) ? chartDataFile : [];
 
   const chartData = {
     labels: data.map((item) => {
-      const date = new Date(item.date);
-      return `${date.getMonth() + 1}/${date.getDate()}`;
+      // Parse date as local time to avoid timezone issues
+      const [year, month, day] = item.date.split('-').map(Number);
+      return `${month}/${day}`;
     }),
     datasets: [
       {
         label: 'Portfolio Balance',
-        data: data.map((item) => item.balance),
+        data: data.map((item) => item.value),
         fill: true,
         borderColor: '#FF0080', // Magenta
         backgroundColor: (context: any) => {

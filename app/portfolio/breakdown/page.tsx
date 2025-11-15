@@ -26,6 +26,7 @@ export default function PortfolioBreakdownPage() {
     avgWin,
     avgLoss,
     avgProfitPerBet,
+    medianProfit,
     largestWin,
     largestLoss,
     profitFactor,
@@ -34,9 +35,17 @@ export default function PortfolioBreakdownPage() {
     unitEfficiency,
     closingLineValue,
     kellyUtilization,
+    maxWinStreak,
+    maxLossStreak,
+    totalWinnings,
+    totalLosses,
     stakeBreakdown,
     sportBreakdown,
     betTypeBreakdown,
+    portfolioGrowth,
+    totalBets,
+    totalWins,
+    totalLosses: lossCount,
   } = metricsData as any;
 
   const allBets = betsData as any[];
@@ -269,6 +278,115 @@ export default function PortfolioBreakdownPage() {
                 {sharpeRatioNote}
               </div>
             </div>
+
+            <div className="bg-gray-50 p-5 rounded-sm">
+              <div className="text-sm text-gray-600 mb-1">Median Profit</div>
+              <div className={`text-2xl font-bold mono-number ${
+                medianProfit >= 0 ? 'text-success' : 'text-loss'
+              }`}>
+                {formatCurrency(medianProfit, false)}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                Middle result value
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-5 rounded-sm">
+              <div className="text-sm text-gray-600 mb-1">Max Win Streak</div>
+              <div className="text-2xl font-bold mono-number text-success">
+                {maxWinStreak}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                Consecutive wins
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-5 rounded-sm">
+              <div className="text-sm text-gray-600 mb-1">Max Loss Streak</div>
+              <div className="text-2xl font-bold mono-number text-loss">
+                {maxLossStreak}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                Consecutive losses
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-5 rounded-sm">
+              <div className="text-sm text-gray-600 mb-1">Total Winnings</div>
+              <div className="text-2xl font-bold mono-number text-success">
+                {formatCurrency(totalWinnings, false)}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                Sum of all wins
+              </div>
+            </div>
+
+            <div className="bg-gray-50 p-5 rounded-sm">
+              <div className="text-sm text-gray-600 mb-1">Total Losses</div>
+              <div className="text-2xl font-bold mono-number text-loss">
+                {formatCurrency(-totalLosses, false)}
+              </div>
+              <div className="text-xs text-gray-500 mt-1">
+                Sum of all losses
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Win/Loss Distribution */}
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
+          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
+            📊 WIN/LOSS DISTRIBUTION
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-sm border-2 border-green-200">
+              <div className="text-sm text-green-800 mb-2 font-bold">WINS</div>
+              <div className="text-4xl font-bold text-success mono-number mb-2">
+                {totalWins}
+              </div>
+              <div className="text-sm text-green-700 mono-number">
+                {((totalWins / totalBets) * 100).toFixed(2)}% of all bets
+              </div>
+              <div className="mt-4 pt-4 border-t border-green-300">
+                <div className="text-xs text-green-700 mb-1">Average Win</div>
+                <div className="text-2xl font-bold text-success mono-number">
+                  {formatCurrency(avgWin, false)}
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-sm border-2 border-red-200">
+              <div className="text-sm text-red-800 mb-2 font-bold">LOSSES</div>
+              <div className="text-4xl font-bold text-loss mono-number mb-2">
+                {lossCount}
+              </div>
+              <div className="text-sm text-red-700 mono-number">
+                {((lossCount / totalBets) * 100).toFixed(2)}% of all bets
+              </div>
+              <div className="mt-4 pt-4 border-t border-red-300">
+                <div className="text-xs text-red-700 mb-1">Average Loss</div>
+                <div className="text-2xl font-bold text-loss mono-number">
+                  {formatCurrency(avgLoss, false)}
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-sm border-2 border-blue-200">
+              <div className="text-sm text-blue-800 mb-2 font-bold">PROFIT FACTOR</div>
+              <div className="text-4xl font-bold text-primary mono-number mb-2">
+                {profitFactor.toFixed(3)}
+              </div>
+              <div className="text-sm text-blue-700">
+                Wins ÷ Losses ratio
+              </div>
+              <div className="mt-4 pt-4 border-t border-blue-300">
+                <div className="text-xs text-blue-700 mb-1">Target: 1.50+</div>
+                <div className="text-sm text-blue-800">
+                  {profitFactor >= 1.5 ? '✅ Excellent' : profitFactor >= 1.0 ? '✓ Positive' : '⚠️ Below Target'}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -408,6 +526,77 @@ export default function PortfolioBreakdownPage() {
                       {data.record.total}
                     </div>
                   </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Portfolio Growth Timeline */}
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
+          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
+            📈 PORTFOLIO GROWTH TIMELINE
+          </h2>
+
+          <div className="bg-gray-50 p-6 rounded-sm mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Starting Balance</div>
+                <div className="text-2xl font-bold text-primary mono-number">
+                  {formatCurrency(portfolioData.startingBalance, false)}
+                </div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Current Balance</div>
+                <div className={`text-2xl font-bold mono-number ${
+                  portfolioData.balance >= portfolioData.startingBalance ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(portfolioData.balance, false)}
+                </div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Total Change</div>
+                <div className={`text-2xl font-bold mono-number ${
+                  portfolioData.netPL >= 0 ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(portfolioData.netPL)}
+                </div>
+              </div>
+              <div>
+                <div className="text-sm text-gray-600 mb-1">Change %</div>
+                <div className={`text-2xl font-bold mono-number ${
+                  portfolioData.roi >= 0 ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatPercent(portfolioData.roi)}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-2 max-h-96 overflow-y-auto">
+            <div className="grid grid-cols-5 gap-2 text-xs font-bold text-gray-600 uppercase pb-2 border-b-2 border-gray-300 sticky top-0 bg-white">
+              <div>Date</div>
+              <div>Bet</div>
+              <div className="text-right">Result</div>
+              <div className="text-right">P/L</div>
+              <div className="text-right">Balance</div>
+            </div>
+            {portfolioGrowth && portfolioGrowth.slice().reverse().slice(0, 7).map((entry: any, index: number) => (
+              <div key={index} className="grid grid-cols-5 gap-2 text-sm py-2 border-b border-gray-200 hover:bg-gray-50">
+                <div className="text-gray-600 mono-number">{entry.date}</div>
+                <div className="text-gray-900 truncate text-xs">{entry.description}</div>
+                <div className="text-right">
+                  {entry.result === 'win' ? '✅' : '❌'}
+                </div>
+                <div className={`text-right mono-number font-bold ${
+                  entry.profit >= 0 ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(entry.profit)}
+                </div>
+                <div className={`text-right mono-number font-bold ${
+                  entry.balance >= portfolioData.startingBalance ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(entry.balance, false)}
                 </div>
               </div>
             ))}
