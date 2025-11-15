@@ -34,3 +34,20 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# analysis and utility scripts
+/analyze-*.ts
+/fetch-*.ts
+/find-*.ts
+/fix-*.ts
+/get-*.ts
+/query-*.ts
+/check-*.ts
+/add-*.ts
+/recalculate-*.ts
+/test-*.ts
+*.log
+/scripts/
+/analysis/
+FINAL-*.md
+QUANT-*.md
