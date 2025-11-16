@@ -1,0 +1,171 @@
+{
+  "slug": "iowa-spread-nov15-2025",
+  "team": "Iowa Hawkeyes",
+  "line": "+6.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "USC 26, Iowa 21 (covered by 1.5 points)",
+  "profit": 190.48,
+  "gameDetails": {
+    "matchup": "Iowa Hawkeyes vs USC Trojans",
+    "date": "November 15, 2025",
+    "gameTime": "3:30 PM ET",
+    "venue": "Los Angeles Memorial Coliseum, Los Angeles, CA",
+    "finalScore": "USC 26, Iowa 21"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 28,
+    "estimatedProbability": 45,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Iowa 8-3 ATS this season, excels as underdog",
+      "recentForm": "USC 0-2 ATS on the road vs ranked opponents",
+      "homeRecord": "Road game for Iowa, but strong defensive metrics (3rd nationally)",
+      "cushion": "Line moved from +7 to +6.5 on Iowa money"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Defensive Efficiency",
+        "description": "Iowa ranks 3rd nationally in defensive efficiency, allowing just 14.2 PPG. Their bend-don't-break defense excels at limiting explosive plays and forcing field goals. USC's offense, while talented, struggles against disciplined defenses."
+      },
+      {
+        "title": "USC's Road Struggles",
+        "description": "USC entered 0-2 ATS on the road vs ranked opponents this season. Lincoln Riley's team has shown inconsistency in hostile environments. While this is a home game, Iowa's defensive intensity creates pressure situations Riley's team struggles with."
+      },
+      {
+        "title": "Time of Possession Edge",
+        "description": "Iowa's ball-control offense (ranked 18th nationally in TOP at 32.4 min/game) limits USC's possessions. Fewer drives means fewer scoring opportunities for high-powered Trojan offense. Iowa's methodical approach keeps games close."
+      },
+      {
+        "title": "Underdog Pedigree",
+        "description": "Iowa thrives as underdog under Kirk Ferentz. Team plays with chip-on-shoulder mentality and competes hard for 60 minutes. Getting 6.5 points provides significant cushion for defense-first team."
+      }
+    ],
+    "riskFactors": [
+      "Iowa's offense anemic (ranked 112th nationally in scoring at 19.8 PPG)",
+      "USC's talent advantage at skill positions could create explosive plays",
+      "Makai Lemon emerging as dynamic receiver (averaging 98.3 yards/game)",
+      "Iowa playing cross-country road game with travel fatigue factor"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "iowaTimeOfPossession": "30:44",
+      "uscTimeOfPossession": "29:16",
+      "iowaFirstHalfPoints": 21,
+      "uscFirstHalfPoints": 10,
+      "iowaSecondHalfPoints": 0,
+      "uscSecondHalfPoints": 16,
+      "iowaPassingYards": 163,
+      "uscPassingYards": 284,
+      "iowaRushingYards": 112,
+      "uscRushingYards": 98,
+      "iowaTurnovers": 1,
+      "uscTurnovers": 0,
+      "iowaThirdDownConversions": "3-12 (25%)",
+      "uscThirdDownConversions": "7-14 (50%)"
+    },
+    "keyPlayers": {
+      "cadeNamara": {
+        "team": "Iowa",
+        "passing": "18-27, 163 yards, 2 TDs, 1 INT",
+        "note": "Efficient first half (14-18, 2 TDs), completely shut down after halftime"
+      },
+      "jaydenMaiava": {
+        "team": "USC",
+        "passing": "22-33, 284 yards, 2 TDs",
+        "note": "Struggled early, dominated second half with 19 unanswered points"
+      },
+      "makaiLemon": {
+        "team": "USC",
+        "receiving": "10 catches, 153 yards, 1 TD",
+        "note": "Completely took over in second half, Iowa had no answer"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Iowa 7, USC 3",
+        "description": "Iowa controlled tempo early with methodical drive capped by Namara TD pass. Defense held USC to field goal. Exactly as scripted - Iowa's ball control limiting USC possessions."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Iowa 21, USC 10",
+        "description": "Iowa extended lead to 21-10 at halftime with another Namara TD pass. Defense held firm, forcing USC into field position mistakes. Namara was 14-of-18 passing in first half. Iowa's largest halftime deficit in Lincoln Riley era."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Iowa 0, USC 9",
+        "description": "Complete reversal. Iowa's offense completely shut down - couldn't convert a single third down. USC scored 9 points to cut deficit to 21-19. Makai Lemon began taking over with 6 catches for 87 yards in quarter."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Iowa 0, USC 7",
+        "description": "Iowa remained scoreless. USC took 26-21 lead with TD pass to Lemon. Iowa's final drive stalled at midfield. Second half shutout: Iowa 0 points on 0-7 third down conversions."
+      }
+    ],
+    "whenCleared": "Iowa covered +6.5 when USC's final TD made it 26-21 with 3:42 remaining. USC couldn't push margin beyond 5 points despite complete offensive dominance in second half. Iowa's defense kept them in position to cover even as offense disappeared.",
+    "turningPoint": "Halftime adjustments by USC defensive coordinator. Iowa went from 14-of-18 passing (77.8%) in first half to 4-of-9 (44.4%) in second half. USC completely solved Iowa's offensive approach, and Iowa had no counter-adjustments.",
+    "gamePace": "Iowa controlled pace in first half (18:14 TOP vs 11:46 for USC). Second half saw USC speed up tempo and force Iowa into uncomfortable passing situations. Final TOP: Iowa 30:44, USC 29:16 - Iowa won battle but lost war.",
+    "teamOffense": "Iowa's offense was tale of two halves. First half: efficient, methodical, scoring 21 points. Second half: completely shut out, 0-7 on third downs, couldn't sustain drives. USC's halftime adjustments exposed Iowa's limited playbook and lack of playmaking weapons."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "First Half Dominance",
+        "description": "Iowa executed game plan perfectly in first half, leading 21-10 at break. Defense held USC to 10 points, offense was efficient with Namara 14-of-18 passing. Controlled clock and tempo exactly as anticipated."
+      },
+      {
+        "title": "Defense Kept It Close Despite Collapse",
+        "description": "Even with offense shut out in second half, Iowa's defense prevented blowout. Held USC to 16 second-half points (including garbage-time TD). Defense kept margin at 5 points, allowing +6.5 to cover."
+      },
+      {
+        "title": "Got Right Side for Wrong Reasons",
+        "description": "Bet thesis was Iowa's defense would keep it close. That held true, but didn't anticipate complete offensive collapse. Fortunate that USC couldn't push margin to 7+ points despite dominating second half."
+      }
+    ],
+    "whatWentWrong": [
+      {
+        "title": "Second Half Offensive Disaster",
+        "description": "Iowa completely shut out in second half (0 points). Went 0-7 on third down conversions after halftime. USC's defensive adjustments exposed Iowa's limited offensive weapons and predictable playcalling. No counter-adjustments."
+      },
+      {
+        "title": "Makai Lemon Takeover",
+        "description": "USC's Lemon (10 rec, 153 yards, TD) was unstoppable in second half. Iowa had no defensive answer for his speed and route-running. Single player destroyed defensive game plan."
+      },
+      {
+        "title": "No Halftime Adjustments",
+        "description": "Iowa coaching staff failed to adjust when USC changed defensive approach. Continued running same plays that worked in first half but were completely stifled after break. Lack of offensive creativity exposed."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Iowa's 21 first-half points exceeded season average (19.8 PPG). Second-half shutout represented worst half of season offensively.",
+      "vsRecentForm": "Iowa's second-half collapse (0 points, 0-7 on third downs) was unprecedented. Team had never been shut out for entire half this season.",
+      "vsPropLine": "Covered +6.5 by 1.5 points. USC's inability to push margin beyond 5 despite dominating second half validated defensive thesis - barely.",
+      "percentileRanking": "Iowa's 0 second-half points ranked in 2nd percentile for team performance. Yet still covered spread due to first-half cushion and USC's inefficiency."
+    },
+    "wasNormalVariance": "Yes and no. Iowa's offensive collapse was abnormal - going from 21 first-half points to 0 second-half points represents extreme variance. However, USC's inability to capitalize fully (only winning by 5 despite complete dominance) was also unusual. In 10 simulations of this game with same second-half performance, USC probably covers 8-9 times. We got fortunate variance on the margin."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 0.71,
+    "verdict": "Slight positive CLV. Line opened at Iowa +7 and moved to +6.5 as money came in on Iowa. We bet at +6.5 (-105) and closing was +6.5 (-108), meaning we got slightly better number. The 3-cent CLV suggests our timing was good, getting Iowa +6.5 before it moved to +6 at some books."
+  },
+  "keyTakeaways": [
+    "First-half execution was perfect - Iowa led 21-10 exactly as defensive game plan anticipated",
+    "Second-half collapse nearly lost cover - 0 points, 0-7 on third downs exposed offensive limitations",
+    "Covered by 1.5 points only because USC couldn't extend margin beyond 5 - lucky bounce",
+    "Makai Lemon (10 rec, 153 yards) was difference-maker - no defensive answer for his talent",
+    "Kirk Ferentz failed to make halftime adjustments - same plays that worked in H1 were solved in H2",
+    "Time of possession edge (30:44 vs 29:16) meant nothing when couldn't score",
+    "Right side for wrong reasons - bet on defense keeping it close, defense saved cover after offense died",
+    "In retrospect, should have recognized Iowa's offensive limitations as fatal flaw - 112th nationally in scoring isn't sustainable",
+    "This was 'bad process, good result' - lucky cover doesn't validate bet quality"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Lucky cover that exposed flawed process. While Iowa's defense kept game close as anticipated, complete second-half offensive collapse (0 points, 0-7 third downs) nearly blew cover. Only survived because USC couldn't push 5-point margin to 7+. Betting team ranked 112th in scoring offense (19.8 PPG) is fundamentally flawed - can't rely on offense to sustain leads or respond to deficits. Makai Lemon's takeover (10 rec, 153 yards) showed USC's talent advantage would eventually overwhelm. This bet won, but underlying thesis was weak. Would not make this bet again under identical circumstances - offense too anemic to trust with 2 units."
+}
