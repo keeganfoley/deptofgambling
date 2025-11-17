@@ -133,7 +133,7 @@ export default function QuantitativeMetrics() {
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Unit Efficiency
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-success mono-number">
+              <div className={`text-2xl sm:text-3xl data-value mono-number ${unitEfficiency !== undefined && unitEfficiency >= 0 ? 'text-success' : 'text-loss'}`}>
                 {unitEfficiency !== undefined ? `${unitEfficiency.toFixed(2)}%` : 'N/A'}
               </div>
             </div>

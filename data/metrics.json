@@ -1,100 +1,101 @@
 {
   "sharpeRatio": 1.84,
+  "sharpeRatioNote": "Insufficient data for accurate calculation (needs 30+ bets with consistent unit sizing)",
   "calmarRatio": 2.15,
   "maxDrawdown": -250,
-  "avgWin": 133.00606257378988,
-  "avgLoss": -139.51612903225808,
-  "avgProfitPerBet": -26.343898554275903,
+  "avgWin": 138.18498334998336,
+  "avgLoss": -143.1818181818182,
+  "avgProfitPerBet": -19.189661016949152,
   "medianProfit": -100,
   "largestWin": 223.21428571428572,
   "largestLoss": -250,
-  "profitFactor": 0.6771730350574282,
-  "unitEfficiency": -18.311168831168825,
+  "profitFactor": 0.7603829771639296,
+  "unitEfficiency": -12.976389684813752,
   "closingLineValue": 5.2,
-  "closingLineValueNote": "Average: +5.2\u00a2",
+  "closingLineValueNote": "Average: +5.2¢",
   "kellyUtilization": 38,
   "maxWinStreak": 4,
   "maxLossStreak": 4,
-  "totalWinnings": 2926.133376623377,
-  "totalLosses": 31,
+  "totalWinnings": 3592.809567099567,
+  "totalLossesAmount": 4725,
   "sportBreakdown": {
     "NBA": {
       "sport": "NBA",
-      "emoji": "\ud83c\udfc0",
+      "emoji": "🏀",
       "record": {
         "wins": 10,
         "losses": 12,
         "total": 22
       },
-      "roi": -19.372459016393442,
-      "netPL": -590.86,
-      "unitsWon": -5.9086,
+      "roi": -19.459016393442624,
+      "netPL": -593.5,
+      "unitsWon": -5.935,
       "gamesAnalyzed": 22,
       "totalGames": 22
     },
     "NFL": {
       "sport": "NFL",
-      "emoji": "\ud83c\udfc8",
+      "emoji": "🏈",
       "record": {
-        "wins": 8,
-        "losses": 15,
-        "total": 23
+        "wins": 10,
+        "losses": 16,
+        "total": 26
       },
-      "roi": -25.718980866461784,
-      "netPL": -842.2966233766233,
-      "unitsWon": -8.422966233766234,
-      "gamesAnalyzed": 23,
-      "totalGames": 23
+      "roi": -20.271168831168833,
+      "netPL": -765.2366233766234,
+      "unitsWon": -7.652366233766234,
+      "gamesAnalyzed": 26,
+      "totalGames": 26
     },
     "NCAAB": {
       "sport": "NCAAB",
-      "emoji": "\ud83c\udf93",
+      "emoji": "🎓",
       "record": {
         "wins": 2,
         "losses": 3,
         "total": 5
       },
-      "roi": -20.625882352941176,
-      "netPL": -175.32,
-      "unitsWon": -1.7531999999999999,
+      "roi": -19.60750700280112,
+      "netPL": -166.6638095238095,
+      "unitsWon": -1.666638095238095,
       "gamesAnalyzed": 5,
       "totalGames": 5
     },
     "NCAAF": {
       "sport": "NCAAF",
-      "emoji": "\ud83c\udfdf\ufe0f",
+      "emoji": "🏟️",
       "record": {
-        "wins": 2,
-        "losses": 1,
-        "total": 3
+        "wins": 4,
+        "losses": 2,
+        "total": 6
       },
-      "roi": 47.16666666666667,
-      "netPL": 212.25,
-      "unitsWon": 2.1225,
-      "gamesAnalyzed": 3,
-      "totalGames": 3
+      "roi": 37.448571428571434,
+      "netPL": 393.21000000000004,
+      "unitsWon": 3.9321,
+      "gamesAnalyzed": 6,
+      "totalGames": 6
     }
   },
   "betTypeBreakdown": {
     "Props": {
       "type": "Props",
       "record": {
-        "wins": 16,
-        "losses": 21
+        "wins": 18,
+        "losses": 22
       },
-      "winRate": 43.24324324324324,
-      "netPL": -1023.040909090909,
-      "roi": -20.15844155844156
+      "winRate": 45,
+      "netPL": -948.6209090909092,
+      "roi": -17.01562168772931
     },
     "Spreads": {
       "type": "Spreads",
       "record": {
-        "wins": 4,
-        "losses": 8
+        "wins": 6,
+        "losses": 9
       },
-      "winRate": 33.33333333333333,
-      "netPL": -478.21999999999997,
-      "roi": -26.567777777777774
+      "winRate": 40,
+      "netPL": -288.60380952380945,
+      "roi": -12.025158730158726
     },
     "Totals": {
       "type": "Totals",
@@ -102,41 +103,21 @@
         "wins": 2,
         "losses": 2
       },
-      "winRate": 50.0,
+      "winRate": 50,
       "netPL": 105.03428571428572,
       "roi": 14.00457142857143
     }
   },
   "stakeBreakdown": {
-    "0.5u": {
+    "1u": {
       "record": {
-        "wins": 0,
-        "losses": 2,
-        "total": 2
-      },
-      "winRate": 0.0,
-      "netPL": -100,
-      "totalBets": 2
-    },
-    "0.75u": {
-      "record": {
-        "wins": 0,
-        "losses": 1,
-        "total": 1
-      },
-      "winRate": 0.0,
-      "netPL": -75,
-      "totalBets": 1
-    },
-    "1.0u": {
-      "record": {
-        "wins": 9,
+        "wins": 10,
         "losses": 11,
-        "total": 20
+        "total": 21
       },
-      "winRate": 45.0,
-      "netPL": -266.94090909090914,
-      "totalBets": 20
+      "winRate": 47.61904761904761,
+      "netPL": -171.70090909090914,
+      "totalBets": 21
     },
     "1.5u": {
       "record": {
@@ -144,19 +125,39 @@
         "losses": 9,
         "total": 15
       },
-      "winRate": 40.0,
+      "winRate": 40,
       "netPL": -504.15999999999997,
       "totalBets": 15
     },
-    "2.0u": {
+    "2u": {
       "record": {
-        "wins": 5,
-        "losses": 6,
-        "total": 11
+        "wins": 8,
+        "losses": 8,
+        "total": 16
       },
-      "winRate": 45.45454545454545,
-      "netPL": -351.91,
-      "totalBets": 11
+      "winRate": 50,
+      "netPL": -183.11380952380964,
+      "totalBets": 16
+    },
+    "0.75u": {
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "total": 1
+      },
+      "winRate": 0,
+      "netPL": -75,
+      "totalBets": 1
+    },
+    "0.5u": {
+      "record": {
+        "wins": 0,
+        "losses": 2,
+        "total": 2
+      },
+      "winRate": 0,
+      "netPL": -100,
+      "totalBets": 2
     },
     "2.5u": {
       "record": {
@@ -164,7 +165,7 @@
         "losses": 2,
         "total": 4
       },
-      "winRate": 50.0,
+      "winRate": 50,
       "netPL": -98.21571428571428,
       "totalBets": 4
     }
@@ -258,7 +259,7 @@
       "date": "2025-11-07",
       "balance": 10128.83,
       "profit": -150,
-      "description": "Joki\u0107 U12.5 rebounds",
+      "description": "Jokić U12.5 rebounds",
       "result": "loss"
     },
     {
@@ -495,7 +496,7 @@
     {
       "date": "2025-11-13",
       "balance": 8846.1,
-      "profit": 90.91,
+      "profit": 90.9090909090909,
       "description": "Breece Hall UNDER 58.5 Rushing Yards",
       "result": "win"
     },
@@ -516,34 +517,77 @@
     {
       "date": "2025-11-13",
       "balance": 8719.31,
-      "profit": 223.21,
+      "profit": 223.21428571428572,
       "description": "Jets vs Patriots UNDER 43.5",
       "result": "win"
     },
     {
       "date": "2025-11-14",
-      "balance": 8901.13,
-      "profit": 181.82,
+      "balance": 8909.79,
+      "profit": 190.47619047619048,
       "description": "Arizona -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-14",
-      "balance": 8701.13,
+      "balance": 8709.79,
       "profit": -200,
       "description": "Mavericks +3.5",
       "result": "loss"
     },
     {
       "date": "2025-11-14",
-      "balance": 8601.13,
+      "balance": 8609.79,
       "profit": -100,
       "description": "76ers +2",
       "result": "loss"
+    },
+    {
+      "date": "2025-11-15",
+      "balance": 8800.27,
+      "profit": 190.48,
+      "description": "Iowa +6.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-15",
+      "balance": 8600.27,
+      "profit": -200,
+      "description": "Texas +4.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-15",
+      "balance": 8790.75,
+      "profit": 190.48,
+      "description": "Oklahoma +6.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-16",
+      "balance": 8972.57,
+      "profit": 181.82,
+      "description": "Barkley O78.5 rushing yards",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-16",
+      "balance": 8772.57,
+      "profit": -200,
+      "description": "St. Brown O7.5 receptions",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-16",
+      "balance": 8867.81,
+      "profit": 95.24,
+      "description": "Hurts O30.5 rushing yards",
+      "result": "win"
     }
   ],
-  "totalCapitalRisked": 7625.0,
-  "unitsRisked": 76.25,
-  "totalBets": 53,
-  "totalWins": 22
+  "totalCapitalRisked": 8725,
+  "unitsRisked": 87.25,
+  "totalBets": 59,
+  "totalWins": 26,
+  "totalLosses": 33
 }

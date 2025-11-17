@@ -38,7 +38,7 @@ export default function PortfolioBreakdownPage() {
     maxWinStreak,
     maxLossStreak,
     totalWinnings,
-    totalLosses,
+    totalLossesAmount,
     stakeBreakdown,
     sportBreakdown,
     betTypeBreakdown,
@@ -196,141 +196,132 @@ export default function PortfolioBreakdownPage() {
             📈 PERFORMANCE METRICS
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Avg Win</div>
-              <div className="text-2xl font-bold mono-number text-success">
-                {formatCurrency(avgWin, false)}
+          {/* Profit & Loss Metrics */}
+          <div className="mb-8">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Profit & Loss Analysis</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Total Winnings</div>
+                <div className="text-2xl font-bold mono-number text-success">
+                  {formatCurrency(totalWinnings, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Sum of all wins
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Per winning bet
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Avg Loss</div>
-              <div className="text-2xl font-bold mono-number text-loss">
-                {formatCurrency(avgLoss, false)}
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Total Losses</div>
+                <div className="text-2xl font-bold mono-number text-loss">
+                  {formatCurrency(-totalLossesAmount, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Sum of all losses
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Per losing bet
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Largest Win</div>
-              <div className="text-2xl font-bold mono-number text-success">
-                {formatCurrency(largestWin, false)}
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Avg Win</div>
+                <div className="text-2xl font-bold mono-number text-success">
+                  {formatCurrency(avgWin, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Per winning bet
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Best single result
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Largest Loss</div>
-              <div className="text-2xl font-bold mono-number text-loss">
-                {formatCurrency(largestLoss, false)}
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Avg Loss</div>
+                <div className="text-2xl font-bold mono-number text-loss">
+                  {formatCurrency(avgLoss, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Per losing bet
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Worst single result
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Profit Factor</div>
-              <div className="text-2xl font-bold mono-number text-primary">
-                {profitFactor.toFixed(2)}
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Largest Win</div>
+                <div className="text-2xl font-bold mono-number text-success">
+                  {formatCurrency(largestWin, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Best single result
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Total wins ÷ Total losses
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Avg Profit/Bet</div>
-              <div className={`text-2xl font-bold mono-number ${
-                avgProfitPerBet >= 0 ? 'text-success' : 'text-loss'
-              }`}>
-                {formatCurrency(avgProfitPerBet, false)}
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Largest Loss</div>
+                <div className="text-2xl font-bold mono-number text-loss">
+                  {formatCurrency(largestLoss, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Worst single result
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Per bet placed
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">CLV</div>
-              <div className="text-2xl font-bold mono-number text-success">
-                +{closingLineValue.toFixed(2)}¢
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Median Profit</div>
+                <div className={`text-2xl font-bold mono-number ${
+                  medianProfit >= 0 ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(medianProfit, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Middle result value
+                </div>
               </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Closing line value
-              </div>
-            </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Sharpe Ratio</div>
-              <div className="text-2xl font-bold mono-number text-gray-400">
-                {sharpeRatio || 'N/A'}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                {sharpeRatioNote}
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Median Profit</div>
-              <div className={`text-2xl font-bold mono-number ${
-                medianProfit >= 0 ? 'text-success' : 'text-loss'
-              }`}>
-                {formatCurrency(medianProfit, false)}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Middle result value
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Max Win Streak</div>
-              <div className="text-2xl font-bold mono-number text-success">
-                {maxWinStreak}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Consecutive wins
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Max Loss Streak</div>
-              <div className="text-2xl font-bold mono-number text-loss">
-                {maxLossStreak}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Consecutive losses
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Total Winnings</div>
-              <div className="text-2xl font-bold mono-number text-success">
-                {formatCurrency(totalWinnings, false)}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Sum of all wins
-              </div>
-            </div>
-
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Total Losses</div>
-              <div className="text-2xl font-bold mono-number text-loss">
-                {formatCurrency(-totalLosses, false)}
-              </div>
-              <div className="text-xs text-gray-500 mt-1">
-                Sum of all losses
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Avg Profit/Bet</div>
+                <div className={`text-2xl font-bold mono-number ${
+                  avgProfitPerBet >= 0 ? 'text-success' : 'text-loss'
+                }`}>
+                  {formatCurrency(avgProfitPerBet, false)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Per bet placed
+                </div>
               </div>
             </div>
           </div>
+
+          {/* Risk-Adjusted Performance */}
+          <div className="mb-8">
+            <h3 className="text-lg font-bold text-gray-900 mb-4">Risk-Adjusted Performance</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Profit Factor</div>
+                <div className="text-2xl font-bold mono-number text-primary">
+                  {profitFactor.toFixed(3)}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Total wins ÷ Total losses
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">Sharpe Ratio</div>
+                <div className="text-2xl font-bold mono-number text-gray-400">
+                  {sharpeRatio || 'N/A'}
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Risk-adjusted returns
+                </div>
+              </div>
+
+              <div className="bg-gray-50 p-5 rounded-sm">
+                <div className="text-sm text-gray-600 mb-1">CLV</div>
+                <div className="text-2xl font-bold mono-number text-success">
+                  +{closingLineValue.toFixed(2)}¢
+                </div>
+                <div className="text-xs text-gray-500 mt-1">
+                  Closing line value
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         {/* Win/Loss Distribution */}

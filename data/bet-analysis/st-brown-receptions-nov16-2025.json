@@ -1,0 +1,167 @@
+{
+  "slug": "st-brown-receptions-nov16-2025",
+  "player": "Amon-Ra St. Brown",
+  "line": "O7.5 Receptions",
+  "odds": -120,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "2 receptions on 12 targets (16.7% catch rate)",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Detroit Lions @ Philadelphia Eagles",
+    "date": "November 16, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lincoln Financial Field, Philadelphia, PA",
+    "finalScore": "Eagles 16, Lions 9"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 20,
+    "estimatedProbability": 62,
+    "impliedProbability": 54.5,
+    "recentPerformance": {
+      "hitRate": "St. Brown hitting O7.5 receptions in 6 of last 9 games (66.7%)",
+      "seasonAverage": "8.4 receptions per game (3rd among WRs)",
+      "last3Games": "9, 8, 10 receptions (avg 9 rec/game)",
+      "cushion": "0.9 reception cushion over line (8.4 avg vs 7.5 line)"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Target Volume",
+        "description": "St. Brown commanding 28% of Lions team targets, second-highest target share in NFL. Jared Goff's safety blanket in high-pressure situations. Expected 11-13 targets in crucial primetime road game."
+      },
+      {
+        "title": "Eagles Secondary Vulnerability to Slot WRs",
+        "description": "Philadelphia allowing 6.8 receptions per game to slot receivers. St. Brown operates primarily from slot (72% of routes). Eagles corner Darius Slay shadows outside WRs, leaving slot more vulnerable. Expected ARSB to dominate middle of field."
+      },
+      {
+        "title": "Road Game Script Favors Short Passing",
+        "description": "Lions offense in hostile Lincoln Financial Field environment typically leans on quick throws to St. Brown. Expected Goff to target ARSB 12+ times on short/intermediate routes to negate Eagles pass rush."
+      },
+      {
+        "title": "NFC Playoff Implications",
+        "description": "Critical divisional race game. Lions offense runs through St. Brown in must-win scenarios. Expected Dan Campbell to feature ARSB heavily in game plan against elite opponent."
+      }
+    ],
+    "riskFactors": [
+      "Eagles pass rush (Haason Reddick, Josh Sweat) could disrupt timing routes",
+      "If Lions fall behind early, could force deeper shots downfield instead of short ARSB targets",
+      "Quinyon Mitchell (Eagles rookie CB) could play slot coverage",
+      "Weather conditions (potential wind/cold) could affect passing game efficiency"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 2,
+      "targets": 12,
+      "catchRate": "16.7%",
+      "receivingYards": 42,
+      "yardsPerCatch": 21.0,
+      "longestReception": "26 yards",
+      "receivingTDs": 0,
+      "droppedPasses": 0
+    },
+    "teamStats": {
+      "goffPassing": "18-of-33, 138 yards, 0 TDs, 0 INTs",
+      "lionsTotalYards": 185,
+      "eaglesPassRush": "3 sacks, 8 QB hits",
+      "eaglesCoverage": "15 incompletions forced",
+      "lionsThirdDowns": "1-of-13 (7.7%)",
+      "lionsFourthDowns": "0-of-4 (0%)"
+    },
+    "keyPlayers": {
+      "quinyonMitchell": {
+        "team": "Eagles",
+        "coverage": "Primary on St. Brown, 8 targets allowed, 1 catch",
+        "note": "Lockdown performance in slot, erased ARSB from game"
+      },
+      "cooperDeJean": {
+        "team": "Eagles",
+        "defense": "2 sacks, 3 QB hits",
+        "note": "Constant pressure on Goff disrupted timing routes"
+      },
+      "nakobeDean": {
+        "team": "Eagles",
+        "defense": "1 sack, 9 tackles, 2 TFLs",
+        "note": "Interior pressure collapsed pocket, forced quick throws"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "St. Brown targeted 3 times, 0 catches. Eagles coverage (Mitchell) suffocating. Goff pressured on every dropback. Lions offense stagnant - 0 points."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "St. Brown targeted 4 times, 1 catch for 16 yards. Lions managed FG (Jake Bates 28 yards) for only points of half. Halftime: Eagles 7, Lions 3. ARSB: 1 catch on 7 targets."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "St. Brown targeted 3 times, 1 catch for 26 yards (longest reception). Lions added FG (Bates 37 yards) to cut deficit to 13-6. Eagles defense dominated - Goff under constant duress."
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "St. Brown targeted 2 times, 0 catches. Lions offense completely shut down. Dan Campbell went 0-for-4 on fourth-down attempts in desperation. Final: 2 catches on 12 targets for ARSB."
+      }
+    ],
+    "whenMissed": "St. Brown was mathematically eliminated from hitting O7.5 with 8:42 remaining in 4th quarter when Lions turned ball over on downs (4th failed 4th-down attempt). At that point, ARSB had only 2 catches with not enough time/possessions remaining to get 6 more.",
+    "turningPoint": "Eagles defense's complete domination of Lions passing attack (Goff 18-of-33, 138 yards) destroyed St. Brown's prop. Quinyon Mitchell's lockdown slot coverage on ARSB (8 targets allowed, 1 catch in coverage) plus constant pass rush (3 sacks, 8 QB hits) made it impossible for Goff to get ball to St. Brown. Lions went 1-of-13 on third downs, killing offensive rhythm.",
+    "gamePace": "Extremely slow, defensive battle. Lions had only 46 offensive plays (vs Eagles 79). Time of possession destroyed: Lions 20:40 vs Eagles 39:20. Limited possessions meant fewer opportunities for St. Brown targets.",
+    "teamOffense": "Lions offense was completely shut down. Goff 18-of-33 for only 138 yards total. Entire team managed 185 total yards. Pass rush (3 sacks, 8 QB hits) and coverage (Mitchell lockdown on ARSB) created worst offensive performance of Lions season. Dan Campbell's 0-for-4 on fourth downs reflected desperation.",
+    "foulTrouble": "N/A"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Quinyon Mitchell Lockdown Performance",
+        "description": "Eagles rookie CB Mitchell shadowed St. Brown in slot and completely erased him. Of ARSB's 12 targets, 8 came with Mitchell in coverage - only 1 catch resulted. Mitchell's elite technique and physicality disrupted every route. Didn't anticipate rookie CB playing at All-Pro level."
+      },
+      {
+        "title": "Eagles Pass Rush Destroyed Timing",
+        "description": "Eagles generated 3 sacks and 8 QB hits on Goff. Constant interior pressure (Cooper DeJean, Nakobe Dean) collapsed pocket and forced quick throws before St. Brown could work open. Goff completed only 54.5% of passes (18-of-33) due to pressure."
+      },
+      {
+        "title": "Time of Possession Catastrophe",
+        "description": "Lions had ball only 20:40 vs Eagles 39:20 (34% vs 66%). Only 46 offensive plays total. Limited possessions meant fewer St. Brown targets. Eagles defense got off field constantly (Lions 1-of-13 on third downs)."
+      },
+      {
+        "title": "Dan Campbell's Fourth-Down Failures",
+        "description": "Lions went 0-for-4 on fourth-down attempts in desperation. These failed conversions killed drives and limited St. Brown opportunities. Aggressive playcalling backfired spectacularly, reducing overall offensive efficiency."
+      },
+      {
+        "title": "Complete Offensive Collapse",
+        "description": "Lions managed only 185 total yards and 9 points. Goff's 138 passing yards was season-low. When entire offense implodes, individual props suffer. St. Brown's 12 targets showed Goff tried to force him ball, but execution was impossible."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "2 catches was 6.4 below season average (8.4 rec/game). Worst receiving performance of ARSB's season. 16.7% catch rate vs season 73.2% catch rate - catastrophic decline.",
+      "vsRecentForm": "Last 3 games: 9, 8, 10 receptions. 2 receptions represented complete statistical anomaly. Missed by 5.5 catches (needed 6 more).",
+      "vsPropLine": "Missed 7.5 by 5.5 receptions. Worst beat of the night. 12 targets showed volume was there, but Eagles defense made catches impossible.",
+      "percentileRanking": "2 catches on 12 targets ranked in 2nd percentile for St. Brown's career games. Historical underperformance driven by elite opposing defense."
+    },
+    "wasNormalVariance": "No. This was not variance - this was elite defense executing perfect game plan. Quinyon Mitchell's slot coverage on St. Brown (1 catch on 8 targets in his coverage) represented lockdown performance, not bad luck. Eagles pass rush (3 sacks, 8 QB hits) was scheme and talent, not variance. Lions going 1-of-13 on third downs showed systematic offensive failure. St. Brown's 16.7% catch rate (2-of-12) reflected Eagles defensive dominance, not normal variance. Should have anticipated Eagles defense at home in primetime could shut down Lions passing attack. Fundamental misread of defensive matchup quality."
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -125,
+    "clvCents": 5,
+    "clvPercentage": 1.1,
+    "verdict": "Slight positive CLV but completely irrelevant. We bet at -120 and closing was -125, meaning we got better number. However, losing by 5.5 receptions makes CLV discussion moot. This wasn't a case of good bet with bad variance - this was wrong side entirely. Sharp money also hit ARSB over and was equally wrong. Eagles defense simply dominated beyond all projections."
+  },
+  "keyTakeaways": [
+    "Quinyon Mitchell's lockdown slot coverage (1 catch on 8 targets) erased St. Brown completely",
+    "Eagles pass rush (3 sacks, 8 QB hits) destroyed Lions timing routes and quick-game efficiency",
+    "Time of possession destroyed (20:40 vs 39:20) limited Lions to only 46 offensive plays",
+    "Lions' 1-of-13 third-down conversions killed offensive rhythm and St. Brown opportunities",
+    "Dan Campbell's 0-for-4 on fourth downs reflected desperation and reduced overall offensive possessions",
+    "St. Brown's 12 targets showed Goff tried to force him ball, but Eagles coverage made catches impossible",
+    "16.7% catch rate (2-of-12) vs season 73.2% showed systematic defensive disruption, not variance",
+    "Road primetime games against elite defenses carry massive variance risk for WR props",
+    "For quantitative operations: elite slot coverage (Mitchell) can completely erase high-volume receivers",
+    "When entire offense collapses (185 total yards, 9 points), individual props suffer regardless of volume",
+    "Lesson: fade WR props when elite defense at home in primetime can control game pace and coverage",
+    "Rookie CBs (Mitchell) playing at All-Pro level represent unpredictable defensive wildcards"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Fundamental misread of defensive matchup and game environment. St. Brown caught only 2 passes on 12 targets (16.7% catch rate), missing 7.5 by 5.5 receptions. While targets showed Goff tried to involve him, Eagles defense (Quinyon Mitchell slot coverage, pass rush dominance) made catches impossible. Mitchell shadowed ARSB and allowed only 1 catch on 8 targets in his coverage - elite lockdown performance I didn't anticipate from rookie CB. Eagles pass rush (3 sacks, 8 QB hits) destroyed timing routes. Lions' catastrophic time of possession (20:40 vs 39:20) and third-down failures (1-of-13) limited overall opportunities. This wasn't variance - this was elite defense executing perfect game plan at home in primetime. Should have weighted Eagles defensive dominance and home-field advantage more heavily. Betting high-volume WRs against elite defenses in hostile environments carries massive risk. Would not make this bet under identical circumstances - wrong side entirely."
+}

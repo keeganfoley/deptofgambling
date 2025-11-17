@@ -1,0 +1,6230 @@
+{
+  "game": {
+    "id": "6d209e0e637f3b116ec958e0634f2a02",
+    "sport_key": "americanfootball_nfl",
+    "sport_title": "NFL",
+    "commence_time": "2025-11-17T01:20:00Z",
+    "home_team": "Philadelphia Eagles",
+    "away_team": "Detroit Lions",
+    "bookmakers": [
+      {
+        "key": "draftkings",
+        "title": "DraftKings",
+        "last_update": "2025-11-16T23:08:10Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:10Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 130
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -155
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:10Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -118,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:10Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "williamhill_us",
+        "title": "Caesars",
+        "last_update": "2025-11-16T23:06:14Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:06:14Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 125
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -150
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:06:14Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -118,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:06:14Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -112,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -108,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanduel",
+        "title": "FanDuel",
+        "last_update": "2025-11-16T23:08:20Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 126
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -148
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -104,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -118,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "mybookieag",
+        "title": "MyBookie.ag",
+        "last_update": "2025-11-16T23:08:35Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 127
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -155
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -120,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betus",
+        "title": "BetUS",
+        "last_update": "2025-11-16T23:08:07Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 125
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -145
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -120,
+                "point": 3
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": 100,
+                "point": -3
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "lowvig",
+        "title": "LowVig.ag",
+        "last_update": "2025-11-16T23:08:34Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 125
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -145
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 106,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -117,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:34Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -107,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -107,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betonlineag",
+        "title": "BetOnline.ag",
+        "last_update": "2025-11-16T23:08:20Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 125
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -145
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -120,
+                "point": 3
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": 100,
+                "point": -3
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betrivers",
+        "title": "BetRivers",
+        "last_update": "2025-11-16T23:08:20Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 123
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -155
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -106,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -121,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -109,
+                "point": 47
+              },
+              {
+                "name": "Under",
+                "price": -117,
+                "point": 47
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "fanatics",
+        "title": "Fanatics",
+        "last_update": "2025-11-16T23:08:07Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 130
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -155
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -120,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:07Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "betmgm",
+        "title": "BetMGM",
+        "last_update": "2025-11-16T23:08:20Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 118
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -140
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": -102,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -118,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:20Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -105,
+                "point": 47
+              },
+              {
+                "name": "Under",
+                "price": -115,
+                "point": 47
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "key": "bovada",
+        "title": "Bovada",
+        "last_update": "2025-11-16T23:08:36Z",
+        "markets": [
+          {
+            "key": "h2h",
+            "last_update": "2025-11-16T23:08:36Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 125
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -145
+              }
+            ]
+          },
+          {
+            "key": "spreads",
+            "last_update": "2025-11-16T23:08:36Z",
+            "outcomes": [
+              {
+                "name": "Detroit Lions",
+                "price": 100,
+                "point": 2.5
+              },
+              {
+                "name": "Philadelphia Eagles",
+                "price": -120,
+                "point": -2.5
+              }
+            ]
+          },
+          {
+            "key": "totals",
+            "last_update": "2025-11-16T23:08:36Z",
+            "outcomes": [
+              {
+                "name": "Over",
+                "price": -110,
+                "point": 46.5
+              },
+              {
+                "name": "Under",
+                "price": -110,
+                "point": 46.5
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "playerProps": {
+    "player_pass_tds": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -121,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 108,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -137,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -102,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -130,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -102,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -130,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -116,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 102,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -128,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 102,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -132,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -101,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -128,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -121,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 102,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -134,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -105,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -125,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -118,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_pass_tds",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 100,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -130,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_pass_yds": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -112,
+                  "point": 241.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -112,
+                  "point": 241.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 204.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 204.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 242.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -114,
+                  "point": 242.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -111,
+                  "point": 207.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -121,
+                  "point": 207.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -112,
+                  "point": 241.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -112,
+                  "point": 241.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 205.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 205.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 209.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 209.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 244.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -112,
+                  "point": 244.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -117,
+                  "point": 236.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -114,
+                  "point": 236.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 205.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -117,
+                  "point": 205.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -120,
+                  "point": 205.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 205.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 235.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 235.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 213.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 213.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 246.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 246.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_pass_yds",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 205.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 205.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 244.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -115,
+                  "point": 244.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_rush_yds": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -110,
+                  "point": 62.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114,
+                  "point": 62.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -108,
+                  "point": 39.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -116,
+                  "point": 39.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 30.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -111,
+                  "point": 30.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -105,
+                  "point": 9.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -120,
+                  "point": 9.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 122,
+                  "point": 0.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -154,
+                  "point": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -115,
+                  "point": 8.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -115,
+                  "point": 8.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -120,
+                  "point": 61.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 61.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 29.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -121,
+                  "point": 29.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -118,
+                  "point": 39.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -113,
+                  "point": 39.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -117,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -113,
+                  "point": 70.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 28.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 28.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -112,
+                  "point": 8.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -112,
+                  "point": 8.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 60.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 60.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 118,
+                  "point": 0.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -150,
+                  "point": 0.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -112,
+                  "point": 40.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -112,
+                  "point": 40.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -118,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 29.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 29.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114,
+                  "point": 62.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114,
+                  "point": 62.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -112,
+                  "point": 8.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -115,
+                  "point": 8.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -114,
+                  "point": 39.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -114,
+                  "point": 39.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 29.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 29.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -117,
+                  "point": 71.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -114,
+                  "point": 71.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -118,
+                  "point": 61.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -113,
+                  "point": 61.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -112,
+                  "point": 40.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -118,
+                  "point": 40.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -118,
+                  "point": 8.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -112,
+                  "point": 8.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -120,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -120,
+                  "point": 60.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -110,
+                  "point": 60.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -105,
+                  "point": 40.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -125,
+                  "point": 40.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 30.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 30.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": 105,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -140,
+                  "point": 10.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -118,
+                  "point": 37.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 37.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -118,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -118,
+                  "point": 60.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -110,
+                  "point": 60.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 30.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -118,
+                  "point": 30.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Will Shipley",
+                  "price": -125,
+                  "point": 5.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Will Shipley",
+                  "price": -105,
+                  "point": 5.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": 100,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -130,
+                  "point": 10.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_rush_yds",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 40.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -120,
+                  "point": 40.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115,
+                  "point": 60.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115,
+                  "point": 60.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 28.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 28.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 110,
+                  "point": 0.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -145,
+                  "point": 0.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 70.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -120,
+                  "point": 70.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Tank Bigsby",
+                  "price": -110,
+                  "point": 8.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Tank Bigsby",
+                  "price": -120,
+                  "point": 8.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_receptions": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 117,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -149,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -116,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -115,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -111,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -163,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": 127,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -137,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 108,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 114,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -146,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -102,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 134,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -172,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -187,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": 145,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -131,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 102,
+                  "point": 1.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -112,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -118,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -170,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 115,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -137,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": 100,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -136,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 101,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 110,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -145,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -190,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": 135,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -162,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -132,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -102,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 130,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -185,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 109,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -145,
+                  "point": 3.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 104,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -132,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 136,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -174,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -122,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -104,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -108,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -118,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -134,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 106,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 106,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -134,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": 152,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -196,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -128,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": 100,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -134,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 106,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 124,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -158,
+                  "point": 4.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 107,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -139,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -128,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -101,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -156,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -108,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -130,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": 100,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 107,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -139,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -149,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 115,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -130,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 101,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 136,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -179,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": 152,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -200,
+                  "point": 2.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 123,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -165,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 102,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -136,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": 107,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -141,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -137,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 104,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 106,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -141,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -167,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": 125,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 125,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -167,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -137,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 104,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -127,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -105,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -124,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -107,
+                  "point": 4.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -140,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 105,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": 170,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -245,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 105,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -140,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 100,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -135,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -165,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -135,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": 100,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -125,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -105,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 130,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -180,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": 155,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -220,
+                  "point": 2.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -120,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -150,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 115,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -135,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": 100,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -105,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 110,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -145,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": 105,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -140,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 115,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -155,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 110,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -150,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -185,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": 140,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 145,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -200,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -165,
+                  "point": 0.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": 130,
+                  "point": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_receptions",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": 100,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -130,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 105,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -135,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": 135,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -180,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": 120,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -160,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -120,
+                  "point": 1.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 1.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -135,
+                  "point": 4.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": 105,
+                  "point": 4.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": 120,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -160,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -150,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": 115,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": 155,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -210,
+                  "point": 2.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Sam LaPorta",
+                  "price": -150,
+                  "point": 3.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Sam LaPorta",
+                  "price": 115,
+                  "point": 3.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 2.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -105,
+                  "point": 2.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_reception_yds": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -114,
+                  "point": 76.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -110,
+                  "point": 76.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -112,
+                  "point": 63.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -112,
+                  "point": 63.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -112,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -112,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -114,
+                  "point": 54.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -110,
+                  "point": 54.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -114,
+                  "point": 36.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -110,
+                  "point": 36.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -113,
+                  "point": 21.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -111,
+                  "point": 21.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -116,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -108,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -113,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -111,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -115,
+                  "point": 14.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -109,
+                  "point": 14.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -114,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -108,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -116,
+                  "point": 7.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -120,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -125,
+                  "point": 62.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -108,
+                  "point": 62.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -125,
+                  "point": 57.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -108,
+                  "point": 57.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -121,
+                  "point": 77.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -112,
+                  "point": 77.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -125,
+                  "point": 54.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -108,
+                  "point": 54.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -114,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -115,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -120,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -112,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -117,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -113,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 22.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -120,
+                  "point": 37.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -112,
+                  "point": 37.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -120,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -113,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -112,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -112,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 21.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 21.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -112,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -112,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -112,
+                  "point": 57.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -112,
+                  "point": 57.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -112,
+                  "point": 62.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -112,
+                  "point": 62.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -112,
+                  "point": 53.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -112,
+                  "point": 53.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -112,
+                  "point": 77.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -112,
+                  "point": 77.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -112,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -112,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -112,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -112,
+                  "point": 37.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -112,
+                  "point": 37.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -112,
+                  "point": 11.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -112,
+                  "point": 11.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:07:57Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -116,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -111,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -123,
+                  "point": 21.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -105,
+                  "point": 21.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -116,
+                  "point": 37.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -111,
+                  "point": 37.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -114,
+                  "point": 77.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -114,
+                  "point": 77.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -114,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -114,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -122,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -106,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -109,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -119,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -119,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -109,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -116,
+                  "point": 11.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -111,
+                  "point": 11.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -120,
+                  "point": 64.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -108,
+                  "point": 64.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -114,
+                  "point": 59.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -114,
+                  "point": 59.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -115,
+                  "point": 61.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -115,
+                  "point": 61.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -117,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114,
+                  "point": 22.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 38.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 38.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -114,
+                  "point": 78.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -117,
+                  "point": 78.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -117,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -114,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -113,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -118,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -117,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -114,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -115,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -115,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -115,
+                  "point": 58.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -115,
+                  "point": 58.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -120,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -117,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -114,
+                  "point": 16.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -135,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": 100,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -105,
+                  "point": 60.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -125,
+                  "point": 60.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -125,
+                  "point": 20.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -105,
+                  "point": 20.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -125,
+                  "point": 35.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -105,
+                  "point": 35.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -125,
+                  "point": 50.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -105,
+                  "point": 50.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -115,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -115,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 80.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 80.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -135,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": 100,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": 135,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -185,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -115,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -115,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -115,
+                  "point": 65.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -115,
+                  "point": 65.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -118,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -118,
+                  "point": 9.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 9.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 38.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 38.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -118,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -110,
+                  "point": 22.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -110,
+                  "point": 58.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -118,
+                  "point": 58.5
+                },
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -115,
+                  "point": 59.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -118,
+                  "point": 59.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -115,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": -115,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -118,
+                  "point": 5.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -110,
+                  "point": 5.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -115,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -115,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": -120,
+                  "point": 18.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -110,
+                  "point": 18.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 82.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 82.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Grant Calcaterra",
+                  "price": -105,
+                  "point": 0.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Grant Calcaterra",
+                  "price": -125,
+                  "point": 0.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_reception_yds",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "AJ Brown",
+                  "price": -120,
+                  "point": 61.5
+                },
+                {
+                  "name": "Under",
+                  "description": "AJ Brown",
+                  "price": -110,
+                  "point": 61.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 79.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Amon-Ra St. Brown",
+                  "price": -115,
+                  "point": 79.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Brock Wright",
+                  "price": -130,
+                  "point": 15.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Brock Wright",
+                  "price": 100,
+                  "point": 15.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 37.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Dallas Goedert",
+                  "price": -115,
+                  "point": 37.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -115,
+                  "point": 11.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -115,
+                  "point": 11.5
+                },
+                {
+                  "name": "Over",
+                  "description": "DeVonta Smith",
+                  "price": -120,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "DeVonta Smith",
+                  "price": -110,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahan Dotson",
+                  "price": -125,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahan Dotson",
+                  "price": -105,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -130,
+                  "point": 21.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": 100,
+                  "point": 21.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jameson Williams",
+                  "price": -110,
+                  "point": 56.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jameson Williams",
+                  "price": -120,
+                  "point": 56.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Kalif Raymond",
+                  "price": 100,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Kalif Raymond",
+                  "price": -130,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -115,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -115,
+                  "point": 16.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_pass_attempts": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -120,
+                  "point": 31.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -106,
+                  "point": 31.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -116,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -106,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -122,
+                  "point": 32.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -113,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -115,
+                  "point": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -123,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 26.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -109,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -119,
+                  "point": 32.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -103,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -130,
+                  "point": 32.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -112,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -120,
+                  "point": 26.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 26.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -105,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -125,
+                  "point": 32.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -118,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 26.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -110,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -120,
+                  "point": 32.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_pass_attempts",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -135,
+                  "point": 26.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": 105,
+                  "point": 26.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -110,
+                  "point": 32.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -120,
+                  "point": 32.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_pass_completions": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -118,
+                  "point": 21.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -108,
+                  "point": 21.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -119,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -107,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": -104,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -122,
+                  "point": 22.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -120,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -106,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -103,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 100,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -130,
+                  "point": 22.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -122,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 100,
+                  "point": 22.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 105,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -140,
+                  "point": 22.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -118,
+                  "point": 18.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -110,
+                  "point": 18.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 100,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -135,
+                  "point": 22.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_pass_completions",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -130,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": 100,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jared Goff",
+                  "price": 105,
+                  "point": 22.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jared Goff",
+                  "price": -135,
+                  "point": 22.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_rush_attempts": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -124,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -103,
+                  "point": 16.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": 105,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -134,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -104,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -123,
+                  "point": 7.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -106,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -160,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": 120,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -102,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -130,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -118,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -112,
+                  "point": 13.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -102,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -127,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": 100,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -130,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -111,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -116,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -114,
+                  "point": 7.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -110,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -124,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -120,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": 105,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -140,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -105,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -125,
+                  "point": 7.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 16.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -105,
+                  "point": 16.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -110,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -118,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -145,
+                  "point": 9.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": 110,
+                  "point": 9.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -110,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -120,
+                  "point": 17.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": 100,
+                  "point": 7.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": -135,
+                  "point": 7.5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_rush_attempts",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Over",
+                  "description": "David Montgomery",
+                  "price": -105,
+                  "point": 10.5
+                },
+                {
+                  "name": "Under",
+                  "description": "David Montgomery",
+                  "price": -125,
+                  "point": 10.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jahmyr Gibbs",
+                  "price": -105,
+                  "point": 13.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jahmyr Gibbs",
+                  "price": -125,
+                  "point": 13.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Jalen Hurts",
+                  "price": -185,
+                  "point": 6.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Jalen Hurts",
+                  "price": 140,
+                  "point": 6.5
+                },
+                {
+                  "name": "Over",
+                  "description": "Saquon Barkley",
+                  "price": -105,
+                  "point": 17.5
+                },
+                {
+                  "name": "Under",
+                  "description": "Saquon Barkley",
+                  "price": -125,
+                  "point": 17.5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "player_anytime_td": {
+      "id": "6d209e0e637f3b116ec958e0634f2a02",
+      "sport_key": "americanfootball_nfl",
+      "sport_title": "NFL",
+      "commence_time": "2025-11-17T01:20:00Z",
+      "home_team": "Philadelphia Eagles",
+      "away_team": "Detroit Lions",
+      "bookmakers": [
+        {
+          "key": "draftkings",
+          "title": "DraftKings",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:30Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -120
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": -105
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 115
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 130
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 145
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 165
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 175
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 180
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 215
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 295
+                },
+                {
+                  "name": "Yes",
+                  "description": "Philadelphia Eagles D/ST",
+                  "price": 550
+                },
+                {
+                  "name": "Yes",
+                  "description": "Detroit Lions D/ST",
+                  "price": 550
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 650
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 950
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 950
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jackson Meeks",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tom Kennedy",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 3500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 4500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "williamhill_us",
+          "title": "Caesars",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:15Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -121
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": -103
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 114
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 145
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 161
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 164
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 177
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 210
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 305
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 625
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 1800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 1900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 2300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 2500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 2600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 2600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 2600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 3300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 3500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanduel",
+          "title": "FanDuel",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:41Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -115
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": 100
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 115
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 150
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 180
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 210
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 290
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 650
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 650
+                },
+                {
+                  "name": "Yes",
+                  "description": "Philadelphia Eagles Defense",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Detroit Lions Defense",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 950
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 2700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 2700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 2700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 4500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 4500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betonlineag",
+          "title": "BetOnline.ag",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:11Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 290
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 1900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 120
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 110
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 600
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 140
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 180
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1000
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 160
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 210
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -125
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": -111
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 2900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 2900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 1900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 650
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 3400
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Dillon",
+                  "price": 1400
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betrivers",
+          "title": "BetRivers",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:07:47Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 155
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 104
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 190
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 1900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 2500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 1050
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1050
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 1000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 185
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 750
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 850
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 3000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 2400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 1900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 123
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1400
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 140
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": -115
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -132
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 1500
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "fanatics",
+          "title": "Fanatics",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:03Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "No Scorer",
+                  "price": 4500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": 100
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 190
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 155
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 115
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 175
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 1700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 660
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 740
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 700
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 1800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 1300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Philadelphia Eagles D/ST",
+                  "price": 470
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 1500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 580
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 550
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 1600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 295
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 210
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 1600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -130
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 1800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 2500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Detroit Lions D/ST",
+                  "price": 470
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Dillon",
+                  "price": 1050
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tom Kennedy",
+                  "price": 1500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jackson Meeks",
+                  "price": 1300
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "betmgm",
+          "title": "BetMGM",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:08:35Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -130
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": -105
+                },
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 145
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 155
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 165
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 175
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 225
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 320
+                },
+                {
+                  "name": "Yes",
+                  "description": "Philadelphia Eagles D/ST",
+                  "price": 575
+                },
+                {
+                  "name": "Yes",
+                  "description": "Detroit Lions D/ST",
+                  "price": 625
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 650
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 850
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 950
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 950
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 1200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 1200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 3300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 3300
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 3500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 3500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 4000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 5000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 6600
+                },
+                {
+                  "name": "Yes",
+                  "description": "No Touchdown",
+                  "price": 15000
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "key": "bovada",
+          "title": "Bovada",
+          "markets": [
+            {
+              "key": "player_anytime_td",
+              "last_update": "2025-11-16T23:07:45Z",
+              "outcomes": [
+                {
+                  "name": "Yes",
+                  "description": "Amon-Ra St. Brown",
+                  "price": 125
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jacob Saylors",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Will Shipley",
+                  "price": 1400
+                },
+                {
+                  "name": "Yes",
+                  "description": "Tank Bigsby",
+                  "price": 825
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jared Goff",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jameson Williams",
+                  "price": 210
+                },
+                {
+                  "name": "Yes",
+                  "description": "Grant Calcaterra",
+                  "price": 900
+                },
+                {
+                  "name": "Yes",
+                  "description": "Sione Vaki",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dominic Lovett",
+                  "price": 4000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kylen Granson",
+                  "price": 2500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Philadelphia Eagles D/ST",
+                  "price": 625
+                },
+                {
+                  "name": "Yes",
+                  "description": "David Montgomery",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "Saquon Barkley",
+                  "price": 100
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jalen Hurts",
+                  "price": 120
+                },
+                {
+                  "name": "Yes",
+                  "description": "Darius Cooper",
+                  "price": 2000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Brock Wright",
+                  "price": 275
+                },
+                {
+                  "name": "Yes",
+                  "description": "Craig Reynolds",
+                  "price": 2200
+                },
+                {
+                  "name": "Yes",
+                  "description": "Kalif Raymond",
+                  "price": 525
+                },
+                {
+                  "name": "Yes",
+                  "description": "Dallas Goedert",
+                  "price": 180
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahan Dotson",
+                  "price": 800
+                },
+                {
+                  "name": "Yes",
+                  "description": "DeVonta Smith",
+                  "price": 170
+                },
+                {
+                  "name": "Yes",
+                  "description": "AJ Brown",
+                  "price": 150
+                },
+                {
+                  "name": "Yes",
+                  "description": "Detroit Lions D/ST",
+                  "price": 800
+                },
+                {
+                  "name": "Yes",
+                  "description": "Xavier Gipson",
+                  "price": 4000
+                },
+                {
+                  "name": "Yes",
+                  "description": "Jahmyr Gibbs",
+                  "price": -114
+                },
+                {
+                  "name": "Yes",
+                  "description": "Cameron Latu",
+                  "price": 2500
+                },
+                {
+                  "name": "Yes",
+                  "description": "Ross Dwelley",
+                  "price": 600
+                },
+                {
+                  "name": "Yes",
+                  "description": "Isaac TeSlaa",
+                  "price": 600
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

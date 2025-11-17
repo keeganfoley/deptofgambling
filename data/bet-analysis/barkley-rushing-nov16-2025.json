@@ -1,0 +1,149 @@
+{
+  "slug": "barkley-rushing-nov16-2025",
+  "player": "Saquon Barkley",
+  "line": "O78.5 Rush Yards",
+  "odds": -110,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "83 rushing yards on 26 carries",
+  "profit": 181.82,
+  "gameDetails": {
+    "matchup": "Detroit Lions @ Philadelphia Eagles",
+    "date": "November 16, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lincoln Financial Field, Philadelphia, PA",
+    "finalScore": "Eagles 16, Lions 9"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 20,
+    "estimatedProbability": 60,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Barkley hitting O78.5 in 7 of last 10 games (70%)",
+      "seasonAverage": "112.8 rushing yards per game (4th in NFL)",
+      "last3Games": "125, 107, 98 rushing yards (avg 110 YPG)",
+      "cushion": "34.3-yard cushion over line (112.8 avg vs 78.5 line)"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Volume and Efficiency",
+        "description": "Barkley averaging 22.4 carries/game, 5.04 YPC. Eagles offense built around establishing run game. Sunday Night Football primetime stage with NFC playoff implications means Eagles will lean heavily on Barkley to control clock and wear down Lions front seven."
+      },
+      {
+        "title": "Lions Run Defense Vulnerability",
+        "description": "Detroit allowing 118.6 rush YPG (21st in NFL). Missing key defensive tackle Alim McNeill (IR). Eagles offensive line (Lane Johnson, Jason Kelce dominant) creates massive running lanes. Expected Barkley to get 90+ yards against depleted Lions interior."
+      },
+      {
+        "title": "Game Script Favors Ground Game",
+        "description": "Eagles expected to play possession football in primetime home game. Controlling time of possession and keeping Lions offense (Jared Goff, Amon-Ra St. Brown) off field is key strategy. Barkley will see 24-28 carries."
+      },
+      {
+        "title": "Home Field Advantage at Linc",
+        "description": "Eagles 6-1 at home this season, averaging 142.6 rush YPG at Lincoln Financial Field. Barkley thrives in primetime - 3 100+ yard games in SNF/MNF this year. Hostile crowd energy fuels Eagles ground attack."
+      }
+    ],
+    "riskFactors": [
+      "Lions defensive front (Aidan Hutchinson, Josh Paschal) capable of pressuring run lanes",
+      "If Eagles fall behind early, could abandon run game for passing attack",
+      "Jalen Hurts' rushing attempts (avg 8 carries/game) steal some designed runs",
+      "Kenneth Gainwell vultures goal-line carries (3 rush TDs this season)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushingYards": 83,
+      "carries": 26,
+      "yardsPerCarry": 3.2,
+      "longestRush": "14 yards",
+      "rushingTDs": 0,
+      "receptions": 3,
+      "receivingYards": 24,
+      "targets": 4
+    },
+    "teamStats": {
+      "eaglesTotalRushYards": 122,
+      "eaglesTotalPassYards": 135,
+      "eaglesTimeOfPossession": "39:20",
+      "lionsTimeOfPossession": "20:40",
+      "eaglesFirstDowns": 17,
+      "lionsFirstDowns": 11,
+      "eaglesThirdDownConversions": "6-16 (37.5%)",
+      "lionsThirdDownConversions": "1-13 (7.7%)"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Eagles 0, Lions 0",
+        "description": "Defensive battle early. Barkley had 6 carries for 18 yards in Q1 as both defenses dominated. Eagles established run-first mentality immediately."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Eagles 7, Lions 3",
+        "description": "Barkley added 7 carries for 21 yards in Q2. Hurts scored lone TD on 1-yard QB sneak with 16 seconds left in half. Halftime: Eagles 7, Lions 3. Barkley at 13 carries, 39 yards at half - on pace for 78 yards."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Eagles 6, Lions 3",
+        "description": "Two Eagles field goals (Jake Elliott 28 and 41 yards). Barkley had 6 carries for 22 yards in Q3 as Eagles controlled possession. Score: Eagles 13, Lions 6 after three."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Eagles 3, Lions 3",
+        "description": "Barkley finished with 7 carries for 22 yards in Q4. Eagles added FG (Elliott 23 yards) for 16-9 final. Barkley's volume (26 carries) carried him over 78.5 despite low YPC (3.2)."
+      }
+    ],
+    "whenCleared": "Barkley cleared 78.5 with 3:14 remaining in 4th quarter on 8-yard run up middle to Eagles 42-yard line. Final tally: 83 yards on 26 carries, clearing line by 4.5 yards.",
+    "turningPoint": "Eagles defense shutting down Lions offense forced game script to favor run-heavy approach. Eagles controlled TOP 39:20 to 20:40, creating massive volume for Barkley. Despite low 3.2 YPC, sheer carries (26) pushed him over.",
+    "gamePace": "Extremely slow, defensive slugfest. Eagles ran 79 offensive plays vs Lions' 46 plays. Possession domination created ideal Barkley volume environment. Low-scoring (16-9) meant every yard mattered.",
+    "teamOffense": "Eagles rushed 45 times for 122 yards (2.7 YPC - poor efficiency). Passed only 28 times for 135 yards (Hurts 14-of-28). Run-first approach despite inefficiency. Barkley got 26 of 45 team rush attempts (57.8% share)."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Massive Volume Overcame Low Efficiency",
+        "description": "Barkley's 26 carries provided enough volume to hit 78.5 despite poor 3.2 YPC. Eagles committed to run despite inefficiency. Workhorse back got his touches."
+      },
+      {
+        "title": "Time of Possession Dominance",
+        "description": "Eagles controlled ball 39:20 vs Lions 20:40 (66% vs 34%). This extreme TOP advantage created ideal script for Barkley volume. 79 offensive plays vs 46 for Lions."
+      },
+      {
+        "title": "Defensive Game Script",
+        "description": "Eagles defense shut down Lions offense (9 points total). This forced Eagles to stick with run game to control clock. Lions went 1-of-13 on third downs (7.7%), Eagles kept ball all game."
+      },
+      {
+        "title": "Covered Despite Underperformance",
+        "description": "Barkley's 83 yards on 26 carries (3.2 YPC) was well below his 5.04 YPC season average. Still cleared 78.5 by 4.5 yards. Volume bet paid off even with efficiency decline."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "83 yards was 29.8 below season average (112.8 YPG). Efficiency (3.2 YPC) significantly worse than season norm (5.04 YPC). Volume saved the day.",
+      "vsRecentForm": "Last 3 games: 125, 107, 98 yards. 83 yards represented worst output in last 4 games. Still cleared prop line comfortably.",
+      "vsPropLine": "Cleared 78.5 by 4.5 yards. 26 carries was above season average (22.4). Volume compensated for poor YPC.",
+      "percentileRanking": "83 yards ranked in 35th percentile for Barkley's 2025 games. Poor performance by his standards, but still hit prop."
+    },
+    "wasNormalVariance": "Partially. Barkley's 3.2 YPC vs season 5.04 YPC represents underperformance, but Lions defensive game plan (stacking box, daring Hurts to pass) created tough running lanes. Eagles offensive line struggled to create push. However, defensive game script (Lions scored only 9) forced Eagles into run-heavy approach regardless of efficiency. Volume bet thesis held up despite execution variance."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Slight positive CLV. Line opened at O78.5 (-110) and moved to O78.5 (-115) as sharp money hit the over. We got -110 before it moved to -115, saving 5 cents of juice. The fact that sharp money also hit Barkley over validates our handicapping."
+  },
+  "keyTakeaways": [
+    "Volume betting works even when efficiency fails - 26 carries overcame 3.2 YPC",
+    "Time of possession advantage (39:20 vs 20:40) created ideal RB prop environment",
+    "Eagles defense shutting down Lions (9 points) forced run-heavy game script",
+    "Barkley cleared 78.5 despite worst YPC game in month - workhorse backs get volume",
+    "Sunday Night Football at Linc lived up to billing - Eagles controlled tempo throughout",
+    "Low-scoring games (16-9) still produce RB volume when team dominates possession",
+    "Barkley's 57.8% rush attempt share (26 of 45) validated workhorse status",
+    "For quantitative operations: defensive game scripts favor workhorse RB props via volume",
+    "Even when RB underperforms efficiency metrics, elite backs hit volume-based props",
+    "Cleared line with 3:14 left in 4th quarter - never in doubt despite low YPC"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sound process producing expected results despite execution variance. Barkley's 26 carries and 83 yards cleared 78.5 comfortably (+4.5). While his 3.2 YPC was well below season average (5.04), the volume thesis held perfectly. Eagles controlled time of possession (39:20 vs 20:40), ran 79 plays vs Lions' 46, and committed to ground game despite inefficiency. Defensive game script (Lions scored only 9) forced Eagles into run-heavy approach exactly as anticipated. Barkley got 57.8% of team rush attempts (26 of 45), validating workhorse back thesis. This represents proper handicapping: identified volume opportunity, bet it, watched volume deliver despite efficiency decline. Would make this bet 100 times out of 100 under identical circumstances. Elite backs hit volume-based props even when efficiency falters."
+}
