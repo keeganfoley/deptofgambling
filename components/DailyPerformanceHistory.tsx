@@ -34,7 +34,7 @@ const STARTING_BALANCE = 10000;
 
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
-  const [filter, setFilter] = useState<FilterType>('all');
+  const [filter, setFilter] = useState<FilterType>('7');
   const sectionRef = useRef<HTMLElement>(null);
 
   // Group bets by day and calculate daily stats
