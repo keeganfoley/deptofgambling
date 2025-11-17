@@ -10,7 +10,7 @@
 ## 🎯 FINAL PICKS - 5 UNITS TOTAL
 
 ### 1️⃣ **TOP PLAY - 2 UNITS**
-**Saquon Barkley OVER 78.5 Rush Yards @ -110** (Fanatics)
+**Saquon Barkley OVER 70.5 Rush Yards @ -110** (Fanatics)
 - **Edge: 15.6% | EV: +29.8%**
 - **Confidence: SUPER HIGH** (but not "100%" - Lions are 8-1 for a reason)
 - Lions rank **25th in rush defense** (4.7 YPC allowed)
@@ -54,7 +54,7 @@
 ## 🎲 ACTUAL BETS PLACED: 5 UNITS TOTAL
 
 **Final Card:**
-- 2U Saquon O78.5 @ -110
+- 2U Saquon O70.5 @ -110
 - 2U St. Brown O7.5 @ -120
 - 1U Hurts O30.5 @ -105
 
@@ -71,7 +71,7 @@ All three plays have **10%+ mathematical edge**. The unit sizing properly reflec
 
 ## ⚠️ WHAT COULD GO WRONG
 
-1. **Saquon:** Eagles up 35-10, bench him at halftime (he'd need 78.5 in 2 quarters - possible but tight)
+1. **Saquon:** Eagles up 35-10, bench him at halftime (he'd need 70.5 in 2 quarters - possible but tight)
 2. **St. Brown:** Jameson Williams goes nuclear, steals targets (unlikely - St. Brown is Goff's binky)
 3. **Hurts:** Eagles decide to be pocket passers all game (hasn't happened all year)
 
