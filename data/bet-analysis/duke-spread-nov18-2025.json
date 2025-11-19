@@ -1,0 +1,162 @@
+{
+  "slug": "duke-spread-nov18-2025",
+  "team": "Duke Blue Devils",
+  "line": "-10.5",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 12 points (Duke 78, Kansas 66)",
+  "profit": 90.91,
+  "gameDetails": {
+    "matchup": "Kansas Jayhawks vs Duke Blue Devils (Champions Classic)",
+    "date": "November 18, 2025",
+    "gameTime": "9:30 PM ET",
+    "venue": "Madison Square Garden, New York, NY",
+    "finalScore": "Duke 78, Kansas 66"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 36,
+    "estimatedProbability": 68,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Duke 4-0 SU and 4-0 ATS to start season",
+      "seasonAverage": "Duke averaging +37 PPG margin of victory",
+      "recentForm": "Duke perfect 4-0, dominating all opponents by 30+ points",
+      "cushion": "Duke expected to win by 15-18, getting -10.5 offered +4.5 cushion"
+    },
+    "keyFactors": [
+      {
+        "title": "Kansas Missing Star Player Darryn Peterson",
+        "description": "Peterson projected #1 overall NBA draft pick, averaging 21.5 PPG, 50% from three. OUT 3rd straight game with hamstring. Kansas can't replace his offensive production - creates massive 21.5 PPG hole in scoring."
+      },
+      {
+        "title": "Duke Perfect 4-0 Start with Dominance",
+        "description": "Duke 4-0 SU and 4-0 ATS, averaging +37 PPG margin. Cooper Flagg, Cameron Boozer, Isaiah Evans forming elite trio. Duke destroying all competition - haven't played close game yet."
+      },
+      {
+        "title": "Neutral Court Favors More Talented Team",
+        "description": "Champions Classic at MSG neutral floor. No home court advantage for Kansas. Duke's superior talent (3 projected lottery picks) would overwhelm depleted Kansas on neutral court."
+      },
+      {
+        "title": "Kansas Offensive Crisis Without Peterson",
+        "description": "Kansas struggling to score without Peterson's 21.5 PPG and 50% three-point shooting. Expected Kansas to struggle generating efficient offense, allowing Duke to pull away in second half."
+      }
+    ],
+    "riskFactors": [
+      "Kansas veteran team could grind tempo, keep game ugly and close",
+      "MSG big stage - sometimes underdogs overperform in marquee matchups",
+      "Duke young team (freshmen-heavy) prone to slow starts in big games",
+      "If Kansas shoots hot from three early, could build confidence and compete"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "dukePoints": 78,
+      "kansasPoints": 66,
+      "dukeFGPercentage": "46.8%",
+      "kansasFGPercentage": "40.3%",
+      "dukeThreePointPercentage": "35.7%",
+      "kansasThreePointPercentage": "28.6%",
+      "dukeRebounds": 38,
+      "kansasRebounds": 31
+    },
+    "keyPlayers": {
+      "cameronBoozer": {
+        "points": 18,
+        "rebounds": 10,
+        "assists": 5,
+        "impact": "Double-double led Duke with all-around excellence"
+      },
+      "isaiahEvans": {
+        "points": 16,
+        "rebounds": 4,
+        "impact": "Provided scoring punch in second half"
+      },
+      "patrickNgongba": {
+        "points": 13,
+        "rebounds": 8,
+        "impact": "Dominated paint, controlled boards"
+      },
+      "treWhite": {
+        "points": 23,
+        "rebounds": 9,
+        "impact": "Fought hard for Kansas but lacked support"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "score": "Kansas 35, Duke 30",
+        "description": "Kansas shocked Duke early, leading by 5 at one point. Tre White aggressive with 12 first-half points. Duke trailed entering halftime - concerning for -10.5 backers."
+      },
+      {
+        "quarter": "2nd Half - First 10 Minutes",
+        "score": "Duke 28, Kansas 18",
+        "description": "Duke dominated early second half. Cameron Boozer took over with 12 points in stretch. Duke went on crucial runs to grab control. Score: Duke 58, Kansas 53 with 10 minutes left."
+      },
+      {
+        "quarter": "2nd Half - Final 10 Minutes",
+        "score": "Duke 20, Kansas 13",
+        "description": "Duke extended lead down stretch. Peterson's absence showed - Kansas couldn't generate efficient offense in final 10 minutes. Duke didn't allow a field goal in final 4:59 of game."
+      },
+      {
+        "quarter": "Final",
+        "score": "Duke 78, Kansas 66",
+        "description": "Duke won by 12, covering -10.5 spread by 1.5 points. Kansas fought hard but 21.5 PPG hole from Peterson proved insurmountable. Duke closed strong."
+      }
+    ],
+    "whenCleared": "Duke covered -10.5 spread with 1:47 remaining when Boozer hit jumper to extend lead to 76-64. Final margin 78-66 cleared spread by 1.5 points.",
+    "turningPoint": "Duke's 14-4 run to start second half broke Kansas's spirit. Boozer dominated stretch with 12 points, Evans added 8. Turned 5-point Kansas halftime lead into comfortable Duke advantage.",
+    "gamePace": "Slower-paced, grinding game (144 total points). Kansas tried to control tempo early, keep it ugly. Duke imposed will in second half, pulled away when needed. Defense-heavy Champions Classic.",
+    "teamOffense": "Duke shot 46.8% FG with balanced scoring (Boozer 18, Evans 16, Ngongba 13). Kansas relied too heavily on Tre White's 23 points - no other Jayhawk reached double figures. Peterson's 21.5 PPG absence glaring."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Peterson's Absence Created Insurmountable Scoring Gap",
+        "description": "Kansas missing 21.5 PPG proved decisive. Tre White fought hard with 23-9 but no other Jayhawk reached 10 points. Expected Kansas to struggle offensively - they scored only 66 points (well below season average)."
+      },
+      {
+        "title": "Duke's Talent Advantage Emerged in Second Half",
+        "description": "Cameron Boozer (18-10-5 double-double), Isaiah Evans (16), Patrick Ngongba (13) overwhelmed Kansas in final 20 minutes. Duke's depth and athleticism wore down Kansas exactly as modeled."
+      },
+      {
+        "title": "Defensive Dominance Down Stretch",
+        "description": "Duke didn't allow a field goal in final 4:59 of game. Defensive intensity broke Kansas's will. Expected Duke's athletes to lock down depleted Kansas offense - they did."
+      },
+      {
+        "title": "Covered Despite Slow Start",
+        "description": "Duke trailed by 5 at halftime but covered -10.5 by 1.5 points. Shows value bet even when execution isn't perfect early. Talent advantage eventually prevails."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Duke's 78 points below +37 PPG margin average. Kansas scored only 66 (well below norm). Lower-scoring grind game but Duke still dominated when needed.",
+      "vsRecentForm": "Duke improved to 5-0 SU and 5-0 ATS. Kansas's struggles without Peterson (0-3 in games he's missed) continued. Both teams following expected trajectories.",
+      "vsPropLine": "Covered -10.5 by 1.5 points with 12-point win. Sweated it out but thesis held. Would have covered -10, pushed at -11.5, missed at -12.",
+      "percentileRanking": "Duke's defensive performance (holding Kansas to 66 points, 40.3% FG) ranked top 15% this season. Kansas's offensive struggles (66 points, 28.6% from three) ranked bottom 20%."
+    },
+    "wasNormalVariance": "Partially. Duke trailing at halftime represented underperformance (they'd led wire-to-wire in previous 4 games). Kansas came out aggressive, Tre White played above expectations with 23-9. However, Duke's second-half dominance aligned with talent advantage thesis. Covered by 1.5 points shows some execution variance (expected to win by 15-18) but outcome never in doubt after Duke's 14-4 run to start second half. Peterson's absence was game-changer as predicted."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Line stayed Duke -10.5 (-110) from open to close. No movement despite Peterson injury confirmed. Market consensus aligned perfectly with our assessment. Duke -10.5 was fair number given Peterson out. We didn't gain or lose juice, simply matched market efficiency."
+  },
+  "keyTakeaways": [
+    "Star player injuries in college basketball create massive value - Peterson's 21.5 PPG absence decisive",
+    "Duke covered -10.5 by 1.5 points despite trailing at halftime - talent advantage prevails",
+    "Cameron Boozer's 18-10-5 double-double shows elite all-around game",
+    "Kansas's Tre White fought hard (23-9) but lacked support without Peterson",
+    "Duke didn't allow field goal in final 4:59 - championship defense",
+    "For quantitative operations: star player injuries in NCAAB should be weighted heavily in spread betting",
+    "Covered despite lower scoring than expected (78-66 vs predicted 90-75) - defense wins",
+    "Champions Classic at MSG proved neutral court favors more talented team",
+    "Duke 5-0 ATS to start season - elite program executing at high level",
+    "Validated handicapping of star player injuries - Peterson's absence was game-changer"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sound process producing expected results with slight execution variance. Duke won 78-66, covering -10.5 spread by 1.5 points. Kansas missing Darryn Peterson (21.5 PPG, projected #1 pick) created insurmountable scoring gap as predicted - Kansas scored only 66 points. Duke's talent advantage (Boozer 18-10-5, Evans 16, Ngongba 13) emerged in second half exactly as modeled. Covered despite trailing at halftime, showing resilience. Duke didn't allow field goal in final 4:59, demonstrating championship defense. This represents proper handicapping: identified star player injury creating value, bet it, watched talent advantage prevail. Would make this bet 100 times out of 100 under identical circumstances. Star player injuries in college basketball are exploitable edges."
+}

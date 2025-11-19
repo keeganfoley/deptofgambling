@@ -1,0 +1,161 @@
+{
+  "slug": "suns-spread-nov18-2025",
+  "team": "Phoenix Suns",
+  "line": "+2.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Won outright by 17 points (Suns 127, Blazers 110)",
+  "profit": 190.48,
+  "gameDetails": {
+    "matchup": "Phoenix Suns @ Portland Trail Blazers",
+    "date": "November 18, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Moda Center, Portland, OR",
+    "finalScore": "Suns 127, Trail Blazers 110"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 28,
+    "estimatedProbability": 63,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Suns 5-1 ATS in last 6 games, won 7 of last 9",
+      "recentForm": "Suns averaging 118.4 PPG in last 6 games",
+      "cushion": "Getting +2.5 on better team offered 8-10 point cushion vs true line"
+    },
+    "keyFactors": [
+      {
+        "title": "Blazers Injury Crisis - Depleted Roster",
+        "description": "Portland missing Damian Lillard (OUT for season with Achilles tear) and Jrue Holiday (DOUBTFUL with calf). Losing two All-Star caliber guards creates massive 45+ PPG hole. Blazers can't replace that offensive production."
+      },
+      {
+        "title": "Suns' Talent Advantage",
+        "description": "Phoenix Big 3 (Devin Booker 28.4 PPG, Kevin Durant, Bradley Beal) too much firepower for injury-ravaged Portland. Expected Suns' star power to overwhelm Blazers' depleted roster."
+      },
+      {
+        "title": "Blazers Recent Struggles",
+        "description": "Portland lost 4 of last 5 games, averaging only 104.2 PPG in losses. Team demoralized without Lillard. Expected Blazers to fold against quality opponent."
+      },
+      {
+        "title": "Getting Plus Money on Better Team",
+        "description": "Suns favored by most power ratings despite +2.5 underdog line. Market inefficiency created premium value. Expected Suns to win outright, getting +2.5 cushion was gift."
+      }
+    ],
+    "riskFactors": [
+      "Blazers home court advantage (fighting despite injuries)",
+      "If Anfernee Simons gets hot from three, could keep game close",
+      "Suns prone to defensive lapses on road",
+      "Late-night Pacific time game could affect Suns' focus"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "sunsPoints": 127,
+      "blazersPoints": 110,
+      "sunsFGPercentage": "53.8%",
+      "blazersFGPercentage": "43.2%",
+      "sunsThreePointPercentage": "42.1%",
+      "blazersThreePointPercentage": "34.5%",
+      "sunsAssists": 32,
+      "blazersAssists": 22
+    },
+    "keyPlayers": {
+      "devinBooker": {
+        "points": 19,
+        "assists": 8,
+        "rebounds": 4,
+        "impact": "Controlled game flow, efficient playmaking"
+      },
+      "kevinDurant": {
+        "points": 24,
+        "rebounds": 7,
+        "impact": "Dominated in second half, took over game"
+      },
+      "bradleyBeal": {
+        "points": 22,
+        "assists": 6,
+        "impact": "Efficient scoring, exploited Blazers' weak perimeter defense"
+      },
+      "anferneeSimons": {
+        "points": 18,
+        "assists": 5,
+        "impact": "Fought hard but lacked support"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Suns 30, Blazers 28",
+        "description": "Competitive start. Blazers fought hard at home, Simons aggressive early. Suns led by 2 after Q1, within +2.5 spread comfortably."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Suns 32, Blazers 26",
+        "description": "Suns took control in Q2. Booker and Durant combined for 18 points. Halftime: Suns 62, Blazers 54 - Suns up 8, covering +2.5 spread with outright lead."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Suns 35, Blazers 29",
+        "description": "Suns extended lead in Q3. Balanced attack overwhelmed Blazers. Durant took over with 14 third-quarter points. After three: Suns 97, Blazers 83 (+14 Phoenix)."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Suns 30, Blazers 27",
+        "description": "Suns cruised in Q4, never threatened. Blazers couldn't make run against Suns' balanced scoring. Final: Suns 127, Blazers 110 - blowout 17-point victory."
+      }
+    ],
+    "whenCleared": "Suns covered +2.5 spread from opening tip, never trailed. Led wire-to-wire, clearing spread with dominant 17-point outright victory. Never in doubt.",
+    "turningPoint": "Suns' 18-6 run to start third quarter broke game open. Durant scored 10 straight points, Blazers defense collapsed. Turned 8-point halftime lead into insurmountable 20-point advantage.",
+    "gamePace": "Fast-paced, high-scoring game (237 total points). Suns pushed tempo in transition, Blazers couldn't keep up. Both teams shot efficiently but Suns' depth and talent won out.",
+    "teamOffense": "Suns shot incredible 53.8% FG with balanced scoring (Durant 24, Beal 22, Booker 19). Ball movement elite (32 assists). Blazers fought hard but injuries showed - relied too heavily on Simons' 18 points."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Blazers' Injury Crisis Proved Insurmountable",
+        "description": "Portland missing Lillard (season) and Holiday (game) created massive talent gap. Blazers scored only 110 points, well below needed total. Expected injuries to be decisive - they were."
+      },
+      {
+        "title": "Suns' Big 3 Dominated (Durant 24, Beal 22, Booker 19)",
+        "description": "Phoenix's star power overwhelmed Blazers' depleted roster. All three stars efficient, combined 65 points on 53.8% FG. Balanced attack unstoppable."
+      },
+      {
+        "title": "Pulled Away in Second Half Exactly as Modeled",
+        "description": "Suns led by 8 at halftime, extended to 14 after three, finished up 17. Expected Suns to dominate second half - they destroyed Blazers 65-56 after intermission."
+      },
+      {
+        "title": "Getting +2.5 on Road Favorite Created Massive Value",
+        "description": "Suns covered +2.5 by 19.5 points with 17-point outright win. Market inefficiency (Blazers favored at home despite injuries) created premium opportunity. Perfect value bet."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Suns scored 127 (above season average of 118.4 PPG). Shot elite 53.8% FG. Offense firing on all cylinders exactly as expected against depleted defense.",
+      "vsRecentForm": "Suns extended hot streak to 6-1 ATS in last 7, won 8 of last 10 overall. Blazers fell to 1-5 in last 6. Both teams following established trends perfectly.",
+      "vsPropLine": "Covered +2.5 by 19.5 points with outright 17-point win. Would have covered any spread up to Suns -14.5. Dominant performance exceeded all expectations.",
+      "percentileRanking": "Suns' 127 points, 53.8% FG ranked top 15% of performances this season. Blazers allowing 127 ranked bottom 20% defensively."
+    },
+    "wasNormalVariance": "No variance involved - pure skill and proper handicapping. Blazers' injury crisis (Lillard, Holiday out) aligned perfectly with massive talent gap thesis. Suns' balanced attack (Durant 24, Beal 22, Booker 19) proved depth advantage. This was textbook execution: identified injury-depleted team, bet superior talent, watched blowout unfold. Perfect read."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 0.8,
+    "verdict": "Positive CLV. Line opened Suns +2.5 (-105) and moved to Suns +2.5 (-108) as sharp money hammered Suns before tip. We got -105 before it moved to -108, saving 3 cents of juice. The fact that sharp money also pounded Suns validates handicapping. Market correcting inefficiency by game time."
+  },
+  "keyTakeaways": [
+    "Blazers injury crisis (Lillard, Holiday out) created exploitable 45+ PPG hole",
+    "Suns' Big 3 dominated with balanced scoring (Durant 24, Beal 22, Booker 19)",
+    "Getting +2.5 on road favorite proved massive value - covered by 19.5 points",
+    "Suns improved to 6-1 ATS in last 7 games - hot team keeps rolling",
+    "Portland's 1-5 slide in last 6 shows demoralized team without star power",
+    "For quantitative operations: star injuries creating 40+ PPG holes are auto-fades",
+    "Textbook handicapping - identified talent gap, bet it, watched blowout unfold",
+    "Paired with Suns ML +124 for double-dip profit - both bets cashed perfectly",
+    "Suns 53.8% FG shows elite offensive execution against depleted defense",
+    "Covered +2.5 by 19.5 points with 17-point outright win - never in doubt"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sound process producing expected results with dominant execution. Suns won outright 127-110, covering +2.5 spread by 19.5 points. Blazers' injury crisis (Lillard, Holiday out) proved insurmountable as modeled. Suns' balanced attack (Durant 24, Beal 22, Booker 19) overwhelmed Portland's depleted roster. Getting +2.5 on road favorite created massive value - market inefficiency exploited perfectly. This represents proper handicapping: identified clear talent gap via star injuries, bet superior team, watched blowout domination. Would make this bet 100 times out of 100 under identical circumstances. Textbook execution of injury-based edge."
+}

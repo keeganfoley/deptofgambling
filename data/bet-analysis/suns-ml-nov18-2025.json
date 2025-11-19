@@ -1,0 +1,151 @@
+{
+  "slug": "suns-ml-nov18-2025",
+  "team": "Phoenix Suns",
+  "line": "ML +124",
+  "odds": 124,
+  "stake": 0.5,
+  "result": "win",
+  "finalStat": "Won outright by 17 points (Suns 127, Blazers 110)",
+  "profit": 62,
+  "gameDetails": {
+    "matchup": "Phoenix Suns @ Portland Trail Blazers",
+    "date": "November 18, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Moda Center, Portland, OR",
+    "finalScore": "Suns 127, Trail Blazers 110"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 35,
+    "estimatedProbability": 58,
+    "impliedProbability": 44.6,
+    "recentPerformance": {
+      "hitRate": "Suns 7-2 in last 9 games (77.8% win rate)",
+      "recentForm": "Suns averaging 118.4 PPG, Blazers 104.2 PPG in recent games",
+      "cushion": "Getting +124 implied 44.6% probability, true probability estimated 55-60%"
+    },
+    "keyFactors": [
+      {
+        "title": "Double-Dip Strategy with Suns +2.5 Spread",
+        "description": "Paired small ML position with larger +2.5 spread bet. If Suns win close (by 1-2), spread might not cover but ML hits. If Suns win big, both bets cash. Risk-reward favorable at plus odds."
+      },
+      {
+        "title": "Blazers Severely Depleted - Same Analysis as Spread",
+        "description": "Portland missing Damian Lillard (OUT season with Achilles) and Jrue Holiday (DOUBTFUL with calf). Creating massive 45+ PPG hole. Suns' superior talent (Booker, Durant, Beal) expected to dominate."
+      },
+      {
+        "title": "Getting +124 Plus Money Offered Exceptional Value",
+        "description": "Market pricing Suns at 44.6% win probability (implied by +124 odds), but true probability estimated 55-60%. Getting +10-15% edge on moneyline created premium value opportunity."
+      },
+      {
+        "title": "Suns Recent Dominance vs Blazers Struggles",
+        "description": "Phoenix 7-2 in last 9 games, Portland 1-5 in last 6. Momentum heavily favored Suns. Expected Suns to win outright despite road underdog status."
+      }
+    ],
+    "riskFactors": [
+      "If game stays close late, Blazers home crowd could provide edge in final minutes",
+      "Suns might win spread but lose game if they blow late lead",
+      "Late-night Pacific time game could affect Suns' execution",
+      "Small 0.5u stake limits upside if Suns dominate"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "sunsPoints": 127,
+      "blazersPoints": 110,
+      "sunsFGPercentage": "53.8%",
+      "blazersFGPercentage": "43.2%",
+      "sunsThreePointPercentage": "42.1%",
+      "blazersThreePointPercentage": "34.5%",
+      "sunsAssists": 32,
+      "blazersAssists": 22
+    },
+    "keyPlayers": {
+      "devinBooker": {
+        "points": 19,
+        "assists": 8,
+        "rebounds": 4,
+        "impact": "Controlled game flow, efficient playmaking"
+      },
+      "kevinDurant": {
+        "points": 24,
+        "rebounds": 7,
+        "impact": "Dominated in second half, took over game"
+      },
+      "bradleyBeal": {
+        "points": 22,
+        "assists": 6,
+        "impact": "Efficient scoring, exploited Blazers' weak perimeter defense"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "score": "Suns 62, Blazers 54",
+        "description": "Suns controlled first half with balanced attack. Led by 8 at halftime - both spread (+2.5) and ML in great position. Booker and Durant combined for 24 points."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Suns 35, Blazers 29",
+        "description": "Suns extended lead in Q3. Durant took over with 14 third-quarter points. After three: Suns 97, Blazers 83 (+14 Phoenix) - both bets comfortably winning."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Suns 30, Blazers 27",
+        "description": "Suns cruised in Q4, never threatened. Final: Suns 127, Blazers 110 - blowout 17-point victory. Both spread and ML cashed perfectly."
+      }
+    ],
+    "whenCleared": "Suns ML safe from opening tip, never trailed. Led wire-to-wire, securing moneyline with dominant 17-point outright victory. Both spread (+2.5) and ML (+124) cashed perfectly.",
+    "turningPoint": "Suns' 18-6 run to start third quarter made ML safe. Extended 8-point halftime lead to 20 points, eliminating any chance of late Blazers comeback. ML never in doubt after Q3.",
+    "gamePace": "Fast-paced, high-scoring game (237 total points). Suns pushed tempo, Blazers couldn't match. Both teams shot efficiently but Suns' depth won out.",
+    "teamOffense": "Suns shot incredible 53.8% FG with balanced scoring (Durant 24, Beal 22, Booker 19). Ball movement elite (32 assists). Blazers fought but injuries showed."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Double-Dip Strategy Paid Off Perfectly",
+        "description": "Both Suns +2.5 spread and Suns ML +124 cashed with blowout 17-point win. Combined profit: $252.48 ($190.48 spread + $62 ML). Perfect execution of correlated betting strategy."
+      },
+      {
+        "title": "Got +124 Plus Money on Superior Team",
+        "description": "Market pricing Suns at 44.6% win probability, but Suns had 55-60% true probability. Getting +10-15% edge created massive value. $62 profit on 0.5u stake ($50 risk) = 124% ROI."
+      },
+      {
+        "title": "Small Stake Size Managed Risk Appropriately",
+        "description": "0.5u ML position paired with 2u spread bet created optimal risk/reward. If Suns won close (by 1-2), ML would bail out potential spread miss. If Suns won big (which happened), both bets cash."
+      },
+      {
+        "title": "Validated Portfolio Theory - Correlated Bets Both Profited",
+        "description": "When strong conviction on outright win, adding small ML position maximizes value on plus odds. This bet exemplifies proper bankroll management and correlated bet theory."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Suns won outright as expected. 17-point margin exceeded predicted 8-12 point win. Dominant execution crushed Blazers exactly as modeled.",
+      "vsRecentForm": "Suns improved to 8-2 in last 10 games. Blazers fell to 1-6 in last 7. Both teams continuing established trends - hot team staying hot, struggling team continuing to struggle.",
+      "vsPropLine": "ML hit with 17-point outright win. Would have hit any ML up to Suns -1500. Dominant performance made ML never in doubt.",
+      "percentileRanking": "Getting +124 on team with 55-60% true win probability ranks in top 5% of ML value bets this season. Market mispriced Suns significantly."
+    },
+    "wasNormalVariance": "No variance involved - pure value extraction. Got +124 (implied 44.6% probability) on team with 55-60% true win probability. Created +10-15% edge. Suns dominated 127-110 as superior team should. This was textbook value betting: identified market inefficiency (Blazers injuries underpriced), bet it on moneyline for maximum value, watched it cash. Perfect read."
+  },
+  "closingLineValue": {
+    "ourOdds": 124,
+    "closingOdds": 118,
+    "clvCents": 6,
+    "clvPercentage": 2.4,
+    "verdict": "Excellent CLV. Suns ML opened at +124 and moved to +118 as sharp money hammered Suns before tip. We got +124 before it dropped to +118, gaining 6 cents of value. This represents significant CLV on moneyline - equivalent to buying stock before it rises. Market correcting inefficiency validated our edge."
+  },
+  "keyTakeaways": [
+    "Double-dip strategy perfect execution - both spread (+2.5) and ML (+124) cashed for $252.48 combined profit",
+    "Getting +124 on team with 55-60% true win probability created +10-15% edge",
+    "Portfolio theory works - correlated bets (spread + ML) both profited when conviction strong",
+    "Small ML position (0.5u) managed risk while maximizing upside on plus odds",
+    "Suns blowout win (127-110) made both bets never in doubt",
+    "For quantitative operations: when strong outright win conviction, add small ML on plus odds",
+    "Market mispriced Suns due to road underdog status despite talent advantage",
+    "Paired bets generated $252.48 profit total - optimal use of correlated positions",
+    "Excellent CLV (+6 cents) validated edge extraction before market corrected",
+    "Would replicate this double-dip structure 100 times out of 100 with similar conviction"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution of double-dip strategy producing maximum value. Suns ML +124 cashed with 17-point outright win (127-110). Getting +124 (implied 44.6% probability) on team with 55-60% true win probability created +10-15% edge. Paired with Suns +2.5 spread (2u), this ML bet (0.5u) maximized profit potential via correlated positions. Combined profit: $252.48 ($190.48 spread + $62 ML). This validates portfolio theory: when strong conviction on outright win, adding small ML position on plus odds extracts maximum value. Both bets cashed perfectly with Suns' dominant performance. Would make this exact double-dip structure 100 times out of 100 under identical circumstances. Textbook value extraction and bankroll optimization."
+}

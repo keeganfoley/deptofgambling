@@ -1,0 +1,158 @@
+{
+  "slug": "hawks-spread-nov18-2025",
+  "team": "Atlanta Hawks",
+  "line": "+1.5",
+  "odds": -110,
+  "stake": 2.5,
+  "result": "loss",
+  "finalStat": "Lost by 8 points (Pistons 120, Hawks 112)",
+  "profit": -250,
+  "gameDetails": {
+    "matchup": "Detroit Pistons @ Atlanta Hawks",
+    "date": "November 18, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "State Farm Arena, Atlanta, GA",
+    "finalScore": "Pistons 120, Hawks 112"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 40,
+    "estimatedProbability": 65,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Hawks 7-2 without Trae Young, 5-game home win streak",
+      "homeRecord": "Hawks 8-2 at home (80% win rate)",
+      "recentForm": "Hawks won 5 straight at State Farm Arena, averaging 121.3 PPG",
+      "cushion": "Getting +1.5 on home favorite created +4.5 point cushion vs true line"
+    },
+    "keyFactors": [
+      {
+        "title": "Hawks Thriving Without Trae Young",
+        "description": "Atlanta 7-2 record without Trae (78% win rate), averaging 121.3 PPG. Jalen Johnson playing at All-Star level - named ECF Player of Week after 31-18-14-7 steals performance vs Utah. Balanced scoring (no single star) harder to defend."
+      },
+      {
+        "title": "Pistons Back-to-Back Fatigue",
+        "description": "Detroit on brutal back-to-back after defeating Pacers 127-112 previous night. Expected heavy legs in second half, especially for key rotation players. Historical data shows teams on back-to-backs struggle on road."
+      },
+      {
+        "title": "Pistons Injury Crisis",
+        "description": "Six Pistons players out or questionable: Ivey, LeVert, Sasser, Klintman confirmed OUT. Cade Cunningham (hip), Tobias Harris (ankle), Isaiah Stewart (questionable). Expected depleted rotation to struggle against Hawks depth."
+      },
+      {
+        "title": "Home Court Advantage",
+        "description": "Hawks 8-2 at State Farm Arena. Hostile crowd environment, 5-game home win streak. Expected Hawks to control game with home energy and rested legs vs tired Pistons."
+      }
+    ],
+    "riskFactors": [
+      "Pistons on historic 10-game win streak - momentum factor",
+      "Cade Cunningham capable of taking over games even on questionable status",
+      "Hawks defensive lapses (allowing 116.8 PPG at home)",
+      "If Cunningham and Harris both play through injuries, Pistons depth better than expected"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "pistonsPoints": 120,
+      "hawksPoints": 112,
+      "pistonsFGPercentage": "48.9%",
+      "hawksFGPercentage": "44.2%",
+      "pistonsThreePointPercentage": "38.5%",
+      "hawksThreePointPercentage": "32.1%",
+      "pistonsFastBreakPoints": 18,
+      "hawksFastBreakPoints": 12
+    },
+    "keyPlayers": {
+      "cadeCunningham": {
+        "points": 24,
+        "assists": 8,
+        "rebounds": 5,
+        "impact": "Played through hip injury, dominated second half"
+      },
+      "tobiasHarris": {
+        "points": 18,
+        "rebounds": 7,
+        "impact": "Provided veteran stability despite ankle issues"
+      },
+      "jalenJohnson": {
+        "points": 22,
+        "rebounds": 9,
+        "assists": 6,
+        "impact": "Strong performance but couldn't overcome Pistons' balanced attack"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Pistons 28, Hawks 30",
+        "description": "Back-and-forth start. Hawks controlled early tempo, led by 2 after Q1. Jalen Johnson aggressive with 8 first-quarter points."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Pistons 31, Hawks 26",
+        "description": "Pistons took control late in Q2. Cunningham's playmaking created open looks. Halftime: Pistons 59, Hawks 56 - close game, Hawks within +1.5 spread."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Pistons 34, Hawks 27",
+        "description": "Pistons extended lead in Q3 despite back-to-back fatigue. Defense tightened, forced Hawks into difficult shots. After three: Pistons 93, Hawks 83 (+10 Detroit)."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Pistons 27, Hawks 29",
+        "description": "Hawks made late push but couldn't overcome 10-point deficit entering Q4. Pistons controlled tempo, closed out 120-112. Hawks lost spread by 6.5 points."
+      }
+    ],
+    "whenMissed": "Hawks fell behind +1.5 spread with 2:14 left in 3rd quarter when Pistons went up 91-78. Never recovered despite late rally.",
+    "turningPoint": "Pistons 12-2 run in middle of 3rd quarter broke game open. Cunningham and Harris both hit big shots, Hawks defense collapsed. Turned 4-point game into double-digit lead.",
+    "gamePace": "Fast-paced, high-scoring game (232 total points). Both teams pushed tempo despite Pistons' back-to-back. Hawks couldn't slow down Pistons' offensive rhythm.",
+    "teamOffense": "Pistons shot efficiently (48.9% FG), balanced scoring (4 players 15+ points). Hawks struggled from three (32.1%) and couldn't create separation despite home court."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Underestimated Pistons' 11-Game Win Streak Momentum",
+        "description": "Pistons extended streak to 11 games despite back-to-back and injuries. Historic winning streaks transcend situational handicaps like rest disadvantage. Should have weighted momentum factor higher."
+      },
+      {
+        "title": "Cunningham and Harris Played Through Questionable Status",
+        "description": "Both stars (listed questionable with hip/ankle) played and dominated. Cunningham's 24-8-5 and Harris's 18-7 proved injuries were non-factors. Overestimated injury impact."
+      },
+      {
+        "title": "Pistons Depth and Coaching Overcame Fatigue",
+        "description": "Detroit's organizational excellence and depth proved superior to Hawks' home court advantage. Pistons ran efficient offense (48.9% FG) despite tired legs. Coaching difference evident."
+      },
+      {
+        "title": "Hawks Defensive Lapses in Critical Moments",
+        "description": "Hawks allowed 12-2 Pistons run in 3rd quarter that broke game open. Defensive breakdowns (allowing 120 points) negated offensive efforts. Hawks couldn't stop ball."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Hawks scored 112 (below 121.3 PPG without Trae). Defense allowed 120 (worst home performance in month). Underperformed expectations on both ends.",
+      "vsRecentForm": "Hawks' 5-game home win streak ended. Pistons' 11-game overall streak continued. Momentum clearly favored Detroit despite road/back-to-back situation.",
+      "vsPropLine": "Missed +1.5 spread by 6.5 points. Lost by 8 (120-112). Would have needed to lose by 1 or win outright to cover. Never close enough in final minutes.",
+      "percentileRanking": "Hawks defensive performance (allowing 120) ranked bottom 10% of home games this season. Pistons offensive efficiency (48.9% FG on back-to-back) ranked top 15% league-wide."
+    },
+    "wasNormalVariance": "No, this was fundamental misread of situational factors. Underestimated Pistons' 10+ game winning streak momentum being bigger than back-to-back fatigue factor. Should have recognized that historic winning streaks often transcend rest disadvantages. Cunningham and Harris playing through injuries showed championship mindset. Pistons' organizational excellence (depth, coaching, culture) > Hawks' situational edge (home court, rest). Not variance - wrong side."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -108,
+    "clvCents": -2,
+    "clvPercentage": -0.5,
+    "verdict": "Slight negative CLV. Line opened Hawks +1.5 (-110) and moved to Hawks +1.5 (-108) as some sharp money faded Pistons on road back-to-back. We got -110 before it improved to -108, costing 2 cents of juice. The fact that sharps also liked Hawks validates premise, but result proves Pistons' momentum was underpriced."
+  },
+  "keyTakeaways": [
+    "Historic winning streaks (10+ games) often transcend situational handicaps like back-to-backs",
+    "Pistons' organizational excellence (coaching, depth, culture) proved superior to situational edges",
+    "Questionable injury designations don't always mean players won't dominate (Cunningham 24-8, Harris 18-7)",
+    "Hawks 5-game home win streak ended - all streaks break eventually",
+    "Momentum factor in 10+ game winning streaks should be weighted higher than rest advantage",
+    "Fundamental misread: underestimated Pistons' excellence, overestimated situational factors",
+    "Hawks defensive lapses (allowing 120 points at home) were critical - can't win covering spread allowing that",
+    "Pistons' 48.9% FG on road back-to-back shows championship-level execution",
+    "For quantitative operations: historic win streaks > rest advantage in NBA handicapping",
+    "Wrong side - Pistons proved depth and coaching overcome fatigue when momentum this strong"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Flawed analysis producing deserved loss. Underestimated Pistons' 10-game winning streak momentum being bigger than back-to-back fatigue factor. Should have recognized that historic winning streaks often transcend situational handicaps. Cunningham (24-8-5) and Harris (18-7) both played through questionable status and dominated. Hawks couldn't slow Pistons' momentum despite home court advantage. Detroit's organizational excellence (depth, coaching, culture) proved superior to Hawks' situational edge (rested legs, home crowd). This was fundamental misread, not variance. Pistons won 120-112, missing Hawks +1.5 spread by 6.5 points. Would NOT make this bet again under identical circumstances. When team has 10+ game win streak and shows championship culture, situational factors (rest, travel) matter less than assumed. Expensive lesson in proper momentum evaluation."
+}
