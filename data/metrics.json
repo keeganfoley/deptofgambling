@@ -3,20 +3,20 @@
   "sharpeRatioNote": "Insufficient data for accurate calculation (needs 30+ bets with consistent unit sizing)",
   "calmarRatio": 2.15,
   "maxDrawdown": -250,
-  "avgWin": 137.7521875,
+  "avgWin": 137.61,
   "avgLoss": -144.86111111111111,
-  "avgProfitPerBet": -11.866617647058824,
+  "avgProfitPerBet": -11.93,
   "medianProfit": -100,
   "largestWin": 229.36,
   "largestLoss": -250,
-  "profitFactor": 0.8453264604810997,
+  "profitFactor": 0.844,
   "unitEfficiency": -10.632888414308596,
   "closingLineValue": 5.2,
   "closingLineValueNote": "Average: +5.2¢",
   "kellyUtilization": 38,
   "maxWinStreak": 4,
   "maxLossStreak": 4,
-  "totalWinnings": 4408.069567099567,
+  "totalWinnings": 4403.53,
   "totalLossesAmount": 5215,
   "sportBreakdown": {
     "NBA": {
@@ -631,28 +631,28 @@
     },
     {
       "date": "2025-11-18",
-      "balance": 8849.68,
-      "profit": 95.45,
+      "balance": 8845.14,
+      "profit": 90.91,
       "description": "Magic +3.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 8940.59,
+      "balance": 8936.05,
       "profit": 90.91,
       "description": "Duke -10.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 9131.07,
+      "balance": 9126.53,
       "profit": 190.48,
       "description": "Suns +2.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 9193.07,
+      "balance": 9188.53,
       "profit": 62,
       "description": "Suns ML +124",
       "result": "win"
