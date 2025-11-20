@@ -6,7 +6,7 @@
  * Format currency with proper sign and decimal places
  */
 export function formatCurrency(value: number, showSign: boolean = true): string {
-  const sign = showSign && value > 0 ? '+' : '';
+  const sign = value > 0 ? (showSign ? '+' : '') : value < 0 ? '-' : '';
   return `${sign}$${Math.abs(value).toLocaleString('en-US', {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,

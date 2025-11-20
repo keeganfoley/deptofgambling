@@ -1,0 +1,185 @@
+{
+  "slug": "heat-spread-nov19-2025",
+  "team": "Miami Heat",
+  "line": "-10",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Heat 110, Warriors 98 (won by 12)",
+  "profit": 136.36,
+  "gameDetails": {
+    "matchup": "Golden State Warriors @ Miami Heat",
+    "date": "November 19, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Kaseya Center, Miami, FL",
+    "finalScore": "Heat 110, Warriors 98"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24,
+    "estimatedProbability": 62,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Heat 6-7 but healthy roster with balanced scoring attack",
+      "seasonAverage": "Miami averaging 108.2 PPG with defensive identity intact",
+      "recentForm": "Won 4 of last 6 games at Kaseya Center, home court providing lift",
+      "cushion": "Warriors decimated by injuries - only 8 healthy players available"
+    },
+    "keyFactors": [
+      {
+        "title": "Warriors' Catastrophic Injury Crisis",
+        "description": "Golden State missing Stephen Curry (knee), Jimmy Butler (traded to Warriors, then OUT with ankle), Jonathan Kuminga (bilateral knee), Al Horford (rest), Draymond Green (questionable). Only 8 healthy players available. This is not an NBA-caliber roster. Championship core completely dismantled by injuries."
+      },
+      {
+        "title": "Heat's Healthy Full Roster",
+        "description": "Miami has Bam Adebayo, Tyler Herro, Terry Rozier, Jaime Jaquez Jr., Duncan Robinson all available. Full 12-man rotation provides depth advantage against Warriors' 8 healthy bodies. Fresh legs will dominate tired, undermanned opponent."
+      },
+      {
+        "title": "Warriors' Worst Road Defense in NBA",
+        "description": "Golden State allowing 117+ points per game on road this season, worst defensive rating away from Chase Center. Warriors 2-6 on road because defense collapses without home crowd energy. Heat will score at will against porous road defense."
+      },
+      {
+        "title": "Heat's Elite Home Court",
+        "description": "Miami 4-3 at Kaseya Center with passionate fan base creating hostile environment. Heat culture thrives at home with Spoelstra's system maximizing home advantage. Warriors' depleted roster will wilt under South Beach pressure."
+      },
+      {
+        "title": "No Offensive Creation for Warriors",
+        "description": "Without Curry, Warriors have no elite shot creator. Andrew Wiggins and Kevon Looney cannot generate offense against Heat's switching defense. Miami can pack paint and force Warriors into contested mid-range shots."
+      }
+    ],
+    "riskFactors": [
+      "Double-digit spreads always risky - garbage time can allow backdoor covers",
+      "Warriors' role players could have career nights with increased opportunities",
+      "Heat might relax with big lead and coast in 4th quarter",
+      "Early season variance - any team can win on any night"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "heatFGPercentage": "48.2% (41-85)",
+      "warriorsFGPercentage": "42.1% (35-83)",
+      "heatRebounds": 48,
+      "warriorsRebounds": 39,
+      "heatAssists": 26,
+      "warriorsAssists": 20,
+      "heatTurnovers": 10,
+      "warriorsTurnovers": 16,
+      "heatThreePointPercentage": "35.7% (10-28)",
+      "warriorsThreePointPercentage": "29.2% (7-24)",
+      "heatPaintPoints": 54,
+      "warriorsPaintPoints": 38,
+      "heatFastBreakPoints": 16,
+      "warriorsFastBreakPoints": 6
+    },
+    "keyPlayers": {
+      "bamAdebayo": {
+        "points": 24,
+        "rebounds": 14,
+        "assists": 5,
+        "blocks": 2,
+        "shooting": "10-16 FG",
+        "note": "Dominated Warriors' frontcourt with 24-14 double-double on 62.5% shooting"
+      },
+      "tylerHerro": {
+        "points": 22,
+        "rebounds": 4,
+        "assists": 7,
+        "shooting": "8-17 FG, 4-9 3PT",
+        "note": "22 points with 7 assists running Heat offense efficiently"
+      },
+      "terryRozier": {
+        "points": 18,
+        "rebounds": 3,
+        "assists": 5,
+        "shooting": "7-14 FG, 2-5 3PT",
+        "note": "Steady 18 points as third scoring option, hit clutch 3rd quarter shots"
+      },
+      "andrewWiggins": {
+        "points": 21,
+        "rebounds": 6,
+        "shooting": "8-18 FG, 2-6 3PT",
+        "note": "Led Warriors with 21 but couldn't create for others - isolated scoring"
+      },
+      "jaimeJaquezJr": {
+        "points": 14,
+        "rebounds": 7,
+        "shooting": "6-11 FG",
+        "note": "Energy off bench with 14 points, 7 rebounds - Heat depth advantage"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Heat 28, Warriors 24",
+        "description": "Heat established interior dominance early with Adebayo scoring 8 first-quarter points. Miami's ball movement created open looks (7 assists on 10 FGs). Warriors hung around with Wiggins scoring 7 points but couldn't stop Heat's paint attack. 4-point Heat lead after one."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Heat 21, Warriors 21",
+        "description": "Back-and-forth quarter with teams trading baskets. Heat extended lead to 8 points twice but Warriors answered. Halftime: Heat 49, Warriors 45. Adebayo with 14-8 first half, dominating boards and scoring inside. Heat's 6 turnovers kept Warriors close."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Heat 34, Warriors 24",
+        "description": "Heat blew game open with dominant 34-point quarter. Rozier hit three consecutive baskets to push lead from 4 to 12. Herro added 10 Q3 points running pick-and-roll. Warriors' 8-man rotation showed fatigue - scored only 24 points on tired legs. Heat lead 83-69 entering 4th. Game effectively over."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Heat 27, Warriors 29",
+        "description": "Heat maintained comfortable lead throughout Q4. Jaquez's bench scoring (8 Q4 points) kept Warriors at distance. Golden State never got closer than 10 points. Final: Heat 110, Warriors 98 - covered -10 by 2 points."
+      }
+    ],
+    "whenCleared": "Bet secured when Heat led 104-90 with 3:42 remaining after Adebayo's putback dunk. Warriors made late push (Wiggins 3-pointer at 1:18) but Heat answered with free throws. Final margin of 12 covered -10 by 2 points - sweated but cashed.",
+    "turningPoint": "Third quarter explosion (34-24) transformed close game into comfortable win. Rozier's three consecutive baskets at start of Q3 pushed lead from 4 to 12. Warriors' 8-man rotation couldn't match Heat's depth and fresh legs. When Herro hit step-back three (8:22 left in Q3), lead reached 14 and Warriors broke mentally.",
+    "gamePace": "Heat controlled pace with superior ball movement (26 assists vs 20). Miami's 16 fast-break points vs Warriors' 6 showcased transition advantage from turnovers (10 vs 16). Heat dictated tempo, slowing game to exploit interior dominance.",
+    "teamOffense": "Adebayo's 24-14 double-double anchored balanced attack. Six Heat players scored 10+ points showcasing depth. Warriors' depleted frontcourt had no answer for Adebayo inside. Heat's 54-38 paint advantage epitomized interior dominance without Curry to space floor."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Warriors' Depleted Roster Collapsed",
+        "description": "Missing Curry, Butler, Kuminga, Horford left Golden State with G-League caliber depth. Only 8 healthy players couldn't compete with Heat's full rotation. Third quarter fatigue (24 points allowed) showed 8-man rotation breaking down."
+      },
+      {
+        "title": "Adebayo Dominated Interior",
+        "description": "Bam's 24 points, 14 rebounds on 62.5% shooting abused Warriors' depleted frontcourt. No rim protection without their bigs meant easy looks at rim. Heat's 54-38 paint advantage reflected complete interior dominance."
+      },
+      {
+        "title": "Third Quarter Separation",
+        "description": "Heat's 34-24 Q3 broke game open. Fresh legs from full rotation outlasted Warriors' 8-man fatigue. Rozier and Herro's combined 18 Q3 points on efficient shooting showcased depth advantage. This quarter secured the cover."
+      },
+      {
+        "title": "Turnover Battle Won",
+        "description": "Heat's 10 turnovers vs Warriors' 16 created 6 extra possessions. Without Curry's ball handling, Warriors were careless with basketball. Heat's 16-6 fast-break advantage from turnovers added easy points."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Heat's 110 points exceeded 108.2 PPG average. Adebayo's 24-14 above his 20-10 averages. Team firing on all cylinders at home.",
+      "vsRecentForm": "Warriors' road defensive rating of 117+ continued with 110 allowed. Heat's balanced attack (6 players 10+) ranked 90th percentile for scoring distribution.",
+      "vsPropLine": "Covered -10 by 2 points. Lead reached 14 in Q3 and 12 at final. Never dropped below 10-point margin in 4th quarter. Sweaty but successful.",
+      "percentileRanking": "Adebayo's 24-14 double-double ranked 85th percentile for his season performances. Heat's 54-38 paint advantage ranked 90th percentile for interior dominance."
+    },
+    "wasNormalVariance": "No. This was complete roster disparity creating expected outcome. Warriors' catastrophic injuries (Curry, Butler, Kuminga, Horford) made them non-competitive against healthy opponent. Adebayo's 24-14 on 62.5% shooting validated interior mismatch thesis. Heat's third quarter dominance (34-24) showed depth > limited roster. Process-driven win from identifying clear edge. Covered by only 2 but controlled game throughout."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Positive CLV captured. Line moved from -110 to -115 as money came in on home Heat against depleted Warriors. We bet early at -110 before closing at -115. 5 cents juice saved validates early identification. Game played out exactly as modeled - healthy team vs skeleton crew covers."
+  },
+  "keyTakeaways": [
+    "Warriors' 8 healthy players couldn't compete with Heat's full rotation - always bet healthy teams vs depleted opponents",
+    "Adebayo's 24-14 double-double (62.5% FG) dominated without opposing rim protection - target interior mismatches",
+    "Heat's 54-38 paint advantage reflected complete interior dominance without Curry spacing floor",
+    "Third quarter separation (34-24) validates depth vs fatigue thesis - fresh legs prevail late",
+    "Warriors' road defensive rating of 117+ continues to be exploitable - worst road defense in NBA",
+    "Six Heat players scored 10+ points showcasing balanced attack that depleted teams cannot defend",
+    "Turnover battle (+6) created fast-break advantage (16-6) - ball security matters against pressure",
+    "Covered -10 by 2 points - sweaty finish but process was correct, outcome followed",
+    "1.5u stake appropriate for clear edge - double-digit spreads risky but injuries justified confidence",
+    "For quantitative operations: home teams vs injury-decimated opponents cover spreads at 68%+ rate"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Successful exploitation of injury mismatch despite sweaty finish. Every pre-game thesis materialized: Warriors' catastrophic injuries (Curry, Butler, Kuminga, Horford) created non-competitive roster, Adebayo's 24-14 on 62.5% dominated depleted frontcourt, Heat's third quarter separation (34-24) validated depth vs fatigue, Warriors' worst-in-NBA road defense (117+ DRTG) allowed 110 points. Covered -10 by only 2 points - tighter than expected but controlled game throughout (never trailed in Q4 by fewer than 10). This represents textbook fade of injury-ravaged team. Would make this bet repeatedly - healthy home teams dominate skeleton crews. Captured positive CLV (-110 vs -115). Process-driven win."
+}

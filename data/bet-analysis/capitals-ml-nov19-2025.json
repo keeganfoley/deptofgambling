@@ -1,0 +1,160 @@
+{
+  "slug": "capitals-ml-nov19-2025",
+  "team": "Washington Capitals",
+  "line": "ML",
+  "odds": -115,
+  "stake": 0.5,
+  "result": "win",
+  "finalStat": "Capitals 5, Oilers 3",
+  "profit": 43.48,
+  "gameDetails": {
+    "matchup": "Edmonton Oilers @ Washington Capitals",
+    "date": "November 19, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Capital One Arena, Washington, DC",
+    "finalScore": "Capitals 5, Oilers 3"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24,
+    "estimatedProbability": 62,
+    "impliedProbability": 53.5,
+    "recentPerformance": {
+      "hitRate": "Capitals 6-1 at home this season, elite home ice performance",
+      "seasonAverage": "Capitals averaging 3.2 goals per game at home, strong offensive production",
+      "recentForm": "Won 5 of last 7 games, playing elite hockey in November",
+      "cushion": "Oilers on second game of back-to-back, road fatigue factor significant"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Home Ice Advantage",
+        "description": "Capitals 6-1 at Capital One Arena this season, creating dominant home environment. Washington's home crowd provides energy and momentum. Opposing teams struggle with travel and hostile atmosphere. Home ice worth 0.3-0.5 goals in NHL handicapping."
+      },
+      {
+        "title": "Oilers Road Fatigue",
+        "description": "Edmonton on second game of back-to-back, traveling from previous night's game. Road fatigue affects NHL teams significantly - back-to-back road teams cover only 43% against rested home teams. McDavid and Draisaitl's legs will be heavy."
+      },
+      {
+        "title": "Goaltending Edge",
+        "description": "Charlie Lindgren has been solid in net for Capitals at home, posting .915 save percentage at Capital One Arena. Oilers' goaltending has been inconsistent on road trips. Washington's defensive structure limits high-danger chances."
+      },
+      {
+        "title": "Special Teams Battle",
+        "description": "Capitals' penalty kill operating at 82% at home, limiting Oilers' elite power play. Edmonton's PP is dangerous (28%) but road fatigue affects execution. Washington's disciplined play avoids penalties."
+      }
+    ],
+    "riskFactors": [
+      "Connor McDavid and Leon Draisaitl can take over any game regardless of fatigue",
+      "Oilers' top-heavy offense means one lucky bounce can change momentum",
+      "NHL is highly variable - any team can win on any night",
+      "Small stake (0.5u) reflects moderate confidence despite edge"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "capitalsShotsOnGoal": 32,
+      "oilersShotsOnGoal": 28,
+      "capitalsPowerPlayGoals": "1/3",
+      "oilersPowerPlayGoals": "1/4",
+      "capitalsFaceoffPercentage": "54%",
+      "oilersFaceoffPercentage": "46%",
+      "capitalsHits": 24,
+      "oilersHits": 18,
+      "capitalsBlockedShots": 16,
+      "oilersBlockedShots": 12
+    },
+    "keyPlayers": {
+      "alexanderOvechkin": {
+        "goals": 2,
+        "assists": 1,
+        "shots": 6,
+        "plusMinus": "+2",
+        "note": "Vintage Ovechkin performance with 2 goals including empty-netter to seal win"
+      },
+      "dylanStrome": {
+        "goals": 1,
+        "assists": 2,
+        "shots": 4,
+        "note": "Point-per-game player continued hot streak with 3-point night"
+      },
+      "connorMcDavid": {
+        "goals": 1,
+        "assists": 1,
+        "shots": 7,
+        "note": "McDavid got on scoresheet but couldn't overcome team effort from Capitals"
+      },
+      "charlieLindgren": {
+        "saves": 25,
+        "savePercentage": ".893",
+        "note": "Solid performance despite 3 goals against, made key saves in crucial moments"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "score": "Capitals 2, Oilers 1",
+        "description": "Capitals came out flying with home ice energy. Ovechkin opened scoring at 8:42 with classic one-timer from left circle. Strome added second goal at 14:18 on power play. McDavid answered for Oilers at 17:05 to keep it close. Capitals controlled possession and shots (12-9)."
+      },
+      {
+        "quarter": "2nd Period",
+        "score": "Capitals 1, Oilers 1",
+        "description": "Back-and-forth period with both teams trading chances. Capitals extended lead to 3-1 at 6:33 on Wilson's deflection. Draisaitl pulled Oilers within one at 15:48 on power play. Lindgren made several key saves to preserve lead. Physical play increased with 18 combined hits."
+      },
+      {
+        "quarter": "3rd Period",
+        "score": "Capitals 2, Oilers 1",
+        "description": "Capitals locked down defensively while adding insurance. Carlson scored at 8:22 to extend lead to 4-2. Oilers pulled goalie with 2:30 left, Hyman scored at 18:42 to make it 4-3. Ovechkin sealed it with empty-net goal at 19:15. Final: 5-3 Capitals."
+      }
+    ],
+    "whenCleared": "Bet secured when Carlson scored at 8:22 of 3rd period to make it 4-2. Two-goal lead with 11:38 remaining provided comfortable cushion. Oilers' late push (Hyman goal) made it interesting but Ovechkin's empty-netter sealed victory.",
+    "turningPoint": "Capitals' 2-1 first period lead set the tone. Getting two goals in opening frame forced Oilers to chase game on tired legs. Wilson's deflection goal early in 2nd (3-1 lead) provided breathing room that Capitals never relinquished.",
+    "gamePace": "Capitals controlled pace throughout, limiting Oilers' transition opportunities. Washington's defensive structure forced Edmonton into perimeter shots (only 10 high-danger chances vs Capitals' 14). Faceoff dominance (54%) kept puck in offensive zone.",
+    "teamOffense": "Balanced scoring from Capitals (4 different goal scorers) showcased depth. Ovechkin's 2 goals on 6 shots (.333 shooting) epitomized veteran efficiency. 32 shots on goal demonstrated sustained offensive pressure."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Home Ice Advantage Materialized",
+        "description": "Capitals' 6-1 home record continued with convincing win. Capital One Arena energy boosted team throughout. First period jump (2-1 lead) validated home ice edge. Crowd lifted team in key moments."
+      },
+      {
+        "title": "Oilers' Fatigue Factor Evident",
+        "description": "Edmonton's back-to-back showed in third period - couldn't sustain pressure until too late. Oilers' skating was noticeably slower than fresh Capitals. Road fatigue thesis validated completely."
+      },
+      {
+        "title": "Ovechkin Vintage Performance",
+        "description": "Great Eight delivered when needed with 2 goals, 1 assist. Opening goal set tone, empty-netter sealed win. Veteran leadership in big home game exactly what Capitals needed."
+      },
+      {
+        "title": "Defensive Structure Held",
+        "description": "Limited Oilers to 28 shots despite McDavid/Draisaitl. Blocked 16 shots, won physical battles (24-18 hits). Lindgren's 25 saves and team defense kept dangerous Oilers offense in check."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Capitals' 5 goals exceeded 3.2 home average. Ovechkin's 3-point night above his 0.9 PPG average. Team firing on all cylinders.",
+      "vsRecentForm": "Capitals now 6 wins in last 8 games, validated hot streak. Defense allowing 2.5 goals/game at home continued with 3 GA (one empty-net situation).",
+      "vsPropLine": "Won outright as -115 favorite. Two-goal win margin (excluding EN) comfortable for ML bet. Never trailed in game.",
+      "percentileRanking": "Ovechkin's 2G/1A night ranked 90th percentile for his season performances. Capitals' 5-goal output ranked 85th percentile for their home games."
+    },
+    "wasNormalVariance": "No. This was execution of clear edge - home team vs road-fatigued opponent. Oilers' back-to-back showed exactly as modeled. Capitals' first period jump (2-1) forced tired Oilers to chase. Defense + goaltending held elite offensive duo to 3 goals. This was process over result - every pre-game thesis materialized."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -120,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Slight positive CLV. Line moved from -115 to -120 as money came in on home Capitals. We captured original number before public moved line. 5 cents of juice saved validates early identification of value. Small but meaningful edge captured."
+  },
+  "keyTakeaways": [
+    "Capitals' home dominance (now 7-1) continues to be exploitable edge - home ice worth 0.3-0.5 goals in NHL",
+    "Back-to-back road teams at significant disadvantage - Oilers' fatigue evident in skating and third period collapse",
+    "Ovechkin's 2G/1A shows veteran stars deliver in home games with favorable matchups",
+    "Defensive structure (16 blocked shots, physical play) limited Oilers' high-danger chances to 10",
+    "First period leads against tired teams create insurmountable advantage - opponent forced to chase on heavy legs",
+    "McDavid/Draisaitl still dangerous (combined 2G/2A) but team effort beats individual stars when fatigued",
+    "Small stake (0.5u) appropriate for NHL given variance, but clear edges should still be exploited",
+    "Capitals' special teams (1/3 PP, 75% PK) contributed to victory without being dominant - team win"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook exploitation of home ice advantage vs road-fatigued opponent. Every thesis materialized: Capitals' first period jump (2-1) forced tired Oilers to chase, defense limited dangerous McDavid/Draisaitl duo to just 4 combined points, Ovechkin delivered vintage performance (2G/1A), physical play wore down fatigued Edmonton. Oilers' back-to-back showed in third period lack of pushback until too late. Small stake (0.5u) reflected NHL variance but edge was clear. Captured positive CLV (-115 vs closing -120). Process-driven win - would make this bet repeatedly under identical circumstances. Home teams vs road back-to-backs hit at 57%+ historically."
+}
