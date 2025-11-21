@@ -35,7 +35,7 @@ export default function EmailSignup() {
     setSubmitStatus('idle');
 
     try {
-      const response = await fetch('https://automation.syneticai.com/webhook-test/0f814e17-c16e-4320-b093-4c414ebb138d', {
+      const response = await fetch('https://automation.syneticai.com/webhook/0f814e17-c16e-4320-b093-4c414ebb138d', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

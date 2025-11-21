@@ -7,28 +7,30 @@ import BetTypeBreakdown from '@/components/BetTypeBreakdown';
 import RecentBets from '@/components/RecentBets';
 import MethodologyTeaser from '@/components/MethodologyTeaser';
 import QuantitativeMetrics from '@/components/QuantitativeMetrics';
-import PortfolioChart from '@/components/PortfolioChart';
+import CandlestickChart from '@/components/CandlestickChart';
 import TwitterCTA from '@/components/TwitterCTA';
 import Disclaimer from '@/components/Disclaimer';
 import EmailSignup from '@/components/EmailSignup';
 import Footer from '@/components/Footer';
+import StickyNav from '@/components/StickyNav';
 
 export default function Home() {
   return (
     <main className="overflow-x-hidden">
+      <StickyNav />
       <Hero />
+      <div id="overview"><PortfolioStatus /></div>
+      <div id="chart"><CandlestickChart /></div>
+      <div id="bets"><RecentBets /></div>
+      <div id="history"><DailyPerformanceHistory /></div>
+      <div id="sports"><SportBreakdown /></div>
+      <BetTypeBreakdown />
+      <div id="method"><MethodologyTeaser /></div>
+      <QuantitativeMetrics />
       <SystemIntro />
       <TwitterCTA />
-      <PortfolioStatus />
-      <DailyPerformanceHistory />
-      <SportBreakdown />
-      <BetTypeBreakdown />
-      <RecentBets />
-      <MethodologyTeaser />
-      <QuantitativeMetrics />
-      <PortfolioChart />
+      <div id="subscribe"><EmailSignup /></div>
       <Disclaimer />
-      <EmailSignup />
       <Footer />
     </main>
   );

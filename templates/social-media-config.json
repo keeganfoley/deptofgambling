@@ -1,0 +1,35 @@
+{
+  "twitter": {
+    "header": "🏛️ DAILY REPORT | {DATE}",
+    "subheader": "Yesterday's Bets ({YESTERDAY_DATE}):",
+    "winEmoji": "✅",
+    "lossEmoji": "❌",
+    "betFormat": "{EMOJI} {DESCRIPTION} ({ODDS}) | {STAKE}U\nFinal: {FINAL_STAT} · +{EDGE}% edge · +{EV}% EV · {PROFIT}",
+    "dayResultFormat": "DAY RESULT: {WINS}-{LOSSES} | {PROFIT} | {UNITS}",
+    "portfolioHeader": "💰 PORTFOLIO",
+    "portfolioFormat": "💵 Balance: ${BALANCE}\n📈 Profit: {PROFIT}\n📊 Units: {UNITS}\n🏆 Record: {WINS}-{LOSSES} ({WIN_RATE}%)",
+    "footer": "Bankroll = $10k | 1 Unit (u) = $100"
+  },
+  "instagram": {
+    "slide1": {
+      "title": "🏛️ DAILY REPORT",
+      "date": "{DATE}",
+      "subheader": "Yesterday's Bets ({YESTERDAY_DATE}):",
+      "betFormat": "{EMOJI} {DESCRIPTION} ({ODDS}) | {STAKE}u | Final: {FINAL_STAT}",
+      "dayResult": "DAY RESULT: {WINS}-{LOSSES} | {PROFIT}",
+      "footer": "ALL PROJECTIONS BASED ON STATISTICAL LIKELIHOOD, EXPECTED VALUE, AND VARIANCE MODELING. FULL BREAKDOWNS AT DEPTOFGAMBLING.COM."
+    },
+    "slide2": {
+      "title": "PORTFOLIO",
+      "date": "{DATE}",
+      "items": [
+        "💰 BALANCE: ${BALANCE}",
+        "📈 PROFIT: {PROFIT}",
+        "📊 UNITS: {UNITS}",
+        "🏆 RECORD: {WINS}-{LOSSES} ({WIN_RATE}%)"
+      ],
+      "footer": "STARTED WITH $10K | 1 UNIT (U) = $100",
+      "disclaimer": "ALL PROJECTIONS BASED ON STATISTICAL LIKELIHOOD, EXPECTED VALUE, AND VARIANCE MODELING. FULL BREAKDOWNS AT DEPTOFGAMBLING.COM."
+    }
+  }
+}
