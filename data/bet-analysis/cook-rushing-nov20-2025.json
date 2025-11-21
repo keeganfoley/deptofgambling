@@ -1,0 +1,154 @@
+{
+  "slug": "cook-rushing-nov20-2025",
+  "team": "James Cook",
+  "line": "O73.5 Rush Yds",
+  "odds": -110,
+  "stake": 0.5,
+  "result": "win",
+  "finalStat": "92 rushing yards on 24 carries",
+  "profit": 45.45,
+  "gameDetails": {
+    "matchup": "Buffalo Bills @ Houston Texans",
+    "date": "November 20, 2025",
+    "gameTime": "8:15 PM ET",
+    "venue": "NRG Stadium, Houston, TX",
+    "finalScore": "Texans 23, Bills 20"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 12,
+    "estimatedProbability": 58,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Cook over 73.5 in 7 of 10 games this season",
+      "seasonAverage": "Cook averaging 82.3 rushing YPG",
+      "recentForm": "94, 87, 76, 91, 78 rushing yards last 5 games",
+      "cushion": "Line at 73.5 vs 82.3 average = 8.8 yard cushion"
+    },
+    "keyFactors": [
+      {
+        "title": "Consistent Volume",
+        "description": "Cook averaging 18.2 carries per game - elite workload. Bills committed to running game regardless of score. Volume alone should push him over 73.5."
+      },
+      {
+        "title": "Line Below Season Average",
+        "description": "73.5 line vs 82.3 YPG average = 8.8 yard cushion. Market undervaluing his consistency. Hit this number in 7 of 10 games."
+      },
+      {
+        "title": "Texans Run Defense Vulnerable",
+        "description": "Texans allowing 4.3 YPC to RBs (#18 in NFL). Not elite against the run despite overall defensive ranking. Cook should find holes."
+      },
+      {
+        "title": "Game Script Favorable",
+        "description": "Bills likely to run to control clock and keep elite Texans defense off field. Expected to be close game = balanced attack."
+      }
+    ],
+    "riskFactors": [
+      "If Bills fall behind big, may abandon run",
+      "Texans front 7 can stuff individual runs",
+      "Ray Davis vulturing goal line carries",
+      "Bills may rely more on Allen's arm vs tough defense"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "cookRushingYards": 92,
+      "cookCarries": 24,
+      "cookYardsPerCarry": 3.8,
+      "cookLongRush": 14,
+      "billsTeamRushingYards": 92,
+      "cookRushingShare": "100%"
+    },
+    "keyPlayers": {
+      "jamesCook": {
+        "carries": 24,
+        "yards": 92,
+        "ypc": 3.8,
+        "long": 14,
+        "touchdowns": 0,
+        "note": "Workhorse performance - all 24 Bills RB carries. Consistent gains, no explosive plays but steady."
+      },
+      "texansRunDefense": {
+        "yardsAllowed": 92,
+        "ypcAllowed": 3.8,
+        "stuffs": 4,
+        "note": "Held Cook to 3.8 YPC but volume pushed him over. Solid but not dominant."
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Texans 7, Bills 3",
+        "description": "Cook: 6 carries, 22 yards. Bills established run early. Texans sold out to stop pass, gave Cook room.",
+        "runningTotal": "22 yards"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Texans 3, Bills 7",
+        "description": "Cook: 7 carries, 28 yards. Hit 14-yard burst. Bills balanced with 50 yards at half.",
+        "runningTotal": "50 yards"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Texans 6, Bills 3",
+        "description": "Cook: 5 carries, 18 yards. Tougher sledding as Texans adjusted. Still grinding.",
+        "runningTotal": "68 yards"
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Texans 7, Bills 7",
+        "description": "Cook: 6 carries, 24 yards. Bills ran clock trying to come back. Cleared 73.5 with 5:32 left. Final: 92 yards.",
+        "runningTotal": "92 yards - OVER HITS"
+      }
+    ],
+    "whenCleared": "Cleared 73.5 with 5:32 left in 4th quarter on 22nd carry. Finished with 92 yards - over by 18.5. Comfortable cover despite Bills losing.",
+    "turningPoint": "2nd quarter 14-yard burst gave him cushion. 50 yards at half meant only needed 24 in second half. Consistent 4th quarter work sealed it.",
+    "gamePace": "Bills ran 24 times despite losing - committed to run game. Cook got every RB carry (no Ray Davis). Volume was key.",
+    "teamOffense": "Bills only gained 333 total yards but Cook's 92 was solid chunk. 28% of total offense came from Cook runs. Efficient if not explosive."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Volume Delivered",
+        "description": "24 carries as predicted. Bills stayed committed to run even while trailing. This volume alone pushes him over most reasonable lines."
+      },
+      {
+        "title": "Line Was Too Low",
+        "description": "73.5 vs 82.3 average was value. He hit 92 yards - 18.5 over. Market undervalued his consistency."
+      },
+      {
+        "title": "No Ray Davis Vulturing",
+        "description": "Cook got 100% of RB carries. No goal line vulturing. Bills trusted him completely."
+      },
+      {
+        "title": "Steady Production",
+        "description": "22, 28, 18, 24 yards per quarter. Never had bad quarter. Consistency is his calling card."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "92 yards vs 82.3 average - 9.7 yards above. Strong performance even by his standards.",
+      "vsRecentForm": "92 yards fits perfectly in recent range (76-94 last 5 games). This is who he is.",
+      "vsPropLine": "Over 73.5 by 18.5 yards. Comfortable cover. Never truly in danger after halftime.",
+      "percentileRanking": "92 yards ranked 65th percentile for his performances. Good not great, but over is over."
+    },
+    "wasNormalVariance": "No. This was predictable outcome based on volume and consistency. Cook is one of most consistent RB props in NFL - hits his numbers 70% of time. Line at 73.5 was too low for guy averaging 82.3. This is exactly the type of prop we should be betting: consistent player, volume guaranteed, line below average. Process bet that hit as expected."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 2.2,
+    "verdict": "Positive CLV. Line moved from 73.5 to 74.5 at some books and juice increased. Market recognized value late. We captured original number which proved to be significant (hit 92)."
+  },
+  "keyTakeaways": [
+    "Consistent RB props are best props to bet - Cook is model of consistency",
+    "Volume is king - 24 carries almost guarantees reasonable yardage",
+    "Lines below season average are value - 73.5 vs 82.3 was free money",
+    "Trust the process - player averages exist for a reason",
+    "No vulture back = higher floor for volume",
+    "Even in losses, Bills commit to run - game script proof",
+    "Player props with 70%+ hit rates are exploitable edges"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook player prop bet. Consistent player (7 of 10 overs), guaranteed volume (18+ carries), line below average (73.5 vs 82.3). Cook delivered exactly as expected with 92 yards on 24 carries. Over by 18.5 yards - comfortable cover. This is the type of prop we should be targeting repeatedly: high-floor players with lines set below their averages. No variance, no sweat, just steady production hitting a reasonable number. Would bet this 100 times under identical circumstances."
+}

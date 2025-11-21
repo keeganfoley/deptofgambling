@@ -1,0 +1,156 @@
+{
+  "slug": "lightning-ml-nov20-2025",
+  "team": "Tampa Bay Lightning",
+  "line": "ML",
+  "odds": -165,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Lightning 4, Oilers 2",
+  "profit": 60.61,
+  "gameDetails": {
+    "matchup": "Edmonton Oilers @ Tampa Bay Lightning",
+    "date": "November 20, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Amalie Arena, Tampa, FL",
+    "finalScore": "Lightning 4, Oilers 2"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 12,
+    "estimatedProbability": 65,
+    "impliedProbability": 62.3,
+    "recentPerformance": {
+      "hitRate": "Lightning 7-3-0 in last 10 games",
+      "seasonAverage": "Vasilevskiy 4-1 in last 5 starts, 2.22 GAA, .917 SV%",
+      "recentForm": "Oilers lost 5-3 to Capitals previous night - on back-to-back",
+      "cushion": "Oilers starting Calvin Pickard: 4.18 GAA, .830 SV% - brutal numbers"
+    },
+    "keyFactors": [
+      {
+        "title": "Oilers Back-to-Back Fatigue",
+        "description": "Edmonton played Capitals previous night (lost 5-3), now traveling to Tampa. Back-to-back road teams in NHL cover only 43% against rested home teams. McDavid and Draisaitl's legs will be heavy."
+      },
+      {
+        "title": "Calvin Pickard in Net",
+        "description": "Oilers starting Pickard with brutal 4.18 GAA and .830 SV%. One of worst starting goalie situations in NHL. Lightning's offense will feast against leaky goaltending."
+      },
+      {
+        "title": "Vasilevskiy Elite",
+        "description": "Big Cat 4-1 in last 5 starts with 2.22 GAA and .917 SV%. Elite goaltending vs poor goaltending is massive edge in NHL. Expect Lightning to win goaltending battle decisively."
+      },
+      {
+        "title": "Lightning Home Form",
+        "description": "Tampa 7-3-0 in last 10 games, playing well at Amalie Arena. Kucherov and Guentzel firing (6 goals in 5 games combined). Home ice + rest advantage."
+      },
+      {
+        "title": "Oilers Road Struggles",
+        "description": "Edmonton 4-8-2 on the road this season. Can't win away from Rogers Place. Combination of travel fatigue and lack of home crowd support."
+      }
+    ],
+    "riskFactors": [
+      "Connor McDavid and Leon Draisaitl can take over any game",
+      "Oilers' top-heavy offense means one lucky bounce changes everything",
+      "-165 is significant juice to lay",
+      "NHL variance is high - any team can win any night"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "lightningShotsOnGoal": 31,
+      "oilersShotsOnGoal": 26,
+      "lightningPowerPlayGoals": "1/3",
+      "oilersPowerPlayGoals": "0/3",
+      "lightningFaceoffPercentage": "52%",
+      "oilersFaceoffPercentage": "48%"
+    },
+    "keyPlayers": {
+      "andreVasilevskiy": {
+        "saves": 24,
+        "savePercentage": ".923",
+        "note": "Elite performance, kept Oilers' stars in check"
+      },
+      "nikitaKucherov": {
+        "goals": 1,
+        "assists": 2,
+        "shots": 5,
+        "note": "Point-per-game player dominated with 3-point night"
+      },
+      "connorMcDavid": {
+        "goals": 1,
+        "assists": 0,
+        "shots": 8,
+        "note": "Limited to solo goal despite 8 SOG - fatigue showed"
+      },
+      "calvinPickard": {
+        "saves": 27,
+        "savePercentage": ".871",
+        "note": "Allowed 4 goals, couldn't steal the game"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "score": "Lightning 1, Oilers 1",
+        "description": "Even period with both teams trading goals. Kucherov opened scoring for Tampa at 7:22. McDavid answered at 14:55. Oilers showing fatigue but McDavid's individual brilliance kept them in it."
+      },
+      {
+        "quarter": "2nd Period",
+        "score": "Lightning 2, Oilers 0",
+        "description": "Lightning took control. Guentzel scored at 3:18, Point added at 11:42. Oilers' fatigue became evident - slow skating, losing puck battles. Tampa outshot Edmonton 13-7 in period."
+      },
+      {
+        "quarter": "3rd Period",
+        "score": "Lightning 1, Oilers 1",
+        "description": "Tampa sealed it with Cirelli goal at 6:44 (4-2 lead). Draisaitl pulled one back at 15:32 but too little too late. Oilers pulled goalie but couldn't complete comeback. Final: 4-2 Lightning."
+      }
+    ],
+    "whenCleared": "Second period's 2-0 advantage (3-1 overall lead) secured the bet. Oilers' fatigue showed with slow skating and lost puck battles. Lightning's depth overwhelmed tired Edmonton.",
+    "turningPoint": "Guentzel's goal 3:18 into second period gave Tampa 2-1 lead and momentum. Oilers couldn't respond with tired legs. Point's goal 8 minutes later (3-1) put game away.",
+    "gamePace": "Lightning controlled pace in 2nd and 3rd periods. Limited Oilers' transition opportunities - only 26 SOG for Edmonton. Tampa's fresh legs won board battles and races to loose pucks.",
+    "teamOffense": "Balanced attack with 4 different scorers (Kucherov, Guentzel, Point, Cirelli). Kucherov's 3-point night led the way. 31 shots on weak Pickard produced 4 goals."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Back-to-Back Fatigue Materialized",
+        "description": "Oilers visibly tired in 2nd period - slow skating, losing puck battles, couldn't sustain pressure. Exactly as modeled for B2B road teams."
+      },
+      {
+        "title": "Goaltending Edge Decisive",
+        "description": "Vasilevskiy .923 SV% vs Pickard .871 SV%. Elite goalie vs bad goalie was game-deciding factor. Vasy made key saves, Pickard couldn't steal it."
+      },
+      {
+        "title": "Lightning Depth Overwhelmed",
+        "description": "4 different goal scorers showed Tampa's depth vs Edmonton's top-heavy attack. When McDavid/Draisaitl (1G, 1A combined) can't take over, Oilers lose."
+      },
+      {
+        "title": "Second Period Dominance",
+        "description": "2-0 period for Lightning (3-1 lead) was knockout punch. Fresh legs vs tired legs in middle frame exactly as expected."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Lightning's 4 goals on 31 shots (.129) slightly above average. Oilers' 2 goals well below their 3.4 GPG average - defense contained them.",
+      "vsRecentForm": "Lightning continue 7-3-0 run in last 10. Vasilevskiy now 5-1 in last 6. Elite form continuing.",
+      "vsPropLine": "Won ML comfortably. 2-goal win (4-2) showed clear superiority. Never trailed after 1st period.",
+      "percentileRanking": "Kucherov's 3-point night ranked 90th percentile for his performances. Vasilevskiy's .923 SV% ranked 75th percentile."
+    },
+    "wasNormalVariance": "No. This was textbook situational spot - back-to-back road team with bad goalie vs rested home team with elite goalie. Every thesis materialized. Fatigue showed in 2nd period, goaltending edge decisive, Lightning depth overwhelmed. Process-driven win."
+  },
+  "closingLineValue": {
+    "ourOdds": -165,
+    "closingOdds": -170,
+    "clvCents": 5,
+    "clvPercentage": 1.5,
+    "verdict": "Slight positive CLV. Line moved from -165 to -170 as money came in on Lightning. We captured original number. Back-to-back situations are well-known edges so line movement expected."
+  },
+  "keyTakeaways": [
+    "Back-to-back road teams are elite fade spots - fatigue is real in NHL",
+    "Goaltending matchups matter most - Vasilevskiy vs Pickard was mismatch",
+    "Second periods often decide games when fatigue factor exists",
+    "McDavid/Draisaitl can be contained when team is tired - they're human",
+    "Lightning depth (4 different scorers) overwhelms top-heavy teams",
+    "Situational handicapping in NHL is +EV - rest advantages are quantifiable"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution of situational NHL handicapping. Back-to-back road team with worst goalie situation in NHL vs rested home team with elite Vasilevskiy. Every thesis materialized: fatigue showed in 2nd period (2-0 Lightning), goaltending edge decisive (Vasy .923 vs Pickard .871), depth overwhelmed top-heavy Oilers. McDavid limited to single goal despite 8 SOG. This is exploitable edge - would bet this spot repeatedly."
+}

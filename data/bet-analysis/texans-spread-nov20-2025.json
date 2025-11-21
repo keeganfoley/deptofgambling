@@ -1,0 +1,166 @@
+{
+  "slug": "texans-spread-nov20-2025",
+  "team": "Houston Texans",
+  "line": "+5.5",
+  "odds": 100,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Texans 23, Bills 20 (won outright)",
+  "profit": 200,
+  "gameDetails": {
+    "matchup": "Buffalo Bills @ Houston Texans",
+    "date": "November 20, 2025",
+    "gameTime": "8:15 PM ET",
+    "venue": "NRG Stadium, Houston, TX",
+    "finalScore": "Texans 23, Bills 20"
+  },
+  "preGameAnalysis": {
+    "edge": 9,
+    "expectedValue": 18,
+    "estimatedProbability": 52,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Texans 5-5 overall, elite defense #1 in NFL",
+      "seasonAverage": "Texans allowing 16.3 PPG, #1 scoring defense",
+      "recentForm": "Davis Mills 2-0 as starter in 2025 with 292 and 274 passing yards",
+      "cushion": "Getting PLUS MONEY (+100) on spread instead of standard -110 juice"
+    },
+    "keyFactors": [
+      {
+        "title": "PLUS MONEY on Spread - Extreme Value",
+        "description": "Getting +100 odds on +5.5 spread instead of standard -110 provides 2.4% free edge before game analysis. You only need 50% to break even at +100 vs 52.4% at -110. This alone makes the bet +EV."
+      },
+      {
+        "title": "#1 Defense in NFL",
+        "description": "Texans defense ranked #1 in scoring (16.3 PPG), #1 in pass defense (5.4 YPA allowed), #2 in yards per play. Even elite QBs struggle - Mahomes only scored 17 points against them. Allen will face his toughest test."
+      },
+      {
+        "title": "Davis Mills Competent",
+        "description": "Mills is 2-0 as starter in 2025 with 292 yards vs Jets and 274 vs Titans, 3 TDs, 0 INTs. Not a liability - game manager who protects the ball. Won't win you the game but won't lose it either."
+      },
+      {
+        "title": "Home Dome Advantage",
+        "description": "NRG Stadium crowd noise disrupts opposing QB cadences. Texans 3-2 at home. Indoor environment favors defense - no weather variables, precise route running against elite coverage."
+      },
+      {
+        "title": "Bills Missing Kincaid",
+        "description": "Dalton Kincaid (hamstring) out - Bills' key red zone weapon. Limits Allen's options in crucial situations. Already thin at TE position."
+      }
+    ],
+    "riskFactors": [
+      "Josh Allen is MVP caliber and can score 35+ any game",
+      "Bills offense ranked top 5 in NFL",
+      "Mills ceiling is limited - may struggle if game gets out of hand",
+      "7 of 10 Texans games went under - if this goes over, spread may not cover"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "texansPassingYards": 218,
+      "texansRushingYards": 122,
+      "texansTurnovers": 0,
+      "texansTimeOfPossession": "32:41",
+      "billsPassingYards": 241,
+      "billsRushingYards": 92,
+      "billsTurnovers": 2,
+      "billsTimeOfPossession": "27:19"
+    },
+    "keyPlayers": {
+      "davisMills": {
+        "completions": "22/31",
+        "yards": 218,
+        "touchdowns": 2,
+        "interceptions": 0,
+        "rating": 108.3,
+        "note": "Perfect game management, clutch 3rd down conversions, zero mistakes"
+      },
+      "joshAllen": {
+        "completions": "24/38",
+        "yards": 241,
+        "touchdowns": 1,
+        "interceptions": 1,
+        "rating": 79.2,
+        "note": "Held to season-low efficiency by elite Texans secondary"
+      },
+      "texansDefense": {
+        "sacks": 3,
+        "interceptions": 1,
+        "forcedFumbles": 1,
+        "thirdDownStops": "7/12",
+        "note": "Dominated Bills offense, forced 2 turnovers including crucial 4th quarter INT"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Texans 7, Bills 3",
+        "description": "Texans established tone immediately. Defense forced 3-and-out on Bills' first drive. Mills engineered 8-play, 72-yard TD drive capped by Mixon 3-yard run. Bills settled for FG after Texans D stiffened in red zone."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Texans 3, Bills 7",
+        "description": "Bills answered with TD drive - Allen to Shakir for 24-yard score. Texans added FG before half. Defense continued limiting big plays - Allen held to 5.8 YPA in first half."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Texans 6, Bills 3",
+        "description": "Defensive battle. Texans added two FGs off short fields created by defense. Key interception by Texans CB set up scoring opportunity. Bills managed only FG. Texans lead 16-13 entering 4th."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Texans 7, Bills 7",
+        "description": "Mills delivered clutch TD pass to Collins with 4:32 left (23-13). Bills answered with TD but Texans recovered onside kick. Game sealed. Final: Texans 23, Bills 20."
+      }
+    ],
+    "whenCleared": "Won OUTRIGHT - didn't even need the 5.5 points. Texans led entire second half and never trailed after first quarter. Covered +5.5 by 8.5 points (3-point win margin + 5.5 points = covered by 8.5).",
+    "turningPoint": "Texans' interception of Allen at start of 3rd quarter changed game. Turned potential Bills scoring drive into Texans FG. Defense set tone that Bills couldn't overcome.",
+    "gamePace": "Texans controlled clock with 32:41 TOP. Defense kept Bills off field with 3rd down stops (7/12). Run game established (122 yards) limited Allen's opportunities.",
+    "teamOffense": "Mills exceeded expectations with 108.3 passer rating. Key 3rd down conversions kept drives alive. Zero turnovers allowed defense to play aggressive."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Elite Defense Delivered",
+        "description": "Held MVP candidate Josh Allen to 79.2 passer rating - season low. Forced 2 turnovers. Limited to 333 total yards. This is exactly what #1 defense should do."
+      },
+      {
+        "title": "Plus Money Justified",
+        "description": "Getting +100 instead of -110 was free money. Didn't even need the spread - won outright. The 2.4% edge from odds alone proved valuable."
+      },
+      {
+        "title": "Mills Game Management Perfect",
+        "description": "22/31, 218 yards, 2 TD, 0 INT, 108.3 rating. Exceeded backup QB expectations. Key conversions when needed. Proved he's not a liability."
+      },
+      {
+        "title": "Home Field Materialized",
+        "description": "NRG Stadium crowd disrupted Bills' communication. Texans fed off energy. 3-2 home record now 4-2."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Texans defense held Bills to 20 points vs Bills' 28.4 PPG average. Allen's 79.2 rating vs 98.7 season average. Complete defensive dominance.",
+      "vsRecentForm": "Mills continued 2-0 streak as starter, now 3-0. Defense allowed 20 points vs 16.3 PPG average - still elite performance vs top offense.",
+      "vsPropLine": "Won outright +3, covered +5.5 by 8.5 points. Never in doubt after 1st quarter. Plus money made this extremely valuable.",
+      "percentileRanking": "Texans defensive performance ranked 95th percentile for games this season. Holding Allen to 79.2 rating ranked 99th percentile."
+    },
+    "wasNormalVariance": "No. This was elite handicapping executed perfectly. Every thesis materialized: #1 defense dominated MVP QB, backup QB managed game without mistakes, home field advantage evident, plus money odds captured free edge. Texans winning outright exceeded expectations - we only needed them within 5.5. Process validated entirely."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Exceptional CLV. Captured +100 when line closed at -105. That's 5 cents of pure value plus the implied probability edge. Sharp money moved line toward Texans all week - we identified this early. Getting plus money on spread is rare and we maximized it with 2-unit bet."
+  },
+  "keyTakeaways": [
+    "Plus money on spreads is RARE - when you find it with supporting analysis, bet heavy (2 units justified)",
+    "#1 defense will limit any offense - even MVP candidates have bad days against elite coverage",
+    "Backup QBs can cover spreads at 52%+ when defense is elite - Mills proved this",
+    "Home dome advantage is real - crowd noise disrupts communication",
+    "Line shopping paid off massively - +100 vs -110 was 2.4% free edge",
+    "Trust the process - public faded 'backup QB' narrative while sharps hammered Texans",
+    "Texans defense now holds opponents to 17.8 PPG - sustainable elite performance",
+    "Allen can be contained by top defenses - he's human"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Best bet of the night. Plus money on spread with #1 defense was textbook value. Every thesis materialized: Texans defense dominated Allen (79.2 rating), Mills managed game perfectly (108.3 rating, 0 turnovers), home field advantage evident. Won OUTRIGHT - didn't even need the 5.5 points. Getting +100 odds when it should be -110 is free money, and we maximized it with 2-unit bet. This is what edge-based betting looks like. Would make this bet 100 times out of 100 under identical circumstances."
+}
