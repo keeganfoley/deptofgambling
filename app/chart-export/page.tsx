@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
-import { createChart, IChartApi, CandlestickData, Time, HistogramData, CandlestickSeries, HistogramSeries } from 'lightweight-charts';
+import type { IChartApi, CandlestickData, Time, HistogramData } from 'lightweight-charts';
 import chartDataFile from '@/data/chartData.json';
 import betsData from '@/data/bets.json';
 
@@ -34,16 +34,20 @@ export default function ChartExport() {
   const labelParam = searchParams.get('label') || ''; // e.g., "Week 1" or "Day 5"
 
   useEffect(() => {
-    if (!chartContainerRef.current) return;
+    if (!chartContainerRef.current || typeof window === 'undefined') return;
 
-    if (chartRef.current) {
-      chartRef.current.remove();
-      chartRef.current = null;
-    }
+    const initChart = async () => {
+      const { createChart, CandlestickSeries, HistogramSeries } = await import('lightweight-charts');
 
-    const container = chartContainerRef.current;
+      if (chartRef.current) {
+        chartRef.current.remove();
+        chartRef.current = null;
+      }
 
-    const chart = createChart(container, {
+      const container = chartContainerRef.current;
+      if (!container) return;
+
+      const chart = createChart(container, {
       layout: {
         background: { color: '#0d1117' },
         textColor: '#8b949e',
@@ -207,6 +211,9 @@ export default function ChartExport() {
 
     volumeSeries.setData(volumeData);
     chart.timeScale().fitContent();
+    };
+
+    initChart();
 
     return () => {
       if (chartRef.current) {
@@ -214,7 +221,7 @@ export default function ChartExport() {
         chartRef.current = null;
       }
     };
-  }, [endDateParam]);
+  }, [endDateParam, startDateParam]);
 
   const formatDate = (dateStr: string) => {
     const [year, month, day] = dateStr.split('-').map(Number);

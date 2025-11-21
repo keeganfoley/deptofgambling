@@ -3,11 +3,13 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { createChart, IChartApi, CandlestickData, Time, HistogramData, CandlestickSeries, HistogramSeries } from 'lightweight-charts';
+import type { IChartApi, CandlestickData, Time, HistogramData } from 'lightweight-charts';
 import chartDataFile from '@/data/chartData.json';
 import betsData from '@/data/bets.json';
 
-gsap.registerPlugin(ScrollTrigger);
+if (typeof window !== 'undefined') {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 type TimeframeType = '1week' | '2weeks' | '1month' | 'alltime';
 
@@ -49,6 +51,8 @@ export default function CandlestickChart() {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
     const isMobile = window.innerWidth < 768;
 
     gsap.fromTo(
@@ -69,18 +73,22 @@ export default function CandlestickChart() {
   }, []);
 
   useEffect(() => {
-    if (!chartContainerRef.current) return;
+    if (!chartContainerRef.current || typeof window === 'undefined') return;
 
-    // Clear any existing chart
-    if (chartRef.current) {
-      chartRef.current.remove();
-      chartRef.current = null;
-    }
+    const initChart = async () => {
+      const { createChart, CandlestickSeries, HistogramSeries } = await import('lightweight-charts');
 
-    const container = chartContainerRef.current;
+      // Clear any existing chart
+      if (chartRef.current) {
+        chartRef.current.remove();
+        chartRef.current = null;
+      }
 
-    // Create the chart with premium dark financial theme
-    const chart = createChart(container, {
+      const container = chartContainerRef.current;
+      if (!container) return;
+
+      // Create the chart with premium dark financial theme
+      const chart = createChart(container, {
       layout: {
         background: { color: '#0d1117' },
         textColor: '#8b949e',
@@ -307,9 +315,12 @@ export default function CandlestickChart() {
     };
 
     window.addEventListener('resize', handleResize);
+    };
+
+    initChart();
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', () => {});
       if (chartRef.current) {
         chartRef.current.remove();
         chartRef.current = null;
