@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Link from 'next/link';
 import { formatCurrency, formatPercent, formatRecord } from '@/lib/utils';
 import metricsData from '@/data/metrics.json';
 
@@ -64,12 +65,13 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
   const isBest = roi > 14; // Props has 15.3% ROI
 
   return (
-    <div
-      ref={cardRef}
-      className={`bg-white rounded-sm border-2 p-5 sm:p-6 transition-all duration-300 opacity-0 ${
+    <Link
+      href={`/bets?type=${type}`}
+      ref={cardRef as any}
+      className={`bg-white rounded-sm border-2 p-5 sm:p-6 transition-all duration-300 opacity-0 cursor-pointer hover:shadow-lg ${
         isBest
-          ? 'border-accent shadow-[0_0_20px_rgba(255,0,128,0.2)]'
-          : 'border-gray-200 card-float'
+          ? 'border-accent shadow-[0_0_20px_rgba(255,0,128,0.2)] hover:border-accent'
+          : 'border-gray-200 card-float hover:border-primary'
       }`}
     >
       <h3 className="text-xl sm:text-2xl font-medium text-primary mb-6" style={{ letterSpacing: '0.02em' }}>
@@ -115,7 +117,11 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="mt-4 text-xs text-secondary font-semibold uppercase">
+        View All {type} →
+      </div>
+    </Link>
   );
 }
 

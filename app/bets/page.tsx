@@ -180,7 +180,9 @@ function BetsContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const sportFilter = searchParams?.get('sport') || 'All';
-  const [currentFilter, setCurrentFilter] = useState(sportFilter);
+  const typeFilter = searchParams?.get('type') || 'All';
+  const [currentSportFilter, setCurrentSportFilter] = useState(sportFilter);
+  const [currentTypeFilter, setCurrentTypeFilter] = useState(typeFilter);
   const [showAnalysis, setShowAnalysis] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -189,48 +191,48 @@ function BetsContent() {
 
   const allBets = betsData as Bet[];
 
-  // Filter bets based on sport
-  const filteredBets = currentFilter === 'All'
-    ? allBets
-    : allBets.filter(bet => bet.sport === currentFilter);
+  // Filter bets based on sport and type
+  const filteredBets = allBets.filter(bet => {
+    const matchesSport = currentSportFilter === 'All' || bet.sport === currentSportFilter;
+    const matchesType = currentTypeFilter === 'All' || bet.betType === currentTypeFilter.toLowerCase();
+    return matchesSport && matchesType;
+  });
 
-  const sports = ['All', 'NBA', 'NFL', 'NCAAB', 'NCAAF'];
+  const sports = ['All', 'NBA', 'NFL', 'NCAAB', 'NCAAF', 'NHL', 'Soccer'];
+  const betTypes = ['All', 'Spreads', 'Props', 'Totals', 'Moneyline'];
 
   // Calculate stats for current filter
   const calculateFilteredStats = () => {
-    if (currentFilter === 'All') {
-      return {
-        record: portfolioData.record,
-        netPL: portfolioData.netPL,
-        roi: portfolioData.roi,
-        winRate: portfolioData.winRate,
-        unitsWon: portfolioData.unitsWon,
-        totalExposure: filteredBets.reduce((sum, bet) => sum + (bet.stake * 100), 0),
-        unitsRisked: filteredBets.reduce((sum, bet) => sum + bet.stake, 0),
-      };
-    } else {
-      const sportStats = (metricsData as any).sportBreakdown[currentFilter];
-      const sportBets = filteredBets;
-      const totalExposure = sportBets.reduce((sum, bet) => sum + (bet.stake * 100), 0);
-      const unitsRisked = sportBets.reduce((sum, bet) => sum + bet.stake, 0);
+    const wins = filteredBets.filter(b => b.result === 'win').length;
+    const losses = filteredBets.filter(b => b.result === 'loss').length;
+    const total = wins + losses;
+    const netPL = filteredBets.reduce((sum, bet) => sum + bet.profit, 0);
+    const totalExposure = filteredBets.reduce((sum, bet) => sum + (bet.stake * 100), 0);
+    const unitsRisked = filteredBets.reduce((sum, bet) => sum + bet.stake, 0);
+    const roi = totalExposure > 0 ? (netPL / totalExposure) * 100 : 0;
+    const winRate = total > 0 ? (wins / total) * 100 : 0;
+    const unitsWon = netPL / 100;
 
-      return {
-        record: sportStats.record,
-        netPL: sportStats.netPL,
-        roi: sportStats.roi,
-        winRate: (sportStats.record.wins / sportStats.record.total) * 100,
-        unitsWon: sportStats.unitsWon,
-        totalExposure,
-        unitsRisked,
-      };
-    }
+    return {
+      record: { wins, losses, total },
+      netPL,
+      roi,
+      winRate,
+      unitsWon,
+      totalExposure,
+      unitsRisked,
+    };
   };
 
   const stats = calculateFilteredStats();
 
   useEffect(() => {
-    setCurrentFilter(sportFilter);
+    setCurrentSportFilter(sportFilter);
   }, [sportFilter]);
+
+  useEffect(() => {
+    setCurrentTypeFilter(typeFilter);
+  }, [typeFilter]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -275,7 +277,9 @@ function BetsContent() {
         {/* Portfolio Stats Summary */}
         <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-sm p-6 sm:p-8 mb-12 shadow-lg">
           <h3 className="text-xl sm:text-2xl font-bold text-primary text-center mb-6">
-            {currentFilter === 'All' ? 'PORTFOLIO OVERVIEW' : `${currentFilter} PERFORMANCE`}
+            {currentSportFilter === 'All' && currentTypeFilter === 'All'
+              ? 'PORTFOLIO OVERVIEW'
+              : `${currentTypeFilter !== 'All' ? currentTypeFilter.toUpperCase() : ''} ${currentSportFilter !== 'All' ? currentSportFilter : ''} PERFORMANCE`.trim()}
           </h3>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
@@ -323,31 +327,69 @@ function BetsContent() {
         </div>
 
         {/* Sport Filter Buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {sports.map((sport) => (
-            <button
-              key={sport}
-              onClick={() => {
-                setCurrentFilter(sport);
-                const url = sport === 'All' ? '/bets' : `/bets?sport=${sport}`;
-                router.replace(url, { scroll: false });
-              }}
-              className={`px-6 py-3 rounded-sm font-semibold text-sm uppercase tracking-wide transition-all duration-300 ${
-                currentFilter === sport
-                  ? 'bg-secondary text-white'
-                  : 'bg-gray-100 text-primary hover:bg-gray-200'
-              }`}
-            >
-              {sport}
-            </button>
-          ))}
+        <div className="mb-6">
+          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Sport</div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {sports.map((sport) => (
+              <button
+                key={sport}
+                onClick={() => {
+                  setCurrentSportFilter(sport);
+                  const params = new URLSearchParams();
+                  if (sport !== 'All') params.set('sport', sport);
+                  if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
+                  const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
+                  router.replace(url, { scroll: false });
+                }}
+                className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
+                  currentSportFilter === sport
+                    ? 'bg-secondary text-white'
+                    : 'bg-gray-100 text-primary hover:bg-gray-200'
+                }`}
+              >
+                {sport}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Bet Type Filter Buttons */}
+        <div className="mb-12">
+          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Bet Type</div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {betTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => {
+                  setCurrentTypeFilter(type);
+                  const params = new URLSearchParams();
+                  if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                  if (type !== 'All') params.set('type', type);
+                  const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
+                  router.replace(url, { scroll: false });
+                }}
+                className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
+                  currentTypeFilter === type
+                    ? 'bg-primary text-white'
+                    : 'bg-gray-100 text-primary hover:bg-gray-200'
+                }`}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Bet Count */}
         <div className="text-center mb-8">
           <p className="text-text-muted text-sm">
             Showing <span className="font-bold text-primary">{filteredBets.length}</span> bet{filteredBets.length !== 1 ? 's' : ''}
-            {currentFilter !== 'All' && ` in ${currentFilter}`}
+            {(currentSportFilter !== 'All' || currentTypeFilter !== 'All') && (
+              <span>
+                {currentTypeFilter !== 'All' && ` - ${currentTypeFilter}`}
+                {currentSportFilter !== 'All' && ` in ${currentSportFilter}`}
+              </span>
+            )}
           </p>
         </div>
 

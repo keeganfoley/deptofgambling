@@ -16,22 +16,22 @@
   "kellyUtilization": 38,
   "maxWinStreak": 6,
   "maxLossStreak": 4,
-  "totalWinnings": 5444.58,
-  "totalLossesAmount": 5665,
+  "totalWinnings": 5582.19,
+  "totalLossesAmount": 6315,
   "sportBreakdown": {
     "NBA": {
       "sport": "NBA",
       "emoji": "🏀",
       "record": {
-        "wins": 18,
-        "losses": 17,
-        "total": 35
+        "wins": 19,
+        "losses": 19,
+        "total": 38
       },
-      "roi": -2.05,
-      "netPL": -70.97,
-      "unitsWon": -0.7097,
-      "gamesAnalyzed": 35,
-      "totalGames": 35
+      "roi": -8.78,
+      "netPL": -333.36,
+      "unitsWon": -3.3336,
+      "gamesAnalyzed": 38,
+      "totalGames": 38
     },
     "NFL": {
       "sport": "NFL",
@@ -66,14 +66,28 @@
       "emoji": "🏟️",
       "record": {
         "wins": 4,
-        "losses": 3,
-        "total": 7
+        "losses": 5,
+        "total": 9
       },
-      "roi": 22.08,
-      "netPL": 243.21,
-      "unitsWon": 2.4321,
-      "gamesAnalyzed": 7,
-      "totalGames": 7
+      "roi": 4.80,
+      "netPL": 43.21,
+      "unitsWon": 0.4321,
+      "gamesAnalyzed": 9,
+      "totalGames": 9
+    },
+    "Soccer": {
+      "sport": "Soccer",
+      "emoji": "⚽",
+      "record": {
+        "wins": 0,
+        "losses": 1,
+        "total": 1
+      },
+      "roi": -100,
+      "netPL": -150,
+      "unitsWon": -1.5,
+      "gamesAnalyzed": 1,
+      "totalGames": 1
     },
     "NHL": {
       "sport": "NHL",
@@ -95,21 +109,21 @@
       "type": "Props",
       "record": {
         "wins": 20,
-        "losses": 23
+        "losses": 26
       },
-      "winRate": 46.51,
-      "netPL": -918.40,
-      "roi": -16.85
+      "winRate": 43.48,
+      "netPL": -1368.40,
+      "roi": -24.97
     },
     "Spreads": {
       "type": "Spreads",
       "record": {
-        "wins": 18,
-        "losses": 13
+        "wins": 15,
+        "losses": 15
       },
-      "winRate": 58.06,
-      "netPL": 585.16,
-      "roi": 10.35
+      "winRate": 50.00,
+      "netPL": 236.68,
+      "roi": 7.89
     },
     "Totals": {
       "type": "Totals",
@@ -119,17 +133,17 @@
       },
       "winRate": 42.86,
       "netPL": 41.39,
-      "roi": -1.42
+      "roi": 5.91
     },
     "Moneyline": {
       "type": "Moneyline",
       "record": {
-        "wins": 1,
+        "wins": 5,
         "losses": 0
       },
       "winRate": 100,
-      "netPL": 71.43,
-      "roi": 71.43
+      "netPL": 357.52,
+      "roi": 71.50
     }
   },
   "stakeBreakdown": {
@@ -145,13 +159,13 @@
     },
     "1.5u": {
       "record": {
-        "wins": 11,
-        "losses": 10,
-        "total": 21
+        "wins": 12,
+        "losses": 14,
+        "total": 26
       },
-      "winRate": 52.38,
-      "netPL": 21.98,
-      "totalBets": 21
+      "winRate": 46.15,
+      "netPL": -440.41,
+      "totalBets": 26
     },
     "2u": {
       "record": {
@@ -176,12 +190,12 @@
     "0.5u": {
       "record": {
         "wins": 3,
-        "losses": 2,
-        "total": 5
+        "losses": 3,
+        "total": 6
       },
-      "winRate": 60,
-      "netPL": 49.339999999999996,
-      "totalBets": 4
+      "winRate": 50,
+      "netPL": -0.66,
+      "totalBets": 6
     },
     "2.5u": {
       "record": {
@@ -778,11 +792,53 @@
       "profit": 136.36,
       "description": "Mitchell O28.5 pts",
       "result": "win"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9629.58,
+      "profit": -150,
+      "description": "Army -10",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9479.58,
+      "profit": -150,
+      "description": "Haaland Anytime Goal",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9329.58,
+      "profit": -150,
+      "description": "Daniels O2.5 steals",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9179.58,
+      "profit": -150,
+      "description": "KAT O11.5 rebounds",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9129.58,
+      "profit": -50,
+      "description": "Illinois -8.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-22",
+      "balance": 9267.19,
+      "profit": 137.61,
+      "description": "Pistons -8",
+      "result": "win"
     }
   ],
-  "totalCapitalRisked": 11615,
-  "unitsRisked": 116.15,
-  "totalBets": 82,
-  "totalWins": 42,
-  "totalLosses": 40
+  "totalCapitalRisked": 12415,
+  "unitsRisked": 124.15,
+  "totalBets": 88,
+  "totalWins": 43,
+  "totalLosses": 45
 }

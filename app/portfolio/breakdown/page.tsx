@@ -389,7 +389,11 @@ export default function PortfolioBreakdownPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {Object.values(sportBreakdown).map((sport: any) => (
-              <div key={sport.sport} className="bg-gray-50 p-6 rounded-sm border-2 border-gray-200">
+              <Link
+                key={sport.sport}
+                href={`/bets?sport=${sport.sport}`}
+                className="bg-gray-50 p-6 rounded-sm border-2 border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-300 cursor-pointer"
+              >
                 <div className="flex items-center justify-between mb-4">
                   <h3 className="text-xl font-bold text-primary">{sport.sport}</h3>
                   <span className="text-3xl">{sport.emoji}</span>
@@ -433,7 +437,11 @@ export default function PortfolioBreakdownPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+
+                <div className="mt-4 text-xs text-secondary font-semibold uppercase">
+                  View All {sport.sport} →
+                </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -444,9 +452,13 @@ export default function PortfolioBreakdownPage() {
             🎯 BET TYPE BREAKDOWN
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {Object.values(betTypeBreakdown).map((betType: any) => (
-              <div key={betType.type} className="bg-gray-50 p-6 rounded-sm border-2 border-gray-200">
+              <Link
+                key={betType.type}
+                href={`/bets?type=${betType.type}`}
+                className="bg-gray-50 p-6 rounded-sm border-2 border-gray-200 hover:border-primary hover:shadow-lg transition-all duration-300 cursor-pointer"
+              >
                 <h3 className="text-xl font-bold text-primary mb-4">{betType.type}</h3>
 
                 <div className="space-y-3">
@@ -478,7 +490,11 @@ export default function PortfolioBreakdownPage() {
                     </div>
                   </div>
                 </div>
-              </div>
+
+                <div className="mt-4 text-xs text-secondary font-semibold uppercase">
+                  View All {betType.type} →
+                </div>
+              </Link>
             ))}
           </div>
         </div>

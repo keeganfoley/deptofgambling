@@ -1,0 +1,119 @@
+{
+  "slug": "daniels-steals-nov22-2025",
+  "player": "Dyson Daniels",
+  "team": "Atlanta Hawks",
+  "line": "O2.5 steals",
+  "odds": -136,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "2 steals",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "Atlanta Hawks vs Charlotte Hornets",
+    "date": "2025-11-22",
+    "gameTime": "7:30 PM ET",
+    "venue": "State Farm Arena",
+    "finalScore": "ATL 117, CHA 102"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 22,
+    "estimatedProbability": 68,
+    "impliedProbability": 57.6,
+    "recentPerformance": {
+      "hitRate": "Hit over in 8 of 11 games",
+      "seasonAverage": "3.4 steals per game (NBA leader)",
+      "last5Games": "18 steals in last 5",
+      "cushion": "+0.9 above line"
+    },
+    "keyFactors": [
+      {
+        "title": "NBA Steals Leader",
+        "description": "Daniels leading entire NBA at 3.4 SPG"
+      },
+      {
+        "title": "Aggressive Defense",
+        "description": "Hawks play aggressive perimeter defense"
+      },
+      {
+        "title": "Turnover-Prone Opponent",
+        "description": "Charlotte guards struggle with ball security"
+      },
+      {
+        "title": "Home Court",
+        "description": "More comfortable in familiar defensive schemes"
+      }
+    ],
+    "riskFactors": [
+      "Steals are high variance",
+      "Can't force steal opportunities",
+      "Blowout could limit minutes"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "steals": 2,
+      "points": 12,
+      "assists": 4,
+      "deflections": 5,
+      "minutes": 32
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "1 steal early, looking active on defense"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "No steals but several deflections"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "1 more steal, sitting at 2 with one quarter left"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Limited minutes in blowout, couldn't get 3rd steal"
+      }
+    ],
+    "gamePace": "Fast pace but Charlotte protected ball well",
+    "turningPoint": "Blowout reduced 4th quarter opportunities"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Just Missed",
+        "description": "2 steals - one away from cashing"
+      },
+      {
+        "title": "Blowout Impact",
+        "description": "Hawks' comfortable lead limited Daniels' 4th quarter minutes"
+      },
+      {
+        "title": "Variance",
+        "description": "Steals are inherently high variance - even leaders have off nights"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "2 vs 3.4 average = -1.4 steals",
+      "vsPropLine": "1 steal short of line",
+      "percentileRanking": "Below average Daniels game"
+    },
+    "wasNormalVariance": "Yes - steals are the highest variance prop. Daniels was active (5 deflections) but only converted 2. One steal away."
+  },
+  "closingLineValue": {
+    "ourOdds": -136,
+    "closingOdds": -140,
+    "clvCents": 4,
+    "clvPercentage": 1.5,
+    "verdict": "Positive CLV but variance killed us"
+  },
+  "keyTakeaways": [
+    "Steals are highest variance prop in basketball",
+    "Even NBA steals leader can have below-average nights",
+    "Blowouts hurt prop bets - reduced minutes",
+    "Consider alt lines on high variance props"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Unlucky. Daniels had 2 steals and 5 deflections - was active but couldn't convert. One steal short. Variance loss on good process."
+}
