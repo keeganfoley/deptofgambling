@@ -16,22 +16,22 @@
   "kellyUtilization": 38,
   "maxWinStreak": 6,
   "maxLossStreak": 4,
-  "totalWinnings": 5236.789567099566,
-  "totalLossesAmount": 5315,
+  "totalWinnings": 5444.58,
+  "totalLossesAmount": 5665,
   "sportBreakdown": {
     "NBA": {
       "sport": "NBA",
       "emoji": "🏀",
       "record": {
-        "wins": 17,
-        "losses": 15,
-        "total": 32
+        "wins": 18,
+        "losses": 17,
+        "total": 35
       },
-      "roi": -3.3540625000000013,
-      "netPL": -107.33000000000004,
-      "unitsWon": -0.0733000000000004,
-      "gamesAnalyzed": 31,
-      "totalGames": 31
+      "roi": -2.05,
+      "netPL": -70.97,
+      "unitsWon": -0.7097,
+      "gamesAnalyzed": 35,
+      "totalGames": 35
     },
     "NFL": {
       "sport": "NFL",
@@ -66,82 +66,92 @@
       "emoji": "🏟️",
       "record": {
         "wins": 4,
-        "losses": 2,
-        "total": 6
+        "losses": 3,
+        "total": 7
       },
-      "roi": 37.448571428571434,
-      "netPL": 393.21000000000004,
-      "unitsWon": 3.9321,
-      "gamesAnalyzed": 6,
-      "totalGames": 6
+      "roi": 22.08,
+      "netPL": 243.21,
+      "unitsWon": 2.4321,
+      "gamesAnalyzed": 7,
+      "totalGames": 7
     },
     "NHL": {
       "sport": "NHL",
-      "emoji": "🏟️",
+      "emoji": "🏒",
       "record": {
-        "wins": 2,
+        "wins": 3,
         "losses": 0,
-        "total": 2
+        "total": 3
       },
-      "roi": 52.044999999999995,
-      "netPL": 104.09,
-      "unitsWon": 0.43479999999999996,
-      "gamesAnalyzed": 1,
-      "totalGames": 1
+      "roi": 43.86,
+      "netPL": 175.52,
+      "unitsWon": 1.7552,
+      "gamesAnalyzed": 3,
+      "totalGames": 3
     }
   },
   "betTypeBreakdown": {
     "Props": {
       "type": "Props",
       "record": {
-        "wins": 19,
-        "losses": 22
+        "wins": 20,
+        "losses": 23
       },
-      "winRate": 46.34146341463415,
-      "netPL": -904.7609090909092,
-      "roi": -17.01562168772931
+      "winRate": 46.51,
+      "netPL": -918.40,
+      "roi": -16.85
     },
     "Spreads": {
       "type": "Spreads",
       "record": {
         "wins": 18,
-        "losses": 12
+        "losses": 13
       },
-      "winRate": 60,
-      "netPL": 685.1561904761907,
-      "roi": 12.825090231691702
+      "winRate": 58.06,
+      "netPL": 585.16,
+      "roi": 10.35
     },
     "Totals": {
       "type": "Totals",
       "record": {
         "wins": 3,
-        "losses": 3
+        "losses": 4
       },
-      "winRate": 50,
-      "netPL": 141.39428571428573,
-      "roi": 0.5922689075630254
+      "winRate": 42.86,
+      "netPL": 41.39,
+      "roi": -1.42
+    },
+    "Moneyline": {
+      "type": "Moneyline",
+      "record": {
+        "wins": 1,
+        "losses": 0
+      },
+      "winRate": 100,
+      "netPL": 71.43,
+      "roi": 71.43
     }
   },
   "stakeBreakdown": {
     "1u": {
       "record": {
-        "wins": 14,
-        "losses": 13,
-        "total": 27
+        "wins": 15,
+        "losses": 15,
+        "total": 30
       },
-      "winRate": 51.85185185185185,
-      "netPL": -36.68090909090914,
-      "totalBets": 25
+      "winRate": 50,
+      "netPL": -65.25,
+      "totalBets": 30
     },
     "1.5u": {
       "record": {
-        "wins": 10,
-        "losses": 9,
-        "total": 19
+        "wins": 11,
+        "losses": 10,
+        "total": 21
       },
-      "winRate": 52.63157894736842,
-      "netPL": 35.62000000000006,
-      "totalBets": 18
+      "winRate": 52.38,
+      "netPL": 21.98,
+      "totalBets": 21
     },
     "2u": {
       "record": {
@@ -733,11 +743,46 @@
       "profit": 43.86,
       "description": "Cook O73.5 Rush",
       "result": "win"
+    },
+    {
+      "date": "2025-11-21",
+      "balance": 9821.79,
+      "profit": -100,
+      "description": "Nuggets/Rockets O235.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-21",
+      "balance": 9721.79,
+      "profit": -100,
+      "description": "Timberwolves -4.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-21",
+      "balance": 9793.22,
+      "profit": 71.43,
+      "description": "Hurricanes ML",
+      "result": "win"
+    },
+    {
+      "date": "2025-11-21",
+      "balance": 9643.22,
+      "profit": -150,
+      "description": "Castellanos O235.5 pass yds",
+      "result": "loss"
+    },
+    {
+      "date": "2025-11-21",
+      "balance": 9779.58,
+      "profit": 136.36,
+      "description": "Mitchell O28.5 pts",
+      "result": "win"
     }
   ],
-  "totalCapitalRisked": 11115,
-  "unitsRisked": 111.15,
-  "totalBets": 77,
-  "totalWins": 40,
-  "totalLosses": 37
+  "totalCapitalRisked": 11615,
+  "unitsRisked": 116.15,
+  "totalBets": 82,
+  "totalWins": 42,
+  "totalLosses": 40
 }

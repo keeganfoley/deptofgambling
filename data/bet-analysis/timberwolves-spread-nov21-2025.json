@@ -1,0 +1,132 @@
+{
+  "slug": "timberwolves-spread-nov21-2025",
+  "team": "Minnesota Timberwolves",
+  "line": "-4.5",
+  "odds": -108,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Final: PHX 114, MIN 113 (Lost outright)",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Minnesota Timberwolves @ Phoenix Suns",
+    "date": "2025-11-21",
+    "gameTime": "9:00 PM ET",
+    "venue": "Footprint Center",
+    "finalScore": "PHX 114, MIN 113"
+  },
+  "preGameAnalysis": {
+    "edge": 13,
+    "expectedValue": 27,
+    "estimatedProbability": 65,
+    "impliedProbability": 51.92,
+    "recentPerformance": {
+      "hitRate": "8-0 H2H streak vs Phoenix",
+      "last5Games": "7-1 ATS in last 8 vs Suns",
+      "recentForm": "Wolves' length dominates this matchup",
+      "cushion": "+3.5 games of historical dominance"
+    },
+    "keyFactors": [
+      {
+        "title": "Historical Dominance",
+        "description": "8-0 H2H streak vs Phoenix dating back to April 2024, 7-1 ATS in stretch"
+      },
+      {
+        "title": "Suns Injuries",
+        "description": "Phoenix missing Grayson Allen and Jalen Green - backcourt depleted"
+      },
+      {
+        "title": "Matchup Advantage",
+        "description": "Wolves' length (Gobert, Towns successor) historically dominates Suns"
+      }
+    ],
+    "riskFactors": [
+      "Road game in hostile environment",
+      "Suns due for regression to mean eventually",
+      "Edwards can be inconsistent on the road"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "wolvesPoints": 113,
+      "sunsPoints": 114,
+      "wolvesLead": "113-105 with 1:09 left",
+      "finalMargin": "Lost by 1"
+    },
+    "keyPlayers": {
+      "edwards": {
+        "points": 41,
+        "note": "Missed 2 crucial FTs with 12.7 sec left"
+      },
+      "gillespie": {
+        "points": 20,
+        "rebounds": 7,
+        "assists": 4,
+        "note": "Hit game-winner"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Wolves established control early",
+        "score": "MIN leading"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Wolves continued solid play, building lead",
+        "halftimeTotal": "Wolves up comfortably"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Wolves maintained control throughout",
+        "score": "Double-digit lead"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "COLLAPSE - Led 113-105 with 1:09 left, lost 114-113",
+        "score": "0-9 run to end game"
+      }
+    ],
+    "whenMissed": "Final 69 seconds - Wolves were 8-point favorites with 1:09 left and lost outright",
+    "gamePace": "Standard pace game",
+    "turningPoint": "Edwards missed 2 free throws with 12.7 seconds left that would have sealed win. Gillespie hit game-winner with 6.4 seconds left."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Brutal Collapse",
+        "description": "Led 113-105 with 1:09 remaining - should have been easy cover. 0-9 run to end game."
+      },
+      {
+        "title": "Edwards Free Throws",
+        "description": "Missed both free throws with 12.7 seconds left that would have sealed the win"
+      },
+      {
+        "title": "Defensive Breakdown",
+        "description": "Allowed Gillespie game-winning jumper with 6.4 seconds left"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Edwards had 41 points - great performance wasted",
+      "vsRecentForm": "Worst collapse of season",
+      "vsPropLine": "Would have covered -4.5 easily with 1:09 left",
+      "percentileRanking": "Historic bad beat - 99th percentile of bad beats"
+    },
+    "wasNormalVariance": "This is not normal variance - this is a historic collapse. Leading by 8 with 1:09 left and losing outright is extremely rare. The bet was correct until the final minute."
+  },
+  "closingLineValue": {
+    "ourOdds": -108,
+    "closingOdds": -110,
+    "clvCents": 2,
+    "clvPercentage": 0.95,
+    "verdict": "Positive CLV - market moved toward our position. We were right, just got incredibly unlucky."
+  },
+  "keyTakeaways": [
+    "Historic collapse - led by 8 with 1:09 left and lost outright",
+    "Edwards' 41 points completely wasted by late-game execution",
+    "8-game H2H streak ended in worst possible fashion",
+    "Thesis was 100% correct until final 69 seconds",
+    "This is variance, not bad analysis - would bet this again every time"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "This was a BAD BEAT of historic proportions. We had the game won - 113-105 with 1:09 left. Edwards missed 2 FTs, Gillespie hit game-winner. This is pure variance. The analysis was correct, the bet was correct, execution failed. 10/10 would bet again."
+}

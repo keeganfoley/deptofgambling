@@ -1,0 +1,129 @@
+{
+  "slug": "hurricanes-ml-nov21-2025",
+  "team": "Carolina Hurricanes",
+  "line": "ML",
+  "odds": -140,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Final: CAR 4, WPG 3",
+  "profit": 71.43,
+  "gameDetails": {
+    "matchup": "Carolina Hurricanes @ Winnipeg Jets",
+    "date": "2025-11-21",
+    "gameTime": "8:00 PM ET",
+    "venue": "Canada Life Centre",
+    "finalScore": "CAR 4, WPG 3"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 21,
+    "estimatedProbability": 68,
+    "impliedProbability": 58.33,
+    "recentPerformance": {
+      "hitRate": "Hurricanes 13-6-2 on season",
+      "seasonAverage": "3.61 goals per game (#2 in NHL)",
+      "last5Games": "Best Corsi For % in NHL",
+      "cushion": "Elite offense vs backup goalie"
+    },
+    "keyFactors": [
+      {
+        "title": "Hellebuyck OUT",
+        "description": "Connor Hellebuyck announced out for knee surgery - massive goalie downgrade for Winnipeg"
+      },
+      {
+        "title": "Hurricanes Offense",
+        "description": "Carolina #2 in goals/game (3.61), best Corsi For % in NHL"
+      },
+      {
+        "title": "Backup Goalie",
+        "description": "Eric Comrie starting for Jets - significant downgrade from Vezina-caliber Hellebuyck"
+      }
+    ],
+    "riskFactors": [
+      "Road game in Winnipeg",
+      "Jets still talented team even without Hellebuyck",
+      "Hurricanes could overlook opponent"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "carolinaGoals": 4,
+      "winnipegGoals": 3,
+      "carolinaShots": 28,
+      "winnipegShots": 27,
+      "comrieSaves": 24
+    },
+    "keyPlayers": {
+      "staal": {
+        "goals": 2,
+        "note": "Scored 16 seconds into game - 3rd fastest road goal in franchise history"
+      },
+      "jarvis": {
+        "goals": 1,
+        "note": "Hometown kid led team"
+      },
+      "svechnikov": {
+        "goals": 1
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "description": "Staal scores 16 seconds in - 3rd fastest road goal in franchise history. Hurricanes establish control immediately.",
+        "score": "CAR 2, WPG 1"
+      },
+      {
+        "quarter": "2nd Period",
+        "description": "Both teams trade chances, Carolina maintains lead",
+        "score": "CAR 3, WPG 2"
+      },
+      {
+        "quarter": "3rd Period",
+        "description": "Svechnikov extends lead, Jets get one back but too little too late",
+        "score": "Final: CAR 4, WPG 3"
+      }
+    ],
+    "whenCleared": "Staal's goal 16 seconds in set the tone - Hurricanes controlled game throughout",
+    "gamePace": "Standard NHL pace, Carolina controlled possession as expected",
+    "turningPoint": "Opening goal 16 seconds in forced Jets to play from behind all game"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Thesis Validated",
+        "description": "Hellebuyck absence was decisive - Comrie allowed 4 goals on 28 shots"
+      },
+      {
+        "title": "Fast Start",
+        "description": "Staal's goal 16 seconds in immediately put Jets on back foot"
+      },
+      {
+        "title": "Offensive Pressure",
+        "description": "Carolina's offensive machine delivered 4 goals as expected"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "4 goals vs 3.61 average - slightly above",
+      "vsRecentForm": "Continued strong road play",
+      "vsPropLine": "Won by 1 goal - close but comfortable",
+      "percentileRanking": "Top 40% offensive output"
+    },
+    "wasNormalVariance": "This was a typical Hurricanes win - they controlled play, scored 4 goals, and the goalie downgrade for Winnipeg was the decisive factor."
+  },
+  "closingLineValue": {
+    "ourOdds": -140,
+    "closingOdds": -145,
+    "clvCents": 5,
+    "clvPercentage": 2.1,
+    "verdict": "Positive CLV - line moved 5 cents in our direction. Market correctly identified Hellebuyck absence as massive edge."
+  },
+  "keyTakeaways": [
+    "Goalie injuries create massive edges in NHL betting",
+    "Hellebuyck absence was correctly identified as decisive factor",
+    "Carolina's elite offense delivered as expected",
+    "Fast starts (goal in 16 seconds) are backable with this offense",
+    "Thesis was correct - elite offense vs backup goalie is a winning formula"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Identified goalie downgrade, bet elite offense, cashed comfortably. This is the model for NHL betting."
+}

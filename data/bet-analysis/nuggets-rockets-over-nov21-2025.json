@@ -1,0 +1,135 @@
+{
+  "slug": "nuggets-rockets-over-nov21-2025",
+  "team": "Denver Nuggets",
+  "line": "O235.5",
+  "odds": -110,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Total: 221 (DEN 112, HOU 109)",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Denver Nuggets @ Houston Rockets",
+    "date": "2025-11-21",
+    "gameTime": "9:30 PM ET",
+    "venue": "Toyota Center",
+    "finalScore": "DEN 112, HOU 109"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 37,
+    "estimatedProbability": 68,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "OVER 6 of 7 Rockets games",
+      "seasonAverage": "Combined 245+ PPG",
+      "last5Games": "Both teams top-3 offensive rating",
+      "cushion": "+9.5 points above average"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Offenses",
+        "description": "Denver #1 offensive rating (121.7), Houston #3 (121.3) - two most efficient offenses in NBA"
+      },
+      {
+        "title": "Recent Trend",
+        "description": "OVER hit in 3 straight H2H meetings, Rockets OVER 6 of 7 games"
+      },
+      {
+        "title": "Pace",
+        "description": "Both teams play at fast pace, averaging 100+ possessions"
+      }
+    ],
+    "riskFactors": [
+      "NBA Cup game could see more defensive intensity",
+      "Both teams capable of slowing pace if needed",
+      "Line inflated due to recent trends"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "denverPoints": 112,
+      "houstonPoints": 109,
+      "totalPoints": 221,
+      "pace": 96,
+      "combinedFGPct": "44.2%"
+    },
+    "keyPlayers": {
+      "jokic": {
+        "points": 34,
+        "rebounds": 10,
+        "assists": 9
+      },
+      "murray": {
+        "points": 26,
+        "assists": 10
+      },
+      "sheppard": {
+        "points": 27,
+        "note": "Career high"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Slower start than expected, both teams feeling each other out",
+        "score": "DEN 28, HOU 25"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Defensive intensity picked up, lower scoring period",
+        "halftimeTotal": "Halftime: 108 total (needed 128+ pace)"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Some offensive flow returned but still under pace",
+        "score": "DEN 84, HOU 79"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Close game meant clock management, limited possessions",
+        "score": "Final: 221 total"
+      }
+    ],
+    "whenMissed": "Never on pace - halftime total of 108 needed 128 to be on track",
+    "gamePace": "96 possessions - well below both teams' season average of 102+",
+    "turningPoint": "Both teams played more defense in NBA Cup format than regular season"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Defensive Intensity",
+        "description": "Both teams played much harder defensively than season average - NBA Cup motivation factor"
+      },
+      {
+        "title": "Pace",
+        "description": "96 possessions vs expected 102+ killed scoring opportunities"
+      },
+      {
+        "title": "Close Game",
+        "description": "Tight score meant late-game clock management and fewer possessions"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "221 vs 245+ combined average = 24 points under",
+      "vsRecentForm": "Both teams' lowest combined total in 10 games",
+      "vsPropLine": "14.5 points short of 235.5 line",
+      "percentileRanking": "Bottom 15% of both teams' games this season"
+    },
+    "wasNormalVariance": "This was an outlier game for both offenses. NBA Cup format created unusual defensive focus. However, the thesis was sound - these are elite offenses that will score most nights."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -108,
+    "clvCents": 2,
+    "clvPercentage": 0.95,
+    "verdict": "Slight positive CLV but not enough to overcome the result. Line stayed steady indicating market agreed with assessment."
+  },
+  "keyTakeaways": [
+    "NBA Cup games can feature heightened defensive intensity - factor this into totals",
+    "Close games reduce possessions and scoring opportunities",
+    "Even elite offenses can have off nights when both teams prioritize defense",
+    "Thesis was sound (elite offenses) but execution varied due to context"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "The analysis was correct - these are elite offenses. But NBA Cup context created defensive intensity we didn't account for. Would still bet this in regular season context."
+}
