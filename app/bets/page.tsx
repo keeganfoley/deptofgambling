@@ -413,7 +413,7 @@ function BetsContent() {
             <div className="px-6 py-8 bg-white border-t-2 border-gray-200">
               <div className="prose prose-sm max-w-none">
                 <h3 className="text-xl font-bold text-primary mb-4">
-                  {currentFilter === 'All' ? 'Full Portfolio Analysis' : `${currentFilter} Performance Breakdown`}
+                  {currentSportFilter === 'All' && currentTypeFilter === 'All' ? 'Full Portfolio Analysis' : `${currentTypeFilter !== 'All' ? currentTypeFilter : ''} ${currentSportFilter !== 'All' ? currentSportFilter : ''} Performance Breakdown`.trim()}
                 </h3>
 
                 {/* Performance Metrics */}
@@ -486,7 +486,7 @@ function BetsContent() {
                     <li>
                       <strong>Losses:</strong> {stats.record.losses} ({(100 - stats.winRate).toFixed(2)}% of bets)
                     </li>
-                    {currentFilter === 'All' && (
+                    {currentSportFilter === 'All' && currentTypeFilter === 'All' && (
                       <>
                         <li>
                           <strong>Sport Distribution:</strong>
@@ -522,7 +522,7 @@ function BetsContent() {
             ))
           ) : (
             <div className="text-center py-12">
-              <p className="text-text-muted text-lg">No bets found for {currentFilter}</p>
+              <p className="text-text-muted text-lg">No bets found for selected filters</p>
             </div>
           )}
         </div>
