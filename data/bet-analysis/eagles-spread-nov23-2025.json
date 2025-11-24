@@ -1,0 +1,117 @@
+{
+  "slug": "eagles-spread-nov23-2025",
+  "team": "Philadelphia Eagles",
+  "line": "Eagles -3",
+  "odds": -105,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Lost by 3",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles at Dallas Cowboys",
+    "date": "2025-11-23",
+    "gameTime": "4:25 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 24, PHI 21"
+  },
+  "preGameAnalysis": {
+    "edge": 5,
+    "expectedValue": 10,
+    "estimatedProbability": 56,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Eagles 8-2 this season",
+      "seasonAverage": "Elite defense",
+      "last5Games": "Strong form",
+      "cushion": "Key number value"
+    },
+    "keyFactors": [
+      {
+        "title": "Key Number",
+        "description": "3 is most common margin in NFL (15.4% of games)"
+      },
+      {
+        "title": "Best Juice",
+        "description": "-105 vs -115 on other side"
+      },
+      {
+        "title": "Elite Defense",
+        "description": "Philly D looked great on SNF"
+      },
+      {
+        "title": "Rivalry Dominance",
+        "description": "Eagles own this matchup recently"
+      }
+    ],
+    "riskFactors": [
+      "Road game",
+      "Cowboys at home",
+      "Rivalry games are unpredictable"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 21,
+      "firstHalfPoints": 21,
+      "secondHalfPoints": 0
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Eagles dominated, went up big"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Led 21-0 at halftime"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Dallas started comeback"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Cowboys scored 24 unanswered, won 24-21"
+      }
+    ],
+    "whenCleared": "Never - historic collapse",
+    "gamePace": "Complete reversal between halves",
+    "turningPoint": "Eagles offense went scoreless in 2nd half"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Historic Collapse",
+        "description": "Led 21-0 at halftime, lost 24-21"
+      },
+      {
+        "title": "Scoreless 2nd Half",
+        "description": "Eagles offense completely shut down"
+      },
+      {
+        "title": "24 Unanswered",
+        "description": "Cowboys scored 24 straight points"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "21 points - below average",
+      "vsPropLine": "Lost by 3 instead of winning by 3+",
+      "percentileRanking": "Worst Eagles collapse in franchise history"
+    },
+    "wasNormalVariance": "Brutal bad beat. 21-0 halftime lead is supposed to be safe. Dallas 24-0 second half run is historic outlier."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -105,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No movement"
+  },
+  "keyTakeaways": [
+    "21-0 leads can evaporate",
+    "Rivalry games are unpredictable",
+    "Can't predict historic collapses",
+    "This is what bad beats look like"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Historic collapse. Led 21-0 at half, lost 24-21. Dallas scored 24 unanswered. Worst blown lead in Eagles franchise history. Unforseeable."
+}

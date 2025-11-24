@@ -1,0 +1,118 @@
+{
+  "slug": "lions-giants-under-nov23-2025",
+  "team": "Detroit Lions",
+  "line": "Lions/Giants U50.5",
+  "odds": 100,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "61 total (OT)",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "New York Giants at Detroit Lions",
+    "date": "2025-11-23",
+    "gameTime": "1:00 PM ET",
+    "venue": "Ford Field",
+    "finalScore": "DET 34, NYG 27 (OT)"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 20,
+    "estimatedProbability": 60,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Giants averaging 18.6 ppg on road",
+      "seasonAverage": "Lions D 4th in success rate",
+      "last5Games": "Giants 0-6 on road",
+      "cushion": "Winston = turnovers"
+    },
+    "keyFactors": [
+      {
+        "title": "Winston Turnovers",
+        "description": "Jameis Winston prone to interceptions"
+      },
+      {
+        "title": "Lions Run Clock",
+        "description": "Expected positive game script, run heavy"
+      },
+      {
+        "title": "Giants Can't Score",
+        "description": "18.6 ppg on road - terrible"
+      },
+      {
+        "title": "Good Price",
+        "description": "+100 on the under"
+      }
+    ],
+    "riskFactors": [
+      "Lions offense can explode",
+      "Overtime risk",
+      "Winston can also throw TDs"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "totalPoints": 61,
+      "lionsPoints": 34,
+      "giantsPoints": 27,
+      "overtime": true
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Competitive start"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Scoring picked up"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "At 37 points - looked good for under"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Giants scored 20 points to force OT - disaster"
+      }
+    ],
+    "whenCleared": "Never - game went to overtime",
+    "gamePace": "Exploded in 4th quarter",
+    "turningPoint": "Giants' 20-point 4th quarter"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Winston Balled Out",
+        "description": "3 TDs instead of turnovers - complete opposite of thesis"
+      },
+      {
+        "title": "4th Quarter Collapse",
+        "description": "Giants scored 20 in final quarter alone"
+      },
+      {
+        "title": "Overtime",
+        "description": "Game went to OT, adding 10 more points"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "61 points - way over",
+      "vsPropLine": "10.5 over the total",
+      "percentileRanking": "Top 10% scoring game"
+    },
+    "wasNormalVariance": "Bad beat. At 37 points through 3 quarters, looked like easy cover. Giants' 20-point 4th quarter was outlier performance."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": 100,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No movement"
+  },
+  "keyTakeaways": [
+    "Winston is volatile both ways",
+    "Can't predict 20-point quarters",
+    "Was winning bet through 3 quarters",
+    "Overtime risk is real for unders"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Bad beat. At 37 points end of 3rd, looked like easy cover. Giants 20-point 4th quarter and OT killed us. 61 total."
+}

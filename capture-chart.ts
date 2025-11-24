@@ -10,7 +10,7 @@ async function captureChart() {
 
   await page.setViewport({ width: 1080, height: 1080 });
 
-  const url = `http://localhost:3003/chart-export?date=${date}`;
+  const url = `http://localhost:3000/chart-export?date=${date}`;
   console.log(`Navigating to: ${url}`);
 
   await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 });

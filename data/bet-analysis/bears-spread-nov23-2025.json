@@ -1,0 +1,117 @@
+{
+  "slug": "bears-spread-nov23-2025",
+  "team": "Chicago Bears",
+  "line": "Bears -3",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "push",
+  "finalStat": "Won by 3",
+  "profit": 0,
+  "gameDetails": {
+    "matchup": "Pittsburgh Steelers at Chicago Bears",
+    "date": "2025-11-23",
+    "gameTime": "1:00 PM ET",
+    "venue": "Soldier Field",
+    "finalScore": "CHI 31, PIT 28"
+  },
+  "preGameAnalysis": {
+    "edge": 11,
+    "expectedValue": 22,
+    "estimatedProbability": 61,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Bears 7-1 last 8 games",
+      "seasonAverage": "+18 turnover diff since Week 3",
+      "last5Games": "Strong at home",
+      "cushion": "Rodgers OUT"
+    },
+    "keyFactors": [
+      {
+        "title": "Rodgers OUT",
+        "description": "Aaron Rodgers out with fractured wrist - Mason Rudolph starting"
+      },
+      {
+        "title": "Plus Money",
+        "description": "+100 on home favorite is rare value"
+      },
+      {
+        "title": "Turnovers",
+        "description": "Bears +18 TO diff, Rudolph is turnover-prone"
+      },
+      {
+        "title": "Historical Edge",
+        "description": "Steelers 1-12 all-time in Chicago"
+      }
+    ],
+    "riskFactors": [
+      "Rudolph has 8-5-1 career record as starter",
+      "Steelers D is legit",
+      "3 is key number - push risk"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "turnoversForced": 2,
+      "turnoversCommitted": 1
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Competitive start"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Bears built lead"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Bears up 31-21 with 6 minutes left in 4th"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Steelers scored late TD to make it 31-28 - push"
+      }
+    ],
+    "whenCleared": "Never - Steelers scored late to push",
+    "gamePace": "Back and forth affair",
+    "turningPoint": "Bears couldn't close from 10-point lead"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Failed to Close",
+        "description": "Had 31-21 lead with 6 minutes left, couldn't extend"
+      },
+      {
+        "title": "Rudolph Played Well",
+        "description": "Backup QB exceeded expectations"
+      },
+      {
+        "title": "Key Number",
+        "description": "Final margin exactly 3 - push instead of win"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "31 points - solid output",
+      "vsPropLine": "Exactly on the number",
+      "percentileRanking": "Median result"
+    },
+    "wasNormalVariance": "Frustrating push. Had 10-point lead and couldn't close. This should have been a win."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Good CLV - got +100 before line moved"
+  },
+  "keyTakeaways": [
+    "Plus money on home favorites is value",
+    "Backup QB fade worked but not enough",
+    "Key number push is brutal",
+    "Had 10-point lead and couldn't cover 3"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Brutal push. Led 31-21, won 31-28. Exactly 3 points. Thesis was right but couldn't close the deal."
+}
