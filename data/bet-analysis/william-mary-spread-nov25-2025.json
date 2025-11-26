@@ -1,0 +1,123 @@
+{
+  "slug": "william-mary-spread-nov25-2025",
+  "team": "William & Mary Tribe",
+  "line": "-1.5",
+  "odds": -102,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Final: W&M 92, ACU 58 (Won by 34)",
+  "profit": 98.04,
+  "gameDetails": {
+    "matchup": "William & Mary vs Abilene Christian",
+    "date": "2025-11-25",
+    "gameTime": "6:30 PM ET",
+    "venue": "Adams-Jenkins Complex, Jacksonville",
+    "finalScore": "W&M 92, ACU 58"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 15,
+    "estimatedProbability": 60,
+    "impliedProbability": 50.49,
+    "recentPerformance": {
+      "hitRate": "W&M 5-2, on 4-game win streak",
+      "seasonAverage": "82.4 PPG with balanced scoring",
+      "last5Games": "Just beat UTEP 74-63 in Jacksonville Classic opener",
+      "cushion": "Tribe's pace and depth should overwhelm"
+    },
+    "keyFactors": [
+      {
+        "title": "Hot Streak",
+        "description": "William & Mary on 4-game win streak, playing with confidence in Jacksonville Classic"
+      },
+      {
+        "title": "Balanced Attack",
+        "description": "Tribe averaging 82.4 PPG with multiple scorers - hard to game plan against"
+      },
+      {
+        "title": "ACU Struggles",
+        "description": "Abilene Christian 3-2 with loss to Texas A&M-CC - inconsistent early season"
+      }
+    ],
+    "riskFactors": [
+      "Small spread suggests close game expected",
+      "Tournament games can be unpredictable",
+      "ACU could play above their level"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "wmPoints": 92,
+      "acuPoints": 58,
+      "marginOfVictory": 34,
+      "wmFieldGoalPct": 64.7,
+      "acuFieldGoalPct": 38.3,
+      "fastbreakPoints": 33,
+      "pointsInPaint": 54
+    },
+    "keyPlayers": {
+      "haskins": {
+        "points": 20,
+        "note": "Led Tribe in scoring"
+      },
+      "brockhoff": {
+        "points": 14,
+        "note": "5-9 from field, efficient performance"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "W&M established control early, led 39-32 at half. Tribe's pressure created turnovers.",
+        "score": "W&M 39, ACU 32"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Complete domination. W&M outscored ACU 53-26 in second half. Six players in double figures. Tribe shot 64.7% for game.",
+        "score": "Final: W&M 92, ACU 58"
+      }
+    ],
+    "whenCleared": "Covered -1.5 by halftime. Second half was victory lap - won by 34 total.",
+    "gamePace": "W&M pushed tempo relentlessly - 33 fastbreak points",
+    "turningPoint": "21 ACU turnovers turned into 21 points - defensive pressure was suffocating"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Defensive Pressure",
+        "description": "Tribe forced 21 turnovers, converted all 21 into points"
+      },
+      {
+        "title": "Shooting Efficiency",
+        "description": "64.7% from field was outstanding - one of best shooting games of season"
+      },
+      {
+        "title": "Balanced Scoring",
+        "description": "Six players in double figures - impossible to stop"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "92 points vs 82.4 average - well above",
+      "vsRecentForm": "Best offensive performance of season",
+      "vsPropLine": "Covered -1.5 by 32.5 points - massive cushion",
+      "percentileRanking": "Top 5% margin of victory"
+    },
+    "wasNormalVariance": "This exceeded expectations significantly. The thesis was correct but the margin (34 points) was an outlier - expected closer game. Great result regardless."
+  },
+  "closingLineValue": {
+    "ourOdds": -102,
+    "closingOdds": -105,
+    "clvCents": 3,
+    "clvPercentage": 1.4,
+    "verdict": "Positive CLV - got slightly better line than closing. Market moved toward W&M as expected."
+  },
+  "keyTakeaways": [
+    "Small spreads on hot teams can lead to blowout covers",
+    "Defensive pressure creating turnovers is a recipe for blowouts",
+    "W&M's balanced scoring made them impossible to stop",
+    "Jacksonville Classic sweep shows Tribe is legit mid-major contender",
+    "Sometimes -1.5 favorites win by 34 - variance goes both ways"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution - identified hot team with balanced attack, got great line, crushed cover. Jacksonville Classic sweep validates W&M as quality program."
+}

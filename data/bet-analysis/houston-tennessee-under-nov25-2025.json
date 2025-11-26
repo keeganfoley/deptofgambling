@@ -1,0 +1,136 @@
+{
+  "slug": "houston-tennessee-under-nov25-2025",
+  "team": "Houston Cougars",
+  "line": "U135.5",
+  "odds": -110,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "Final: TENN 76, HOU 73 (Total: 149)",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Tennessee Volunteers vs Houston Cougars",
+    "date": "2025-11-25",
+    "gameTime": "9:00 PM ET",
+    "venue": "MGM Grand Garden Arena, Las Vegas",
+    "finalScore": "TENN 76, HOU 73"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 12,
+    "estimatedProbability": 58,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "Houston 6-0, Tennessee 6-0 entering game",
+      "seasonAverage": "Houston allows 62.5 PPG, Tennessee allows 59.3 PPG",
+      "last5Games": "Both teams playing elite defense",
+      "cushion": "Both teams bottom half of tempo nationally"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Defenses",
+        "description": "Houston #1 in adjusted defensive efficiency, Tennessee #6. Both teams prioritize defense."
+      },
+      {
+        "title": "Slow Tempo",
+        "description": "Both teams in bottom half of tempo nationally - expected grind-it-out game"
+      },
+      {
+        "title": "Neutral Site",
+        "description": "Players Era Championship at MGM Grand - no home crowd advantage for either team"
+      }
+    ],
+    "riskFactors": [
+      "Elite teams can get into shootouts despite defensive identity",
+      "Neutral site games can be unpredictable",
+      "Both teams have capable offensive players"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "tennesseePoints": 76,
+      "houstonPoints": 73,
+      "totalPoints": 149,
+      "overByPoints": 13.5
+    },
+    "keyPlayers": {
+      "gillespie": {
+        "points": 22,
+        "note": "Made all 6 free throws in final 35 seconds - ice cold"
+      },
+      "carey": {
+        "points": 13,
+        "note": "Second leading scorer for Tennessee"
+      },
+      "boswell": {
+        "points": 10,
+        "note": "Including two clutch FTs with 25 seconds left"
+      },
+      "flemings": {
+        "points": 25,
+        "note": "Led Houston in losing effort"
+      },
+      "uzan": {
+        "points": 17,
+        "note": "Playing in hometown, missed halfcourt buzzer-beater that would have forced OT"
+      },
+      "sharp": {
+        "points": 8,
+        "note": "Limited to 21 minutes due to foul trouble - huge factor"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Houston built 11-point lead midway through first half. Tennessee trailed at halftime for first time this season. Emanuel Sharp limited to 21 minutes due to foul trouble.",
+        "score": "HOU 38, TENN 32"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Tennessee went on 10-0 run to take 51-46 lead. Houston went 7:24 between points, missed 11 straight shots. Gillespie clutch with 6/6 FT in final 35 seconds. Uzan's halfcourt buzzer-beater missed.",
+        "score": "Final: TENN 76, HOU 73"
+      }
+    ],
+    "whenMissed": "First half alone had 70 points - under was essentially dead at halftime",
+    "gamePace": "Much faster than expected - both teams pushed in transition more than usual",
+    "turningPoint": "Tennessee's second half rally opened up scoring on both ends"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Unexpected Offensive Output",
+        "description": "Both teams shot better than season averages - Houston's Flemings (25) and Uzan (17) exceeded expectations"
+      },
+      {
+        "title": "Transition Points",
+        "description": "More fast break opportunities than typical for these slow-tempo teams"
+      },
+      {
+        "title": "Free Throw Parade",
+        "description": "Combined 45 free throw attempts inflated score beyond defensive effort"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "149 total vs ~125 expected based on defensive ratings",
+      "vsRecentForm": "Both teams exceeded their scoring averages significantly",
+      "vsPropLine": "Missed by 13.5 points - substantial miss",
+      "percentileRanking": "Top 15% scoring output for both teams this season"
+    },
+    "wasNormalVariance": "This was high variance - two elite defensive teams combining for 149 points is an outlier. The thesis was sound but execution on both offenses exceeded expectations."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -108,
+    "clvCents": -2,
+    "clvPercentage": -0.9,
+    "verdict": "Slight negative CLV - line moved slightly against us. Market may have anticipated higher scoring game."
+  },
+  "keyTakeaways": [
+    "Elite defensive teams can still have high-scoring games in neutral site tournaments",
+    "Free throws can significantly inflate totals beyond expected pace",
+    "Tennessee's second half rally opened up scoring on both ends",
+    "Thesis was sound but variance struck - 149 total is outlier for these teams",
+    "Neutral site tournament games create unpredictable environments"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Process was correct - two elite defenses should produce under. This was high variance loss. Would bet this spot again with same information."
+}

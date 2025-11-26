@@ -1,0 +1,126 @@
+{
+  "slug": "hawks-spread-nov25-2025",
+  "team": "Atlanta Hawks",
+  "line": "-10.5",
+  "odds": -115,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "Final: ATL 113, WAS 132 (Lost by 19)",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Atlanta Hawks @ Washington Wizards",
+    "date": "2025-11-25",
+    "gameTime": "7:00 PM ET",
+    "venue": "Capital One Arena, Washington DC",
+    "finalScore": "WAS 132, ATL 113"
+  },
+  "preGameAnalysis": {
+    "edge": 7,
+    "expectedValue": 14,
+    "estimatedProbability": 62,
+    "impliedProbability": 53.49,
+    "recentPerformance": {
+      "hitRate": "Hawks 11-7, won 7 of last 9",
+      "seasonAverage": "Jalen Johnson averaging 22.4/9.6/7.0 as go-to player",
+      "last5Games": "Hawks 9-4 since Trae Young MCL injury",
+      "cushion": "Wizards 2-14 - worst team in NBA"
+    },
+    "keyFactors": [
+      {
+        "title": "Talent Mismatch",
+        "description": "Hawks 11-7 vs Wizards 2-14 - massive talent disparity"
+      },
+      {
+        "title": "Jalen Johnson Emergence",
+        "description": "Johnson averaging 22.4/9.6/7.0 as primary option with Trae out"
+      },
+      {
+        "title": "Wizards Defense",
+        "description": "Washington allows most points in NBA - should be easy offense"
+      }
+    ],
+    "riskFactors": [
+      "In-Season Tournament games can motivate bad teams",
+      "Road game - any NBA team can win at home",
+      "Large spreads are difficult to cover"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "hawksPoints": 113,
+      "wizardsPoints": 132,
+      "marginOfLoss": 19,
+      "wizardsThreePointPct": "Season high",
+      "hawksDefensiveRating": "Season worst"
+    },
+    "keyPlayers": {
+      "mcCollum": {
+        "points": 46,
+        "threesMade": 10,
+        "note": "Season highs in both categories - torched Hawks all game"
+      },
+      "porzingis": {
+        "points": 22,
+        "note": "Led Hawks in losing effort"
+      },
+      "okongwu": {
+        "points": 20,
+        "note": "Solid game but not enough"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Wizards came out with unexpected energy for In-Season Tournament. Washington led at half - Hawks couldn't find defensive rhythm.",
+        "score": "WAS 68, ATL 55"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Hawks never made a run. Wizards extended lead, shot well from three throughout. Washington played their best game of season.",
+        "score": "Final: WAS 132, ATL 113"
+      }
+    ],
+    "whenMissed": "Down double digits at halftime - never had a chance to cover",
+    "gamePace": "Wizards pushed tempo, created chaos Hawks couldn't handle",
+    "turningPoint": "Washington's first quarter energy set the tone - Hawks were on their heels all game"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "CJ McCollum Explosion",
+        "description": "McCollum went nuclear with 46 points and 10 made threes - both season highs. Completely unstoppable."
+      },
+      {
+        "title": "Snapped 14-Game Losing Streak",
+        "description": "Wizards ended their 14-game losing streak against us - worst possible timing"
+      },
+      {
+        "title": "Hawks Worst Loss Since Opener",
+        "description": "19-point loss was Hawks' worst since 138-118 defeat to Toronto on opening night"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Allowed 132 vs ~115 average - season worst",
+      "vsRecentForm": "Complete outlier from recent strong play",
+      "vsPropLine": "Lost by 19 as 10.5-point favorite - 29.5 point swing",
+      "percentileRanking": "Bottom 1% - worst loss of season"
+    },
+    "wasNormalVariance": "This was NOT normal variance. Wizards' 2nd win in 17 games came against Hawks as double-digit favorites. Bad teams occasionally play their best game - this was one of those nights."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -112,
+    "clvCents": -3,
+    "clvPercentage": -1.3,
+    "verdict": "Slight negative CLV - line moved slightly against us. Market may have sensed trap game."
+  },
+  "keyTakeaways": [
+    "In-Season Tournament motivates bad teams - be cautious with large spreads",
+    "Wizards' 2nd win in 17 games was against us - awful timing",
+    "Large road spreads against NBA teams are always risky",
+    "Even worst teams in league can catch fire from three",
+    "Hawks defense no-showed when it mattered most"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Bad beat but also a lesson - large road spreads in In-Season Tournament are trap games. Should have been more cautious with 2u stake on -10.5 road spread."
+}
