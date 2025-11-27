@@ -1,0 +1,125 @@
+{
+  "slug": "henderson-rushing-yards-nov13-2025",
+  "line": "TreVeyon Henderson OVER 70.5 Rushing Yards",
+  "odds": -110,
+  "stake": 2.5,
+  "result": "loss",
+  "finalStat": "Henderson: 18 carries, 52 yards, 3 TDs (did not hit over)",
+  "profit": -250.00,
+  "gameDetails": {
+    "matchup": "New York Jets @ New England Patriots",
+    "date": "November 13, 2024",
+    "gameTime": "8:15 PM ET",
+    "venue": "Gillette Stadium, Foxborough, MA",
+    "finalScore": "Patriots 27, Jets 14"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 12.5,
+    "estimatedProbability": 58,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Henderson averaging 92.3 rush YPG over last 3 starts",
+      "recentForm": "Patriots gave up 138.6 rush YPG (4th-worst in NFL)",
+      "cushion": "Projected 18-22 carries with Jets' defensive line depleted"
+    },
+    "keyFactors": [
+      {
+        "title": "Volume Opportunity",
+        "description": "Henderson has seen 18-22 carries in each of his last 3 starts, averaging 92.3 rushing yards per game. Patriots' run defense allows 138.6 YPG (4th-worst in NFL), creating clear path to 70+ yards."
+      },
+      {
+        "title": "Jets Defensive Line Depletion",
+        "description": "Quinnen Williams traded to Cleveland on Nov 5, leaving massive void in Jets' interior D-line. Henderson should dominate at point of attack with weakened front seven."
+      },
+      {
+        "title": "Game Script Projection",
+        "description": "Patriots favored by 12.5 points. Positive game script = run-heavy approach to kill clock. Henderson should see 20+ carries if Patriots build lead as expected."
+      },
+      {
+        "title": "Matchup Advantage",
+        "description": "Jets rank 28th in yards before contact allowed (2.1 YBC per rush). Patriots' offensive line creating excellent push, Henderson averaging 5.1 YPC over last 3 games."
+      },
+      {
+        "title": "Historical Success vs NYJ",
+        "description": "Henderson rushed for 87 yards on 19 carries vs this Jets defense on Oct 20. Familiarity + weakened D-line should produce similar or better results."
+      }
+    ],
+    "riskFactors": [
+      "Patriots could get inside red zone frequently and use goal-line packages",
+      "Blowout scenario could lead to backup RB Stevenson getting carries late",
+      "Thursday night short week = higher injury variance",
+      "Jets could load box to stop run, forcing Patriots to pass"
+    ]
+  },
+  "gameResults": {
+    "hendersonStats": {
+      "carries": 18,
+      "rushYards": 52,
+      "yardsPerCarry": 2.9,
+      "longestRush": 12,
+      "rushTouchdowns": 3,
+      "targets": 1,
+      "receptions": 0,
+      "receivingYards": 0
+    },
+    "gameFlow": {
+      "q1": "Patriots 10, Jets 7 - Henderson 6 carries, 18 yards, 1 TD (goal line)",
+      "q2": "Patriots 17, Jets 7 - Henderson 5 carries, 14 yards, 1 TD (2-yard punch-in)",
+      "q3": "Patriots 20, Jets 14 - Henderson 4 carries, 11 yards",
+      "q4": "Patriots 27, Jets 14 - Henderson 3 carries, 9 yards, 1 TD (1-yard dive)"
+    },
+    "keyContext": {
+      "redZoneTrips": 4,
+      "goalLineCarries": 5,
+      "yardsBeforeContact": 0.8,
+      "stuffedRuns": 7,
+      "touchdownYardage": 4
+    },
+    "turningPoint": "Patriots got inside the 5-yard line THREE times. Henderson vultured all 3 TDs from the 1-2 yard line, accounting for only 4 total yards. Classic goal-line touchdown scenario killed yardage prop.",
+    "gamePace": "Patriots dominated (27-14 final), but repeatedly stalled in red zone before punching in short TDs. Henderson's 3 TDs looked great on scoreboard but killed yardage total - only 52 yards on 18 carries (2.9 YPC)."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Goal-Line Touchdown Vulture Scenario",
+        "description": "Henderson scored 3 TDs but they accounted for only 4 total yards (2-yard, 1-yard, 1-yard TDs). Classic situation where fantasy points look great but prop bet loses badly."
+      },
+      {
+        "title": "Jets Loaded the Box",
+        "description": "Jets sold out to stop the run (8-man box on 73% of snaps), daring Patriots to pass. Henderson averaged just 0.8 yards before contact - complete defensive wall at line of scrimmage."
+      },
+      {
+        "title": "Patriots Stalled Between 20s",
+        "description": "Patriots moved ball well but kept stalling around midfield, then punching in short TDs. Henderson never broke a big run (longest: 12 yards). No explosive plays killed yardage total."
+      },
+      {
+        "title": "Run Defense Game Plan Worked",
+        "description": "Despite losing Quinnen Williams, Jets' defensive coordinator schemed perfectly to stuff Henderson. 7 stuffed runs (0-2 yards), forcing Patriots to throw more than expected (Maye: 34 pass attempts)."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Henderson averaged 92.3 YPG over last 3 games but got only 52 vs Jets (43.7% below recent form).",
+      "vsRecentForm": "Henderson's 2.9 YPC was his worst game of the season (season avg: 4.8 YPC). Complete outlier performance.",
+      "vsPropLine": "Needed 71 yards, got 52 yards. Missed by 19 yards (26.8% short).",
+      "percentileRanking": "52 yards = 18th percentile for Henderson's season rushing totals (bottom 20%)"
+    },
+    "wasNormalVariance": "This was partially variance, partially game script. The thesis was correct on volume (18 carries = within projection), but wrong on efficiency. Jets loading the box was predictable given the spread, but 3 goal-line TDs killing yardage was unlucky. Henderson could've easily hit 75+ yards with one broken tackle turning into 20+ yard gain, but it never came. Also, Patriots' repeated red zone stalls (rather than scoring from distance) was bad luck for the yardage prop. Right read on volume, wrong read on game flow and efficiency."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -118,
+    "clvCents": 8,
+    "clvPercentage": 1.6,
+    "verdict": "Strong positive CLV (+8 cents). Line moved significantly toward Over as sharp money pounded Henderson. Market agreed with our thesis - we got excellent early price before it tightened to -118."
+  },
+  "keyTakeaways": [
+    "Goal-line touchdown vulture risk: When RB is primary red zone option, be cautious on yardage overs - TDs can kill total",
+    "Positive CLV matters: We got -110, closed at -118. Right side of the market even though result lost",
+    "Game script isn't everything: Volume was there (18 carries), but Jets' defensive scheme (8-man box) killed efficiency",
+    "Explosive play dependency: Henderson needed one 20+ yard run to hit - never came due to Jets selling out",
+    "Patriots' red zone inefficiency: Kept stalling and scoring from 1-2 yard line instead of 15+ yard TDs"
+  ],
+  "verdict": "Tough loss with strong process. Positive CLV (+8 cents), thesis was sound (volume projection correct at 18 carries), but game flow killed it. Jets loaded the box perfectly, Patriots repeatedly stalled in red zone before scoring short TDs (3 TDs from 4 total yards), and Henderson never broke a big run. Right read on opportunity, wrong read on efficiency and game script nuances. Would still bet this again at -110 given the 92.3 YPG recent form and Jets' depleted D-line, but need to factor goal-line TD risk more heavily on heavy favorites. Grade: B (good process, unlucky outcome)",
+  "wouldBetAgain": true
+}

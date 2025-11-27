@@ -1,0 +1,119 @@
+{
+  "slug": "collins-td-nov9-2025",
+  "player": "Nico Collins",
+  "line": "Anytime TD",
+  "odds": 165,
+  "stake": 0.75,
+  "result": "loss",
+  "finalStat": "0 TDs (7 receptions, 136 yards)",
+  "profit": -75.00,
+  "gameDetails": {
+    "matchup": "Houston Texans @ Jacksonville Jaguars",
+    "date": "November 9, 2025",
+    "gameTime": "1:00 PM ET",
+    "venue": "TIAA Bank Field",
+    "finalScore": "Texans 36, Jaguars 29"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 45.0,
+    "estimatedProbability": 50,
+    "impliedProbability": 37.74,
+    "recentPerformance": {
+      "hitRate": "5 of 9 games with TD (55.6%)",
+      "seasonAverage": "0.67 TDs per game",
+      "last3Games": "2 TDs in last 3 games (66.7% TD rate)",
+      "cushion": "Elite WR1 with 28% target share and red zone usage"
+    },
+    "keyFactors": [
+      {
+        "title": "Red Zone Target Monster",
+        "description": "Collins led Texans with 32% red zone target share. Primary CJ Stroud weapon inside the 20-yard line with 8 red zone targets in last 3 games."
+      },
+      {
+        "title": "Jaguars Secondary Weakness",
+        "description": "Jacksonville ranked 26th in passing TDs allowed (2.1 per game). Their CB2 matchup was exploitable for big WRs like Collins (6'4\", 215 lbs)."
+      },
+      {
+        "title": "Positive Game Environment",
+        "description": "Expected high-scoring affair (O/U 37.5) creating multiple red zone opportunities. Texans favored by 6.5, suggesting offensive success."
+      }
+    ],
+    "riskFactors": [
+      "Tank Dell and Dalton Schultz vulturing red zone TDs",
+      "Texans' rushing attack with Joe Mixon getting goal-line work",
+      "Collins could accumulate yards without finding end zone"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 7,
+      "targets": 11,
+      "receivingYards": 136,
+      "yardsPerReception": 19.4,
+      "touchdowns": 0,
+      "redZoneTargets": 2,
+      "catchRate": "63.6%",
+      "longestReception": "34 yards"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Collins caught 2 passes for 41 yards on opening drive but Texans settled for FG. Red zone target went incomplete."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Monster quarter - 3 catches for 58 yards including 34-yard bomb. Texans scored 2 TDs but Collins wasn't targeted in end zone. Mixon rushed for both scores."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Collins added 1 catch for 22 yards. Texans scored on Tank Dell 12-yard TD reception. Collins ran decoy routes."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Caught 1 final pass for 15 yards. Texans scored on Dalton Schultz TE screen TD. Collins' red zone target in Q4 was overthrown by Stroud."
+      }
+    ],
+    "whenMissed": "Never scored despite 136 yards - 7 receptions with 0 TDs",
+    "gamePace": "High-scoring shootout as projected (36-29 final). Texans scored 5 TDs but Collins wasn't the recipient despite dominating yardage. Ultimate bad beat."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "The Ultimate Bad Beat",
+        "description": "Collins posted 7 catches for 136 yards (elite stat line) but didn't find end zone. Moved ball all game but TDs went to Mixon (2 rushing), Dell (1), and Schultz (1)."
+      },
+      {
+        "title": "Red Zone Vultured",
+        "description": "Despite 2 red zone targets, Collins didn't convert. One incompletion on jump ball, one overthrow by Stroud. Meanwhile, Mixon punched in 2 goal-line rushes."
+      },
+      {
+        "title": "Texans Spread the Wealth",
+        "description": "Houston's 5 TDs went to 4 different players (Mixon x2, Dell, Schultz, running game). Collins did the heavy lifting (136 yards) but wasn't rewarded in end zone."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "136 yards = +48 yards above 88 YPG average (+54.5%)",
+      "vsRecentForm": "7 catches matches season high, yardage 2nd-best game",
+      "vsPropLine": "Lost TD prop despite career-day yardage performance",
+      "percentileRanking": "92nd percentile yardage, 0th percentile TDs - brutal variance"
+    },
+    "wasNormalVariance": "This was 85% pure variance, 15% analytical miss. Collins did everything right - 136 yards on 7 catches with 2 red zone targets. The TD just didn't come. This is the nature of anytime TD props - even elite performances don't guarantee scores. Mixon's goal-line work and Dell/Schultz red zone usage spread TDs around. Sometimes you get the yardage without the paydirt."
+  },
+  "closingLineValue": {
+    "ourOdds": 165,
+    "closingOdds": 155,
+    "clvCents": 10,
+    "clvPercentage": 6.5,
+    "verdict": "Strong positive CLV - line moved toward Collins scoring as market hammered Texans' WR1 in plus matchup."
+  },
+  "keyTakeaways": [
+    "Anytime TD props are high-variance by nature - even 136-yard performances don't guarantee scores",
+    "Collins' 2 red zone targets show opportunity was there, execution just didn't happen (1 incompletion, 1 overthrow)",
+    "Texans spreading 5 TDs across 4 players illustrates touchdown distribution randomness",
+    "Strong yardage performance (92nd percentile) with 0 TDs (0th percentile) = ultimate bad beat",
+    "Positive CLV and correct process, but TD props are coin flips even with elite target share"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Brutal bad beat but correct process. Collins dominated (136 yards), got red zone looks (2 targets), and game environment delivered (65 combined points). Sometimes the TD just doesn't come. This is TD prop variance in its purest form - right analysis, wrong outcome. Would bet this spot 100 times out of 100."
+}

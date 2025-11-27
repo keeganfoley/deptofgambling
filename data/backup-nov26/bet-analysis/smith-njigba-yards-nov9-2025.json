@@ -1,0 +1,127 @@
+{
+  "slug": "smith-njigba-yards-nov9-2025",
+  "player": "Jaxon Smith-Njigba",
+  "line": "OVER 96.5 receiving yards",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "93 yards (short by 3.5 yards)",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Seattle Seahawks @ Arizona Cardinals",
+    "date": "November 9, 2025",
+    "gameTime": "4:05 PM ET",
+    "venue": "State Farm Stadium",
+    "finalScore": "Seahawks 44, Cardinals 22"
+  },
+  "preGameAnalysis": {
+    "edge": 20,
+    "expectedValue": 38.0,
+    "estimatedProbability": 72,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "8 of 8 games over 75 yards (100%)",
+      "seasonAverage": "118.5 YPG (NFL leader)",
+      "last3Games": "126.7 YPG",
+      "cushion": "+22.0 yards above line (historic pace)"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Volume Trend",
+        "description": "JSN entered Week 10 as the NFL's leading receiver (948 yards). His 2,015-yard pace would break the single-season record. The volume and efficiency trends were historic."
+      },
+      {
+        "title": "Perfect Matchup",
+        "description": "Arizona's 29th-ranked pass defense (261.4 YPG) represented ideal opponent. Cardinals struggled to contain top receivers all season."
+      },
+      {
+        "title": "Consistency Pattern",
+        "description": "JSN recorded 75+ yards in every single game (8-of-8). This wasn't variance—it was systematic domination of target share and efficiency."
+      },
+      {
+        "title": "Sam Darnold Connection",
+        "description": "Darnold averaged 178 passing yards with JSN as primary target. The chemistry and trust were evident in red zone and third-down situations."
+      }
+    ],
+    "riskFactors": [
+      "Potential blowout limiting pass attempts",
+      "Seattle's defense capable of scoring, reducing offensive plays",
+      "Cardinals' desperation could create unpredictable game script"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 5,
+      "targets": 6,
+      "receivingYards": 93,
+      "touchdowns": 1,
+      "yardsPerReception": 18.6,
+      "catchRate": "83.3% (5-for-6)",
+      "longestReception": 43
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "JSN caught 43-yard TD on opening drive, instantly putting him at 43 yards. Seattle jumped ahead 7-0 and appeared headed for shootout."
+      },
+      {
+        "quarter": "Q2",
+        "description": "DISASTER. DeMarcus Lawrence returned TWO fumbles for touchdowns (identical plays). Seattle led 38-7 at half WITHOUT needing offensive production. JSN added 50 yards but pace stalled."
+      },
+      {
+        "quarter": "Q3-Q4",
+        "description": "With 38-7 halftime lead, Seattle ran 198 rushing yards in second half. Darnold attempted only 11 second-half passes (12 total for game). JSN finished 5-for-6, 93 yards, 1 TD."
+      }
+    ],
+    "whenCleared": "Never - finished 3.5 yards short despite 5-for-6 efficiency",
+    "gamePace": "Darnold threw only 12 total passes because defensive/special teams scores made offense ceremonial. JSN's 44.7% target share meant nothing when offense barely played."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Unpredictable Game Script Disaster",
+        "description": "Seattle scored 38 first-half points with TWO identical DeMarcus Lawrence fumble return TDs. The defense dominated so thoroughly that the passing offense became irrelevant."
+      },
+      {
+        "title": "Second-Half Abandonment",
+        "description": "Darnold attempted just 11 passes in the entire second half (12 total game). With 38-7 halftime lead, Seattle ran 198 second-half rushing yards, completely eliminating JSN's opportunities."
+      },
+      {
+        "title": "Microscopic Miss",
+        "description": "JSN needed 3.5 more yards. ONE additional moderate catch would have cashed. He was 5-for-6 with 93 yards and a TD—elite efficiency wasted by circumstance, not performance."
+      },
+      {
+        "title": "Variance vs Skill",
+        "description": "This was 95% variance, 5% error. No model predicts three defensive/special teams touchdowns creating a blowout before halftime. JSN's performance was excellent; the game environment killed the prop."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-25.5 yards below 118.5 YPG average (-21.5%)",
+      "vsRecentForm": "-33.7 yards below 126.7 YPG last 3 games (-26.6%)",
+      "vsPropLine": "-3.5 yards below 96.5 line (-3.6%)",
+      "percentileRanking": "Bottom 25% of season performances despite 18.6 YPR efficiency"
+    },
+    "alternateOutcomes": {
+      "ifCompetitive": "In normal game script with Darnold attempting 28-32 passes, JSN likely finishes with 120-140 yards given his efficiency (18.6 YPR)",
+      "ifOneMoreCatch": "ONE additional 15-yard catch (below his YPR average) would have cashed the over",
+      "realityCheck": "Seattle's defense scoring 14 points before offense played meaningful drives was the 1% outcome that killed an elite setup"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -118,
+    "clvCents": 8,
+    "clvPercentage": 7.3,
+    "verdict": "Excellent positive CLV - line moved significantly toward over as sharp money pounded JSN's historic pace and elite matchup. We got best available number early."
+  },
+  "keyTakeaways": [
+    "Even elite target share (44.7%) evaporates when game script eliminates offensive plays",
+    "JSN's 93 yards on 6 targets = elite efficiency, but 12 total pass attempts killed volume",
+    "Cannot predict three defensive/special teams TDs creating halftime blowout",
+    "This is textbook 'right process, wrong outcome' - everything aligned except unpredictable variance",
+    "Missing by 3.5 yards after 43-yard opening TD is brutal, but reflects variance not analytical error",
+    "Would make this bet 100 times in 100 similar situations - the edge was massive"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Heartbreaking loss but analytically sound. When the NFL's leading receiver faces 29th-ranked pass defense with historic consistency, the prop offers massive edge. Defensive TDs creating early blowout was 1% variance that nullified elite setup."
+}

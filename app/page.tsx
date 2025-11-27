@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import SystemIntro from '@/components/SystemIntro';
 import PortfolioStatus from '@/components/PortfolioStatus';
+import FundGrid from '@/components/FundGrid';
 import DailyPerformanceHistory from '@/components/DailyPerformanceHistory';
 import SportBreakdown from '@/components/SportBreakdown';
 import BetTypeBreakdown from '@/components/BetTypeBreakdown';
@@ -20,6 +21,7 @@ export default function Home() {
       <StickyNav />
       <Hero />
       <div id="overview"><PortfolioStatus /></div>
+      <div id="funds"><FundGrid /></div>
       <div id="chart"><CandlestickChart /></div>
       <div id="bets"><RecentBets /></div>
       <div id="history"><DailyPerformanceHistory /></div>

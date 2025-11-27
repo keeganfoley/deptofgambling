@@ -71,7 +71,7 @@ export default function PortfolioChart() {
     datasets: [
       {
         label: 'Portfolio Balance',
-        data: data.map((item) => item.value),
+        data: data.map((item) => item.close),
         fill: true,
         borderColor: '#FF0080', // Magenta
         backgroundColor: (context: any) => {

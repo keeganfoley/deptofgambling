@@ -1,0 +1,132 @@
+{
+  "slug": "wembanyama-nov5-2025",
+  "player": "Victor Wembanyama",
+  "line": "OVER 12.5 rebounds",
+  "odds": -114,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "8 rebounds",
+  "profit": -114.00,
+  "gameDetails": {
+    "matchup": "San Antonio Spurs @ Los Angeles Lakers",
+    "date": "November 5, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Crypto.com Arena",
+    "finalScore": "Lakers 118, Spurs 116"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 25.2,
+    "estimatedProbability": 62,
+    "impliedProbability": 53.27,
+    "recentPerformance": {
+      "hitRate": "4 of 6 games (66.7%)",
+      "seasonAverage": "13.7 RPG (2nd in NBA)",
+      "last3Games": "14.0 RPG",
+      "cushion": "+1.2 rebounds above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Lakers' Terrible Rebounding Defense",
+        "description": "Lakers ranked 28th in defensive rebounding rate and 29th in offensive rebounding. Worst in the league at team rebounding."
+      },
+      {
+        "title": "No Elite Rim Protector",
+        "description": "LeBron James OUT (sciatica - missing entire early season). Primary centers: Deandre Ayton, Rui Hachimura. No one to match Wembanyama's 7'4\" frame."
+      },
+      {
+        "title": "Bounce-Back Spot",
+        "description": "Coming off worst game of season vs Phoenix (9 points, 9 rebounds, 6 TO). Potential bounce-back narrative after embarrassing loss."
+      },
+      {
+        "title": "High-Pace Game",
+        "description": "Game total set at 232.5 points. More possessions = more rebounding opportunities."
+      }
+    ],
+    "riskFactors": [
+      "Phoenix game showed blueprint to limit him (double-teams)",
+      "0-4 vs Luka Doncic teams (psychological factor)",
+      "Coming off worst game could indicate adjustment period"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rebounds": 8,
+      "points": 19,
+      "minutes": "~37 (fouled out with 1:39 remaining)",
+      "shooting": "7-23 FG (30.4%)",
+      "fouls": 6,
+      "blocks": "Multiple"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Wembanyama picked up 2nd foul on offensive charge. Early foul trouble limited aggressiveness.",
+        "estimatedRebounds": "2-3"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Played cautiously with 2 fouls. Lakers took lead by halftime 60-59.",
+        "estimatedRebounds": "2-3",
+        "halftimeTotal": "~5 rebounds at half"
+      },
+      {
+        "quarter": "Q3",
+        "description": "CRITICAL: Picked up 4th foul just 40 seconds into 3rd quarter. Severely limited minutes and aggressiveness.",
+        "estimatedRebounds": "1-2"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Picked up 5th foul midway through quarter. FOULED OUT at 1:39 remaining on offensive charge vs Rui Hachimura in 2-point game.",
+        "estimatedRebounds": "1-2"
+      }
+    ],
+    "whenMissed": "Stuck at 8 rebounds when fouled out with 1:39 left. Needed 5 more in 1:39.",
+    "gamePace": "234 total points (slightly over 232.5 total). High-pace as projected.",
+    "foulTrouble": "Catastrophic. 6 fouls, fouled out with 1:39 left in 2-point game. Three Spurs starters fouled out. Extremely whistle-heavy game (67 total fouls)."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Foul Trouble (PRIMARY FACTOR)",
+        "description": "Fouled out with 1:39 remaining in 2-point game. Lost 1:39 of critical rebounding time (potential 2-3 rebounds). Forced to play passively in 2nd half with 4-5 fouls. Could not attack the glass aggressively."
+      },
+      {
+        "title": "Lakers' Rebounding Surge",
+        "description": "Lakers dominated glass 57-46 despite being 28th in NBA. Deandre Ayton (10 rebounds) had strong game. Lakers had 12 offensive rebounds vs Spurs' 9. Uncharacteristic performance from Lakers."
+      },
+      {
+        "title": "Coming Off Bad Game",
+        "description": "Phoenix game (9 rebounds) showed vulnerability. Second straight subpar rebounding performance (9, then 8). Possible mental/physical adjustment period rather than bounce-back."
+      },
+      {
+        "title": "Officiating Impact",
+        "description": "67 total fouls called (extremely high). Changed rhythm and flow of game. Limited Wembanyama's ability to play physical."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-5.7 rebounds (-41.6% below 13.7 RPG average)",
+      "vsRecentForm": "-6.0 rebounds (-42.9% below 14.0 RPG last 3 games)",
+      "vsPropLine": "-4.5 rebounds (UNDER by 4.5)",
+      "percentileRanking": "Bottom 3rd percentile of season (2nd-worst rebounding game)"
+    },
+    "wasNormalVariance": "Extreme outlier. 8 rebounds is 1.84 standard deviations below mean. Only ~3% probability in normal distribution. However, fouling out with 1:39 left is NOT normal variance - unpredictable circumstance derailed otherwise sound bet."
+  },
+  "closingLineValue": {
+    "ourOdds": -114,
+    "closingOdds": -120,
+    "clvCents": 6,
+    "clvPercentage": 1.28,
+    "verdict": "Positive CLV (+6 cents). Got slightly better odds than closing market. Bet placed early captured value. Market agreed this was strong value (heavy OVER action)."
+  },
+  "keyTakeaways": [
+    "Add historical foul-out rates to pre-game analysis (Wembanyama averages 2.8 fouls per game - low risk typically)",
+    "Game-to-game variance is high in opponent defensive metrics (Lakers dominated despite 28th ranking)",
+    "Bounce-back narrative may need 2-3 games to materialize after bad performance",
+    "Close games = more perimeter play late = fewer rebounding opportunities",
+    "This was a 'bad beat' - sound process, unlucky outcome due to unpredictable foul trouble",
+    "Would make this exact bet again 100 times and expect to profit long-term"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Bad beat, not a bad bet. Process > results over small samples."
+}

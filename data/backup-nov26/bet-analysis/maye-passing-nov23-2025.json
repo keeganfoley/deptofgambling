@@ -1,0 +1,119 @@
+{
+  "slug": "maye-passing-nov23-2025",
+  "team": "New England Patriots",
+  "line": "Maye O255.5 pass yds",
+  "odds": -115,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "282 yards",
+  "profit": 86.96,
+  "gameDetails": {
+    "matchup": "New England Patriots at Cincinnati Bengals",
+    "date": "2025-11-23",
+    "gameTime": "1:00 PM ET",
+    "venue": "Paycor Stadium",
+    "finalScore": "NE 26, CIN 20"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 18,
+    "estimatedProbability": 63,
+    "impliedProbability": 53.5,
+    "recentPerformance": {
+      "hitRate": "Maye averaging 283 ypg",
+      "seasonAverage": "Elite completion percentage",
+      "last5Games": "Consistent passing volume",
+      "cushion": "Bengals worst pass D"
+    },
+    "keyFactors": [
+      {
+        "title": "Bengals Pass D",
+        "description": "Allow most pass TDs in NFL (25), 5th most pass yards"
+      },
+      {
+        "title": "No Chase",
+        "description": "Ja'Marr Chase suspended - CBs can't double anyone"
+      },
+      {
+        "title": "Burrow OUT",
+        "description": "Patriots will have lead, but still need to throw"
+      },
+      {
+        "title": "Maye Volume",
+        "description": "Projected 40+ pass attempts"
+      }
+    ],
+    "riskFactors": [
+      "Patriots might run out clock with lead",
+      "Bengals might commit to stopping pass",
+      "Game script dependent"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "completions": 27,
+      "attempts": 38,
+      "yards": 282,
+      "touchdowns": 3,
+      "interceptions": 1
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Maye started hot, moved ball efficiently"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Continued passing attack, built lead"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Crossed 255.5 yard threshold"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Added garbage time yards to pad total"
+      }
+    ],
+    "whenCleared": "3rd quarter",
+    "gamePace": "Pass-heavy as expected",
+    "turningPoint": "Bengals secondary couldn't stop anything"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Bengals D as Bad as Expected",
+        "description": "282 yards on 27-38 passing - efficient"
+      },
+      {
+        "title": "3 TDs",
+        "description": "Maye found end zone multiple times"
+      },
+      {
+        "title": "Cleared with Room",
+        "description": "282 yards - 26.5 over the line"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "282 yards - right at average",
+      "vsPropLine": "26.5 yards over",
+      "percentileRanking": "Median performance"
+    },
+    "wasNormalVariance": "Played out exactly as modeled. Bengals secondary is trash and Maye exploited it."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -115,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No movement - fair price"
+  },
+  "keyTakeaways": [
+    "Targeting weak secondaries works",
+    "Volume is key for passing props",
+    "Maye is legit - MVP-caliber season",
+    "Second winner of the day"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Clean hit. 282 yards on 27-38, 3 TDs. Bengals D was as bad as advertised. Cleared by 26.5 yards."
+}

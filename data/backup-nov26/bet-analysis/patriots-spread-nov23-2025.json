@@ -1,0 +1,117 @@
+{
+  "slug": "patriots-spread-nov23-2025",
+  "team": "New England Patriots",
+  "line": "Patriots -7.5",
+  "odds": -105,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Won by 6",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "New England Patriots at Cincinnati Bengals",
+    "date": "2025-11-23",
+    "gameTime": "1:00 PM ET",
+    "venue": "Paycor Stadium",
+    "finalScore": "NE 26, CIN 20"
+  },
+  "preGameAnalysis": {
+    "edge": 13,
+    "expectedValue": 24,
+    "estimatedProbability": 64,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Patriots 5-0 ATS on road",
+      "seasonAverage": "9-2 SU, 7-3-1 ATS",
+      "last5Games": "Strong road form",
+      "cushion": "Burrow and Chase OUT"
+    },
+    "keyFactors": [
+      {
+        "title": "Burrow OUT",
+        "description": "Joe Flacco starting - massive downgrade"
+      },
+      {
+        "title": "Chase SUSPENDED",
+        "description": "WR1 not available - no weapons"
+      },
+      {
+        "title": "Worst D Since 1966",
+        "description": "Bengals allowing 33.4 ppg"
+      },
+      {
+        "title": "Maye MVP Level",
+        "description": "71.9% completion, NFL lead in pass yards"
+      }
+    ],
+    "riskFactors": [
+      "7.5 is past key number 7",
+      "Flacco can have vintage game",
+      "Bengals at home"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 26,
+      "fieldGoals": 4,
+      "touchdowns": 2
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Patriots got out to lead"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Built on advantage"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Up 23-13 with under 5 minutes left in 4th"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Bengals scored late TD - final 26-20"
+      }
+    ],
+    "whenCleared": "Never - Bengals late TD",
+    "gamePace": "Controlled game but couldn't pull away",
+    "turningPoint": "Patriots settled for FGs instead of TDs"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Failed to Extend",
+        "description": "Had 23-13 lead with under 5 minutes, Bengals scored late"
+      },
+      {
+        "title": "Red Zone Efficiency",
+        "description": "Too many FGs, not enough TDs"
+      },
+      {
+        "title": "Missed by 1.5",
+        "description": "Won by 6, needed 8+ to cover"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "26 points - below average",
+      "vsPropLine": "1.5 points short",
+      "percentileRanking": "Below median result"
+    },
+    "wasNormalVariance": "Close loss. Had double-digit lead at one point. Missed cover by 1.5 points. Bengals late TD was the difference."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -110,
+    "clvCents": 5,
+    "clvPercentage": 2.3,
+    "verdict": "Got good price before line moved"
+  },
+  "keyTakeaways": [
+    "Double-digit leads don't always hold",
+    "7.5 is past the key number 7",
+    "Injury edges were real but not enough",
+    "Missed by smallest margin"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Heartbreaker. Led 23-13 late, won 26-20. Missed cover by 1.5 points. Thesis was right but execution failed."
+}

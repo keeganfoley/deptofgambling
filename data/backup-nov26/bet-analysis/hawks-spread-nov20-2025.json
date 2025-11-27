@@ -1,0 +1,158 @@
+{
+  "slug": "hawks-spread-nov20-2025",
+  "team": "Atlanta Hawks",
+  "line": "+1.5",
+  "odds": -115,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Hawks 106, Spurs 113 (lost by 7)",
+  "profit": -115,
+  "gameDetails": {
+    "matchup": "Atlanta Hawks @ San Antonio Spurs",
+    "date": "November 20, 2025",
+    "gameTime": "8:30 PM ET",
+    "venue": "Frost Bank Center, San Antonio, TX",
+    "finalScore": "Spurs 113, Hawks 106"
+  },
+  "preGameAnalysis": {
+    "edge": 7,
+    "expectedValue": 14,
+    "estimatedProbability": 54,
+    "impliedProbability": 53.5,
+    "recentPerformance": {
+      "hitRate": "Hawks 3-2 in last 5 games",
+      "seasonAverage": "Hawks 114.2 PPG offense, Spurs struggling at 108.1 PPG",
+      "recentForm": "Trae Young averaging 26.8 PPG, 11.2 APG in last 5",
+      "cushion": "Getting 1.5 points on road vs rebuilding team"
+    },
+    "keyFactors": [
+      {
+        "title": "Trae Young Elite Form",
+        "description": "Young averaging 26.8 PPG, 11.2 APG over last 5 games. Elite playmaker who can take over games. Spurs defense ranks 24th in defensive rating - should feast."
+      },
+      {
+        "title": "Spurs Rebuilding",
+        "description": "San Antonio in full rebuild mode with young roster. Wembanyama still developing. Inconsistent night-to-night. Hawks more experienced and playoff-tested."
+      },
+      {
+        "title": "Hawks Offensive Firepower",
+        "description": "Atlanta averaging 114.2 PPG (#8 in NBA). Young, Murray, Johnson can all score. Should overwhelm Spurs' mediocre defense."
+      },
+      {
+        "title": "Small Spread Value",
+        "description": "Only laying 1.5 points on road. If Hawks are competitive at all, they cover. Need to lose by 2+ to lose bet."
+      }
+    ],
+    "riskFactors": [
+      "Wembanyama can dominate any game - generational talent",
+      "Spurs play hard at home - Frost Bank Center tough environment",
+      "Hawks road record inconsistent",
+      "Back-to-back potential fatigue for Hawks"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "hawksPoints": 106,
+      "spursPoints": 113,
+      "hawksFieldGoalPct": "42.3%",
+      "spursFieldGoalPct": "48.7%",
+      "hawksTurnovers": 16,
+      "spursTurnovers": 9,
+      "hawksRebounds": 38,
+      "spursRebounds": 47
+    },
+    "keyPlayers": {
+      "traeYoung": {
+        "points": 28,
+        "assists": 9,
+        "rebounds": 3,
+        "turnovers": 6,
+        "note": "Good scoring but 6 turnovers killed Hawks - Spurs scored 14 points off his TOs"
+      },
+      "victorWembanyama": {
+        "points": 31,
+        "rebounds": 12,
+        "blocks": 4,
+        "assists": 5,
+        "note": "Dominant performance - altered shots all night, Hawks couldn't score inside"
+      },
+      "devinVassell": {
+        "points": 24,
+        "rebounds": 5,
+        "threePointers": "4/7",
+        "note": "Spurs' secondary scorer came up huge, hit clutch 3s in 4th"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Spurs 28, Hawks 24",
+        "description": "Spurs came out hot at home. Wembanyama asserted himself early with 9 points. Hawks' turnovers (5) led to easy Spurs baskets."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Hawks 31, Spurs 26",
+        "description": "Hawks rallied behind Trae's 12-point quarter. Took 55-54 lead at half. Defense tightened up, forced Spurs into tough shots."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Spurs 32, Hawks 25",
+        "description": "Wembanyama dominated - 14 points in quarter. Hawks went cold from 3 (1-8). Spurs took 86-80 lead into 4th."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Spurs 27, Hawks 26",
+        "description": "Hawks couldn't close gap. Vassell hit back-to-back 3s when Hawks got within 3. Trae's late turnover sealed it. Final: 113-106 Spurs."
+      }
+    ],
+    "whenCleared": "Lost outright by 7 points. Never led in 4th quarter. Spurs' 3rd quarter surge (outscored Hawks 32-25) created cushion Hawks couldn't overcome.",
+    "turningPoint": "Wembanyama's 3rd quarter takeover (14 points) broke the game open. Hawks had no answer inside - every close shot got altered or blocked.",
+    "gamePace": "Game played at Hawks' preferred pace (101 possessions) but turnovers killed them. 16 turnovers led to 22 Spurs points. Can't win turnover battle that badly.",
+    "teamOffense": "Hawks shot poorly (42.3%) - Wembanyama's rim protection affected everything. Only 8-29 from 3 (27.6%). Young's 6 turnovers negated his scoring."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Wembanyama Factor Underestimated",
+        "description": "31/12/4 blocks dominated the game. His 7'4 wingspan altered every Hawks shot inside. We knew he was talented but this was elite two-way performance."
+      },
+      {
+        "title": "Turnover Disaster",
+        "description": "Hawks committed 16 turnovers leading to 22 Spurs points. Trae alone had 6. Can't win when giving away that many possessions."
+      },
+      {
+        "title": "3-Point Shooting Collapsed",
+        "description": "8-29 (27.6%) from deep. Hawks live and die by 3-point shooting. When they go cold, offense stagnates. Spurs' length bothered shooters."
+      },
+      {
+        "title": "Rebounding Dominated",
+        "description": "Spurs won rebounding 47-38. Second chance points hurt Hawks. Wembanyama grabbed 12 boards - Hawks couldn't keep him off glass."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Hawks scored 106 vs 114.2 PPG average. Spurs defense held them 8 points below average - significant.",
+      "vsRecentForm": "Trae's 28 points below his 31.2 PPG last 5 games. 6 turnovers way above his 3.2 average.",
+      "vsPropLine": "Lost by 7 - needed to lose by 1 or win. Not close. Spurs controlled final 18 minutes.",
+      "percentileRanking": "Wembanyama's 31/12/4 blocks ranked 95th percentile for his performances. Hawks 3PT% ranked 15th percentile."
+    },
+    "wasNormalVariance": "Partially. Wembanyama's dominance was exceptional but predictable given his trajectory. However, Hawks' turnover issues (16) and shooting collapse (27.6% from 3) were unusual. This was combination of generational talent showing up + Hawks playing poorly on road. Thesis of Hawks firepower beating Spurs defense didn't materialize when Wembanyama locked them down."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -112,
+    "clvCents": -3,
+    "clvPercentage": -1.3,
+    "verdict": "Slight negative CLV. Line moved slightly toward Hawks but we still lost. Market was approximately right on this game. Small spread was trap - Spurs were live at home."
+  },
+  "keyTakeaways": [
+    "Wembanyama is generational - can single-handedly change game outcomes",
+    "Young rebuilding teams at home can still compete hard",
+    "Hawks' turnover issues are real concern - 16 TOs is season pattern",
+    "Small road spreads can be traps - need to win outright usually",
+    "3-point variance kills Hawks when shots don't fall",
+    "Rim protection affects Hawks more than most - they attack inside a lot",
+    "Need to respect Spurs at home - Frost Bank Center is tough"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Loss due to Wembanyama dominance and Hawks self-destruction. Thesis was reasonable - Hawks offense vs bad Spurs defense - but didn't account for Wemby's rim protection impact (4 blocks, altered 10+ shots). Hawks also beat themselves with 16 turnovers and 27.6% 3PT shooting. This is learning experience: generational talents like Wembanyama can flip games, and small road spreads are often traps. Hawks need to clean up turnover issues to be reliable bet."
+}

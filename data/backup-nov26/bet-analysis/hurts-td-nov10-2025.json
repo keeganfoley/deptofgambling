@@ -1,0 +1,126 @@
+{
+  "slug": "hurts-td-nov10-2025",
+  "player": "Jalen Hurts",
+  "line": "Anytime TD (rushing only)",
+  "odds": 100,
+  "stake": 2.0,
+  "result": "loss",
+  "finalStat": "0 rushing TDs (5 carries, 27 yards)",
+  "profit": -200.00,
+  "gameDetails": {
+    "matchup": "Philadelphia Eagles @ Green Bay Packers",
+    "date": "November 10, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lambeau Field",
+    "finalScore": "Eagles 10, Packers 7"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24.0,
+    "estimatedProbability": 50,
+    "impliedProbability": 50.00,
+    "recentPerformance": {
+      "hitRate": "5 rushing TDs in 9 games (55.6%)",
+      "seasonAverage": "0.56 rushing TDs per game",
+      "last3Games": "2 rushing TDs in last 3 games (66.7%)",
+      "cushion": "Elite goal-line QB with Tush Push package"
+    },
+    "keyFactors": [
+      {
+        "title": "Signature Tush Push Package",
+        "description": "Hurts' QB sneak (Tush Push) was NFL's most effective short-yardage play, converting at 94% success rate. Nearly automatic inside the 2-yard line."
+      },
+      {
+        "title": "Plus-Money Value",
+        "description": "At +100 odds, getting even money on QB with 5 rushing TDs and elite goal-line usage provided theoretical edge."
+      },
+      {
+        "title": "Red Zone Opportunities Expected",
+        "description": "Eagles ranked 3rd in red zone efficiency. Expected multiple goal-line situations in Monday Night Football matchup."
+      }
+    ],
+    "riskFactors": [
+      "For QB anytime TD props, only rushing TDs count (passing TDs don't qualify)",
+      "Defensive game script could limit total offensive TDs",
+      "Packers' run defense ranked 12th (4.1 YPC allowed)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushAttempts": 5,
+      "rushingYards": 27,
+      "yardsPerCarry": 5.4,
+      "rushingTouchdowns": 0,
+      "longestRush": 10,
+      "completions": 15,
+      "attempts": 26,
+      "passingYards": 183,
+      "passingTouchdowns": 1,
+      "passerRating": 92.3,
+      "redZoneCarries": 0
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Hurts fumbled on designed run - rare turnover made OC Kellen Moore more conservative with QB runs. Eagles 0 points in scoreless first quarter."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Scoreless through halftime (0-0). Hurts' first-quarter fumble limited designed QB run calls. No goal-line opportunities materialized."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Jake Elliott FG gave Eagles 3-0 lead but no TDs. Offensive struggles continued - just 3 points through three quarters."
+      },
+      {
+        "quarter": "Q4",
+        "description": "DeVonta Smith 36-yard TD catch (passing TD, doesn't count for QB anytime TD prop) gave Eagles 10-0 lead. Big play rather than goal-line drive - no Tush Push opportunities."
+      }
+    ],
+    "whenMissed": "Never scored rushing TD - 0 rushing TDs on 5 carries",
+    "gamePace": "Historically low-scoring game (10-7 final). Eagles scored just 10 points total - one FG, one passing TD to Smith. Never got multiple goal-line situations for Tush Push package."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Only One Offensive TD Scored",
+        "description": "Eagles scored just 10 points (1 FG, 1 passing TD). The extreme defensive nature created limited scoring opportunities - no room for QB rushing TDs."
+      },
+      {
+        "title": "Big Play TD, Not Goal-Line Drive",
+        "description": "Philadelphia's only TD came on DeVonta Smith's 36-yard reception - a big play rather than sustained red zone drive requiring Tush Push. No short-yardage scoring situations."
+      },
+      {
+        "title": "First-Quarter Fumble",
+        "description": "Hurts' rare fumble on designed run in Q1 likely made OC Kellen Moore more conservative with QB rushing calls. Coming off bye week, offensive rhythm never developed."
+      },
+      {
+        "title": "Passing TD Doesn't Count",
+        "description": "Hurts' 36-yard passing TD to Smith doesn't qualify for QB anytime TD props - only rushing TDs count. This distinction is crucial."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "0 rushing TDs vs 0.56 per game average",
+      "vsRecentForm": "0 rushing TDs vs 2 in last 3 games (66.7% rate)",
+      "vsPropLine": "Missed anytime TD prop at +100 odds",
+      "percentileRanking": "Bottom 45% of Hurts' rushing TD performances"
+    },
+    "wasNormalVariance": "This was 70% variance, 30% analytical error. While Hurts' Tush Push success rate (94%) and 5 rushing TDs supported this prop, the 10-7 defensive slugfest created extreme variance. Philadelphia scoring only 10 total points (one via 36-yard passing TD) left zero goal-line opportunities for QB sneaks. However, the analytical error was betting QB TD in MNF game with O/U 45.5 that went under by 28.5 points. Should have weighted defensive game script risk more heavily."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": 95,
+    "clvCents": 5,
+    "clvPercentage": 5.0,
+    "verdict": "Positive CLV - line moved toward Hurts TD but defensive game destroyed prop."
+  },
+  "keyTakeaways": [
+    "QB anytime TD props require multiple offensive TDs - when team scores just 10 points (1 TD), no room for QB rushing score",
+    "Passing TDs don't count for QB anytime TD props - Hurts' Smith TD was irrelevant",
+    "36-yard passing TD was big play, not goal-line drive requiring Tush Push",
+    "First-quarter fumble likely reduced designed QB run calls",
+    "Defensive MNF games (0-0 halftime, 10-7 final) kill TD props across the board"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Reasonable pre-game logic (Tush Push success, 5 rushing TDs, +100 odds) but extreme defensive variance destroyed prop. Eagles scoring only 10 points with one TD (36-yard pass) left zero goal-line opportunities for QB sneaks. First-quarter fumble reduced designed runs. Should have weighted risk of defensive slugfest more heavily in MNF primetime environment."
+}

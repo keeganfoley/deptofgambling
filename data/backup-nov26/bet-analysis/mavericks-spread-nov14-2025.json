@@ -1,0 +1,187 @@
+{
+  "slug": "mavericks-spread-nov14-2025",
+  "team": "Dallas Mavericks",
+  "line": "+3.5",
+  "odds": -110,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "Clippers 133, Mavericks 127 (2OT) - missed by 2.5 points",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Dallas Mavericks @ LA Clippers",
+    "date": "November 14, 2025",
+    "gameTime": "10:30 PM ET",
+    "venue": "Crypto.com Arena, Los Angeles, CA",
+    "finalScore": "Clippers 133, Mavericks 127 (Double Overtime)"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 28,
+    "estimatedProbability": 56,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Clippers 0-9 ATS in last 9 games, worst ATS stretch in NBA",
+      "recentForm": "Mavericks 3-9, worst 12-game start since 2017-18; Clippers on 6-game losing streak",
+      "homeRecord": "Clippers 0-3 on road this season",
+      "cushion": "Getting 3.5 points with both teams severely depleted by injuries"
+    },
+    "keyFactors": [
+      {
+        "title": "Clippers' Historic ATS Futility",
+        "description": "Clippers entered 1-10 ATS on season and 0-9 ATS in last 9 games - worst stretch in franchise history. Pattern suggests systematic issues with execution and meeting expectations. Line moved from -4.5 to -3.5 on sharp money testing Mavericks, but Clippers' ATS struggles provided significant value."
+      },
+      {
+        "title": "Both Teams Catastrophically Injured",
+        "description": "Mavericks missing Kyrie Irving (knee), Anthony Davis (8th game, calf), PJ Washington (shoulder). Clippers missing Bradley Beal (hip fracture, season-ending) and Kawhi Leonard (6th game, ankle). Two severely depleted rosters creates high variance environment where +3.5 offers cushion."
+      },
+      {
+        "title": "Reverse Line Movement",
+        "description": "Line moved 1 point toward Mavericks (from -4.5 to -3.5) suggesting sharp money on Dallas. Sharps betting Mavericks to keep it close given both teams' struggles and injury situations. Getting +3.5 represented excellent value."
+      },
+      {
+        "title": "Mavericks Third Game in Four Nights",
+        "description": "Dallas playing on short rest, third game in four nights. Fatigue factor is risk, but Clippers also dealing with own schedule challenges. Both teams compromised by schedule and injuries."
+      },
+      {
+        "title": "Classic 'Two Bad Teams' Spot",
+        "description": "When two struggling teams with multiple injuries meet, outcomes become more random. +3.5 provides cushion in high-variance environment. Clippers' 6-game losing streak suggests motivation, but execution remains question mark."
+      }
+    ],
+    "riskFactors": [
+      "Mavericks' fatigue from third game in four nights could compound in late game",
+      "D'Angelo Russell's inconsistent decision-making and turnover issues",
+      "Clippers desperate for win after 6 straight losses - extra motivation",
+      "James Harden capable of takeover performance despite age",
+      "Overtime scenario would test Mavericks' depleted depth"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "mavericksFieldGoalPercentage": "48.5% (47-97)",
+      "clippersFieldGoalPercentage": "45.0% (45-100)",
+      "mavericksThreePointPercentage": "38.5% (15-39)",
+      "clippersThreePointPercentage": "41.0% (16-39)",
+      "mavericksRebounds": 46,
+      "clippersRebounds": 46,
+      "mavericksTurnovers": 15,
+      "clippersTurnovers": 14,
+      "mavericksMinutesPlayed": "53:00 (Double OT)",
+      "clippersMinutesPlayed": "53:00 (Double OT)"
+    },
+    "keyPlayers": {
+      "jamesHarden": {
+        "team": "Clippers",
+        "points": 41,
+        "rebounds": 14,
+        "assists": 11,
+        "shooting": "13-25 FG (52%), 6-12 3PT, 9-11 FT",
+        "minutes": 51,
+        "note": "Historic 82nd career triple-double, FIRST 40-point triple-double in Clippers franchise history"
+      },
+      "ivicaZubac": {
+        "team": "Clippers",
+        "points": 27,
+        "rebounds": 11,
+        "shooting": "11-15 FG (73.3%)",
+        "minutes": 46,
+        "note": "Season-high, dominated depleted Mavericks frontcourt"
+      },
+      "najiMarshall": {
+        "team": "Mavericks",
+        "points": 28,
+        "rebounds": 8,
+        "shooting": "8-19 FG",
+        "minutes": 47,
+        "note": "First start of season due to injuries, valiant effort"
+      },
+      "dangeloRussell": {
+        "team": "Mavericks",
+        "points": 28,
+        "turnovers": 7,
+        "plusMinus": "+24 (misleading)",
+        "note": "7 turnovers including 2 in final 2:20 of 2OT killed comeback"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "First Quarter",
+        "score": "Clippers lead early",
+        "description": "Clippers jumped to 15-point lead (22-7) in opening 9 minutes. Dallas started slow but clawed back by end of quarter."
+      },
+      {
+        "quarter": "Second Quarter",
+        "score": "Clippers 62-55 at halftime",
+        "description": "Mavericks briefly took lead behind Klay Thompson and D'Angelo Russell for ~4 minutes. Clippers responded with 18-2 run to regain control. Led by 7 at half."
+      },
+      {
+        "quarter": "Third Quarter",
+        "score": "Mavericks 86-83 entering 4th",
+        "description": "Dallas dominated 31-21, outscoring Clippers by 10 to take 3-point lead. Mavericks' best stretch of game showed fight despite injuries."
+      },
+      {
+        "quarter": "Fourth Quarter & OT",
+        "score": "Tied 114-114 at end of regulation, 123-123 after 1OT",
+        "description": "Dallas led by 12 early in 4th but Clippers stormed back. Mavericks' 11-0 run tied 114-114 with ~3 minutes left. First OT featured controversial goaltending call on Gafford block of Harden (reversed on review) - would've given Clippers 125-123 lead. Gafford blocked another Harden attempt with 1 second left to force 2OT."
+      },
+      {
+        "quarter": "Second Overtime - The Collapse",
+        "score": "Clippers 133-127 (outscored Mavericks 10-4)",
+        "description": "Fatigue crushed Dallas. Clippers scored first 6 points to take 129-123 lead. Russell's 2 turnovers in final 2:20 killed any comeback hope. Mavericks had nothing left - third game in four nights, depleted roster, exhausted legs. Harden's clutch baskets and free throws sealed it."
+      }
+    ],
+    "whenMissed": "Second overtime collapse. Game was tied 114-114 in regulation and 123-123 after first OT. If game had ended in regulation (likely push or Dallas win on final possession), Mavericks cover easily. But fatigue from third game in four nights showed in second OT - Dallas outscored 10-4, losing by 6 and missing +3.5 cover by 2.5 points.",
+    "turningPoint": "The second overtime. Mavericks had fought through 53 minutes to keep it tied, but simply ran out of gas. Clippers' 6-0 run to start 2OT (taking 129-123 lead) broke Dallas's back. Russell's turnovers (7 total, 2 in final 2:20 of 2OT) directly killed comeback attempts. Fatigue factor manifested exactly as risk analysis predicted.",
+    "gamePace": "Double overtime added ~13 extra minutes of play, expanding total game time to 53 minutes. This marathon benefited the more desperate Clippers (needing win after 6-game losing streak) over fatigued Mavericks (third game in four nights). Pace was relatively normal during regulation, but OT periods tested depth - which Dallas didn't have.",
+    "teamOffense": "Mavericks shot well overall (48.5% FG, 38.5% from three) but couldn't sustain in double OT. Zubac's 73% shooting (11-15, 27 points) exploited Dallas's depleted frontcourt (missing Davis, Washington; Lively on minutes restriction). Harden's historic 41-14-11 was unforeseeable variance - first 40-pt triple-double in Clippers franchise history."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Harden's Historic Performance (Unforeseeable Variance)",
+        "description": "You cannot handicap a 41-point triple-double - Harden's first 40-pt triple-double in Clippers franchise history. At age 35, Harden delivered an all-time great performance (13-25 FG, 6-12 3PT, 9-11 FT, 14 reb, 11 ast in 51 min). This falls into pure variance category - an aging star having a career night exactly when his team needed it."
+      },
+      {
+        "title": "Double Overtime Added 6+ Points to Margin",
+        "description": "Game was tied 114-114 in regulation and 123-123 after first OT. Second OT (Clippers outscored Dallas 10-4) added the 6-point margin that missed the +3.5 cover. In regulation or even after 1OT, Mavericks likely cover. Low-probability event (double OT) directly caused the loss."
+      },
+      {
+        "title": "Fatigue Factor Manifested in 2OT",
+        "description": "Third game in four nights destroyed Dallas in second overtime. Mavericks had fought through 53 minutes but simply had no legs left. Clippers' 6-0 run to start 2OT (taking 129-123 lead) exploited exhausted Dallas roster. Pre-game fatigue risk materialized exactly as predicted."
+      },
+      {
+        "title": "D'Angelo Russell's Turnovers",
+        "description": "Russell's 7 turnovers (season-high) directly killed Dallas. Two turnovers in final 2:20 of second OT with Clippers up 133-127 ended any comeback hope. Russell's +24 plus/minus was mirage - his late-game mistakes negated his 28 points."
+      },
+      {
+        "title": "Zubac Dominated Depleted Frontcourt",
+        "description": "With Davis out, Washington out, and Lively on minutes restriction, Zubac feasted for season-high 27 points on 73% shooting (11-15). Mavericks had no interior presence to counter his pick-and-roll dominance with Harden. Roster depletion proved insurmountable."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Harden's 41 points was 15+ above his season average. His triple-double (14 reb, 11 ast) represented elite all-around game well above typical output. Zubac's 27 points (11-15 FG) was also massive outlier from his ~12 PPG average.",
+      "vsRecentForm": "Mavericks actually played well in regulation and first OT, keeping game tied despite injuries. Second OT collapse (10-4 Clippers) represented fatigue breaking point, not systemic failure.",
+      "vsPropLine": "Missed +3.5 by 2.5 points. If game ended in regulation (114-114 tie) or first OT (123-123 tie), Mavericks cover easily. Double OT's 13 extra minutes produced the 6-point margin.",
+      "percentileRanking": "Harden's 41-14-11 triple-double ranks in 99th percentile for player performances this season. First 40-pt triple-double in Clippers franchise history is literal historic outlier."
+    },
+    "wasNormalVariance": "Yes, this was variance - but explainable variance. Three factors combined: (1) Harden's historic 41-14-11 performance (first 40-pt triple-double in franchise history), (2) Double overtime adding 13 minutes and 6 points to margin, (3) Mavericks' fatigue from third game in four nights manifesting in 2OT. All three are low-probability events. In regulation, game was tied 114-114 - this bet likely covers 55-60% of the time, but November 14 fell into the 40-45% bucket where variance aligned against us."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Line opened at Clippers -4.5 and moved to -3.5 on sharp money testing Mavericks. We bet at +3.5 (-110), which matched closing number. The reverse line movement (1 point toward Dallas) suggested sharp agreement with thesis. Getting +3.5 represented solid value in 'two bad teams' scenario with both rosters decimated by injuries."
+  },
+  "keyTakeaways": [
+    "When both teams are severely injured, variance dominates - Harden's historic night and double OT were low-probability events that aligned against Dallas",
+    "Fatigue from third game in four nights is quantifiable risk - manifested exactly in second OT when Mavericks were outscored 10-4",
+    "Double OT added 6 points to final margin - game was tied 114-114 in regulation, would've covered if it ended then",
+    "D'Angelo Russell's 7 turnovers (including 2 in final 2:20 of 2OT) exemplify risk of relying on inconsistent decision-makers in depleted rosters",
+    "Clippers' desperation after 6-game losing streak created extra motivation that manifested in Harden's takeover",
+    "Roster depletion (both teams missing multiple starters) increases randomness - makes outcomes less predictable",
+    "For future betting: reduce unit allocation by 50% in 'double-injury' scenarios where both teams missing 2+ starters",
+    "This bet had sound process (Clippers 0-9 ATS, both teams injured, getting +3.5) but lost on confluence of low-probability events - acceptable variance in quantitative operation"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Good process, unlucky variance. This bet made sense given Clippers' 0-9 ATS futility, both teams' injury situations, and getting +3.5 cushion. The game was tied 114-114 in regulation and 123-123 after first OT - Dallas was in position to cover. Three low-probability events aligned against us: (1) Harden's historic 41-14-11 triple-double (first 40-pt triple-double in Clippers franchise history), (2) Double overtime adding 13 minutes and pushing final margin to 6 (vs tied in regulation), (3) Mavericks' fatigue manifesting in second OT (third game in four nights). Make this bet 100 times and it likely covers 55-60 times. November 14 was in the variance bucket. Key lesson: when both teams are severely injured, reduce unit allocation by 50% as variance increases. Would still bet Mavericks +3.5 under these circumstances, just with lower stake."
+}

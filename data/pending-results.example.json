@@ -1,0 +1,36 @@
+[
+  {
+    "date": "2025-11-27T12:00:00.000Z",
+    "sport": "NBA",
+    "description": "Lakers +5.5",
+    "odds": -110,
+    "stake": 1.5,
+    "result": "win",
+    "finalStat": "Final: Lakers 112, Warriors 108 (Won outright)",
+    "edge": 8,
+    "expectedValue": 15,
+    "betType": "spreads",
+    "team": "Los Angeles Lakers",
+    "opponent": "Golden State Warriors",
+    "gameTime": "10:00 PM ET",
+    "analysis": "Lakers +5.5 @ (-110) 1.5u. THESIS: Model shows value on Lakers as road dogs with LeBron healthy. Warriors struggling at home recently. RESULT: Lakers won outright 112-108.",
+    "fund": "VectorFund"
+  },
+  {
+    "date": "2025-11-27T12:00:00.000Z",
+    "sport": "NCAAB",
+    "description": "Duke -8.5",
+    "odds": -115,
+    "stake": 1,
+    "result": "loss",
+    "finalStat": "Final: Duke 75, UNC 70 (Won by 5, didn't cover)",
+    "edge": 7,
+    "expectedValue": 12,
+    "betType": "spreads",
+    "team": "Duke Blue Devils",
+    "opponent": "UNC Tar Heels",
+    "gameTime": "7:00 PM ET",
+    "analysis": "Duke -8.5 @ (-115) 1u. THESIS: Duke strong at Cameron Indoor. Sharp money on Duke. RESULT: Duke won but only by 5, failed to cover 8.5.",
+    "fund": "SharpFund"
+  }
+]

@@ -1,0 +1,123 @@
+{
+  "slug": "barrett-assists-nov7-2025",
+  "player": "RJ Barrett",
+  "line": "OVER 3.5 assists",
+  "odds": 124,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "4 assists",
+  "profit": 124.00,
+  "gameDetails": {
+    "matchup": "Toronto Raptors @ Atlanta Hawks",
+    "date": "November 7, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "State Farm Arena",
+    "finalScore": "Raptors 109, Hawks 97"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 22.4,
+    "estimatedProbability": 55,
+    "impliedProbability": 44.64,
+    "recentPerformance": {
+      "hitRate": "3 of last 4 games over 3.5 (75%)",
+      "seasonAverage": "3.5 APG",
+      "last3Games": "6 assists vs MEM (Nov 3), 6 vs ATL (Oct 22)",
+      "cushion": "Right at line, but trending up"
+    },
+    "keyFactors": [
+      {
+        "title": "Recent Upward Trend",
+        "description": "Despite 3.5 APG average, had gone over 3.5 in 3 of last 4 games. Including season-high 6 assists vs Memphis and 6 assists in previous Atlanta meeting (opening night Oct 22)."
+      },
+      {
+        "title": "Raptors 'Big 3' System",
+        "description": "Operating as secondary ball-handler behind Immanuel Quickley (6.4 APG). Part of 'Big 3' with Scottie Barnes and Brandon Ingram where all average 20+ PPG but share playmaking."
+      },
+      {
+        "title": "Trae Young Out",
+        "description": "Hawks missing their primary defender and offensive engine (sprained right MCL). Created defensive gaps and altered Atlanta's typical defensive scheme."
+      },
+      {
+        "title": "High-Pace Matchup",
+        "description": "Atlanta playing at 2nd-fastest pace in NBA (104.6 possessions/game). Historically creates more assist opportunities through transition."
+      }
+    ],
+    "riskFactors": [
+      "Game turned into defensive 'rock fight' - just 206 total points (massively under 234.5 projected)",
+      "Toronto 2-point underdog on road",
+      "Atlanta's switching defense could limit playmaking"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "assists": 4,
+      "points": 19,
+      "fieldGoals": "7-15 (46.7%)",
+      "threePointers": "1-3 (33.3%)",
+      "freeThrows": "4-4 (100%)",
+      "rebounds": 5,
+      "steals": 0,
+      "blocks": 0,
+      "minutes": 33
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Atlanta controlled early, leading by as many as 13 in Q2. Hawks took 53-44 advantage into halftime. Barrett struggled to find rhythm against size and switching defense."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Toronto stormed back, outscoring Atlanta 29-24. Barrett found playmaking lanes as second-half adjustments took effect. 17 of his 19 points came after halftime."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Raptors dominated 36-20 in fourth. Scottie Barnes layup gave Toronto 82-81 lead with 6 minutes left, then pulled away. Barrett distributed effectively in balanced attack."
+      }
+    ],
+    "whenCleared": "Late Q3/Early Q4 - reached 4 assists as Toronto's offense clicked in second half comeback",
+    "gamePace": "Defensive struggle with just 206 total points vs 234.5 projected. Toronto's 23 total team assists reflected balanced approach despite low scoring."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Previous Atlanta Success",
+        "description": "Had 5 assists in season opener vs same Hawks team (Oct 22). Matchup familiarity and Trae Young's absence created opportunities."
+      },
+      {
+        "title": "Second-Half Surge",
+        "description": "17 of 19 points came after halftime as Toronto dominated 36-20 in Q4. Found playmaking rhythm when game opened up."
+      },
+      {
+        "title": "Jakob Poeltl's Return",
+        "description": "Starting center returned after missing 3 games (sore lower back), adding 8 points and 9 rebounds. Stabilized rotations and created assist opportunities."
+      },
+      {
+        "title": "Plus Odds Goldmine",
+        "description": "+124 odds represented just 44.7% implied probability, but Barrett was going over in 55%+ of games. Excellent value with only need for 1 extra assist (4 vs 3.5)."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+0.5 assists (+14.3% above 3.5 APG average)",
+      "vsRecentForm": "On pace with 6-assist games vs MEM and ATL earlier",
+      "vsPropLine": "+0.5 assists (+14.3% above 3.5 line)",
+      "percentileRanking": "Above average performance - tied for 2nd on team with Brandon Ingram (4 assists each), behind Quickley (6)"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": 124,
+    "closingOdds": 124,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Strong value regardless of CLV. +124 odds on player averaging exactly 3.5 APG who went over in 5 of 9 games (55%+) was mispriced. True probability significantly higher than 44.7% implied."
+  },
+  "keyTakeaways": [
+    "When odds (+124) imply 44.7% probability but actual hit rate is 55%+, that's edge",
+    "Previous matchup success (5 assists vs same team Oct 22) provides blueprint",
+    "Trae Young's absence created defensive gaps for secondary ball-handlers",
+    "Only needed 1 extra assist (4 vs 3.5) - comfortable 0.5 margin",
+    "2 days rest, not on back-to-back, fresh legs for road trip opener"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Solid value play on plus odds. Barrett averaged exactly 3.5 APG but had gone over in 55%+ of games. +124 odds mispriced the probability, especially vs Atlanta without Trae Young."
+}

@@ -1,0 +1,120 @@
+{
+  "slug": "towns-rebounds-nov22-2025",
+  "player": "Karl-Anthony Towns",
+  "team": "New York Knicks",
+  "line": "O11.5 rebounds",
+  "odds": -114,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "8 rebounds",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "New York Knicks vs Orlando Magic",
+    "date": "2025-11-22",
+    "gameTime": "7:30 PM ET",
+    "venue": "Madison Square Garden",
+    "finalScore": "NYK 121, ORL 106"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 16,
+    "estimatedProbability": 62,
+    "impliedProbability": 53.3,
+    "recentPerformance": {
+      "hitRate": "7 of 10 games over 11.5",
+      "seasonAverage": "13.2 RPG",
+      "last5Games": "65 rebounds in last 5",
+      "cushion": "+1.7 above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Rebounder",
+        "description": "KAT averaging 13.2 RPG with Knicks"
+      },
+      {
+        "title": "Orlando Interior",
+        "description": "Magic missing key bigs, weak on glass"
+      },
+      {
+        "title": "Recent Form",
+        "description": "Hit over in 7 of last 10 games"
+      },
+      {
+        "title": "MSG Motivation",
+        "description": "KAT playing well in front of home crowd"
+      }
+    ],
+    "riskFactors": [
+      "Blowout could limit minutes",
+      "Knicks have other rebounders",
+      "Pace could affect opportunities"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rebounds": 8,
+      "points": 22,
+      "assists": 3,
+      "offensiveRebounds": 2,
+      "defensiveRebounds": 6,
+      "minutes": 28
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Slow start on boards, only 2 rebounds"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "1 more rebound, only 3 at halftime - concerning"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "4 rebounds in 3rd, up to 7 total"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Only 1 rebound as Knicks cruised to blowout win"
+      }
+    ],
+    "gamePace": "Fast pace but blowout reduced opportunities",
+    "turningPoint": "3 rebounds at halftime - was never on pace to hit"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Blowout Impact",
+        "description": "15-point win meant KAT played only 28 minutes"
+      },
+      {
+        "title": "Slow Start",
+        "description": "Only 3 rebounds at halftime, too much ground to make up"
+      },
+      {
+        "title": "Game Script",
+        "description": "Knicks dominated so heavily that contested rebounds were limited"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "8 vs 13.2 average = -5.2 rebounds",
+      "vsPropLine": "3.5 rebounds short of line",
+      "percentileRanking": "Bottom 25% KAT performances"
+    },
+    "wasNormalVariance": "The blowout nature of the game killed this prop. KAT played only 28 minutes. Game script matters for rebounding props."
+  },
+  "closingLineValue": {
+    "ourOdds": -114,
+    "closingOdds": -110,
+    "clvCents": -4,
+    "clvPercentage": -1.8,
+    "verdict": "Slight negative CLV - line moved against us"
+  },
+  "keyTakeaways": [
+    "Blowouts kill rebounding props - limited minutes",
+    "Game script is critical for big man props",
+    "Only 3 boards at half was a bad sign",
+    "Consider opponent quality and pace of play"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Game script killed us. Knicks won by 15, KAT played only 28 minutes and finished with 8 rebounds. Blowout variance."
+}

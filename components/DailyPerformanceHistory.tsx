@@ -11,7 +11,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss';
+  result: 'win' | 'loss' | 'push';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -28,9 +28,10 @@ interface DailyData {
   record: { wins: number; losses: number };
 }
 
-type FilterType = 'all' | '30' | '7';
+type FilterType = 'all' | '30' | '7' | 'new_era';
 
-const STARTING_BALANCE = 10000;
+const STARTING_BALANCE = 40000;
+const NEW_ERA_START = '2025-11-26'; // Day 1 of 4-fund system
 
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
@@ -92,6 +93,10 @@ export default function DailyPerformanceHistory() {
   const getFilteredData = (): DailyData[] => {
     if (filter === 'all') return dailyData;
 
+    if (filter === 'new_era') {
+      return dailyData.filter(day => day.date >= NEW_ERA_START);
+    }
+
     const daysToShow = filter === '30' ? 30 : 7;
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - daysToShow);
@@ -150,7 +155,17 @@ export default function DailyPerformanceHistory() {
           <div className="h-[2px] bg-gradient-to-r from-[#c5a572] via-[#c5a572]/50 to-transparent mb-6 sm:mb-8"></div>
 
           {/* Filter Tabs */}
-          <div className="flex gap-3 sm:gap-4">
+          <div className="flex flex-wrap gap-2 sm:gap-4">
+            <button
+              onClick={() => setFilter('new_era')}
+              className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${
+                filter === 'new_era'
+                  ? 'bg-[#22c55e] text-white border-[#22c55e]'
+                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
+              }`}
+            >
+              4-FUND ERA
+            </button>
             <button
               onClick={() => setFilter('all')}
               className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${

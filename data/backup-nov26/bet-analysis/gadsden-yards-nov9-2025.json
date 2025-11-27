@@ -1,0 +1,114 @@
+{
+  "slug": "gadsden-yards-nov9-2025",
+  "player": "Oronde Gadsden II",
+  "line": "OVER 53.5 receiving yards",
+  "odds": -112,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "13 yards (short by 40.5 yards, knee injury)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Los Angeles Chargers @ Pittsburgh Steelers",
+    "date": "November 9, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Acrisure Stadium",
+    "finalScore": "Chargers 25, Steelers 10"
+  },
+  "preGameAnalysis": {
+    "edge": 13,
+    "expectedValue": 25.0,
+    "estimatedProbability": 63,
+    "impliedProbability": 52.83,
+    "recentPerformance": {
+      "hitRate": "4 of 4 games over 68 yards (100%)",
+      "seasonAverage": "64.7 yards per game",
+      "last3Games": "71.3 yards per game (hot streak)",
+      "cushion": "+11.2 yards above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Hot Streak Continuation",
+        "description": "Rookie TE had recorded at least 68 receiving yards in each of his previous four games, averaging 64.7 YPG entering Week 10. One of NFL's best rookie tight ends."
+      },
+      {
+        "title": "Primary Herbert Target",
+        "description": "As primary TE for Justin Herbert, Gadsden received consistent volume and usage in Chargers' passing attack despite run-heavy offensive approach."
+      },
+      {
+        "title": "Steelers' Defensive Weakness",
+        "description": "Despite Steelers' overall defensive strengths, their scheme allowed opportunities for athletic TEs in seam routes and middle-of-field targets."
+      }
+    ],
+    "riskFactors": [
+      "Chargers' run-heavy approach in blowouts limits passing volume",
+      "Rookie TE volatility - hot streaks don't last forever",
+      "Potential for regression from four-game ceiling performances"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 3,
+      "targets": 6,
+      "receivingYards": 13,
+      "yardsPerReception": 4.3,
+      "catchRate": "50%",
+      "injury": "Knee injury in Q3 (questionable to return, did not return)"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Gadsden caught 2 of 4 targets for 8 yards in first half. Chargers built lead but Gadsden was uncharacteristically quiet despite receiving targets."
+      },
+      {
+        "quarter": "Q3",
+        "description": "INJURY. Caught 1 more pass for 5 yards before leaving game with knee injury. Made awkward step on blocking play and limped to locker room, ending night prematurely."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Did not return. Listed as questionable but never came back. Injury sealed prop's fate."
+      }
+    ],
+    "whenMissed": "Never approached line - stuck at 13 yards when injury occurred in Q3",
+    "gamePace": "Chargers' 25-10 blowout allowed LA to control clock and lean on defense rather than airing it out. Herbert spread ball efficiently, limiting reliance on rookie TE."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Injury Ended Night Prematurely",
+        "description": "Knee injury in third quarter sealed this prop's fate. Gadsden caught 3 of 6 targets for 13 yards before awkward step on blocking play sent him to locker room."
+      },
+      {
+        "title": "Underperforming Even Before Injury",
+        "description": "The 13 yards on 3 catches through nearly three quarters showed Gadsden wasn't hitting typical efficiency. Needed 54 yards but never approached that number even while healthy."
+      },
+      {
+        "title": "Blowout Game Script",
+        "description": "Chargers' dominant game flow didn't require heavy reliance on rookie TE. Offensive balance and run-heavy approach in blowout limited his opportunities."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-51.7 yards below 64.7 YPG average (-79.9%)",
+      "vsRecentForm": "-58.3 yards below 71.3 YPG last 3 games (-81.8%)",
+      "vsPropLine": "-40.5 yards below 53.5 line (-75.7%)",
+      "percentileRanking": "Bottom 5% of Gadsden's season performances (injury-shortened)"
+    },
+    "wasNormalVariance": "This was 60% variance (injury), 40% error. The four-game hot streak created recency bias—assuming ceiling performances would continue indefinitely. While his role as primary Herbert target was real, rookie TEs experience volatility, and Chargers' run-heavy approach in blowouts limits passing-game props. The injury was unpredictable variance, but the prop was marginal even before that factor."
+  },
+  "closingLineValue": {
+    "ourOdds": -112,
+    "closingOdds": -115,
+    "clvCents": 3,
+    "clvPercentage": 2.6,
+    "verdict": "Slight positive CLV - line moved toward over as market recognized Gadsden's hot streak and role as primary TE target."
+  },
+  "keyTakeaways": [
+    "Hot-streak props carry inherent regression risk, especially for rookies",
+    "Gadsden's four-game run of 68+ yards created narrative that baseline had shifted upward, but volatility remains for young players",
+    "Always discount recent ceiling performances when projecting props - recency bias is dangerous",
+    "In-game injuries kill props instantly - no pre-game analysis accounts for mid-game exits",
+    "Chargers' blowout approach (run-heavy, clock control) limited passing volume even before injury",
+    "Zero carries for first time all season signals complete offensive dysfunction"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Recency bias prop that relied too heavily on hot streak continuation. Four-game ceiling run masked rookie TE volatility. Injury was unfortunate variance, but prop was questionable even pre-game given Chargers' tendency to limit passing in blowouts."
+}

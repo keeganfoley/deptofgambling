@@ -1,0 +1,142 @@
+{
+  "slug": "wembanyama-points-nov12-2025",
+  "player": "Victor Wembanyama",
+  "line": "OVER 26.5 points",
+  "odds": -106,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "31 points (cleared by 4.5)",
+  "profit": 94.34,
+  "gameDetails": {
+    "matchup": "San Antonio Spurs vs Golden State Warriors",
+    "date": "November 12, 2025",
+    "gameTime": "8:30 PM ET",
+    "venue": "Frost Bank Center, San Antonio, TX",
+    "finalScore": "Warriors 125, Spurs 120"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 15.0,
+    "estimatedProbability": 66,
+    "impliedProbability": 51.5,
+    "recentPerformance": {
+      "hitRate": "5 of last 7 games over 26.5 points",
+      "seasonAverage": "26.2 PPG",
+      "last5Games": "28.4 PPG (31, 29, 26, 32, 24)",
+      "cushion": "+1.9 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Season Average Above Line",
+        "description": "Wembanyama averaging 26.2 PPG this season, just below but close to 26.5 line. Recent form (28.4 PPG last 5) trended significantly higher."
+      },
+      {
+        "title": "Warriors' Undersized Frontcourt",
+        "description": "Golden State lacks true rim protector. Draymond Green (6'6\") and rotation bigs unable to match Wembanyama's 7'5\" length. Major size mismatch."
+      },
+      {
+        "title": "Home Court Dominance",
+        "description": "Wembanyama averaging 29.1 PPG at home vs 23.8 PPG on road. Frost Bank Center environment brings out elite scoring."
+      },
+      {
+        "title": "High-Pace Warriors Game",
+        "description": "Warriors play at 4th-fastest pace in NBA. More possessions = more scoring opportunities for Wembanyama in transition and halfcourt."
+      },
+      {
+        "title": "Warriors Poor Interior Defense",
+        "description": "Golden State allowing 54.2 points in the paint per game (28th in NBA). Wembanyama feasts on weak interior defense."
+      }
+    ],
+    "riskFactors": [
+      "Warriors could double-team aggressively, forcing Wembanyama to facilitate",
+      "Blowout game script could limit Wembanyama's minutes",
+      "Foul trouble could reduce playing time",
+      "Spurs spreading ball around with Castle's playmaking"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 31,
+      "rebounds": 15,
+      "assists": 10,
+      "shooting": "11-21 FG (52.4%)",
+      "threePointers": "2-6 3PT",
+      "freeThrows": "7-10 FT",
+      "minutes": 36,
+      "blocks": 2,
+      "turnovers": 5
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "points": 10,
+        "description": "Aggressive early, Wembanyama dominated Warriors' small frontcourt with 10 points. Set tone immediately with size advantage."
+      },
+      {
+        "quarter": "Q2",
+        "points": 7,
+        "description": "Added 7 points as Spurs built lead. Facilitated more with Castle, but still scoring efficiently. 17 points at half."
+      },
+      {
+        "quarter": "Q3",
+        "points": 8,
+        "description": "Hit 8 points but Warriors' Curry explosion (22 pts Q3) overshadowed. Cleared OVER 26.5 early in Q4 with 25+ through 3 quarters."
+      },
+      {
+        "quarter": "Q4",
+        "points": 6,
+        "description": "Added 6 points to finish with 31. Completed historic triple-double (31-15-10), easily clearing OVER ✓."
+      }
+    ],
+    "whenCleared": "Early Q4 at approximately 10:30 remaining (27th point), finished with 31",
+    "gamePace": "Fast-paced, high-scoring game (245 combined points). Warriors' tempo created extra possessions, benefiting Wembanyama's scoring opportunities.",
+    "teamOffense": "Wembanyama led Spurs with 31 points on efficient 11-21 shooting. Warriors' lack of rim protection exactly as predicted—he scored at will inside."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Perfect Matchup Exploitation",
+        "description": "Warriors' undersized frontcourt had zero answer for Wembanyama's 7'5\" frame. He scored 31 on 52.4% shooting, dominating inside exactly as projected."
+      },
+      {
+        "title": "Home Court Scoring Boost",
+        "description": "Wembanyama's home scoring average (29.1 PPG) proved predictive. Frost Bank Center environment brought out elite offensive performance."
+      },
+      {
+        "title": "High-Pace Game Script",
+        "description": "Warriors' fast pace (245 combined points) created extra possessions. More opportunities = more points for Wembanyama."
+      },
+      {
+        "title": "Cleared Early, No Sweat",
+        "description": "Hit 27th point early Q4, cleared OVER with 10+ minutes left. No garbage-time stress, dominant throughout all 36 minutes."
+      },
+      {
+        "title": "Historic Triple-Double Performance",
+        "description": "31 points, 15 rebounds, 10 assists—4th career triple-double. First Spurs teammates (with Castle) to ever record triple-doubles in same game. Elite all-around game."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+4.8 points (+18.3% above 26.2 PPG average)",
+      "vsRecentForm": "+2.6 points (+9.2% above 28.4 PPG last 5 games)",
+      "vsPropLine": "+4.5 points (OVER by 4.5)",
+      "percentileRanking": "78th percentile scoring performance (elite offensive game)"
+    },
+    "wasNormalVariance": "This was expected outcome based on matchup. Warriors' undersized frontcourt (Draymond 6'6\") vs Wembanyama's 7'5\" length = textbook size mismatch. Home court (29.1 PPG avg) + high pace (245 points) + weak interior D (54.2 paint PPG allowed) = perfect storm for OVER. Model correctly identified edge."
+  },
+  "closingLineValue": {
+    "ourOdds": -106,
+    "closingOdds": -115,
+    "clvPercentage": 1.8,
+    "verdict": "Good CLV (+9 cents implied). Line moved toward OVER as sharp money recognized matchup advantage. Early bet captured market inefficiency before adjustment."
+  },
+  "keyTakeaways": [
+    "Matchup-based edges are highly profitable: Size mismatch (7'5\" vs 6'6\") created undeniable advantage that played out perfectly",
+    "Home/road splits matter for young stars: Wembanyama's 29.1 home PPG vs 23.8 road PPG was critical context for projection",
+    "Pace creates opportunity: Warriors' fast tempo (4th in NBA) generated extra possessions, boosting Wembanyama's scoring chances",
+    "Early clearing reduces stress: Hit OVER early Q4, allowing us to relax final 10+ minutes without sweating garbage time",
+    "Triple-double shows all-around dominance: 31-15-10 line showed complete game, not just empty scoring. Elite two-way performance",
+    "This is textbook process: Identified matchup edge, got good price, variance worked in our favor. Perfect execution"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Excellent win. Perfect matchup exploitation—Warriors had no defensive answer for Wembanyama's size. Home court (29.1 PPG), high pace, and weak interior defense all aligned. Hit 31 points with historic triple-double. Process and results both elite. Grade: A"
+}

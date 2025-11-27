@@ -36,30 +36,32 @@ export default function QuantitativeMetrics() {
     sharpeRatio,
     sharpeRatioNote,
     maxDrawdown,
+    maxDrawdownPercent,
     avgWin,
     avgLoss,
-    avgProfitPerBet,
     largestWin,
     largestLoss,
     profitFactor,
-    unitEfficiency,
     closingLineValue,
     closingLineValueNote,
-    kellyUtilization,
+    clvBetsTracked,
+    maxWinStreak,
+    maxLossStreak,
   } = metricsData as {
     sharpeRatio: number | null;
     sharpeRatioNote?: string;
     maxDrawdown: number;
+    maxDrawdownPercent?: number;
     avgWin?: number;
     avgLoss?: number;
-    avgProfitPerBet?: number;
     largestWin?: number;
     largestLoss?: number;
     profitFactor?: number;
-    unitEfficiency?: number;
-    closingLineValue?: number;
+    closingLineValue?: number | null;
     closingLineValueNote?: string;
-    kellyUtilization?: number;
+    clvBetsTracked?: number;
+    maxWinStreak?: number;
+    maxLossStreak?: number;
   };
 
   return (
@@ -81,25 +83,30 @@ export default function QuantitativeMetrics() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 mb-10">
             <div>
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
-                Sharpe Ratio
+                Max Drawdown
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                {sharpeRatio ? sharpeRatio.toFixed(2) : (sharpeRatioNote || 'N/A')}
+              <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
+                {formatCurrency(maxDrawdown)}
               </div>
-              {!sharpeRatio && sharpeRatioNote && (
+              {maxDrawdownPercent !== undefined && (
                 <div className="text-xs text-secondary-light mt-1">
-                  {sharpeRatioNote}
+                  {maxDrawdownPercent.toFixed(1)}% from peak
                 </div>
               )}
             </div>
 
             <div>
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
-                Max Drawdown
+                Sharpe Ratio
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
-                {formatCurrency(maxDrawdown)}
+              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
+                {sharpeRatio !== null ? sharpeRatio.toFixed(2) : 'N/A'}
               </div>
+              {sharpeRatioNote && (
+                <div className="text-xs text-secondary-light mt-1">
+                  {sharpeRatio === null ? sharpeRatioNote : `${sharpeRatioNote}`}
+                </div>
+              )}
             </div>
 
             <div>
@@ -124,17 +131,8 @@ export default function QuantitativeMetrics() {
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Profit Factor
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
+              <div className={`text-2xl sm:text-3xl data-value mono-number ${profitFactor !== undefined && profitFactor >= 1 ? 'text-success' : 'text-loss'}`}>
                 {profitFactor !== undefined ? profitFactor.toFixed(2) : 'N/A'}
-              </div>
-            </div>
-
-            <div>
-              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
-                Unit Efficiency
-              </div>
-              <div className={`text-2xl sm:text-3xl data-value mono-number ${unitEfficiency !== undefined && unitEfficiency >= 0 ? 'text-success' : 'text-loss'}`}>
-                {unitEfficiency !== undefined ? `${unitEfficiency.toFixed(2)}%` : 'N/A'}
               </div>
             </div>
 
@@ -143,21 +141,32 @@ export default function QuantitativeMetrics() {
                 Closing Line Value
               </div>
               <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                {closingLineValue !== undefined ? `+${closingLineValue.toFixed(2)}¢` : 'N/A'}
+                {closingLineValue !== null && closingLineValue !== undefined
+                  ? `+${closingLineValue.toFixed(1)}¢`
+                  : 'Tracking'}
               </div>
-              {closingLineValueNote && (
-                <div className="text-xs text-secondary-light mt-1">
-                  {closingLineValueNote}
-                </div>
-              )}
+              <div className="text-xs text-secondary-light mt-1">
+                {closingLineValue !== null && closingLineValue !== undefined
+                  ? `${clvBetsTracked || 0} bets tracked`
+                  : closingLineValueNote || 'Started Nov 27'}
+              </div>
             </div>
 
             <div>
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
-                Kelly Utilization
+                Best Streak
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                {kellyUtilization !== undefined ? `${kellyUtilization}%` : 'N/A'}
+              <div className="text-2xl sm:text-3xl data-value text-success mono-number">
+                {maxWinStreak !== undefined ? `${maxWinStreak}W` : 'N/A'}
+              </div>
+            </div>
+
+            <div>
+              <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
+                Worst Streak
+              </div>
+              <div className="text-2xl sm:text-3xl data-value text-loss mono-number">
+                {maxLossStreak !== undefined ? `${maxLossStreak}L` : 'N/A'}
               </div>
             </div>
           </div>

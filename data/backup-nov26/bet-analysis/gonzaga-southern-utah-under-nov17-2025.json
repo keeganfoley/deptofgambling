@@ -1,0 +1,190 @@
+{
+  "slug": "gonzaga-southern-utah-under-nov17-2025",
+  "matchup": "Gonzaga vs Southern Utah",
+  "line": "Under 160.5",
+  "odds": -110,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Gonzaga 122, Southern Utah 50 (Total: 172 points)",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Southern Utah Thunderbirds @ Gonzaga Bulldogs",
+    "date": "November 17, 2025",
+    "gameTime": "9:00 PM ET",
+    "venue": "McCarthey Athletic Center, Spokane, WA",
+    "finalScore": "Gonzaga 122, Southern Utah 50"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 36,
+    "estimatedProbability": 68,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Gonzaga's last 4 games ALL went under (100% trend)",
+      "seasonAverage": "Expert predictions averaged 157 total points (94-63, 95-60, 93-61)",
+      "recentForm": "Line set at 159.5, moved to 160.5 - 2.5 point edge in our favor vs experts",
+      "cushion": "Southern Utah 1-3 record, defensive-minded road team expected to slow pace"
+    },
+    "keyFactors": [
+      {
+        "title": "Gonzaga's Under Trend - 100% Last 4 Games",
+        "description": "Gonzaga's last four games ALL went under the total. 4-for-4 under streak suggested systematic scoring pattern: strong defense holding opponents down, deliberate offensive pace. Trend + math alignment created high-confidence under thesis. Historical data showed 100% hit rate continuing for 5th game in this spot."
+      },
+      {
+        "title": "Expert Consensus Under 160.5",
+        "description": "Three major projection models averaged 157 total points: Model A predicted 94-63 (157), Model B predicted 95-60 (155), Model C predicted 93-61 (154). Average of 155.3 points gave us 5.2-point edge vs 160.5 line. Strong mathematical support for under. Experts' consensus rarely wrong by 10+ points."
+      },
+      {
+        "title": "Southern Utah's Defensive Identity",
+        "description": "Southern Utah entered 1-3 but played defensive-minded basketball. Road teams often slow pace to limit possessions vs superior opponents. Expected SUU to pack paint, play physical, milk clock. Their game plan would be to shorten game and keep score low. Sub-60 point target for SUU seemed realistic."
+      },
+      {
+        "title": "Gonzaga's Measured Offensive Approach",
+        "description": "Gonzaga ranks 50th in adjusted tempo (not elite pace). Mark Few prefers halfcourt execution over run-and-gun. Against overmatched opponent like SUU, expected Zags to control tempo, work shot clock, limit possessions. No need to push pace when you're 30-point favorite."
+      },
+      {
+        "title": "Line Movement Toward Under",
+        "description": "Line opened 159.5 and moved to 160.5, suggesting sharp money hitting under. Public typically hammers over in blowouts (expecting scoring fest), but line moving toward under signaled informed money agreed with our thesis. Market validation of under position."
+      }
+    ],
+    "riskFactors": [
+      "Massive mismatch could create transition opportunities and inflated scoring",
+      "Gonzaga could press full-court with big lead, forcing turnovers into easy baskets",
+      "Garbage time scoring with deep benches playing final 10 minutes could pad total",
+      "Gonzaga shoots 38% from three - if they get hot (15+ threes), total explodes",
+      "Southern Utah's turnovers could lead to Gonzaga fast-break points"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "gonzagaFGPercentage": "57.1% (40-70)",
+      "southernUtahFGPercentage": "25.7% (18-70)",
+      "gonzagaRebounds": 43,
+      "southernUtahRebounds": 31,
+      "gonzagaAssists": 28,
+      "southernUtahAssists": 11,
+      "gonzagaTurnovers": 10,
+      "southernUtahTurnovers": 23,
+      "gonzagaThreePointPercentage": "37.5% (9-24)",
+      "southernUtahThreePointPercentage": "20.0% (4-20)",
+      "gonzagaPaintPoints": 68,
+      "southernUtahPaintPoints": 18,
+      "gonzagaBenchPoints": 56,
+      "southernUtahBenchPoints": 12
+    },
+    "keyPlayers": {
+      "bradenHuff": {
+        "team": "Gonzaga",
+        "points": 22,
+        "rebounds": 7,
+        "shooting": "11-13 FG (84.6%), 0-1 3PT",
+        "minutes": 22,
+        "note": "Dominant inside - 22 points on 84.6% shooting, completely controlled paint"
+      },
+      "davisFogle": {
+        "team": "Gonzaga",
+        "points": 19,
+        "rebounds": 4,
+        "shooting": "7-10 FG (70%), 3-5 3PT",
+        "minutes": 18,
+        "note": "Career-high 19 points off bench - sparked offensive explosion"
+      },
+      "marioSaintSupery": {
+        "team": "Gonzaga",
+        "points": 16,
+        "rebounds": 3,
+        "assists": 7,
+        "steals": 6,
+        "note": "First career start - 16 pts, 7 ast, 6 stl in breakout performance"
+      },
+      "grahamIke": {
+        "team": "Gonzaga",
+        "points": 13,
+        "rebounds": 6,
+        "shooting": "5-7 FG",
+        "note": "13 points on efficient 5-7 shooting added to scoring fest"
+      },
+      "adamMiller": {
+        "team": "Gonzaga",
+        "points": 13,
+        "shooting": "5-8 FG, 3-5 3PT",
+        "note": "13 points with three triples - perimeter scoring clicked"
+      },
+      "elijahDuval": {
+        "team": "Southern Utah",
+        "points": 10,
+        "rebounds": 5,
+        "shooting": "4-12 FG",
+        "note": "Only SUU player in double figures - team offense completely collapsed"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "First Half",
+        "score": "Gonzaga 66, Southern Utah 24",
+        "description": "COMPLETE ANNIHILATION. Gonzaga shot 57.5% (23-40 FG) while SUU managed only 25% (9-36). Turnovers killed SUU: 13 in first half led to 24 Gonzaga points. Huff had 16 points at half, Fogle added 13. SUU scored only 24 points TOTAL in 20 minutes - offense completely overwhelmed. Halftime total: 90 points (on pace for 180). Under dead at halftime."
+      },
+      {
+        "quarter": "Second Half",
+        "score": "Gonzaga 56, Southern Utah 26",
+        "description": "Blowout continued despite Gonzaga emptying bench. Even reserves dominated. Bench scored 28 second-half points. SUU added only 26 second-half points (50 total game). Gonzaga's 122 points set second-highest total in McCarthey Athletic Center history. Final: 122-50 (172 total points). Missed under by 11.5 points."
+      }
+    ],
+    "whenCleared": "Under NEVER had a chance. Total reached 90 points at halftime (30 over pace for 160.5). By end of Q3, total was 133 points with full quarter remaining. Final total of 172 obliterated 160.5 line by 11.5 points. This was dead by halftime.",
+    "turningPoint": "The turnover avalanche in first 10 minutes killed under. Southern Utah committed 23 turnovers (vs only 18 made field goals entire game). Each turnover led to Gonzaga transition bucket or easy basket. When SUU turned it over 7 times in first 8 minutes, pace accelerated dramatically. Gonzaga scored 24 points off turnovers - these weren't in offensive flow, they were extra possessions inflating total.",
+    "gamePace": "Catastrophic pace acceleration due to turnovers. Instead of halfcourt grind expected, game became transition showcase. Gonzaga averaged 1.74 points per possession (elite). 70 possessions per team (way above expected 65). Turnover-created possessions added 10-15 extra scoring chances that weren't modeled.",
+    "teamOffense": "Gonzaga's 122 points shattered expectations. 57.1% FG, 37.5% from three, 68 paint points, 28 assists on 40 field goals. Complete offensive explosion. Southern Utah's 50 points (worse than expected 60) didn't matter - Gonzaga's 122 alone exceeded projected team total of 94-95."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Historic Blowout - Record-Setting Margin",
+        "description": "72-point margin was Gonzaga's largest vs Division I opponent in program history (previous record: 61 vs Denver in 2018). Also worst loss in Southern Utah history. This wasn't normal blowout - it was historic destruction. No model accounts for 70+ point margins. Pure outlier event."
+      },
+      {
+        "title": "Turnover Avalanche Created Extra Possessions",
+        "description": "Southern Utah's 23 turnovers (vs only 18 made FGs) fundamentally broke game script. Each turnover created fast-break opportunity for Gonzaga. 24 points off turnovers added possessions that weren't in pace calculations. This inflated total by 12-15 points beyond normal flow."
+      },
+      {
+        "title": "Gonzaga Shot 57% - Elite Efficiency",
+        "description": "Gonzaga's 57.1% FG was elite-level efficiency. Expected 45-48% based on historical averages. Every made shot at 57% rate adds 3-4 points to expected total. Combination of hot shooting + extra possessions from turnovers = scoring explosion."
+      },
+      {
+        "title": "Mismatch Worse Than Anticipated",
+        "description": "Expected Southern Utah to score 55-60 points (they scored 50, close to projection). Did NOT expect Gonzaga to score 122. The talent disparity was Grand Canyon-level. SUU is mid-major playing elite program - resulted in practice-squad level performance. Gonzaga treated this like exhibition."
+      },
+      {
+        "title": "Bench Scoring Inflated Total",
+        "description": "Gonzaga's bench scored 56 points (vs SUU's 12). Deep rotation with fresh legs in garbage time kept scoring high. Expected starters to sit early and scoring to stagnate. Instead, reserves maintained intensity, continuing to pour in points. Bench differential of +44 added unexpected total inflation."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Gonzaga's 122 points was season-high and 2nd-most in McCarthey Athletic Center history. Their 57.1% FG ranked 98th percentile. SUU's 50 points worst offensive output of season.",
+      "vsRecentForm": "Gonzaga's last 4 games went under (74, 88, 79, 85 points scored). This game's 122 points was 34-point outlier from recent trend. Complete deviation from established pattern.",
+      "vsPropLine": "Total of 172 exceeded 160.5 by 11.5 points. Reached 90 at halftime (pace for 180 final). Gonzaga alone scored 122 - more than entire projected total for both teams.",
+      "percentileRanking": "72-point margin ranked 100th percentile for Gonzaga wins (largest vs D-I ever). SUU's 23 turnovers ranked 1st percentile (bottom 1% worst in NCAAB this season). 172 total points ranked 95th percentile for Gonzaga home games."
+    },
+    "wasNormalVariance": "No. This was process failure, not bad luck. Fundamental error: underestimated how turnovers inflate totals in mismatches. The 23 SUU turnovers created 10-15 extra Gonzaga possessions not modeled in pace projections. These weren't offensive rebounds (normal variance) - they were unforced errors creating transition baskets. Additionally, failed to account for mismatch severity. Elite program vs mid-major in non-competitive game creates scoring explosion as favorites dominate. The 'under trend' in Gonzaga's last 4 games was against competitive opponents where game flow mattered. Against overmatched SUU, no flow existed - just domination. Should have recognized mismatch severity and faded under."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Slight positive CLV but irrelevant given outcome. Line opened 159.5 and moved to 160.5 (-110 to -115) as under money hit. We got -110 before it moved to -115, saving 5 cents. However, getting slightly better number on losing bet that missed by 11.5 points provides no consolation. The move toward under suggests sharp money also missed this explosive game."
+  },
+  "keyTakeaways": [
+    "Historic 72-point margin (Gonzaga's largest vs D-I ever, SUU's worst loss ever) was unmodelable outlier - no system predicts 70+ blowouts",
+    "Southern Utah's 23 turnovers (vs only 18 made FGs) created 10-15 extra Gonzaga possessions not in pace model - turnover inflation killed under",
+    "Gonzaga's 122 points alone exceeded projected team total of 94-95 - complete offensive explosion beyond any reasonable expectation",
+    "57.1% FG shooting (vs expected 45-48%) added 12-15 points to total - elite efficiency compounded turnover possessions",
+    "Bench scoring differential (+44 for Gonzaga, 56-12) kept scoring high in garbage time - reserves maintained intensity unlike expected",
+    "Last 4 Gonzaga unders were vs competitive opponents - failed to recognize that mismatches create different dynamics where favorites explode",
+    "Expert projections (155-157 total) were equally wrong - entire market missed severity of mismatch and turnover impact",
+    "Reached 90 points at halftime (pace for 180) - under was dead by intermission, no second-half comeback possible",
+    "For quantitative operations: avoid under bets in severe mismatches (20+ point spreads) where turnover-created possessions inflate totals unpredictably",
+    "Trend-based betting (4-game under streak) failed when game conditions changed (competitive → blowout) - trends don't apply across different game scripts"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Process failure. While expert projections (155-157 total) and Gonzaga's 4-game under streak provided false confidence, fundamental error was ignoring mismatch severity. Elite program (Gonzaga, #13 ranked) vs mid-major (Southern Utah, 1-3) in non-competitive home game creates conditions for scoring explosion via turnovers and pace acceleration. The 23 SUU turnovers (creating 24 Gonzaga transition points) added 10-15 possessions beyond modeled pace. Combined with Gonzaga's 57.1% shooting efficiency, total exploded to 172 (11.5 over 160.5 line). Historic 72-point margin wasn't predictable, but mismatch dynamics creating high-scoring environment should have been. Trends from competitive games don't transfer to blowout contexts. Would NOT bet under in severe mismatch spots (20+ spreads) again - favor over or avoid entirely. This represents failure to account for game script differences between competitive and non-competitive matchups."
+}

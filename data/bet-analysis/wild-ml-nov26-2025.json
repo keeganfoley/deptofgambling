@@ -1,0 +1,129 @@
+{
+  "slug": "wild-ml-nov26-2025",
+  "team": "Minnesota Wild",
+  "line": "MINNESOTA WILD ML",
+  "odds": -130,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won 4-2",
+  "profit": 115.38,
+  "gameDetails": {
+    "matchup": "Calgary Flames vs Minnesota Wild",
+    "date": "November 26, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Xcel Energy Center, St. Paul, MN",
+    "finalScore": "Wild 4, Flames 2"
+  },
+  "preGameAnalysis": {
+    "edge": 7,
+    "expectedValue": 13,
+    "estimatedProbability": 62,
+    "impliedProbability": 56.52,
+    "recentPerformance": {
+      "hitRate": "Wild strong at home",
+      "seasonAverage": "Solid defensive metrics",
+      "last5Games": "Consistent play on home ice",
+      "cushion": "Goaltending providing steady foundation"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Ice Advantage",
+        "description": "Wild have been excellent at Xcel Energy Center. The crowd provides energy and the team feeds off it."
+      },
+      {
+        "title": "Flames Road Struggles",
+        "description": "Calgary has been inconsistent away from home. Young team still finding consistency on the road."
+      },
+      {
+        "title": "Goaltending Edge",
+        "description": "Minnesota's goaltending has been a strength. Providing solid foundation for the defense-first approach."
+      },
+      {
+        "title": "Value at -130",
+        "description": "Model showed fair price around -120. Getting slight value on a home favorite with strong metrics."
+      }
+    ],
+    "riskFactors": [
+      "NHL moneylines are unpredictable",
+      "Calgary can score in bunches when hot",
+      "Back-to-back scheduling concerns",
+      "Any game can flip on a bad bounce"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "goals": 4,
+      "shots": 31,
+      "powerPlayGoals": 1,
+      "savePercentage": "92%"
+    },
+    "keyPlayers": {
+      "goaltender": {
+        "savePercentage": "92%",
+        "note": "Solid performance between the pipes"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "description": "Wild controlled tempo from the start. Took early lead on power play goal. Established defensive structure.",
+        "score": "Wild led"
+      },
+      {
+        "quarter": "2nd Period",
+        "description": "Minnesota extended advantage. Calgary struggled to generate quality chances. Wild's system suffocating.",
+        "score": "Wild up 2"
+      },
+      {
+        "quarter": "3rd Period",
+        "description": "Calgary pulled within 1 but Wild locked down. Empty net goal sealed the 4-2 final. Professional closeout.",
+        "score": "Wild 4-2 (Final)"
+      }
+    ],
+    "whenCleared": "Wild controlled throughout. Never in serious jeopardy after building early lead.",
+    "gamePace": "Moderate pace. Wild dictated tempo with their defensive structure. Limited Calgary's transition opportunities."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Home Ice Dominance",
+        "description": "Wild controlled the game from puck drop. Home crowd energized the team and they executed their game plan."
+      },
+      {
+        "title": "Power Play Execution",
+        "description": "Converted on the power play while Calgary went 0-for on their opportunities. Special teams difference was crucial."
+      },
+      {
+        "title": "Goaltending Delivered",
+        "description": "92% save percentage was exactly what was needed. Made key saves when Calgary pushed."
+      },
+      {
+        "title": "Third Period Defense",
+        "description": "When Calgary closed to within 1, Wild didn't panic. Played patient, structured hockey and sealed it with empty netter."
+      }
+    ],
+    "statisticalContext": {
+      "shotDifferential": "+3 (31-28)",
+      "specialTeams": "1-0 on power play vs Calgary's 0-for",
+      "savePercentageEdge": "92% vs 87% - goaltending was the difference"
+    },
+    "wasNormalVariance": "Clean, professional win. Wild were the better team and the scoreboard reflected it. No lucky bounces needed - just solid execution of game plan."
+  },
+  "closingLineValue": {
+    "ourOdds": -130,
+    "closingOdds": -135,
+    "clvCents": 5,
+    "clvPercentage": 1.5,
+    "verdict": "Slight positive CLV as line moved toward Wild. Market agreed Minnesota was the right side."
+  },
+  "keyTakeaways": [
+    "Home favorites with strong goaltending are reliable NHL plays",
+    "Wild's defensive structure travels well at home",
+    "Special teams often decide tight NHL games",
+    "Professional teams close out games when they have the lead",
+    "Value existed at -130 and we captured it",
+    "Clean process, clean result"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Solid, professional victory. Wild controlled the game start to finish. Goaltending, home ice, and structure all delivered. This is what a clean NHL ML win looks like."
+}

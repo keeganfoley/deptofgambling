@@ -1,0 +1,138 @@
+{
+  "slug": "illinois-state-nov6-2025",
+  "player": "Illinois State Redbirds",
+  "line": "+1.5 @ Ohio",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "Lost 68-72",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Illinois State @ Ohio",
+    "date": "November 6, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Ohio Convocation Center",
+    "finalScore": "Ohio 72, Illinois State 68"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 27.9,
+    "estimatedProbability": 67,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "Season opener for Illinois State",
+      "seasonAverage": "2024-25: 22-14 record (10-10 MVC)",
+      "last3Games": "Preseason - no recent games",
+      "cushion": "Previous meeting: Won 85-75 (10-point margin)"
+      },
+    "keyFactors": [
+      {
+        "title": "Offensive Efficiency Edge (+3.6 Rating)",
+        "description": "Illinois State Offensive Rating: 114.2 (42nd nationally) vs. Ohio 110.6 (106th) = +3.6 edge. More efficient scoring attack with better shot selection."
+      },
+      {
+        "title": "Strength of Schedule Advantage",
+        "description": "Illinois State: -0.57 SOS vs. Ohio: -4.37 SOS = played better competition. MVC (Missouri Valley Conference) significantly stronger than MAC (Mid-American Conference)."
+      },
+      {
+        "title": "Historical Dominance",
+        "description": "Previous meeting (Nov 12, 2024): Illinois State won 85-75 (10-point margin). Familiarity with opponent and proven ability to win at Ohio."
+      },
+      {
+        "title": "Ohio's Defensive Weakness",
+        "description": "Ohio ranked 304th nationally in points allowed (76.5 PPG in 2024-25). Defensive Rating: 106.0 (216th) vs. Illinois State 108.2 (273rd). Both teams weak defensively but Ohio worse."
+      },
+      {
+        "title": "Net Efficiency Favors Illinois State",
+        "description": "Net efficiency: +1.4 favoring Illinois State. Estimated fair line: Pick'em or Illinois State -0.5. Getting +1.5 represented modest value."
+      }
+    ],
+    "riskFactors": [
+      "Ohio home court advantage worth ~2-3 points",
+      "Ohio picked 1st in MAC preseason poll (expectations high)",
+      "Illinois State season opener (potential rust/chemistry issues)",
+      "Edge only +4-7% (thin margin for 1.5 unit stake)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "illinoisStateFG": "45.0% (27-60)",
+      "illinoisState3PT": "37.5% from three",
+      "illinoisStateTurnovers": "9 turnovers",
+      "illinoisStateRebounds": "29 rebounds",
+      "ohioFG": "43.2%",
+      "ohioTurnovers": "4 turnovers",
+      "ohioRebounds": "17 rebounds (outrebounded by 12)"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Tied 31-31 at halftime. Competitive first half with neither team establishing control. Both teams shot well but turnovers kept score close.",
+        "score": "31-31"
+      },
+      {
+        "quarter": "2nd Half - Early",
+        "description": "Illinois State took first lead at 50-49 with 11:03 remaining. Showed offensive efficiency edge with better shot selection and ball movement.",
+        "score": "ISU 50, Ohio 49"
+      },
+      {
+        "quarter": "2nd Half - Key Run",
+        "description": "Ohio responded with crucial 9-2 run to take 58-52 lead. Never trailed again. Ohio's home court and defensive adjustments shifted momentum permanently.",
+        "score": "Ohio 58, ISU 52"
+      },
+      {
+        "quarter": "2nd Half - Late",
+        "description": "Illinois State cut deficit to 64-61 with 2:44 left (Chase Walker 3-pointer). Showed fight but couldn't complete comeback. Mason Klabo's desperation 3 with 2 seconds made final 72-68.",
+        "score": "Final: Ohio 72, ISU 68"
+      }
+    ],
+    "whenMissed": "Ohio's 9-2 run after Illinois State took 50-49 lead was turning point. Never recovered. Lost by 4 points, missing +1.5 spread by 2.5 points.",
+    "gamePace": "140 total points (well under 160.5 O/U). Competitive pace with both teams executing offensively but defensive stands in crucial moments.",
+    "foulTrouble": "No significant foul trouble for either team. Ohio's 4 turnovers vs. Illinois State's 9 provided extra possessions that proved decisive."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Rebounding Deficit Catastrophic (PRIMARY FACTOR)",
+        "description": "Outrebounded 29-17 (12-rebound gap). Extra possessions for Ohio created scoring opportunities that Illinois State couldn't match. Second-chance points killed comeback attempts."
+      },
+      {
+        "title": "2nd Half Execution Failed",
+        "description": "Ohio outscored ISU 41-37 after tied halftime. Ohio's 9-2 run after ISU took lead (50-49) shifted momentum permanently. Couldn't maintain offensive efficiency in crucial stretch."
+      },
+      {
+        "title": "Turnover Advantage Squandered",
+        "description": "Ohio only 4 TOs vs. ISU's 9, but couldn't capitalize. Extra possessions didn't translate to points. Poor shot selection on bonus possessions."
+      },
+      {
+        "title": "Home Court Advantage Realized",
+        "description": "Ohio's home court at Convocation Center worth ~2-3 points. Crowd energy during 9-2 run provided momentum. Fair line (Ohio -0.5 to ISU +0.5) meant getting +1.5 wasn't enough cushion."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "N/A (season opener for Illinois State)",
+      "vsRecentForm": "Previous meeting: Lost by 4 (was up 10 points last year)",
+      "vsPropLine": "Missed spread by 2.5 points",
+      "percentileRanking": "Competitive game but fell short in execution"
+    },
+    "wasNormalVariance": "Close game that came down to execution. The +1.5 represented slight value given Illinois State's offensive efficiency advantage (+3.6 rating) and historical dominance (10-point win previous year). However, rebounding deficit (12-rebound gap) and Ohio's timely 9-2 run were difference-makers. Not analytical failure - fair line would have been Ohio -0.5 to Illinois State +0.5, so getting +1.5 provided thin cushion that wasn't enough."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 0.98,
+    "verdict": "Minimal CLV (+5 cents). Line moved slightly toward Illinois State as market recognized offensive efficiency edge. However, edge was thin (4-7%) and didn't justify 1.5 unit stake in retrospect."
+  },
+  "keyTakeaways": [
+    "Rebounding differentials in college basketball are highly predictive - 12-rebound gap was catastrophic",
+    "Home court advantage in college basketball worth 2-3 points - must factor into handicap",
+    "Thin edges (4-7%) should warrant smaller stakes (0.5-1.0u, not 1.5u)",
+    "Turnover advantages don't always translate to wins if shot selection poor",
+    "Previous season results provide context but roster changes matter significantly",
+    "Ohio's 9-2 run after ISU took lead was pivotal momentum shift - execution matters in close games",
+    "Stake sizing error: 1.5 units too aggressive for 4-7% edge"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Slight analytical edge existed (offensive efficiency +3.6, historical dominance) but stake sizing was inappropriate. 1.5 units on a 4-7% edge is too aggressive. Should have been 0.5-1.0 unit max. Close game came down to rebounding and key run - not a process failure, but stake sizing needs improvement for thin-edge spots."
+}

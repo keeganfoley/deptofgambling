@@ -1,0 +1,142 @@
+{
+  "slug": "sengun-points-nov12-2025",
+  "player": "Alperen Sengun",
+  "line": "OVER 22.5 points",
+  "odds": -105,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "16 points (missed by 6.5)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Washington Wizards @ Houston Rockets",
+    "date": "November 12, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Toyota Center, Houston, TX",
+    "finalScore": "Rockets 135, Wizards 112"
+  },
+  "preGameAnalysis": {
+    "edge": 11,
+    "expectedValue": 11.0,
+    "estimatedProbability": 62,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "4 of last 6 games over 22.5 points",
+      "seasonAverage": "18.3 PPG",
+      "last5Games": "21.8 PPG (26, 24, 19, 22, 18)",
+      "cushion": "-0.7 points below line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Matchup vs Wizards",
+        "description": "Wizards worst team in NBA at 1-10, allowing 125.3 PPG (dead last). Catastrophically bad defense, especially in paint (56.8 PPG allowed, 30th)."
+      },
+      {
+        "title": "Wizards Missing Interior Defense",
+        "description": "Washington lacking healthy bigs to defend Sengun in post. Expected him to feast inside with physicality and skill advantage."
+      },
+      {
+        "title": "Recent Scoring Uptick",
+        "description": "Sengun averaged 21.8 PPG in last 5 games with 26 and 24-point performances. Trending toward higher usage and aggression."
+      },
+      {
+        "title": "Home Court Comfort",
+        "description": "Sengun shooting 54.2% from field at Toyota Center, more aggressive in home environment. Rockets 7-3 overall suggested good form."
+      },
+      {
+        "title": "Blowout Potential Helps",
+        "description": "Expected Rockets blowout could give Sengun freedom to score in flow without defensive pressure. Garbage time opportunities if needed."
+      }
+    ],
+    "riskFactors": [
+      "Season average (18.3 PPG) well below line suggests 22.5 is aggressive number",
+      "Blowout could limit Sengun's minutes if game out of hand early",
+      "Rockets have multiple scoring options (Durant, Thompson, others) that could reduce Sengun's touches",
+      "Sengun's facilitating role (6-7 APG) might prioritize playmaking over scoring"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 16,
+      "rebounds": 13,
+      "assists": 6,
+      "shooting": "6-12 FG (50.0%)",
+      "minutes": 28,
+      "blocks": 2,
+      "steals": 1
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "points": 6,
+        "description": "Sengun started slow, only 6 points. Rockets jumped out fast with other scorers (Durant, Thompson) leading charge."
+      },
+      {
+        "quarter": "Q2",
+        "points": 6,
+        "description": "Added 6 more for 12 at half. Rockets led 81-54 at halftime—27-point blowout already. Sengun facilitating more than scoring."
+      },
+      {
+        "quarter": "Q3",
+        "points": 4,
+        "description": "Just 4 points in third quarter. Game completely out of hand (100+ Rockets), Sengun coasting and distributing. Only 16 points through 3 quarters."
+      },
+      {
+        "quarter": "Q4",
+        "points": 0,
+        "description": "DNP in garbage time. Rockets ahead by 30+, Sengun sat entire 4th quarter. No chance to hit OVER, finished with 16 points."
+      }
+    ],
+    "whenCleared": "Never came close. Needed 23 points, finished with 16 (missed by 6.5 points)",
+    "gamePace": "Blowout limited Sengun's scoring opportunities. Rockets led 81-54 at halftime, cruised without needing Sengun's offense. Other players carried load.",
+    "teamOffense": "Rockets scored 135 points, but spread around: Durant (23), Thompson (18), Eason/Sheppard (41 combined off bench). Sengun's 16 points got lost in balanced attack."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Blowout Game Script Killed Scoring",
+        "description": "Rockets led 81-54 at halftime (season-high 81 first-half points). Game was over early, Sengun sat entire 4th quarter. Only played 28 minutes total—no chance to accumulate points."
+      },
+      {
+        "title": "Facilitator Role Over Scorer",
+        "description": "Sengun finished with 6 assists, prioritizing playmaking. With game out of hand, he distributed rather than hunting his own shot. Wrong game script for scoring prop."
+      },
+      {
+        "title": "Other Scorers Dominated Touches",
+        "description": "Durant (23), Thompson (18), Eason (18), Sheppard (23 off bench) all scored heavily. Sengun got lost in balanced offensive attack—didn't need his scoring."
+      },
+      {
+        "title": "Season Average Was Red Flag",
+        "description": "Sengun's 18.3 PPG season average was 4.2 points below line. Recent hot stretch (21.8 last 5) was small sample size—reverted to mean with 16 points."
+      },
+      {
+        "title": "Blowout Helped Wrong Players",
+        "description": "Expected blowout to give Sengun freedom to score, but instead bench players (Eason 18, Sheppard 23) got extended minutes and scoring opportunities. Sengun rested."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-2.3 points (-12.6% below 18.3 PPG average)",
+      "vsRecentForm": "-5.8 points (-26.6% below 21.8 PPG last 5 games)",
+      "vsPropLine": "-6.5 points (UNDER by 6.5)",
+      "percentileRanking": "30th percentile scoring performance (below-average offensive game)"
+    },
+    "wasNormalVariance": "This was predictable outcome based on game script, not variance. 81-54 halftime blowout meant Sengun (and all starters) sat Q4. Only 28 minutes played = limited scoring opportunities. Additionally, Sengun's 18.3 season PPG (vs 22.5 line) suggested this was aggressive number. Blowout game script + mean reversion + facilitating role = UNDER was likely."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -112,
+    "clvCents": 7,
+    "clvPercentage": 1.4,
+    "verdict": "Decent CLV (+7 cents). Line moved toward OVER as public money chased Sengun vs weak Wizards. We got better price, but matchup didn't matter due to blowout."
+  },
+  "keyTakeaways": [
+    "Blowouts hurt starters' scoring props: 81-54 halftime lead meant Sengun sat entire Q4 (28 min total). Can't score from bench",
+    "Season average matters more than recent form: 18.3 season PPG was true baseline. Recent 21.8 PPG (last 5) was small sample variance",
+    "Elite matchups don't guarantee production: Wizards' worst defense in NBA didn't matter when Rockets spread scoring around to 5+ players",
+    "Facilitators prioritize assists in blowouts: Sengun's 6 assists showed he distributed rather than hunted scoring. Wrong role for points prop",
+    "Bench players benefit from blowouts: Eason (18) and Sheppard (23) feasted in garbage time. Starters like Sengun rested",
+    "22.5 line too high for 18.3 PPG scorer: Needed 23% scoring increase over season average. Aggressive projection that didn't account for role/variance",
+    "This was process failure: Ignored season average (18.3 PPG) red flag, overweighted recent 5-game sample. Matchup theory didn't overcome statistical reality"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Clear loss. Sengun's 16 points (vs 22.5 line) was predictable based on 18.3 season PPG average and blowout game script. 81-54 halftime meant he sat Q4 with only 28 minutes total. Recent hot stretch (21.8 last 5) was small sample that reverted to mean. Should've respected season average over recent form. Grade: D-"
+}

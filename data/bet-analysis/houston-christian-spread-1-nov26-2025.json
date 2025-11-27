@@ -1,0 +1,126 @@
+{
+  "slug": "houston-christian-spread-1-nov26-2025",
+  "team": "Houston Christian Huskies",
+  "line": "HOUSTON CHRISTIAN +1.5",
+  "odds": -120,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 7 (Covered + Won Outright)",
+  "profit": 125.0,
+  "gameDetails": {
+    "matchup": "Tarleton State Texans vs Houston Christian Huskies",
+    "date": "November 26, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Sharp Gymnasium, Houston, TX",
+    "finalScore": "Houston Christian 72, Tarleton State 65"
+  },
+  "preGameAnalysis": {
+    "edge": 7,
+    "expectedValue": 14,
+    "estimatedProbability": 54,
+    "impliedProbability": 54.55,
+    "recentPerformance": {
+      "hitRate": "Home underdogs covering at high rate",
+      "seasonAverage": "HCU playing well at Sharp Gymnasium",
+      "last5Games": "Strong defensive metrics at home",
+      "cushion": "Getting points as home team is unusual"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Team Listed as Underdog",
+        "description": "Houston Christian is at home but getting points. Model suggested HCU should be laying -2.5, not getting +1.5. That's 4 points of value."
+      },
+      {
+        "title": "Tarleton State Overvalued",
+        "description": "Market overreacting to Tarleton's early season results. Sample size too small to justify making them road favorites."
+      },
+      {
+        "title": "Sharp Money Indicators",
+        "description": "Line moved from +2.5 to +1.5 - professional money on HCU. When sharps back home dogs, pay attention."
+      },
+      {
+        "title": "Model Projection",
+        "description": "Model had HCU winning by 3-4 points. Getting +1.5 when should be -2.5 is significant edge."
+      }
+    ],
+    "riskFactors": [
+      "Small college basketball is volatile",
+      "Tarleton could shoot lights out",
+      "Limited information on both teams",
+      "Early season sample size concerns"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 72,
+      "fieldGoalPct": "45%",
+      "threePtPct": "38%",
+      "rebounds": 36,
+      "assists": 16,
+      "turnovers": 11
+    },
+    "keyPlayers": {
+      "defense": {
+        "turnoversForced": 18,
+        "note": "HCU's defense forced 18 turnovers - game-changing"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Tight game throughout. Houston Christian led by 3 at the break. Defense setting the tone with forced turnovers.",
+        "score": "HCU led by 3"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Huskies went on 12-2 run midway through. Tarleton couldn't find offensive rhythm against HCU defense. Won by 7.",
+        "score": "Houston Christian 72-65 (Final)"
+      }
+    ],
+    "whenCleared": "Not only covered the +1.5 spread but won the game outright by 7 points. Double-victory.",
+    "gamePace": "HCU controlled tempo with defense. 18 forced turnovers disrupted Tarleton's offensive flow."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Won Outright as Underdog",
+        "description": "Not only covered +1.5 but won the game 72-65. The model correctly identified HCU as the better team despite being listed as dogs."
+      },
+      {
+        "title": "Defensive Dominance",
+        "description": "18 forced turnovers was the story. HCU's defense suffocated Tarleton State and created easy scoring opportunities."
+      },
+      {
+        "title": "Sharp Money Validated",
+        "description": "Line movement from +2.5 to +1.5 showed sharps were all over HCU. Following the smart money paid off."
+      },
+      {
+        "title": "Model Projection Was Accurate",
+        "description": "Model had HCU by 3-4 points. They won by 7. Edge was even larger than projected."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+8.5 points (won by 7, had +1.5)",
+      "turnovers": "HCU 11, Tarleton 18 - defense was difference",
+      "homeEdge": "Sharp Gymnasium advantage was real"
+    },
+    "wasNormalVariance": "This was edge realization, not luck. The model correctly identified the mispricing. HCU winning outright by 7 as a +1.5 dog shows the market was significantly wrong on this game."
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -125,
+    "clvCents": 5,
+    "clvPercentage": 1.8,
+    "verdict": "Solid positive CLV. Line moved toward HCU after our bet. Market agreed we had the right side."
+  },
+  "keyTakeaways": [
+    "Home underdogs in college basketball offer exceptional value",
+    "Sharp money support on home dogs is a strong signal",
+    "Model identified HCU as better team despite odds",
+    "Winning outright as underdog is ideal outcome",
+    "18 forced turnovers showed defensive preparation",
+    "Early season mispricings in small conferences are exploitable"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Outstanding result. Model correctly identified HCU as the better team despite being listed as underdogs. Won outright by 7 when just needed +1.5. This is the exact type of mispricing we target in early-season college basketball."
+}

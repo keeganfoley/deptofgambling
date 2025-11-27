@@ -1,0 +1,125 @@
+{
+  "slug": "houston-christian-spread-2-nov26-2025",
+  "team": "Houston Christian Huskies",
+  "line": "HOUSTON CHRISTIAN +1.5",
+  "odds": -120,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Won by 7 (Covered + Won Outright)",
+  "profit": 166.67,
+  "gameDetails": {
+    "matchup": "Tarleton State Texans vs Houston Christian Huskies",
+    "date": "November 26, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Sharp Gymnasium, Houston, TX",
+    "finalScore": "Houston Christian 72, Tarleton State 65"
+  },
+  "preGameAnalysis": {
+    "edge": 7,
+    "expectedValue": 14,
+    "estimatedProbability": 54,
+    "impliedProbability": 54.55,
+    "recentPerformance": {
+      "hitRate": "Sharp Fund plays hitting at premium rate",
+      "seasonAverage": "Following smart money consistently profitable",
+      "last5Games": "Sharp indicators aligned on HCU",
+      "cushion": "All signals pointing same direction"
+    },
+    "keyFactors": [
+      {
+        "title": "Clear Sharp Money Movement",
+        "description": "Line moved from +2.5 to +1.5 against public money. When books move a line despite public action, they're reacting to sharp bets."
+      },
+      {
+        "title": "Multiple Sharp Models Agreed",
+        "description": "Respected models had HCU as small favorite (-2 to -3). Getting +1.5 was a 4-5 point swing of value."
+      },
+      {
+        "title": "Book Liability Concern",
+        "description": "Line movement indicated books were worried about sharp exposure on HCU. They knew something the public didn't."
+      },
+      {
+        "title": "Sharp Fund Elevated Stake",
+        "description": "When all indicators align - line movement, model consensus, sharp action - we increase stake size. This was a 2u play."
+      }
+    ],
+    "riskFactors": [
+      "Heavy juice at -120",
+      "Small conference basketball is unpredictable",
+      "Could be wrong about sharp signals",
+      "Tarleton might just be the better team"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 72,
+      "fieldGoalPct": "45%",
+      "threePtPct": "38%",
+      "rebounds": 36,
+      "assists": 16,
+      "turnovers": 11
+    },
+    "keyPlayers": {
+      "team": {
+        "note": "Collective effort - 18 forced turnovers, balanced scoring"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Tight throughout. Sharp money proved right as HCU held small lead. Defense creating opportunities.",
+        "score": "HCU led by 3"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "12-2 run in the middle of the half broke the game open. Tarleton couldn't adjust to HCU's defensive pressure. Won by 7.",
+        "score": "Houston Christian 72-65 (Final)"
+      }
+    ],
+    "whenCleared": "Won outright by 7. Covered spread easily and proved the smart money right.",
+    "gamePace": "HCU controlled the game with defense. Exactly what the sharp bettors saw coming."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharp Money Was Right",
+        "description": "The line movement told the story before the game started. Sharps knew HCU was the better team and backed them heavily."
+      },
+      {
+        "title": "Elevated Stake Paid Off",
+        "description": "2u on a Sharp Fund play when all indicators aligned. Returned $166.67 profit. Conviction betting works."
+      },
+      {
+        "title": "Model Consensus Validated",
+        "description": "Multiple sharp models had HCU -2 to -3. They won by 7. The edge was even larger than projected."
+      },
+      {
+        "title": "Won Outright as Dog",
+        "description": "Best possible outcome. Not just covering but winning the game outright shows the market was significantly mispriced."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+8.5 points (won by 7, had +1.5)",
+      "sharpSignal": "Line moved from +2.5 to +1.5 - rare for home dog",
+      "stakeJustification": "2u was appropriate given signal strength"
+    },
+    "wasNormalVariance": "This was smart money edge realization. When line movement, model projections, and sharp action all point the same direction on a college basketball dog, the market is wrong. HCU winning by 7 proved it."
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -125,
+    "clvCents": 5,
+    "clvPercentage": 1.8,
+    "verdict": "Strong positive CLV. Got better number before close. Sharp Fund plays consistently capture CLV."
+  },
+  "keyTakeaways": [
+    "When sharp money, line movement, and model projections all align, increase stake size",
+    "Following the smart money in college basketball is consistently profitable",
+    "Line movement against public action is the strongest signal",
+    "Sharp Fund philosophy: trust the professionals",
+    "Won outright by 7 as a +1.5 dog - massive edge realized",
+    "This is why we track professional money movement"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sharp Fund thesis fully validated. Following the smart money paid off handsomely as HCU not only covered but won outright by 7. The 2u stake on a Sharp Fund play reflects high confidence when all indicators align. This is exactly why we track professional money movement."
+}

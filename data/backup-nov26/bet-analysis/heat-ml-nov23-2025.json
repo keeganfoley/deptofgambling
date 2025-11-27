@@ -1,0 +1,119 @@
+{
+  "slug": "heat-ml-nov23-2025",
+  "team": "Miami Heat",
+  "line": "Heat ML",
+  "odds": -118,
+  "stake": 0.5,
+  "result": "win",
+  "finalStat": "Won 127-117",
+  "profit": 42.37,
+  "gameDetails": {
+    "matchup": "Miami Heat at Philadelphia 76ers",
+    "date": "2025-11-23",
+    "gameTime": "1:10 PM ET",
+    "venue": "Wells Fargo Center",
+    "finalScore": "MIA 127, PHI 117"
+  },
+  "preGameAnalysis": {
+    "edge": 4,
+    "expectedValue": 7,
+    "estimatedProbability": 58,
+    "impliedProbability": 54.1,
+    "recentPerformance": {
+      "hitRate": "Heat 7-1 ATS last 8 vs Philly",
+      "seasonAverage": "11-4-1 ATS this season",
+      "last5Games": "6-2 SU/ATS last 8 overall",
+      "cushion": "Embiid and Oubre OUT"
+    },
+    "keyFactors": [
+      {
+        "title": "Embiid OUT",
+        "description": "MVP candidate out with knee injury - massive edge"
+      },
+      {
+        "title": "Oubre OUT",
+        "description": "Key rotation player also sidelined"
+      },
+      {
+        "title": "H2H Dominance",
+        "description": "Heat own this matchup - 7-1 ATS in last 8 meetings"
+      },
+      {
+        "title": "Road Warriors",
+        "description": "Miami plays well on the road this season"
+      }
+    ],
+    "riskFactors": [
+      "76ers still have Maxey",
+      "Line moved from +100 to -118 (value diminished)",
+      "Miami inconsistent at times"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 127,
+      "fieldGoalPct": "51.2%",
+      "threePointPct": "36.4%",
+      "assists": 26,
+      "turnovers": 11
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Heat jumped out to early lead"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Miami maintained control, led at half"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "76ers made a push but Heat held firm"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Heat closed it out professionally"
+      }
+    ],
+    "whenCleared": "Late 4th quarter with 10+ point lead",
+    "gamePace": "High-scoring affair as expected",
+    "turningPoint": "Heat's ability to exploit 76ers' lack of interior presence"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Embiid Absence Exploited",
+        "description": "Heat attacked the paint at will without Embiid protecting rim"
+      },
+      {
+        "title": "Jimmy Butler Game",
+        "description": "Butler had 30 points, led the way"
+      },
+      {
+        "title": "Wire-to-Wire Win",
+        "description": "Controlled game from start to finish"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "127 points - above average output",
+      "vsPropLine": "Won by 10",
+      "percentileRanking": "Top 25% Heat performances"
+    },
+    "wasNormalVariance": "Perfect execution. Injury edge was massive - 76ers simply couldn't compete without Embiid."
+  },
+  "closingLineValue": {
+    "ourOdds": -118,
+    "closingOdds": -125,
+    "clvCents": 7,
+    "clvPercentage": 2.9,
+    "verdict": "Good CLV - got better price than closing line"
+  },
+  "keyTakeaways": [
+    "Injury edges are reliable - Embiid OUT was key",
+    "H2H history matters - Heat dominate this matchup",
+    "Line moved against us but still found value",
+    "First winner of the day"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Clean win. Embiid OUT was the edge. Heat dominated 127-117. Butler with 30. Exactly as expected."
+}

@@ -205,10 +205,10 @@ export default function SportBreakdown() {
               sport={sport.sport}
               record={sport.record}
               roi={sport.roi}
-              netPL={sport.netPL}
+              netPL={sport.pnl}
               unitsWon={sport.unitsWon}
-              gamesAnalyzed={sport.gamesAnalyzed}
-              totalGames={sport.totalGames}
+              gamesAnalyzed={sport.record.total}
+              totalGames={sport.record.total}
               index={index}
             />
           ))}

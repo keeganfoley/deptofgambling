@@ -12,6 +12,14 @@ import metricsData from '@/data/metrics.json';
 import CheckCircle from '@/components/icons/CheckCircle';
 import XCircle from '@/components/icons/XCircle';
 
+// Fund display info
+const fundInfo: Record<string, { label: string; color: string }> = {
+  VectorFund: { label: 'Vector', color: portfolioData.funds.VectorFund.color },
+  SharpFund: { label: 'Sharp', color: portfolioData.funds.SharpFund.color },
+  ContraFund: { label: 'Contra', color: portfolioData.funds.ContraFund.color },
+  CatalystFund: { label: 'Catalyst', color: portfolioData.funds.CatalystFund.color },
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 interface Bet {
@@ -28,6 +36,7 @@ interface Bet {
   profit: number;
   betType: string;
   slug?: string;
+  fund?: string;
 }
 
 interface BetCardProps {
@@ -80,6 +89,7 @@ function BetCard({ bet, index }: BetCardProps) {
 
   const isWin = bet.result === 'win';
   const hasDetailPage = !!bet.slug;
+  const fund = bet.fund ? fundInfo[bet.fund] : null;
 
   const cardContent = (
     <>
@@ -100,6 +110,14 @@ function BetCard({ bet, index }: BetCardProps) {
             </div>
           </div>
         </div>
+        {fund && (
+          <span
+            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
+            style={{ backgroundColor: fund.color }}
+          >
+            {fund.label}
+          </span>
+        )}
       </div>
 
       {/* Bet Details */}
@@ -181,8 +199,10 @@ function BetsContent() {
   const router = useRouter();
   const sportFilter = searchParams?.get('sport') || 'All';
   const typeFilter = searchParams?.get('type') || 'All';
+  const fundFilter = searchParams?.get('fund') || 'All';
   const [currentSportFilter, setCurrentSportFilter] = useState(sportFilter);
   const [currentTypeFilter, setCurrentTypeFilter] = useState(typeFilter);
+  const [currentFundFilter, setCurrentFundFilter] = useState(fundFilter);
   const [showAnalysis, setShowAnalysis] = useState(false);
 
   const sectionRef = useRef<HTMLElement>(null);
@@ -191,15 +211,17 @@ function BetsContent() {
 
   const allBets = betsData as Bet[];
 
-  // Filter bets based on sport and type
+  // Filter bets based on sport, type, and fund
   const filteredBets = allBets.filter(bet => {
     const matchesSport = currentSportFilter === 'All' || bet.sport === currentSportFilter;
     const matchesType = currentTypeFilter === 'All' || bet.betType === currentTypeFilter.toLowerCase();
-    return matchesSport && matchesType;
+    const matchesFund = currentFundFilter === 'All' || bet.fund === currentFundFilter;
+    return matchesSport && matchesType && matchesFund;
   });
 
   const sports = ['All', 'NBA', 'NFL', 'NCAAB', 'NCAAF', 'NHL', 'Soccer'];
   const betTypes = ['All', 'Spreads', 'Props', 'Totals', 'Moneyline'];
+  const funds = ['All', 'VectorFund', 'SharpFund', 'ContraFund', 'CatalystFund'];
 
   // Calculate stats for current filter
   const calculateFilteredStats = () => {
@@ -233,6 +255,10 @@ function BetsContent() {
   useEffect(() => {
     setCurrentTypeFilter(typeFilter);
   }, [typeFilter]);
+
+  useEffect(() => {
+    setCurrentFundFilter(fundFilter);
+  }, [fundFilter]);
 
   useEffect(() => {
     gsap.fromTo(
@@ -338,6 +364,7 @@ function BetsContent() {
                   const params = new URLSearchParams();
                   if (sport !== 'All') params.set('sport', sport);
                   if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
+                  if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
                   const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                   router.replace(url, { scroll: false });
                 }}
@@ -354,7 +381,7 @@ function BetsContent() {
         </div>
 
         {/* Bet Type Filter Buttons */}
-        <div className="mb-12">
+        <div className="mb-6">
           <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Bet Type</div>
           <div className="flex flex-wrap justify-center gap-2">
             {betTypes.map((type) => (
@@ -365,6 +392,7 @@ function BetsContent() {
                   const params = new URLSearchParams();
                   if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
                   if (type !== 'All') params.set('type', type);
+                  if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
                   const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                   router.replace(url, { scroll: false });
                 }}
@@ -377,6 +405,38 @@ function BetsContent() {
                 {type}
               </button>
             ))}
+          </div>
+        </div>
+
+        {/* Fund Filter Buttons */}
+        <div className="mb-12">
+          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Fund</div>
+          <div className="flex flex-wrap justify-center gap-2">
+            {funds.map((fundKey) => {
+              const fund = fundKey === 'All' ? null : fundInfo[fundKey];
+              return (
+                <button
+                  key={fundKey}
+                  onClick={() => {
+                    setCurrentFundFilter(fundKey);
+                    const params = new URLSearchParams();
+                    if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                    if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
+                    if (fundKey !== 'All') params.set('fund', fundKey);
+                    const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
+                    router.replace(url, { scroll: false });
+                  }}
+                  className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
+                    currentFundFilter === fundKey
+                      ? 'text-white'
+                      : 'bg-gray-100 text-primary hover:bg-gray-200'
+                  }`}
+                  style={currentFundFilter === fundKey && fund ? { backgroundColor: fund.color } : currentFundFilter === fundKey ? { backgroundColor: '#1a1a1a' } : undefined}
+                >
+                  {fund ? fund.label : 'All'}
+                </button>
+              );
+            })}
           </div>
         </div>
 

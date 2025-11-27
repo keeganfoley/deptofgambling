@@ -1,0 +1,140 @@
+{
+  "slug": "timberwolves-spread-2-nov26-2025",
+  "team": "Minnesota Timberwolves",
+  "line": "MINNESOTA TIMBERWOLVES +10.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Lost by 8 (Covered)",
+  "profit": 190.48,
+  "gameDetails": {
+    "matchup": "Minnesota Timberwolves vs Oklahoma City Thunder",
+    "date": "November 26, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Paycom Center, Oklahoma City, OK",
+    "finalScore": "Thunder 113, Timberwolves 105"
+  },
+  "preGameAnalysis": {
+    "edge": 9,
+    "expectedValue": 18,
+    "estimatedProbability": 58,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "Revenge games historically outperform spread",
+      "seasonAverage": "Wolves motivated after playoff exit",
+      "last5Games": "Edwards playing with chip on shoulder",
+      "cushion": "Western Conference Finals rematch adds motivation"
+    },
+    "keyFactors": [
+      {
+        "title": "Western Conference Finals Revenge",
+        "description": "This is a rematch of last year's WCF that OKC won 4-1. Wolves have been waiting for this matchup. Massive motivation edge."
+      },
+      {
+        "title": "Anthony Edwards Chip on Shoulder",
+        "description": "Edwards was criticized after playoff exit. He's been playing angry all season looking for validation against elite competition."
+      },
+      {
+        "title": "Double-Digit Spread in Rivalry",
+        "description": "10.5 points is simply too many for a playoff rematch. These games are always closer than the market expects."
+      },
+      {
+        "title": "Catalyst Fund Situational Play",
+        "description": "Classic revenge spot that the market doesn't fully price in. Wolves seeking to prove they can compete with the league's best."
+      }
+    ],
+    "riskFactors": [
+      "OKC won the series 4-1 last year",
+      "Thunder have improved since playoff matchup",
+      "SGA is playing at MVP level",
+      "Home court advantage significant"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 105,
+      "fieldGoalPct": "41%",
+      "threePtPct": "46%",
+      "rebounds": 44,
+      "turnovers": 16
+    },
+    "keyPlayers": {
+      "anthonyEdwards": {
+        "points": 31,
+        "rebounds": 8,
+        "note": "Played with playoff intensity - clearly motivated by the matchup"
+      },
+      "shaiGilgeousAlexander": {
+        "points": 28,
+        "note": "91-game streak of 20+ points continues"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Wolves came out with intensity. You could feel the playoff rematch energy. Edwards aggressive early.",
+        "score": "Competitive"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Back and forth battle. Neither team giving an inch. Felt like a playoff game, not a November contest.",
+        "score": "Thunder led"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Wolves' defense stepped up. Edwards taking over. Game stayed close throughout.",
+        "score": "Single-digit game"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Game was within 5 with 2 minutes left. Late Thunder run padded margin but Wolves covered comfortably.",
+        "score": "Thunder 113-105 (Final)"
+      }
+    ],
+    "whenCleared": "Covered with final score 113-105 (8-point loss, needed +10.5)",
+    "gamePace": "Playoff-like intensity. Both teams competing hard. Felt like a postseason atmosphere."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Revenge Game Thesis Validated",
+        "description": "The WCF rematch factor was real. Wolves played with extra intensity and motivation. Markets don't fully price in these psychological edges."
+      },
+      {
+        "title": "Edwards Rose to the Occasion",
+        "description": "31 points against the team that eliminated him. Playing angry, playing focused, playing with purpose."
+      },
+      {
+        "title": "Competitive Throughout",
+        "description": "Game was within 5 with 2 minutes left. This wasn't a blowout that got backdoored - Wolves legitimately competed."
+      },
+      {
+        "title": "Catalyst Situational Edge Paid Off",
+        "description": "The elevated stake on this Catalyst Fund play reflected high confidence in the revenge narrative. Fully justified."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+2.5 points (lost by 8, had +10.5)",
+      "playoffAtmosphere": "Game intensity matched a postseason contest",
+      "edwardsMotivation": "31 points in revenge spot - exactly what we projected"
+    },
+    "wasNormalVariance": "This was psychological edge realization. The revenge game factor isn't in any model, but it's real. Wolves' intensity and focus in this specific matchup was predictable and profitable."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 1.2,
+    "verdict": "Positive CLV on a situational play. Market moved our way as game approached."
+  },
+  "keyTakeaways": [
+    "Playoff rematch games carry significant motivational factors",
+    "Markets don't fully price in psychological edges",
+    "Teams seeking revenge play harder than their record suggests",
+    "Anthony Edwards is a franchise player who rises in big moments",
+    "Catalyst Fund plays targeting situations can provide consistent edge",
+    "The WCF rematch narrative was worth the elevated stake"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Catalyst thesis fully validated. The revenge game factor was real - Edwards and the Wolves competed hard in a playoff rematch atmosphere. Covered comfortably despite free throw struggles. The situational edge was worth the elevated stake."
+}

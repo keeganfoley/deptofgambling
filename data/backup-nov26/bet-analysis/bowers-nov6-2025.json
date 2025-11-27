@@ -1,0 +1,137 @@
+{
+  "slug": "bowers-nov6-2025",
+  "player": "Brock Bowers",
+  "line": "OVER 64.5 receiving yards",
+  "odds": -115,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "31 yards (1 catch)",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Las Vegas Raiders @ Denver Broncos",
+    "date": "November 6, 2025",
+    "gameTime": "7:25 PM ET",
+    "venue": "Empower Field at Mile High",
+    "finalScore": "Broncos 10, Raiders 7"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 28.3,
+    "estimatedProbability": 62,
+    "impliedProbability": 53.49,
+    "recentPerformance": {
+      "hitRate": "TE-10 in fantasy despite missing 3 games",
+      "seasonAverage": "70.4 YPG (352 yards in 5 games)",
+      "last3Games": "Week 9: 12-127-3 TDs (43.3 fantasy pts)",
+      "cushion": "+5.9 yards above 64.5 line"
+    },
+    "keyFactors": [
+      {
+        "title": "Week 9 Explosion Created Opportunity",
+        "description": "12 catches, 127 yards, 3 TDs vs. Jacksonville (highest single-game TE score in 2025 NFL). First game back fully healthy after knee injury. 34.2% target share (season-high). Massive market overreaction created value."
+      },
+      {
+        "title": "Jakobi Meyers Traded - Target Share Available",
+        "description": "Meyers traded to Jacksonville before Week 10. Meyers' 22.4% target share now available. Bowers expected to absorb majority as clear WR1. Historical production when healthy: 7.3 catches, 80.5 yards per game."
+      },
+      {
+        "title": "Denver TE Defense Average (15th)",
+        "description": "Denver pass defense 6th in NFL (186.8 YPG allowed) but vs. TEs specifically: 15th in NFL (482 yards allowed - average, not elite). Not a lockdown matchup for tight ends."
+      },
+      {
+        "title": "Pat Surtain II OUT",
+        "description": "Missing DPOY Pat Surtain II (pectoral strain). 2024 history vs Bowers: Week 1: 8-97 yards. Week 12 (Surtain shadowing): 4-38 on 10 targets. Surtain's absence opened opportunity."
+      },
+      {
+        "title": "Expected Target Spike",
+        "description": "Expected 8-10 targets (vs. 13 in Week 9). 16.5% season target share expected to increase to 20-25% with Meyers gone. High-volume opportunity in pass-heavy game script."
+      }
+    ],
+    "riskFactors": [
+      "Denver could deploy rotating coverage scheme on Bowers post-explosion",
+      "Raiders offensive line injuries could limit passing game",
+      "Week 9 explosion may have been outlier (recency bias in market)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receivingYards": "31 yards",
+      "receptions": "1 catch",
+      "targets": "3 targets",
+      "catchRate": "33.3% (vs. 77.5% season avg)",
+      "longestReception": "31 yards",
+      "teamPassingYards": "143 yards (Geno Smith)"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Zero targets. Denver deployed rotating coverage with 4-5 defenders shadowing Bowers. Smith under immediate pressure.",
+        "receivingYards": "0"
+      },
+      {
+        "quarter": "Q2",
+        "description": "One 31-yard catch on seam route. Immediate bracket coverage applied on every subsequent route. Smith sacked 3 times in quarter.",
+        "receivingYards": "31",
+        "halftimeTotal": "31 yards at half (UNDER)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "2 targets, zero catches. Bracket coverage on every route after 31-yard catch. Entire receiving corps shut down: Tucker (2-13), Mayer (2-15).",
+        "receivingYards": "0"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Zero additional targets. Smith suffered quad injury. Denver's 6 sacks eliminated timing routes. 143 total passing yards indicated systemic offensive failure.",
+        "receivingYards": "0"
+      }
+    ],
+    "whenMissed": "After 31-yard catch in Q2, Bowers never targeted effectively again. Bracket coverage and offensive line collapse ensured miss by 33.5 yards.",
+    "gamePace": "Low-scoring defensive battle (17 total points). Raiders had only 10 first downs entire game. 188 total offensive yards for Raiders (systemic collapse).",
+    "foulTrouble": "Raiders lost 3 offensive linemen during game (Miller IR, Parham exited, Powers-Johnson exited). Six sacks on Geno Smith eliminated timing for routes to develop."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Defensive Game Plan Adjustment (PRIMARY FACTOR)",
+        "description": "DC Vance Joseph: 'His healthiest and best game was last week. Unfortunately for us.' Rotating coverage scheme: 4-5 defenders (Barron, McMillian, Hufanga, Jones) shadowing Bowers. Bracket coverage on every route after his 31-yard catch in Q2."
+      },
+      {
+        "title": "Offensive Line Disaster",
+        "description": "3 offensive linemen out (Miller IR, Parham exited, Powers-Johnson exited). 6 sacks on Geno Smith: No time for routes to develop. 13 pressured dropbacks forced quick, short passes away from Bowers."
+      },
+      {
+        "title": "Target Volume Collapse",
+        "description": "Only 3 targets vs. 13 in Week 9 (76.9% decrease). Despite Meyers trade, pressure prevented target distribution. Smith's 143 total passing yards indicated systemic offensive failure."
+      },
+      {
+        "title": "Systemic Offensive Failure",
+        "description": "Raiders had only 10 first downs entire game. 188 total offensive yards. Conservative, run-heavy attack when possible. Entire receiving corps shut down: Tucker (2-13), Mayer (2-15)."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-39.4 yards (-56.0% below 70.4 YPG average)",
+      "vsRecentForm": "-96 yards (-75.6% below Week 9 explosion)",
+      "vsPropLine": "-33.5 yards (UNDER by 51.9%)",
+      "percentileRanking": "Bottom 5th percentile of all games"
+    },
+    "wasNormalVariance": "Bad beat rather than analytical failure. Pre-game, the bet showed moderate positive EV based on: (1) Bowers' elite 70.4 YPG average when healthy, (2) Meyers trade creating 22.4% target share availability, (3) Denver's average TE defense (15th), (4) Week 9's 127-yard explosion proving full health. What couldn't be predicted: Denver deploying entire defensive scheme around stopping one player, Raiders losing 3 offensive linemen during game, Denver's 6 sacks eliminating timing routes, 143 total passing yards (systemic collapse). This falls into 'variance' rather than 'analytical error.'"
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -125,
+    "clvCents": 10,
+    "clvPercentage": 1.91,
+    "verdict": "Positive CLV (+10 cents). Line moved toward Over as market recognized Meyers trade impact and Bowers' elite talent. Process was sound even though result was catastrophic bad beat."
+  },
+  "keyTakeaways": [
+    "Defensive game plan adjustments post-explosion games are REAL and exploitable by defenses",
+    "Offensive line injuries during games create catastrophic variance impossible to predict",
+    "Target volume is king - only 3 targets (vs. 8-10 expected) killed all probability",
+    "Systemic offensive failure (143 passing yards) falls outside normal variance range",
+    "Week 9 explosion created market overreaction BUT also defensive focus from opponents",
+    "Bad beat ≠ bad process. 8.5% edge with 62% true probability was solid pre-game value",
+    "Would reduce stake to 1.0 unit (not 1.5u) given moderate 8.5% edge in future similar spots"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Bad beat, not bad process. Pre-game analysis showed moderate positive EV (8.5% edge). However, miss resulted from convergent low-probability events that fell outside predictable variance: targeted defensive bracketing, offensive line injuries, and historic pass rush dominance. The line at 64.5 yards reasonably captured Bowers' talent and opportunity given available information. Stake sizing (1.5u on 8.5% edge) was slightly aggressive - would reduce to 1.0u in similar moderate-edge situations."
+}

@@ -6,10 +6,19 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
 import { formatCurrency, formatPercent, formatOdds, formatDate } from '@/lib/utils';
 import betsData from '@/data/bets.json';
+import portfolioData from '@/data/portfolio.json';
 import CheckCircle from './icons/CheckCircle';
 import XCircle from './icons/XCircle';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Fund display info
+const fundInfo: Record<string, { label: string; color: string }> = {
+  VectorFund: { label: 'Vector', color: portfolioData.funds.VectorFund.color },
+  SharpFund: { label: 'Sharp', color: portfolioData.funds.SharpFund.color },
+  ContraFund: { label: 'Contra', color: portfolioData.funds.ContraFund.color },
+  CatalystFund: { label: 'Catalyst', color: portfolioData.funds.CatalystFund.color },
+};
 
 interface Bet {
   id: number;
@@ -26,6 +35,7 @@ interface Bet {
   betType: string;
   slug?: string;
   analysis?: string;
+  fund?: string;
 }
 
 interface BetCardProps {
@@ -78,6 +88,7 @@ function BetCard({ bet, index }: BetCardProps) {
 
   const isWin = bet.result === 'win';
   const hasDetailPage = !!bet.slug;
+  const fund = bet.fund ? fundInfo[bet.fund] : null;
 
   const cardContent = (
     <>
@@ -98,6 +109,14 @@ function BetCard({ bet, index }: BetCardProps) {
             </div>
           </div>
         </div>
+        {fund && (
+          <span
+            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
+            style={{ backgroundColor: fund.color }}
+          >
+            {fund.label}
+          </span>
+        )}
       </div>
 
       {/* Bet Details */}

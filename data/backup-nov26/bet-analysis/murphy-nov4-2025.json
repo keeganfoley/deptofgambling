@@ -1,0 +1,141 @@
+{
+  "slug": "murphy-nov4-2025",
+  "player": "Trey Murphy III",
+  "line": "OVER 2.5 3-pointers",
+  "odds": -165,
+  "stake": 1.65,
+  "result": "win",
+  "finalStat": "5 threes",
+  "profit": 100.00,
+  "gameDetails": {
+    "matchup": "New Orleans Pelicans vs Orlando Magic",
+    "date": "November 4, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Smoothie King Center",
+    "finalScore": "Pelicans 115, Magic 88"
+  },
+  "preGameAnalysis": {
+    "edge": 22,
+    "expectedValue": 42.1,
+    "estimatedProbability": 84,
+    "impliedProbability": 62.26,
+    "recentPerformance": {
+      "hitRate": "8 of 9 games (88.9%)",
+      "seasonAverage": "3.9 3PM per game",
+      "last5Games": "4.4 3PM per game",
+      "cushion": "+1.9 threes above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite 3PT Shooter on High Volume",
+        "description": "Murphy shooting 43.7% from three on 8.9 attempts per game (leads Pelicans). Top-5 in NBA in three-point attempts. Pure floor-spacing specialist."
+      },
+      {
+        "title": "Pelicans Injury Situation = Expanded Role",
+        "description": "Brandon Ingram OUT (hamstring), Zion Williamson OUT (hamstring), Jose Alvarado OUT (oblique). Murphy is primary perimeter scoring option by default. Usage rate up to 27.1% (from 22.3% career)."
+      },
+      {
+        "title": "Orlando's Corner Three Defense",
+        "description": "Magic ranked 26th in opponent corner 3PT% (41.2%). Murphy takes 47% of his threes from corners. Exploitable matchup weakness."
+      },
+      {
+        "title": "Blowout Potential = Garbage Time",
+        "description": "Pelicans favored by 7.5 points at home. If game gets out of hand, Murphy stays in to maintain spacing and gets clean looks in low-pressure situations."
+      },
+      {
+        "title": "Historical Dominance of This Line",
+        "description": "Murphy has hit 3+ threes in 8 of last 9 games (88.9%). 2.5 is extremely low bar for a player averaging 3.9 3PM. Would need catastrophic game to miss."
+      }
+    ],
+    "riskFactors": [
+      "Heavy juice at -165 requires 62.3% hit rate to break even",
+      "Could sit in 4th quarter if blowout (but likely hits by then)",
+      "Orlando's length on perimeter (Carter Jr., Banchero) could contest shots"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "threePointers": "5-10 from three (50.0%)",
+      "points": 23,
+      "minutes": 31,
+      "shooting": "8-15 FG (53.3%)",
+      "assists": 3,
+      "rebounds": 6
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Murphy hit 2 corner threes in first 6 minutes. Pelicans jumped to 32-18 lead.",
+        "threes": "2"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Hit ONE OVER line with transition three at 8:22 mark (3 total threes). Added another before halftime. Pelicans led 64-41 at half.",
+        "threes": "2",
+        "halftimeTotal": "4 threes at half (OVER ✓✓)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Game became blowout. Murphy hit wing three at 5:13 mark (5th three). Sat rest of quarter with 27-point lead.",
+        "threes": "1"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Did not play in 4th quarter (blowout management). Bet long secured.",
+        "threes": "0 (DNP)"
+      }
+    ],
+    "whenHit": "Hit OVER (3 threes) with 8:22 remaining in 2nd quarter. Bet never in doubt. Added 2 more for massive cushion.",
+    "gamePace": "203 total points (under projection). Blowout slowed pace in 2nd half, but damage was done by halftime.",
+    "defenseAdjustment": "Magic had no answer for Murphy's movement shooting. Consistently late on closeouts from corners."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Blowout Script (PRIMARY FACTOR)",
+        "description": "Pelicans dominated from opening tip. 27-point win meant Murphy played aggressively early, hit OVER by halftime, then preserved health. Exactly as projected."
+      },
+      {
+        "title": "Corner Three Exploitation",
+        "description": "3 of Murphy's 5 threes came from corners (60% of makes). Orlando's defensive weakness was fully exploited. Pre-game edge calculation was spot-on."
+      },
+      {
+        "title": "High Volume Despite Blowout",
+        "description": "10 three-point attempts in 31 minutes. Even with limited 4th quarter time, Murphy got his shots. Volume edge materialized."
+      },
+      {
+        "title": "Injury Situation Boost",
+        "description": "With Ingram and Zion out, Murphy took 15 FGA (team-high). Usage rate was exactly as predicted. No competition for shots."
+      },
+      {
+        "title": "Clean Shooting Form",
+        "description": "50% from three on high volume. Not just hitting OVER, but crushing it (5 threes = 2x the line). When edge is this large, expect positive variance."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+1.1 threes (+28.2% above 3.9 3PM average)",
+      "vsRecentForm": "+0.6 threes (+13.6% above 4.4 3PM last 5 games)",
+      "vsPropLine": "+2.5 threes (OVER by 2.5, exactly double the line)",
+      "percentileRanking": "Top 25th percentile of season games"
+    },
+    "wasNormalVariance": "Expected positive outcome. With 88.9% hit rate over last 9 games and massive usage advantage, this was not variance - this was edge exploitation. 5 threes on 10 attempts is well within expected range for elite shooter. Everything went according to plan."
+  },
+  "closingLineValue": {
+    "ourOdds": -165,
+    "closingOdds": -195,
+    "clvCents": 30,
+    "clvPercentage": 4.88,
+    "verdict": "Strong CLV (+30 cents equivalent). Line moved from -165 to -195 before tipoff. Early action on injury news captured value. Market caught up but we got better price."
+  },
+  "keyTakeaways": [
+    "Injury situations creating usage gaps are EXTREMELY exploitable for role players",
+    "Low lines (2.5) for high-volume shooters (8.9 3PA) = massive edge even with juice",
+    "88.9% hit rate over 9-game sample is statistically significant (not small sample noise)",
+    "Blowout games favor OVERS for specialists who play early then sit (bet secured by halftime)",
+    "Opponent-specific weaknesses (corner 3PT defense) = additional edge layer",
+    "Heavy juice (-165) is acceptable when edge is this pronounced (22% edge vs 12.3% juice)",
+    "Would lay -165 on this exact scenario 100 times without hesitation"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook value bet with multiple edge layers. Process and results in perfect alignment. This is what 'max edge' looks like."
+}

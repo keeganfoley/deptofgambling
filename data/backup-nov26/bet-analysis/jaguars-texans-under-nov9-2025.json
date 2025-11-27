@@ -1,0 +1,126 @@
+{
+  "slug": "jaguars-texans-under-nov9-2025",
+  "player": "Jacksonville Jaguars @ Houston Texans",
+  "line": "UNDER 37.5 total points",
+  "odds": -110,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "65 total points (27.5 points over)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Jacksonville Jaguars @ Houston Texans",
+    "date": "November 9, 2025",
+    "gameTime": "1:00 PM ET",
+    "venue": "NRG Stadium",
+    "finalScore": "Texans 36, Jaguars 29"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 23.0,
+    "estimatedProbability": 61,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "Jags 4 of 9 games under team total, Texans 5 of 9 under",
+      "seasonAverage": "Jaguars 19.8 PPG, Texans 24.3 PPG (44.1 combined)",
+      "last3Games": "Jags 17.3 PPG, Texans 21.7 PPG in last 3 (39.0 combined)",
+      "cushion": "-1.5 points below total (recent defensive trends)"
+    },
+    "keyFactors": [
+      {
+        "title": "Jaguars Offensive Struggles",
+        "description": "Jacksonville ranked 28th in scoring (19.8 PPG) and 26th in total offense. Trevor Lawrence dealing with injuries and inconsistent protection."
+      },
+      {
+        "title": "Division Game Tendencies",
+        "description": "AFC South division games averaged 41.2 total points (well below 45+ league average). Familiarity breeds defensive success."
+      },
+      {
+        "title": "Weather Conditions",
+        "description": "Houston forecast showed potential rain showers and 15 mph winds. Outdoor conditions at NRG could impact passing games."
+      },
+      {
+        "title": "Defensive Trends",
+        "description": "Texans ranked 8th in scoring defense (19.4 PPG allowed). Both teams' last 3 games averaged 39.0 combined points - under the 37.5 line."
+      }
+    ],
+    "riskFactors": [
+      "Desperation factor for struggling Jaguars could open offense up",
+      "CJ Stroud and Nico Collins capable of explosive plays",
+      "Potential shootout if defenses underperform expectations"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "texansPoints": 36,
+      "jaguarsPoints": 29,
+      "totalPoints": 65,
+      "texansYards": 448,
+      "jaguarsYards": 402,
+      "combinedYards": 850,
+      "totalTDs": 8
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Shootout started immediately. Texans 10, Jags 7 (17 points). Both offenses marched downfield easily. Under already in jeopardy."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Scoring explosion continued. Texans 24, Jags 17 at half (41 points total). Already 3.5 points OVER the total with 30 minutes remaining."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Texans 31, Jags 20 (51 points). Defenses couldn't stop anything. Collins and Lawrence trading big plays. Under officially dead."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Final: 36-29 (65 points). Texans completed dramatic comeback but Jags kept scoring. Finished 27.5 points over the total - complete defensive meltdown."
+      }
+    ],
+    "whenMissed": "Over hit in Q2 (41 points at halftime vs 37.5 total)",
+    "gamePace": "Absolute shootout - 850 combined yards, 8 TDs, zero defensive resistance. Everything that could go wrong for under did."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Defensive Meltdown",
+        "description": "Both defenses completely failed. Texans allowed 29 (vs 19.4 PPG average), Jags allowed 36. Combined 850 yards and 8 TDs - no resistance whatsoever."
+      },
+      {
+        "title": "Over Hit by Halftime",
+        "description": "41 points scored in first half alone - 3.5 points over the total with 30 minutes left. Never had a chance after both teams marched effortlessly downfield."
+      },
+      {
+        "title": "Offensive Explosion from Struggling Jaguars",
+        "description": "Jaguars entered averaging 19.8 PPG (28th in NFL) but erupted for 29. Trevor Lawrence posted season-high 318 yards with 3 TDs. Complete outlier performance."
+      },
+      {
+        "title": "Weather Conditions Never Materialized",
+        "description": "Forecast rain and wind didn't impact game. Perfect passing conditions allowed both QBs to air it out freely."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "65 points vs 44.1 combined PPG average (+20.9 points, +47.5%)",
+      "vsRecentForm": "65 points vs 39.0 last 3 games combined (+26.0 points, +66.7%)",
+      "vsPropLine": "+27.5 points above 37.5 total (173% of line)",
+      "percentileRanking": "98th percentile scoring output - complete outlier game"
+    },
+    "wasNormalVariance": "This was 30% variance, 70% analytical error. While defensive meltdowns happen, both teams significantly exceeded season scoring averages in same game. Jaguars' 29 points (vs 19.8 average) and Texans' 36 (vs 24.3 average) represents 47.5% increase over typical output. The under thesis relied on Jaguars' offensive struggles continuing, but they posted season-best performance. Additionally, weather conditions that were supposed to suppress scoring never materialized. This was a clear miss on underestimating offensive potential."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -112,
+    "clvCents": 2,
+    "clvPercentage": 1.8,
+    "verdict": "Minimal CLV - line barely moved. Sharp money and public were split on total."
+  },
+  "keyTakeaways": [
+    "Relying on struggling offense to continue struggling is dangerous - variance works both ways",
+    "65 points (27.5 over) with 41 at halftime shows complete defensive breakdown from both sides",
+    "Weather forecasts are unreliable - projected rain/wind never impacted game",
+    "Division game trends (41.2 PPG average) didn't hold - outliers happen 2% of the time",
+    "Jaguars' season-high 29 points (vs 19.8 PPG avg) was unpredictable but possible"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Clear analytical miss. While division game trends and Jaguars' offensive struggles supported under, the total was too low given both teams' offensive talent. Texans' CJ Stroud + Nico Collins and Jaguars' desperation created perfect storm for scoring. The 37.5 number assumed both defenses would perform to season averages, but variance went wrong direction. Should have recognized 37.5 was trap number given offensive weapons on both sides."
+}

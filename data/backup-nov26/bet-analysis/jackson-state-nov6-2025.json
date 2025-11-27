@@ -1,0 +1,139 @@
+{
+  "slug": "jackson-state-nov6-2025",
+  "player": "Jackson State Tigers",
+  "line": "+38.5 @ #11 Louisville",
+  "odds": -105,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Lost 70-106 (36-pt margin)",
+  "profit": 142.86,
+  "gameDetails": {
+    "matchup": "Jackson State @ #11 Louisville",
+    "date": "November 6, 2025",
+    "gameTime": "9:00 PM ET",
+    "venue": "KFC Yum! Center",
+    "finalScore": "Louisville 106, Jackson State 70"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 29.8,
+    "estimatedProbability": 60,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "0-1 (Lost 113-55 at #17 Illinois, 58-pt margin)",
+      "seasonAverage": "SWAC program (historically 30th-32nd of 32 conferences)",
+      "last3Games": "Season opener - lost by 58 points 3 days prior",
+      "cushion": "KenPom projected 28-point margin (10.5 below spread)"
+    },
+    "keyFactors": [
+      {
+        "title": "Spread Overreaction to Game 1 Performances",
+        "description": "38.5-point spread = overreaction to Louisville's 59-point win (104-45 vs. South Carolina State) and Jackson State's 58-point loss (113-55 at #17 Illinois). Market overweighted single-game results."
+      },
+      {
+        "title": "KenPom Projects Only 28-Point Margin",
+        "description": "KenPom projected Louisville 96, Jackson State 68 (28-point margin). 10.5-point gap between projection and spread line. 254-spot KenPom ranking gap but spread overcompensated."
+      },
+      {
+        "title": "Buy Game Dynamics Favor Underdog",
+        "description": "Power 5 elite vs. SWAC buy games typically 30-40 point margins, NOT 40+. Louisville's goal: Win comfortably, stay healthy. Next opponent: #9 Kentucky in 5 days (rivalry game priority)."
+      },
+      {
+        "title": "Jackson State Offensive Competence",
+        "description": "Three capable guards: Daeshun Ruffin (SWAC Preseason POY), Jayme Mitchell Jr., Dorian McMillian. Capable of 65-75 points with competent shot selection. 40.7% from three in game validated offensive capability."
+      },
+      {
+        "title": "Louisville Pace Control Expected",
+        "description": "Pat Kelsey's substitution patterns: Focus on development over margin. Played 13 players (deep bench reduces offensive efficiency). Once lead hits 30-36, no incentive to run up score."
+      }
+    ],
+    "riskFactors": [
+      "254-spot KenPom gap (efficiency margin differential: +32.86)",
+      "Louisville's 10-0 all-time record vs. SWAC teams",
+      "Pace: Louisville expected 70-75 possessions (high volume could blow out margin)",
+      "J'Vonne Hadley OUT (starting forward, concussion) and Kasean Pryor rusty (first game back from ACL)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "jacksonStateRuffin": "Daeshun Ruffin 22 pts",
+      "jacksonStateMitchell": "Jayme Mitchell Jr. 20 pts",
+      "jacksonStateMcMillian": "Dorian McMillian 18 pts",
+      "jacksonStateFG": "39.7% FG",
+      "jacksonState3PT": "40.7% 3PT (11-27)",
+      "louisvilleFG": "52.2% FG (35-67)",
+      "louisville3PT": "30.3% 3PT"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Louisville 55, Jackson State 35 (20-point lead). Louisville's 19-0 run took 21-6 lead early. Jackson State shot 40.7% from three to stay within striking distance.",
+        "score": "Louisville 55, JSU 35",
+        "halftimeTotal": "On pace for 40-point final margin"
+      },
+      {
+        "quarter": "2nd Half - Early",
+        "description": "Louisville opened 2nd half with 16-4 run (extended lead to 33). Largest lead reached 36 points at 14:21 remaining. Jackson State within cover range.",
+        "score": "Largest lead: 36 points"
+      },
+      {
+        "quarter": "2nd Half - Middle",
+        "description": "Louisville scored 51 in 2nd half but pace slowed. Jackson State scored 35 (even period). Once lead hit 33-36, Louisville eased off.",
+        "score": "2nd half: Louisville 51, JSU 35"
+      },
+      {
+        "quarter": "2nd Half - Late",
+        "description": "Louisville played 13 players (deep bench reduced offensive efficiency). Pat Kelsey focused on development over margin. Jackson State covered +38.5 by 2.5 points.",
+        "score": "Final: Louisville 106, JSU 70 (36-pt margin)"
+      }
+    ],
+    "whenCleared": "Covered +38.5 spread when Louisville's lead maxed at 36 points (exactly 2.5 under spread). Louisville never extended lead beyond 36 in final 14 minutes.",
+    "gamePace": "176 total points (vs. projected 164). Higher scoring than expected (+7.3%) but pace controlled in 2nd half prevented blowout extension.",
+    "foulTrouble": "No significant foul trouble. Louisville turnovers (17) vs. Jackson State (12) kept game closer than talent gap suggested."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Jackson State Offensive Improvement (PRIMARY FACTOR)",
+        "description": "Shot 39.7% FG (vs. 30.6% against Illinois 3 days prior). Shot 40.7% from three (11-27, excellent efficiency). Three players scored 18+ points: Balanced attack kept offense flowing. 70 points exceeded KenPom's 68-point projection."
+      },
+      {
+        "title": "Louisville's Pace Control",
+        "description": "Scored 106 but didn't push tempo aggressively in 2nd half. 2nd half: 51-35 (even period, Louisville eased off). Once lead hit 33-36, no incentive to run up score."
+      },
+      {
+        "title": "Buy Game Context Played Out",
+        "description": "Louisville's goal: Win comfortably, stay healthy. Next opponent: #9 Kentucky in 5 days. Risk of injury pushing score past 40+ not worth reward. Pat Kelsey's substitution patterns: 13 players, focus on development."
+      },
+      {
+        "title": "Injury Impact Helped Cover",
+        "description": "J'Vonne Hadley OUT (starting forward, concussion protocol). Kasean Pryor rusty (first game back from ACL tear, only 6 pts in 16 min). Missing/limited starters reduced blowout potential."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+15 points vs. Illinois game (+27.3%)",
+      "vsRecentForm": "Massive improvement from 55 points to 70 points",
+      "vsPropLine": "Covered by 2.5 points (tight but covered)",
+      "percentileRanking": "Exceeded KenPom projection (+2.9%)"
+    },
+    "wasNormalVariance": "Expected outcome based on spread overreaction. The 38.5-point spread overreacted to both teams' opening games (59-point win vs. 58-point loss). Line failed to account for: (1) Jackson State's regression to offensive competence (30.6% FG to 39.7% FG), (2) Louisville's natural tendency to ease off with 30+ point leads in buy games, (3) Kentucky game 5 days away (health preservation). KenPom projected only 28-point margin, and buy game dynamics typically result in 30-36 point finals rather than 40+."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -110,
+    "clvCents": 5,
+    "clvPercentage": 0.99,
+    "verdict": "Minimal CLV (+5 cents). Line moved slightly toward Jackson State as sharp money recognized spread overreaction. Market efficiency limited CLV opportunity."
+  },
+  "keyTakeaways": [
+    "Buy game dynamics in college basketball: Favorites win comfortably (30-36 pts) but rarely blow out past 40+",
+    "Spread overreactions to single-game results create value - market overweighted blowout results",
+    "KenPom projections (28-point margin) more accurate than market spread (38.5 points)",
+    "Jackson State's three capable guards provided enough offense (70 points) to stay within cover",
+    "Louisville's conservative 2nd half (51-35) prevented blowout extension - next game priority mattered",
+    "Health preservation in buy games is REAL - teams don't risk injury for meaningless points",
+    "Largest lead 36 = exactly 2.5 points under spread (barely covered but process was sound)"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sound process. 38.5-point spread dramatically overreacted to opening game results. KenPom's 28-point projection + buy game dynamics (30-36 typical finals) = strong case for Jackson State +38.5. Edge realized through Louisville's pace control and Jackson State's offensive regression to competence."
+}

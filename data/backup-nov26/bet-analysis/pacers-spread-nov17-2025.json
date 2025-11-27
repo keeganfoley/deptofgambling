@@ -1,0 +1,211 @@
+{
+  "slug": "pacers-spread-nov17-2025",
+  "team": "Indiana Pacers",
+  "line": "+10.5",
+  "odds": -110,
+  "stake": 1.4,
+  "result": "loss",
+  "finalStat": "Pacers 112, Pistons 127 (lost by 15 points)",
+  "profit": -140,
+  "gameDetails": {
+    "matchup": "Indiana Pacers @ Detroit Pistons",
+    "date": "November 17, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Little Caesars Arena, Detroit, MI",
+    "finalScore": "Pacers 112, Pistons 127"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 28,
+    "estimatedProbability": 62,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Hedge bet - not standalone play",
+      "seasonAverage": "Pacers 1-11 record, 0-6 on road, worst team in NBA",
+      "recentForm": "7-game losing streak, averaging 96.8 PPG on road",
+      "cushion": "Hedging Pistons -11 (2.5U) to create middle opportunity between -11 and +10.5"
+    },
+    "keyFactors": [
+      {
+        "title": "HEDGE STRATEGY: Cade Cunningham Ruled Out",
+        "description": "CRITICAL CONTEXT: After placing Pistons -11 bet, Cade Cunningham was officially ruled OUT (3rd straight game with hip contusion). This removed Pistons' best player and primary ball handler. While Pistons still heavily favored (9-game win streak), Cunningham absence created uncertainty. Hedge with Pacers +10.5 creates middle opportunity: if Pistons win by exactly 11, 12, 13, or 14 points, BOTH bets win. Risk management to protect 2.5U Pistons bet."
+      },
+      {
+        "title": "Middle Opportunity Window",
+        "description": "Betting Pacers +10.5 creates 4-point middle window. If Pistons win by: 11 points (push Pistons -11, win Pacers +10.5), 12 points (lose Pistons -11 by 1, win Pacers +10.5), 13 points (lose Pistons -11 by 2, win Pacers +10.5), 14 points (lose Pistons -11 by 3, win Pacers +10.5). Only scenario where both bets lose is Pistons winning by 15+ (too much) or 10 or less (too little)."
+      },
+      {
+        "title": "Pascal Siakam Scoring Potential",
+        "description": "Siakam averaging 24.3 PPG, capable of 30+ explosions. Against Pistons without Cunningham on offense to control pace, Siakam could have big night. If Siakam gets hot (35+ points), Pacers could keep game within 10-12 points even in loss. Veteran presence provides floor for Pacers."
+      },
+      {
+        "title": "Garbage Time Value",
+        "description": "In blowout scenario, Pacers' starters playing vs Pistons' bench in final 5 minutes could tighten margin. Pistons up 18-20 with 3 minutes left often becomes 12-15 final margin. Garbage time frequently benefits big underdogs covering inflated spreads. +10.5 benefits from this dynamic."
+      },
+      {
+        "title": "Pistons' Depth Concerns",
+        "description": "While Pistons deep, losing Cunningham (franchise player), Tobias Harris, Ausar Thompson removes significant scoring. Daniss Jenkins excellent in backup role but not Cunningham. If Pacers make run and Pistons lack go-to scorer, lead could shrink from 18 to 12 quickly."
+      }
+    ],
+    "riskFactors": [
+      "Hedge costs 1.4U with no positive expectation if wrong on both sides",
+      "Pistons' 9-game win streak momentum could override Cunningham absence",
+      "Jalen Duren's return from injury (not known at bet time) could provide unexpected boost",
+      "Pacers quit early if down big - body language issues evident this season",
+      "If Pistons blow out by 20+, lose both Pistons -11 cover AND Pacers +10.5 cover"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "pacersFGPercentage": "44.0% (37-84)",
+      "pistonsFGPercentage": "52.0% (48-92)",
+      "pacersRebounds": 36,
+      "pistonsRebounds": 48,
+      "pacersAssists": 24,
+      "pistonsAssists": 32,
+      "pacersTurnovers": 11,
+      "pistonsTurnovers": 12,
+      "pacersThreePointPercentage": "36.8% (14-38)",
+      "pistonsThreePointPercentage": "42.9% (12-28)",
+      "pacersPaintPoints": 42,
+      "pistonsPaintPoints": 64,
+      "pacersBenchPoints": 18,
+      "pistonsBenchPoints": 44
+    },
+    "keyPlayers": {
+      "pascalSiakam": {
+        "team": "Pacers",
+        "points": 29,
+        "rebounds": 7,
+        "assists": 5,
+        "shooting": "11-20 FG (55%), 3-6 3PT",
+        "note": "Excellent performance but team couldn't support - 29 points on efficient shooting wasted"
+      },
+      "tyreseHaliburton": {
+        "team": "Pacers",
+        "points": 18,
+        "rebounds": 3,
+        "assists": 9,
+        "shooting": "6-15 FG (40%)",
+        "note": "Limited by hamstring injury, couldn't create consistent offense"
+      },
+      "jalenDuren": {
+        "team": "Pistons",
+        "points": 31,
+        "rebounds": 15,
+        "shooting": "12-13 FG (92.3%), 7-11 FT",
+        "note": "HEDGE KILLER: Duren's return from injury produced dominant 31 points - unknown factor at bet time"
+      },
+      "danissJenkins": {
+        "team": "Pistons",
+        "points": 26,
+        "rebounds": 4,
+        "assists": 6,
+        "shooting": "10-18 FG, 4-8 3PT",
+        "note": "Continued excellence in Cunningham absence - 26 points validated Pistons' depth"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Pistons 26, Pacers 27",
+        "description": "Competitive start. Pacers hit four early threes to trade baskets. Siakam scored 9 points in Q1. Hedge looking good early as Pistons only led by 1. Duren had 6 points off bench."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Pistons 36, Pacers 19",
+        "description": "GAME BROKE OPEN. Pistons' 20-4 run to start Q2 extended lead from 1 to 21 points (46-27). Duren scored 8 during that run. Jenkins added 10. Pistons closed half with 16-7 run, leading 62-46 at break (16-point halftime lead). Hedge in serious danger."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Pistons 33, Pacers 28",
+        "description": "Pistons maintained 15-21 point lead throughout Q3. Pacers couldn't make run. Siakam tried (8 Q3 points) but no help. After three: 95-74 Pistons (21-point lead). Hedge essentially dead barring miraculous Q4 comeback."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Pistons 32, Pacers 38",
+        "description": "Garbage time as Pacers outscored Pistons 38-32. Siakam scored 12 in Q4 to reach 29 total. Pacers cut lead to 12-15 range briefly but Pistons always responded. Duren finished with 11 Q4 points. Final: 127-112 (15-point margin). Hedge LOST - needed 10 or less, got 15. Both bets on wrong side of middle."
+      }
+    ],
+    "whenCleared": "Hedge NEVER covered. Pacers needed to lose by 10 or less. They lost by 15. Closest they got was 13-point deficit with 4:32 left in Q4 (114-101), but Pistons immediately extended back to 16-18. Garbage time rally wasn't enough.",
+    "turningPoint": "The 20-4 Pistons run to start Q2 killed hedge. When lead went from 1 to 21 in six minutes, Pacers quit mentally. Jalen Duren's unexpected dominance (31 pts on 12-13 FG) was unknown factor that destroyed hedge thesis. His return from injury wasn't properly accounted for at bet time.",
+    "gamePace": "Pistons controlled tempo, never allowing Pacers transition opportunities. Dominating glass (48-36 rebounds) and paint (64-42 points) wore down Pacers. By Q4, Pacers had no energy to make legitimate run. Garbage time points were cosmetic.",
+    "teamOffense": "Pacers' offense (112 points) was better than season road average (96.8 PPG) thanks to Siakam's 29 and garbage time surge, but defense was atrocious. Allowing 127 points and 52% FG doomed any hope of staying within 10."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Jalen Duren's Unexpected Dominance",
+        "description": "Duren's return from ankle injury produced season-high 31 points on 92.3% shooting (12-13 FG). This was unknown factor at hedge bet time. His dominant paint presence (15 rebounds) gave Pistons interior advantage that overwhelmed Pacers. Without Duren intel, hedge thesis underestimated Pistons' offensive firepower."
+      },
+      {
+        "title": "Pistons' Depth Without Cunningham",
+        "description": "Feared that Cunningham absence would weaken Pistons, but Jenkins (26 pts) and six double-figure scorers proved depth thesis wrong. Pistons didn't need Cunningham to blow out worst team in NBA. Their 9-game win streak momentum + home crowd carried them easily."
+      },
+      {
+        "title": "Pacers Quit Early, Never Competitive",
+        "description": "After 20-4 Q2 run put Pistons up 21, Pacers mentally checked out. No fight, no resistance. Body language was defeated. Siakam's 29 points were empty calories - team never threatened. Garbage time Q4 rally (38 points) was cosmetic, never got within 12."
+      },
+      {
+        "title": "Lost Both Sides of Middle",
+        "description": "Worst-case hedge scenario materialized. Pistons covered -11 (won by 15), so lost Pacers +10.5 hedge. Lost both bets - net loss of 1.4U on hedge while Pistons -11 won 2.5U. Net result: +2.29U instead of potential +3.69U if no hedge. Hedge cost opportunity."
+      },
+      {
+        "title": "Hedge Was Unnecessary",
+        "description": "In hindsight, should have trusted original Pistons -11 thesis. Their 9-game win streak, home court, and Pacers' historic futility (1-11, 0-6 road) outweighed Cunningham absence. Duren's return replaced Cunningham production. Hedge was overthinking injury news - should have let winner ride."
+      }
+    ]
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Jalen Duren's Unexpected Dominance",
+        "description": "Duren's return from ankle injury produced season-high 31 points on 92.3% shooting (12-13 FG). This was unknown factor at hedge bet time. His dominant paint presence (15 rebounds) gave Pistons interior advantage that overwhelmed Pacers. Without Duren intel, hedge thesis underestimated Pistons' offensive firepower."
+      },
+      {
+        "title": "Pistons' Depth Without Cunningham",
+        "description": "Feared that Cunningham absence would weaken Pistons, but Jenkins (26 pts) and six double-figure scorers proved depth thesis wrong. Pistons didn't need Cunningham to blow out worst team in NBA. Their 9-game win streak momentum + home crowd carried them easily."
+      },
+      {
+        "title": "Pacers Quit Early, Never Competitive",
+        "description": "After 20-4 Q2 run put Pistons up 21, Pacers mentally checked out. No fight, no resistance. Body language was defeated. Siakam's 29 points were empty calories - team never threatened. Garbage time Q4 rally (38 points) was cosmetic, never got within 12."
+      },
+      {
+        "title": "Lost Both Sides of Middle",
+        "description": "Worst-case hedge scenario materialized. Pistons covered -11 (won by 15), so lost Pacers +10.5 hedge. Lost both bets - net loss of 1.4U on hedge while Pistons -11 won 2.5U. Net result: +2.29U instead of potential +3.69U if no hedge. Hedge cost opportunity."
+      },
+      {
+        "title": "Hedge Was Unnecessary",
+        "description": "In hindsight, should have trusted original Pistons -11 thesis. Their 9-game win streak, home court, and Pacers' historic futility (1-11, 0-6 road) outweighed Cunningham absence. Duren's return replaced Cunningham production. Hedge was overthinking injury news - should have let winner ride."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Pacers' 112 points exceeded road average (96.8 PPG) but still lost by 15. Defense allowing 127 points (52% FG) was season-worst. Siakam's 29 points above his 24.3 PPG average but wasted effort.",
+      "vsRecentForm": "Pacers' 8th straight loss, now 1-12 on season. 0-7 on road with average margin of defeat -14.8 points. This loss fit the pattern perfectly.",
+      "vsPropLine": "Needed to lose by 10 or less to cover +10.5. Lost by 15, missing by 4.5 points. Got within 13 with 4:32 left (closest approach) but never seriously threatened.",
+      "percentileRanking": "Siakam's 29 points (55% FG) ranked 85th percentile for Pacers performances this season. Team's 127 points allowed ranked 5th percentile (bottom 5% defensively)."
+    },
+    "wasNormalVariance": "No. This was process error, not variance. Hedging Pistons -11 after Cunningham news was reactionary overthinking. Should have accounted for: (1) Duren's return from injury (huge unknown), (2) Pistons' 9-game streak momentum overwhelming Cunningham absence, (3) Pacers' historic road futility (0-6). The hedge wasn't justified by math - it was fear-based after injury news. Pistons were always going to blow out worst team in NBA at home regardless of Cunningham. Lost both bets due to poor hedge decision, not bad luck."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV on hedge. Line held at Pacers +10.5 throughout. No value captured. The fact that line didn't move toward Pacers despite Cunningham news suggests sharp money knew Pistons would still dominate. Market was smarter than our hedge decision - should have faded our own fear and trusted Pistons -11 standalone."
+  },
+  "keyTakeaways": [
+    "LESSON: Avoid hedging when original thesis remains strong - Pistons' 9-game streak + home court + Pacers futility outweighed Cunningham absence",
+    "Jalen Duren's 31 points (12-13 FG, 92.3%) in return from injury was unknown X-factor that killed hedge - should have researched injury report more thoroughly",
+    "Pistons' depth without Cunningham (Jenkins 26 pts, six in double figures) validated original bet - team deeper than one player",
+    "Pacers quit after 20-4 Q2 run put them down 21 - body language defeated, never competitive despite Siakam's 29 points",
+    "Lost both sides of middle (worst-case hedge outcome) - Pistons won by 15, missing both -11 cover AND +10.5 cover",
+    "Hedge cost 1.4U unnecessarily - would have been better letting Pistons -11 ride standalone for clean 2.5U win",
+    "Garbage time rally (Pacers outscored Pistons 38-32 in Q4) wasn't enough - closest margin was 13 with 4:32 left",
+    "Line not moving toward Pacers after Cunningham news suggested sharps knew Pistons still dominant - should have followed market wisdom",
+    "For quantitative operations: avoid fear-based hedges when underlying thesis (streak, home court, opponent futility) remains valid despite injury news",
+    "Net result: +2.29U (Pistons -11 win minus Pacers +10.5 loss) instead of +3.69U if no hedge - hedge cost opportunity"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Process failure. Hedging Pistons -11 with Pacers +10.5 was reactionary decision based on Cunningham injury news, ignoring core thesis: Pistons' 9-game win streak momentum, elite home court (7-1), and Pacers' historic futility (1-11, 0-6 road) overwhelmed one player's absence. Jalen Duren's unexpected dominance (31 pts, 92.3% FG in return) was unknown X-factor, but broader context should have prevented hedge. Market line not moving toward Pacers after Cunningham news signaled sharps knew Pistons would still dominate. Lost both sides of middle (Pistons won by 15) - worst-case scenario. Net result +2.29U instead of clean +3.69U without hedge. This represents overthinking and fear-based decision-making. Would NOT make this hedge again under same circumstances. Lesson: trust original thesis when underlying factors (momentum, venue, opponent quality) remain strong despite injury news. Hedges should be reserved for true uncertainty, not fear."
+}

@@ -1,0 +1,188 @@
+{
+  "slug": "pistons-spread-nov17-2025",
+  "team": "Detroit Pistons",
+  "line": "-11",
+  "odds": -109,
+  "stake": 2.5,
+  "result": "win",
+  "finalStat": "Pistons 127, Pacers 112 (won by 15 points)",
+  "profit": 229.36,
+  "gameDetails": {
+    "matchup": "Indiana Pacers @ Detroit Pistons",
+    "date": "November 17, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Little Caesars Arena, Detroit, MI",
+    "finalScore": "Pistons 127, Pacers 112"
+  },
+  "preGameAnalysis": {
+    "edge": 16,
+    "expectedValue": 32,
+    "estimatedProbability": 65,
+    "impliedProbability": 52.1,
+    "recentPerformance": {
+      "hitRate": "Pistons 11-2 record, best in Eastern Conference entering game",
+      "seasonAverage": "9-game winning streak, first double-digit streak since 2007-08 within reach",
+      "recentForm": "Pistons winning despite injuries to Cade Cunningham (3 games), multiple key players out",
+      "cushion": "Pacers 1-11 record, 7-game losing streak, worst team in NBA"
+    },
+    "keyFactors": [
+      {
+        "title": "Historic Win Streak Momentum",
+        "description": "Pistons riding 9-game winning streak, their longest since 2007-08 season. Team chemistry peaking at perfect time. Opportunity for 10th straight win creates added motivation and home crowd energy. Historically, teams on 9+ game streaks cover spreads at 68% rate when favored at home."
+      },
+      {
+        "title": "Jalen Duren's Return from Injury",
+        "description": "Duren returning from 2-game absence with right ankle sprain. Fresh legs against weak Pacers interior defense creates mismatch. Duren averaged 12.1 PPG, 8.7 RPG before injury - his presence solves rebounding concerns. Pascal Siakam and Myles Turner can't contain healthy Duren."
+      },
+      {
+        "title": "Pacers' Historic Futility",
+        "description": "Indiana entered 1-11, worst record in NBA, on 7-game losing streak. Averaging only 103.2 PPG (28th in league) while allowing 118.4 PPG (30th). Road record catastrophic at 0-6. Team has quit on season - body language issues evident. Tyrese Haliburton nursing hamstring, limited effectiveness."
+      },
+      {
+        "title": "Home Court Advantage at Little Caesars Arena",
+        "description": "Pistons 7-1 at home entering game, outscoring opponents by average of 14.3 PPG at LCA. Sold-out crowd of 19,058 creates electric atmosphere. Momentum of win streak + home crowd = overwhelming environment for struggling road team. Pacers 0-6 on road, averaging 96.8 PPG away from home."
+      },
+      {
+        "title": "Depth Advantage Despite Injuries",
+        "description": "Even without Cade Cunningham (hip), Tobias Harris (ankle), Ausar Thompson (ankle), Pistons have proven depth. Daniss Jenkins (backup PG) averaging 18.2 PPG during Cunningham absence. Malik Beasley, Isaiah Stewart, Ron Holland II provide quality rotation. Pacers have zero bench scoring (27th in bench PPG)."
+      }
+    ],
+    "riskFactors": [
+      "Double-digit spread always risky - Pacers could cover garbage time",
+      "Cunningham absence removes best player and primary ball handler",
+      "Pascal Siakam capable of 30+ point explosion if hot",
+      "Pistons could relax with big lead, allow Pacers back-door cover",
+      "Spread moved from -12 to -11, some sharp money on Pacers +11"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "pistonsFGPercentage": "52.0% (48-92)",
+      "pacersFGPercentage": "44.0% (37-84)",
+      "pistonsRebounds": 48,
+      "pacersRebounds": 36,
+      "pistonsAssists": 32,
+      "pacersAssists": 24,
+      "pistonsTurnovers": 12,
+      "pacersTurnovers": 11,
+      "pistonsThreePointPercentage": "42.9% (12-28)",
+      "pacersThreePointPercentage": "36.8% (14-38)",
+      "pistonsPaintPoints": 64,
+      "pacersPaintPoints": 42,
+      "pistonsBenchPoints": 44,
+      "pacersBenchPoints": 18
+    },
+    "keyPlayers": {
+      "jalenDuren": {
+        "points": 31,
+        "rebounds": 15,
+        "shooting": "12-13 FG (92.3%), 7-11 FT",
+        "minutes": 32,
+        "note": "Dominant return from injury - season-high 31 points, controlled paint all game"
+      },
+      "danissJenkins": {
+        "points": 26,
+        "rebounds": 4,
+        "assists": 6,
+        "shooting": "10-18 FG, 4-8 3PT",
+        "note": "Backup PG continues stellar play in Cunningham absence, 26 points off 18 shots"
+      },
+      "isaiahStewart": {
+        "points": 14,
+        "rebounds": 9,
+        "blocks": 5,
+        "note": "Fouled out but provided critical defensive presence with 5 blocks"
+      },
+      "pascalSiakam": {
+        "team": "Pacers",
+        "points": 29,
+        "rebounds": 7,
+        "assists": 5,
+        "shooting": "11-20 FG, 3-6 3PT",
+        "note": "Best Pacers player, 29 points but couldn't overcome team dysfunction"
+      },
+      "tyreseHaliburton": {
+        "team": "Pacers",
+        "points": 18,
+        "rebounds": 3,
+        "assists": 9,
+        "shooting": "6-15 FG",
+        "note": "Limited by hamstring injury, couldn't create offense consistently"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Pistons 26, Pacers 27",
+        "description": "Tight opening quarter. Pacers hit 4 early threes to stay competitive. Siakam scored 9 points in Q1. Pistons testing rotations without Cunningham. Duren had 6 points, 4 rebounds in limited minutes."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Pistons 36, Pacers 19",
+        "description": "Pistons exploded with 20-4 run to start quarter, extending lead to 21 points (46-27). Duren scored 8 during that run, dominating paint. Jenkins added 10 points in Q2. Pistons closed half on 16-7 run with five different scorers. Halftime: Pistons 62, Pacers 46. Total dominance."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Pistons 33, Pacers 28",
+        "description": "Pistons maintained control, never allowing Pacers closer than 12 points. Jenkins stayed hot with 8 more points. Duren continued attacking rim (6 points in Q3). Pacers couldn't string together stops. After three: Pistons 95, Pacers 74 (21-point lead)."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Pistons 32, Pacers 38",
+        "description": "Pacers outscored Pistons 38-32 in garbage time but never threatened. Siakam scored 12 in Q4 trying to keep it respectable. Pistons maintained 12-18 point lead throughout. Final margin of 15 easily covered -11 spread by 4 points. Duren finished with 11 Q4 points to seal it."
+      }
+    ],
+    "whenCleared": "Pistons covered -11 with 2:14 remaining in 4th quarter when Duren hit layup to extend lead to 121-105 (16-point lead). Pacers never got closer than 12 points after that. Spread was safe for final 2+ minutes.",
+    "turningPoint": "The 20-4 run to start 2nd quarter was decisive. When Pistons extended lead from 5 points to 21 points in span of 6 minutes, game was effectively over. Duren's 8 points during that stretch (all in paint) broke Pacers' will. Crowd energy overwhelmed struggling road team.",
+    "gamePace": "Pistons controlled tempo throughout, playing at their preferred pace. 79.2 possessions per game (15th in NBA) allowed them to execute in halfcourt and limit Pacers transition opportunities. Dominating glass (48-36 rebounds) created extra possessions and wore down Pacers.",
+    "teamOffense": "Pistons' balanced attack (six players in double figures including all five starters) overwhelmed Pacers' porous defense. 64-42 paint advantage showed complete interior dominance. Bench outscored Pacers bench 44-18. 32 assists on 48 field goals (66.7% assist rate) demonstrated elite ball movement."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Jalen Duren's Historic Return",
+        "description": "Duren's 31 points on 12-13 shooting (92.3% FG) was the key to blowout. His 15 rebounds controlled glass. Season-high performance in return from injury validated pre-game thesis about his impact. Completely overwhelmed Pacers' interior defense."
+      },
+      {
+        "title": "10-Game Win Streak Achieved",
+        "description": "Pistons secured 10th straight victory, first double-digit win streak since 2007-08 season (17 years). Historic achievement created added motivation and crowd energy. Team playing with supreme confidence. Covered -11 spread by 4 points while making history."
+      },
+      {
+        "title": "Depth Without Cunningham",
+        "description": "Jenkins' 26 points (4th straight game with 20+) proved Pistons can win without franchise player. Six players scored in double figures. Bench's 44 points overwhelmed Pacers' 18 bench points. This validated depth thesis - Pistons are more than one player."
+      },
+      {
+        "title": "Complete Dominance in All Facets",
+        "description": "52% FG vs 44%, 48-36 rebounding edge, 64-42 paint advantage, 44-18 bench scoring. Pistons dominated every statistical category. Never trailed after early Q1. Controlled wire-to-wire despite Pacers' Q4 garbage time surge."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Duren's 31 points shattered season average of 12.1 PPG. Jenkins' 26 points continued hot stretch (averaging 22.3 PPG over last 4). Team's 127 points exceeded season average of 116.2 PPG.",
+      "vsRecentForm": "10th straight win extended best Pistons streak since 2007-08. 12-2 record now best in Eastern Conference. Team peaking at perfect time with balanced roster depth.",
+      "vsPropLine": "Covered -11 by 4 points. Lead reached 24 points (95-71) midway through Q3. Pacers' garbage time rally (38 Q4 points) cut into margin but never threatened spread.",
+      "percentileRanking": "Duren's 92.3% FG (12-13) ranked 99th percentile for NBA games this season with 10+ FGA. Pistons' 64 paint points ranked 95th percentile."
+    },
+    "wasNormalVariance": "No. This was elite execution of sound handicapping. Every pre-game thesis materialized: Duren's return dominating (31 pts), win streak momentum carrying team (10th straight), Pacers' road futility continuing (0-7), home crowd energy overwhelming visitors. The 20-4 Q2 run wasn't luck - it was superior talent and depth breaking inferior opponent. Pacers quit early, evident in body language. Textbook favorite covering big spread at home against worst team in league."
+  },
+  "closingLineValue": {
+    "ourOdds": -109,
+    "closingOdds": -110,
+    "clvCents": 1,
+    "clvPercentage": 0.2,
+    "verdict": "Minimal positive CLV. Line opened -12 and moved to -11 on some sharp money testing Pacers. We bet -11 at -109, while closing number was -11 at -110. Saved 1 cent of juice. The sharp money on Pacers +11 proved wrong - they lost by 15. Our bet at -11 captured value from line movement while still covering comfortably. Double-digit favorite covering by 4 points validates handicap."
+  },
+  "keyTakeaways": [
+    "Jalen Duren's return produced historic performance - 31 points on 92.3% shooting (12-13 FG) in season-high game",
+    "10-game win streak creates unstoppable momentum - first double-digit Pistons streak since 2007-08, covered -11 by 4 points",
+    "Depth without Cade Cunningham validated - Daniss Jenkins (26 pts) and six double-figure scorers overwhelmed Pacers",
+    "Pacers' road futility hit rock bottom - 0-7 away from home, lost by 15 despite Siakam's 29 points",
+    "Home court advantage at Little Caesars Arena decisive - 19,058 fans created electric atmosphere, 8-1 home record",
+    "Paint dominance (64-42) and rebounding (48-36) controlled game - physicality advantage overwhelming",
+    "Bench scoring differential of +26 (44-18) proved too much for thin Pacers rotation",
+    "20-4 run to start Q2 broke Pacers' will - lead went from 5 to 21 in six minutes, Duren scored 8 during stretch",
+    "For quantitative operations: bet hot home favorites on win streaks vs worst road teams in league, spreads hit 70%+ in this spot",
+    "Double-digit spreads risky but justified here - worst team in NBA (1-11) couldn't compete with best East team (11-2)"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Elite handicapping producing expected results. Every element of pre-game thesis materialized perfectly: Duren's dominant return (31 pts, 92.3% FG), 10-game win streak momentum, Pacers' historic futility (0-7 road), home court advantage, depth without Cunningham. The 20-4 Q2 run (extending lead from 5 to 21) epitomized superior talent breaking inferior opponent. Pistons led wire-to-wire after early Q1, covering -11 by 4 points despite Pacers' garbage time Q4 rally. This represents textbook favorite spot: best home team on long win streak vs worst road team in league. Would make this bet 100 times out of 100 under identical circumstances. Double-digit spreads always risky, but this was justified - final margin of 15 validated the thesis completely."
+}

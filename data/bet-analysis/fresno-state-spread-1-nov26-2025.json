@@ -1,0 +1,126 @@
+{
+  "slug": "fresno-state-spread-1-nov26-2025",
+  "team": "Fresno State Bulldogs",
+  "line": "FRESNO STATE -1.5",
+  "odds": -115,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Won by 23 (Covered)",
+  "profit": 86.96,
+  "gameDetails": {
+    "matchup": "UC Santa Barbara Gauchos vs Fresno State Bulldogs",
+    "date": "November 26, 2025",
+    "gameTime": "11:00 PM ET",
+    "venue": "Save Mart Center, Fresno, CA",
+    "finalScore": "Fresno State 73, UCSB 50"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 15,
+    "estimatedProbability": 58,
+    "impliedProbability": 53.49,
+    "recentPerformance": {
+      "hitRate": "Strong early-season home form",
+      "seasonAverage": "Efficient offense creating problems",
+      "last5Games": "Balanced scoring attack clicking",
+      "cushion": "Home court at Save Mart Center is significant"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Court at Save Mart Center",
+        "description": "Fresno State plays well at home. Crowd provides energy and visiting teams struggle in the environment."
+      },
+      {
+        "title": "UCSB Road Struggles",
+        "description": "Gauchos have been inconsistent away from home early in the season. Travel and unfamiliar environments hurt young teams."
+      },
+      {
+        "title": "Line Was Too Low",
+        "description": "Model had fair spread at -4.5, getting -1.5 was 3 points of value. Market hadn't calibrated these teams yet."
+      },
+      {
+        "title": "Sharp Money Indicators",
+        "description": "Professional money on Fresno State. Line moved from -1 to -1.5 indicating sharp action on Bulldogs."
+      }
+    ],
+    "riskFactors": [
+      "Early season college basketball is unpredictable",
+      "UCSB could catch fire from three",
+      "Small sample size on both teams",
+      "Late night West Coast game - anything can happen"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 73,
+      "fieldGoalPct": "48%",
+      "threePtPct": "35%",
+      "rebounds": 42,
+      "assists": 18,
+      "turnovers": 9
+    },
+    "keyPlayers": {
+      "bench": {
+        "points": 24,
+        "note": "Bulldogs bench outscored UCSB reserves 24-8"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Fresno State opened with 14-4 run and never looked back. Controlled tempo throughout. Led by 12 at the break.",
+        "score": "Fresno State led by 12"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "UCSB shooting went cold (28% FG). Bulldogs extended lead at will. Bench mob dominated. 23-point final margin.",
+        "score": "Fresno State 73-50 (Final)"
+      }
+    ],
+    "whenCleared": "Covered the -1.5 spread in the first half. Rest of game was just padding the margin.",
+    "gamePace": "Fresno State dictated tempo throughout. UCSB never found offensive rhythm."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Dominant from Start to Finish",
+        "description": "14-4 opening run set the tone. Fresno State was clearly the better team and the scoreboard reflected it."
+      },
+      {
+        "title": "UCSB Shooting Collapse",
+        "description": "Gauchos shot just 32% overall and 22% from three. Road games expose teams with inconsistent shooting."
+      },
+      {
+        "title": "Bench Dominance",
+        "description": "24-8 bench scoring advantage. Fresno State's depth was too much for UCSB to handle."
+      },
+      {
+        "title": "Model Edge Validated",
+        "description": "Projected fair line of -4.5, got -1.5, won by 23. Edge was even larger than model suggested."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+21.5 points (won by 23, needed -1.5)",
+      "shootingDifferential": "48% vs 32% FG - complete domination",
+      "turnoverBattle": "9 vs 14 - Fresno State took care of the ball"
+    },
+    "wasNormalVariance": "This was a dominant performance that validated the edge. UCSB's 32% shooting was below their average, but Fresno State's defense deserves credit. The 23-point margin showed this wasn't a close game that could have gone either way."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -118,
+    "clvCents": 3,
+    "clvPercentage": 1.0,
+    "verdict": "Slight positive CLV as line moved toward Fresno State. Sharp money was right."
+  },
+  "keyTakeaways": [
+    "Early season college basketball offers significant edge opportunities",
+    "Teams haven't been properly calibrated by the market yet",
+    "Home favorites undervalued in early non-conference play",
+    "Sharp money movement from -1 to -1.5 was the signal",
+    "23-point win showed true team talent disparity",
+    "Bench depth matters in college basketball"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Crushed it. Model identified undervalued home favorite, sharps confirmed, and Fresno State dominated 73-50. The 23-point margin showed the edge was real and significant."
+}

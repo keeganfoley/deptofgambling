@@ -1,0 +1,185 @@
+{
+  "slug": "raptors-ml-nov19-2025",
+  "team": "Toronto Raptors",
+  "line": "ML",
+  "odds": -125,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Raptors 121, 76ers 112",
+  "profit": 120.00,
+  "gameDetails": {
+    "matchup": "Philadelphia 76ers @ Toronto Raptors",
+    "date": "November 19, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Scotiabank Arena, Toronto, ON",
+    "finalScore": "Raptors 121, 76ers 112"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 28,
+    "estimatedProbability": 68,
+    "impliedProbability": 55.6,
+    "recentPerformance": {
+      "hitRate": "Raptors 5-8 overall but healthy roster with balanced scoring attack",
+      "seasonAverage": "Toronto averaging 112.4 PPG with multiple double-digit scorers nightly",
+      "recentForm": "Won 3 of last 5 at home, Scotiabank Arena providing lift",
+      "cushion": "76ers 2-11, worst record in Eastern Conference, catastrophically depleted"
+    },
+    "keyFactors": [
+      {
+        "title": "76ers Catastrophic Injury Crisis",
+        "description": "Philadelphia missing Joel Embiid (rest), Paul George (knee), Kelly Oubre Jr. (hip), Andre Drummond (illness). Only 8 available players with Tyrese Maxey as sole offensive creator. Team simply cannot field competitive NBA roster. 2-11 record reflects organizational collapse."
+      },
+      {
+        "title": "Raptors' Healthy Roster Advantage",
+        "description": "Toronto has Scottie Barnes, Immanuel Quickley, RJ Barrett, Jakob Poeltl all healthy and available. Balanced scoring attack with 4-5 double-digit scorers creates mismatches Philadelphia cannot defend. Depth overwhelms 8-man rotation."
+      },
+      {
+        "title": "Home Court at Scotiabank Arena",
+        "description": "Raptors 3-2 at home, playing better in Toronto than on road. Passionate fan base creates energetic atmosphere. International audience brings unique intensity. 76ers' skeleton crew will wilt under pressure."
+      },
+      {
+        "title": "Maxey Island Problem",
+        "description": "Tyrese Maxey averaging 28.3 PPG but inefficient (31 shots per game needed). One-man offensive show creates predictable attack. Raptors can send help defenders and force others to score - nobody else on 76ers can create."
+      },
+      {
+        "title": "76ers' ATS Struggles",
+        "description": "Philadelphia 3-10 ATS this season, consistently failing to cover. Market clearly identifies them as team to fade. Even getting points, they can't compete. ML against them is free money with this roster."
+      }
+    ],
+    "riskFactors": [
+      "Maxey can single-handedly score 40+ on any night",
+      "76ers role players could have career nights with increased minutes",
+      "Raptors sometimes play down to competition level",
+      "Trap game potential - Raptors might overlook beaten opponent"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "raptorsFGPercentage": "49.4% (44-89)",
+      "sixersFGPercentage": "44.1% (38-86)",
+      "raptorsRebounds": 46,
+      "sixersRebounds": 38,
+      "raptorsAssists": 28,
+      "sixersAssists": 19,
+      "raptorsTurnovers": 11,
+      "sixersTurnovers": 16,
+      "raptorsThreePointPercentage": "38.5% (15-39)",
+      "sixersThreePointPercentage": "32.4% (11-34)",
+      "raptorsPaintPoints": 52,
+      "sixtnersPaintPoints": 38,
+      "raptorsFastBreakPoints": 18,
+      "sixersFastBreakPoints": 8
+    },
+    "keyPlayers": {
+      "scottieBarnes": {
+        "points": 24,
+        "rebounds": 8,
+        "assists": 6,
+        "shooting": "9-17 FG, 2-5 3PT",
+        "note": "All-around performance leading Raptors offense with efficient 24-point night"
+      },
+      "immanuelQuickley": {
+        "points": 21,
+        "rebounds": 4,
+        "assists": 8,
+        "shooting": "8-15 FG, 3-7 3PT",
+        "note": "Controlled game with 8 assists and clutch 3rd quarter scoring"
+      },
+      "rjBarrett": {
+        "points": 19,
+        "rebounds": 5,
+        "assists": 4,
+        "shooting": "7-14 FG, 3-6 3PT",
+        "note": "Efficient 19 points provided third scoring option"
+      },
+      "tyreseMaxey": {
+        "points": 31,
+        "rebounds": 4,
+        "assists": 8,
+        "shooting": "12-28 FG, 3-9 3PT",
+        "note": "31 points on 28 shots (42.9%) - inefficient volume exactly as predicted"
+      },
+      "jakobPoeltl": {
+        "points": 16,
+        "rebounds": 12,
+        "shooting": "7-9 FG",
+        "note": "Dominated paint with 16-12 double-double on 77.8% shooting"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Raptors 32, 76ers 26",
+        "description": "Raptors established tempo early with Barnes scoring 9 quick points. Toronto's ball movement created open looks (7 assists on 12 FGs). Maxey answered with 10 points but teammates combined for only 16 on poor shooting. Raptors' depth evident from opening tip."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Raptors 28, 76ers 30",
+        "description": "76ers made push with Maxey scoring 12 points in quarter. Philadelphia outscored Toronto 30-28 to cut halftime deficit to 4 (60-56). Raptors' bench production kept lead - Quickley with 8 points. Physical quarter with 8 combined fouls."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Raptors 37, 76ers 24",
+        "description": "Raptors blew game open with dominant 37-point quarter. Quickley and Barrett combined for 18 points on hot shooting. 76ers' 8-man rotation showed fatigue - scored only 24 points. Lead extended from 4 to 17 (97-80) entering 4th. Game effectively over."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Raptors 24, 76ers 32",
+        "description": "Garbage time as Raptors emptied bench with 17-point lead. 76ers cut deficit to 9 in final minutes but never seriously threatened. Maxey added 9 garbage-time points. Final: 121-112 Raptors, comfortable ML win."
+      }
+    ],
+    "whenCleared": "Bet secured with 3:42 remaining in 3rd quarter when lead reached 17 points (97-80). 76ers never got closer than 9 points in 4th quarter. Garbage time final minutes allowed scoreboard to tighten but outcome never in doubt.",
+    "turningPoint": "Third quarter explosion (37-24) transformed competitive game into blowout. Quickley's three consecutive baskets at start of 3rd pushed lead from 4 to 12. 76ers' 8-man rotation couldn't match Raptors' depth and fresh legs. When Barrett hit back-to-back threes (11:02 and 9:38), lead reached 15 and 76ers broke.",
+    "gamePace": "Raptors controlled pace with superior ball movement (28 assists vs 19). Toronto's 18 fast-break points vs 76ers' 8 showcased transition advantage from turnovers (11 vs 16). Raptors dictated tempo throughout, never allowing 76ers to slow game down.",
+    "teamOffense": "Balanced attack with 4 players scoring 16+ points. Barnes' 24, Quickley's 21, Barrett's 19, Poeltl's 16 created impossible defensive assignments for depleted 76ers. Maxey's 31 points required 28 shots - exactly the inefficient volume that doesn't win games."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "76ers' Depleted Roster Couldn't Compete",
+        "description": "Missing Embiid, George, Oubre, Drummond left Philadelphia with G-League caliber depth. Only Maxey could create offense - 31 points on 28 shots proved unsustainable. 76ers' 2-11 record reflects talent deficiency that Toronto easily exploited."
+      },
+      {
+        "title": "Third Quarter Dominance",
+        "description": "Raptors' 37-24 Q3 broke game open. Fresh legs from Toronto's full rotation outlasted 76ers' 8-man fatigue. Quickley and Barrett's combined 18 Q3 points on efficient shooting showcased depth advantage. This quarter validated entire thesis."
+      },
+      {
+        "title": "Balanced Scoring Attack",
+        "description": "Four Raptors scored 16+ points (Barnes 24, Quickley 21, Barrett 19, Poeltl 16). This balanced attack created defensive nightmares for Philadelphia's limited personnel. When everyone contributes, individual defenders can't key on one player."
+      },
+      {
+        "title": "Poeltl Dominated Paint",
+        "description": "Jakob Poeltl's 16 points, 12 rebounds on 7-9 shooting (77.8%) abused Philadelphia's frontcourt. No Embiid/Drummond meant no rim protection. Toronto's 52-38 paint advantage epitomized interior dominance."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Raptors' 121 points exceeded 112.4 PPG average. Barnes' 24-8-6 above his season averages across all categories. Team offense clicking.",
+      "vsRecentForm": "Maxey's 31 points matched his 28.3 PPG average but 28 shots (vs 26 average) showed increased inefficiency. 76ers continue failing despite Maxey's production.",
+      "vsPropLine": "Won by 9 points as -125 favorites. Never trailed after Q1. Third quarter dominance provided comfortable cushion despite Q4 garbage time.",
+      "percentileRanking": "Raptors' 37-point Q3 ranked 95th percentile for their quarter performances. Four 16+ scorers ranked 90th percentile for balanced attack."
+    },
+    "wasNormalVariance": "No. This was complete talent disparity creating predictable outcome. 76ers' catastrophic injuries (Embiid, George, Oubre, Drummond) made them non-competitive. Maxey's inefficient 31-point, 28-shot performance validated one-man-show thesis. Raptors' balanced attack (4 players 16+) and third quarter dominance (37-24) showed depth > individual talent. Process-driven win reflecting clear edge identification."
+  },
+  "closingLineValue": {
+    "ourOdds": -125,
+    "closingOdds": -130,
+    "clvCents": 5,
+    "clvPercentage": 1.1,
+    "verdict": "Slight positive CLV captured. Line moved from -125 to -130 as public recognized 76ers' depleted state. We bet early at -125 before closing at -130. Small juice savings (5 cents) but validates early identification. Game played out exactly as modeled - healthy team vs skeleton crew is free money."
+  },
+  "keyTakeaways": [
+    "76ers' 2-11 record reflects organizational collapse from injuries - Embiid, George, Oubre, Drummond all out creates non-competitive roster",
+    "Maxey's 31 points on 28 shots (42.9% FG) epitomizes inefficient one-man show that doesn't win games",
+    "Raptors' balanced attack (4 players 16+ points) overwhelming for depleted opponent - Barnes, Quickley, Barrett, Poeltl all contributed",
+    "Third quarter dominance (37-24) showcased depth vs 8-man rotation fatigue - fresh legs prevailed as modeled",
+    "Poeltl's 16-12 double-double on 77.8% shooting abused 76ers' frontcourt without Embiid/Drummond",
+    "Home court at Scotiabank Arena provided lift - Raptors now 4-2 at home with comfortable win",
+    "76ers' 3-10 ATS continues - market correctly identifies them as fade candidate with this roster",
+    "Process over result - depleted teams lose to healthy teams, period, regardless of one star's production",
+    "1.5u stake appropriate for clear edge - this was high-confidence play that materialized perfectly",
+    "For quantitative operations: always bet healthy home teams vs injury-ravaged opponents with 10%+ edge"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution of injury mismatch identification. Every pre-game thesis materialized: 76ers' catastrophic injuries (Embiid, George, Oubre, Drummond) created non-competitive roster, Maxey's inefficient volume scoring (31 pts on 28 shots) couldn't overcome talent disparity, Raptors' balanced attack (4 players 16+) overwhelmed depleted defense, third quarter dominance (37-24) validated depth vs fatigue thesis. Toronto's 52-38 paint advantage with Poeltl's 16-12 double-double showcased interior mismatch without Embiid. This represents textbook fade of injury-ravaged team. Would make this bet 100 times out of 100 - healthy teams beat skeleton crews. Captured positive CLV (-125 vs -130). Process-driven win."
+}

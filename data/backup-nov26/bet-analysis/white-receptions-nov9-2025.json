@@ -1,0 +1,122 @@
+{
+  "slug": "white-receptions-nov9-2025",
+  "player": "Rachaad White",
+  "line": "OVER 3.5 receptions",
+  "odds": 102,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "5 receptions (cleared by 1.5)",
+  "profit": 102.00,
+  "gameDetails": {
+    "matchup": "Tampa Bay Buccaneers @ New England Patriots",
+    "date": "November 9, 2025",
+    "gameTime": "1:00 PM ET",
+    "venue": "Gillette Stadium",
+    "finalScore": "Patriots 28, Buccaneers 23"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 36.0,
+    "estimatedProbability": 68,
+    "impliedProbability": 49.50,
+    "recentPerformance": {
+      "hitRate": "5 of 9 games over 3.5 receptions (55.6%)",
+      "seasonAverage": "3.2 receptions per game",
+      "last3Games": "2.7 receptions per game",
+      "cushion": "-0.3 receptions below line (expanding role trend)"
+    },
+    "keyFactors": [
+      {
+        "title": "Perfect Matchup Convergence",
+        "description": "Patriots allowed league-high 7.11 targets and 6.11 receptions per game to opposing RBs. While their run defense ranked 1st (75.4 YPG), they were exploitable through the air to pass-catching backs."
+      },
+      {
+        "title": "Bucky Irving Absence",
+        "description": "Irving's absence due to shoulder/foot injuries meant White would handle primary RB duties in obvious passing situations, increasing his target probability significantly."
+      },
+      {
+        "title": "Game Script Projection",
+        "description": "Patriots' elite run defense would force Tampa Bay into pass-heavy approach. Baker Mayfield would need to utilize checkdowns and screens to White to sustain drives."
+      },
+      {
+        "title": "Value Pricing",
+        "description": "At +102 odds, the market underpriced White's reception probability given the matchup data and Irving's absence. Line should have been closer to -130 based on pre-game circumstances."
+      }
+    ],
+    "riskFactors": [
+      "White's reception average (3.2) slightly below line",
+      "Potential for Tampa Bay to establish run game despite poor matchup",
+      "Patriots' defensive game plan could limit RB targets overall"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "receptions": 5,
+      "targets": 5,
+      "receivingYards": 16,
+      "catchRate": "100% (5-for-5)",
+      "rushingAttempts": 10,
+      "rushingYards": 38,
+      "yardsPerCarry": 3.8
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Patriots took early control with 166 rushing yards total. White caught 2 early targets as Tampa Bay fell behind. Mayfield attempted 21 first-half passes as run game stalled."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Patriots scored back-to-back touchdowns building 21-10 lead. White's role as pass-catching back expanded as Buccaneers chased points. Caught 2 more targets in quarter."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Trailing 28-16, Tampa Bay went pass-heavy. Mayfield threw 22 fourth-quarter passes (43 total game). White's final reception came as Bucs tried comeback. Cleared 3.5 with room to spare."
+      }
+    ],
+    "whenCleared": "Early Q4 (4th reception), finished with comfortable 5-for-5",
+    "gamePace": "Patriots dominated time of possession. Mayfield threw 43 passes completing 28 for 273 yards and 3 TDs. White's 100% catch rate on 5 targets validated pre-game projection."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Matchup Exploited Perfectly",
+        "description": "Patriots' vulnerability to pass-catching RBs (6.11 rec/game allowed) materialized exactly as projected. White's 5 receptions fit the historical pattern of opposing backs exploiting this weakness."
+      },
+      {
+        "title": "Game Script Alignment",
+        "description": "Patriots' 28-23 victory created negative game script forcing Tampa Bay into passing mode. Mayfield's 43 attempts (season-high) meant abundant opportunities for White in checkdown role."
+      },
+      {
+        "title": "Irving Absence Impact",
+        "description": "With Irving out, White handled 100% of pass-catching back snaps. His 5 targets represented significant role expansion from season average, validating the injury analysis."
+      },
+      {
+        "title": "Elite Execution",
+        "description": "White's 100% catch rate (5-for-5) showed reliable hands. Even with minimal yardage (16 yards), the volume materialized exactly as projected. This was about receptions, not yardage."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+1.8 receptions above 3.2 season average (+56.3%)",
+      "vsRecentForm": "+2.3 receptions above 2.7 last 3 games (+85.2%)",
+      "vsPropLine": "+1.5 receptions above 3.5 line (+42.9%)",
+      "percentileRanking": "Top 20% receiving performance - 100% catch rate excellence"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": 102,
+    "closingOdds": 108,
+    "clvCents": 6,
+    "clvPercentage": 5.6,
+    "verdict": "Strong positive CLV - line moved toward over as sharp money recognized matchup edge late. Market correctly valued Irving absence and Patriots' RB pass defense weakness."
+  },
+  "keyTakeaways": [
+    "Matchup-specific edges drive profitability: Patriots allowing 6.11 rec/game to RBs created clear value",
+    "Injury analysis matters: Irving's absence expanded White's role exactly as projected",
+    "Game script awareness: Patriots' dominance forced pass-heavy Tampa Bay offense (43 attempts)",
+    "+102 odds offered significant value - should have been -130 given pre-game circumstances",
+    "100% catch rate validated reliability in pass-catching role despite modest yardage",
+    "This is textbook profitable betting: identifying mispriced line where projection differs from market consensus"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution of matchup-based prop betting. When elite run defense meets worst pass-catching RB defense in negative game script, receptions props become high-probability plays."
+}

@@ -1,0 +1,127 @@
+{
+  "slug": "mitchell-points-nov21-2025",
+  "player": "Donovan Mitchell",
+  "team": "Cleveland Cavaliers",
+  "line": "O28.5 pts",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "32 points",
+  "profit": 136.36,
+  "gameDetails": {
+    "matchup": "Cleveland Cavaliers vs Indiana Pacers",
+    "date": "2025-11-21",
+    "gameTime": "7:00 PM ET",
+    "venue": "Rocket Mortgage FieldHouse",
+    "finalScore": "CLE 120, IND 109"
+  },
+  "preGameAnalysis": {
+    "edge": 23,
+    "expectedValue": 44,
+    "estimatedProbability": 73,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "7 of 9 games over 28.5",
+      "seasonAverage": "30.2 PPG (top 6 in NBA)",
+      "last5Games": "8 of 14 games with 30+",
+      "cushion": "+1.7 points above average"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Scorer",
+        "description": "Mitchell averaging 30.2 PPG - top 6 in NBA, hit OVER 28.5 in 7 of 9 games"
+      },
+      {
+        "title": "Pacers Defense",
+        "description": "Indiana allows 123.1 PPG (4th worst in NBA), missing Haliburton"
+      },
+      {
+        "title": "Career vs Indiana",
+        "description": "27.4 PPG over 17 career games vs Pacers"
+      },
+      {
+        "title": "Playoff Revenge",
+        "description": "First meeting since Pacers eliminated Cavs in 5 games last playoffs"
+      }
+    ],
+    "riskFactors": [
+      "Garland returning could take some shots",
+      "Blowout could limit 4th quarter minutes",
+      "Mobley's emergence taking some usage"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 32,
+      "rebounds": 9,
+      "assists": 5,
+      "threePointers": 4,
+      "fieldGoals": "11-22",
+      "minutes": 34
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Mitchell aggressive early, establishing rhythm",
+        "estimatedPoints": "8 points"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Continued solid scoring, Cavs building lead",
+        "halftimeTotal": "16 points at half"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "ERUPTION - 14 points in 3rd quarter alone, took over game",
+        "estimatedRebounds": "30 points through 3Q"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Limited minutes with lead secure, 2 points",
+        "estimatedPoints": "Final: 32 points"
+      }
+    ],
+    "whenCleared": "Late 3rd quarter - hit 30 with 8 minutes left in game",
+    "gamePace": "Fast pace favored offensive production",
+    "turningPoint": "14-point 3rd quarter eruption put game away and secured the over"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "3rd Quarter Dominance",
+        "description": "14 points in 3rd quarter alone - took over game when needed"
+      },
+      {
+        "title": "Garland Return Didn't Hurt",
+        "description": "Garland had 20 but Mitchell remained primary scorer as projected"
+      },
+      {
+        "title": "Pacers Defense as Bad as Expected",
+        "description": "Indiana's porous defense allowed 120 points, Mitchell feasted"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "32 vs 30.2 average = +1.8 points",
+      "vsRecentForm": "9th game with 30+ this season (9 of 15)",
+      "vsPropLine": "3.5 points over 28.5 line",
+      "percentileRanking": "Top 40% of Mitchell performances"
+    },
+    "wasNormalVariance": "This was a typical Mitchell performance - he's a 30+ PPG scorer who delivered 32. The Pacers defense was as bad as expected. Perfect execution."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 2.2,
+    "verdict": "Positive CLV - line moved 5 cents against us indicating more money came in. We got the best price."
+  },
+  "keyTakeaways": [
+    "Elite scorers against bad defenses = recipe for success",
+    "Mitchell's 3rd quarter explosion (14 points) showed his takeover ability",
+    "Garland's return didn't limit Mitchell's scoring as feared",
+    "Pacers defense remains reliable fade target",
+    "This is the model for player props - elite player, bad defense, good line"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Elite scorer against 4th worst defense delivered exactly as modeled. 32 points with 3.5 cushion. This is how you bet player props."
+}

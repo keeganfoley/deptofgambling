@@ -1,0 +1,123 @@
+{
+  "slug": "castellanos-passing-nov21-2025",
+  "player": "Tommy Castellanos",
+  "team": "Florida State Seminoles",
+  "line": "O235.5 pass yds",
+  "odds": -114,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "203 passing yards (FSU lost 21-11)",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "Florida State @ NC State",
+    "date": "2025-11-21",
+    "gameTime": "8:00 PM ET",
+    "venue": "Carter-Finley Stadium",
+    "finalScore": "NC State 21, FSU 11"
+  },
+  "preGameAnalysis": {
+    "edge": 37,
+    "expectedValue": 71,
+    "estimatedProbability": 80,
+    "impliedProbability": 53.27,
+    "recentPerformance": {
+      "hitRate": "235+ in 6 of 7 games",
+      "seasonAverage": "242+ in all 3 road games",
+      "last5Games": "Last 4 QBs vs NC State: 367, 408, 423, 342 yards",
+      "cushion": "+150 yards of statistical cushion"
+    },
+    "keyFactors": [
+      {
+        "title": "Worst Pass Defense in CFB",
+        "description": "NC State allows 299.9 passing yards per game - DEAD LAST in FBS"
+      },
+      {
+        "title": "Recent QBs vs NC State",
+        "description": "Last 4 quarterbacks: 367, 408, 423, 342 passing yards"
+      },
+      {
+        "title": "Castellanos Consistency",
+        "description": "Hit 235+ in 6 of 7 games, 242+ in all 3 road games this season"
+      }
+    ],
+    "riskFactors": [
+      "FSU offense has been inconsistent overall",
+      "NC State could be motivated for home finale",
+      "Bad weather potential"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "completions": 16,
+      "attempts": 32,
+      "passingYards": 203,
+      "touchdowns": 1,
+      "interceptions": 2,
+      "completionPct": "50%"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "FSU struggled to move ball, Castellanos under pressure",
+        "estimatedPoints": "FSU 0"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Offense sputtered, two turnovers killed drives",
+        "halftimeTotal": "FSU trailing 14-3"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "NC State defense continued to dominate, sacks and pressure",
+        "estimatedRebounds": "Only 150 passing yards through 3Q"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Garbage time production, too little too late",
+        "estimatedPoints": "Final: 203 yards"
+      }
+    ],
+    "whenMissed": "Never on pace - was at 150 yards through 3 quarters, needed 235.5",
+    "gamePace": "Slow pace, FSU couldn't sustain drives",
+    "turningPoint": "NC State defense showed up for their best game of the season - picked perfect time"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "NC State Defense Showed Up",
+        "description": "The worst pass defense in CFB had their best game of the season - Murphy's Law"
+      },
+      {
+        "title": "Turnovers",
+        "description": "2 interceptions killed drives and limited passing opportunities"
+      },
+      {
+        "title": "FSU Offensive Line",
+        "description": "Castellanos was under pressure all game, couldn't get comfortable in pocket"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "203 vs 250+ average = 47 yards under",
+      "vsRecentForm": "Worst passing performance in 8 games",
+      "vsPropLine": "32.5 yards short of 235.5 line",
+      "percentileRanking": "Bottom 15% of Castellanos performances"
+    },
+    "wasNormalVariance": "This was an outlier for both Castellanos AND NC State defense. The defense that was allowing 300 yards per game suddenly held him to 203. Sometimes the worst defenses have their best games - variance is brutal."
+  },
+  "closingLineValue": {
+    "ourOdds": -114,
+    "closingOdds": -112,
+    "clvCents": 2,
+    "clvPercentage": 0.93,
+    "verdict": "Slight positive CLV - market agreed this should hit. Sometimes the right bet loses."
+  },
+  "keyTakeaways": [
+    "Even 'worst defense in CFB' can have their best game - variance exists",
+    "150 yards of statistical cushion wasn't enough when defense showed up",
+    "Turnovers (2 INTs) limited passing opportunities",
+    "Thesis was sound but execution by NC State defense was exceptional",
+    "Would still bet this again - 80% probability plays lose 20% of the time"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "This was a high confidence play that lost to variance. NC State's worst pass defense in CFB picked their final home game to play their best. The thesis was correct - Castellanos is productive against bad defenses. This was the 20% that loses."
+}

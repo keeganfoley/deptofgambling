@@ -140,14 +140,14 @@ export default function BetTypeBreakdown() {
         </div>
 
         {/* Bet Type Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {Object.values(betTypes).map((betType, index) => (
             <BetTypeCard
               key={betType.type}
               type={betType.type}
               record={betType.record}
               winRate={betType.winRate}
-              netPL={betType.netPL}
+              netPL={betType.pnl}
               roi={betType.roi}
               index={index}
             />

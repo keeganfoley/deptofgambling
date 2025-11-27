@@ -1,0 +1,137 @@
+{
+  "slug": "maxey-pts-ast-nov11-2025",
+  "player": "Tyrese Maxey",
+  "line": "OVER 37.5 Points + Assists",
+  "odds": -113,
+  "stake": 2.5,
+  "result": "loss",
+  "finalStat": "30 P+A (21 points, 9 assists)",
+  "profit": -250.00,
+  "gameDetails": {
+    "matchup": "Philadelphia 76ers @ Boston Celtics",
+    "date": "November 11, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "TD Garden",
+    "finalScore": "76ers 102, Celtics 100"
+  },
+  "preGameAnalysis": {
+    "edge": 17,
+    "expectedValue": 17.0,
+    "estimatedProbability": 70,
+    "impliedProbability": 53.0,
+    "recentPerformance": {
+      "hitRate": "8 of 9 games hit 37.5+ P+A",
+      "seasonAverage": "41.4 combined P+A (33.2 PPG, 8.2 APG)",
+      "last4Games": "40, 38, 36, 44 combined (all cleared)",
+      "cushion": "+3.9 P+A above line"
+    },
+    "keyFactors": [
+      {
+        "title": "NBA's Second-Leading Scorer",
+        "description": "Averaging 33.2 PPG (2nd in NBA) with 8.2 APG. Combined 41.4 P+A made 37.5 line appear undervalued."
+      },
+      {
+        "title": "Historic Sixers Performance",
+        "description": "Joined Allen Iverson as only Sixers to record 25+ pts, 5+ ast in first 10 games. Elite two-way production."
+      },
+      {
+        "title": "No Joel Embiid (Knee Soreness)",
+        "description": "Embiid sidelined meant Maxey was undisputed first option with higher usage expected."
+      },
+      {
+        "title": "Previous Meeting Success",
+        "description": "Dropped 40 points vs Boston on opening night (October 22). Established scoring blueprint against this defense."
+      },
+      {
+        "title": "Elite Recent Form",
+        "description": "Coming off 40 P+A performance just 2 days prior. Red-hot stretch with consistent production."
+      }
+    ],
+    "riskFactors": [
+      "Third meeting in three weeks with Boston (defensive familiarity)",
+      "Celtics could adjust gameplan after previous two games",
+      "Road divisional opponent increases defensive intensity"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 21,
+      "assists": 9,
+      "combined": 30,
+      "shooting": "5-17 FG (29.4%)",
+      "threePointers": "3-6 3PT (50%)",
+      "freeThrows": "8-8 FT (100%)",
+      "rebounds": "N/A",
+      "minutes": 34,
+      "turnovers": 0,
+      "plusMinus": -6
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Maxey struggled to find rhythm early, shot poorly (5-17 overall). Boston's defensive gameplan specifically targeted him after two previous meetings."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Continued shooting struggles, accumulated assists but couldn't score efficiently. Game remained competitive."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Justin Edwards took over (22 pts, 8-9 FG, three consecutive threes). Edwards' breakout stole touches from Maxey. 76ers won 102-100 on Oubre putback."
+      }
+    ],
+    "whenMissed": "By late Q3, Maxey's poor shooting (5-17) and Edwards' hot hand made OVER increasingly unlikely.",
+    "gamePace": "Low-scoring defensive grind (202 total points). Created fewer possessions than usual high-paced Maxey games.",
+    "gameScript": "Justin Edwards scored team-high 22 points on 8-9 shooting (88.9%), including three consecutive 4th quarter threes. His usage diverted possessions from Maxey."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Career-Worst Shooting Night (PRIMARY FACTOR)",
+        "description": "5-17 FG (29.4%) was massive departure from recent efficiency. Couldn't find rhythm despite getting to free throw line (8-8 FT)."
+      },
+      {
+        "title": "Justin Edwards' Breakout Stole Touches",
+        "description": "Edwards scored team-high 22 points on 8-9 shooting (88.9%), including three consecutive 4th quarter threes that brought Sixers back from 8-point deficit. His usage diverted possessions from Maxey."
+      },
+      {
+        "title": "Celtics' Defensive Gameplan",
+        "description": "Third meeting in three weeks allowed Boston to specifically scheme for Maxey after he dropped 40 opening night and 26 on Halloween. Defensive familiarity killed efficiency."
+      },
+      {
+        "title": "Low-Scoring Defensive Grind",
+        "description": "Final score 102-100 (only 202 total points) created fewer possessions than usual. Low-scoring environment limited opportunities."
+      },
+      {
+        "title": "Other Players Stepped Up",
+        "description": "Edwards (22), Grimes (18), Drummond (14-13) all contributed, reducing Maxey's burden and usage."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-11.4 P+A (-27.5% below 41.4 average)",
+      "vsRecentForm": "-10 P+A below recent games",
+      "vsPropLine": "-7.5 P+A (UNDER by 7.5)",
+      "percentileRanking": "15th percentile (bottom-tier performance)",
+      "historicalContext": "Second-lowest P+A total of season after incredible 10-game run"
+    },
+    "wasNormalVariance": "Yes, this was shooting variance meeting defensive familiarity. Even elite scorers have 5-17 nights. Third meeting in three weeks gave Boston blueprint to slow Maxey. Single-game variance is unavoidable—8 of 9 previous games hit the line, one cold night doesn't invalidate analysis."
+  },
+  "closingLineValue": {
+    "ourOdds": -113,
+    "closingOdds": -118,
+    "clvCents": 5,
+    "clvPercentage": 1.05,
+    "verdict": "Slight positive CLV (5-7 cents). Got slightly better odds than closing market."
+  },
+  "keyTakeaways": [
+    "Divisional opponents provide defensive familiarity: Third meeting in three weeks gave Boston blueprint to slow Maxey",
+    "Shooting variance kills player props: Even elite scorers have 5-17 nights; single-game variance is unavoidable",
+    "Game flow matters more than individual talent: Edwards' breakout (22 pts, 8-9 FG) diverted offense",
+    "Low-scoring games reduce prop opportunities: 202 total points created fewer possessions than normal",
+    "Not all losses indicate bad process: 8 of 9 previous games hit; one cold night doesn't invalidate analysis",
+    "Zero turnovers shows excellent decision-making despite poor shooting",
+    "Team still won (102-100) despite Maxey's struggles—shows depth"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sound analysis met statistical variance. Sometimes good bets lose. Grade: B"
+}

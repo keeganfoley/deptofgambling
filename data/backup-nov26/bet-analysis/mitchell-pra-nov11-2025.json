@@ -1,0 +1,129 @@
+{
+  "slug": "mitchell-pra-nov11-2025",
+  "player": "Ajay Mitchell",
+  "line": "OVER 23.5 Points + Rebounds + Assists",
+  "odds": 100,
+  "stake": 1.0,
+  "result": "loss",
+  "finalStat": "22 PRA (17 points, 3 rebounds, 2 assists)",
+  "profit": -100.00,
+  "gameDetails": {
+    "matchup": "Oklahoma City Thunder vs Golden State Warriors",
+    "date": "November 11, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Paycom Center",
+    "finalScore": "Thunder 126, Warriors 102"
+  },
+  "preGameAnalysis": {
+    "edge": 31,
+    "expectedValue": 31.0,
+    "estimatedProbability": 83,
+    "impliedProbability": 50.0,
+    "recentPerformance": {
+      "hitRate": "3 of 3 starts over 23.5 PRA",
+      "seasonAverage": "Starting average: 30.7 PRA in 3 starts",
+      "last3Games": "30.7 PRA avg (line 8+ points too low)",
+      "cushion": "+7.2 PRA above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Mitchell Starting Average Crushing Line",
+        "description": "Averaging 30.7 PRA in 3 starts (7.2 points above 23.5 line). Line appeared massively undervalued."
+      },
+      {
+        "title": "Chet Holmgren OUT (Injury)",
+        "description": "**CRITICAL ERROR**: Entire thesis predicated on Holmgren being out. Mitchell's usage spikes to 25% (2nd on Thunder) with 31 minutes when starting without Holmgren."
+      },
+      {
+        "title": "Warriors Road Struggles",
+        "description": "1-5 on road with -8.3 net rating away from home. Legitimate weakness to exploit."
+      },
+      {
+        "title": "First Game of Brutal 6-Game Road Trip",
+        "description": "Warriors likely fatigued/unfocused starting difficult road stretch."
+      }
+    ],
+    "riskFactors": [
+      "Blowout potential could limit minutes/stats",
+      "Warriors could deploy zone defense",
+      "Mitchell assist volatility"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 17,
+      "rebounds": 3,
+      "assists": 2,
+      "combined": 22,
+      "minutes": 31,
+      "shooting": "6-13 FG (46.2%)",
+      "threePointers": "2-4 3PT (50%)",
+      "fouls": "Normal (no foul trouble)"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1-Q2",
+        "description": "Thunder jumped to 63-44 halftime lead. Mitchell scored but Holmgren (playing, not injured) dominated touches."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Thunder extended lead to 107-72 (35-point blowout). Game was never competitive."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Starters sat early due to massive lead. Mitchell finished with 31 minutes but limited stats due to blowout."
+      }
+    ],
+    "whenMissed": "By end of Q3 (107-72 lead), blowout made it clear Mitchell wouldn't accumulate enough stats with limited 4th quarter minutes.",
+    "gamePace": "Thunder improved to 11-1 (best record in NBA). Warriors fell to 1-6 on road. Curry returned from 3-game illness but struggled: 11 pts on 4-13 shooting, 5 fouls.",
+    "holmgrenDominance": "**CRITICAL**: Chet Holmgren PLAYED and dominated with historic performance: 23 pts, 11 reb on 9-9 FG, 2-2 3PT, 3-3 FT. First player in Thunder franchise history with 20+ pts, 10+ reb on 100% shooting."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "FUNDAMENTAL ERROR: Holmgren Played (NOT OUT)",
+        "description": "**The entire bet thesis was predicated on Holmgren being out**. He not only played but dominated (23 pts, 11 reb, perfect shooting), absorbing usage and touches that would've gone to Mitchell. This invalidated the entire analysis."
+      },
+      {
+        "title": "Early Blowout Destroyed Prop Value",
+        "description": "Thunder led 63-44 at halftime, 107-72 after Q3 (35-point lead). Game was never competitive, limiting need for Mitchell's production."
+      },
+      {
+        "title": "Mitchell's Assist Drought (Career-Low)",
+        "description": "Only 2 assists (career-low for a start) vs 4.1 season average. Previous starts had 8-10 assists. This was the killer stat."
+      },
+      {
+        "title": "SGA Carried Offensive Load",
+        "description": "Shai Gilgeous-Alexander (28 pts, 11 ast) and Holmgren handled most offensive responsibility."
+      },
+      {
+        "title": "Garbage Time Limited Stats",
+        "description": "Starters sat early in 4th quarter due to 35-point lead. Mitchell got expected minutes (31) but blowout script killed production."
+      }
+    ],
+    "statisticalContext": {
+      "vsStartingAverage": "-8.7 PRA (-28.4% below 30.7 starting average)",
+      "assistDrought": "2 assists vs 4.1 season avg, 8-10 in previous starts",
+      "vsPropLine": "-1.5 PRA (UNDER by 1.5)",
+      "percentileRanking": "Bottom 20% of Mitchell's games this season"
+    },
+    "wasNormalVariance": "NO—this was fundamental research failure. Betting on Mitchell's elevated usage with 'Holmgren out' when Holmgren actually played and dominated (23 pts, perfect shooting) invalidated entire analysis. This was not variance—this was incorrect information."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": "N/A",
+    "clvCents": "N/A",
+    "clvPercentage": "N/A",
+    "verdict": "N/A - Fundamentally flawed premise invalidates CLV discussion"
+  },
+  "keyTakeaways": [
+    "ALWAYS verify injury reports from official sources: The bet's entire thesis relied on Holmgren being out, which was incorrect",
+    "Blowouts kill player props: 35-point lead by Q3 meant starters played limited minutes",
+    "Mitchell's 2 assists was the killer: Well below 4.1 season average and previous start totals (8-10)",
+    "Game flow trumps individual talent: Even with expected minutes (31), massive lead reduced necessity for production",
+    "Pre-game edge evaporates with bad information: '83% true vs 50% implied' probability was meaningless with wrong injury status",
+    "Never make lineup assumptions—always verify from team sources before betting"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Fundamental flaw in injury information invalidated entire analysis. Always verify lineup assumptions. Grade: F"
+}

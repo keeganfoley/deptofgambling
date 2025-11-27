@@ -6,6 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import type { IChartApi, CandlestickData, Time, HistogramData } from 'lightweight-charts';
 import chartDataFile from '@/data/chartData.json';
 import betsData from '@/data/bets.json';
+import portfolioData from '@/data/portfolio.json';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -15,7 +16,11 @@ type TimeframeType = '1week' | '2weeks' | '1month' | 'alltime';
 
 interface DailyData {
   date: string;
-  value: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
 }
 
 interface Bet {
@@ -168,20 +173,22 @@ export default function CandlestickChart() {
       ? allBets
       : allBets.filter(b => b.date.split('T')[0] >= cutoffStr);
 
-    // Calculate stats
+    // Calculate stats - use combined portfolio starting balance ($40,000)
+    const combinedStarting = (portfolioData as any).combined?.startingBalance || 40000;
     if (dailyData.length > 0) {
-      const startVal = dailyData[0].value;
-      const endVal = dailyData[dailyData.length - 1].value;
-      const pl = endVal - startVal;
+      const chartStartVal = dailyData[0].open;
+      const endVal = dailyData[dailyData.length - 1].close;
+      const pl = endVal - chartStartVal;
       const wins = bets.filter(b => b.result === 'win').length;
       const rate = bets.length > 0 ? (wins / bets.length) * 100 : 0;
-      const roiPercent = startVal > 0 ? (pl / startVal) * 100 : 0;
+      // Calculate ROI based on actual chart movement
+      const roiPercent = chartStartVal > 0 ? (pl / chartStartVal) * 100 : 0;
 
       setStats({
         totalPL: pl,
         winRate: rate,
         totalBets: bets.length,
-        startValue: startVal,
+        startValue: chartStartVal,
         endValue: endVal,
         roi: roiPercent,
       });
@@ -202,47 +209,22 @@ export default function CandlestickChart() {
     const tooltipMap = new Map<string, TooltipData>();
 
     dailyData.forEach((day, index) => {
-      const prevValue = index > 0 ? dailyData[index - 1].value : day.value;
-      const currentValue = day.value;
+      // Use OHLC data directly from chartData.json
+      const { open, high, low, close, volume } = day;
 
-      // Get bets for this day to calculate high/low wicks
+      // Get bets for this day for tooltip info
       const dayBets = betsByDate.get(day.date) || [];
 
-      let high = Math.max(prevValue, currentValue);
-      let low = Math.min(prevValue, currentValue);
-
-      if (dayBets.length > 0) {
-        // Calculate intraday swings based on individual bet results
-        let runningValue = prevValue;
-        let maxValue = prevValue;
-        let minValue = prevValue;
-
-        dayBets.forEach(bet => {
-          runningValue += bet.profit;
-          maxValue = Math.max(maxValue, runningValue);
-          minValue = Math.min(minValue, runningValue);
-        });
-
-        high = Math.max(high, maxValue);
-        low = Math.min(low, minValue);
-      } else {
-        // Add small wicks for visual interest when no bet data
-        const range = Math.abs(currentValue - prevValue);
-        const wickSize = range * 0.15 || 15;
-        high = Math.max(prevValue, currentValue) + wickSize;
-        low = Math.min(prevValue, currentValue) - wickSize;
-      }
-
-      const change = currentValue - prevValue;
-      const changePercent = prevValue > 0 ? (change / prevValue) * 100 : 0;
-      const totalStake = dayBets.reduce((sum, bet) => sum + bet.stake, 0);
+      const change = close - open;
+      const changePercent = open > 0 ? (change / open) * 100 : 0;
+      const totalStake = dayBets.length > 0 ? dayBets.reduce((sum, bet) => sum + bet.stake, 0) : volume;
 
       candleData.push({
         time: day.date as Time,
-        open: prevValue,
-        high: high,
-        low: low,
-        close: currentValue,
+        open,
+        high,
+        low,
+        close,
       });
 
       // Volume = total units staked that day (scaled for visibility)
@@ -255,8 +237,8 @@ export default function CandlestickChart() {
       // Store tooltip data
       tooltipMap.set(day.date, {
         date: day.date,
-        open: prevValue,
-        close: currentValue,
+        open,
+        close,
         high,
         low,
         change,

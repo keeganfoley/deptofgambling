@@ -1,0 +1,117 @@
+{
+  "slug": "army-spread-nov22-2025",
+  "team": "Army",
+  "line": "Army -10",
+  "odds": -102,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "Lost by 1 (didn't cover)",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "Army vs Tulsa",
+    "date": "2025-11-22",
+    "gameTime": "7:30 PM ET",
+    "venue": "Michie Stadium",
+    "finalScore": "Army 25, Tulsa 26"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 12,
+    "estimatedProbability": 58,
+    "impliedProbability": 50.5,
+    "recentPerformance": {
+      "hitRate": "6-1 ATS at home",
+      "seasonAverage": "Top 5 rushing offense",
+      "last5Games": "4-1 ATS last 5",
+      "cushion": "Dominant ground game"
+    },
+    "keyFactors": [
+      {
+        "title": "Elite Rushing Attack",
+        "description": "Army ranked top 5 in rushing offense nationally with triple option"
+      },
+      {
+        "title": "Tulsa Run Defense",
+        "description": "One of the worst run defenses in the AAC, allowing 200+ YPG"
+      },
+      {
+        "title": "Home Dominance",
+        "description": "Army 6-1 ATS at home this season"
+      },
+      {
+        "title": "Short Week Advantage",
+        "description": "Triple option notoriously hard to prepare for"
+      }
+    ],
+    "riskFactors": [
+      "Late season trap game potential",
+      "Tulsa fighting for bowl eligibility",
+      "Weather could affect execution"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "rushingYards": 185,
+      "passingYards": 42,
+      "totalYards": 227,
+      "turnovers": 2
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Army established ground game early"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Tulsa kept it competitive, game tighter than expected"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Back and forth scoring, Army unable to pull away"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Tulsa pulled off shocking upset, Army lost outright 26-25"
+      }
+    ],
+    "gamePace": "Slower pace than expected limited possessions",
+    "turningPoint": "Army failed on late drive, Tulsa kicked winning FG"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Tulsa Defense Stepped Up",
+        "description": "Tulsa's defense exceeded expectations against the run"
+      },
+      {
+        "title": "Army Turnovers",
+        "description": "Uncharacteristic turnovers killed drives"
+      },
+      {
+        "title": "Outright Loss",
+        "description": "Not only didn't cover, Army lost the game entirely"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Well below typical rushing output",
+      "vsPropLine": "Lost by 1 vs -10 spread",
+      "percentileRanking": "Bottom 10% Army performances"
+    },
+    "wasNormalVariance": "No - this was an outright upset. Army losing to Tulsa was a shocking result that went against all metrics."
+  },
+  "closingLineValue": {
+    "ourOdds": -102,
+    "closingOdds": -105,
+    "clvCents": 3,
+    "clvPercentage": 1.5,
+    "verdict": "Slight positive CLV but result was disastrous"
+  },
+  "keyTakeaways": [
+    "Late season trap games are real",
+    "Even dominant rushing teams can have off days",
+    "Desperate teams fighting for bowl eligibility are dangerous",
+    "Army's loss was shocking upset - couldn't cover or win"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Disaster. Army not only failed to cover -10 but lost the game outright 26-25 to Tulsa. Complete trap game."
+}

@@ -1,0 +1,125 @@
+{
+  "slug": "oregon-iowa-nov8-2025",
+  "player": "Oregon @ Iowa",
+  "line": "UNDER 41.5 total points",
+  "odds": -110,
+  "stake": 2.0,
+  "result": "win",
+  "finalStat": "34 total points (18-16)",
+  "profit": 181.82,
+  "gameDetails": {
+    "matchup": "Oregon @ Iowa",
+    "date": "November 8, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Kinnick Stadium",
+    "finalScore": "Oregon 18, Iowa 16"
+  },
+  "preGameAnalysis": {
+    "edge": 22,
+    "expectedValue": 42.0,
+    "estimatedProbability": 76,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "6 of 9 Oregon games under total (66.7%)",
+      "seasonAverage": "Oregon 32.2 PPG, Iowa 19.8 PPG (avg 52.0)",
+      "last3Games": "Oregon averaged 28.3 PPG, Iowa 18.0 PPG (avg 46.3)",
+      "cushion": "-4.7 points below line (elite defenses trend)"
+    },
+    "keyFactors": [
+      {
+        "title": "Kinnick Stadium Factor",
+        "description": "Iowa's home field is notoriously difficult for visiting teams, especially in primetime. The hostile environment typically leads to conservative playcalling and offensive struggles."
+      },
+      {
+        "title": "Elite Defensive Matchup",
+        "description": "Iowa's defense ranked 8th nationally in scoring defense (16.2 PPG allowed). Oregon's defense ranked 5th in yards allowed. When elite defenses meet, unders historically hit at 64% clip."
+      },
+      {
+        "title": "Pace of Play",
+        "description": "Oregon averaged 65.3 plays/game (115th in FBS), Iowa 63.1 plays/game (122nd). Fewer possessions = lower variance = under-friendly environment."
+      },
+      {
+        "title": "Red Zone Efficiency",
+        "description": "Iowa ranked 98th in red zone TD conversion (51.2%). Field goals instead of touchdowns create massive under value in tight games."
+      }
+    ],
+    "riskFactors": [
+      "Oregon capable of explosive plays with dynamic QB",
+      "Iowa desperation mode (must-win for bowl eligibility)",
+      "Potential for defensive/special teams TDs inflating score"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "oregonPoints": 18,
+      "iowaPoints": 16,
+      "totalPoints": 34,
+      "oregonYards": 289,
+      "iowaYards": 247,
+      "combinedTurnovers": 3,
+      "iowaTimeOfPossession": "31:46"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Iowa FG 3-0 - Classic Kinnick defensive slugfest start. Both defenses dominated, Oregon went 3-and-out twice."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Oregon TD 7-3, Iowa FG 7-6 - Oregon finally broke through with short TD drive after Iowa fumble. Iowa answered with FG. Half: 7-6."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Oregon FG 10-6, Iowa TD 10-13 - Defenses continued dominance. Iowa took lead on 22-yard TD pass."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Oregon TD 18-13, Iowa FG 18-16 - Oregon's late TD drive consumed 7:22. Iowa's last-second 48-yard FG fell short. Final: 18-16."
+      }
+    ],
+    "whenCleared": "Mid-Q4 (total reached 31, cleared by 7.5 points)",
+    "gamePace": "Methodical defensive battle - 124 combined plays, 536 combined yards. Multiple drives stalled in red zone."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Perfect Environment Execution",
+        "description": "Kinnick Stadium lived up to its reputation. Hostile crowd forced 2 Oregon false starts, disrupted rhythm. Both offenses looked tentative."
+      },
+      {
+        "title": "Red Zone Failures",
+        "description": "Iowa went 1-for-4 in red zone (3 FGs, 1 TD). Oregon went 2-for-3 (1 FG, 2 TDs). Red zone inefficiency kept score suppressed exactly as projected."
+      },
+      {
+        "title": "Elite Defense Dominance",
+        "description": "Both defenses played to their ranking. Oregon held Iowa to 247 yards (season low). Iowa forced 2 turnovers and held Oregon 118 yards below season average."
+      },
+      {
+        "title": "Time of Possession Battle",
+        "description": "Iowa controlled clock (31:46 vs 28:14), limiting total possessions. Fewer possessions = lower scoring = under success."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "34 total points vs 52.0 combined season avg (-18 points, -34.6%)",
+      "vsRecentForm": "34 total points vs 46.3 combined last 3 games (-12.3 points, -26.6%)",
+      "vsPropLine": "-7.5 points below 41.5 total line (-18.1%)",
+      "percentileRanking": "18th percentile scoring game for both teams - bottom quartile"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -115,
+    "clvCents": 5,
+    "clvPercentage": 4.5,
+    "verdict": "Strong positive CLV - line moved toward under as sharp money recognized elite defensive matchup. Market correctly valued environment late."
+  },
+  "keyTakeaways": [
+    "Elite defensive matchups in hostile environments = massive under value",
+    "Red zone inefficiency (Iowa 98th nationally) creates consistent FG opportunities instead of TDs",
+    "Slow-paced teams (Oregon 115th, Iowa 122nd in plays/game) limit variance and favor unders",
+    "Kinnick Stadium night games historically 3.1 points below Vegas totals since 2022",
+    "Proper staking (2.0u) on high-edge total play (+22% edge) maximized profit"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook defensive slugfest played out exactly as projected. Elite defenses + hostile environment + slow pace = dominant under performance."
+}

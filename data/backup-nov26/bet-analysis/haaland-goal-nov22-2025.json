@@ -1,0 +1,111 @@
+{
+  "slug": "haaland-goal-nov22-2025",
+  "player": "Erling Haaland",
+  "team": "Manchester City",
+  "line": "Anytime Goal",
+  "odds": -130,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "0 goals",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "Newcastle vs Manchester City",
+    "date": "2025-11-22",
+    "gameTime": "3:00 PM GMT",
+    "venue": "St James' Park",
+    "finalScore": "Newcastle 2, Man City 1"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 18,
+    "estimatedProbability": 65,
+    "impliedProbability": 56.5,
+    "recentPerformance": {
+      "hitRate": "Scored in 4 consecutive matches",
+      "seasonAverage": "Leading PL in goals",
+      "last5Games": "7 goals in last 5",
+      "cushion": "Elite conversion rate"
+    },
+    "keyFactors": [
+      {
+        "title": "Premier League Top Scorer",
+        "description": "Haaland leading PL in goals, on pace for record season"
+      },
+      {
+        "title": "Recent Form",
+        "description": "Scored in previous 4 matches"
+      },
+      {
+        "title": "Newcastle Set Piece Weakness",
+        "description": "Newcastle conceding from corners and free kicks"
+      },
+      {
+        "title": "City Possession",
+        "description": "Expected to dominate ball and create chances"
+      }
+    ],
+    "riskFactors": [
+      "Newcastle's home form is strong",
+      "City struggling for consistency",
+      "Physical defenders could limit Haaland"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "goals": 0,
+      "shots": 3,
+      "shotsOnTarget": 1,
+      "touches": 28,
+      "minutes": 90
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Newcastle organized, limited Haaland's service"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "City pushed but Haaland well-marked, couldn't convert"
+      }
+    ],
+    "gamePace": "Newcastle controlled tempo effectively",
+    "turningPoint": "Newcastle's 2-0 lead forced City to chase, Haaland isolated"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Newcastle Defense Excellent",
+        "description": "Well-organized backline kept Haaland quiet"
+      },
+      {
+        "title": "Poor Service",
+        "description": "City's midfield couldn't find Haaland in dangerous areas"
+      },
+      {
+        "title": "City's Form",
+        "description": "Overall team struggles affected Haaland's chances"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "0 goals vs 1.3 per game average",
+      "vsPropLine": "Failed to score",
+      "percentileRanking": "Bottom 20% Haaland performances"
+    },
+    "wasNormalVariance": "City's overall form has been poor. Even elite scorers need service, and City couldn't provide it against organized Newcastle."
+  },
+  "closingLineValue": {
+    "ourOdds": -130,
+    "closingOdds": -125,
+    "clvCents": -5,
+    "clvPercentage": -2.0,
+    "verdict": "Slight negative CLV - line moved in our favor but still lost"
+  },
+  "keyTakeaways": [
+    "Even elite scorers can be shut down by organized defenses",
+    "City's overall form affects Haaland's production",
+    "Away matches at hostile venues are riskier",
+    "Team performance matters more than individual talent"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "City's struggles continue. Haaland blanked as Newcastle won 2-1. Poor service and organized defense shut him down."
+}

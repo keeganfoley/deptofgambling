@@ -1,0 +1,144 @@
+{
+  "slug": "stars-ml-nov25-2025",
+  "team": "Dallas Stars",
+  "line": "ML",
+  "odds": 118,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Final: DAL 8, EDM 3",
+  "profit": 118,
+  "gameDetails": {
+    "matchup": "Dallas Stars @ Edmonton Oilers",
+    "date": "2025-11-25",
+    "gameTime": "9:00 PM ET",
+    "venue": "Rogers Place, Edmonton",
+    "finalScore": "DAL 8, EDM 3"
+  },
+  "preGameAnalysis": {
+    "edge": 5,
+    "expectedValue": 10,
+    "estimatedProbability": 48,
+    "impliedProbability": 45.87,
+    "recentPerformance": {
+      "hitRate": "Stars 13-5-4, on 8-game road point streak (5-0-3)",
+      "seasonAverage": "Robertson on 6-game goal streak",
+      "last5Games": "Oettinger playing best hockey of career",
+      "cushion": "Plus money on elite team playing excellent hockey"
+    },
+    "keyFactors": [
+      {
+        "title": "Road Point Streak",
+        "description": "Stars riding 8-game road point streak - elite road team"
+      },
+      {
+        "title": "Robertson Hot Streak",
+        "description": "Jason Robertson on 6-game goal streak - longest since franchise moved to Dallas"
+      },
+      {
+        "title": "Plus Money Value",
+        "description": "Getting +118 on Stars playing this well is rare value"
+      }
+    ],
+    "riskFactors": [
+      "Edmonton at home is dangerous",
+      "Connor McDavid can take over any game",
+      "Back-to-back potential for Stars"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "dallasGoals": 8,
+      "edmontonGoals": 3,
+      "dallasShots": 30,
+      "edmontonShots": 25,
+      "oettingerSaves": 22,
+      "skinnerPulled": "4 goals on 8 shots before being pulled"
+    },
+    "keyPlayers": {
+      "benn": {
+        "goals": 1,
+        "note": "400th career NHL goal - opened scoring 4 mins in. 2nd in franchise history after Modano (557)"
+      },
+      "robertson": {
+        "goals": 1,
+        "assists": 2,
+        "note": "Extended goal streak to 7 games (11 goals) - longest since franchise relocated to Dallas in 1993"
+      },
+      "johnston": {
+        "goals": 1,
+        "assists": 3,
+        "note": "4-point night from 21-year-old star"
+      },
+      "bastian": {
+        "goals": 2,
+        "note": "Depth scoring came through big time"
+      },
+      "skinner": {
+        "note": "Pulled after allowing 4 goals on just 8 shots - disaster for Edmonton"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "description": "Stars struck early and often. Multiple goals established control.",
+        "score": "DAL 3, EDM 1"
+      },
+      {
+        "quarter": "2nd Period",
+        "description": "Dallas continued onslaught. Benn scored 400th career goal. Oilers had no answer.",
+        "score": "DAL 5, EDM 2"
+      },
+      {
+        "quarter": "3rd Period",
+        "description": "Stars poured it on. 8 goals total - complete domination on the road.",
+        "score": "Final: DAL 8, EDM 3"
+      }
+    ],
+    "whenCleared": "Game was effectively over after first period - Stars dominated from puck drop",
+    "gamePace": "Stars controlled tempo throughout - Oilers never found rhythm",
+    "turningPoint": "Fast start from Dallas - Oilers were chasing all game"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Historic Night",
+        "description": "Jamie Benn's 400th goal - milestone moment in franchise history"
+      },
+      {
+        "title": "Robertson Streak Extended",
+        "description": "7-game goal streak now longest since franchise moved to Dallas"
+      },
+      {
+        "title": "Depth Scoring",
+        "description": "Bastian with 2 goals, Johnston with 4 points - everyone contributed"
+      },
+      {
+        "title": "Oettinger Solid",
+        "description": "22 saves, kept Oilers from making any run"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "8 goals vs 3.5 average - more than double",
+      "vsRecentForm": "Best offensive output of season",
+      "vsPropLine": "Won by 5 goals - dominant victory",
+      "percentileRanking": "Top 1% - season-best performance"
+    },
+    "wasNormalVariance": "This exceeded all expectations. 8-3 road win at Edmonton is an outlier performance. Plus money on an elite road team was the right call, but 8 goals was a bonus."
+  },
+  "closingLineValue": {
+    "ourOdds": 118,
+    "closingOdds": 110,
+    "clvCents": 8,
+    "clvPercentage": 3.5,
+    "verdict": "Strong positive CLV - got +118 when line closed at +110. Market moved toward Stars as expected."
+  },
+  "keyTakeaways": [
+    "Plus money on elite road teams is always value",
+    "Jamie Benn 400th goal - historic franchise moment",
+    "Robertson's 7-game goal streak is special",
+    "Stars road point streak extended to 9 games (6-0-3)",
+    "Sometimes you get plus money and win 8-3 - variance goes both ways"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Plus money on elite team playing excellent hockey - this is the formula. Stars validated thesis with historic performance."
+}

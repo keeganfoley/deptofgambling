@@ -8,7 +8,11 @@ import betsData from '@/data/bets.json';
 
 interface DailyData {
   date: string;
-  value: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
 }
 
 interface Bet {
@@ -110,8 +114,8 @@ export default function ChartExporter() {
       });
 
       if (dailyData.length > 0) {
-        const startVal = dailyData[0].value;
-        const endVal = dailyData[dailyData.length - 1].value;
+        const startVal = dailyData[0].open;
+        const endVal = dailyData[dailyData.length - 1].close;
         const pl = endVal - startVal;
         const wins = bets.filter(b => b.result === 'win').length;
         const rate = bets.length > 0 ? (wins / bets.length) * 100 : 0;
@@ -142,48 +146,22 @@ export default function ChartExporter() {
       const candleData: CandlestickData[] = [];
       const volumeData: HistogramData[] = [];
 
-      dailyData.forEach((day, index) => {
-        const prevValue = index > 0 ? dailyData[index - 1].value : day.value;
-        const currentValue = day.value;
+      dailyData.forEach((day) => {
         const dayBets = betsByDate.get(day.date) || [];
-
-        let high = Math.max(prevValue, currentValue);
-        let low = Math.min(prevValue, currentValue);
-
-        if (dayBets.length > 0) {
-          let runningValue = prevValue;
-          let maxValue = prevValue;
-          let minValue = prevValue;
-
-          dayBets.forEach(bet => {
-            runningValue += bet.profit;
-            maxValue = Math.max(maxValue, runningValue);
-            minValue = Math.min(minValue, runningValue);
-          });
-
-          high = Math.max(high, maxValue);
-          low = Math.min(low, minValue);
-        } else {
-          const range = Math.abs(currentValue - prevValue);
-          const wickSize = range * 0.15 || 15;
-          high = Math.max(prevValue, currentValue) + wickSize;
-          low = Math.min(prevValue, currentValue) - wickSize;
-        }
-
-        const change = currentValue - prevValue;
+        const change = day.close - day.open;
         const totalStake = dayBets.reduce((sum, bet) => sum + bet.stake, 0);
 
         candleData.push({
           time: day.date as Time,
-          open: prevValue,
-          high: high,
-          low: low,
-          close: currentValue,
+          open: day.open,
+          high: day.high,
+          low: day.low,
+          close: day.close,
         });
 
         volumeData.push({
           time: day.date as Time,
-          value: totalStake * 50,
+          value: totalStake * 50 || day.volume * 50,
           color: change >= 0 ? 'rgba(63, 185, 80, 0.5)' : 'rgba(248, 81, 73, 0.5)',
         });
       });

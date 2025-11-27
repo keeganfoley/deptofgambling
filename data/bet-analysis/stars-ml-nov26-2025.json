@@ -1,0 +1,129 @@
+{
+  "slug": "stars-ml-nov26-2025",
+  "team": "Dallas Stars",
+  "line": "DALLAS STARS ML",
+  "odds": -150,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Won 3-2",
+  "profit": 66.67,
+  "gameDetails": {
+    "matchup": "Dallas Stars vs Seattle Kraken",
+    "date": "November 26, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Climate Pledge Arena, Seattle, WA",
+    "finalScore": "Stars 3, Kraken 2"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 11,
+    "estimatedProbability": 63,
+    "impliedProbability": 60,
+    "recentPerformance": {
+      "hitRate": "Stars on hot streak",
+      "seasonAverage": "Offensive firepower clicking",
+      "last5Games": "Coming off 8-3 demolition of Edmonton",
+      "cushion": "Momentum factor in play"
+    },
+    "keyFactors": [
+      {
+        "title": "Momentum From Edmonton Blowout",
+        "description": "Stars destroyed the Oilers 8-3 the night before. Team confidence at all-time high. Offensive rhythm locked in."
+      },
+      {
+        "title": "Offensive Firepower Clicking",
+        "description": "Nathan Bastian had 2 goals, Wyatt Johnston had a goal and 3 assists vs Edmonton. Entire team contributing."
+      },
+      {
+        "title": "Seattle Home Struggles",
+        "description": "Kraken have been inconsistent at Climate Pledge Arena. Not getting the home ice advantage expected."
+      },
+      {
+        "title": "Value at -150",
+        "description": "Fair price was around -145. Slight value on a hot team with momentum edge."
+      }
+    ],
+    "riskFactors": [
+      "Back-to-back games - fatigue factor",
+      "Road game after emotional win",
+      "Seattle capable of upset at home",
+      "NHL is unpredictable game-to-game"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "goals": 3,
+      "shots": 29,
+      "powerPlayGoals": 0,
+      "thirdPeriodGoals": 1
+    },
+    "keyPlayers": {
+      "vladislavKolyachonok": {
+        "goals": 1,
+        "note": "Defenseman scored first goal of the season with 5:44 left - the game winner"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "description": "Tight checking, minimal scoring chances for both teams. Stars took early 1-0 lead. Physical, low-event period.",
+        "score": "Stars 1-0"
+      },
+      {
+        "quarter": "2nd Period",
+        "description": "Both teams traded goals. Kraken tied it, Dallas regained lead, Seattle answered again. Game remained close and competitive.",
+        "score": "Tied going to third"
+      },
+      {
+        "quarter": "3rd Period",
+        "description": "VLADISLAV KOLYACHONOK broke the tie with 5:44 remaining. His first goal of the season proved to be the game-winner. Stars held on for narrow 3-2 victory.",
+        "score": "Stars 3-2 (Final)"
+      }
+    ],
+    "whenCleared": "Game-winning goal came with 5:44 left in third. Stars held on through final 5+ minutes.",
+    "gamePace": "Low-scoring, tight-checking game. Opposite of the 8-3 blowout vs Edmonton but Stars found a way."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Momentum Carried Over",
+        "description": "Despite back-to-back, the confidence from the Edmonton blowout translated. Team believed they could win."
+      },
+      {
+        "title": "Unlikely Hero Emerged",
+        "description": "Vladislav Kolyachonok, a defenseman with his first goal of the season, scored the game-winner. Good teams find ways."
+      },
+      {
+        "title": "Close-Game Execution",
+        "description": "After blowing out Edmonton 8-3, Stars showed they could win a grind-it-out 3-2 game too. Two styles, two wins."
+      },
+      {
+        "title": "Energy Management on Back-to-Back",
+        "description": "Despite playing the night before, Dallas maintained enough energy to win a tight road game. Championship-level depth."
+      }
+    ],
+    "statisticalContext": {
+      "shotDifferential": "+3 (29-26)",
+      "margin": "Won by 1 goal - needed every bit",
+      "backToBackNote": "Won both games of back-to-back (8-3 vs EDM, 3-2 vs SEA)"
+    },
+    "wasNormalVariance": "Gutsy road win on a back-to-back. Could have gone either way - Kolyachonok's unlikely goal was the difference. But hot teams make their own luck."
+  },
+  "closingLineValue": {
+    "ourOdds": -150,
+    "closingOdds": -155,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Slight positive CLV. Line moved toward Stars as market recognized the momentum factor."
+  },
+  "keyTakeaways": [
+    "Teams on hot streaks carry momentum even on back-to-backs",
+    "Trust the process when offense is clicking",
+    "Good teams find ways to win close games",
+    "Unlikely heroes emerge when confidence is high",
+    "Kolyachonok's first goal of season was game-winner",
+    "Different game style (3-2 grinder vs 8-3 blowout) but same result: W"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Gutsy road win on a back-to-back. Stars showed championship mentality - can win blowouts (8-3) and grinders (3-2). Kolyachonok's unlikely hero moment was the difference. Trust hot teams."
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "timberwolves-spread-1-nov26-2025",
+  "team": "Minnesota Timberwolves",
+  "line": "MINNESOTA TIMBERWOLVES +10.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Lost by 8 (Covered)",
+  "profit": 190.48,
+  "gameDetails": {
+    "matchup": "Minnesota Timberwolves vs Oklahoma City Thunder",
+    "date": "November 26, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Paycom Center, Oklahoma City, OK",
+    "finalScore": "Thunder 113, Timberwolves 105"
+  },
+  "preGameAnalysis": {
+    "edge": 9,
+    "expectedValue": 18,
+    "estimatedProbability": 58,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "Double-digit dogs covering well in NBA",
+      "seasonAverage": "Wolves playoff-caliber team despite record",
+      "last5Games": "Competitive in tough matchups",
+      "cushion": "10.5 is massive spread for quality opponent"
+    },
+    "keyFactors": [
+      {
+        "title": "Inflated Line Due to Public Perception",
+        "description": "OKC's 17-1 start created public overreaction. Thunder became media darlings and line inflated beyond true value."
+      },
+      {
+        "title": "10.5 Points is Massive for Playoff Team",
+        "description": "Minnesota is a playoff-caliber opponent with Anthony Edwards. Double-digit spreads rarely hold against quality competition."
+      },
+      {
+        "title": "Thunder on Back-to-Back",
+        "description": "OKC playing second night of back-to-back after road game. Fatigue factor works against home team."
+      },
+      {
+        "title": "Sharp Money Movement",
+        "description": "Professional money moved line from +11 to +10.5. Sharps backing Wolves despite public hammering Thunder."
+      }
+    ],
+    "riskFactors": [
+      "OKC is best team in the league",
+      "Wolves away from home with worse record (5-6)",
+      "SGA can take over any game",
+      "Thunder 9-0 at home this season"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 105,
+      "fieldGoalPct": "41%",
+      "threePtPct": "46%",
+      "rebounds": 44,
+      "turnovers": 16
+    },
+    "keyPlayers": {
+      "anthonyEdwards": {
+        "points": 31,
+        "rebounds": 8,
+        "note": "Kept Wolves in game with dominant scoring performance"
+      },
+      "shaiGilgeousAlexander": {
+        "points": 28,
+        "note": "Extended his 20+ point streak to 91 games (3rd longest ever)"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Thunder started strong at home. Built early lead but Wolves stayed within striking distance. Edwards aggressive from the start.",
+        "score": "Thunder led"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Back and forth. Minnesota's three-point shooting kept them in it (finished 46% from deep). Competitive first half.",
+        "score": "Thunder led"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Wolves defense tightened. Edwards continued his dominant performance. Game stayed within range for cover.",
+        "score": "Thunder led by single digits"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Game was within 5 with 2 minutes left. Thunder outscored Minnesota 8-1 in final 60 seconds to pad margin, but only 8-point final loss.",
+        "score": "Thunder 113-105 (Final)"
+      }
+    ],
+    "whenCleared": "Covered with final score 113-105 (8-point loss, needed +10.5)",
+    "gamePace": "Moderate pace. Both teams competed hard. Wolves' 46% three-point shooting was key to staying competitive."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Anthony Edwards Delivered",
+        "description": "31 points and 8 rebounds. Edwards was the engine that kept Wolves competitive against the league's best team."
+      },
+      {
+        "title": "Three-Point Shooting Kept It Close",
+        "description": "46% from three (despite 41% overall FG%) was the difference maker. Hit enough threes to stay within the number."
+      },
+      {
+        "title": "Line Was Indeed Inflated",
+        "description": "Market overreacted to OKC's hot start. Final 8-point margin proved 10.5 was too many points."
+      },
+      {
+        "title": "Professional Money Was Right",
+        "description": "Sharp movement from +11 to +10.5 indicated this was a solid play. Covered by 2.5 points."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+2.5 points (lost by 8, had +10.5)",
+      "turnovers": "16 turnovers hurt but three-point shooting compensated",
+      "freeThrows": "22-37 (59%) - could have covered by more with better FT shooting"
+    },
+    "wasNormalVariance": "This was edge realization, not luck. The model correctly identified that 10.5 points was too many for a playoff-caliber opponent. Edwards' 31 points was within his range and the Wolves competed as expected."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 1.2,
+    "verdict": "Positive CLV. Got slightly better number as line moved toward Wolves. Sharp action validated."
+  },
+  "keyTakeaways": [
+    "Double-digit dogs against elite teams in NBA are often overpriced",
+    "Public loves betting favorites, creating value on quality underdogs",
+    "Anthony Edwards is a star who can keep any team competitive",
+    "Sharp money movement from +11 to +10.5 was the tell",
+    "OKC's 17-1 start created inflated public perception",
+    "Market corrections happen during the game - this was one of them"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Model identified inflated line, sharps confirmed the edge, and Wolves covered by 2.5 points. Edwards' 31 points kept it close. This is exactly the type of play we target."
+}

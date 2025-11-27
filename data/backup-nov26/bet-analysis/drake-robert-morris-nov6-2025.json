@@ -1,0 +1,138 @@
+{
+  "slug": "drake-robert-morris-nov6-2025",
+  "player": "Drake vs Robert Morris",
+  "line": "UNDER 150.5 total points",
+  "odds": -105,
+  "stake": 2.0,
+  "result": "loss",
+  "finalStat": "160 points (OT)",
+  "profit": -200.00,
+  "gameDetails": {
+    "matchup": "Drake vs Robert Morris",
+    "date": "November 6, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Knapp Center (Drake Home)",
+    "finalScore": "Robert Morris 81, Drake 79 (OT)"
+  },
+  "preGameAnalysis": {
+    "edge": 20,
+    "expectedValue": 37.5,
+    "estimatedProbability": 72,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "Drake over 150.5 only 4 of 31 games (12.9%)",
+      "seasonAverage": "Drake: 128.7 PPG (21.8 below line)",
+      "last3Games": "Drake 1-0 (Won 77-71 vs Northern Arizona, 148 total)",
+      "cushion": "Combined average 146.8 = 3.7 points below line"
+    },
+    "keyFactors": [
+      {
+        "title": "Drake's Dead-Last Tempo (364th Nationally)",
+        "description": "KenPom Adjusted Tempo: 364th (DEAD LAST in Division I). 59.4 possessions per 40 minutes. Offensive possession length: 21.9 seconds (extremely methodical). Half-court, set defense, maximize efficiency over volume."
+      },
+      {
+        "title": "Drake's Elite Defense (2nd Nationally)",
+        "description": "Drake defensive: 58.9 PPG allowed (2nd best in nation). Allowed 81 points in game (22.1 PPG above average) due to coaching change. Historic defensive identity suggested low-scoring game."
+      },
+      {
+        "title": "Massive Historical Under Trend",
+        "description": "Drake total average: 128.7 points per game (21.8 below 150.5 line). Drake over 150.5 rate: Only 4 of 31 games (12.9%). Combined season average: 146.8 points (3.7 below line). Expected 135-145 total points."
+      },
+      {
+        "title": "Home Court Tempo Control",
+        "description": "Drake home court advantage: Drake dictates tempo at Knapp Center. Expected 60-65 total possessions. Fewer possessions = fewer points. Historical data: Drake's pace drastically lowered opponent scoring."
+      },
+      {
+        "title": "Robert Morris Expected Volume",
+        "description": "Robert Morris offensive: 77.0 PPG (90th). Robert Morris defensive: 71.0 PPG allowed (147th). Robert Morris total average: 148.0 points per game (2.5 below line). Robert Morris over 150.5 rate: 15 of 35 games (42.9%)."
+      }
+    ],
+    "riskFactors": [
+      "Coaching change (Eric Henderson replaced Ben McCollum who left for Iowa) - system transition could impact defense",
+      "Robert Morris capable of pushing pace despite Drake's tempo control",
+      "Overtime possibility (though unpredictable)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "drakeQuinn": "Jalen Quinn 20 pts",
+      "drakeFederiko": "Okku Federiko 18 pts/15 reb/3 blks",
+      "robertMorrisChitikoudis": "Nikolaos Chitikoudis 18 pts/10 reb",
+      "robertMorrisGoode": "DeSean Goode 13 pts/10 reb",
+      "drakeFG": "Drake shooting %",
+      "robertMorrisFG": "Robert Morris shooting %"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Robert Morris 40, Drake 35 (75 total). High pace in 1st half (on pace for 150 total). Drake's defensive identity less dominant than expected.",
+        "score": "75 points (high)",
+        "halftimeTotal": "On pace for 150 total (borderline)"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Robert Morris 28, Drake 33 (61 total, slower). Pace controlled better in 2nd half. Both teams on track for Under win with regulation total 136.",
+        "score": "2nd half: 61 points"
+      },
+      {
+        "quarter": "Regulation End",
+        "description": "Tied 68-68 at end of regulation. Okku Federiko blocked Robert Morris 3-point attempt at buzzer (forced OT). Regulation total: 136 points (Under by 14.5).",
+        "score": "Regulation: 136 total (UNDER ✓)"
+      },
+      {
+        "quarter": "Overtime",
+        "description": "Robert Morris 13, Drake 11 (24 OT points). High-scoring OT pushed total well over. Darius Livingston's driving layup with 1:00 left sealed win. Chitikoudis 4 OT points.",
+        "score": "OT: 24 points (high)"
+      }
+    ],
+    "whenMissed": "Under won easily in regulation (136 total, Under by 14.5). Overtime forced by last-second block (50/50 play). 24 OT points (above 8-12 typical OT average) pushed final to 160 (Over by 9.5).",
+    "gamePace": "176 total points actual vs. expected 135-145. Overtime added 5 minutes and 24 points (~18% increase from regulation). Higher than expected 1st half pace (75 points) but controlled in 2nd half.",
+    "foulTrouble": "No significant foul trouble. Coaching change impact: New coach Eric Henderson (Ben McCollum left for Iowa). Drake's defensive identity less dominant (allowed 81 vs. 58.9 season average) - system transition reduced effectiveness by 22.1 PPG."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Overtime Variance (PRIMARY FACTOR)",
+        "description": "Federiko's buzzer-beater block forced OT (50/50 play). Regulation score favored Under (136 total, won by 14.5). 24 OT points added (~18% increase). High-scoring OT (typical OT averages 8-12 combined points)."
+      },
+      {
+        "title": "Coaching Change Impact",
+        "description": "New coach Eric Henderson (Ben McCollum left for Iowa). Drake's defensive identity less dominant (allowed 81 vs. 58.9 season average). System transition reduced defensive effectiveness by 22.1 PPG."
+      },
+      {
+        "title": "Robert Morris Offensive Efficiency",
+        "description": "Shot well enough to reach 81 points on road. Exceeded expectations (77.0 PPG average). Chitikoudis (18/10) and Goode (13/10) provided consistent scoring. 4 OT points from Chitikoudis crucial."
+      },
+      {
+        "title": "Higher Than Expected 1st Half Pace",
+        "description": "1st half: 75 points (on pace for 150 total). Despite Drake's slow reputation (364th tempo), Robert Morris pushed tempo successfully in 1st half. Game featured more possessions than projected (60-65)."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+31.3 points (+21.7% above Drake's 128.7 avg)",
+      "vsRecentForm": "+12 points above combined average (146.8)",
+      "vsPropLine": "+9.5 points (OVER by 6.3%)",
+      "percentileRanking": "Regulation within range (136), OT pushed to extreme"
+    },
+    "wasNormalVariance": "Bad beat, not analytical failure. The Under bet had strong statistical foundation: (1) Drake's 21.8 PPG below line historically (87.1% under rate), (2) Combined season average 3.7 below line, (3) Drake's dead-last tempo (364th) guaranteed fewer possessions, (4) Regulation total was 136 (Under won by 14.5). Unpredictable factors: Overtime forced by last-second block (variance), coaching change altered Drake's elite defensive identity (58.9 to 81 PPG allowed), high-scoring OT (24 points vs. typical 8-12). The 150.5 line correctly anticipated low-scoring regulation but couldn't account for OT variance."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -110,
+    "clvCents": 5,
+    "clvPercentage": 0.99,
+    "verdict": "Minimal CLV (+5 cents). Line moved slightly toward Under as market recognized Drake's elite tempo control. Process was sound even though OT created catastrophic variance."
+  },
+  "keyTakeaways": [
+    "Drake's dead-last tempo (364th) strongly supported Under - process was sound",
+    "Regulation proved analysis correct (136 total, Under won by 14.5 points)",
+    "Overtime variance is UNPREDICTABLE - 50/50 buzzer-beater block forced extra period",
+    "High-scoring OT (24 points vs. typical 8-12) created bad beat scenario",
+    "Coaching changes matter significantly - Drake's defense allowed 22.1 PPG above average",
+    "In 40-minute games, this Under wins 70-75% of the time based on tempo/historical data",
+    "Bad beat ≠ bad process: 20.8% edge with 72% true probability was excellent value",
+    "Stake sizing (2.0 units on 20.8% edge) was appropriate given massive historical edge"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Classic bad beat. Process was sound with massive edge (20.8%) and strong historical foundation (Drake 87.1% under rate, dead-last tempo). Regulation total (136) validated analysis perfectly. Lost exclusively to overtime variance (last-second block + high-scoring 24-point OT). In 40-minute games, this bet wins 70-75% of the time. Would absolutely bet again under identical circumstances - cannot predict overtime buzzer-beater blocks."
+}

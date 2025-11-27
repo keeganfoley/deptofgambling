@@ -1,0 +1,129 @@
+{
+  "slug": "jokic-rebounds-nov7-2025",
+  "player": "Nikola Jokić",
+  "line": "UNDER 12.5 rebounds",
+  "odds": -105,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "9 rebounds",
+  "profit": -150.00,
+  "gameDetails": {
+    "matchup": "Denver Nuggets vs Golden State Warriors",
+    "date": "November 7, 2025",
+    "gameTime": "10:00 PM ET",
+    "venue": "Ball Arena (Denver, CO - 5,280 ft altitude)",
+    "finalScore": "Nuggets 129, Warriors 104"
+  },
+  "preGameAnalysis": {
+    "edge": 14,
+    "expectedValue": 27.3,
+    "estimatedProbability": 65,
+    "impliedProbability": 51.22,
+    "recentPerformance": {
+      "hitRate": "6 of 7 games over 12.5 (85.7%)",
+      "seasonAverage": "13.4 RPG (top-5 in NBA)",
+      "last3Games": "15 vs MIA, 19 vs MIN, 12 vs NOP in triple-doubles",
+      "cushion": "+0.9 rebounds above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Triple-Double Machine",
+        "description": "Recorded triple-doubles in 5 of first 7 games to start season, including 4 consecutive. Only one game below 12.5 rebounds (7 vs SAC on Nov 4)."
+      },
+      {
+        "title": "Recent Rebounding Explosion",
+        "description": "15 rebounds vs Miami (Nov 5), then 19 vs Minnesota in triple-doubles. Averaging 14.0 RPG per 36 minutes."
+      },
+      {
+        "title": "Previous Warriors Matchup",
+        "description": "Grabbed 13 rebounds vs Golden State in season opener (Oct 23 overtime loss), suggesting this opponent wouldn't limit production."
+      },
+      {
+        "title": "Covers.com Featured Play",
+        "description": "Highlighted as top NBA prop for Nov 7, noting 13.4 RPG average and dominance vs Warriors. DraftKings offered triple-double at -111 odds (52.61% implied)."
+      }
+    ],
+    "riskFactors": [
+      "Warriors missing Curry (illness 2nd consecutive game) could lead to blowout",
+      "Denver's home altitude (5,280 ft) creates fatigue for opponents - potential blowout",
+      "Elite efficiency could limit total possessions/rebounds available"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rebounds": 9,
+      "points": 26,
+      "assists": 9,
+      "fieldGoals": "12-15 (80.0%)",
+      "threePointers": "2-3 (66.7%)",
+      "freeThrows": "0-0",
+      "minutes": 28,
+      "blocks": 1,
+      "trueShooting": "86%"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Denver jumped to 18-6 early lead. Jokić dominated with elite efficiency, grabbing boards on both ends."
+      },
+      {
+        "quarter": "Q2",
+        "description": "Nuggets shot absurd 56.1% FG, 48.5% from three in first half. Extended to 66-49 halftime lead (17 points). Jokić on pace for triple-double."
+      },
+      {
+        "quarter": "Q3",
+        "description": "Ballooned to 99-77 after three quarters (22-point lead). Game became non-competitive. Jokić reached 9 rebounds, 1 shy of expected pace."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Sat entire fourth quarter as bench absorbed minutes. Missing 8-10 minutes cost 3-4 rebounds at his season pace. Jonas Valančiūnas contributed in absence."
+      }
+    ],
+    "whenMissed": "Never reached 10+ rebounds. Missing entire Q4 (8-10 minutes) cost 3-4 boards at his 14.0 per-36 pace.",
+    "gamePace": "Denver's elite efficiency (56.1% FG) limited total possessions. Warriors went cold (42.1% FG overall). Reduced rebound opportunities.",
+    "foulTrouble": "No fouls - zero foul trouble. Simply pulled due to 25-point blowout."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "25-Point Blowout Killed Minutes",
+        "description": "Sat entire fourth quarter - approximately 8-10 minutes missing. At 14.0 rebounds per 36 minutes pace, lost 3-4 critical boards. Missed line by 3.5 rebounds."
+      },
+      {
+        "title": "Too Efficient for Own Good",
+        "description": "80% shooting (12-15 FG) with 86% true shooting percentage so dominant that game became non-competitive by Q3. Efficiency paradox struck again."
+      },
+      {
+        "title": "Warriors Fatigued",
+        "description": "Playing 5th consecutive road game, 3-in-4 nights schedule. Altitude (5,280 ft) compounded exhaustion. Without Curry, couldn't keep pace."
+      },
+      {
+        "title": "One Rebound from Triple-Double",
+        "description": "Finished 26-9-9 - one board and one assist shy of sixth triple-double. Normal fourth quarter would have easily achieved both."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-4.4 rebounds (-32.8% below 13.4 RPG average)",
+      "vsRecentForm": "-6 to -10 rebounds below 15-19 RPG recent games",
+      "vsPropLine": "-3.5 rebounds (-28.0% below 12.5 line)",
+      "percentileRanking": "Per-minute pace: 11.6 rebounds per 36 - only slightly below season 14.0 pace. Not statistical anomaly."
+    },
+    "wasNormalVariance": "No - pure game script. Rebounding rate (11.6 per 36) nearly on pace. If played typical 34-36 minutes in competitive game, almost certainly finishes with 12-14 rebounds."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -105,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV. Every available metric supported OVER - 13.4 RPG, favorable matchup, home altitude, historical success vs Warriors. No amount of line shopping predicts 25-point blowout."
+  },
+  "keyTakeaways": [
+    "Blowouts are ultimate prop killer - even best analysis can't predict 25-point victories",
+    "Elite efficiency (80% FG, 86% TS%) creates blowouts that bench stars early",
+    "Missing 8-10 minutes = missing 3-4 rebounds at Jokić's pace. Math is cruel.",
+    "One rebound from triple-double (26-9-9) - normal game flow and he crushes OVER",
+    "Right process, wrong outcome - can't predict game script shifts this severe"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Classic bad beat. Fundamentally sound based on 13.4 RPG average, 85.7% hit rate over 12.5, favorable matchup, home altitude. Lost purely to 25-point blowout cutting minutes. No analysis predicts this."
+}

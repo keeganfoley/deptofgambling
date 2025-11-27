@@ -1,0 +1,130 @@
+{
+  "slug": "randle-nov5-2025",
+  "player": "Julius Randle",
+  "line": "OVER 20.5 points",
+  "odds": -118,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "32 points",
+  "profit": 127.12,
+  "gameDetails": {
+    "matchup": "Minnesota Timberwolves @ New York Knicks",
+    "date": "November 5, 2025",
+    "gameTime": "7:30 PM ET",
+    "venue": "Madison Square Garden",
+    "finalScore": "Knicks 137, Timberwolves 114"
+  },
+  "preGameAnalysis": {
+    "edge": 17,
+    "expectedValue": 31.9,
+    "estimatedProbability": 68,
+    "impliedProbability": 54.15,
+    "recentPerformance": {
+      "hitRate": "5 of 7 games (71.4%)",
+      "seasonAverage": "26.0 PPG",
+      "last3Games": "27.3 PPG",
+      "cushion": "+5.5 points above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Revenge Game Motivation",
+        "description": "First return to MSG since October 2 trade. Randle played 5 seasons for Knicks (2019-2024), 3x All-Star, 2021 Most Improved Player. Pre-game quote from Josh Hart: 'Julius is going to try to come in and kick our [butt].'"
+      },
+      {
+        "title": "Favorable Matchup",
+        "description": "Knicks allow most catch-and-shoot 3-pointers to power forwards (12.6 per game). Randle averaged 3.6 catch-and-shoot attempts per game."
+      },
+      {
+        "title": "Anthony Edwards Limited",
+        "description": "Edwards returning from 4-game absence (hamstring), questionable. Projected to be ineffective, increasing Randle's usage rate."
+      },
+      {
+        "title": "High-Pace Game",
+        "description": "Game total set at 229.5 points. More possessions = more scoring opportunities."
+      }
+    ],
+    "riskFactors": [
+      "Back-to-back situation (Game 2 of 2)",
+      "Emotional pressure of revenge game could backfire",
+      "Knicks solid defense (6th in points allowed)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "points": 32,
+      "fieldGoals": "12-21 (57.1%)",
+      "threePointers": "3-8 (37.5%)",
+      "freeThrows": "5-5 (100%)",
+      "rebounds": 5,
+      "assists": 2,
+      "minutes": 38,
+      "plusMinus": -25
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "The first quarter belonged to Julius Randle. Aggressive from opening tip, set tone with efficient scoring.",
+        "estimatedPoints": "8-10"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Scored on alley-oop from DiVincenzo in final seconds. Timberwolves led 58-54 at halftime.",
+        "estimatedPoints": "8-10",
+        "halftimeTotal": "18 points (already cleared the line)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Knicks opened with 10-0 run, outscored Wolves 40-28 in quarter. Randle continued scoring efficiently.",
+        "estimatedPoints": "8-10"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Knicks dominated 43-28. Randle remained efficient (6-11 shooting in 2nd half), played 38 minutes despite blowout.",
+        "estimatedPoints": "6-8"
+      }
+    ],
+    "whenCleared": "By halftime (18 points, 2.5 away from line). Cleared early Q3.",
+    "gamePace": "251 total points (crushed 229.5 over/under by 21.5 points)"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Revenge Game Delivered",
+        "description": "'The first quarter belonged to Julius Randle' - immediate impact. 18 points by halftime (already near line). Emotional fuel translated to performance."
+      },
+      {
+        "title": "Favorable Matchup Exploited",
+        "description": "Shot 57.1% FG overall, 3-8 from three (37.5%). OG Anunoby couldn't contain Randle."
+      },
+      {
+        "title": "No Foul Trouble",
+        "description": "Only 2 fouls, played 38 minutes freely. Game stayed competitive through 3 quarters."
+      },
+      {
+        "title": "Line Was Too Low",
+        "description": "20.5 vs 26.0 PPG season average (5.5 cushion). Cleared line by halftime."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "+6.0 points (+23.1% above 26.0 PPG average)",
+      "vsRecentForm": "+4.7 points (+17.2% above 27.3 PPG last 3 games)",
+      "vsPropLine": "+11.5 points (+56.1% above 20.5 line)",
+      "percentileRanking": "Top 25th percentile of season (3rd-highest scoring game)"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -118,
+    "closingOdds": -118,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Neutral CLV - bet was fairly priced by market. Edge came from revenge game narrative and statistical analysis, not line shopping."
+  },
+  "keyTakeaways": [
+    "When prop line is 5+ points below season average AND revenge game narrative AND favorable matchup = exceptional value",
+    "Revenge games are real - validated by performance",
+    "Workhorse players (35+ MPG) less affected by back-to-backs",
+    "Perfect alignment of pre-game analysis and outcome",
+    "Textbook example of value betting"
+  ],
+  "wouldBetAgain": true
+}

@@ -202,3 +202,8 @@ button:active {
   font-size: 0.875rem;
   color: #0A1F44;
 }
+
+/* Fund logo filters - colorize Vector logo to teal #0d9488 */
+.logo-teal {
+  filter: brightness(0) saturate(100%) invert(42%) sepia(93%) saturate(401%) hue-rotate(131deg) brightness(93%) contrast(89%);
+}

@@ -1,0 +1,149 @@
+{
+  "slug": "pelicans-spread-nov26-2025",
+  "team": "New Orleans Pelicans",
+  "line": "NEW ORLEANS PELICANS +3.5",
+  "odds": -110,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "Lost by 5 (OT)",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Memphis Grizzlies vs New Orleans Pelicans",
+    "date": "November 26, 2025",
+    "gameTime": "8:00 PM ET",
+    "venue": "Smoothie King Center, New Orleans, LA",
+    "finalScore": "Grizzlies 133, Pelicans 128 (OT)"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 12,
+    "estimatedProbability": 54,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "Home dogs covering well this season",
+      "seasonAverage": "Pelicans competitive at home",
+      "last5Games": "Mixed results but fighting hard",
+      "cushion": "3.5 points felt generous"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Court Advantage",
+        "description": "Pelicans at Smoothie King Center where they've been competitive. Home crowd provides energy boost, especially in close games."
+      },
+      {
+        "title": "Zion Williamson Factor",
+        "description": "When healthy, Zion provides dominant interior presence. His ability to finish at the rim and draw fouls keeps Pelicans in games."
+      },
+      {
+        "title": "Grizzlies Road Struggles",
+        "description": "Memphis has been inconsistent on the road. Young team can be prone to lapses in focus in hostile environments."
+      },
+      {
+        "title": "3.5 Points Too Many",
+        "description": "For a home team with talent, getting nearly a full possession felt like value. Expected a competitive game."
+      }
+    ],
+    "riskFactors": [
+      "Pelicans dealing with multiple injuries throughout roster",
+      "Memphis has Jaren Jackson Jr. playing at All-NBA level",
+      "Zach Edey's size creates matchup problems",
+      "Ja Morant's explosiveness can take over games"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 128,
+      "fieldGoalPct": "48%",
+      "threePtPct": "42%",
+      "rebounds": 38,
+      "assists": 25
+    },
+    "keyPlayers": {
+      "joseAlvarado": {
+        "points": 24,
+        "threePointers": 6,
+        "note": "Career-type performance, especially in first half with 18 points"
+      },
+      "saddiqBey": {
+        "points": 18,
+        "rebounds": 10,
+        "note": "Double-double effort"
+      },
+      "zionWilliamson": {
+        "points": 17,
+        "note": "Hit miraculous scoop shot with 0.9 seconds to force OT"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Pelicans started hot. Jose Alvarado caught fire from deep. Built early momentum at home.",
+        "score": "Pelicans led"
+      },
+      {
+        "quarter": "Q2",
+        "description": "Alvarado continued his explosion with 18 first-half points. Pelicans built commanding 68-53 lead at halftime.",
+        "score": "68-53 Pelicans",
+        "halftimeNote": "15-point halftime lead looked dominant"
+      },
+      {
+        "quarter": "Q3",
+        "description": "DISASTER. Grizzlies came out of halftime with 13-2 run. Memphis completely flipped the script with intensity and defense.",
+        "score": "Grizzlies surged back"
+      },
+      {
+        "quarter": "Q4",
+        "description": "Back and forth battle. Pelicans clawed back. Zion hit heroic driving scoop with 0.9 seconds left to tie at 122 and force OT.",
+        "score": "Tied 122-122"
+      },
+      {
+        "quarter": "OT",
+        "description": "Memphis dominated extra period 11-6. Zach Edey took over. Pelicans ran out of gas after regulation effort.",
+        "score": "Grizzlies 133-128 (Final)"
+      }
+    ],
+    "whenCleared": "N/A - Did not cover",
+    "gamePace": "High-scoring affair with 261 total points. Both teams pushed tempo.",
+    "edeyDominance": "Grizzlies were +39 during Zach Edey's 35 minutes on court. His presence was game-changing."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Third Quarter Collapse",
+        "description": "Led by 15 at halftime, then allowed 13-2 run to start the third. Complete defensive breakdown let Memphis back in."
+      },
+      {
+        "title": "Overtime Fatigue",
+        "description": "After fighting back to force OT, Pelicans had nothing left. Outscored 11-6 in extra period."
+      },
+      {
+        "title": "Zach Edey Matchup Nightmare",
+        "description": "No answer for Edey's size. His +39 on/off differential was staggering. Grizzlies dominated with him on the floor."
+      }
+    ],
+    "statisticalContext": {
+      "marginOfCover": "Missed spread by 1.5 points (lost by 5, needed +3.5)",
+      "regulationResult": "Would have WON in regulation (tied 122-122)",
+      "overtimeImpact": "OT losses are brutal for spread bettors - the extra period killed us"
+    },
+    "wasNormalVariance": "Brutal variance. Right read on the game being competitive. Led by 15, forced OT on heroic shot, but couldn't close. Lost by 5 in OT, missing cover by 1.5 points. Sometimes you do everything right and still lose."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held steady. Market agreed this was a fair price. No edge lost or gained on line movement."
+  },
+  "keyTakeaways": [
+    "OT games are variance nightmares for spread bettors",
+    "Would have covered in regulation - lost specifically because of overtime",
+    "Led by 15 at halftime - initial read was correct",
+    "Zion's heroic shot forced OT but couldn't finish in extra period",
+    "Zach Edey's dominance (+39 on/off) was the difference maker",
+    "Third quarter collapses after big halftime leads are brutal",
+    "Sometimes the right side loses - that's variance"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Right side, wrong result. Led by 15, forced OT on Zion heroics, lost in extra period by 1.5 points more than the spread. Variance loss, not process failure."
+}

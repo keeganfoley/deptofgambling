@@ -72,13 +72,15 @@ function StatCard({ label, value, subLabel, subValue, colorClass = 'text-primary
 export default function PortfolioStatus() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  const balance = portfolioData.balance;
-  const startingBalance = portfolioData.startingBalance;
-  const netPL = portfolioData.netPL;
-  const roi = portfolioData.roi;
-  const record = portfolioData.record;
-  const winRate = portfolioData.winRate;
-  const unitsWon = portfolioData.unitsWon;
+  const combined = portfolioData.combined;
+  const balance = combined.balance;
+  const startingBalance = combined.startingBalance;
+  const netPL = combined.netPL;
+  const roi = combined.roi;
+  const record = combined.record;
+  const winRate = combined.winRate;
+  const unitsWon = combined.unitsWon;
+  const sharpe = combined.sharpe as number | null;
   const asOfDate = portfolioData.asOfDate;
 
   return (
@@ -87,10 +89,10 @@ export default function PortfolioStatus() {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary mb-4">
-            PORTFOLIO STATUS
+            COMBINED PORTFOLIO
           </h2>
           <p className="text-text-muted text-base sm:text-lg font-normal">
-            As of {formatDate(asOfDate)}
+            Total AUM across all funds • As of {formatDate(asOfDate)}
           </p>
         </div>
 
@@ -116,7 +118,7 @@ export default function PortfolioStatus() {
             label="ROI"
             value={formatPercent(roi)}
             subLabel="Sharpe"
-            subValue="1.84"
+            subValue={sharpe !== null ? sharpe.toFixed(2) : 'N/A'}
             colorClass={roi >= 0 ? 'text-success' : 'text-loss'}
             index={2}
           />

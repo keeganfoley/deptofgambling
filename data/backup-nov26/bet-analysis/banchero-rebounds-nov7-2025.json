@@ -1,0 +1,127 @@
+{
+  "slug": "banchero-rebounds-nov7-2025",
+  "player": "Paolo Banchero",
+  "line": "OVER 8.5 rebounds",
+  "odds": 110,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "9 rebounds",
+  "profit": 165.00,
+  "gameDetails": {
+    "matchup": "Orlando Magic vs Boston Celtics",
+    "date": "November 7, 2025",
+    "gameTime": "7:00 PM ET",
+    "venue": "Kia Center",
+    "finalScore": "Magic 123, Celtics 110"
+  },
+  "preGameAnalysis": {
+    "edge": 15,
+    "expectedValue": 31.5,
+    "estimatedProbability": 63,
+    "impliedProbability": 47.62,
+    "recentPerformance": {
+      "hitRate": "2 of last 5 games with 11+ rebounds",
+      "seasonAverage": "9.5 RPG (14th in NBA)",
+      "last3Games": "9.3 RPG average",
+      "cushion": "+1.0 rebounds above line"
+    },
+    "keyFactors": [
+      {
+        "title": "Boston's Catastrophic Rebounding",
+        "description": "Celtics ranked DEAD LAST in defensive rebounding, allowing opponents astronomical 41.6% OREB rate (worst in NBA by 4%). Surrendering 24.7 second-chance PPG."
+      },
+      {
+        "title": "Key Celtics Injuries",
+        "description": "Jayson Tatum (Achilles) out - removed their best defensive rebounder (93rd+ percentile among forwards). Also missing Xavier Tillman, Kristaps Porzingis, Al Horford, Luke Kornet."
+      },
+      {
+        "title": "No Interior Size",
+        "description": "Boston completely depleted of big men. Left them without interior protection, creating abundant opportunities for Banchero to dominate glass."
+      },
+      {
+        "title": "Plus Odds Value",
+        "description": "At +110, getting excellent odds despite Banchero's 9.5 RPG average being 1.0 above the 8.5 line. Market underpriced the matchup."
+      }
+    ],
+    "riskFactors": [
+      "Orlando's balanced scoring could limit Banchero's rebounds if teammates crash boards",
+      "Competitive game could go either way - minutes uncertainty",
+      "NBA Cup pressure in Group B opener"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rebounds": 9,
+      "offensiveRebounds": 1,
+      "defensiveRebounds": 8,
+      "points": 15,
+      "fieldGoals": "4-10 (40.0%)",
+      "threePointers": "1-3 (33.3%)",
+      "freeThrows": "6-8 (75.0%)",
+      "assists": 4,
+      "steals": 1,
+      "blocks": 1,
+      "minutes": 36,
+      "plusMinus": 25,
+      "fouls": 0
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Orlando jumped to 38-25 lead in fast-paced start. Banchero established presence on glass early against undersized Celtics."
+      },
+      {
+        "quarter": "Q2-Q3",
+        "description": "Boston rallied to tie 62-62 in third and took brief 96-95 lead midway through Q4. Competitive game kept Banchero engaged for heavy minutes."
+      },
+      {
+        "quarter": "Q4",
+        "description": "Orlando closed on 17-4 run. Banchero played 36 minutes (second-most behind Franz Wagner's 37) with zero fouls, staying on court for every critical possession."
+      }
+    ],
+    "whenCleared": "Mid-Q3, finished with comfortable 9 rebounds (0.5 cushion above line)",
+    "gamePace": "Competitive throughout until final 5 minutes. Both teams at 44 total rebounds, but Banchero secured his share in frontcourt alongside Wendell Carter Jr. (5 reb) and Goga Bitadze (7 off bench)."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Perfect Matchup Exploitation",
+        "description": "Boston's last-ranked defensive rebounding (41.6% OREB allowed) created ideal environment. Missing Tatum, Porzingis, Horford, Kornet left massive void."
+      },
+      {
+        "title": "Defensive Rebounding Focus",
+        "description": "8 of 9 rebounds were defensive, fitting Banchero's typical pattern (not crash-the-glass offensive player). Dominated defensive glass as designed."
+      },
+      {
+        "title": "Line Below Season Average",
+        "description": "8.5 line was exactly 1.0 rebounds below his 9.5 season average. At +110 odds, implied probability only 47.6% despite 60%+ hit rate over 8.5."
+      },
+      {
+        "title": "Zero Fouls, Heavy Minutes",
+        "description": "No foul trouble, played 36 minutes at home in important NBA Cup game. Fresh legs with full rest."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-0.5 rebounds (-5.3% below 9.5 RPG average)",
+      "vsRecentForm": "On pace with 9.3 RPG last 3 games",
+      "vsPropLine": "+0.5 rebounds (+5.9% above 8.5 line)",
+      "percentileRanking": "Consistent performance - maintained season pace against favorable matchup"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": 110,
+    "closingOdds": 110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Excellent value regardless of CLV. +110 odds on a player averaging 9.5 RPG against NBA's worst defensive rebounding team was mispriced by market."
+  },
+  "keyTakeaways": [
+    "When rebounding line is below season average (8.5 vs 9.5) AND facing worst defensive rebounding team = exceptional value",
+    "Key injuries matter - Tatum's absence removed Boston's best rebounder",
+    "Home games in important contexts (NBA Cup opener) ensure heavy minutes",
+    "+110 odds represented 47.6% implied probability but actual hit rate was 60%+",
+    "Cleared with 0.5 cushion - not huge margin but comfortable cash"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Textbook matchup-based betting. Boston's catastrophic defensive rebounding (worst in NBA) combined with key injuries and line below average created perfect storm."
+}

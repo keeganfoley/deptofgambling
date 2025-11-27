@@ -1,0 +1,125 @@
+{
+  "slug": "fresno-state-spread-2-nov26-2025",
+  "team": "Fresno State Bulldogs",
+  "line": "FRESNO STATE -1.5",
+  "odds": -114,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Won by 23 (Covered)",
+  "profit": 87.72,
+  "gameDetails": {
+    "matchup": "UC Santa Barbara Gauchos vs Fresno State Bulldogs",
+    "date": "November 26, 2025",
+    "gameTime": "11:00 PM ET",
+    "venue": "Save Mart Center, Fresno, CA",
+    "finalScore": "Fresno State 73, UCSB 50"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 15,
+    "estimatedProbability": 58,
+    "impliedProbability": 53.27,
+    "recentPerformance": {
+      "hitRate": "Contra plays on home favorites working",
+      "seasonAverage": "Public undervaluing home teams early",
+      "last5Games": "Market miscalibration opportunities",
+      "cushion": "Fading public road dog leans profitable"
+    },
+    "keyFactors": [
+      {
+        "title": "Fading Public Road Dog Perception",
+        "description": "Public slightly leaned toward UCSB as scrappy road underdog. Classic contrarian opportunity."
+      },
+      {
+        "title": "Recency Bias Exploitation",
+        "description": "UCSB's previous home win skewed public perception. Market overvalued their recent result."
+      },
+      {
+        "title": "Fresno State's True Home Value",
+        "description": "Save Mart Center advantage not fully reflected in -1.5 spread. Should have been laying more."
+      },
+      {
+        "title": "Contra Fund Philosophy",
+        "description": "When sharp money and contrarian indicators align, the market is usually wrong. This was a textbook setup."
+      }
+    ],
+    "riskFactors": [
+      "Public wasn't strongly on UCSB - slight lean only",
+      "Contrarian plays require patience",
+      "Small sample early in season",
+      "Could be wrong about public perception"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 73,
+      "fieldGoalPct": "48%",
+      "threePtPct": "35%",
+      "rebounds": 42,
+      "assists": 18,
+      "turnovers": 9
+    },
+    "keyPlayers": {
+      "team": {
+        "note": "Balanced attack - multiple contributors in blowout win"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Fresno State controlled from tip-off. UCSB's scrappy road dog narrative evaporated quickly. 12-point halftime lead.",
+        "score": "Fresno State led by 12"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Complete domination. UCSB shot 28% and couldn't compete. Bulldogs cruised to 23-point win.",
+        "score": "Fresno State 73-50 (Final)"
+      }
+    ],
+    "whenCleared": "This was never in doubt. Covered before halftime.",
+    "gamePace": "Fresno State set the pace. UCSB couldn't keep up with the tempo or the talent."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Public Lean Was Wrong",
+        "description": "The slight public lean toward UCSB as scrappy road dogs was misguided. Fresno State's 23-point demolition proved it."
+      },
+      {
+        "title": "Contra Philosophy Validated",
+        "description": "When we fade casual public perception and align with sharp money, good things happen. This is the Contra Fund thesis in action."
+      },
+      {
+        "title": "Early Season Market Inefficiency",
+        "description": "Public hasn't calibrated team strengths yet. This creates contrarian opportunities that disappear as season progresses."
+      },
+      {
+        "title": "Dominant Performance",
+        "description": "32% shooting for UCSB showed they were never going to compete. Fresno State was simply the better team."
+      }
+    ],
+    "statisticalContext": {
+      "coverMargin": "+21.5 points (won by 23, needed -1.5)",
+      "publicLean": "Slight UCSB lean - faded successfully",
+      "marketCorrection": "Line should have been -4.5 or higher"
+    },
+    "wasNormalVariance": "This was contrarian edge realization. The public's slight preference for UCSB as underdogs was wrong, and Fresno State's dominance proved the market hadn't properly valued either team."
+  },
+  "closingLineValue": {
+    "ourOdds": -114,
+    "closingOdds": -118,
+    "clvCents": 4,
+    "clvPercentage": 1.3,
+    "verdict": "Positive CLV. Got better number as line moved against public. Contrarian edge captured."
+  },
+  "keyTakeaways": [
+    "Early season college hoops offers prime contrarian spots",
+    "Public hasn't calibrated team strengths yet",
+    "Fading road dog leans on small lines can be profitable",
+    "When sharps and contrarian indicators align, trust the process",
+    "23-point win shows true talent disparity",
+    "Contra Fund philosophy continues to deliver"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Contra Fund thesis validated. The public's slight lean toward UCSB as scrappy road dogs proved misguided. Fresno State's 23-point demolition showed the market hadn't properly accounted for the home team's early-season form."
+}

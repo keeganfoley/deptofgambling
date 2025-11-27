@@ -1,0 +1,168 @@
+{
+  "slug": "texas-spread-nov15-2025",
+  "team": "Texas Longhorns",
+  "line": "+4.5",
+  "odds": -104,
+  "stake": 2,
+  "result": "loss",
+  "finalStat": "Georgia 35, Texas 10 (missed by 20.5 points)",
+  "profit": -200,
+  "gameDetails": {
+    "matchup": "Texas Longhorns vs Georgia Bulldogs",
+    "date": "November 15, 2025",
+    "gameTime": "3:30 PM ET",
+    "venue": "Sanford Stadium, Athens, GA",
+    "finalScore": "Georgia 35, Texas 10"
+  },
+  "preGameAnalysis": {
+    "edge": 12,
+    "expectedValue": 24,
+    "estimatedProbability": 48,
+    "impliedProbability": 51.0,
+    "recentPerformance": {
+      "hitRate": "Texas 7-4 ATS this season, ranked #10 in CFP rankings",
+      "recentForm": "Georgia 6-4 ATS, but 8-1 ATS at home in Sanford Stadium",
+      "homeRecord": "Road game for Texas at notoriously hostile Sanford Stadium",
+      "cushion": "Small +4.5 spread suggested oddsmakers expected competitive game"
+    },
+    "keyFactors": [
+      {
+        "title": "College Football Playoff Implications",
+        "description": "Texas ranked #10 with CFP hopes on line. Expected to show up motivated in hostile environment. Small spread (+4.5) indicated oddsmakers projected competitive game in 27-24 range."
+      },
+      {
+        "title": "Texas Offensive Firepower",
+        "description": "Texas averaging 32.1 PPG (18th nationally), led by efficient passing attack. Expected to move ball against Georgia defense allowing 18.3 PPG. Projected to score 24+ points."
+      },
+      {
+        "title": "Competitive SEC Matchup",
+        "description": "Both teams battling for SEC positioning. Texas had shown resilience in tough road environments this season. Line of +4.5 suggested belief in Texas's ability to keep it within one possession."
+      },
+      {
+        "title": "Underdog Value with Playoff Team",
+        "description": "Getting 4.5 points with top-10 team in CFP hunt represented value. Texas had talent to compete with Georgia - just needed to keep it close."
+      }
+    ],
+    "riskFactors": [
+      "Sanford Stadium one of toughest road environments in college football",
+      "Georgia's defense elite, allowing just 18.3 PPG",
+      "Gunner Stockton emerging as efficient QB (completion % in high 70s)",
+      "Texas playing cross-division opponent with limited film",
+      "Georgia 8-1 ATS at home this season - dominant in Athens"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "texasTimeOfPossession": "24:51",
+      "georgiaTimeOfPossession": "35:09",
+      "texasTotalYards": 274,
+      "georgiaTotalYards": 357,
+      "texasPassingYards": 185,
+      "georgiaPassingYards": 267,
+      "texasRushingYards": 89,
+      "georgiaRushingYards": 90,
+      "texasTurnovers": 2,
+      "georgiaTurnovers": 1,
+      "texasThirdDownConversions": "4-13 (31%)",
+      "georgiaThirdDownConversions": "8-14 (57%)",
+      "texasPenalties": "6 for 54 yards",
+      "georgiaPenalties": "3 for 25 yards"
+    },
+    "keyPlayers": {
+      "gunnerStockton": {
+        "team": "Georgia",
+        "passing": "24-of-29 (82.8%), 267 yards, 4 TDs, 1 INT",
+        "rushing": "3 carries, 18 yards",
+        "note": "Completely dominated - elite accuracy and decision-making"
+      },
+      "nateFrazier": {
+        "team": "Georgia",
+        "rushing": "16 carries, 72 yards",
+        "note": "Controlled clock in 4th quarter, kept Texas offense off field"
+      },
+      "texasQB": {
+        "team": "Texas",
+        "passing": "18-31, 185 yards, 0 TDs, 1 INT",
+        "note": "Completely overwhelmed by Georgia defense, couldn't sustain drives"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "Georgia 7, Texas 3",
+        "description": "Competitive start with Georgia taking 7-3 lead. Texas defense held initially, offense managed field goal. Game still within script at end of Q1."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Georgia 14, Texas 7",
+        "description": "Georgia extended lead to 21-10 at halftime. Stockton threw 2 TD passes. Texas managed 1 TD but couldn't keep pace. Warning signs emerging - Georgia controlling possession (19:12 to 10:48 in H1)."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Georgia 7, Texas 0",
+        "description": "Georgia extended lead to 28-10. Stockton threw another TD pass. Texas offense completely stifled - couldn't convert third downs (0-4 in Q3). Georgia's defense suffocating."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Georgia 7, Texas 0",
+        "description": "Complete blowout. Georgia outscored Texas 21-0 in 4th quarter alone, turning competitive game into rout. Stockton threw 4th TD pass, Frazier controlled clock with rushing. Texas had no answers - final score 35-10."
+      }
+    ],
+    "whenMissed": "Texas failed to cover when Georgia scored 3rd touchdown in 4th quarter with 6:24 remaining, extending lead to 35-10 (25 points). At that moment, +4.5 was mathematically eliminated. Georgia's 21-0 4th quarter destroyed any cover hope.",
+    "turningPoint": "Georgia's dominant 4th quarter (21-0 run) transformed competitive game into blowout. When game was 14-10 at half, spread still alive. Georgia's halftime adjustments and Stockton's efficiency (24-of-29) completely overwhelmed Texas. The 4th quarter avalanche exposed fundamental talent gap.",
+    "gamePace": "Georgia controlled tempo throughout - 35:09 TOP vs 24:51 for Texas. Texas couldn't sustain drives (4-13 on third downs) while Georgia converted at 57% clip (8-14). Georgia's ball control suffocated Texas's offense and wore down defense.",
+    "teamOffense": "Texas managed only 274 total yards (89 rush, 185 pass) against Georgia's elite defense. Couldn't establish run game (89 yards) or pass effectively (18-31, 0 TDs). Georgia's 357 yards (267 pass, 90 rush) showcased balanced attack that Texas couldn't stop."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Gunner Stockton's Breakout Performance",
+        "description": "Georgia QB Stockton went 24-of-29 (82.8%) for 267 yards and 4 TDs. This elite efficiency completely shredded Texas defense. Didn't anticipate Stockton playing at this level - career-best performance destroyed Texas secondary."
+      },
+      {
+        "title": "Georgia's Home Dominance Underestimated",
+        "description": "Georgia entered 8-1 ATS at Sanford Stadium this season. Should have weighted home-field advantage more heavily. Sanford Stadium's hostile environment plus Georgia's talent created insurmountable challenge for Texas."
+      },
+      {
+        "title": "4th Quarter Collapse (21-0)",
+        "description": "Game was 14-10 at half - spread still very much alive. Georgia's 21-0 4th quarter avalanche turned competitive game into blowout. Texas had no answers, couldn't respond to adversity."
+      },
+      {
+        "title": "Texas Offense Completely Overwhelmed",
+        "description": "Texas managed only 274 total yards and 10 points against Georgia defense. Couldn't establish run (89 yards) or pass (0 TDs). Complete offensive failure - averaged 32.1 PPG but scored only 10."
+      },
+      {
+        "title": "Time of Possession Destroyed",
+        "description": "Georgia dominated TOP 35:09 to 24:51. Texas couldn't sustain drives (4-13 third downs), meaning defense was on field constantly. Fatigue factor led to 4th quarter collapse."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Texas's 10 points was 22.1 below season average (32.1 PPG). Georgia's 35 points was 16.7 above their defensive average (18.3 PPG allowed). Complete statistical reversal.",
+      "vsRecentForm": "Stockton's 82.8% completion rate and 4 TDs represented career-high performance. Texas's 274 total yards was season-low. Every metric pointed to dominant Georgia victory.",
+      "vsPropLine": "Missed +4.5 by 20.5 points. Final margin of 25 points (35-10) was catastrophic beat. Line movement (from +5 to +4.5) didn't matter - wrong side entirely.",
+      "percentileRanking": "Georgia's 82.8% completion rate ranked in 97th percentile for NCAAF games this season. Stockton's 4 TD performance was elite. Texas had no defensive answer."
+    },
+    "wasNormalVariance": "No. This was not variance - this was fundamental misread of team quality and matchup dynamics. Georgia's home dominance (8-1 ATS at Sanford Stadium) should have been weighted heavier. Stockton's elite performance (24-of-29, 4 TDs) wasn't luck - it was talent executing perfectly. Texas being held to 10 points (22.1 below average) showed Georgia's defense was simply superior. The 21-0 4th quarter wasn't variance - it was talent gap exposing itself. This was bad process meeting reality."
+  },
+  "closingLineValue": {
+    "ourOdds": -104,
+    "closingOdds": -110,
+    "clvCents": 6,
+    "clvPercentage": 1.4,
+    "verdict": "Slight positive CLV but completely irrelevant. We bet at +4.5 (-104) and closing was +4 (-110), meaning we got half-point better number. However, losing by 25 points makes CLV discussion moot. This wasn't a case of good bet with bad variance - this was wrong side entirely. CLV doesn't validate fundamentally flawed handicap."
+  },
+  "keyTakeaways": [
+    "Georgia's home dominance (8-1 ATS at Sanford Stadium) should have been weighted heavier - critical data point ignored",
+    "Gunner Stockton's elite performance (24-of-29, 82.8%, 4 TDs) exposed fundamental talent gap",
+    "Texas held to 10 points (22.1 below season average) showed Georgia defense was overwhelming",
+    "4th quarter collapse (21-0 Georgia run) turned competitive game into blowout - no Texas answers",
+    "Time of possession dominated by Georgia (35:09 vs 24:51) indicated complete game control",
+    "Small spread (+4.5) created false confidence - talent gap was much larger than oddsmakers suggested",
+    "Road underdog against elite home team in CFP-caliber environment is high-risk bet",
+    "Should have faded Texas on road against elite SEC defense - betting against Georgia at Sanford Stadium requires exceptional justification",
+    "For quantitative operations: home-field advantage in elite venues (Sanford Stadium) is 5-7 points, not 2-3",
+    "Lesson: When top-10 team is underdog by only 4.5 points against elite opponent at home, market might be undervaluing home team"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Fundamental misread of matchup dynamics and home-field advantage. Georgia's 8-1 ATS record at Sanford Stadium should have been red flag - elite teams dominate at home in college football. Stockton's breakout (24-of-29, 4 TDs) and Texas's offensive collapse (10 points, 22.1 below average) exposed talent gap. The 21-0 4th quarter avalanche wasn't variance - it was superior team pulling away. Small spread (+4.5) created false confidence that this would be competitive. In reality, Georgia was significantly better team playing in elite home environment. Would not make this bet under any circumstances - wrong side entirely. Betting against Georgia at Sanford Stadium requires exceptional justification, which Texas +4.5 did not provide."
+}

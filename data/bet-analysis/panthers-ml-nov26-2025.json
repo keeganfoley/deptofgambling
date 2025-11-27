@@ -1,0 +1,135 @@
+{
+  "slug": "panthers-ml-nov26-2025",
+  "team": "Florida Panthers",
+  "line": "FLORIDA PANTHERS ML",
+  "odds": -180,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Lost 4-2",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Florida Panthers vs Philadelphia Flyers",
+    "date": "November 26, 2025",
+    "gameTime": "1:45 PM ET",
+    "venue": "Amerant Bank Arena, Sunrise, FL",
+    "finalScore": "Flyers 4, Panthers 2"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 12,
+    "estimatedProbability": 68,
+    "impliedProbability": 64.29,
+    "recentPerformance": {
+      "hitRate": "Panthers strong at home",
+      "seasonAverage": "Two-time defending champs playing well",
+      "last5Games": "Consistent results",
+      "cushion": "Championship pedigree advantage"
+    },
+    "keyFactors": [
+      {
+        "title": "Two-Time Defending Champions",
+        "description": "Florida is the reigning back-to-back Stanley Cup champions. Championship experience and pedigree matters in tight games."
+      },
+      {
+        "title": "Home Ice Advantage",
+        "description": "Panthers at Amerant Bank Arena where they've built a winning culture. Home crowd provides energy and the team feeds off it."
+      },
+      {
+        "title": "Flyers Rebuilding",
+        "description": "Philadelphia is in a rebuild year. Young, inexperienced roster still learning to compete consistently against elite teams."
+      },
+      {
+        "title": "Sharp Money Support",
+        "description": "Line moved from -170 to -180 indicating sharp action on Panthers. Pros backing the chalk here."
+      }
+    ],
+    "riskFactors": [
+      "Heavy juice at -180 limits ROI",
+      "Any NHL game can flip on a hot goalie",
+      "Flyers have nothing to lose - dangerous opponent",
+      "Holiday game can produce strange results"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "goals": 2,
+      "shots": 27,
+      "powerPlayGoals": 0,
+      "faceoffWin": "51%"
+    },
+    "keyPlayers": {
+      "bradMarchand": {
+        "goals": 1,
+        "note": "Opened scoring near front of net"
+      },
+      "carterVerhaeghe": {
+        "goals": 1,
+        "note": "Extended lead to 2-0 early in second"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Period",
+        "description": "Panthers controlled play. Brad Marchand opened scoring near front of net. Florida looking dominant early.",
+        "score": "Panthers 1-0"
+      },
+      {
+        "quarter": "2nd Period",
+        "description": "Carter Verhaeghe extended lead to 2-0. Panthers in cruise control. Then Emil Andrae scored twice from the point to tie it 2-2.",
+        "score": "Tied 2-2"
+      },
+      {
+        "quarter": "3rd Period",
+        "description": "DISASTER. Tyson Foerster scored go-ahead goal with 45.2 seconds left. Sean Couturier added empty-netter. Stunning 4-2 Flyers upset.",
+        "score": "Flyers 4-2 (Final)"
+      }
+    ],
+    "whenCleared": "N/A - Lost the game",
+    "gamePace": "Panthers controlled possession (27-17 shots) but couldn't finish. Flyers opportunistic in final minute.",
+    "flyersComeback": "Philadelphia earned their 10th come-from-behind victory of the season. Masters of the late-game rally."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Late-Game Collapse",
+        "description": "Led 2-0, allowed comeback to tie it. Then gave up goal with 45 seconds left. Complete third-period meltdown."
+      },
+      {
+        "title": "Couldn't Finish",
+        "description": "Panthers outshot Flyers 27-17 but couldn't convert. Quality over quantity issue."
+      },
+      {
+        "title": "Emil Andrae Heroics",
+        "description": "Young defenseman scored twice from the point to tie it. Sometimes young players have breakout games at the worst times."
+      },
+      {
+        "title": "Flyers' Resilience",
+        "description": "10th come-from-behind win of the season. This is a team that never quits, even against defending champs."
+      }
+    ],
+    "statisticalContext": {
+      "shotDifferential": "+10 (27-17) - dominated possession",
+      "finalMinuteCollapse": "Gave up 2 goals in final minute including game-winner",
+      "seriesNote": "Third and final regular season matchup - teams split the first two"
+    },
+    "wasNormalVariance": "Brutal variance. Panthers dominated shots 27-17 but lost 4-2. Sometimes good bets lose - the process was sound but hockey variance struck. Flyers' opportunistic finishing in the final minute was the difference."
+  },
+  "closingLineValue": {
+    "ourOdds": -180,
+    "closingOdds": -175,
+    "clvCents": -5,
+    "clvPercentage": -1.0,
+    "verdict": "Slight negative CLV as line softened. Paid a bit too much juice but process was correct."
+  },
+  "keyTakeaways": [
+    "NHL moneylines are high-variance even for elite teams",
+    "Shot differential doesn't guarantee wins (27-17 but lost)",
+    "Heavy favorites can still lose to hot goaltending and opportunistic scoring",
+    "Final minute collapses happen to the best teams",
+    "Consider puck lines for better value on heavy favorites",
+    "Emil Andrae and Flyers' never-quit mentality was the story",
+    "Sometimes good bets lose - that's sports"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Process was correct, result was painful. Panthers dominated possession 27-17 in shots but Flyers' late-game heroics stole the win. NHL variance at its finest."
+}

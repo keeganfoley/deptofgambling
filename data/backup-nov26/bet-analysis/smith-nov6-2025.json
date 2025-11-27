@@ -1,0 +1,136 @@
+{
+  "slug": "smith-nov6-2025",
+  "player": "Geno Smith",
+  "line": "UNDER 10.5 rushing yards",
+  "odds": -110,
+  "stake": 1.0,
+  "result": "win",
+  "finalStat": "7 yards (3 carries)",
+  "profit": 90.91,
+  "gameDetails": {
+    "matchup": "Las Vegas Raiders @ Denver Broncos",
+    "date": "November 6, 2025",
+    "gameTime": "7:25 PM ET",
+    "venue": "Empower Field at Mile High",
+    "finalScore": "Broncos 10, Raiders 7"
+  },
+  "preGameAnalysis": {
+    "edge": 26,
+    "expectedValue": 52.7,
+    "estimatedProbability": 80,
+    "impliedProbability": 52.38,
+    "recentPerformance": {
+      "hitRate": "Averaging 1.4 rush yds/game last 5 games",
+      "seasonAverage": "10.1 YPG (81 yards on 27 carries over 8 games)",
+      "last3Games": "11 carries, 7 yards total (0.6 YPC)",
+      "cushion": "Expected 5-8 rushing yards vs elite pass rush"
+    },
+    "keyFactors": [
+      {
+        "title": "Denver's Historic Pass Rush",
+        "description": "Led NFL with 40 sacks entering game (on pace for record 72). 41.0% pressure rate (1st in NFL) with 52.1% pass rush win rate (6th). Eliminated scrambling windows."
+      },
+      {
+        "title": "Raiders Offensive Line Catastrophe",
+        "description": "Missing LT Kolton Miller (IR). Lost 2 more linemen during game. Three linemen missing/injured forced immediate pressure on 13 dropbacks."
+      },
+      {
+        "title": "Age and Mobility Profile",
+        "description": "35-year-old Smith not a designed rushing threat. Career rushing profile: 3-5 YPG (pocket passer). Near zero designed rush attempts (scrambles only). Only 3 carries typical for passing downs."
+      },
+      {
+        "title": "Game Script - Pass-Heavy Expected",
+        "description": "Raiders 9.5-point underdogs necessitating passing. Smith leading NFL with 11 interceptions (forced into quick reads). 11 MPH winds at Empower Field impacted passing but didn't encourage rushing."
+      },
+      {
+        "title": "Historical Performance vs Denver",
+        "description": "Only 2 QBs threw 300+ yards all season vs Denver. Elite pass rush + diminished protection = expected 5-8 rushing yards. Historical under rate in similar matchups: ~75%."
+      }
+    ],
+    "riskFactors": [
+      "Smith averaged 10.1 YPG with functional offensive line (line set at 10.5)",
+      "One breakaway scramble could push over",
+      "Designed QB run play calls (though historically rare)"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushingYards": "7 yards",
+      "rushAttempts": "3 carries",
+      "yardsPerCarry": "2.3 YPC",
+      "passingYards": 143,
+      "completionRate": "61.5% (vs. 67.2% season avg)",
+      "timesSacked": "6 sacks"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "description": "Smith scrambled twice under pressure for 5 yards total. Denver's pass rush immediately established dominance. Raiders trailed 3-0.",
+        "rushingYards": "5"
+      },
+      {
+        "quarter": "Q2",
+        "description": "One designed roll-out for 2 yards. Smith sacked 3 times in quarter. Pass protection completely collapsed. 3-0 Broncos at half.",
+        "rushingYards": "2",
+        "halftimeTotal": "7 yards at half (UNDER ✓)"
+      },
+      {
+        "quarter": "Q3",
+        "description": "Zero rush attempts. Smith suffered quad injury limiting mobility further. Pressure forced quick releases.",
+        "rushingYards": "0"
+      },
+      {
+        "quarter": "Q4",
+        "description": "No additional rush attempts. Denver's 6 sacks (46 season total, historic pace) eliminated any scrambling opportunities.",
+        "rushingYards": "0"
+      }
+    ],
+    "whenCleared": "Line was safe by halftime with only 7 rushing yards. Never in danger as Smith had zero rush attempts in entire 2nd half.",
+    "gamePace": "Low-scoring defensive battle (17 total points). Raiders had only 10 first downs entire game. 188 total offensive yards for Raiders vs. 220 for Denver.",
+    "foulTrouble": "Smith suffered quad injury in Q4, further limiting mobility and ensuring zero additional rushing."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Pass Rush Dominance (PRIMARY FACTOR)",
+        "description": "Denver's 6 sacks (46 season total, historic pace) completely eliminated scrambling windows. Smith had no time to escape pocket. Pressure forced 61.5% completion rate (vs. 67.2% season average)."
+      },
+      {
+        "title": "Offensive Line Collapse",
+        "description": "Three linemen missing/injured forced immediate pressure on 13 dropbacks. Smith never had clean pocket to operate. O-line catastrophe made rushing impossible."
+      },
+      {
+        "title": "Conservative Game Script",
+        "description": "Raiders trailed throughout, necessitating passing (143 yards passing). Only 3 rush attempts vs. season average 3.4 per game. Age/mobility: 35-year-old Smith not a designed rushing threat."
+      },
+      {
+        "title": "In-Game Injury",
+        "description": "Smith suffered quad injury in Q4, further limiting mobility. Zero rush attempts in entire 2nd half locked in the under."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "-3.1 yards (-30.7% below 10.1 YPG average)",
+      "vsRecentForm": "+5.6 yards vs last 3 games avg (1.4 YPG)",
+      "vsPropLine": "-3.5 yards (UNDER by 3.5)",
+      "percentileRanking": "Bottom 30th percentile of season games"
+    },
+    "wasNormalVariance": "Expected outcome based on convergent factors. Denver's elite pass rush + diminished offensive line protection in a pass-heavy game script created perfect environment for under. The 10.5 line failed to account for convergence of Denver's historic sack rate, Raiders' O-line injuries, and Smith's advanced age limiting designed runs. True probability exceeded market by 25+ percentage points."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -120,
+    "clvCents": 10,
+    "clvPercentage": 2.06,
+    "verdict": "Positive CLV (+10 cents). Line moved toward Under as sharp money recognized the mismatch. Early bet captured value before market fully adjusted to O-line injuries and pass rush dominance."
+  },
+  "keyTakeaways": [
+    "Elite pass rush vs. depleted offensive line creates massive edge for rushing unders on pocket passers",
+    "Age and mobility profile matter significantly - 35-year-old Smith not a scrambling threat",
+    "Game script indicators (9.5-point underdog) correctly predicted pass-heavy approach",
+    "Convergent factors (pass rush + O-line injuries + game script) create high-probability outcomes",
+    "Historical under rate in similar matchups (~75%) validated by 80% true probability estimate",
+    "In-game injuries provided additional cushion but bet was never in danger"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect process and execution. Multiple convergent factors created 25+ percentage point edge over market. True probability (78-82%) far exceeded implied probability (52.38%). Classic example of defensive mismatch exploitation."
+}

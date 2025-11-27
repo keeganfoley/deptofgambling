@@ -1,0 +1,171 @@
+{
+  "slug": "spurs-spread-nov12-2025",
+  "team": "San Antonio Spurs",
+  "line": "Spurs -3.5",
+  "odds": -105,
+  "stake": 2.0,
+  "result": "loss",
+  "finalStat": "Lost 120-125 (missed by 8.5 points)",
+  "profit": -200.00,
+  "gameDetails": {
+    "matchup": "San Antonio Spurs vs Golden State Warriors",
+    "date": "November 12, 2025",
+    "gameTime": "8:30 PM ET",
+    "venue": "Frost Bank Center, San Antonio, TX",
+    "finalScore": "Warriors 125, Spurs 120"
+  },
+  "preGameAnalysis": {
+    "edge": 8,
+    "expectedValue": 16.0,
+    "estimatedProbability": 58,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Spurs 8-2 record, first home loss coming",
+      "homeRecord": "6-0 at home before this game",
+      "recentForm": "5-game home win streak entering",
+      "cushion": "Warriors on 6-game road losing streak"
+    },
+    "keyFactors": [
+      {
+        "title": "Spurs Elite Home Record",
+        "description": "Spurs entered 6-0 at Frost Bank Center with dominant +17.3 point differential at home. Warriors were 0-6 on the road entering this game."
+      },
+      {
+        "title": "Warriors Road Struggles",
+        "description": "Golden State came in having lost 6 straight road games, looking completely lost away from Chase Center. Major travel/fatigue concerns."
+      },
+      {
+        "title": "Wembanyama's Dominance",
+        "description": "Victor Wembanyama averaging 26.2 PPG, 12.8 RPG with elite rim protection. Expected to dominate Warriors' undersized frontcourt."
+      },
+      {
+        "title": "Castle's Emergence",
+        "description": "Rookie Stephon Castle showing impressive playmaking, averaging 12.8 PPG, 6.4 APG in last 5 games. Added secondary ball-handler threat."
+      },
+      {
+        "title": "Warriors Defensive Issues",
+        "description": "Golden State allowing 118.4 PPG on the road, ranking 26th in defensive rating away from home. Vulnerable to Spurs' balanced attack."
+      }
+    ],
+    "riskFactors": [
+      "Stephen Curry capable of explosive scoring nights",
+      "Spurs relatively small spread could be tight game",
+      "Warriors desperate for road win after 6-game skid",
+      "Young Spurs team vulnerable to veteran Warriors' experience"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "spursPoints": 120,
+      "warriorsPoints": 125,
+      "spursFieldGoals": "41-89 FG (46.1%)",
+      "warriorsFieldGoals": "44-93 FG (47.3%)",
+      "spursThreePointers": "15-40 3PT (37.5%)",
+      "warriorsThreePointers": "14-45 3PT (31.1%)",
+      "spursRebounds": 46,
+      "warriorsRebounds": 44
+    },
+    "keyPlayers": {
+      "curry": {
+        "points": 46,
+        "rebounds": 5,
+        "assists": 5,
+        "shooting": "13-25 FG, 5-16 3PT, 15-16 FT",
+        "impact": "Season-high 46 points, including 22 in Q3, completely took over the game"
+      },
+      "wembanyama": {
+        "points": 31,
+        "rebounds": 15,
+        "assists": 10,
+        "shooting": "11-21 FG",
+        "impact": "Historic triple-double with Castle, but couldn't stop Curry's onslaught"
+      },
+      "castle": {
+        "points": 23,
+        "rebounds": 10,
+        "assists": 10,
+        "shooting": "9-17 FG",
+        "impact": "First career triple-double alongside Wembanyama, but defense couldn't contain Warriors"
+      },
+      "butler": {
+        "points": 28,
+        "rebounds": 6,
+        "assists": 8,
+        "impact": "Critical secondary scoring for Warriors, 28 points took pressure off Curry"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "Q1",
+        "score": "Spurs 33, Warriors 28",
+        "description": "Spurs started hot, Wembanyama dominated early with 10 points. Warriors kept it close with Curry's 8 points."
+      },
+      {
+        "quarter": "Q2",
+        "score": "Spurs 63, Warriors 51 (Halftime 63-51 Spurs)",
+        "description": "Spurs extended lead to 16 points midway through quarter. Castle and Wembanyama clicking, looked in full control."
+      },
+      {
+        "quarter": "Q3",
+        "score": "Warriors 96, Spurs 88 (Warriors outscored 45-25)",
+        "description": "DISASTER. Curry exploded for 22 points in quarter, going 5-9 from three and 9-9 from FT line. Warriors' 45-point quarter erased entire deficit and took 8-point lead."
+      },
+      {
+        "quarter": "Q4",
+        "score": "Warriors 125, Spurs 120 (Final)",
+        "description": "Spurs fought back but couldn't overcome Curry's dominance. Warriors held on for 5-point win, covering Spurs -3.5 spread easily."
+      }
+    ],
+    "turningPoint": "Q3: Curry's 22-point explosion. Warriors outscored Spurs 45-25 in third quarter, turning 12-point deficit into 8-point lead. Game completely flipped.",
+    "gamePace": "Fast-paced game with 245 combined points. Both teams shot efficiently, but Warriors' third quarter surge was unstoppable.",
+    "teamOffense": "Spurs had balanced attack with Wembanyama (31), Castle (23), but couldn't stop Warriors' Curry (46) and Butler (28) duo. Defense failed."
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Curry Nuclear Explosion",
+        "description": "Stephen Curry's 46 points (22 in Q3 alone) was completely game-breaking. Went 15-16 from FT line and hit 5 threes in third quarter. No defensive answer for vintage Curry performance."
+      },
+      {
+        "title": "Third Quarter Collapse",
+        "description": "45-25 third quarter for Warriors erased entire 12-point halftime lead. Spurs' defense completely fell apart when it mattered most. Historically bad defensive quarter."
+      },
+      {
+        "title": "Jimmy Butler's Supporting Role",
+        "description": "Butler's 28 points alongside Curry provided elite 1-2 punch. Took pressure off Curry and gave Warriors multiple scoring threats Spurs couldn't contain."
+      },
+      {
+        "title": "Historic Triple-Doubles Wasted",
+        "description": "Wembanyama (31-15-10) and Castle (23-10-10) became first Spurs teammates with triple-doubles in same game, yet lost. Offensive production was there, defense failed catastrophically."
+      },
+      {
+        "title": "Warriors Desperation Factor",
+        "description": "Warriors entered on 6-game road losing streak, desperately needed this win. Played with urgency and intensity that exceeded Spurs' effort. Underestimated their motivation."
+      }
+    ],
+    "statisticalContext": {
+      "spreadResult": "Spurs -3.5 → Lost 120-125 (missed by 8.5 points)",
+      "expectedMargin": "Spurs win by 5-7 points based on home dominance",
+      "actualMargin": "Warriors won by 5 points",
+      "percentileRanking": "Warriors' 125 points = 90th percentile road scoring performance"
+    },
+    "wasNormalVariance": "This was NOT normal variance—this was Curry going nuclear. His 46-point performance (season-high) and 22-point Q3 is not predictable or repeatable. Model couldn't account for one of greatest shooters ever having vintage performance. Defense had no counter to elite Curry night."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -110,
+    "clvCents": 5,
+    "clvPercentage": 1.0,
+    "verdict": "Decent CLV (+5 cents). Line moved slightly toward Spurs as money came in. Early price captured small edge, but Curry's explosion nullified everything."
+  },
+  "keyTakeaways": [
+    "Cannot model elite individual performances: Curry's 46 points was outlier event that invalidated all statistical edges",
+    "Home dominance means nothing against generational talent: Spurs' 6-0 home record couldn't withstand vintage Curry performance",
+    "Third quarter defense collapsed: 45-25 Warriors Q3 erased 12-point halftime lead. One bad quarter cost the entire game",
+    "Triple-doubles don't guarantee wins: Wembanyama and Castle's historic performances were wasted by defensive failures",
+    "Desperation factor matters: Warriors' 6-game road skid created urgency we underestimated. Wounded team played like it.",
+    "2U stake on small spread was aggressive: -3.5 is coin flip territory. Should've sized down to 1U given variance potential"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Painful loss. Curry's nuclear 46 (with 22 in Q3) was unpredictable outlier. Spurs' defense collapsed when it mattered. While logic was sound (home dominance vs road-struggling Warriors), we can't model generational talent having career-level nights. 2U stake was too aggressive for -3.5 spread. Grade: D"
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "pistons-spread-nov22-2025",
+  "team": "Detroit Pistons",
+  "line": "Pistons -8",
+  "odds": -109,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 13",
+  "profit": 137.61,
+  "gameDetails": {
+    "matchup": "Detroit Pistons vs Milwaukee Bucks",
+    "date": "2025-11-22",
+    "gameTime": "7:00 PM ET",
+    "venue": "Little Caesars Arena",
+    "finalScore": "DET 129, MIL 116"
+  },
+  "preGameAnalysis": {
+    "edge": 18,
+    "expectedValue": 28,
+    "estimatedProbability": 68,
+    "impliedProbability": 52.2,
+    "recentPerformance": {
+      "hitRate": "Pistons playing best basketball of year",
+      "seasonAverage": "Strong at home",
+      "last5Games": "4-1 ATS last 5",
+      "cushion": "Giannis OUT for Milwaukee"
+    },
+    "keyFactors": [
+      {
+        "title": "Giannis OUT",
+        "description": "Antetokounmpo ruled out with injury - massive edge"
+      },
+      {
+        "title": "Bucks Road Struggles",
+        "description": "Milwaukee struggling without Giannis on road"
+      },
+      {
+        "title": "Pistons Home Form",
+        "description": "Detroit playing well at Little Caesars Arena"
+      },
+      {
+        "title": "Young Core",
+        "description": "Pistons' young players thriving with confidence"
+      }
+    ],
+    "riskFactors": [
+      "Bucks still have Lillard",
+      "Pistons historically inconsistent",
+      "8 points is a big spread"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 129,
+      "fieldGoalPct": "52.3%",
+      "threePointPct": "38.5%",
+      "assists": 28,
+      "turnovers": 10
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Pistons jumped out early, Milwaukee looked lost"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Detroit extended lead, Bucks had no answer inside"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Pistons maintained control, lead grew to 15+"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Cruised to victory, covered -8 comfortably"
+      }
+    ],
+    "whenCleared": "Mid-4th quarter with 15+ point lead",
+    "gamePace": "Up-tempo game favored Pistons' young legs",
+    "turningPoint": "Early Pistons runs exposed Milwaukee's lack of interior presence"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Giannis Absence Huge",
+        "description": "Milwaukee had no interior presence without their MVP"
+      },
+      {
+        "title": "Pistons Offense Clicked",
+        "description": "129 points on 52% shooting - excellent efficiency"
+      },
+      {
+        "title": "Comfortable Cover",
+        "description": "Won by 13, covered -8 with room to spare"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Won by 13 - strong result",
+      "vsPropLine": "5 points over spread",
+      "percentileRanking": "Top 20% Pistons performances"
+    },
+    "wasNormalVariance": "Perfect execution. Injury news was the key - fading teams missing superstars is a reliable strategy."
+  },
+  "closingLineValue": {
+    "ourOdds": -109,
+    "closingOdds": -115,
+    "clvCents": 6,
+    "clvPercentage": 2.8,
+    "verdict": "Excellent CLV - line moved 6 cents against us, we got the best price"
+  },
+  "keyTakeaways": [
+    "Injury news is critical - Giannis OUT was the key",
+    "Fade teams missing superstars, especially on road",
+    "Pistons' young core is legit",
+    "This was our only winner on a 1-5 day"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect execution. Giannis OUT was the edge. Pistons dominated 129-116, covered -8 by 5 points. Exactly as modeled."
+}

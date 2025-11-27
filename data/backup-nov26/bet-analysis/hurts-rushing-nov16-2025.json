@@ -1,0 +1,171 @@
+{
+  "slug": "hurts-rushing-nov16-2025",
+  "player": "Jalen Hurts",
+  "line": "O30.5 Rush Yards",
+  "odds": -105,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "31 rushing yards on 10 carries (3.1 YPC)",
+  "profit": 95.24,
+  "gameDetails": {
+    "matchup": "Detroit Lions @ Philadelphia Eagles",
+    "date": "November 16, 2025",
+    "gameTime": "8:20 PM ET",
+    "venue": "Lincoln Financial Field, Philadelphia, PA",
+    "finalScore": "Eagles 16, Lions 9"
+  },
+  "preGameAnalysis": {
+    "edge": 10,
+    "expectedValue": 20,
+    "estimatedProbability": 58,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Hurts hitting O30.5 in 6 of last 8 games (75%)",
+      "seasonAverage": "42.3 rushing yards per game",
+      "last3Games": "48, 38, 41 rushing yards (avg 42.3 YPG)",
+      "cushion": "11.8-yard cushion over line (42.3 avg vs 30.5 line)"
+    },
+    "keyFactors": [
+      {
+        "title": "Dual-Threat QB with Designed Runs",
+        "description": "Hurts averaging 8.2 rush attempts/game with multiple RPO and QB power concepts built into Eagles offense. Expected 8-12 designed runs plus scrambles against Lions defense. Sunday Night Football stage increases likelihood of aggressive playcalling."
+      },
+      {
+        "title": "Lions Defense Allows QB Scrambles",
+        "description": "Detroit allowing 4.8 YPC to opposing QBs (18th in NFL). Aidan Hutchinson's edge pressure forces Hurts to escape pocket and scramble, creating rushing opportunities. Expected 35-45 yards on combination of designed runs and scrambles."
+      },
+      {
+        "title": "Home Primetime Performance",
+        "description": "Hurts averages 46.7 rush yards in Sunday/Monday Night Football games at Lincoln Financial Field. Elevated performance in spotlight games. Expected aggressive rushing usage in crucial NFC showdown."
+      },
+      {
+        "title": "Low Line Provides Cushion",
+        "description": "Line of 30.5 is 11.8 yards below season average. Hurts only needs 3-4 decent scrambles or 2-3 QB power runs to clear. Significant margin of safety built into bet."
+      }
+    ],
+    "riskFactors": [
+      "If Eagles build early lead, could sit in pocket more and avoid designed QB runs",
+      "Saquon Barkley's dominant rushing threatens to reduce Hurts' designed carries",
+      "Lions defensive front (Hutchinson, Paschal) could contain edge runs effectively",
+      "Low-scoring defensive game could limit overall offensive opportunities"
+    ]
+  },
+  "gameResults": {
+    "playerStats": {
+      "rushingYards": 31,
+      "rushAttempts": 10,
+      "yardsPerCarry": 3.1,
+      "longestRush": "9 yards",
+      "rushingTDs": 1,
+      "passingYards": 135,
+      "completions": "14-of-28",
+      "passingTDs": 0
+    },
+    "teamStats": {
+      "eaglesTimeOfPossession": "39:20",
+      "eaglesTotalRushYards": 122,
+      "eaglesDesignedQBRuns": 6,
+      "hurtsScrambles": 4,
+      "eaglesRedZoneAttempts": 3,
+      "eaglesRedZoneConversions": 1
+    },
+    "keyPlayers": {
+      "saquonBarkley": {
+        "team": "Eagles",
+        "rushing": "26 carries, 83 yards",
+        "note": "Dominated carry share, left fewer designed runs for Hurts"
+      },
+      "aidanHutchinson": {
+        "team": "Lions",
+        "defense": "1 sack, 3 QB pressures",
+        "note": "Edge pressure forced Hurts to scramble several times"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "score": "0-0",
+        "description": "Hurts: 2 carries for 4 yards. Defensive battle early. Hurts used primarily as passer as Eagles tried to establish rhythm. Minimal designed QB runs."
+      },
+      {
+        "quarter": "2nd Quarter",
+        "score": "Eagles 7, Lions 3",
+        "description": "Hurts: 4 carries for 14 yards, 1 TD. Scored on signature 1-yard QB sneak (tush push) with 16 seconds left in half. Added 13 yards on 3 other carries (zone-reads, scrambles). Halftime: Hurts at 6 carries, 18 yards."
+      },
+      {
+        "quarter": "3rd Quarter",
+        "score": "Eagles 6, Lions 3",
+        "description": "Hurts: 2 carries for 8 yards. Two Eagles field goals. Hurts used sparingly in run game as Eagles leaned on Barkley. Added 8 yards on QB power and scramble. Through 3Q: Hurts at 8 carries, 26 yards (4.5 yards needed)."
+      },
+      {
+        "quarter": "4th Quarter",
+        "score": "Eagles 3, Lions 3",
+        "description": "Hurts: 2 carries for 5 yards. Final FG extended lead to 16-9. Hurts' 4th-quarter carries included 3-yard scramble and 2-yard QB sneak attempt. Final: 10 carries, 31 yards - cleared 30.5 by 0.5 yards."
+      }
+    ],
+    "whenCleared": "Hurts cleared 30.5 with 6:18 remaining in 4th quarter on 3-yard scramble up middle on 2nd-and-7. This gave him exactly 31 yards, clearing line by 0.5 yards. Held breath on final possessions - any lost yardage would have pushed him under.",
+    "turningPoint": "Low-scoring defensive battle (16-9) limited Hurts' overall rushing opportunities. Eagles leaned heavily on Barkley (26 carries) instead of Hurts' legs. Game script favored time-consuming ground game over explosive QB scrambles. Hurts barely cleared 30.5 - any one less yard anywhere and bet loses.",
+    "gamePace": "Extremely slow, defensive slugfest. Eagles controlled possession (39:20 vs 20:40) but focused on Barkley, not Hurts. Only 16 points scored by Eagles. Conservative playcalling limited Hurts' designed runs. Sweated this one out.",
+    "teamOffense": "Eagles rushed 45 times for 122 yards (2.7 YPC). Hurts got only 10 of 45 carries (22.2% share). Barkley dominated with 26 carries (57.8%). Passing game struggled (Hurts 14-of-28, 135 yards, 0 TDs). Run-first approach but centered on Barkley, not Hurts."
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Narrow Cover by 0.5 Yards",
+        "description": "Hurts rushed for exactly 31 yards, clearing 30.5 by just 0.5 yards. Sweated every carry. If Hurts loses 1 yard anywhere (sack, TFL on scramble), bet loses. Right side but extremely fortunate."
+      },
+      {
+        "title": "Designed Runs Plus Scrambles",
+        "description": "Hurts' 10 carries included 6 designed QB runs (QB power, zone-read keeps, tush push) and 4 scrambles. Combination of playcalled rushes and improvisation got him to 31 yards. Mix was essential."
+      },
+      {
+        "title": "Low Line Created Margin",
+        "description": "Line of 30.5 was 11.8 below season average (42.3 YPG). This cushion proved critical - Hurts underperformed norm but still barely cleared. Without low line, bet loses easily."
+      }
+    ],
+    "whatWentWrong": [
+      {
+        "title": "Barkley Dominated Rush Attempts",
+        "description": "Saquon Barkley got 26 of 45 team rush attempts (57.8%), leaving only 10 for Hurts (22.2%). Eagles leaned on workhorse RB instead of QB legs. This reduced Hurts' designed run opportunities."
+      },
+      {
+        "title": "Low-Scoring Game Limited Opportunities",
+        "description": "Eagles scored only 16 points (7 from Hurts TD, 9 from FGs). Defensive slugfest meant fewer overall offensive plays and snaps. Only 79 offensive plays total - below season average."
+      },
+      {
+        "title": "Poor Efficiency (3.1 YPC)",
+        "description": "Hurts' 31 yards on 10 carries (3.1 YPC) was well below season efficiency. Lions defense (Hutchinson pressure) made runs difficult. Volume barely saved the prop."
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "31 yards was 11.3 below season average (42.3 YPG). 10 carries matched season norm (8.2 attempts/game). Volume was there but efficiency wasn't.",
+      "vsRecentForm": "Last 3 games: 48, 38, 41 yards. 31 yards represented worst output in last 4 games. Still cleared prop by 0.5.",
+      "vsPropLine": "Cleared 30.5 by 0.5 yards. Tightest cover imaginable. If Hurts loses 1 yard anywhere, bet loses. Lucky to clear in low-scoring environment.",
+      "percentileRanking": "31 yards ranked in 28th percentile for Hurts' 2025 games. Well below average performance. Line of 30.5 saved the day."
+    },
+    "wasNormalVariance": "Partially. Hurts' 31 yards on 10 carries (3.1 YPC) vs season 5.1 YPC represents underperformance, but Lions defensive game plan (Hutchinson edge pressure, interior leverage) made QB runs difficult. More importantly, Eagles' game script centered on Barkley (26 carries) instead of Hurts' legs. Conservative playcalling in defensive battle limited Hurts' designed run volume. The 0.5-yard cover margin shows this was extremely fortunate - one less yard and bet loses. Right side but tight squeeze represents borderline bad process with lucky result."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -110,
+    "clvCents": 5,
+    "clvPercentage": 1.2,
+    "verdict": "Slight positive CLV. Line opened at O30.5 (-105) and moved to O30.5 (-110) as sharp money hit the over. We got -105 before it moved to -110, saving 5 cents of juice. However, covering by only 0.5 yards makes CLV relatively irrelevant - this was a sweat regardless of juice."
+  },
+  "keyTakeaways": [
+    "Covered by 0.5 yards (31 vs 30.5) - tightest possible margin, sweated entire 4th quarter",
+    "Low line (30.5 vs 42.3 season avg) provided critical cushion - without it, bet loses easily",
+    "Hurts cleared with 6:18 left in 4th on 3-yard scramble - held breath rest of game",
+    "Barkley dominated carries (26 vs Hurts' 10), reducing QB designed run opportunities",
+    "10 carries included 6 designed runs + 4 scrambles - needed both elements to hit",
+    "3.1 YPC well below season 5.1 YPC - efficiency failed but volume barely saved prop",
+    "Low-scoring game (16-9) limited overall offensive opportunities and Hurts rushing usage",
+    "If Hurts loses 1 yard anywhere (sack, negative scramble), bet loses - extremely fortunate",
+    "For quantitative operations: QB rushing props in defensive battles carry massive variance",
+    "Right side but tight squeeze - borderline bad process with lucky result",
+    "Eagles' run-heavy approach favored Barkley (workhorse) over Hurts (mobile QB)",
+    "Lesson: QB rushing props under 35 yards have minimal cushion even for mobile QBs"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Fortunate cover that exposed thin margin of error. Hurts rushed for exactly 31 yards on 10 carries, clearing 30.5 by just 0.5 yards. If Hurts loses 1 yard anywhere (sack, tackle for loss on scramble), bet loses. While line of 30.5 was 11.8 below season average (42.3), game script proved problematic - Eagles leaned on Barkley (26 carries) instead of Hurts' legs, limiting designed QB runs. Low-scoring defensive battle (16-9) reduced overall opportunities. Hurts' 3.1 YPC vs season 5.1 YPC showed efficiency failure - only volume (10 carries) barely saved prop. Cleared line with 6:18 left in 4th quarter on 3-yard scramble, then sweated rest of game hoping for no negative plays. This represents right side with lucky result - 0.5-yard margin is coin-flip territory. While bet won, extreme variance and thin cushion make this questionable process. Would not make this bet again under identical circumstances - sweat factor too high for 1-unit stake."
+}

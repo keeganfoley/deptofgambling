@@ -1,0 +1,2099 @@
+{
+  "ncaab": {
+    "Oregon St Beavers_Oregon Ducks": {
+      "gameInfo": {
+        "id": "912207f76474ab471793208cc845d7ca",
+        "sport_key": "basketball_ncaab",
+        "sport_title": "NCAAB",
+        "commence_time": "2025-11-18T03:00:00Z",
+        "home_team": "Oregon Ducks",
+        "away_team": "Oregon St Beavers",
+        "bookmakers": [
+          {
+            "key": "fanduel",
+            "title": "FanDuel",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1450
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 810
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -104,
+                    "point": -14.5
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -118,
+                    "point": 14.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 141.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -105,
+                    "point": 141.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "last_update": "2025-11-18T00:10:16Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1200
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 754
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -110,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -110,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -106,
+                    "point": 141
+                  },
+                  {
+                    "name": "Under",
+                    "price": -114,
+                    "point": 141
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "lowvig",
+            "title": "LowVig.ag",
+            "last_update": "2025-11-18T00:09:47Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1200
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 754
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -106,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -106,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -104,
+                    "point": 141
+                  },
+                  {
+                    "name": "Under",
+                    "price": -112,
+                    "point": 141
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "williamhill_us",
+            "title": "Caesars",
+            "last_update": "2025-11-18T00:09:48Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1400
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 800
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -110,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -110,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 140.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 140.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "draftkings",
+            "title": "DraftKings",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1350
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 800
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -105,
+                    "point": -14.5
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -115,
+                    "point": 14.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -112,
+                    "point": 140.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -108,
+                    "point": 140.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betmgm",
+            "title": "BetMGM",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1400
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 775
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -105,
+                    "point": -14.5
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -115,
+                    "point": 14.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 140.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -105,
+                    "point": 140.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betus",
+            "title": "BetUS",
+            "last_update": "2025-11-18T00:10:30Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1200
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 750
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -110,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -110,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 141
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 141
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "bovada",
+            "title": "Bovada",
+            "last_update": "2025-11-18T00:10:33Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1200
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 700
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -110,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -110,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 141
+                  },
+                  {
+                    "name": "Under",
+                    "price": -105,
+                    "point": 141
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betrivers",
+            "title": "BetRivers",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -1250
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": 650
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Oregon Ducks",
+                    "price": -115,
+                    "point": -14
+                  },
+                  {
+                    "name": "Oregon St Beavers",
+                    "price": -108,
+                    "point": 14
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -109,
+                    "point": 141.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -114,
+                    "point": 141.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "priority": 2,
+      "gameTime": "10:00 PM"
+    },
+    "SIU-Edwardsville Cougars_Wisconsin Badgers": {
+      "gameInfo": {
+        "id": "cf7accc58650025718bc2e5e63ed731d",
+        "sport_key": "basketball_ncaab",
+        "sport_title": "NCAAB",
+        "commence_time": "2025-11-18T01:00:00Z",
+        "home_team": "Wisconsin Badgers",
+        "away_team": "SIU-Edwardsville Cougars",
+        "bookmakers": [
+          {
+            "key": "fanduel",
+            "title": "FanDuel",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -105,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -115,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "last_update": "2025-11-18T00:10:16Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -110,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -110,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "lowvig",
+            "title": "LowVig.ag",
+            "last_update": "2025-11-18T00:09:47Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -106,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -106,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -108,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -108,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "draftkings",
+            "title": "DraftKings",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": 2000
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -6500
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -108,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -112,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "williamhill_us",
+            "title": "Caesars",
+            "last_update": "2025-11-18T00:09:48Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -110,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -110,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betmgm",
+            "title": "BetMGM",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -110,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -110,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "bovada",
+            "title": "Bovada",
+            "last_update": "2025-11-18T00:10:33Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": 1600
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -10000
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -105,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -115,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betus",
+            "title": "BetUS",
+            "last_update": "2025-11-18T00:10:30Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -110,
+                    "point": 25.5
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -110,
+                    "point": -25.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betrivers",
+            "title": "BetRivers",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "SIU-Edwardsville Cougars",
+                    "price": -113,
+                    "point": 26
+                  },
+                  {
+                    "name": "Wisconsin Badgers",
+                    "price": -110,
+                    "point": -26
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -113,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "priority": 1,
+      "gameTime": "8:00 PM"
+    },
+    "Stonehill Skyhawks_Iowa State Cyclones": {
+      "gameInfo": {
+        "id": "f47eca457817286f7f1783a13bad8255",
+        "sport_key": "basketball_ncaab",
+        "sport_title": "NCAAB",
+        "commence_time": "2025-11-18T01:00:40Z",
+        "home_team": "Iowa State Cyclones",
+        "away_team": "Stonehill Skyhawks",
+        "bookmakers": [
+          {
+            "key": "fanduel",
+            "title": "FanDuel",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -118,
+                    "point": -39.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -104,
+                    "point": 39.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -106,
+                    "point": 147.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -114,
+                    "point": 147.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "lowvig",
+            "title": "LowVig.ag",
+            "last_update": "2025-11-18T00:09:47Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -114,
+                    "point": -39
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": 102,
+                    "point": 39
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -108,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -108,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "last_update": "2025-11-18T00:10:16Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -118,
+                    "point": -39
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -102,
+                    "point": 39
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 146.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 146.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "draftkings",
+            "title": "DraftKings",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -112,
+                    "point": -39.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -108,
+                    "point": 39.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -108,
+                    "point": 147.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -112,
+                    "point": 147.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betrivers",
+            "title": "BetRivers",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -114,
+                    "point": -39.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -109,
+                    "point": 39.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -112,
+                    "point": 147
+                  },
+                  {
+                    "name": "Under",
+                    "price": -112,
+                    "point": 147
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betmgm",
+            "title": "BetMGM",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -10000
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": 3300
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -110,
+                    "point": -40.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -110,
+                    "point": 40.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -105,
+                    "point": 147.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -115,
+                    "point": 147.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "bovada",
+            "title": "Bovada",
+            "last_update": "2025-11-18T00:10:33Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -115,
+                    "point": -39.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -105,
+                    "point": 39.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 147.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 147.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "williamhill_us",
+            "title": "Caesars",
+            "last_update": "2025-11-18T00:09:48Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Iowa State Cyclones",
+                    "price": -110,
+                    "point": -39.5
+                  },
+                  {
+                    "name": "Stonehill Skyhawks",
+                    "price": -110,
+                    "point": 39.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 147.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 147.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "priority": 1,
+      "gameTime": "8:00 PM"
+    },
+    "West Georgia Wolves_Tennessee Tech Golden Eagles": {
+      "gameInfo": {
+        "id": "33a58233d16277ee0f982931b22f4ba6",
+        "sport_key": "basketball_ncaab",
+        "sport_title": "NCAAB",
+        "commence_time": "2025-11-18T00:02:35Z",
+        "home_team": "Tennessee Tech Golden Eagles",
+        "away_team": "West Georgia Wolves",
+        "bookmakers": [
+          {
+            "key": "draftkings",
+            "title": "DraftKings",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -245
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 185
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -115,
+                    "point": -5.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -115,
+                    "point": 5.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -115,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "lowvig",
+            "title": "LowVig.ag",
+            "last_update": "2025-11-18T00:00:37Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:00:37Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -106,
+                    "point": -4
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -106,
+                    "point": 4
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:00:37Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -119,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": 102,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "last_update": "2025-11-17T23:59:38Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-17T23:59:38Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -110,
+                    "point": -4
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -110,
+                    "point": 4
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-17T23:59:38Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -120,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": 100,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "fanduel",
+            "title": "FanDuel",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -280
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 210
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -118,
+                    "point": -5.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -110,
+                    "point": 5.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -118,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "fanatics",
+            "title": "Fanatics",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -285
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 210
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": 100,
+                    "point": -7.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -125,
+                    "point": 7.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 150.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -115,
+                    "point": 150.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betrivers",
+            "title": "BetRivers",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -360
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 220
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -125,
+                    "point": -6.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -117,
+                    "point": 6.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -117,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -125,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betmgm",
+            "title": "BetMGM",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -325
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 240
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -115,
+                    "point": -7.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -115,
+                    "point": 7.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -115,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "bovada",
+            "title": "Bovada",
+            "last_update": "2025-11-18T00:10:33Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -250
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 185
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -105,
+                    "point": -6.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -125,
+                    "point": 6.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -130,
+                    "point": 151.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": 100,
+                    "point": 151.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "williamhill_us",
+            "title": "Caesars",
+            "last_update": "2025-11-18T00:09:48Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -280
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": 215
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Tennessee Tech Golden Eagles",
+                    "price": -120,
+                    "point": -6.5
+                  },
+                  {
+                    "name": "West Georgia Wolves",
+                    "price": -110,
+                    "point": 6.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 152.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -120,
+                    "point": 152.5
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "priority": 1,
+      "gameTime": "7:02 PM"
+    },
+    "Southern Utah Thunderbirds_Gonzaga Bulldogs": {
+      "gameInfo": {
+        "id": "28d9dd0bc288ca5abbde0d90bc374006",
+        "sport_key": "basketball_ncaab",
+        "sport_title": "NCAAB",
+        "commence_time": "2025-11-18T02:00:15Z",
+        "home_team": "Gonzaga Bulldogs",
+        "away_team": "Southern Utah Thunderbirds",
+        "bookmakers": [
+          {
+            "key": "fanduel",
+            "title": "FanDuel",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -105,
+                    "point": -36.5
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -115,
+                    "point": 36.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 159.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -105,
+                    "point": 159.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "lowvig",
+            "title": "LowVig.ag",
+            "last_update": "2025-11-18T00:09:47Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -108,
+                    "point": -35
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -104,
+                    "point": 35
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:47Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -112,
+                    "point": 161
+                  },
+                  {
+                    "name": "Under",
+                    "price": -104,
+                    "point": 161
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betonlineag",
+            "title": "BetOnline.ag",
+            "last_update": "2025-11-18T00:10:16Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -112,
+                    "point": -35
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -108,
+                    "point": 35
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:16Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -114,
+                    "point": 161
+                  },
+                  {
+                    "name": "Under",
+                    "price": -106,
+                    "point": 161
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "williamhill_us",
+            "title": "Caesars",
+            "last_update": "2025-11-18T00:09:48Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -110,
+                    "point": -35.5
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -110,
+                    "point": 35.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:09:48Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 160.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 160.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betmgm",
+            "title": "BetMGM",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -10000
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": 3300
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -110,
+                    "point": -35.5
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -110,
+                    "point": 35.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 160.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 160.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "draftkings",
+            "title": "DraftKings",
+            "last_update": "2025-11-18T00:10:28Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -10000
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": 3000
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -108,
+                    "point": -35.5
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -112,
+                    "point": 35.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:28Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -105,
+                    "point": 160.5
+                  },
+                  {
+                    "name": "Under",
+                    "price": -115,
+                    "point": 160.5
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betus",
+            "title": "BetUS",
+            "last_update": "2025-11-18T00:10:30Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -110,
+                    "point": -35
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -110,
+                    "point": 35
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:30Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -110,
+                    "point": 160
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 160
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "bovada",
+            "title": "Bovada",
+            "last_update": "2025-11-18T00:10:33Z",
+            "markets": [
+              {
+                "key": "h2h",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -20000
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": 2000
+                  }
+                ]
+              },
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -110,
+                    "point": -35.5
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -110,
+                    "point": 35.5
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:33Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -115,
+                    "point": 161
+                  },
+                  {
+                    "name": "Under",
+                    "price": -105,
+                    "point": 161
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "betrivers",
+            "title": "BetRivers",
+            "last_update": "2025-11-18T00:10:44Z",
+            "markets": [
+              {
+                "key": "spreads",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Gonzaga Bulldogs",
+                    "price": -109,
+                    "point": -36
+                  },
+                  {
+                    "name": "Southern Utah Thunderbirds",
+                    "price": -114,
+                    "point": 36
+                  }
+                ]
+              },
+              {
+                "key": "totals",
+                "last_update": "2025-11-18T00:10:44Z",
+                "outcomes": [
+                  {
+                    "name": "Over",
+                    "price": -113,
+                    "point": 160
+                  },
+                  {
+                    "name": "Under",
+                    "price": -110,
+                    "point": 160
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "priority": 1,
+      "gameTime": "9:00 PM"
+    }
+  },
+  "timestamp": "2025-11-18T00:10:56.638Z"
+}

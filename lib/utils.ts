@@ -5,7 +5,8 @@
 /**
  * Format currency with proper sign and decimal places
  */
-export function formatCurrency(value: number, showSign: boolean = true): string {
+export function formatCurrency(value: number | null | undefined, showSign: boolean = true): string {
+  if (value === null || value === undefined) return '-';
   const sign = value > 0 ? (showSign ? '+' : '') : value < 0 ? '-' : '';
   return `${sign}$${Math.abs(value).toLocaleString('en-US', {
     minimumFractionDigits: 2,
@@ -16,7 +17,8 @@ export function formatCurrency(value: number, showSign: boolean = true): string 
 /**
  * Format percentage with proper sign
  */
-export function formatPercent(value: number, showSign: boolean = true, decimals: number = 2): string {
+export function formatPercent(value: number | null | undefined, showSign: boolean = true, decimals: number = 2): string {
+  if (value === null || value === undefined) return '-';
   const sign = showSign && value > 0 ? '+' : '';
   return `${sign}${value.toFixed(decimals)}%`;
 }

@@ -1,0 +1,118 @@
+{
+  "slug": "illinois-spread-nov22-2025",
+  "team": "Illinois",
+  "line": "Illinois -8.5",
+  "odds": -110,
+  "stake": 0.5,
+  "result": "loss",
+  "finalStat": "Lost by 17",
+  "profit": -50,
+  "gameDetails": {
+    "matchup": "Illinois vs Wisconsin",
+    "date": "2025-11-22",
+    "gameTime": "12:00 PM ET",
+    "venue": "Memorial Stadium",
+    "finalScore": "Wisconsin 27, Illinois 10"
+  },
+  "preGameAnalysis": {
+    "edge": 6,
+    "expectedValue": 8,
+    "estimatedProbability": 56,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Undefeated at home",
+      "seasonAverage": "30+ PPG at home",
+      "last5Games": "3-2 ATS",
+      "cushion": "Home field advantage"
+    },
+    "keyFactors": [
+      {
+        "title": "Home Dominance",
+        "description": "Illinois undefeated at Memorial Stadium this season"
+      },
+      {
+        "title": "Wisconsin Road Struggles",
+        "description": "Badgers struggling away from home"
+      },
+      {
+        "title": "Offensive Momentum",
+        "description": "Illinois offense clicking in recent weeks"
+      },
+      {
+        "title": "Bowl Positioning",
+        "description": "Important game for both teams' bowl hopes"
+      }
+    ],
+    "riskFactors": [
+      "Rivalry game unpredictability",
+      "Wisconsin always plays Illinois tough",
+      "Weather could be a factor"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "totalYards": 245,
+      "rushingYards": 89,
+      "passingYards": 156,
+      "turnovers": 3,
+      "thirdDownConversions": "3-12"
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Wisconsin jumped out to early lead"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Badgers dominated both sides, Illinois couldn't respond"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Wisconsin extended lead, game out of reach"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Garbage time, Illinois never threatened"
+      }
+    ],
+    "gamePace": "Wisconsin controlled clock with ground game",
+    "turningPoint": "Early Wisconsin touchdowns set the tone"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Complete Domination",
+        "description": "Wisconsin won by 17 - not even close"
+      },
+      {
+        "title": "Illinois Offense Collapsed",
+        "description": "Only 10 points - worst home performance"
+      },
+      {
+        "title": "Badgers Ground Game",
+        "description": "Wisconsin rushed for over 200 yards"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "10 points vs 30+ average at home",
+      "vsPropLine": "Lost by 17 vs -8.5 line",
+      "percentileRanking": "Worst Illinois performance of season"
+    },
+    "wasNormalVariance": "No - this was a complete collapse. Illinois scoring only 10 at home was inexcusable. Rivalry games are unpredictable."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No line movement - even money throughout"
+  },
+  "keyTakeaways": [
+    "Rivalry games are unpredictable regardless of records",
+    "Wisconsin always plays Illinois tough",
+    "Late season letdowns happen",
+    "Small unit size limited damage"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Disaster. Illinois got crushed at home 27-10. Wisconsin dominated both sides. Rivalry trap game."
+}
