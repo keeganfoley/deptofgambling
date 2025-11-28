@@ -1,0 +1,114 @@
+{
+  "slug": "cowboys-spread-contra-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "+3",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 3",
+  "profit": 150,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 3,
+    "expectedValue": 6,
+    "estimatedProbability": 51,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Fading public working well",
+      "seasonAverage": "Chiefs 1-4 on road",
+      "last5Games": "Public overvaluing KC",
+      "cushion": "Contrarian play against hype"
+    },
+    "keyFactors": [
+      {
+        "title": "Fading Chiefs Hype",
+        "description": "Public overvaluing Kansas City based on name recognition"
+      },
+      {
+        "title": "Road Struggles Real",
+        "description": "Chiefs 1-4 on road - not the dominant team of recent years"
+      },
+      {
+        "title": "Public vs Reality",
+        "description": "Public perception lagging behind Chiefs' actual performance"
+      },
+      {
+        "title": "Contrarian Edge",
+        "description": "Going against the crowd when fundamentals support it"
+      }
+    ],
+    "riskFactors": [
+      "Public can be right sometimes",
+      "Mahomes factor",
+      "Chiefs could wake up"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 380,
+      "turnovers": 1
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Tight game"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Cowboys took lead"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Dallas in control"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Won 31-28"
+      }
+    ],
+    "whenCleared": "Won outright",
+    "gamePace": "High scoring",
+    "turningPoint": "Chiefs road woes continued"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Fade Worked",
+        "description": "Contrarian play against overrated Chiefs paid off"
+      },
+      {
+        "title": "Public Was Wrong",
+        "description": "Public overvalued KC, reality caught up"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Cowboys played well",
+      "vsRecentForm": "Continuing to build momentum",
+      "vsPropLine": "Covered easily",
+      "percentileRanking": "Strong outcome"
+    },
+    "wasNormalVariance": "Contrarian thesis played out. Public was wrong on Chiefs."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Good value captured"
+  },
+  "keyTakeaways": [
+    "Fading overrated public teams works",
+    "Chiefs road struggles are exploitable",
+    "Contrarian approach paid off",
+    "Public perception lags reality"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Contra Fund thesis confirmed. Faded the public on overrated Chiefs and Cowboys won outright 31-28."
+}

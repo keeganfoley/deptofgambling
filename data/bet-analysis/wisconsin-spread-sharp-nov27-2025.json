@@ -1,0 +1,110 @@
+{
+  "slug": "wisconsin-spread-sharp-nov27-2025",
+  "team": "Wisconsin",
+  "line": "-6.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Won by 21",
+  "profit": 190.48,
+  "gameDetails": {
+    "matchup": "Providence at Wisconsin",
+    "date": "2025-11-27",
+    "gameTime": "5:30 PM ET",
+    "venue": "Kohl Center",
+    "finalScore": "WIS 104, PROV 83"
+  },
+  "preGameAnalysis": {
+    "edge": 4.5,
+    "expectedValue": 8.6,
+    "estimatedProbability": 57,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "+18% money differential",
+      "seasonAverage": "57% bets, 75% money - biggest sharp move of day",
+      "last5Games": "Wisconsin rolling at home",
+      "cushion": "Massive sharp action"
+    },
+    "keyFactors": [
+      {
+        "title": "Biggest Sharp Move",
+        "description": "+18% money differential - biggest sharp indicator of the day"
+      },
+      {
+        "title": "Money Split",
+        "description": "57% bets but 75% of money on Wisconsin"
+      },
+      {
+        "title": "Home Court",
+        "description": "Kohl Center is tough environment"
+      },
+      {
+        "title": "2u Play",
+        "description": "High conviction warranted larger stake"
+      }
+    ],
+    "riskFactors": [
+      "Providence is decent team",
+      "Big East competition",
+      "Early season"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 104,
+      "fieldGoalPct": "55%",
+      "threePointers": 12
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Wisconsin exploded offensively early"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Blowout continued, final 104-83"
+      }
+    ],
+    "whenCleared": "Covered -6.5 in first half",
+    "gamePace": "Wisconsin pushed pace",
+    "turningPoint": "Early run put game away"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharp Move Perfect",
+        "description": "Biggest sharp indicator delivered biggest win"
+      },
+      {
+        "title": "Blowout",
+        "description": "Won by 21, covered -6.5 by 14.5 points"
+      },
+      {
+        "title": "104 Points",
+        "description": "Wisconsin offense was elite"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "104 points - exceptional",
+      "vsRecentForm": "Best game of season",
+      "vsPropLine": "Covered -6.5 by 14.5",
+      "percentileRanking": "Top 5% outcome"
+    },
+    "wasNormalVariance": "Better than expected. Biggest sharp move delivered biggest margin. 2u stake was justified."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -115,
+    "clvCents": 10,
+    "clvPercentage": 4.5,
+    "verdict": "Excellent CLV"
+  },
+  "keyTakeaways": [
+    "Biggest sharp move = biggest win",
+    "Following money differential works",
+    "2u on high-conviction plays pays off",
+    "Won by 21 on -6.5 spread"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Dominant. Wisconsin 104, Providence 83. Biggest sharp move of the day delivered biggest margin - won by 21."
+}

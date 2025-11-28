@@ -1,0 +1,122 @@
+{
+  "slug": "cowboys-spread-sharp-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "+3",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 3",
+  "profit": 150,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 4,
+    "expectedValue": 8,
+    "estimatedProbability": 54,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Sharp money heavily on Cowboys",
+      "seasonAverage": "Big Money indicator lit green",
+      "last5Games": "Cowboys building momentum",
+      "cushion": "+3 with sharp alignment"
+    },
+    "keyFactors": [
+      {
+        "title": "Big Money Indicator",
+        "description": "Sharp action heavily sided with Cowboys despite public on Chiefs"
+      },
+      {
+        "title": "Money vs Bets Split",
+        "description": "Large differential between bet % and money % favoring Dallas"
+      },
+      {
+        "title": "Professional Action",
+        "description": "Wiseguy moves detected on Cowboys +3"
+      },
+      {
+        "title": "Line Movement",
+        "description": "Line moved from KC -4 to -3 despite public on Chiefs"
+      }
+    ],
+    "riskFactors": [
+      "Public heavily on Chiefs",
+      "Mahomes in primetime",
+      "Sharp money can be wrong"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 380,
+      "turnovers": 1,
+      "timeOfPossession": "32:15"
+    },
+    "keyPlayers": {
+      "dakPrescott": {
+        "passing": "320 yards",
+        "touchdowns": 2,
+        "rating": "112.5"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Competitive opening frame"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Cowboys took control with TD run"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Dallas maintained advantage"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Held on for 31-28 win"
+      }
+    ],
+    "whenCleared": "Won outright - covered easily",
+    "gamePace": "High scoring game",
+    "turningPoint": "Sharp money proved correct"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharps Were Right",
+        "description": "Professional bettors correctly identified Cowboys value"
+      },
+      {
+        "title": "Faded the Public",
+        "description": "Public was heavy on Chiefs but sharps knew better"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Cowboys exceeded expectations",
+      "vsRecentForm": "3rd straight win",
+      "vsPropLine": "Covered +3 by winning outright",
+      "percentileRanking": "Excellent outcome"
+    },
+    "wasNormalVariance": "Sharp money alignment paid off perfectly."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Captured value by following sharp action"
+  },
+  "keyTakeaways": [
+    "Sharp money indicators were accurate",
+    "Big Money + Sharp Action alignment is powerful",
+    "Following professional action paid off",
+    "Cowboys +3 was the right side"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Sharp fund thesis confirmed. Big Money indicator was green, sharps were on Cowboys, and they won outright 31-28."
+}

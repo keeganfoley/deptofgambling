@@ -1,0 +1,106 @@
+{
+  "slug": "michigan-state-spread-sharp-nov27-2025",
+  "team": "Michigan State",
+  "line": "-1.5",
+  "odds": -102,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 16",
+  "profit": 147.06,
+  "gameDetails": {
+    "matchup": "North Carolina at Michigan State",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "Breslin Center (Fort Myers Tip-Off)",
+    "finalScore": "MSU 74, UNC 58"
+  },
+  "preGameAnalysis": {
+    "edge": 3.5,
+    "expectedValue": 5.1,
+    "estimatedProbability": 55,
+    "impliedProbability": 50.5,
+    "recentPerformance": {
+      "hitRate": "+14% money differential",
+      "seasonAverage": "67% bets, 81% money on MSU ML",
+      "last5Games": "Sharp money heavily aligned",
+      "cushion": "Big money/bet split"
+    },
+    "keyFactors": [
+      {
+        "title": "Money Differential",
+        "description": "+14% money differential (67% bets, 81% money on MSU ML)"
+      },
+      {
+        "title": "Sharp Alignment",
+        "description": "Big money moving on Michigan State"
+      },
+      {
+        "title": "Izzo Factor",
+        "description": "Tom Izzo in big early-season games"
+      }
+    ],
+    "riskFactors": [
+      "UNC is talented",
+      "Neutral site game",
+      "Early season variance"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 74,
+      "fieldGoalPct": "52%",
+      "rebounds": 38
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Michigan State jumped out to lead"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Dominated UNC, won 74-58"
+      }
+    ],
+    "whenCleared": "Covered -1.5 easily - won by 16",
+    "gamePace": "MSU controlled tempo",
+    "turningPoint": "Defensive effort stifled UNC"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharp Money Correct",
+        "description": "Money differential indicator was spot on"
+      },
+      {
+        "title": "Dominated",
+        "description": "Won by 16, covered -1.5 by 14.5 points"
+      },
+      {
+        "title": "Izzo Magic",
+        "description": "Michigan State showed up in big spot"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "74 points solid",
+      "vsRecentForm": "Dominant performance",
+      "vsPropLine": "Covered -1.5 by 14.5",
+      "percentileRanking": "Excellent outcome"
+    },
+    "wasNormalVariance": "Better than expected. Sharp money was right, MSU dominated."
+  },
+  "closingLineValue": {
+    "ourOdds": -102,
+    "closingOdds": -110,
+    "clvCents": 8,
+    "clvPercentage": 3.8,
+    "verdict": "Good CLV captured"
+  },
+  "keyTakeaways": [
+    "Money differential is powerful indicator",
+    "Sharp consensus on college games works",
+    "Izzo in big games is reliable",
+    "Won by 16 on -1.5 spread"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Dominant win. MSU 74, UNC 58. Covered -1.5 by 14.5 points. Sharp money was right."
+}

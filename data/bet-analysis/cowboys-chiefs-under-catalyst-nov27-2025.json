@@ -1,0 +1,106 @@
+{
+  "slug": "cowboys-chiefs-under-catalyst-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "Under 53",
+  "odds": -110,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Total: 59",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 2,
+    "expectedValue": 3.6,
+    "estimatedProbability": 51,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Early Thanksgiving games historically lower scoring",
+      "seasonAverage": "Holiday situational trend",
+      "last5Games": "Turkey Day tends to start slow",
+      "cushion": "Situational under edge"
+    },
+    "keyFactors": [
+      {
+        "title": "Thanksgiving Trend",
+        "description": "Early Thanksgiving games historically lower scoring - teams getting up early, travel"
+      },
+      {
+        "title": "Situational Under",
+        "description": "Holiday games with early kickoffs tend to go under"
+      }
+    ],
+    "riskFactors": [
+      "Trends can break",
+      "Good offenses can score anywhere",
+      "Sample size concerns"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "totalPoints": 59,
+      "cowboysPoints": 31,
+      "chiefsPoints": 28
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Both teams scored early"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Scoring continued"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "High-scoring game"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Total: 59 - loss"
+      }
+    ],
+    "whenMissed": "Over hit in 4th quarter",
+    "gamePace": "Shootout",
+    "turningPoint": "Trend didn't hold"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Trend Broke",
+        "description": "Thanksgiving under trend didn't hold this year"
+      },
+      {
+        "title": "Offenses Too Good",
+        "description": "Both teams clicking on offense"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Well above",
+      "vsRecentForm": "Shootout",
+      "vsPropLine": "Over by 6",
+      "percentileRanking": "Bad outcome"
+    },
+    "wasNormalVariance": "Catalyst trend didn't hold. Situational edge was real historically but didn't play out this game."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No CLV"
+  },
+  "keyTakeaways": [
+    "Situational trends can break",
+    "Can't rely solely on historical patterns",
+    "Offensive talent can overcome situational factors",
+    "Under on Thanksgiving didn't work this year"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Loss. Thanksgiving under trend broke. Game went 59 total, well over 53 line."
+}

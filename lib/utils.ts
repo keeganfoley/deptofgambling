@@ -17,10 +17,12 @@ export function formatCurrency(value: number | null | undefined, showSign: boole
 /**
  * Format percentage with proper sign
  */
-export function formatPercent(value: number | null | undefined, showSign: boolean = true, decimals: number = 2): string {
+export function formatPercent(value: number | string | null | undefined, showSign: boolean = true, decimals: number = 2): string {
   if (value === null || value === undefined) return '-';
-  const sign = showSign && value > 0 ? '+' : '';
-  return `${sign}${value.toFixed(decimals)}%`;
+  const numValue = typeof value === 'string' ? parseFloat(value) : value;
+  if (isNaN(numValue)) return '-';
+  const sign = showSign && numValue > 0 ? '+' : '';
+  return `${sign}${numValue.toFixed(decimals)}%`;
 }
 
 /**

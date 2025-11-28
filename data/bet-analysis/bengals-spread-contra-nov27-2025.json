@@ -1,0 +1,136 @@
+{
+  "slug": "bengals-spread-contra-nov27-2025",
+  "team": "Cincinnati Bengals",
+  "line": "+7",
+  "odds": 100,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Won outright by 18",
+  "profit": 100,
+  "gameDetails": {
+    "matchup": "Cincinnati Bengals at Baltimore Ravens",
+    "date": "2025-11-27",
+    "gameTime": "8:20 PM ET",
+    "venue": "M&T Bank Stadium",
+    "finalScore": "CIN 32, BAL 14"
+  },
+  "preGameAnalysis": {
+    "edge": 2,
+    "expectedValue": 4,
+    "estimatedProbability": 48,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Line moved 4 points",
+      "seasonAverage": "Public hammering Ravens",
+      "last5Games": "Burrow returning",
+      "cushion": "Contrarian value at +7"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Movement",
+        "description": "Line moved from Ravens -10.5 to -7 - significant movement toward Bengals"
+      },
+      {
+        "title": "Burrow Return",
+        "description": "Joe Burrow returning healthy - market potentially undervaluing"
+      },
+      {
+        "title": "Public Overreaction",
+        "description": "Ravens on 5-game streak has public overconfident"
+      },
+      {
+        "title": "Divisional Dog",
+        "description": "Divisional underdogs historically have value"
+      }
+    ],
+    "riskFactors": [
+      "Ravens genuinely playing well",
+      "Bengals struggling",
+      "Road divisional game"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 32,
+      "turnoversForced": 5,
+      "totalYards": 350
+    },
+    "keyPlayers": {
+      "joeBurrow": {
+        "passing": "261 yards",
+        "touchdowns": 2,
+        "interceptions": 0,
+        "rating": "105.2"
+      },
+      "jaMarrChase": {
+        "receptions": 7,
+        "yards": 110,
+        "targets": 14
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Ravens scored first but Bengals responded"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Turnovers started swinging momentum to Cincinnati"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Bengals took control, defense dominating"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Blowout win 32-14 - won outright by 18!"
+      }
+    ],
+    "whenCleared": "Won outright - never needed the +7 points",
+    "gamePace": "Bengals controlled after forcing turnovers",
+    "turningPoint": "Ravens' turnover problems gave Bengals short fields"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Contrarian Thesis Perfect",
+        "description": "Fading public on Ravens was exactly right"
+      },
+      {
+        "title": "Burrow Delivered",
+        "description": "Joe Burrow returned and played great - 261 yards, 2 TDs"
+      },
+      {
+        "title": "Defense Dominated",
+        "description": "Bengals forced 5 turnovers - game-changing"
+      },
+      {
+        "title": "Won Outright",
+        "description": "Didn't just cover +7, won by 18"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "32 points - excellent output",
+      "vsRecentForm": "Ended 4-game losing streak",
+      "vsPropLine": "Won outright by 18, covered +7 by 25 points",
+      "percentileRanking": "Best possible outcome"
+    },
+    "wasNormalVariance": "Better than expected. We took +7 hoping to cover, won outright by 18. Contra Fund thesis was perfect - public was wrong on Ravens."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -102,
+    "clvCents": 2,
+    "clvPercentage": 1.0,
+    "verdict": "Small CLV but massive win regardless"
+  },
+  "keyTakeaways": [
+    "Fading public overreaction pays off",
+    "Line movement from -10.5 to -7 was signal",
+    "Joe Burrow healthy is dangerous",
+    "Divisional dogs have value",
+    "Won outright - best possible outcome"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect Contra Fund play. Faded overconfident public on Ravens, Bengals won OUTRIGHT 32-14. Covered +7 by 25 points. Thesis was perfect."
+}

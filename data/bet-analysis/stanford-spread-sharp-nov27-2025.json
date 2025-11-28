@@ -1,0 +1,106 @@
+{
+  "slug": "stanford-spread-sharp-nov27-2025",
+  "team": "Stanford",
+  "line": "-2",
+  "odds": -115,
+  "stake": 1,
+  "result": "win",
+  "finalStat": "Won by 4",
+  "profit": 86.96,
+  "gameDetails": {
+    "matchup": "Minnesota at Stanford",
+    "date": "2025-11-27",
+    "gameTime": "9:30 PM ET",
+    "venue": "Maples Pavilion",
+    "finalScore": "STAN 72, MINN 68"
+  },
+  "preGameAnalysis": {
+    "edge": 3,
+    "expectedValue": 2.6,
+    "estimatedProbability": 54,
+    "impliedProbability": 53.5,
+    "recentPerformance": {
+      "hitRate": "+11% money differential",
+      "seasonAverage": "81% bets, 92% money on Stanford",
+      "last5Games": "Minnesota 0-3 ATS last 3",
+      "cushion": "Sharp alignment + Minnesota fading"
+    },
+    "keyFactors": [
+      {
+        "title": "Money Differential",
+        "description": "+11% money differential (81% bets, 92% money)"
+      },
+      {
+        "title": "Minnesota ATS Struggles",
+        "description": "Gophers 0-3 ATS in last 3 games - fading"
+      },
+      {
+        "title": "Home Court",
+        "description": "Stanford at Maples Pavilion"
+      }
+    ],
+    "riskFactors": [
+      "Small spread, close game risk",
+      "Minnesota desperate",
+      "Late night game"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 72,
+      "rebounds": 35,
+      "assists": 18
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Close game, Stanford slight edge"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Stanford pulled away late, won 72-68"
+      }
+    ],
+    "whenCleared": "Covered -2 in final minutes",
+    "gamePace": "Tight throughout",
+    "turningPoint": "Stanford closed strong"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharp Money Correct",
+        "description": "Money differential indicator delivered"
+      },
+      {
+        "title": "Minnesota ATS Fade Worked",
+        "description": "Gophers now 0-4 ATS in last 4"
+      },
+      {
+        "title": "Covered by 2",
+        "description": "Won by 4, covered -2"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "72 points decent",
+      "vsRecentForm": "Got the job done",
+      "vsPropLine": "Covered -2 by 2",
+      "percentileRanking": "Acceptable outcome"
+    },
+    "wasNormalVariance": "Close but successful. Sharp money was right, Stanford covered -2 by winning by 4."
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -118,
+    "clvCents": 3,
+    "clvPercentage": 1.4,
+    "verdict": "Small CLV"
+  },
+  "keyTakeaways": [
+    "Money differential reliable indicator",
+    "Fading struggling ATS teams works",
+    "Close game but got the cover",
+    "Sharp alignment delivered"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Win. Stanford 72, Minnesota 68. Covered -2 by 2 points. Sharp money correct, Minnesota ATS fade worked."
+}

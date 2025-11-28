@@ -1,0 +1,110 @@
+{
+  "slug": "illinois-state-spread-vector-nov27-2025",
+  "team": "Illinois State",
+  "line": "-5.5",
+  "odds": 100,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Won by 13",
+  "profit": 200,
+  "gameDetails": {
+    "matchup": "Charlotte at Illinois State",
+    "date": "2025-11-27",
+    "gameTime": "1:30 PM ET",
+    "venue": "CEFCU Arena",
+    "finalScore": "ISU 79, Charlotte 69"
+  },
+  "preGameAnalysis": {
+    "edge": 2.8,
+    "expectedValue": 5.6,
+    "estimatedProbability": 54,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "99% sharp money alignment",
+      "seasonAverage": "Crushed Coastal 94-42",
+      "last5Games": "Redbirds rolling",
+      "cushion": "Strong model projection"
+    },
+    "keyFactors": [
+      {
+        "title": "Sharp Alignment",
+        "description": "99% of sharp money on Illinois State - rare consensus"
+      },
+      {
+        "title": "PRO Grade",
+        "description": "C+ grade with 2.8% edge on this line"
+      },
+      {
+        "title": "Recent Dominance",
+        "description": "Crushed Coastal Carolina 94-42 - elite form"
+      },
+      {
+        "title": "Home Court",
+        "description": "Illinois State strong at CEFCU Arena"
+      }
+    ],
+    "riskFactors": [
+      "Charlotte could play up",
+      "Mid-major variance",
+      "Travel factors"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 79,
+      "fieldGoalPct": "48%",
+      "turnovers": 12
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Illinois State built comfortable lead early"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Maintained control throughout, won 79-69"
+      }
+    ],
+    "whenCleared": "Covered -5.5 midway through 2nd half",
+    "gamePace": "Controlled tempo",
+    "turningPoint": "Early run put Charlotte away"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Sharp Consensus Right",
+        "description": "99% sharp alignment was spot on"
+      },
+      {
+        "title": "Covered Comfortably",
+        "description": "Won by 13, covered -5.5 by 7.5 points"
+      },
+      {
+        "title": "Home Court Advantage",
+        "description": "Illinois State controlled game at home"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "79 points solid output",
+      "vsRecentForm": "Continuing strong play",
+      "vsPropLine": "Covered -5.5 by 7.5",
+      "percentileRanking": "Strong outcome"
+    },
+    "wasNormalVariance": "Sharp consensus was correct. Illinois State handled Charlotte as expected."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -108,
+    "clvCents": 8,
+    "clvPercentage": 3.8,
+    "verdict": "Excellent CLV - got +100 before line moved"
+  },
+  "keyTakeaways": [
+    "99% sharp alignment is worth following",
+    "Mid-major consensus plays work",
+    "Illinois State home court advantage real",
+    "2u stake on high-conviction plays pays off"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Clean win. Illinois State 79, Charlotte 69. Covered -5.5 by 7.5 points. Sharp consensus was right."
+}

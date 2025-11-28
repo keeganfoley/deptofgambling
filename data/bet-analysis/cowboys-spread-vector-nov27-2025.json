@@ -1,0 +1,131 @@
+{
+  "slug": "cowboys-spread-vector-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "+3",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 3",
+  "profit": 150,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 3.5,
+    "expectedValue": 7.5,
+    "estimatedProbability": 52,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Cowboys 34-22-1 all-time on Thanksgiving",
+      "seasonAverage": "Cowboys heating up at home",
+      "last5Games": "Building momentum",
+      "cushion": "Getting +3 at home vs struggling road team"
+    },
+    "keyFactors": [
+      {
+        "title": "Chiefs Road Struggles",
+        "description": "Kansas City 1-4 on the road this season - major regression from recent years"
+      },
+      {
+        "title": "Thanksgiving History",
+        "description": "Cowboys 34-22-1 all-time on Thanksgiving, franchise thrives in spotlight"
+      },
+      {
+        "title": "PRO Model Edge",
+        "description": "VectorFund model showing 3.5% edge on this line"
+      },
+      {
+        "title": "Line Value",
+        "description": "Getting +3 and +100 odds represents solid value"
+      }
+    ],
+    "riskFactors": [
+      "Patrick Mahomes in big games",
+      "Chiefs defense still elite",
+      "Cowboys inconsistent this season"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 380,
+      "turnovers": 1,
+      "timeOfPossession": "32:15"
+    },
+    "keyPlayers": {
+      "dakPrescott": {
+        "passing": "320 yards",
+        "touchdowns": 2,
+        "rating": "112.5"
+      },
+      "ceedeeLamb": {
+        "receptions": 7,
+        "yards": 112,
+        "touchdowns": 1
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Tight game early, both teams feeling each other out"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Cowboys took first lead, Malik Davis 43-yard TD run"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Back and forth, Cowboys maintaining slim advantage"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Cowboys held on for 31-28 victory, covered by winning outright"
+      }
+    ],
+    "whenCleared": "Won outright by 3 - covered the spread easily",
+    "gamePace": "High-scoring affair, 59 total points",
+    "turningPoint": "Malik Davis 43-yard TD run swung momentum to Dallas"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Home Dominance",
+        "description": "Cowboys thrived in Thanksgiving spotlight as expected"
+      },
+      {
+        "title": "Chiefs Road Woes Continue",
+        "description": "KC dropped to 1-5 on road - thesis confirmed"
+      },
+      {
+        "title": "Dak Stepped Up",
+        "description": "Prescott delivered 320 yards and 2 TDs in big spot"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "31 points exceeded their season average",
+      "vsRecentForm": "Cowboys building momentum with 3rd straight win",
+      "vsPropLine": "Won outright, covered +3 comfortably",
+      "percentileRanking": "Top 25% outcome"
+    },
+    "wasNormalVariance": "Thesis played out perfectly. Chiefs road struggles continued and Cowboys delivered at home on Thanksgiving."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Captured closing line value - line moved toward Cowboys"
+  },
+  "keyTakeaways": [
+    "Chiefs road struggles are real and exploitable",
+    "Cowboys Thanksgiving history matters",
+    "Getting +3 with plus money was excellent value",
+    "Model edge confirmed by result"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Clean win. Cowboys won outright 31-28, covering the +3 spread easily. Chiefs road woes continued as predicted."
+}

@@ -1,0 +1,136 @@
+{
+  "slug": "ravens-spread-catalyst-nov27-2025",
+  "team": "Baltimore Ravens",
+  "line": "-7",
+  "odds": -120,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Lost by 18",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Cincinnati Bengals at Baltimore Ravens",
+    "date": "2025-11-27",
+    "gameTime": "8:20 PM ET",
+    "venue": "M&T Bank Stadium",
+    "finalScore": "CIN 32, BAL 14"
+  },
+  "preGameAnalysis": {
+    "edge": 3,
+    "expectedValue": 5,
+    "estimatedProbability": 55,
+    "impliedProbability": 54.5,
+    "recentPerformance": {
+      "hitRate": "Ravens on 5-game win streak",
+      "seasonAverage": "Home dominance",
+      "last5Games": "5-0 run coming in",
+      "cushion": "Multiple catalyst factors"
+    },
+    "keyFactors": [
+      {
+        "title": "Ravens Win Streak",
+        "description": "Baltimore on 5-game winning streak, playing with confidence"
+      },
+      {
+        "title": "Prime Time Home",
+        "description": "Ravens dominant at home in prime time spots"
+      },
+      {
+        "title": "Bengals Missing Higgins",
+        "description": "Tee Higgins out - reduces Cincinnati's offensive firepower"
+      },
+      {
+        "title": "Division Dominance",
+        "description": "Ravens have owned this matchup recently"
+      }
+    ],
+    "riskFactors": [
+      "Joe Burrow returning healthy",
+      "Bengals desperate for wins",
+      "Divisional games are unpredictable"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 14,
+      "turnovers": 5,
+      "totalYards": 280
+    },
+    "keyPlayers": {
+      "lamarJackson": {
+        "passing": "180 yards",
+        "touchdowns": 0,
+        "interceptions": 2,
+        "fumbles": 1
+      },
+      "joeBurrow": {
+        "passing": "261 yards",
+        "touchdowns": 2,
+        "interceptions": 0
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Derrick Henry TD run gave Ravens early lead"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Turnovers started piling up for Baltimore"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Bengals took control, Ravens imploded"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Blowout loss 32-14 - worst possible outcome"
+      }
+    ],
+    "whenMissed": "Ravens never close to covering - lost outright by 18",
+    "gamePace": "Bengals controlled tempo after turnovers",
+    "turningPoint": "Ravens' 5 turnovers killed any chance"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Turnover Disaster",
+        "description": "Ravens committed 5 turnovers - impossible to cover giving the ball away that much"
+      },
+      {
+        "title": "Lamar Struggled",
+        "description": "Jackson had 2 INTs and a fumble - rare terrible game"
+      },
+      {
+        "title": "Burrow Back",
+        "description": "Joe Burrow returned healthy and played excellent"
+      },
+      {
+        "title": "Divisional Variance",
+        "description": "AFC North games are always unpredictable"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "14 points - worst game of season",
+      "vsRecentForm": "Complete collapse from 5-game win streak",
+      "vsPropLine": "Lost by 18, nowhere near covering -7",
+      "percentileRanking": "Bottom 5% outcome"
+    },
+    "wasNormalVariance": "No - this was a complete disaster. 5 turnovers is an outlier event. Ravens had been rolling but fell apart completely."
+  },
+  "closingLineValue": {
+    "ourOdds": -120,
+    "closingOdds": -115,
+    "clvCents": -5,
+    "clvPercentage": -2.2,
+    "verdict": "Negative CLV - line moved against us"
+  },
+  "keyTakeaways": [
+    "Divisional games are always risky",
+    "Win streaks can end abruptly",
+    "5 turnovers is catastrophic and unpredictable",
+    "Joe Burrow returning healthy changed everything",
+    "Catalyst factors don't overcome turnovers"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Disaster. Ravens committed 5 turnovers and lost 32-14 at home. Bengals dominated. Catalyst factors were irrelevant given turnover implosion."
+}

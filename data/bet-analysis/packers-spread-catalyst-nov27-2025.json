@@ -1,0 +1,125 @@
+{
+  "slug": "packers-spread-catalyst-nov27-2025",
+  "team": "Green Bay Packers",
+  "line": "+3",
+  "odds": -105,
+  "stake": 0.5,
+  "result": "win",
+  "finalStat": "Won by 7",
+  "profit": 47.62,
+  "gameDetails": {
+    "matchup": "Green Bay Packers at Detroit Lions",
+    "date": "2025-11-27",
+    "gameTime": "12:30 PM ET",
+    "venue": "Ford Field",
+    "finalScore": "GB 31, DET 24"
+  },
+  "preGameAnalysis": {
+    "edge": 2,
+    "expectedValue": 2.4,
+    "estimatedProbability": 51,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Lions struggle on Thanksgiving",
+      "seasonAverage": "Lions 1-8 in last 9 Thanksgiving games",
+      "last5Games": "Historical pattern clear",
+      "cushion": "Anti-Lions Turkey Day narrative"
+    },
+    "keyFactors": [
+      {
+        "title": "Thanksgiving Curse",
+        "description": "Lions 1-8 in last 9 Thanksgiving home games - historical trend"
+      },
+      {
+        "title": "Divisional Rivalry",
+        "description": "Packers always play Lions tough"
+      },
+      {
+        "title": "Situational Edge",
+        "description": "Detroit's Thanksgiving struggles are documented"
+      }
+    ],
+    "riskFactors": [
+      "Lions are good team this year",
+      "Small historical sample",
+      "Trends can break"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 340
+    },
+    "keyPlayers": {
+      "jordanLove": {
+        "passing": "234 yards",
+        "touchdowns": 4,
+        "rating": "124.2"
+      },
+      "dontayvionWicks": {
+        "receptions": 6,
+        "yards": 94,
+        "touchdowns": 2
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Packers jumped out to early lead"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Led 17-14 at halftime"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Extended lead, Love dealing"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Held on for 31-24 win - covered easily"
+      }
+    ],
+    "whenCleared": "Won outright by 7 - covered +3 easily",
+    "gamePace": "Fast-paced divisional battle",
+    "turningPoint": "Love's 4 TD passes overwhelmed Lions"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Thanksgiving Curse Continued",
+        "description": "Lions Thanksgiving struggles continued - now 1-9 in last 10"
+      },
+      {
+        "title": "Jordan Love Balled Out",
+        "description": "4 TD passes, 124.2 passer rating"
+      },
+      {
+        "title": "Won Outright",
+        "description": "Covered +3 by winning by 7"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "31 points excellent",
+      "vsRecentForm": "Packers 3rd straight win",
+      "vsPropLine": "Won by 7, covered +3 easily",
+      "percentileRanking": "Great outcome"
+    },
+    "wasNormalVariance": "Catalyst thesis confirmed. Lions Thanksgiving curse is real."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 1.4,
+    "verdict": "Small CLV captured"
+  },
+  "keyTakeaways": [
+    "Lions Thanksgiving curse is real",
+    "Situational edges in NFL matter",
+    "Jordan Love is legit",
+    "Historical patterns held again"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Clean catalyst win. Lions Thanksgiving curse continued. Packers won 31-24, covered +3 by 7 points."
+}

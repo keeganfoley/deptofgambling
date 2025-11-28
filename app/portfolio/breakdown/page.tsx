@@ -103,7 +103,7 @@ export default function PortfolioBreakdownPage() {
                 {formatCurrency(portfolio.combined.netPL)}
               </div>
               <div className="text-sm text-gray-600 mt-2 mono-number">
-                {portfolio.combined.unitsWon >= 0 ? '+' : ''}{portfolio.combined.unitsWon.toFixed(2)}u won
+                {portfolio.combined.unitsWon >= 0 ? '+' : ''}{typeof portfolio.combined.unitsWon === 'number' ? portfolio.combined.unitsWon.toFixed(2) : portfolio.combined.unitsWon}u won
               </div>
             </div>
 
@@ -113,7 +113,7 @@ export default function PortfolioBreakdownPage() {
                 {formatRecord(portfolio.combined.record.wins, portfolio.combined.record.losses)}
               </div>
               <div className="text-sm text-gray-600 mt-2 mono-number">
-                {portfolio.combined.winRate.toFixed(2)}% Win Rate
+                {typeof portfolio.combined.winRate === 'number' ? portfolio.combined.winRate.toFixed(2) : portfolio.combined.winRate}% Win Rate
               </div>
             </div>
 
@@ -176,7 +176,7 @@ export default function PortfolioBreakdownPage() {
                     </td>
                     <td className="py-3 px-2 text-right mono-number">
                       {fm.wins > 0 || fm.losses > 0
-                        ? `${fm.winRate.toFixed(1)}%`
+                        ? `${typeof fm.winRate === 'number' ? fm.winRate.toFixed(1) : fm.winRate}%`
                         : <span className="text-gray-400 italic">Deploying</span>
                       }
                     </td>
@@ -643,7 +643,7 @@ export default function PortfolioBreakdownPage() {
                     <span className={`font-bold mono-number ${
                       data.winRate >= 50 ? 'text-success' : 'text-loss'
                     }`}>
-                      {data.winRate.toFixed(1)}%
+                      {typeof data.winRate === 'number' ? data.winRate.toFixed(1) : data.winRate}%
                     </span>
                   </div>
                   <div className="flex justify-between">
@@ -692,7 +692,7 @@ export default function PortfolioBreakdownPage() {
                     <span className={`font-bold mono-number ${
                       data.winRate >= 50 ? 'text-success' : 'text-loss'
                     }`}>
-                      {data.winRate.toFixed(1)}%
+                      {typeof data.winRate === 'number' ? data.winRate.toFixed(1) : data.winRate}%
                     </span>
                   </div>
                   <div className="flex justify-between">

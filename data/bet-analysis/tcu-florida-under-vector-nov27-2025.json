@@ -1,0 +1,102 @@
+{
+  "slug": "tcu-florida-under-vector-nov27-2025",
+  "team": "Florida",
+  "line": "Under 157",
+  "odds": -112,
+  "stake": 1.5,
+  "result": "loss",
+  "finalStat": "Total: 164",
+  "profit": -150,
+  "gameDetails": {
+    "matchup": "TCU at Florida",
+    "date": "2025-11-27",
+    "gameTime": "3:00 PM ET",
+    "venue": "O'Connell Center",
+    "finalScore": "TCU 84, Florida 80"
+  },
+  "preGameAnalysis": {
+    "edge": 4,
+    "expectedValue": 5.4,
+    "estimatedProbability": 54,
+    "impliedProbability": 52.8,
+    "recentPerformance": {
+      "hitRate": "Model projected lower total",
+      "seasonAverage": "Both teams under-rated on O",
+      "last5Games": "Under trend expected",
+      "cushion": "4% edge on under"
+    },
+    "keyFactors": [
+      {
+        "title": "PRO Model Projection",
+        "description": "VectorFund model projected under 157 with 4% edge"
+      },
+      {
+        "title": "Defensive Matchup",
+        "description": "Expected slower pace game"
+      }
+    ],
+    "riskFactors": [
+      "College games can explode",
+      "Florida at home can score",
+      "TCU offense capable"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "totalPoints": 164,
+      "tcuPoints": 84,
+      "floridaPoints": 80
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "High-scoring first half, both teams clicking"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Scoring continued, total hit 164"
+      }
+    ],
+    "whenMissed": "Total cleared 157 in 2nd half",
+    "gamePace": "Much faster than projected",
+    "turningPoint": "Both offenses exceeded expectations"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Model Miss",
+        "description": "Projection was wrong - game went over by 7 points"
+      },
+      {
+        "title": "Pace Was Fast",
+        "description": "Both teams pushed tempo more than expected"
+      },
+      {
+        "title": "Offenses Clicked",
+        "description": "84 and 80 points - both exceeded averages"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "164 well above projection",
+      "vsRecentForm": "Shootout",
+      "vsPropLine": "Over by 7 points",
+      "percentileRanking": "Bad outcome"
+    },
+    "wasNormalVariance": "Model error. Projection was simply too low on this game."
+  },
+  "closingLineValue": {
+    "ourOdds": -112,
+    "closingOdds": -110,
+    "clvCents": -2,
+    "clvPercentage": -0.9,
+    "verdict": "Slight negative CLV"
+  },
+  "keyTakeaways": [
+    "College unders can be risky",
+    "Model projections aren't always right",
+    "Both teams exceeded offensive expectations",
+    "Loss absorbed - move on"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Loss. Total went to 164, over 157 line by 7 points. Model projection was incorrect."
+}

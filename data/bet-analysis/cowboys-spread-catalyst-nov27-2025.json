@@ -1,0 +1,132 @@
+{
+  "slug": "cowboys-spread-catalyst-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "+3",
+  "odds": 100,
+  "stake": 2,
+  "result": "win",
+  "finalStat": "Won by 3",
+  "profit": 200,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 5,
+    "expectedValue": 10,
+    "estimatedProbability": 55,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Cowboys 34-22-1 on Thanksgiving",
+      "seasonAverage": "50+ years since KC won in Dallas",
+      "last5Games": "Multiple situational edges align",
+      "cushion": "Strong catalyst situation"
+    },
+    "keyFactors": [
+      {
+        "title": "Chiefs Road Woes",
+        "description": "KC 1-4 on road this season - major situational concern"
+      },
+      {
+        "title": "Thanksgiving History",
+        "description": "Cowboys 34-22-1 all-time on Thanksgiving - franchise thrives"
+      },
+      {
+        "title": "Historical Dominance",
+        "description": "Over 50 years since Chiefs won in Dallas - venue edge"
+      },
+      {
+        "title": "Multiple Catalysts Align",
+        "description": "Road struggles + Thanksgiving + historical edge = strong catalyst"
+      }
+    ],
+    "riskFactors": [
+      "Historical trends can break",
+      "Mahomes in big games",
+      "Small sample sizes"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 380,
+      "turnovers": 1,
+      "timeOfPossession": "32:15"
+    },
+    "keyPlayers": {
+      "dakPrescott": {
+        "passing": "320 yards",
+        "touchdowns": 2,
+        "rating": "112.5"
+      },
+      "malikDavis": {
+        "carries": 3,
+        "yards": 48,
+        "touchdowns": 1,
+        "longRun": "43 yards"
+      }
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Competitive start to Thanksgiving showcase"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Malik Davis 43-yard TD run gave Cowboys momentum"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Dallas maintained control"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Cowboys held on for 31-28 Thanksgiving victory"
+      }
+    ],
+    "whenCleared": "Won outright - all catalysts played out",
+    "gamePace": "High-scoring 59 total points",
+    "turningPoint": "Davis TD run in 2nd quarter set the tone"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "All Catalysts Hit",
+        "description": "Road struggles, Thanksgiving history, venue dominance - all factors aligned"
+      },
+      {
+        "title": "Situational Edge Realized",
+        "description": "Multiple situational factors combined for clean win"
+      },
+      {
+        "title": "Biggest Stake Justified",
+        "description": "2u stake was warranted given strength of catalyst alignment"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "31 points strong showing",
+      "vsRecentForm": "Cowboys 3rd straight win",
+      "vsPropLine": "Won outright, covered easily",
+      "percentileRanking": "Top tier outcome"
+    },
+    "wasNormalVariance": "Perfect catalyst play. Every situational factor we identified played out exactly as expected."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Excellent value on catalyst play"
+  },
+  "keyTakeaways": [
+    "Multiple catalyst alignment is powerful",
+    "Situational edges in NFL are real",
+    "Historical trends held once again",
+    "Biggest stake on strongest catalyst setups pays off"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Perfect Catalyst Fund play. KC 1-4 road + Cowboys Thanksgiving history + 50+ years since KC won in Dallas = all catalysts hit. Cowboys won 31-28."
+}

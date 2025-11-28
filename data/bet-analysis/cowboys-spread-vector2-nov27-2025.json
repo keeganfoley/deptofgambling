@@ -1,0 +1,99 @@
+{
+  "slug": "cowboys-spread-vector2-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "+3",
+  "odds": 100,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Won by 3",
+  "profit": 150,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 3,
+    "expectedValue": 6,
+    "estimatedProbability": 52,
+    "impliedProbability": 50,
+    "recentPerformance": {
+      "hitRate": "Strong model edge warranted second unit",
+      "seasonAverage": "Cowboys at home strong",
+      "last5Games": "Building momentum",
+      "cushion": "Second unit on high-conviction play"
+    },
+    "keyFactors": [
+      {
+        "title": "High Conviction",
+        "description": "Model edge strong enough to warrant additional exposure"
+      },
+      {
+        "title": "Line Value",
+        "description": "+3 at +100 represented excellent value"
+      }
+    ],
+    "riskFactors": [
+      "Additional exposure on same game",
+      "Concentration risk"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 31,
+      "totalYards": 380
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Tight game"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Cowboys took lead"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "Dallas in control"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Won 31-28"
+      }
+    ],
+    "whenCleared": "Won outright",
+    "gamePace": "High scoring",
+    "turningPoint": "Davis TD run"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Double Down Paid Off",
+        "description": "Second unit on Cowboys was the right call"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Strong game",
+      "vsRecentForm": "3rd straight win",
+      "vsPropLine": "Covered easily",
+      "percentileRanking": "Excellent"
+    },
+    "wasNormalVariance": "Adding second unit on high-conviction plays is profitable."
+  },
+  "closingLineValue": {
+    "ourOdds": 100,
+    "closingOdds": -105,
+    "clvCents": 5,
+    "clvPercentage": 2.4,
+    "verdict": "Good CLV"
+  },
+  "keyTakeaways": [
+    "Second units on high-conviction plays work",
+    "Model edge confirmed",
+    "Cowboys delivered"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Second unit paid off. Cowboys won outright 31-28."
+}

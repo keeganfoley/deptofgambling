@@ -1,0 +1,114 @@
+{
+  "slug": "cowboys-chiefs-under-vector-nov27-2025",
+  "team": "Dallas Cowboys",
+  "line": "Under 53",
+  "odds": -110,
+  "stake": 1,
+  "result": "loss",
+  "finalStat": "Total: 59",
+  "profit": -100,
+  "gameDetails": {
+    "matchup": "Kansas City Chiefs at Dallas Cowboys",
+    "date": "2025-11-27",
+    "gameTime": "4:30 PM ET",
+    "venue": "AT&T Stadium",
+    "finalScore": "DAL 31, KC 28"
+  },
+  "preGameAnalysis": {
+    "edge": 2.5,
+    "expectedValue": 4.5,
+    "estimatedProbability": 52,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Model projected lower scoring",
+      "seasonAverage": "Chiefs defense solid",
+      "last5Games": "Both teams defensive",
+      "cushion": "53 seemed high"
+    },
+    "keyFactors": [
+      {
+        "title": "Model Projection",
+        "description": "VectorFund model projected lower total than market"
+      },
+      {
+        "title": "Defensive Strength",
+        "description": "Both teams have capable defenses"
+      },
+      {
+        "title": "Holiday Game Tendency",
+        "description": "Early Thanksgiving games sometimes start slow"
+      }
+    ],
+    "riskFactors": [
+      "High-powered offenses can explode",
+      "Primetime games can go over",
+      "Weather not a factor indoors"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "totalPoints": 59,
+      "cowboysPoints": 31,
+      "chiefsPoints": 28
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Quarter",
+        "description": "Scoring started early"
+      },
+      {
+        "quarter": "2nd Quarter",
+        "description": "Points continued to pile up"
+      },
+      {
+        "quarter": "3rd Quarter",
+        "description": "High-scoring affair continued"
+      },
+      {
+        "quarter": "4th Quarter",
+        "description": "Final: 59 total points, well over the 53 line"
+      }
+    ],
+    "whenMissed": "Total cleared 53 midway through 4th quarter",
+    "gamePace": "Faster pace than expected, shootout developed",
+    "turningPoint": "Both offenses clicking from the start"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Offenses Exploded",
+        "description": "Both teams scored more than expected"
+      },
+      {
+        "title": "Pace Was Fast",
+        "description": "Game flow favored offense, quick possessions"
+      },
+      {
+        "title": "Model Missed",
+        "description": "VectorFund projection was too low on this game"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "59 points well above recent averages",
+      "vsRecentForm": "Shootout outcome",
+      "vsPropLine": "Over by 6 points",
+      "percentileRanking": "Bad outcome for under bet"
+    },
+    "wasNormalVariance": "Model miss. Both offenses performed better than projected, game turned into shootout."
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "No CLV captured, line stayed flat"
+  },
+  "keyTakeaways": [
+    "Primetime games can turn into shootouts",
+    "Model projection was incorrect",
+    "Under bets on holiday games risky",
+    "Both offenses exceeded expectations"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Loss. Game went to 59 total points, well over our 53 line. Model projection was simply wrong on this one."
+}

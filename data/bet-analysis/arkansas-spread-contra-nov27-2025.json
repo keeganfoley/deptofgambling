@@ -1,0 +1,110 @@
+{
+  "slug": "arkansas-spread-contra-nov27-2025",
+  "team": "Arkansas",
+  "line": "+11.5",
+  "odds": -105,
+  "stake": 1.5,
+  "result": "win",
+  "finalStat": "Lost by 9, covered",
+  "profit": 142.86,
+  "gameDetails": {
+    "matchup": "Arkansas at Duke",
+    "date": "2025-11-27",
+    "gameTime": "8:00 PM ET",
+    "venue": "Cameron Indoor Stadium",
+    "finalScore": "DUKE 80, ARK 71"
+  },
+  "preGameAnalysis": {
+    "edge": 3,
+    "expectedValue": 4.3,
+    "estimatedProbability": 53,
+    "impliedProbability": 51.2,
+    "recentPerformance": {
+      "hitRate": "Reverse line movement detected",
+      "seasonAverage": "68% bets on Duke, only 59% money",
+      "last5Games": "Sharp money on Arkansas",
+      "cushion": "Contrarian value vs Duke hype"
+    },
+    "keyFactors": [
+      {
+        "title": "Reverse Line Movement",
+        "description": "68% bets on Duke but only 59% money - sharps on Arkansas"
+      },
+      {
+        "title": "Fading Duke Hype",
+        "description": "Public overvaluing Duke early season"
+      },
+      {
+        "title": "11.5 Points",
+        "description": "Big spread in college basketball"
+      },
+      {
+        "title": "SEC Quality",
+        "description": "Arkansas is a solid program"
+      }
+    ],
+    "riskFactors": [
+      "Duke at Cameron is tough",
+      "Blue Devils very talented",
+      "Road dog variance"
+    ]
+  },
+  "gameResults": {
+    "teamStats": {
+      "points": 71,
+      "fieldGoalPct": "45%",
+      "rebounds": 32
+    },
+    "quarterBreakdown": [
+      {
+        "quarter": "1st Half",
+        "description": "Arkansas kept it competitive"
+      },
+      {
+        "quarter": "2nd Half",
+        "description": "Duke pulled ahead but Arkansas stayed within range, lost 80-71"
+      }
+    ],
+    "whenCleared": "Covered +11.5 by losing only by 9",
+    "gamePace": "Competitive throughout",
+    "turningPoint": "Arkansas never let Duke blow them out"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Reverse Line Movement Correct",
+        "description": "Sharps were right on Arkansas"
+      },
+      {
+        "title": "Covered Comfortably",
+        "description": "Lost by 9, covered +11.5 by 2.5"
+      },
+      {
+        "title": "Duke Hype Fade Worked",
+        "description": "Public was wrong to lay 11.5 with Duke"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "71 points respectable",
+      "vsRecentForm": "Arkansas competed",
+      "vsPropLine": "Covered +11.5 by 2.5",
+      "percentileRanking": "Good outcome"
+    },
+    "wasNormalVariance": "Contrarian thesis correct. Duke hype was overblown, Arkansas covered as sharps indicated."
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -108,
+    "clvCents": 3,
+    "clvPercentage": 1.4,
+    "verdict": "Small CLV"
+  },
+  "keyTakeaways": [
+    "Reverse line movement is powerful signal",
+    "Fading public on blue bloods works",
+    "11.5 points in college is a lot",
+    "Sharps were right on Arkansas"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Contra win. Duke 80, Arkansas 71. Lost by 9 but covered +11.5. Reverse line movement and Duke fade worked."
+}

@@ -1,8 +1,27 @@
 # Department of Gambling - Betting Workflow
 
-## Overview
+## QUICK REFERENCE - PENDING BETS SYSTEM
 
-This document outlines the workflow for adding picks and updating results in the betting tracking system.
+### When Bets Are Placed
+User will say:
+- "I placed these" + list of picks
+- "Bets placed" + screenshot
+- Just paste picks and say "placed"
+
+**Claude's Job:** Immediately save to `data/bets.json` with `"result": "pending"`
+
+### Next Day - Updating Results
+User says "check yesterday's bets" or "update results" or "what hit?"
+
+**Claude's Job:**
+1. Find ALL pending bets in bets.json
+2. Web search final scores for each game
+3. Update results (win/loss/push, P/L, final score)
+4. Recalculate portfolio.json, chartData.json
+5. Create bet-analysis files
+6. Give summary
+
+**THE POINT:** User never re-tells what bets were placed. They're saved. Just say "update results" and Claude handles it.
 
 ---
 
