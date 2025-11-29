@@ -1,5 +1,76 @@
 # Department of Gambling - Betting Workflow
 
+## DATA VALIDATION RULES
+
+**Before saving ANY bet, validate all fields match these exact values.**
+
+### betType (ONLY these 4 values)
+| Value | Use For |
+|-------|---------|
+| `"spread"` | Point spreads (NOT "spreads") |
+| `"total"` | Over/unders (NOT "totals") |
+| `"moneyline"` | Straight up wins |
+| `"props"` | Player props |
+
+### sport (ONLY these values)
+| Value | League |
+|-------|--------|
+| `"NBA"` | Pro basketball |
+| `"NFL"` | Pro football |
+| `"NCAAB"` | College basketball |
+| `"NCAAF"` | College football |
+| `"NHL"` | Pro hockey |
+| `"Soccer"` | Soccer/MLS |
+
+### fund (ONLY these 4 values)
+| Value | Fund |
+|-------|------|
+| `"VectorFund"` | Model-based edge |
+| `"SharpFund"` | Sharp money indicators |
+| `"ContraFund"` | Fade public/contrarian |
+| `"CatalystFund"` | Situational plays |
+
+### result (ONLY these 4 values)
+| Value | When |
+|-------|------|
+| `"pending"` | Bet placed, game not finished |
+| `"win"` | Bet won |
+| `"loss"` | Bet lost |
+| `"push"` | Bet pushed (tie) |
+
+### REQUIRED FIELDS (every bet must have ALL of these)
+```
+id              - Sequential integer
+date            - "YYYY-MM-DD" format
+sport           - From list above
+betType         - From list above
+fund            - From list above
+description     - The pick (e.g., "Lakers -3.5")
+team            - Team/player name
+opponent        - Opposing team
+odds            - American odds (e.g., -110)
+stake           - Units (e.g., 1.5)
+result          - From list above
+edge            - Edge % (e.g., 8.5)
+expectedValue   - EV % (e.g., 4.2)
+conviction      - Score 40-100
+thesis          - Full analysis text
+slug            - Auto-generated URL slug
+```
+
+### VALIDATION CHECKLIST (before saving)
+- [ ] betType is exactly "spread", "total", "moneyline", or "props"
+- [ ] sport is exactly "NBA", "NFL", "NCAAB", "NCAAF", "NHL", or "Soccer"
+- [ ] fund is exactly "VectorFund", "SharpFund", "ContraFund", or "CatalystFund"
+- [ ] team AND opponent are both filled in
+- [ ] edge, expectedValue, conviction are numbers
+- [ ] thesis is full analysis (not just one sentence)
+- [ ] slug is unique
+
+**NEVER use plural forms: "spreads", "totals", "moneylines", "props" is OK**
+
+---
+
 ## GIT PUSH RULES
 
 **NEVER auto-push to GitHub. User controls when the website updates.**
