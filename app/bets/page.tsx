@@ -29,7 +29,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss';
+  result: 'win' | 'loss' | 'push' | 'pending';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -209,7 +209,8 @@ function BetsContent() {
   const headerLineTopRef = useRef<HTMLDivElement>(null);
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
-  const allBets = betsData as Bet[];
+  // Filter out pending bets - only show settled bets on public site
+  const allBets = (betsData as Bet[]).filter(bet => bet.result !== 'pending');
 
   // Filter bets based on sport, type, and fund
   const filteredBets = allBets.filter(bet => {

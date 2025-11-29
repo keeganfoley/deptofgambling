@@ -27,7 +27,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss';
+  result: 'win' | 'loss' | 'push' | 'pending';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -198,8 +198,9 @@ export default function RecentBets() {
   const headerLineTopRef = useRef<HTMLDivElement>(null);
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
-  // Show only the most recent 3 bets (sort by date descending, then ID descending)
+  // Show only the most recent 3 settled bets (filter out pending, sort by date descending, then ID descending)
   const recentBets = (betsData as Bet[])
+    .filter(bet => bet.result !== 'pending')
     .sort((a, b) => {
       const dateCompare = b.date.localeCompare(a.date);
       return dateCompare !== 0 ? dateCompare : b.id - a.id;

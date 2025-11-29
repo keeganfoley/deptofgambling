@@ -1,5 +1,19 @@
 # Department of Gambling - Betting Workflow
 
+## GIT PUSH RULES
+
+**NEVER auto-push to GitHub. User controls when the website updates.**
+
+| User Says | Claude Does | Git Push? |
+|-----------|-------------|-----------|
+| **"placed"** | Save to bets.json, generate social media content | ❌ NO |
+| **"update results"** | Update bets.json, run `npx tsx scripts/sync-all-data.ts`, generate social media content | ❌ NO |
+| **"push"** or **"deploy"** | Run git add, git commit, git push | ✅ YES |
+
+**Why:** Pending bets stay private until user decides to publish results to deptofgambling.com.
+
+---
+
 ## QUICK REFERENCE - PENDING BETS SYSTEM
 
 ### When Bets Are Placed
@@ -47,18 +61,42 @@ For each pick, I'll add to `data/bets.json`:
   "gameTime": "10:00 PM ET",
   "result": "pending",
   "fund": "VectorFund",
-  "thesis": "Model edge explanation...",
-  "slug": "lakers-spread-vector-nov27-2025"  // AUTO-GENERATED
+  "edge": 8.5,
+  "expectedValue": 4.2,
+  "conviction": 72,
+  "thesis": "Full analysis text from picks output - include all reasoning, matchup details, and key factors",
+  "slug": "lakers-spread-vector-nov27-2025"
 }
 ```
 
 **Slug is auto-generated** using format: `team-bettype-fund-date`
 
+### REQUIRED FIELDS FOR BET DETAIL PAGES:
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| `edge` | Edge % from analysis | 8.5 |
+| `expectedValue` | EV % from analysis | 4.2 |
+| `conviction` | Conviction score (40-100) | 72 |
+| `thesis` | **FULL analysis text** - NOT just one sentence. Include all reasoning, stats, matchup details from the picks output | See below |
+
+**THESIS MUST INCLUDE:**
+- Edge calculation and source (model, sharp money, fade public, situational)
+- Key stats supporting the pick
+- Matchup factors
+- Injury/rest considerations
+- Any risk factors
+
+**BAD thesis:** "A+ grade, 18.1% edge. Curry OUT."
+**GOOD thesis:** "Vector model projects +8.5% edge on this spread. Warriors are 3-8 ATS as home favorites this season. Curry OUT tonight - Warriors 92-155 historically without him. Pelicans coming off rest, averaging +4.2 margin in second game of back-to-backs. Key: Murphy III questionable but expected to play."
+
 ### Key Fields to Capture:
-- `betLine`: The exact line at time of bet (e.g., -3.5, O235.5, +150)
+- `edge`: Edge percentage from analysis
+- `expectedValue`: Expected value percentage
+- `conviction`: Conviction score (determines units)
 - `odds`: American odds at time of bet
 - `stake`: Units (1u = $100)
-- All other standard fields
+- `thesis`: **FULL reasoning** - not abbreviated
 
 ---
 
@@ -125,22 +163,31 @@ For each bet, I'll update:
 - Convert odds to implied probability
 - CLV = (closing implied prob - bet implied prob) × 100
 
-### Step 4: Update Chart Data
+### Step 4: Run Sync Script (AUTOMATIC)
 
-Add a new entry to `data/chartData.json` with the end-of-day balance.
+**Immediately after updating bets.json**, run:
+```bash
+npx tsx scripts/sync-all-data.ts
+```
 
-### Step 5: Update Portfolio
+This automatically updates:
+- portfolio.json (fund balances, records, P/L, ROI)
+- chartData.json (OHLC candles)
+- metrics.json (all stats)
 
-Update `data/portfolio.json` with new:
-- Balance
-- Net P/L
-- Record
-- ROI
-- Units won
+### Step 5: Show Verification (AUTOMATIC)
 
-### Step 6: Regenerate Metrics
+Display the DATA SYNC CHECK output to user:
+```
+════════════════════════════════════════════════════════════
+DATA SYNC CHECK
+════════════════════════════════════════════════════════════
+[Full verification output with ✅/❌ checks]
+```
 
-Run: `npx tsx scripts/update-metrics.ts`
+### Step 6: Generate Social Media Content (AUTOMATIC)
+
+Generate the DAILY REPORT slides (see SOCIAL MEDIA AUTO-GENERATE section)
 
 ---
 
@@ -245,6 +292,93 @@ Show total exposure per game:
 
 **Always show all three views when tracking bets.**
 
+### 4. SOCIAL MEDIA AUTO-GENERATE
+
+#### AFTER "placed" (Daily Picks Post)
+
+When I confirm bets are placed, automatically generate:
+
+**DAILY PICKS - SLIDE 1:**
+```
+[DATE] - TODAY'S PICKS
+
+[SPORT 1]
+⚫️ [PICK] ([ODDS]) [UNITS]U
+🟢 [PICK] ([ODDS]) [UNITS]U
+
+[SPORT 2]
+🟠 [PICK] ([ODDS]) [UNITS]U
+🟣 [PICK] ([ODDS]) [UNITS]U
+
+[X] PICKS | [X]U | $[X]
+```
+
+**GROUP BY SPORT:** NFL, NCAAF, NBA, NCAAB, NHL (only show sports with picks)
+
+**DAILY PICKS - SLIDE 2 (EXPOSURE):**
+```
+TODAY'S EXPOSURE
+FUND BREAKDOWN
+⚫️ VECTOR: [X] PICKS | [X]U | $[X]
+🟢 SHARP: [X] PICKS | [X]U | $[X]
+🟠 CONTRA: [X] PICKS | [X]U | $[X]
+🟣 CATALYST: [X] PICKS | [X]U | $[X]
+[TOTAL PICKS] | [TOTAL UNITS]U | $[TOTAL]
+```
+
+---
+
+#### AFTER "update results" (Daily Report Post)
+
+When I update results and all bets are settled, automatically generate:
+
+**DAILY REPORT - SLIDE 1:**
+```
+[DATE] DAILY REPORT
++$[TOTAL P/L] (or -$[TOTAL P/L] if negative)
+
+[WINS]-[LOSSES]
+⚫️ VECTOR [W]-[L] | +$[P/L]
+🟢 SHARP [W]-[L] | +$[P/L]
+🟠 CONTRA [W]-[L] | +$[P/L]
+🟣 CATALYST [W]-[L] | +$[P/L]
+```
+
+**DAILY REPORT - SLIDE 2 (YESTERDAY'S BETS):**
+```
+[DATE] - RESULTS
+
+[SPORT 1]
+✅/❌ ⚫️ [PICK] ([ODDS]) [UNITS]U → +/-$[P/L]
+✅/❌ 🟢 [PICK] ([ODDS]) [UNITS]U → +/-$[P/L]
+
+[SPORT 2]
+✅/❌ 🟠 [PICK] ([ODDS]) [UNITS]U → +/-$[P/L]
+✅/❌ 🟣 [PICK] ([ODDS]) [UNITS]U → +/-$[P/L]
+
+[W]-[L] | +/-$[TOTAL P/L]
+```
+
+**GROUP BY SPORT:** NFL, NCAAF, NBA, NCAAB, NHL (only show sports with bets)
+
+**DAILY REPORT - SLIDE 3 (CHART):**
+Generate a square (1080x1080) TradingView-style chart showing:
+- Past 7 days including today
+- Department of Gambling portfolio performance
+- Green/red candles for winning/losing days
+- Current portfolio value
+
+Save chart to: `daily-images/[date]-chart.png`
+
+---
+
+#### FORMAT RULES:
+- Each slide content in separate code block so I can copy/paste
+- Use fund emojis: ⚫️ Vector, 🟢 Sharp, 🟠 Contra, 🟣 Catalyst
+- Always show ✅ for wins, ❌ for losses
+- Math must add up (fund totals = overall total)
+- Include P/L for every single bet
+
 ---
 
 ## Commands Reference
@@ -264,12 +398,61 @@ Show total exposure per game:
 
 | File | Purpose |
 |------|---------|
-| `data/bets.json` | All bet data |
-| `data/portfolio.json` | Fund balances and records |
-| `data/chartData.json` | Daily balance for charts |
-| `data/metrics.json` | Calculated metrics (auto-generated) |
+| `data/bets.json` | All bet data (SINGLE SOURCE OF TRUTH) |
+| `data/portfolio.json` | Fund balances and records (auto-synced) |
+| `data/chartData.json` | Daily balance for charts (auto-synced) |
+| `data/metrics.json` | Calculated metrics (auto-synced) |
 | `lib/types.ts` | TypeScript type definitions |
-| `scripts/update-metrics.ts` | Metrics calculation script |
+| `scripts/sync-all-data.ts` | **Master sync script** - recalculates everything from bets.json |
+
+---
+
+## DATA SYNC SYSTEM
+
+**Single Source of Truth:** `data/bets.json`
+
+All other data files are derived from bets.json using the sync script.
+
+### When to Run Sync
+Run `npx tsx scripts/sync-all-data.ts` after:
+- Settling pending bets (updating results)
+- Manual edits to bets.json
+- Any time numbers seem off
+
+### What Sync Does
+1. Reads all bets from bets.json
+2. Recalculates portfolio.json (fund balances, records, P/L, ROI)
+3. Recalculates chartData.json (OHLC candles)
+4. Recalculates metrics.json (all stats)
+5. Runs verification check with ✅/❌ output
+
+### Verification Output
+```
+════════════════════════════════════════════════════════════
+DATA SYNC CHECK
+════════════════════════════════════════════════════════════
+
+BETS.JSON:
+  Total bets: X
+  Settled: X (XW-XL-XP)
+  Pending: X
+  Total P/L: $X
+
+MATH CHECK:
+  Wins + Losses + Pushes = Settled? ✅/❌
+  Fund P/Ls add up to total? ✅/❌
+  Balance = $40,000 + P/L? ✅/❌
+  Chart close = Portfolio balance? ✅/❌
+
+✅ DATA VERIFIED - All checks passed!
+```
+
+### If Sync Fails
+If any check shows ❌:
+1. Check bets.json for duplicate IDs
+2. Check for missing fund assignments
+3. Check for invalid result values (must be win/loss/push/pending)
+4. Check profit calculations match odds/stake
 
 ---
 

@@ -1,6 +1,30 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { formatCurrency, formatPercent, formatDate, formatOdds } from '@/lib/utils';
+import betsData from '@/data/bets.json';
+
+// Basic bet from bets.json
+interface BasicBet {
+  id: number;
+  date: string;
+  sport: string;
+  description: string;
+  betType: string;
+  odds: number;
+  stake: number;
+  result: 'win' | 'loss' | 'push' | 'pending';
+  profit: number;
+  finalStat: string;
+  edge?: number;
+  expectedValue?: number;
+  conviction?: number;
+  team?: string;
+  opponent?: string;
+  gameTime?: string;
+  fund?: string;
+  thesis?: string;
+  slug?: string;
+}
 
 interface BetAnalysis {
   slug: string;
@@ -97,18 +121,35 @@ async function getBetAnalysis(slug: string): Promise<BetAnalysis | null> {
   }
 }
 
+function getBasicBet(slug: string): BasicBet | null {
+  const bet = (betsData as BasicBet[]).find(b => b.slug === slug);
+  return bet || null;
+}
+
+// Fund display info
+const fundInfo: Record<string, { label: string; color: string }> = {
+  VectorFund: { label: 'Vector', color: '#1a1a2e' },
+  SharpFund: { label: 'Sharp', color: '#22c55e' },
+  ContraFund: { label: 'Contra', color: '#f97316' },
+  CatalystFund: { label: 'Catalyst', color: '#8b5cf6' },
+};
+
 export default async function BetDetailPage({
   params,
 }: {
   params: { slug: string };
 }) {
   const analysis = await getBetAnalysis(params.slug);
+  const basicBet = getBasicBet(params.slug);
 
-  if (!analysis) {
+  // If no analysis AND no basic bet, then 404
+  if (!analysis && !basicBet) {
     notFound();
   }
 
-  const isWin = analysis.result === 'win';
+  // If we have full analysis, use the rich view
+  if (analysis) {
+    const isWin = analysis.result === 'win';
 
   return (
     <main className="min-h-screen bg-background py-12 px-4">
@@ -518,6 +559,185 @@ export default async function BetDetailPage({
         >
           <span>←</span>
           <span>Back to Portfolio</span>
+        </Link>
+      </div>
+    </main>
+  );
+  }
+
+  // FALLBACK: Basic bet view (no detailed analysis file)
+  const bet = basicBet!;
+  const isWin = bet.result === 'win';
+  const isPending = bet.result === 'pending';
+  const fund = bet.fund ? fundInfo[bet.fund] : null;
+
+  return (
+    <main className="min-h-screen bg-background py-12 px-4">
+      <div className="max-w-4xl mx-auto">
+        {/* Back Button */}
+        <Link
+          href="/bets"
+          className="inline-flex items-center gap-2 text-steel hover:text-accent transition-colors mb-8"
+        >
+          <span>←</span>
+          <span>Back to All Bets</span>
+        </Link>
+
+        {/* Header Card */}
+        <div className={`card-float p-6 sm:p-8 mb-8 border-l-4 ${
+          isPending ? 'border-gray-400' : isWin ? 'border-success' : 'border-loss'
+        }`}>
+          <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 mb-4">
+            <div className="flex-1">
+              <div className="flex items-center gap-3 mb-2">
+                <h1 className="text-2xl sm:text-3xl font-bold text-primary">
+                  {bet.description}
+                </h1>
+                {fund && (
+                  <span
+                    className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
+                    style={{ backgroundColor: fund.color }}
+                  >
+                    {fund.label}
+                  </span>
+                )}
+              </div>
+              <p className="text-steel text-base sm:text-lg">
+                {bet.sport} • {formatDate(bet.date)}
+                {bet.team && bet.opponent && ` • ${bet.team} vs ${bet.opponent}`}
+              </p>
+            </div>
+            <div className={`text-left sm:text-right ${
+              isPending ? 'text-gray-500' : isWin ? 'text-success' : 'text-loss'
+            }`}>
+              <div className="text-3xl sm:text-4xl font-bold mb-1">
+                {isPending ? '⏳ PENDING' : isWin ? '✅ HIT' : '❌ MISS'}
+              </div>
+              {!isPending && (
+                <div className="text-xl sm:text-2xl font-bold">
+                  {formatCurrency(bet.profit, true)}
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-gray-200">
+            <div>
+              <div className="data-label">Odds</div>
+              <div className="data-value">{formatOdds(bet.odds)}</div>
+            </div>
+            <div>
+              <div className="data-label">Stake</div>
+              <div className="data-value">{bet.stake}u (${(bet.stake * 100).toFixed(0)})</div>
+            </div>
+            <div>
+              <div className="data-label">Bet Type</div>
+              <div className="data-value capitalize">{bet.betType}</div>
+            </div>
+            <div>
+              <div className="data-label">Final</div>
+              <div className="data-value">{bet.finalStat || 'Pending'}</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Edge Analysis */}
+        <section className="card-float p-6 sm:p-8 mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+            📊 Pre-Game Analysis
+          </h2>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
+            {bet.edge !== undefined && bet.edge > 0 && (
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="data-label">Edge</div>
+                <div className="data-value text-accent">
+                  +{bet.edge}%
+                </div>
+              </div>
+            )}
+            {bet.expectedValue !== undefined && bet.expectedValue > 0 && (
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="data-label">Expected Value</div>
+                <div className="data-value text-accent">
+                  +{bet.expectedValue}%
+                </div>
+              </div>
+            )}
+            <div className="bg-gray-50 p-4 rounded">
+              <div className="data-label">Implied Probability</div>
+              <div className="data-value">
+                {bet.odds < 0
+                  ? (Math.abs(bet.odds) / (Math.abs(bet.odds) + 100) * 100).toFixed(1)
+                  : (100 / (bet.odds + 100) * 100).toFixed(1)
+                }%
+              </div>
+            </div>
+            {bet.conviction !== undefined && (
+              <div className="bg-gray-50 p-4 rounded">
+                <div className="data-label">Conviction Score</div>
+                <div className="data-value text-accent">
+                  {bet.conviction}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Thesis */}
+          {bet.thesis && (
+            <div className="bg-gray-50 p-4 rounded">
+              <div className="font-bold text-gray-900 mb-2">Thesis</div>
+              <div className="text-sm text-gray-700">{bet.thesis}</div>
+            </div>
+          )}
+        </section>
+
+        {/* Game Info */}
+        {(bet.team || bet.opponent || bet.gameTime) && (
+          <section className="card-float p-6 sm:p-8 mb-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-primary mb-6 pb-3 border-b border-gray-200">
+              🏟️ Game Info
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {bet.team && (
+                <div className="bg-gray-50 p-4 rounded">
+                  <div className="data-label">Team</div>
+                  <div className="text-sm font-medium text-gray-900">{bet.team}</div>
+                </div>
+              )}
+              {bet.opponent && (
+                <div className="bg-gray-50 p-4 rounded">
+                  <div className="data-label">Opponent</div>
+                  <div className="text-sm font-medium text-gray-900">{bet.opponent}</div>
+                </div>
+              )}
+              {bet.gameTime && (
+                <div className="bg-gray-50 p-4 rounded">
+                  <div className="data-label">Game Time</div>
+                  <div className="text-sm font-medium text-gray-900">{bet.gameTime}</div>
+                </div>
+              )}
+            </div>
+          </section>
+        )}
+
+        {/* Notice for pending */}
+        {isPending && (
+          <div className="bg-yellow-50 border border-yellow-200 p-4 rounded mb-8">
+            <div className="font-bold text-yellow-800 mb-1">⏳ Bet In Progress</div>
+            <div className="text-sm text-yellow-700">
+              This bet has not been settled yet. Check back after the game for full results and analysis.
+            </div>
+          </div>
+        )}
+
+        {/* Back Button */}
+        <Link
+          href="/bets"
+          className="inline-flex items-center gap-2 text-steel hover:text-accent transition-colors"
+        >
+          <span>←</span>
+          <span>Back to All Bets</span>
         </Link>
       </div>
     </main>

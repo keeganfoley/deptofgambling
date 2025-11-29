@@ -151,7 +151,8 @@ export default function CandlestickChart() {
 
     // Generate candlestick data from daily values
     const allDailyData = Array.isArray(chartDataFile) ? chartDataFile as DailyData[] : [];
-    const allBets = Array.isArray(betsData) ? betsData as Bet[] : [];
+    // Filter out pending bets from display
+    const allBets = Array.isArray(betsData) ? (betsData as Bet[]).filter(bet => bet.result !== 'pending') : [];
 
     // Filter data based on timeframe
     const now = new Date();

@@ -11,7 +11,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push';
+  result: 'win' | 'loss' | 'push' | 'pending';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -42,8 +42,8 @@ export default function DailyPerformanceHistory() {
   const getDailyData = (): DailyData[] => {
     const grouped = new Map<string, Bet[]>();
 
-    // USE ALL REAL BETS (Nov 4, Nov 5, Nov 6, Nov 7, Nov 8, Nov 9, Nov 10)
-    const realBets = betsData;
+    // USE ALL REAL BETS (exclude pending bets from display)
+    const realBets = (betsData as Bet[]).filter(bet => bet.result !== 'pending');
 
     // Group bets by date (extract just the date part)
     realBets.forEach((bet) => {

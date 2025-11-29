@@ -105,7 +105,8 @@ export default function ChartExporter() {
       });
 
       const allDailyData = Array.isArray(chartDataFile) ? chartDataFile as DailyData[] : [];
-      const allBets = Array.isArray(betsData) ? betsData as Bet[] : [];
+      // Filter out pending bets from display
+      const allBets = Array.isArray(betsData) ? (betsData as Bet[]).filter(bet => bet.result !== 'pending') : [];
 
       const dailyData = allDailyData.filter(d => d.date >= startDateParam && d.date <= endDateParam);
       const bets = allBets.filter(b => {
