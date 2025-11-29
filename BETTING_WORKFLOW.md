@@ -36,25 +36,23 @@ For each pick, I'll add to `data/bets.json`:
 ```json
 {
   "id": [next sequential ID],
-  "date": "2025-11-27T12:00:00.000Z",
+  "date": "2025-11-27",
   "sport": "NBA",
   "description": "Lakers -3.5",
-  "betType": "spreads",
+  "betType": "spread",
   "odds": -110,
   "stake": 1.5,
-  "betLine": -3.5,        // THE LINE WHEN WE BET
   "team": "Los Angeles Lakers",
   "opponent": "Sacramento Kings",
   "gameTime": "10:00 PM ET",
   "result": "pending",
-  "profit": 0,
-  "finalStat": "",
-  "edge": 5,
-  "expectedValue": 8,
   "fund": "VectorFund",
-  "analysis": "Model edge explanation..."
+  "thesis": "Model edge explanation...",
+  "slug": "lakers-spread-vector-nov27-2025"  // AUTO-GENERATED
 }
 ```
+
+**Slug is auto-generated** using format: `team-bettype-fund-date`
 
 ### Key Fields to Capture:
 - `betLine`: The exact line at time of bet (e.g., -3.5, O235.5, +150)
@@ -180,6 +178,72 @@ Run: `npx tsx scripts/update-metrics.ts`
 4. Update chartData.json, portfolio.json
 5. Run metrics update script
 6. Report summary
+
+---
+
+## Intent Recognition
+
+Claude reads your INTENT, not exact phrases. Say it however you want:
+
+| Your Intent | Examples | What Claude Does |
+|-------------|----------|------------------|
+| **Check status** | "what's happening" / "where are we at" / "status" / "how we doing" / "balances" | Show fund balances, pending bets, P/L |
+| **Settle bets** | "update" / "results" / "check the bets" / "what hit" / "did we win" / "how'd we do" | Web search scores, settle pending bets, show results |
+| **Record bets** | "placed" / "I bet" / "locked in" / "took these" / "put money on" | Save mentioned picks as pending in bets.json |
+| **Get picks** | "analyze" / "picks" / "what do we like" / "run it" / "what's good today" | Run 4-fund analysis on screenshot folder |
+| **Plan ahead** | "tomorrow" / "what's the plan" / "morning workflow" | Show steps for next session |
+
+**You don't need exact commands. Just say what you mean.**
+
+---
+
+## Automatic Behaviors
+
+These happen automatically - you don't need to ask:
+
+### 1. Slug Generation (On Bet Save)
+When saving new pending bets, Claude automatically generates a slug for detail page URLs:
+- Format: `team-bettype-fund-date`
+- Example: `avalanche-wild-total-catalyst-nov28-2025`
+- This means detail pages work immediately, even before results come in
+
+### 2. chartData.json Update (On Results Update)
+When settling bets ("update results"), Claude automatically:
+1. Calculates daily P/L from all settled bets for that date
+2. Creates new OHLC candle:
+   - `open` = previous day's close
+   - `high` = max(open, close + intraday swings)
+   - `low` = min(open, close - intraday swings)
+   - `close` = open + net P/L for the day
+   - `volume` = total units risked that day
+3. Appends candle to chartData.json
+4. Chart on dashboard updates automatically
+
+**You never need to manually update chartData.json.**
+
+### 3. BET TRACKING FORMAT
+
+When saving bets (after "placed" or "track these"), always show THREE views:
+
+#### View 1: INDIVIDUAL BETS
+Each bet saved separately to bets.json:
+| ID | Pick | Line | Odds | Units | Fund |
+(Even if same game in multiple funds, each is its own entry)
+
+#### View 2: BY FUND SUMMARY
+| Fund | Bets | Units | $ |
+|------|------|-------|---|
+| ⚫️ VectorFund | X | Xu | $XXX |
+| 🟢 SharpFund | X | Xu | $XXX |
+| 🟠 ContraFund | X | Xu | $XXX |
+| 🟣 CatalystFund | X | Xu | $XXX |
+| TOTAL | X | Xu | $XXX |
+
+#### View 3: COMBINED EXPOSURE (when same game in multiple funds)
+Show total exposure per game:
+- [Game]: $XXX total (🟢 $XXX + ⚫️ $XXX)
+
+**Always show all three views when tracking bets.**
 
 ---
 

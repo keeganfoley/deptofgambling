@@ -42,12 +42,14 @@ If you can't explain WHY → PASS (even if signals are lit)
 
 **NO BOOSTING:** If two funds like the same game, they each list it separately with their own reasoning and sizing. Units are NEVER combined or boosted.
 
-**UNIT SIZING PER FUND (based on that fund's conviction):**
-- 0.5-1.0u = Low conviction (barely qualifies)
-- 1.0-1.5u = Standard conviction (solid edge)
-- 1.5-2.0u = High conviction (strong edge + confirmed)
-- 2.0-2.5u = Very high conviction (multiple signals within that fund)
-- 3.0u = MAX - only for absolute slam dunks (rare, maybe 1-2 per week)
+**UNIT SIZING OVERVIEW:**
+See Section 0.7 for detailed fund-by-fund matrices. General guide:
+- 0.5u = Low conviction (barely qualifies, minimum threshold)
+- 0.75-1.0u = Medium conviction (solid but not exceptional)
+- 1.25-1.5u = High conviction (strong signals confirmed)
+- 2.0u = Very high conviction (multiple strong signals)
+- 2.5u = Near-max (exceptional edge + all confirmations)
+- 3.0u = MAX - only 1-2 per WEEK, requires 80+ conviction score
 
 **OUTPUT FORMAT - Always list by fund separately:**
 
@@ -101,42 +103,58 @@ Red flag present = Reduce to 0.5u OR PASS
 Multiple red flags = PASS regardless of signals
 ```
 
-## 0.5 DAILY LIMITS & VALUE FOCUS
+## 0.5 DAILY UNIT TARGETS & LIMITS
 
-**UNIT CAPS PER FUND:**
-- Maximum 6-8 units per fund per day
-- This is a CAP, not a target - if only 2 units of value exist, bet 2 units
-- Never force picks to hit a number
+**DAILY UNIT TARGETS:**
+| Level | Units | When |
+|-------|-------|------|
+| **Target** | 10-15u | Normal day |
+| **Soft Max** | 20u | Exceptional day (multiple high-conviction plays) |
+| **Hard Max** | 24u | Never exceed |
+
+**PER FUND LIMITS:**
+- Target: 3-4u per fund per day
+- Max: 6u per fund (only if exceptional plays exist)
+
+**3u MAX BET RESTRICTION:**
+- Maximum 2 bets at 3u per WEEK across all funds
+- 3u requires conviction score 80+ AND Kelly calculation supports it
+- Must be able to articulate WHY in 2 sentences
+- Ask: "Would I bet this if it were my last bet of the week?"
 
 **VALUE IS EVERYTHING:**
 - Only bet when genuine value exists
 - Every pick must pass the "WHY would the market be wrong?" test
 - If you can't explain the edge clearly, it's not a bet
+- Qualification is STEP 1 - picks must then COMPETE for limited daily units
 
-**CONVICTION HIERARCHY:**
-- Analyze ALL qualifying plays first
-- Rank by conviction (edge %, signal strength, multi-fund agreement)
-- Take only the TOP plays that fit within unit caps
-- Quality over quantity - 4 high-conviction plays beats 12 mediocre ones
+**CONFLICT RESOLUTION (When Funds Want Opposite Sides):**
 
-**CONFLICT RULE:**
-- If two funds take opposite sides of same game, pick the STRONGER signal
-- Don't bet both sides (burns juice)
-- Exception: Only hedge intentionally if both have genuinely strong independent reasoning
+| Conflict | Resolution |
+|----------|------------|
+| Sharp vs Contra | **Sharp ALWAYS wins.** Never fade a sharp play. |
+| Sharp vs Vector | Sharp wins (information > model). |
+| Sharp vs Catalyst | Sharp wins. |
+| Vector vs Catalyst | Higher edge wins. |
+
+**The rule: Sharp signals have priority. If Sharp likes Team A, Contra does NOT fade Team A.**
 
 **PLAYER PROPS PROCESS:**
 1. First, analyze all Action Network prop projections provided
 2. Research each prop - player averages, matchup, minutes, situation
 3. Calculate edge and determine value
 4. THEN access Odds API for additional props or line verification
-5. Props must meet 12%+ edge threshold (higher variance)
+5. Props must meet 15%+ edge threshold (higher variance)
+6. Props max 1u each, go to VectorFund
 
 **WORKFLOW ORDER:**
 1. Read all screenshots/data
 2. Run 4-fund analysis on ALL games
-3. Identify highest conviction plays
-4. THEN access Odds API for props
-5. Output final picks with full reasoning
+3. Calculate conviction scores for all qualifying picks
+4. Rank ALL picks by conviction score
+5. Select TOP 8-12 picks that fit within daily unit budget
+6. THEN access Odds API for verification
+7. Output final picks with full reasoning
 
 ## 0.6 TIERED ANALYSIS PROCESS
 
@@ -185,24 +203,230 @@ For Action Network props provided:
 4. Odds API to verify/find best line
 5. Only bet props where research confirms edge
 
+## 0.7 FUND-BY-FUND UNIT SIZING MATRICES
+
+### ⚫️ VECTORFUND MATRIX (Model Edge)
+
+| Grade | Edge % | Conviction | Base Units | Kelly Cap |
+|-------|--------|------------|------------|-----------|
+| C+ | 3-4% | Low | 0.5u | 1.0u |
+| B- | 4-5% | Low-Med | 0.75u | 1.0u |
+| B | 5-6% | Medium | 1.0u | 1.5u |
+| B+ | 6-8% | Med-High | 1.25u | 1.5u |
+| A- | 8-10% | High | 1.5u | 2.0u |
+| A | 10-15% | Very High | 2.0u | 2.5u |
+| A+ | 15%+ | Max | 2.5u | 3.0u |
+
+**3u Vector Bet Requires:** A+ grade AND 15%+ edge AND confirmed by research AND no red flags
+
+### 🟢 SHARPFUND MATRIX (Follow Smart Money)
+
+**Sharp Score Calculation:**
+```
+Sharp Action lit = 3 pts
+Big Money lit = 2 pts
+DIFF 10-20% = 1 pt
+DIFF 20-30% = 2 pts
+DIFF 30%+ = 3 pts
+RLM detected (1+ pt move opposite public) = 2 pts
+PRO Systems lit = 1 pt
+```
+
+| Sharp Score | Signals Present | Conviction | Units |
+|-------------|-----------------|------------|-------|
+| 2-3 | Sharp OR Big Money (one only) | Low | 0.5u |
+| 4-5 | Sharp AND Big Money | Medium | 1.0u |
+| 6-7 | Sharp + Big Money + DIFF 10-20% | Med-High | 1.25u |
+| 7-8 | Sharp + Big Money + DIFF 20-30% | High | 1.5u |
+| 8-9 | Sharp + Big Money + DIFF 30%+ | Very High | 2.0u |
+| 10+ | All signals + RLM + PRO Systems | Max | 2.5u |
+
+**3u Sharp Bet Requires:** Score 10+ (all signals firing) AND line moving our direction AND confirmed by research
+
+### 🟠 CONTRAFUND MATRIX (Fade Public)
+
+**NFL/NCAAF (65% threshold):**
+| Public % | DIFF | Conviction | Units |
+|----------|------|------------|-------|
+| 65-70% | Positive (confirms public) | Low | 0.5u |
+| 65-70% | Negative (diverges from public) | Medium | 1.0u |
+| 70-75% | Any | Med-High | 1.25u |
+| 75-80% | Negative | High | 1.5u |
+| 80%+ | Any | Very High | 2.0u |
+
+**NBA (70% threshold):**
+| Public % | DIFF | Conviction | Units |
+|----------|------|------------|-------|
+| 70-75% | Negative | Medium | 1.0u |
+| 75-80% | Negative | High | 1.5u |
+| 80%+ | Any | Very High | 2.0u |
+
+**NCAAB/NHL (75% threshold):**
+| Public % | DIFF | Conviction | Units |
+|----------|------|------------|-------|
+| 75-80% | Negative | Medium | 1.0u |
+| 80-85% | Negative | High | 1.5u |
+| 85%+ | Any | Very High | 2.0u |
+
+**Contra Blockers (PASS regardless of public %):**
+- Sharp Action lit on public side → PASS
+- Big Money lit on public side → PASS
+- Line moving toward public → Reduce to 0.5u max
+
+**3u Contra Bet Requires:** 85%+ public AND negative DIFF AND no sharp signals on public side AND primetime/popular team bias
+
+### 🟣 CATALYSTFUND MATRIX (Situational)
+
+**Situation Point Values:**
+```
+TIER 1 (Proven - Full Points):
+- Rest advantage (2+ days vs B2B): 3 pts
+- PRO Systems trigger: 3 pts
+- Cross-country travel (3+ TZ): 2 pts
+- Off bye week (NFL): 2 pts
+- Key injury to opponent (star OUT): 2 pts
+
+TIER 2 (Likely - 0.75x multiplier):
+- 3rd road game in 4 nights: 2.25 pts (3 × 0.75)
+- Altitude game (Denver, Utah): 1.5 pts
+- Divisional underdog: 1.5 pts
+- Playoff implications one team only: 1.5 pts
+
+TIER 3 (Narrative - 0.5x multiplier):
+- Revenge game: 1.5 pts (3 × 0.5)
+- Facing former team: 1 pt
+- Letdown/lookahead spot: 1 pt
+```
+
+| Situation Score | Conviction | Units |
+|-----------------|------------|-------|
+| 1.5-2.5 | Low | 0.5u |
+| 2.5-4.0 | Medium | 1.0u |
+| 4.0-5.5 | Med-High | 1.25u |
+| 5.5-7.0 | High | 1.5u |
+| 7.0-8.5 | Very High | 2.0u |
+| 8.5+ | Max | 2.5u |
+
+**3u Catalyst Bet Requires:** Score 8.5+ (multiple Tier 1 factors stacking) AND confirmed by research
+
+## 0.8 CONVICTION SCORE SYSTEM (Final Pick Selection)
+
+After all 4 funds generate qualified picks, calculate conviction score for EVERY pick:
+
+**Conviction Score Formula:**
+```
+Conviction Score = Base Points + Bonus Points - Penalty Points
+
+BASE POINTS (by fund):
+- Vector: Edge% × 10 (e.g., 8% edge = 80 pts)
+- Sharp: Sharp Score × 10 (e.g., score 7 = 70 pts)
+- Contra: (Public% - Threshold) × 2 + |DIFF| (e.g., 75% NFL with -15% DIFF = 20 + 15 = 35 pts)
+- Catalyst: Situation Score × 10 (e.g., score 5.5 = 55 pts)
+
+BONUS POINTS:
+- Multiple funds agree on same side: +20 pts
+- Line moved in our favor since open: +10 pts
+- Key injury supports our side: +15 pts
+- Research strongly confirms: +10 pts
+
+PENALTY POINTS:
+- Line moved against us: -15 pts
+- Questionable injury on our side: -10 pts
+- Conflicting signals within fund: -10 pts
+```
+
+**Final Selection Process:**
+```
+1. Calculate conviction score for all qualified picks
+2. Rank ALL picks by conviction score
+3. Start with 15u daily budget
+4. Take picks in order of conviction score until:
+   a) Budget exhausted, OR
+   b) Next pick's conviction score < 40 (minimum threshold), OR
+   c) 12 picks reached (max per day)
+
+If exceptional day (multiple 70+ conviction picks):
+- Can extend to 20u soft max
+- Never exceed 24u hard max
+```
+
+**Minimum Conviction Thresholds:**
+- Score 40+ = Can be included in daily card
+- Score 60+ = Strong play
+- Score 80+ = Top-tier play (eligible for 2.5-3u)
+
+## 0.9 QUARTER KELLY CALCULATION (Required for 2u+ Bets)
+
+For any bet sized at 2u or higher, MUST calculate Kelly:
+
+```
+Step 1: Convert odds to decimal
+  -110 → 1.909
+  +150 → 2.50
+
+Step 2: Estimate true probability
+  Use Action Network edge to back-calculate:
+  If market implied = 52.4% and edge = 8%
+  True probability ≈ 52.4% + (8% × 0.5) = 56.4%
+
+Step 3: Calculate Full Kelly
+  Full Kelly = (b × p - q) / b
+  Where b = decimal - 1, p = true prob, q = 1-p
+
+Step 4: Quarter Kelly
+  Recommended = Full Kelly × 0.25
+
+Step 5: Cap Check
+  Final units = MIN(Quarter Kelly result, Matrix maximum)
+```
+
+**Example:**
+- Pelicans +9 @ -112, Edge 18.1%
+- Decimal odds: 1.893, b = 0.893
+- Market implied: 52.8%, True prob ≈ 52.8% + 9% = 61.8%
+- Full Kelly: (0.893 × 0.618 - 0.382) / 0.893 = 19.0%
+- Quarter Kelly: 19% × 0.25 = 4.75% → 4.75u
+- Matrix cap for A+ 15%+: 3.0u
+- **Final: 3.0u** (capped by matrix)
+
+## 0.10 SLOW DAYS
+
+**If no picks score above 60 conviction:**
+- Take 0-5u max that day
+- It's okay to pass entirely
+- Don't force action
+- Better to preserve capital than chase marginal plays
+
+**Signs of a slow day:**
+- Few/no sharp signals lit
+- No extreme public percentages
+- Model edges all below 5%
+- No major situational factors
+
+**What to do:**
+- Take only the 1-2 best plays if they exist
+- Size down (0.5-1u max per pick)
+- Or pass entirely and wait for tomorrow
+
 ---
 
 # SECTION 1: UNIVERSAL FOUNDATIONS
 
 ## 1.1 Fund Independence Principle
 
-**CRITICAL: Each fund operates INDEPENDENTLY.**
+**Each fund operates with its own philosophy and analysis.**
 
-The 4 funds are designed to have different philosophies that will often disagree. This is intentional—this IS the hedge.
+The 4 funds are designed to have different philosophies that will often agree on the same side:
 
 - VectorFund might say BET Team A based on model edge
-- ContraFund might say BET Team B because public is heavy on A
 - SharpFund might say BET Team A because sharp money is there
-- CatalystFund might say PASS because no situation applies
+- ContraFund might say BET Team A because public is heavy on B
+- CatalystFund might say BET Team A because of rest advantage
 
-**All of these can happen on the same game. No conflict resolution is needed.**
+**When funds AGREE = multiple entries from different funds (not boosted units).**
 
-If two funds take opposite sides of the same game, BOTH bets are placed from their respective fund bankrolls. This diversification of approach is the entire point of the multi-fund structure.
+**When funds CONFLICT (opposite sides):**
+See Section 0.5 CONFLICT RESOLUTION. Sharp signals have priority - never fade a sharp play.
 
 ## 1.2 Bankroll Structure
 
@@ -1456,47 +1680,61 @@ Track for each fund:
 
 ## 10.1 Fund Decision Cheat Sheet
 
-**VECTOR FUND (Action Network PRO Projections):**
-| Grade/Edge | Action | Units |
-|------------|--------|-------|
-| Grade C- or below, Edge < 3% | PASS | 0 |
-| Grade C+, Edge 3-5% | Consider | 0.5-1.0 |
-| Grade B-, Edge 3-5% | Bet | 1.0-1.5 |
-| Grade B+, Edge 5-8% | Strong | 1.5-2.0 |
-| Grade A-, Edge 8%+ | Max | 2.0-3.0 |
+**DAILY TARGETS:**
+- Target: 10-15u | Soft Max: 20u | Hard Max: 24u
+- Per Fund: Target 3-4u, Max 6u
+- 3u Bets: Max 2 per WEEK, requires 80+ conviction
 
-**VECTOR FUND PROPS:**
-| AN Edge % | Action | Units |
-|-----------|--------|-------|
-| < 12% | PASS | 0 |
-| 12-20% | Consider | 0.5-1.0 |
-| 20-30% | Bet | 1.0-1.5 |
-| 30%+ | Strong | 1.5-2.0 (cap) |
+**⚫️ VECTOR FUND (Model Edge):**
+| Grade | Edge % | Units |
+|-------|--------|-------|
+| C+ | 3-4% | 0.5u |
+| B- | 4-5% | 0.75u |
+| B | 5-6% | 1.0u |
+| B+ | 6-8% | 1.25u |
+| A- | 8-10% | 1.5u |
+| A | 10-15% | 2.0u |
+| A+ | 15%+ | 2.5u (3u rare) |
 
-**CONTRA FUND (Sport-Specific Thresholds):**
+**VECTOR PROPS:** 15%+ edge required, max 1u each
+
+**🟢 SHARP FUND (Sharp Score):**
+| Score | Signals | Units |
+|-------|---------|-------|
+| 2-3 | Sharp OR Big Money | 0.5u |
+| 4-5 | Sharp AND Big Money | 1.0u |
+| 6-7 | Both + DIFF 10-20% | 1.25u |
+| 7-8 | Both + DIFF 20-30% | 1.5u |
+| 8-9 | Both + DIFF 30%+ | 2.0u |
+| 10+ | All + RLM + PRO Sys | 2.5u |
+
+**🟠 CONTRA FUND (Fade Public):**
 | Sport | Threshold | 80%+ Units |
 |-------|-----------|------------|
-| NFL/NCAAF | 65%+ | 2.0-3.0 |
-| NBA | 70%+ | 2.0-3.0 |
-| NCAAB/NHL | 75%+ | 2.0-3.0 |
+| NFL/NCAAF | 65%+ | 2.0u |
+| NBA | 70%+ | 2.0u |
+| NCAAB/NHL | 75%+ | 2.0u |
+*Blocked if Sharp/Big Money on public side*
 
-**SHARP FUND (PRO Report Signals):**
-| Signals Present | Units |
-|-----------------|-------|
-| No signals | PASS |
-| Sharp Action OR Big Money (one) | 0.5-1.0 |
-| Sharp Action AND Big Money | 1.0-1.5 |
-| Both signals + DIFF divergence | 1.5-2.0 |
-| All signals + RLM | 2.0-3.0 |
-
-**CATALYST FUND (Tiered Points):**
+**🟣 CATALYST FUND (Situation Score):**
 | Score | Units |
 |-------|-------|
-| 0-1.5 | PASS |
-| 1.5-3 | 0.5-1.0 |
-| 3-5 | 1.0-1.5 |
-| 5-7 | 1.5-2.0 |
-| 7+ | 2.0-3.0 |
+| 1.5-2.5 | 0.5u |
+| 2.5-4.0 | 1.0u |
+| 4.0-5.5 | 1.25u |
+| 5.5-7.0 | 1.5u |
+| 7.0-8.5 | 2.0u |
+| 8.5+ | 2.5u |
+
+**CONVICTION SCORE THRESHOLDS:**
+- 40+ = Include in card
+- 60+ = Strong play
+- 80+ = Top-tier (eligible for 2.5-3u)
+
+**SLOW DAYS (No picks above 60 conviction):**
+- Take 0-5u max
+- It's okay to pass entirely
+- Don't force action
 
 ## 10.2 Action Network Data Quick Guide
 
@@ -1565,17 +1803,27 @@ Kelly%: (b × p - q) / b, use QUARTER Kelly
 
 ---
 
-*Document Version: 3.0 (Evidence-Based Tiers + Streamlined Commands)*
-*Updated: November 25, 2025*
+*Document Version: 4.0 (Conviction Score System + Formulaic Unit Sizing)*
+*Updated: November 29, 2025*
 *Department of Gambling Hedge Fund Operations*
 
 **Key Principles:**
 - Each fund operates INDEPENDENTLY
 - Conflicting positions are the hedge
-- Props belong to VectorFund
-- Every pick shows ALL math
+- Props belong to VectorFund (15%+ edge, 1u max)
+- Every pick shows ALL math including conviction score
+- Picks COMPETE for limited daily budget (10-15u target)
+- 3u bets are RARE (max 2 per week, 80+ conviction)
+
+**Version 4.0 Changes:**
+- Added fund-by-fund unit sizing matrices (Section 0.7)
+- Added conviction score system for final selection (Section 0.8)
+- Added Quarter Kelly requirement for 2u+ bets (Section 0.9)
+- Added slow day guidance (Section 0.10)
+- Daily target: 10-15u (not 24u)
+- Picks must score 40+ conviction to make card
 
 **Data Sources:**
 - Primary: Action Network Pro ($14.99/month)
-- Supplementary: Odds API (props, CLV tracking)
+- Supplementary: Odds API (verification, CLV tracking)
 - Research: Web search (situations, injuries)
