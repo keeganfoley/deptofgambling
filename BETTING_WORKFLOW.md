@@ -1,5 +1,45 @@
 # Department of Gambling - Betting Workflow
 
+## WEEKLY BETTING SCHEDULE
+
+### ADVANCE BETTING (NFL/NCAAF)
+| Day | Action | Sports | Funds | Pick Type |
+|-----|--------|--------|-------|-----------|
+| Monday | Early week analysis - lines are softest | NFL, NCAAF | Vector, Sharp | ADVANCE |
+| Wednesday | Contra check - public % now settled | NFL, NCAAF | Contra | ADVANCE |
+| Saturday | Final adds if needed | NCAAF | Catalyst | DAILY |
+| Sunday | Final adds if needed | NFL | Catalyst | DAILY |
+
+### DAILY BETTING (NBA/NCAAB/NHL)
+| Day | Action | Sports | Funds | Pick Type |
+|-----|--------|--------|-------|-----------|
+| Any day with games | Game day analysis before games start | NBA, NCAAB, NHL | All 4 funds | DAILY |
+
+### RESULTS UPDATES
+| When | Action |
+|------|--------|
+| Morning after games | Update previous day's results |
+
+### SPORT-SPECIFIC RULES
+| Sport | Default Timing | Why |
+|-------|----------------|-----|
+| NFL | Advance (Mon/Wed) | Beat line movement, sharps bet early |
+| NCAAF | Advance (Mon/Wed) | Beat line movement |
+| NBA | Game day | Injuries, rest, lineups |
+| NCAAB | Game day | Need day-of info |
+| NHL | Game day | Goalie confirmations |
+
+### AUTO-DETECTION
+When user provides screenshots, detect pick type by SPORT:
+- NFL or NCAAF screenshots → Default to ADVANCE picks (unless it's game day)
+- NBA, NCAAB, or NHL screenshots → Default to DAILY picks
+- If game date is today → DAILY picks
+- If game date is future → ADVANCE picks
+
+**No need to ask - figure it out from the sport and dates.**
+
+---
+
 ## DATA VALIDATION RULES
 
 **Before saving ANY bet, validate all fields match these exact values.**
