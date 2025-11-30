@@ -888,14 +888,216 @@ DECEMBER 8 | 6-0. Clean sweep. +$580. #sportsbetting #deptofgambling #dog
 DECEMBER 8 | 3-3. Flat day. #sportsbetting #deptofgambling #dog
 ```
 
-**DAILY REPORT - SLIDE 3 (CHART):**
+**DAILY REPORT - SLIDE 3 (WEEKLY CHART - Instagram POST):**
 Generate a square (1080x1080) TradingView-style chart showing:
 - Past 7 days including today
 - Department of Gambling portfolio performance
 - Green/red candles for winning/losing days
+- X-axis: Date labels for each candle (11/22, 11/23, etc.)
+- Stats: Record, ROI, All Time P/L
 - Current portfolio value
 
 Save chart to: `daily-images/[date]-chart.png`
+
+**This is the INSTAGRAM POST image** - square format for feed.
+
+---
+
+#### INSTAGRAM STORY - CUMULATIVE PORTFOLIO CHART
+
+**ALWAYS GENERATE THIS** after "update results" alongside the Instagram POST chart.
+
+Generate an Instagram Story (1080x1920) cumulative candle chart showing:
+- **ALL candles from Day 1 to current day** (not just last 7 days)
+- Day number and date in header
+- Portfolio balance with total P/L and percentage
+- Stats: Record, Net P/L, Today's P/L
+- Bloomberg terminal style with dense grid
+
+**Script:** `npx tsx scripts/generate-cumulative-candles.ts [DAY_NUMBER]`
+
+**Output:** `daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png`
+
+**What to deliver after "update results":**
+1. Instagram CAPTION (for post)
+2. Instagram POST image (1080x1080, last 7 days with x-axis dates)
+3. Instagram STORY image (1080x1920, all days since Day 1)
+
+**Example workflow:**
+- Day 27 (Nov 30): Run `npx tsx scripts/generate-cumulative-candles.ts 27`
+- This creates `day27-2025-11-30.png` with 27 candles (Nov 4 - Nov 30)
+- User posts this to Instagram Story to show full portfolio journey
+
+---
+
+#### INSTAGRAM DELIVERABLES SCHEDULE
+
+**EVERY DAY after "update results":**
+1. Instagram CAPTION
+2. Instagram POST image (1080x1080, last 7 days)
+3. Instagram STORY - DAILY cumulative chart (Day X with all candles from Day 1)
+
+**EVERY MONDAY after "update results":**
+- All of the above PLUS:
+4. Instagram STORY - WEEKLY report (previous Mon-Sun week)
+
+**Weekly Report Schedule (Mon-Sun format):**
+| Week | Dates | Post On |
+|------|-------|---------|
+| Week 1 | Nov 3-9 | Mon Nov 10 |
+| Week 2 | Nov 10-16 | Mon Nov 17 |
+| Week 3 | Nov 17-23 | Mon Nov 24 |
+| Week 4 | Nov 24-30 | Mon Dec 1 |
+| Week 5 | Dec 1-7 | Mon Dec 8 |
+| Week 6 | Dec 8-14 | Mon Dec 15 |
+| (continues...) |
+
+**IMPORTANT:** Weekly reports are posted the MONDAY AFTER the week ends.
+- Today is Sunday Nov 30 → Week 4 not complete yet
+- Tomorrow Mon Dec 1 → Post Week 4 (Nov 24-30) recap
+
+**Scripts:**
+- Daily cumulative: `npx tsx scripts/generate-cumulative-candles.ts [DAY_NUMBER]`
+- Weekly report: `npx tsx scripts/generate-weekly-reports.ts [WEEK_NUMBER]`
+
+**Output folders:**
+- Daily: `daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png`
+- Weekly: `daily-images/weekly-reports/weekXX-YYYY-MM-DD-to-YYYY-MM-DD.png`
+
+**Instagram Highlights:**
+- **DAILY** - Cumulative day-by-day charts
+- **WEEKLY** - Mon-Sun week recaps
+
+---
+
+#### TWITTER VERSIONS
+
+**Every Instagram post also gets a Twitter version.**
+
+**Twitter Rules:**
+- 280 character limit per tweet
+- Can be a thread if needed
+- Same info, condensed
+- Hashtags: #GamblingTwitter #SportsBetting
+
+---
+
+**1. DAILY PICKS Twitter:**
+```
+[DATE] PICKS
+
+[SPORT]
+• [PICK] ([ODDS]) [UNITS]U
+• [PICK] ([ODDS]) [UNITS]U
+
+[X] plays | [X]U risked
+
+#GamblingTwitter #SportsBetting
+```
+
+**Example:**
+```
+NOV 30 PICKS
+
+NFL
+• Bills -3 (-110) 2U
+• Chiefs/Raiders O44.5 (-110) 1.5U
+
+NBA
+• Celtics -7.5 (-110) 1U
+
+4 plays | 5.5U risked
+
+#GamblingTwitter #SportsBetting
+```
+
+---
+
+**2. EARLY BETS Twitter:**
+```
+EARLY BETS 📅
+
+[SPORT] - [Game Day]
+• [PICK] ([ODDS]) [UNITS]U
+
+Locked before lines move.
+
+#GamblingTwitter #SportsBetting
+```
+
+**Example:**
+```
+EARLY BETS 📅
+
+NFL - Sunday
+• Chiefs -3.5 (-110) 2U
+• Giants +7 (-110) 1.5U
+
+NCAAF - Saturday
+• Georgia -14 (-110) 2.5U
+
+Locked before lines move.
+
+#GamblingTwitter #SportsBetting
+```
+
+---
+
+**3. DAILY REPORT Twitter:**
+```
+[DATE] RESULTS
+
+[W]-[L] | [+/-]$[P/L]
+
+✅ [PICK] +$[X]
+✅ [PICK] +$[X]
+❌ [PICK] -$[X]
+
+Portfolio: $[BALANCE] ([+/-]$[TOTAL P/L])
+
+#GamblingTwitter #SportsBetting
+```
+
+**Example:**
+```
+NOV 29 RESULTS
+
+5-2 | +$209.05
+
+✅ Bills -3 +$181.82
+✅ Celtics -7 +$90.91
+❌ Chiefs ML -$150
+
+Portfolio: $41,893.40 (+$1,893.40)
+
+#GamblingTwitter #SportsBetting
+```
+
+---
+
+**4. WEEKLY REPORT Twitter (Mondays):**
+```
+WEEK [X] RECAP ([DATES])
+
+[W]-[L] | [+/-]$[P/L]
+
+Portfolio: $[BALANCE]
+All-time: [+/-]$[TOTAL P/L] ([ROI]%)
+
+#GamblingTwitter #SportsBetting
+```
+
+**Example:**
+```
+WEEK 4 RECAP (Nov 24-30)
+
+35-16 | +$2,796.88
+
+Portfolio: $41,893.40
+All-time: +$1,893.40 (+4.73%)
+
+#GamblingTwitter #SportsBetting
+```
 
 ---
 

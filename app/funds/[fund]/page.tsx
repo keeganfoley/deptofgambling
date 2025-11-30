@@ -453,21 +453,21 @@ export default function FundPage() {
                 </div>
               </div>
 
-              {/* Last 10 Bets */}
+              {/* Last 3 Days */}
               <div className="bg-gray-50 p-5 rounded-sm">
-                <div className="text-sm text-gray-600 mb-2">Last 10 Bets</div>
+                <div className="text-sm text-gray-600 mb-2">Last 3 Days</div>
                 <div className="text-2xl font-bold mono-number text-primary">
-                  {fundRolling.last10Bets.wins}-{fundRolling.last10Bets.losses}
+                  {fundRolling.last3Days.wins}-{fundRolling.last3Days.losses}
                 </div>
                 <div className={`text-xl font-semibold mono-number mt-1 ${
-                  fundRolling.last10Bets.pnl >= 0 ? 'text-success' : 'text-loss'
+                  fundRolling.last3Days.pnl >= 0 ? 'text-success' : 'text-loss'
                 }`}>
-                  {formatCurrency(fundRolling.last10Bets.pnl)}
+                  {formatCurrency(fundRolling.last3Days.pnl)}
                 </div>
                 <div className={`text-sm mono-number ${
-                  fundRolling.last10Bets.roi >= 0 ? 'text-success' : 'text-loss'
+                  fundRolling.last3Days.roi >= 0 ? 'text-success' : 'text-loss'
                 }`}>
-                  {formatPercent(fundRolling.last10Bets.roi)} ROI
+                  {formatPercent(fundRolling.last3Days.roi)} ROI
                 </div>
               </div>
             </div>

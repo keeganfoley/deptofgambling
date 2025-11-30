@@ -53,6 +53,7 @@ export default function PortfolioBreakdownPage() {
     edgeValidation,
     evAnalysis,
     fundMetrics,
+    daysGreenStreak,
   } = metricsData as any;
 
   const portfolio = portfolioData as any;
@@ -227,14 +228,21 @@ export default function PortfolioBreakdownPage() {
                 </div>
 
                 <div className="bg-gray-50 p-5 rounded-sm">
-                  <div className="text-sm text-gray-600 mb-1">Last 10 Bets</div>
+                  <div className="text-sm text-gray-600 mb-1">Last 3 Days</div>
                   <div className="text-2xl font-bold mono-number text-primary">
-                    {formatRecord(rollingPerformance.last10Bets.wins, rollingPerformance.last10Bets.losses)}
+                    {rollingPerformance.last3Days
+                      ? formatRecord(rollingPerformance.last3Days.wins, rollingPerformance.last3Days.losses)
+                      : '—'}
                   </div>
-                  <div className={`text-lg font-semibold mt-1 ${
-                    rollingPerformance.last10Bets.wins > rollingPerformance.last10Bets.losses ? 'text-success' : 'text-loss'
+                  <div className={`text-lg font-semibold mono-number mt-1 ${
+                    rollingPerformance.last3Days?.pnl >= 0 ? 'text-success' : 'text-loss'
                   }`}>
-                    {rollingPerformance.last10Bets.wins > rollingPerformance.last10Bets.losses ? '🔥 Hot Streak' : '❄️ Cold Streak'}
+                    {rollingPerformance.last3Days
+                      ? `${formatCurrency(rollingPerformance.last3Days.pnl)} (${formatPercent(rollingPerformance.last3Days.roi)})`
+                      : '—'}
+                  </div>
+                  <div className="text-xs text-gray-500 mt-1">
+                    {rollingPerformance.last3Days?.bets || 0} bets
                   </div>
                 </div>
               </>
@@ -417,18 +425,18 @@ export default function PortfolioBreakdownPage() {
               </div>
 
               <div className={`p-5 rounded-sm ${
-                evAnalysis.runningHot ? 'bg-green-100' : 'bg-red-100'
+                evAnalysis.variance >= 0 ? 'bg-green-100' : 'bg-yellow-100'
               }`}>
                 <div className={`text-sm mb-1 ${
-                  evAnalysis.runningHot ? 'text-green-700' : 'text-red-700'
+                  evAnalysis.variance >= 0 ? 'text-green-700' : 'text-yellow-700'
                 }`}>Status</div>
                 <div className={`text-xl font-bold ${
-                  evAnalysis.runningHot ? 'text-green-600' : 'text-red-600'
+                  evAnalysis.variance >= 0 ? 'text-green-600' : 'text-yellow-600'
                 }`}>
-                  {evAnalysis.runningHot ? '🔥 Running Hot' : '❄️ Running Cold'}
+                  {evAnalysis.variance >= 0 ? '🔥 Running Hot' : '📊 Below EV'}
                 </div>
                 <div className={`text-xs mt-1 ${
-                  evAnalysis.runningHot ? 'text-green-500' : 'text-red-500'
+                  evAnalysis.variance >= 0 ? 'text-green-500' : 'text-yellow-500'
                 }`}>
                   by {formatCurrency(Math.abs(evAnalysis.variance), false)}
                 </div>
@@ -568,10 +576,13 @@ export default function PortfolioBreakdownPage() {
                 {maxWinStreak} Wins
               </div>
             </div>
-            <div className="bg-red-50 p-5 rounded-sm">
-              <div className="text-sm text-red-700 mb-1">Worst Loss Streak</div>
-              <div className="text-2xl font-bold mono-number text-red-600">
-                {maxLossStreak} Losses
+            <div className="bg-green-50 p-5 rounded-sm border-2 border-green-300">
+              <div className="text-sm text-green-700 mb-1">Days Green Streak</div>
+              <div className="text-2xl font-bold mono-number text-green-600">
+                {daysGreenStreak?.current || 0} Days
+              </div>
+              <div className="text-xs text-green-500 mt-1">
+                Best: {daysGreenStreak?.best || 0} days
               </div>
             </div>
           </div>

@@ -50,7 +50,7 @@ export interface CurrentDrawdownResult {
 export interface RollingPerformanceResult {
   last7Days: { wins: number; losses: number; pushes: number; pnl: number; roi: number; bets: number };
   last30Days: { wins: number; losses: number; pushes: number; pnl: number; roi: number; bets: number };
-  last10Bets: { wins: number; losses: number; pushes: number; pnl: number; roi: number };
+  last3Days: { wins: number; losses: number; pushes: number; pnl: number; roi: number; bets: number };
 }
 
 export interface EdgeTierResult {
@@ -282,25 +282,15 @@ export function calculateRollingPerformance(bets: Bet[]): RollingPerformanceResu
     };
   };
 
+  const threeDaysAgo = getDaysAgo(3);
   const sevenDaysAgo = getDaysAgo(7);
   const thirtyDaysAgo = getDaysAgo(30);
 
+  const last3Days = calculatePeriod(b => new Date(b.date) >= threeDaysAgo);
   const last7Days = calculatePeriod(b => new Date(b.date) >= sevenDaysAgo);
   const last30Days = calculatePeriod(b => new Date(b.date) >= thirtyDaysAgo);
 
-  // Last 10 bets
-  const lastTen = settled.slice(-10);
-  const last10Pnl = lastTen.reduce((sum, b) => sum + b.profit, 0);
-  const last10Staked = lastTen.reduce((sum, b) => sum + (b.stake * 100), 0);
-  const last10Bets = {
-    wins: lastTen.filter(b => b.result === 'win').length,
-    losses: lastTen.filter(b => b.result === 'loss').length,
-    pushes: lastTen.filter(b => b.result === 'push').length,
-    pnl: Math.round(last10Pnl * 100) / 100,
-    roi: last10Staked > 0 ? Math.round((last10Pnl / last10Staked) * 10000) / 100 : 0
-  };
-
-  return { last7Days, last30Days, last10Bets };
+  return { last7Days, last30Days, last3Days };
 }
 
 // ============================================================================

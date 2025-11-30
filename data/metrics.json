@@ -55,56 +55,63 @@
       "roi": 9.140234453775369,
       "bets": 145
     },
-    "last10Bets": {
-      "wins": 5,
-      "losses": 5,
+    "last3Days": {
+      "wins": 19,
+      "losses": 12,
       "pushes": 0,
-      "pnl": 223.86000000000004,
-      "roi": 14.924000000000003,
-      "bets": 10
+      "pnl": 1482.13,
+      "roi": 31.53,
+      "bets": 31
     }
+  },
+  "daysGreenStreak": {
+    "current": 4,
+    "best": 6
   },
   "edgeValidation": {
     "lowEdge": {
       "min": 0,
       "max": 5,
-      "wins": 0,
-      "losses": 0,
+      "wins": 14,
+      "losses": 5,
       "pushes": 0,
-      "roi": 0,
-      "pnl": 0,
-      "bets": 0,
-      "winRate": 0
+      "pnl": 1287.78,
+      "roi": 54.8,
+      "bets": 19,
+      "winRate": 73.68
     },
     "midEdge": {
       "min": 5,
       "max": 8,
-      "wins": 0,
-      "losses": 0,
+      "wins": 14,
+      "losses": 9,
       "pushes": 0,
-      "roi": 0,
-      "pnl": 0,
-      "bets": 0,
-      "winRate": 0
+      "pnl": 752.41,
+      "roi": 21.19,
+      "bets": 23,
+      "winRate": 60.87
     },
     "highEdge": {
       "min": 8,
       "max": 100,
-      "wins": 0,
-      "losses": 0,
-      "pushes": 0,
-      "roi": 0,
-      "pnl": 0,
-      "bets": 0,
-      "winRate": 0
+      "wins": 52,
+      "losses": 50,
+      "pushes": 1,
+      "pnl": -146.79,
+      "roi": -0.99,
+      "bets": 103,
+      "winRate": 50.98
     },
-    "isCorrelated": false
+    "isCorrelated": false,
+    "totalBetsWithEdge": 145
   },
   "evAnalysis": {
-    "totalExpectedValue": 0,
+    "totalExpectedValue": 2913.5,
     "actualPL": 1893.4,
-    "variance": 0,
-    "runningHot": false
+    "variance": -1020.1,
+    "runningHot": false,
+    "runningCold": true,
+    "betsTracked": 145
   },
   "sportBreakdown": {
     "NCAAF": {
@@ -256,42 +263,42 @@
       "label": "Low Conviction",
       "range": "< 1u",
       "record": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 5,
+        "losses": 6,
         "pushes": 0,
-        "total": 0
+        "total": 11
       },
-      "winRate": 0,
-      "pnl": 0,
-      "roi": 0
+      "winRate": 45.45,
+      "pnl": -85.67,
+      "roi": -14.9
     },
     "Standard": {
       "tier": "standard",
       "label": "Standard",
       "range": "1-1.5u",
       "record": {
-        "wins": 0,
-        "losses": 0,
-        "pushes": 0,
-        "total": 0
+        "wins": 52,
+        "losses": 41,
+        "pushes": 1,
+        "total": 94
       },
-      "winRate": 0,
-      "pnl": 0,
-      "roi": 0
+      "winRate": 55.91,
+      "pnl": 1045.48,
+      "roi": 8.87
     },
     "High Conviction": {
       "tier": "high_conviction",
       "label": "High Conviction",
       "range": "2u+",
       "record": {
-        "wins": 0,
-        "losses": 0,
+        "wins": 23,
+        "losses": 17,
         "pushes": 0,
-        "total": 0
+        "total": 40
       },
-      "winRate": 0,
-      "pnl": 0,
-      "roi": 0
+      "winRate": 57.5,
+      "pnl": 933.59,
+      "roi": 11.18
     }
   },
   "fundMetrics": {
@@ -1389,5 +1396,5 @@
       "result": "win"
     }
   ],
-  "lastUpdated": "2025-11-30T16:49:53.741Z"
+  "lastUpdated": "2025-11-30T19:48:15.728Z"
 }
