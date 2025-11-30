@@ -27,7 +27,7 @@
   "currentDrawdown": {
     "amount": -150,
     "percentage": -0.36,
-    "daysSincePeak": 1,
+    "daysSincePeak": 2,
     "peakBalance": 41834.35,
     "peakDate": "2025-11-28",
     "currentBalance": 41684.35
@@ -1305,5 +1305,5 @@
       "result": "loss"
     }
   ],
-  "lastUpdated": "2025-11-29T20:38:32.062Z"
+  "lastUpdated": "2025-11-30T01:33:37.215Z"
 }

@@ -17,7 +17,8 @@
     "finalStat": "MIN 3, COL 2 (SO) - Regulation: 2-2 (4 goals total) - Under 6 WINS",
     "profit": 142.86,
     "edge": 7.5,
-    "expectedValue": 3.8
+    "expectedValue": 3.8,
+    "datePlaced": "2025-11-28"
   },
   {
     "id": 138,
@@ -37,7 +38,8 @@
     "finalStat": "MTL 4, VGK 1 - Vegas lost by 3",
     "profit": -200,
     "edge": 8.2,
-    "expectedValue": 4.1
+    "expectedValue": 4.1,
+    "datePlaced": "2025-11-28"
   },
   {
     "id": 139,
@@ -57,7 +59,8 @@
     "finalStat": "WSH 4, TOR 2 - Capitals won by 2, covered -1.5",
     "profit": 320,
     "edge": 7.8,
-    "expectedValue": 3.9
+    "expectedValue": 3.9,
+    "datePlaced": "2025-11-28"
   },
   {
     "id": 140,
@@ -77,7 +80,8 @@
     "finalStat": "TCU 74, Wisconsin 63 - TCU won outright by 11",
     "profit": 142.86,
     "edge": 9.1,
-    "expectedValue": 4.5
+    "expectedValue": 4.5,
+    "datePlaced": "2025-11-28"
   },
   {
     "id": 141,
@@ -97,7 +101,8 @@
     "finalStat": "PHI 115, BKN 103 - Nets lost by 12, did not cover",
     "profit": -150,
     "edge": 8.5,
-    "expectedValue": 4.2
+    "expectedValue": 4.2,
+    "datePlaced": "2025-11-28"
   },
   {
     "id": 121,
@@ -118,7 +123,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-spread-vector-nov27-2025",
     "fund": "VectorFund",
-    "thesis": "Line value - moved from KC -4 to -3.5, PRO model edge"
+    "thesis": "Line value - moved from KC -4 to -3.5, PRO model edge",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 122,
@@ -139,7 +145,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-spread-sharp-nov27-2025",
     "fund": "SharpFund",
-    "thesis": "Big Money + Sharp Action indicators both lit green on Cowboys"
+    "thesis": "Big Money + Sharp Action indicators both lit green on Cowboys",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 123,
@@ -160,7 +167,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-spread-contra-nov27-2025",
     "fund": "ContraFund",
-    "thesis": "Fading KC hype narrative - Chiefs 1-4 on road this season"
+    "thesis": "Fading KC hype narrative - Chiefs 1-4 on road this season",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 124,
@@ -181,7 +189,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-spread-catalyst-nov27-2025",
     "fund": "CatalystFund",
-    "thesis": "KC 1-4 road, Cowboys 34-22-1 all-time Thanksgiving, 50+ years since KC won in Dallas"
+    "thesis": "KC 1-4 road, Cowboys 34-22-1 all-time Thanksgiving, 50+ years since KC won in Dallas",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 136,
@@ -202,7 +211,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-spread-vector2-nov27-2025",
     "fund": "VectorFund",
-    "thesis": "Second unit on Cowboys - model showed strong edge"
+    "thesis": "Second unit on Cowboys - model showed strong edge",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 125,
@@ -223,7 +233,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-chiefs-under-vector-nov27-2025",
     "fund": "VectorFund",
-    "thesis": "Model projection showed lower scoring game"
+    "thesis": "Model projection showed lower scoring game",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 126,
@@ -244,7 +255,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "cowboys-chiefs-under-catalyst-nov27-2025",
     "fund": "CatalystFund",
-    "thesis": "Early Thanksgiving games historically lower scoring"
+    "thesis": "Early Thanksgiving games historically lower scoring",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 127,
@@ -265,7 +277,8 @@
     "gameTime": "8:20 PM ET",
     "slug": "ravens-spread-catalyst-nov27-2025",
     "fund": "CatalystFund",
-    "thesis": "Ravens on 5-game win streak, prime time home game, Bengals missing Higgins"
+    "thesis": "Ravens on 5-game win streak, prime time home game, Bengals missing Higgins",
+    "datePlaced": "2025-11-27T20:20:00.000Z"
   },
   {
     "id": 128,
@@ -286,7 +299,8 @@
     "gameTime": "8:20 PM ET",
     "slug": "bengals-spread-contra-nov27-2025",
     "fund": "ContraFund",
-    "thesis": "Line moved 4 points from -10.5, potential overreaction to Burrow return"
+    "thesis": "Line moved 4 points from -10.5, potential overreaction to Burrow return",
+    "datePlaced": "2025-11-27T20:20:00.000Z"
   },
   {
     "id": 129,
@@ -307,7 +321,8 @@
     "gameTime": "1:00 PM ET",
     "slug": "packers-spread-catalyst-nov27-2025",
     "fund": "CatalystFund",
-    "thesis": "Lions 1-8 in last 9 Thanksgiving games - anti-Lions Turkey Day narrative"
+    "thesis": "Lions 1-8 in last 9 Thanksgiving games - anti-Lions Turkey Day narrative",
+    "datePlaced": "2025-11-27T18:00:00.000Z"
   },
   {
     "id": 130,
@@ -328,7 +343,8 @@
     "gameTime": "1:30 PM ET",
     "slug": "illinois-state-spread-vector-nov27-2025",
     "fund": "VectorFund",
-    "thesis": "PRO Grade C+ with 2.8% edge, 99% sharp money alignment, crushed Coastal 94-42"
+    "thesis": "PRO Grade C+ with 2.8% edge, 99% sharp money alignment, crushed Coastal 94-42",
+    "datePlaced": "2025-11-27T18:30:00.000Z"
   },
   {
     "id": 131,
@@ -349,7 +365,8 @@
     "gameTime": "3:00 PM ET",
     "slug": "tcu-florida-under-vector-nov27-2025",
     "fund": "VectorFund",
-    "thesis": "PRO model projected u157 with 4% edge"
+    "thesis": "PRO model projected u157 with 4% edge",
+    "datePlaced": "2025-11-27T20:00:00.000Z"
   },
   {
     "id": 132,
@@ -370,7 +387,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "michigan-state-spread-sharp-nov27-2025",
     "fund": "SharpFund",
-    "thesis": "+14% money differential (67% bets, 81% money on MSU ML)"
+    "thesis": "+14% money differential (67% bets, 81% money on MSU ML)",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 133,
@@ -391,7 +409,8 @@
     "gameTime": "5:30 PM ET",
     "slug": "wisconsin-spread-sharp-nov27-2025",
     "fund": "SharpFund",
-    "thesis": "+18% money differential (57% bets, 75% money) - biggest sharp move of day"
+    "thesis": "+18% money differential (57% bets, 75% money) - biggest sharp move of day",
+    "datePlaced": "2025-11-27T22:30:00.000Z"
   },
   {
     "id": 134,
@@ -412,7 +431,8 @@
     "gameTime": "9:30 PM ET",
     "slug": "stanford-spread-sharp-nov27-2025",
     "fund": "SharpFund",
-    "thesis": "+11% money differential (81% bets, 92% money), Minnesota 0-3 ATS last 3"
+    "thesis": "+11% money differential (81% bets, 92% money), Minnesota 0-3 ATS last 3",
+    "datePlaced": "2025-11-27T21:30:00.000Z"
   },
   {
     "id": 135,
@@ -433,7 +453,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "arkansas-spread-contra-nov27-2025",
     "fund": "ContraFund",
-    "thesis": "Reverse line movement - 68% bets on Duke but only 59% money, sharps on Arkansas"
+    "thesis": "Reverse line movement - 68% bets on Duke but only 59% money, sharps on Arkansas",
+    "datePlaced": "2025-11-27T20:00:00.000Z"
   },
   {
     "id": 111,
@@ -453,7 +474,8 @@
     "gameTime": "11:00 PM ET",
     "slug": "fresno-state-spread-1-nov26-2025",
     "analysis": "Fresno State -1.5 @ (-115) 1u. THESIS: Bulldogs strong at home, UCSB struggling. Sharp money on Fresno State with strong model edge. RESULT: Dominant 73-50 win, covered by 21.5 points.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 112,
@@ -473,7 +495,8 @@
     "gameTime": "11:00 PM ET",
     "slug": "fresno-state-spread-2-nov26-2025",
     "analysis": "Fresno State -1.5 @ (-114) 1u. THESIS: Second unit on same game - strong model edge. RESULT: Dominant 73-50 win, covered by 21.5 points.",
-    "fund": "ContraFund"
+    "fund": "ContraFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 113,
@@ -493,7 +516,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "timberwolves-spread-1-nov26-2025",
     "analysis": "MIN +10.5 @ (-105) 2u. THESIS: Thunder missing SGA (questionable) and J-Will (OUT). Wolves coming off rest, double-digit dogs at home is too much. Catalyst situation with key Thunder injuries. RESULT: Thunder won 113-105 but Wolves covered by 2.5 points. SGA played but was limited.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 114,
@@ -513,7 +537,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "timberwolves-spread-2-nov26-2025",
     "analysis": "MIN +10.5 @ (-105) 2u. THESIS: Second unit - Catalyst Fund situational play on Thunder injuries. RESULT: Thunder won 113-105 but Wolves covered by 2.5 points.",
-    "fund": "CatalystFund"
+    "fund": "CatalystFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 115,
@@ -533,7 +558,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "houston-christian-spread-1-nov26-2025",
     "analysis": "Houston Christian +1.5 @ (-120) 1.5u. THESIS: Sharp money on HCU, undervalued home dog. Pro projections favor HCU. RESULT: Won outright 72-65, covered by 8.5 points.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 116,
@@ -553,7 +579,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "houston-christian-spread-2-nov26-2025",
     "analysis": "Houston Christian +1.5 @ (-120) 2u. THESIS: Sharp Fund play - professional money indicators pointing to HCU. RESULT: Won outright 72-65, covered by 8.5 points.",
-    "fund": "SharpFund"
+    "fund": "SharpFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 117,
@@ -573,7 +600,8 @@
     "gameTime": "1:45 PM ET",
     "slug": "panthers-ml-nov26-2025",
     "analysis": "Florida Panthers ML @ (-180) 1u. THESIS: Panthers heavy favorites, Flyers struggling. Sharp money supported Panthers. RESULT: Upset loss. Flyers won 4-2, Panthers couldn't capitalize.",
-    "fund": "SharpFund"
+    "fund": "SharpFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 118,
@@ -593,7 +621,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "pelicans-spread-nov26-2025",
     "analysis": "New Orleans Pelicans +3.5 @ (-110) 2u. THESIS: Sharp money on Pelicans, public heavy on Grizzlies. Getting points with live underdog. RESULT: Game went to OT. Grizzlies won 132-127. Pelicans covered regulation but OT pushed final margin to 5 points - loss by 1.5 points against the spread.",
-    "fund": "SharpFund"
+    "fund": "SharpFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 119,
@@ -613,7 +642,8 @@
     "gameTime": "8:30 PM ET",
     "slug": "wild-ml-nov26-2025",
     "analysis": "Minnesota Wild ML @ (-130) 1.5u. THESIS: Wild solid at home, Blackhawks rebuilding. Sharp indicators favor Wild. RESULT: Thrilling 4-3 OT win. Wild got it done in overtime.",
-    "fund": "SharpFund"
+    "fund": "SharpFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 120,
@@ -633,7 +663,8 @@
     "gameTime": "8:30 PM ET",
     "slug": "stars-ml-nov26-2025",
     "analysis": "Dallas Stars ML @ (-125) 1.5u. THESIS: Stars riding hot streak, Robertson on fire. Sharp money supports Stars road value. RESULT: Stars won 3-2 to extend winning ways.",
-    "fund": "SharpFund"
+    "fund": "SharpFund",
+    "datePlaced": "2025-11-26T12:00:00.000Z"
   },
   {
     "id": 107,
@@ -653,7 +684,8 @@
     "gameTime": "9:00 PM ET",
     "slug": "houston-tennessee-under-nov25-2025",
     "analysis": "Houston/Tennessee UNDER 135.5 @ (-110) 2u. THESIS: Two elite defenses - Houston #1, Tennessee #6 in adjusted defensive efficiency. Both teams bottom half of tempo. RESULT: Tennessee upset #3 Houston 76-73 for 149 total - sailed over by 13.5 points. Gillespie clutch with 22 points (6/6 FT in final 35 seconds). Sharp limited to 21 mins due to foul trouble - huge factor. Houston went 7:24 without scoring, missed 11 straight shots in 2nd half. Uzan's halfcourt buzzer-beater missed. First time Tennessee trailed at half this season.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-25T12:00:00.000Z"
   },
   {
     "id": 108,
@@ -673,7 +705,8 @@
     "gameTime": "6:30 PM ET",
     "slug": "william-mary-spread-nov25-2025",
     "analysis": "William & Mary -1.5 @ (-102) 1u. THESIS: Tribe on 4-game win streak, just beat UTEP 74-63 to open Jacksonville Classic. Abilene Christian struggling at 3-2, lost to Texas A&M-CC. W&M averaging 82.4 PPG with balanced scoring. Tribe's pace and shooting should overwhelm Wildcats. RESULT: Dominant performance. W&M crushed Abilene Christian 92-58 to sweep Jacksonville Classic. Cade Haskins led with 20 points, six players in double figures. Tribe shot 64.7% from field, scored 33 fastbreak points. Turned 21 ACU turnovers into 21 points. Covered -1.5 by 32.5 points.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-25T12:00:00.000Z"
   },
   {
     "id": 109,
@@ -693,7 +726,8 @@
     "gameTime": "7:00 PM ET",
     "slug": "hawks-spread-nov25-2025",
     "analysis": "Atlanta Hawks -10.5 @ (-115) 2u. THESIS: Hawks 11-7, won 7 of last 9 games. Wizards league-worst 2-14 record. Jalen Johnson averaging 22.4/9.6/7.0 as go-to player with Trae Young out. Washington allows most points in NBA. RESULT: Complete disaster. CJ McCollum exploded for 46 points and 10 made threes (both season highs). Wizards snapped 14-game losing streak against us. Hawks' worst loss since opening night (138-118 vs Toronto). Porzingis (22) and Okongwu (20) couldn't keep up with McCollum's career night.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-25T12:00:00.000Z"
   },
   {
     "id": 110,
@@ -713,7 +747,8 @@
     "gameTime": "9:00 PM ET",
     "slug": "stars-ml-nov25-2025",
     "analysis": "Dallas Stars ML @ (+118) 1u. THESIS: Stars 13-5-4, riding 8-game road point streak (5-0-3). Plus money on elite team playing excellent hockey. Robertson on 6-game goal streak. RESULT: Dominant 8-3 road win. Jamie Benn scored 400th career NHL goal (2nd in franchise history after Modano's 557). Robertson extended goal streak to 7 games (11 goals) - longest since franchise moved to Dallas in 1993. Stuart Skinner pulled after allowing 4 goals on 8 shots. Johnston had 4-point night (1G/3A). Road point streak extended to 9 games.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-25T12:00:00.000Z"
   },
   {
     "id": 103,
@@ -733,7 +768,8 @@
     "gameTime": "9:30 PM ET",
     "slug": "gonzaga-spread-nov24-2025",
     "analysis": "Gonzaga -4.5 @ (-102) 1.5u. THESIS: Gonzaga #5 defensive efficiency. Alabama #37. Mark Few 28-9 in Vegas (76% win rate). Zags haven't allowed 68+ pts in ANY game. Bama shoots 52% of FGA from 3 - Gonzaga length contests. RESULT: Zags dominated on the glass, outrebounding Bama 48-36. Tyon Grant-Foster and Graham Ike each scored 21. Covered by 5.5 points.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-24T12:00:00.000Z"
   },
   {
     "id": 104,
@@ -754,7 +790,8 @@
     "gameTime": "8:15 PM ET",
     "slug": "mccaffrey-attempts-nov24-2025",
     "analysis": "McCaffrey O16.5 Rush Att @ (+100) 1u. THESIS: REVENGE GAME vs former team. Season average: 17.5 carries/game. Shanahan will feed him tonight. Panthers run D allows 4.7 YPC (24th). RESULT: CMC got FED. 24 carries for 89 yards and a TD, plus 7 catches for 53 yards. 142 total yards in his revenge game. Crushed the over by 7.5 attempts.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-24T12:00:00.000Z"
   },
   {
     "id": 105,
@@ -774,7 +811,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "nuggets-spread-nov24-2025",
     "analysis": "Denver Nuggets -7.5 @ (-115) 1.5u. THESIS: Ja Morant OUT until December (calf). JJJ questionable (ankle) - could be without both stars. Jokic averaging TRIPLE-DOUBLE (30.4/13.0/10.8). Grizzlies 2-3 without Morant, -4.3 net rating. RESULT: Jamal Murray went off for 29 points and 8 assists. Nuggets hit 22 threes. Covered by 2.5 points despite Memphis late run.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-24T12:00:00.000Z"
   },
   {
     "id": 106,
@@ -794,7 +832,8 @@
     "gameTime": "4:30 PM ET",
     "slug": "stjohns-spread-nov24-2025",
     "analysis": "St. John's +2.5 @ (-110) 1u. THESIS: #14 vs #16 - getting points with ranked team. 98.5 PPG - best start in Pitino era. 9th fastest tempo vs ISU's slow pace (125th). Pitino 2-0 vs Iowa State all-time in tourneys. RESULT: Nail-biter! St. John's lost by just 1 point (83-82) but covered the +2.5 spread. Game came down to the wire - exactly the type of close game we predicted.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-24T12:00:00.000Z"
   },
   {
     "id": 102,
@@ -814,7 +853,8 @@
     "gameTime": "4:25 PM ET",
     "slug": "eagles-spread-nov23-2025",
     "analysis": "Philadelphia Eagles -3 @ -105 at Dallas. THESIS: Key number in NFL (15.4% of games land on 3). Best juice available (-105 vs -115). Philly D elite, Dallas inconsistent. Eagles 8-2, own this rivalry. RESULT: Historic collapse. Eagles led 21-0 at halftime. Dallas scored 24 unanswered in second half. Complete defensive breakdown. Eagles offense went scoreless after intermission. Worst blown lead in franchise history.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 101,
@@ -834,7 +874,8 @@
     "gameTime": "1:00 PM ET",
     "slug": "patriots-spread-nov23-2025",
     "analysis": "New England Patriots -7.5 @ -105 at Cincinnati. THESIS: Burrow OUT (turf toe). Ja'Marr Chase SUSPENDED. Bengals D worst since 1966 (33.4 ppg allowed). Pats 5-0 ATS on road. Maye MVP-level play. RESULT: Patriots led 23-13 with under 5 minutes left but couldn't extend. Bengals scored late TD to make it 26-20. Missed cover by 1.5 points. Patriots had double-digit lead but failed to close.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 100,
@@ -854,7 +895,8 @@
     "gameTime": "1:00 PM ET",
     "slug": "bears-spread-nov23-2025",
     "analysis": "Chicago Bears -3 @ +100 vs Pittsburgh. THESIS: Rodgers OUT (fractured wrist). Plus money on home favorite vs backup QB is rare. Bears +18 turnover diff since Week 3. Steelers 1-12 all-time in Chicago. RESULT: Bears led 31-21 with 6 minutes left but Steelers scored late TD. Final margin exactly 3 points for push. Bears had 10-point lead but couldn't close. Mason Rudolph played better than expected.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 99,
@@ -874,7 +916,8 @@
     "gameTime": "1:00 PM ET",
     "slug": "lions-giants-under-nov23-2025",
     "analysis": "Lions/Giants UNDER 50.5 @ +100. THESIS: Winston = turnovers. Lions D 4th in success rate. Giants 0-6 on road, averaging 18.6 ppg. Detroit runs clock with lead. RESULT: Game went to overtime. Giants scored 20 in 4th quarter alone to force OT. Winston threw 3 TDs. Lions won 34-27 for 61 total points. Completely busted.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 98,
@@ -895,7 +938,8 @@
     "gameTime": "1:00 PM ET",
     "slug": "maye-passing-nov23-2025",
     "analysis": "Drake Maye OVER 255.5 passing yards @ -115. THESIS: Bengals allow most pass TDs in NFL (25), 5th most pass yards. Maye averaging 283 ypg. No Chase = CBs can't double anyone. 40+ attempts projected. RESULT: Maye finished with 282 yards on 27-38 passing with 3 TDs and 1 INT. Hit with room to spare. Bengals secondary was as bad as expected.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 97,
@@ -915,7 +959,8 @@
     "gameTime": "1:10 PM ET",
     "slug": "heat-ml-nov23-2025",
     "analysis": "Miami Heat ML @ -118 at Philadelphia. THESIS: Embiid OUT (knee). Oubre OUT (knee). Heat 7-1 ATS last 8 vs Philly. Miami 11-4-1 ATS this season. Getting reasonable juice on road favorite vs depleted team. RESULT: Heat controlled from start. Led wire-to-wire. Jimmy Butler had 30 points. 76ers couldn't match intensity without Embiid. Heat won 127-117.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-23T12:00:00.000Z"
   },
   {
     "id": 96,
@@ -935,7 +980,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "pistons-spread-nov22-2025",
     "analysis": "Detroit Pistons -8 @ -109 vs Milwaukee Bucks. THESIS: Giannis OUT with groin injury - Bucks are -11.9 net rating without him vs +7.1 with him. Pistons 13-2, on 11-game win streak. Cunningham averaging 27.3/9.9/5.4 - legitimate MVP candidate. RESULT: Perfect execution. Pistons dominated, led by as many as 29 points. Cunningham had 29/10/8, Duren added 19/6/5. Bucks fell under .500 for first time this season. Win streak extended to 12 games. Covered by 5 points.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 95,
@@ -955,7 +1001,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "illinois-spread-nov22-2025",
     "analysis": "Illinois -8.5 @ -110 vs Wisconsin. THESIS: Wisconsin worst Power 4 offense (15 PPG), 18th of 18 in Big Ten scoring. Altmyer with 19 TDs/4 INTs. Illinois 32.2 PPG. RESULT: Complete disaster. Wisconsin's Darrion Dupree ran for 131 yards including 84-yard TD. Peterson had 3 sacks. Wisconsin held Illinois to just 10 points - the same Illinois offense averaging 32+ PPG. Senior Day motivation was real. Wisconsin got their second ranked win of the season.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 94,
@@ -975,7 +1022,8 @@
     "gameTime": "5:00 PM ET",
     "slug": "towns-rebounds-nov22-2025",
     "analysis": "Karl-Anthony Towns OVER 11.5 Rebounds @ -114. THESIS: Hit in 14 of 14 games this season (100%). Averaging 12.8 RPG (3rd in NBA). Double-doubles in 13 of 14 starts. RESULT: Brutal miss. KAT had only 8 rebounds - his lowest of the season. Scored 24 points but couldn't get on the glass. Magic dominated inside, won 133-121. The 100% hit rate streak ended at the worst time. First game under 10 rebounds all season.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 93,
@@ -995,7 +1043,8 @@
     "gameTime": "7:00 PM ET",
     "slug": "daniels-steals-nov22-2025",
     "analysis": "Dyson Daniels OVER 2.5 Steals @ -136. THESIS: Averages 3.6 steals per game (line is 2.5). First player since 1990-91 to average 3.0+ steals. 229 steals last season. Revenge game vs former team Pelicans. RESULT: Hawks won blowout but Daniels had only 2 steals. Blowout limited his minutes and intensity in 4th quarter. Pelicans were so bad there weren't enough possessions to create steals. The math was right but the game flow killed it.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 92,
@@ -1015,7 +1064,8 @@
     "gameTime": "12:30 PM ET",
     "slug": "haaland-goal-nov22-2025",
     "analysis": "Erling Haaland Anytime Goalscorer @ -130. THESIS: 14 goals in 11 matches (1.33 goals per 90). #1 scorer in Premier League. Going for 100th PL goal. City won 4 straight. RESULT: Haaland was uncharacteristically wasteful. Missed multiple sitters including a left-foot scoop wide after being played through by Doku. Phil Foden also missed several chances. Harvey Barnes scored twice for Newcastle in 2-1 win. Haaland rated 6.7/10, largely ineffective in second half.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 91,
@@ -1035,7 +1085,8 @@
     "gameTime": "12:00 PM ET",
     "slug": "army-spread-nov22-2025",
     "analysis": "Army -10 @ -102 vs Tulsa. THESIS: Army #5 rushing offense (275.6 YPG), 62 rushes per game (most in CFB). Tulsa allows 171.3 rush YPG (101st nationally). Triple option should dominate. RESULT: Disaster. Army led 25-14 entering 4th quarter but was outscored 12-0 in final period. Seth Morgan hit 27-yard FG with 12 seconds left for Tulsa. Dominic Richardson ran for career-high 203 yards for Tulsa. Army choked away double-digit lead on Senior Day.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-22T12:00:00.000Z"
   },
   {
     "id": 90,
@@ -1055,7 +1106,8 @@
     "gameTime": "9:30 PM ET",
     "slug": "nuggets-rockets-over-nov21-2025",
     "analysis": "Nuggets/Rockets OVER 235.5 Total Points. THESIS: Denver #1 offensive rating (121.7), Houston #3 (121.3) - two most efficient offenses in NBA. OVER hit in 3 straight H2H meetings. Rockets OVER 6 of 7, Nuggets OVER 3 of 4. Combined average projected 245+. RESULT: Both teams played much better defense than expected. Jokic had 34 points but game stayed low-scoring at 221 total. Rockets held Nuggets to 112 (below their average), Nuggets defense also stepped up. Close game meant clock management in final minutes limited possessions. Total came up 14.5 points short.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-21T12:00:00.000Z"
   },
   {
     "id": 89,
@@ -1075,7 +1127,8 @@
     "gameTime": "9:00 PM ET",
     "slug": "timberwolves-spread-nov21-2025",
     "analysis": "Minnesota Timberwolves -4.5 @ -108 vs Phoenix Suns. THESIS: 8-0 H2H streak vs Phoenix dating back to April 2024, 7-1 ATS in stretch. Suns missing Grayson Allen and Jalen Green. Wolves' length dominates this matchup historically. RESULT: Brutal collapse. Wolves led 113-105 with 1:09 remaining. Edwards missed two crucial free throws with 12.7 seconds left. Collin Gillespie hit game-winning jumper with 6.4 seconds remaining for Suns 114-113 win. 8-game streak ended in worst possible fashion - had the game won and gave it away. Edwards' 41 points wasted.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-21T12:00:00.000Z"
   },
   {
     "id": 88,
@@ -1095,7 +1148,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "hurricanes-ml-nov21-2025",
     "analysis": "Carolina Hurricanes ML @ -140 vs Winnipeg Jets. THESIS: Connor Hellebuyck OUT for knee surgery - massive goalie downgrade for Winnipeg. Hurricanes #1 in Metro Division (13-6-2), #2 in goals/game (3.61), best Corsi For % in NHL. Elite offense vs backup goalie Eric Comrie. RESULT: Thesis validated perfectly. Jordan Staal scored twice, Hurricanes won 4-3. Carolina's offensive pressure was evident throughout, outshooting Jets and capitalizing on Comrie. Close final score but Hurricanes controlled game. Hellebuyck absence was decisive factor as predicted.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-21T12:00:00.000Z"
   },
   {
     "id": 87,
@@ -1115,7 +1169,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "castellanos-passing-nov21-2025",
     "analysis": "Tommy Castellanos OVER 235.5 Passing Yards @ -114. THESIS: NC State had WORST pass defense in CFB (299.9 YPG allowed). Last 4 QBs vs NC State: 367, 408, 423, 342 yards. Castellanos hit 235+ in 6 of 7 games, 242+ in all 3 road games. Seemed like near-lock with 150 yards of statistical cushion. RESULT: Complete opposite outcome. Castellanos went 16-32 for just 203 yards with 2 INTs. FSU lost 21-11 in ugly offensive performance. NC State's defense showed up for once - they had struggled all season but picked the perfect time to play their best game. FSU couldn't move the ball, trailed 14-3 in 3rd quarter. Sometimes variance strikes on even the highest confidence plays.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-21T12:00:00.000Z"
   },
   {
     "id": 86,
@@ -1135,7 +1190,8 @@
     "gameTime": "7:00 PM ET",
     "slug": "mitchell-points-nov21-2025",
     "analysis": "Donovan Mitchell OVER 28.5 Points @ -110. THESIS: Mitchell averaging 30.2 PPG (top 6 in NBA), hit OVER 28.5 in 7 of 9 games. Pacers allow 123.1 PPG (4th worst), missing Haliburton with no perimeter defense. Career vs Indiana: 27.4 PPG over 17 games. RESULT: Perfect execution. Mitchell scored 32 points in Cavaliers' 120-109 victory. Erupted for 14 points in third quarter alone. 9th time in 15 games this season with 30+ points. Pacers defense was as porous as expected. Garland's return didn't limit Mitchell's usage - he remained primary scorer as projected.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-21T12:00:00.000Z"
   },
   {
     "id": 85,
@@ -1155,7 +1211,8 @@
     "gameTime": "8:15 PM ET",
     "slug": "texans-spread-nov20-2025",
     "analysis": "Houston Texans +5.5 @ +100 vs Buffalo Bills. THESIS: PLUS MONEY on a spread is exceptionally rare value - getting +100 instead of standard -110 provided 2.4% edge before game analysis. Texans defense ranked #1 in NFL (16.3 PPG allowed, #1 pass defense at 5.4 YPA allowed). Davis Mills 2-0 as starter in 2025 with 292 and 274 passing yards. Bills missing Dalton Kincaid (hamstring). Home dome advantage disrupts Allen's cadence. Sharp money moved line from -6 to -5.5. RESULT: Perfect execution - Texans won OUTRIGHT 23-20. Elite defense delivered exactly as modeled, holding Josh Allen to season-low efficiency. Mills managed game perfectly with key third-down conversions. Texans defense forced 2 turnovers, including crucial 4th quarter interception. Getting +100 on #1 defense was free money. This validated thesis: plus money on spread + elite defense = maximum value. Best bet of the night.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-20T12:00:00.000Z"
   },
   {
     "id": 84,
@@ -1175,7 +1232,8 @@
     "gameTime": "8:15 PM ET",
     "slug": "bills-texans-under-nov20-2025",
     "analysis": "Bills/Texans UNDER 44.5 Total Points. THESIS: Two elite defenses in primetime - Texans #1 scoring defense (16.3 PPG), Bills #2 pass defense (169 YPG allowed). Davis Mills as backup QB creates 200-220 pass yard ceiling. 7 of 10 Texans games went UNDER this season. Historical data overwhelming for low-scoring game. RESULT: Perfect execution at 43 total points, clearing under by 1.5. Game played out exactly as modeled - defensive struggle with limited explosive plays. Both teams relied on ground game and clock control. Mills efficient but not prolific, Allen contained by elite Texans secondary. Correlated perfectly with Texans +5.5 - low-scoring game favored underdog cover. This validated defensive handicapping thesis.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-20T12:00:00.000Z"
   },
   {
     "id": 83,
@@ -1195,7 +1253,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "lightning-ml-nov20-2025",
     "analysis": "Tampa Bay Lightning ML -165 vs Edmonton Oilers. THESIS: Oilers on back-to-back after losing 5-3 to Capitals previous night. Calvin Pickard starting with brutal 4.18 GAA and .830 SV% - one of worst starting goalie situations in NHL. Vasilevskiy elite at home: 4-1 in last 5 starts, 2.22 GAA, .917 SV%. Lightning 7-3-0 in last 10 games. Oilers struggling on road at 4-8-2. Fatigue + bad goaltending = fade opportunity. RESULT: Lightning controlled game 4-2. Vasilevskiy made 28 saves while Pickard allowed 4 goals on 31 shots. Oilers' fatigue showed in 2nd period when Lightning scored twice. Kucherov and Guentzel combined for 3 points. Exactly as modeled - back-to-back with bad goalie is elite fade spot. This validated situational NHL handicapping.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-20T12:00:00.000Z"
   },
   {
     "id": 82,
@@ -1215,7 +1274,8 @@
     "gameTime": "8:00 PM ET",
     "slug": "hawks-spread-nov20-2025",
     "analysis": "Atlanta Hawks +1.5 @ -115 vs San Antonio Spurs. THESIS: Both teams missing stars - Trae Young OUT (MCL) for Hawks, Victor Wembanyama OUT (calf) for Spurs. Hawks 9-6 and proven winners without Trae with Dejounte Murray stepping up. 2.5-point line variance across books (Hawks +1 to Spurs -1.5) indicated sharp disagreement and value. Expected Hawks depth to prevail in battle of depleted rosters. RESULT: Spurs won 113-106, missing cover by 5.5 points. Keldon Johnson exploded for 28 points off bench, filling Wembanyama void unexpectedly well. Devin Vassell added 24. Hawks couldn't generate consistent offense - Murray had 22 but needed more help. Spurs' young core played with energy at home, crowd fueled them. This was variance loss - thesis was sound but Spurs' role players stepped up beyond projection. Hawks on road against motivated young team was riskier than anticipated. Line variance indicated sharp disagreement for a reason.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-20T12:00:00.000Z"
   },
   {
     "id": 81,
@@ -1236,7 +1296,8 @@
     "gameTime": "8:15 PM ET",
     "slug": "cook-rushing-nov20-2025",
     "analysis": "James Cook OVER 73.5 Rushing Yards @ -114. THESIS: Cook averaging 82.3 rush YPG this season - line set 9 yards below his average providing cushion. Bills expected to establish run game against Texans' weaker run defense (compared to elite pass D). Game script favored rushing with Bills likely controlling clock. No Kincaid meant more designed runs. RESULT: Easy cover with 92 yards on 24 carries. Bills leaned on Cook throughout, especially in second half trying to protect lead. Cook's 24 carries showed volume projection was accurate. Texans' run defense is indeed their weakness - Cook averaged 3.8 YPC. Having 9 yards of cushion from his average made this comfortable cover. This validated player prop handicapping with proper line selection.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-20T12:00:00.000Z"
   },
   {
     "id": 80,
@@ -1256,7 +1317,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "heat-spread-nov19-2025",
     "analysis": "Miami Heat -10 vs Golden State Warriors. THESIS: Warriors decimated by injuries - Curry OUT (knee), Butler OUT (traded), Kuminga OUT (knee), Horford OUT, Draymond questionable. Only 8 healthy players vs Heat's full roster. Heat at home with superior depth and coaching. Warriors 2-6 on road with worst road defensive rating in NBA. Double-digit spread justified by roster disparity. RESULT: Comfortable cover. Heat won 110-98, pulling away in third quarter as expected. Warriors simply had no offensive firepower without their stars. Heat's balanced attack (6 players in double figures) overwhelmed depleted Warriors. Covered by 2 points in dominant win. Warriors' road struggles continued - road DRTG of 117+ validated thesis.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-19T12:00:00.000Z"
   },
   {
     "id": 79,
@@ -1276,7 +1338,8 @@
     "gameTime": "9:30 PM ET",
     "slug": "arizona-spread-nov19-2025",
     "analysis": "Arizona +6.5 vs UConn Huskies at neutral site (Intuit Dome). THESIS: Arizona's veteran core (Dell'Orso, Bradley) outperforms in big games. Line moved from +5 to +6.5 on sharp Arizona money. UConn missing key pieces, struggling early season (2-1 but unimpressive margins). Arizona's defensive intensity and rebounding would keep game close. Getting +6.5 in potential 3-point game offered premium value. RESULT: Won outright by 4 points. Arizona dominated second half, closing on 15-4 run. Dell'Orso scored clutch baskets down stretch. Arizona's veteran poise in big moments exactly as predicted. Line movement was sharp money telling us something - Arizona was live dog that won outright. Textbook handicapping.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-19T12:00:00.000Z"
   },
   {
     "id": 78,
@@ -1296,7 +1359,8 @@
     "gameTime": "7:30 PM ET",
     "slug": "raptors-ml-nov19-2025",
     "analysis": "Toronto Raptors ML -125 vs Philadelphia 76ers. THESIS: Sixers catastrophically depleted - Embiid OUT (rest), George OUT (knee), Oubre OUT (hip), Bona OUT. Only 8 available players with no offensive creation. Raptors healthy with balanced scoring (Barnes, Quickley, Barrett). Sixers 2-11, worst record in East. Home court advantage decisive against skeleton crew. RESULT: Dominant wire-to-wire victory. Raptors won 121-112, leading by double digits most of game. Sixers couldn't generate offense without their stars. Barnes and Quickley combined for 45 points. Exactly as modeled - healthy team beats depleted opponent at home.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-19T12:00:00.000Z"
   },
   {
     "id": 77,
@@ -1316,7 +1380,8 @@
     "gameTime": "7:00 PM ET",
     "slug": "capitals-ml-nov19-2025",
     "analysis": "Washington Capitals ML -115 vs Edmonton Oilers. THESIS: Capitals playing elite hockey at home (6-1 at Capital One Arena), strong goaltending from Lindgren. Oilers on road fatigue (second game of back-to-back). Washington's defensive structure containing Edmonton's top-heavy offense. Expected close game but Capitals' home ice advantage decisive. RESULT: Perfect execution. Capitals won 5-3, controlling game throughout. Led 4-2 after second period, closed it out professionally. Capitals' home dominance continued exactly as modeled.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-19T12:00:00.000Z"
   },
   {
     "id": 76,
@@ -1335,7 +1400,8 @@
     "opponent": "Portland Trail Blazers",
     "slug": "suns-ml-nov18-2025",
     "analysis": "Phoenix Suns ML +124 vs Portland Trail Blazers. THESIS: Same analysis as Suns +2.5 spread bet - Blazers depleted (Lillard, Holiday out), Suns superior talent. Getting +124 plus money offered exceptional value for outright win probability. Double-dip strategy: if Suns win close (by 1-2), spread might not cover but ML hits. If Suns win big, both bets cash. Risk-reward favorable at plus odds. RESULT: Both bets cashed perfectly. Suns won outright 127-110, hitting both +2.5 spread and +124 ML in blowout fashion. This double-dip strategy paid off huge - collected on both positions with dominant 17-point victory. Getting +124 (implied 44.6% probability) on team with 55-60% true win probability created +10-15% edge. Combined with spread bet, Suns bets generated +$252.48 profit total ($190.48 spread + $62 ML). This validated double-dip approach: when you have strong conviction on outright win, adding small ML position maximizes value on plus odds. Perfect execution of portfolio theory - correlated bets that both profited.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-18T12:00:00.000Z"
   },
   {
     "id": 75,
@@ -1354,7 +1420,8 @@
     "opponent": "Portland Trail Blazers",
     "slug": "suns-spread-nov18-2025",
     "analysis": "Phoenix Suns +2.5 vs Portland Trail Blazers. THESIS: Suns on fire (5-1 ATS last 6 games, won 7 of last 9). Blazers severely depleted (Damian Lillard OUT season with Achilles, Jrue Holiday DOUBTFUL with calf). Suns' talent advantage (Booker 28.4 PPG, Beal, Durant) too much for injury-ravaged Portland. Blazers lost 4 of last 5 games. Getting +2.5 points on better team offered premium value. Expected Suns bounce-back. RESULT: Blowout dominant win. Suns destroyed Blazers 127-110, covering +2.5 by 19.5 points. Devin Booker led with 19 points as Suns pulled away in second half. Suns controlled game throughout - balanced scoring attack overwhelmed Portland. Blazers couldn't overcome injuries and fell apart in second half. Suns' superior talent and depth overwhelmed Portland's depleted roster exactly as modeled. Getting +2.5 on road favorite created massive value. This paired perfectly with Suns ML bet for double-dip profit. Excellent handicapping of injury impact and recent form. Suns' 5-1 ATS run continued with dominant performance.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-18T12:00:00.000Z"
   },
   {
     "id": 74,
@@ -1373,7 +1440,8 @@
     "opponent": "Kansas Jayhawks",
     "slug": "duke-spread-nov18-2025",
     "analysis": "Duke -10.5 vs Kansas at Champions Classic (MSG). THESIS: Kansas missing Darryn Peterson (projected #1 NBA draft pick, 21.5 PPG, 50% 3PT, OUT 3rd straight game). Duke perfect 4-0 SU and 4-0 ATS, averaging +37 PPG margin. Kansas can't replace Peterson's offensive production - created scoring crisis. Duke's athleticism and depth would overwhelm depleted Kansas on neutral court. Expected Duke to pull away in 2nd half. RESULT: Comfortable cover. Duke won 78-66, covering -10.5 by 1.5 points (12-point margin). Duke trailed by 5 at one point in first half but went on crucial runs in 2nd half to extend lead. Kansas kept it competitive through hustle but Peterson's absence showed in final 10 minutes - couldn't generate efficient offense. Duke's talent advantage emerged late as modeled. Cameron Boozer led with 18-10-5 double-double, Isaiah Evans added 16, Patrick Ngongba 13. Tre White fought hard for Kansas with 23-9 but support was limited. Kansas fought hard but 21.5 PPG hole from Peterson was insurmountable. Duke didn't allow a field goal in final 4:59. Peterson's absence was game-changer as predicted. This validated handicapping of star player injuries in college basketball.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-18T12:00:00.000Z"
   },
   {
     "id": 73,
@@ -1392,7 +1460,8 @@
     "opponent": "Golden State Warriors",
     "slug": "magic-spread-nov18-2025",
     "analysis": "Orlando Magic +3.5 vs Golden State Warriors. THESIS: Warriors struggling on road (2-6 away record, historically poor road defensive rating 117-130). Magic thriving without Paolo Banchero (2-1 record, Franz Wagner averaging 27.3 PPG stepping up). Warriors missing Kuminga (bilateral knee) creating frontcourt depth crisis. Magic's elite home defense (106.3 DRTG, 3rd in NBA) vs Warriors' road woes created value. Extra half-point cushion at +3.5 vs consensus +3. RESULT: Perfect execution, dominant outright win. Magic won 121-113, covering +3.5 by 11.5 points. Franz Wagner led with 18 points, Anthony Black scored 21 off bench, Wendell Carter Jr. had 17-12 double-double. Magic's balanced attack overwhelmed Warriors despite Curry's 34 points. Warriors' road struggles continued exactly as modeled. Getting +3.5 instead of +3 provided extra cushion, though Magic won by 8 making it irrelevant. Line shopping paid off. This validated thesis: Warriors can't defend on road, Magic's home court + balanced scoring = elite value. Textbook handicapping of road/home splits and injury impact.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-18T12:00:00.000Z"
   },
   {
     "id": 72,
@@ -1411,7 +1480,8 @@
     "opponent": "Detroit Pistons",
     "slug": "hawks-spread-nov18-2025",
     "analysis": "Atlanta Hawks +1.5 vs Detroit Pistons. THESIS: Hawks thriving without Trae Young (7-2 record, 5-game win streak at home). Pistons on brutal back-to-back after defeating Pacers 127-112 previous night. Six Pistons players out or questionable (Ivey, LeVert, Sasser, Klintman confirmed out; Cunningham, Harris, Thompson questionable). Hawks averaging 121.3 PPG without Trae, Jalen Johnson playing at All-Star level (ECF Player of Week: 31-18-14-7 steals vs Utah). Expected Hawks home court + Pistons fatigue = easy cover. RESULT: Complete miss. Pistons won 120-112, missing cover by 6.5 points. Pistons extended win streak to 11 games despite back-to-back and injuries. Cade Cunningham (hip) and Tobias Harris (ankle) both played through questionable status and dominated. Hawks couldn't slow Pistons' momentum - Detroit shot efficiently and controlled tempo throughout. This was fundamental misread: underestimated Pistons' 11-game streak being bigger than fatigue factor. Cunningham's 24 points, 8 assists led balanced attack. Hawks' 5-game home streak ended. Pistons proved their depth and coaching can overcome rest disadvantage. Should have recognized that historic winning streaks (10+ games) often transcend situational handicaps like back-to-backs. Wrong side - Pistons' organizational excellence > Hawks' situational edge.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-18T12:00:00.000Z"
   },
   {
     "id": 71,
@@ -1430,7 +1500,8 @@
     "analysis": "Gonzaga/Southern Utah Under 160.5 Total Points. THESIS: Gonzaga's last 4 games all went under (100% trend). Expert predictions averaged 157 total points (ranges: 94-63, 95-60, 93-61). Line set at 159.5 gave 2.5-point edge in our favor. Southern Utah defensive-minded road team (1-3 record) expected to slow pace. Trend + math alignment = value. Expected final around 155 total. RESULT: Catastrophic miss. Final score 122-50 (172 total points) - went over by 11.5 points. Gonzaga set program record for largest margin of victory (72 points) vs Division I opponent. Complete offensive explosion: Braden Huff 22 pts (11-of-13 shooting), Davis Fogle career-high 19, Graham Ike 13, Adam Miller 13. Southern Utah imploded with 23 turnovers vs only 18 made field goals. Gonzaga shot 57% from field, dominated every facet. This was fundamental misread of pace - Gonzaga's turnover creation (forced 23) led to fast-break points and inflated scoring. Southern Utah's poor offense (only 50 pts) didn't matter when Gonzaga scored 122. Wrong side entirely. Should have recognized mismatch potential - elite home team vs overmatched mid-major creates blowout scoring regardless of trends.",
     "fund": "VectorFund",
     "team": "Gonzaga",
-    "opponent": "Southern Utah"
+    "opponent": "Southern Utah",
+    "datePlaced": "2025-11-17T12:00:00.000Z"
   },
   {
     "id": 70,
@@ -1449,7 +1520,8 @@
     "opponent": "Detroit Pistons",
     "slug": "pacers-spread-nov17-2025",
     "analysis": "Indiana Pacers +10.5 vs Detroit Pistons (HEDGE). THESIS: Hedge bet against Pistons -11 to create middle opportunity. If Pistons win by exactly 11, 12, 13, or 14 points, both bets win. Pacers have scoring ability with Pascal Siakam and Tyrese Haliburton to keep game competitive. Double-digit spread offers value for talented road team even against hot Pistons. Expected close game with chance to middle. RESULT: Hedge failed, Pistons blew out Pacers 127-112 (15-point margin). Lost both the hedge and missed middle opportunity. Pistons covered -11 easily, rendering +10.5 worthless. Jalen Duren's dominant 31-point return and Pistons' 10-game win streak momentum was too much. Pacers couldn't execute defensively - gave up 127 points and 52% shooting. Siakam's 29 points weren't enough. Should have recognized Duren's return as game-changer rather than hedging. This hedge cost 1.4 units unnecessarily - would have been better to let Pistons -11 ride standalone. Lesson: avoid hedging when one side has clear dominance indicators (returning star, historic win streak, home court).",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-17T12:00:00.000Z"
   },
   {
     "id": 69,
@@ -1468,7 +1540,8 @@
     "opponent": "Dallas Mavericks",
     "slug": "timberwolves-spread-nov17-2025",
     "analysis": "Minnesota Timberwolves -14.5 vs Dallas Mavericks. THESIS: Depleted Mavericks roster (missing key rotation players) facing elite Timberwolves defense at Target Center. Wolves coming off strong performances, home court advantage significant. Mavericks' fatigue from recent schedule (3rd game in 4 nights for DAL earlier in week) and injuries creating mismatch. Expected Timberwolves to dominate paint with Rudy Gobert and control tempo. RESULT: Dominant blowout win. Timberwolves crushed Mavericks 120-96, covering -14.5 by 9.5 points (24-point margin). Naz Reid led with season-high 22 points off bench. Six Wolves scored in double figures including all five starters: Jaden McDaniels and Rudy Gobert (15 each), Anthony Edwards (13). Complete team effort showcased Minnesota's depth. Wolves' defense suffocated Dallas - forced low shooting percentage and controlled boards. Balanced scoring attack (six players 10+ pts) proved too much for depleted Mavs. This was elite handicapping of injuries, schedule spots, and home court advantage. Easy cover in what became non-competitive game by 4th quarter.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-17T12:00:00.000Z"
   },
   {
     "id": 68,
@@ -1487,7 +1560,8 @@
     "opponent": "Indiana Pacers",
     "slug": "pistons-spread-nov17-2025",
     "analysis": "Detroit Pistons -11 vs Indiana Pacers. THESIS: Pistons on historic 9-game winning streak, best record in Eastern Conference at 11-2. Jalen Duren returning from ankle injury adds defensive presence and rebounding. Pacers struggling on road (3-5 away), vulnerable to physical teams. Pistons' home court advantage at Little Caesars Arena (7-1 at home) with momentum of streak creating value even at double-digit spread. Expected Pistons to dominate paint and control tempo. RESULT: Perfect execution. Pistons won 127-112, covering -11 by 4 points. Jalen Duren's return was dominant: 31 points in his first game back, completely controlling paint. Pistons extended win streak to 10 games. Pascal Siakam scored 29 for Pacers but couldn't overcome Detroit's balanced attack and defensive intensity. Pistons shot 52% FG vs Pacers' 44%, dominated rebounds 48-36. This validated the hot streak thesis - elite teams covering big spreads at home when firing on all cylinders. Attendance of 19,058 created electric atmosphere that fueled Pistons. Textbook cover.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-17T12:00:00.000Z"
   },
   {
     "id": 67,
@@ -1508,7 +1582,8 @@
     "gameTime": "8:20 PM ET",
     "slug": "hurts-rushing-nov16-2025",
     "analysis": "Jalen Hurts OVER 30.5 Rushing Yards. THESIS: Hurts averaging 42.3 rush YPG this season, mobile QB who uses legs to extend plays and move chains. Lions defense allowing 4.8 YPC to QBs. Sunday Night Football stage with Hurts motivated against fellow elite team. Expected designed runs plus scrambles to hit 35-40 yards. RESULT: Narrow cover by 0.5 yards. Hurts rushed 10 times for exactly 31 yards, clearing 30.5 by just 0.5 yards. Game was defensive slugfest (Eagles won 16-9), limiting overall offensive production. Hurts passed for only 135 yards (14-of-28) as Eagles leaned on run game and defense. His lone TD came on 1-yard QB sneak with 16 seconds left in first half. Hurts' rushing was essential for moving chains - several designed QB powers and zone-read keeps. Sweated this one out - if Hurts is stopped for 1 less yard anywhere, bet loses. Right side but tight squeeze. Eagles controlled game with defense, not Hurts' legs. Lucky to clear the number in low-scoring environment.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-16T20:20:00.000Z"
   },
   {
     "id": 66,
@@ -1529,7 +1604,8 @@
     "gameTime": "8:20 PM ET",
     "slug": "st-brown-receptions-nov16-2025",
     "analysis": "Amon-Ra St. Brown OVER 7.5 Receptions. THESIS: St. Brown averaging 8.4 receptions/game, elite target share (28% of team targets). Facing Eagles secondary allowing 6.8 catches to slot WRs. Expected Jared Goff to lean heavily on ARSB in hostile road environment (Lincoln Financial Field). Lions offense runs through St. Brown in critical games. RESULT: Complete disaster. St. Brown caught only 2 passes on 12 targets (16.7% catch rate). Eagles defense completely shut down Lions passing attack - Goff went 18-of-33 for just 138 yards total. Eagles pass rush (Cooper DeJean, Nakobe Dean dominant) pressured Goff all game, forcing quick throws and incompletions. Lions couldn't establish rhythm offensively. Dan Campbell's aggressive fourth-down gambles (0-for-4 on 4th down) disrupted offensive flow. St. Brown was targeted but Eagles coverage (Quinyon Mitchell primary) was suffocating. Missed by 5.5 receptions - catastrophic beat. Eagles defense dominated to extent that Lions managed only 9 points total. Fundamental misread of Eagles defensive dominance.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-16T20:20:00.000Z"
   },
   {
     "id": 65,
@@ -1550,7 +1626,8 @@
     "gameTime": "8:20 PM ET",
     "slug": "barkley-rushing-nov16-2025",
     "analysis": "Saquon Barkley OVER 78.5 Rushing Yards. THESIS: Barkley averaging 112.8 rush YPG this season, elite workhorse back facing Lions defense allowing 118.6 rush YPG (21st in NFL). Sunday Night Football primetime spotlight with NFC playoff implications - Eagles will lean on ground game. Lions missing key defensive pieces (Alim McNeill out). Expected 22-25 carries with 90+ yards. RESULT: Perfect execution. Barkley rushed for 83 yards on 26 carries, clearing 78.5 by 4.5 yards. Eagles won defensive battle 16-9, relying heavily on ground game to control clock (Eagles had 39:20 TOP vs Lions 20:40). Barkley got full workload as expected. Eagles defense suffocated Lions offense, creating game script perfect for Barkley volume. Covered comfortably despite low-scoring affair.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-16T20:20:00.000Z"
   },
   {
     "id": 64,
@@ -1569,7 +1646,8 @@
     "opponent": "Alabama Crimson Tide",
     "slug": "oklahoma-spread-nov15-2025",
     "analysis": "Oklahoma +6.5 vs Alabama at Bryant-Denny Stadium. THESIS: Road underdog with elite defensive metrics (2nd nationally in turnover margin +1.4/game) facing Alabama team prone to turnovers (averaging 1.7 TO/game, 89th nationally). OU's opportunistic defense and desperate CFP hopes (needed win to stay alive) suggested major value. Alabama's recent struggles at home vs ranked opponents (1-2 ATS) indicated vulnerability. Line moved from +7.5 to +6.5 on sharp OU money. RESULT: Perfect execution, textbook win. OU forced 3 Alabama turnovers and converted into 17 points - exactly as modeled. Eli Bowen's 87-yard pick-six gave OU early 10-0 lead and momentum. Defense dominated throughout: held Alabama to 21 points, forced critical mistakes in red zone. Tate Sandell's 52-yard FG extended lead, then game-sealing 24-yard FG provided insurance. John Mateer's 20-yard rushing TD and Daniel Hill's 1-yard TD run for Alabama rounded out scoring. Final 23-21 OU victory covered +6.5 comfortably. Alabama couldn't overcome turnover battle at home despite Bryant-Denny advantage. Excellent handicap of turnover-prone Alabama vs ball-hawking OU secondary. This validated thesis: elite defenses with CFP motivation destroy turnover-prone teams. Best bet of the day.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-15T12:00:00.000Z"
   },
   {
     "id": 63,
@@ -1588,7 +1666,8 @@
     "opponent": "Georgia Bulldogs",
     "slug": "texas-spread-nov15-2025",
     "analysis": "Texas +4.5 vs Georgia at Sanford Stadium. THESIS: Texas ranked #10 with CFP hopes, expecting competitive game at hostile environment. Small spread suggested oddsmakers projected tight matchup. Texas averaging 32.1 PPG, Georgia's defense allowing 18.3 PPG - projected final in 27-24 range. RESULT: Complete blowout and total misread. Georgia dominated 35-10, missing cover by 20.5 points. Gunner Stockton absolutely shredded Texas defense (24-of-29 passing, 4 TDs, 1 INT). Georgia controlled possession 35:09 to 24:51, total yards 357-274. Georgia outscored Texas 21-0 in 4th quarter alone, turning competitive game into rout. Texas managed only 274 total yards against UGA's suffocating defense. Fundamental error: underestimated Stockton's breakout performance and Georgia's home-field dominance at Sanford Stadium (8-1 ATS at home this season). Texas's offense completely overwhelmed, couldn't establish run (89 rush yards) or pass (185 pass yards). Wrong side entirely - should have faded Texas on road against elite SEC defense.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-15T12:00:00.000Z"
   },
   {
     "id": 62,
@@ -1607,7 +1686,8 @@
     "opponent": "USC Trojans",
     "slug": "iowa-spread-nov15-2025",
     "analysis": "Iowa +6.5 vs USC. THESIS: Iowa's defensive strength and USC's inconsistent road performance suggested underdog value. Iowa historically performs well as home underdog, ranking 3rd nationally in defensive efficiency. USC struggled in hostile environments this season (0-2 on the road vs ranked opponents). Line moved from +7 to +6.5 on Iowa money. RESULT: Lucky cover after complete collapse. Iowa dominated first half, leading 21-10 at halftime behind 2 TDs and strong defensive pressure. Then disaster: Iowa shut out completely in 2nd half (0 points), USC scored final 19 points. Final 26-21 USC win meant Iowa still covered +6.5 by 1.5 points. Makai Lemon (10 rec, 153 yds, TD) led USC comeback. Iowa's offense collapsed - couldn't convert possession into points despite controlling clock (30:44 vs 29:16). Right side for wrong reasons - bet on defense, won despite offense failing. Fortunate that USC couldn't push margin past 5 points. Classic 'bad process, good result' scenario.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-15T12:00:00.000Z"
   },
   {
     "id": 61,
@@ -1627,7 +1707,8 @@
     "gameTime": "10:30 PM ET",
     "slug": "arizona-spread-nov14-2025",
     "analysis": "Arizona -1.5 vs UCLA at neutral site (Intuit Dome). THESIS: Veteran execution beats youthful talent in close neutral-site games. Arizona's senior leadership (Dell'Orso, Bradley) would prevail against UCLA's untested roster. UCLA entered 0-3 ATS, having failed to cover against weaker opponents. Neutral site negated UCLA's Pauley Pavilion edge. Arizona's rebounding and paint dominance (34th in adjusted tempo) would overwhelm UCLA's preference for slower pace (222nd). RESULT: Perfect execution. Arizona won 69-65, covering -1.5 by exactly 2.5 points. Dell'Orso (20 pts) and Bradley (15 pts, 11 in final 5:17) combined for 35 points. Arizona dominated paint 38-20, rebounds 35-28, and bench scoring 28-3. The 20-8 closing run over final 7:17 validated veteran composure thesis. UCLA fell to 0-4 ATS. Textbook handicapping success.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-14T12:00:00.000Z"
   },
   {
     "id": 60,
@@ -1647,7 +1728,8 @@
     "gameTime": "10:30 PM ET",
     "slug": "mavericks-spread-nov14-2025",
     "analysis": "Mavericks +3.5 vs Clippers. THESIS: Two injured teams create uncertainty, +3.5 offers value given Clippers' 0-9 ATS stretch (1-10 ATS season). Line moved from -4.5 to -3.5 toward Dallas on sharp money. Both teams severely depleted (DAL missing Irving, Davis, Washington; LAC missing Beal, Leonard). RESULT: Variance loss via double overtime. Game tied 114-114 in regulation, 123-123 after 1OT. Harden's historic 41-14-11 triple-double (first 40-pt triple-double in Clippers franchise history) plus second OT collapse (DAL outscored 10-4) produced 6-point Clippers win. Mavericks' third game in four nights, fatigue showed in 2OT. D'Angelo Russell's 7 turnovers (2 in final 2:20 of 2OT) killed comeback. Zubac dominated depleted frontcourt (27 pts, 73% FG). This was good process with unlucky variance - double OT added 6+ points to margin, historic Harden performance. Acceptable loss in 'two bad teams' spot.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-14T12:00:00.000Z"
   },
   {
     "id": 59,
@@ -1667,7 +1749,8 @@
     "gameTime": "7:00 PM ET",
     "slug": "sixers-spread-nov14-2025",
     "analysis": "76ers +2 vs Pistons. THESIS: Maxey's brilliance (32+ PPG) and Philadelphia's 9-2 ATS record offer value against Pistons missing 4 starters (Cunningham, Duren, Harris, Thompson). Line moved dramatically from -6.5 to -2 on heavy sharp action. RESULT: Process failure. Pistons won 114-105, missing cover by 7 points. This was a fundamental misread of team depth vs individual talent. Detroit's five players scored 14+ points (Green 21, Jenkins 19, Robinson 15, LeVert 14, Stewart 14) while Maxey's 31 points on 31 shots (inefficient volume) represented Philly's only offense. Philadelphia's catastrophic 15-point fourth quarter exposed one-man team limitations. Pistons' 9-game win streak reflected organizational depth and Coach Bickerstaff's defensive system, not luck. Jenkins' 52-foot buzzer-beater (cut 5-pt lead to 2) shifted momentum into 4th. Detroit had beaten PHI 111-108 five days earlier - betting them to cover +2 in Detroit after losing by 3 in Philly ignored critical recent H2H data. Sharp money collectively wrong - fading hot teams without specific reason is flawed process. Lesson: avoid one-man road teams against deep, well-coached opponents regardless of ATS records.",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-14T12:00:00.000Z"
   },
   {
     "id": 58,
@@ -1686,7 +1769,8 @@
     "analysis": "Jets +12.5 Spread. THESIS: Thursday night home underdogs cover at 61% historically. Jets have excellent defensive metrics (5th in points allowed). Spread moved from +14 to +12.5 on sharp money. RESULT: Lost by 0.5 points - final score 27-14 (13-point margin). Brutal beat. If Jets score on their final drive (failed 4th down at NE 32), this covers. Right side, wrong result.",
     "fund": "VectorFund",
     "team": "New York Jets",
-    "opponent": "Arizona Cardinals"
+    "opponent": "Arizona Cardinals",
+    "datePlaced": "2025-11-13T23:15:00.000Z"
   },
   {
     "id": 57,
@@ -1705,7 +1789,8 @@
     "analysis": "Breece Hall UNDER 58.5 Rushing Yards. THESIS: Hall's role declining - went from 18 carries/game early season to 13.2 over last 4. Patriots rank 7th in rush defense (101.3 YPG allowed). Jets will be passing from behind (projected game total: NYJ 17, NE 24). RESULT: Perfect read. Hall got exactly 58 yards on 14 carries. Jets trailed all game, ran only 52 plays total. Hall's receiving work (2 catches, 6 yards) confirms game script went exactly as predicted.",
     "fund": "VectorFund",
     "team": "Breece Hall",
-    "opponent": "New England Patriots"
+    "opponent": "New England Patriots",
+    "datePlaced": "2025-11-13T23:15:00.000Z"
   },
   {
     "id": 56,
@@ -1724,7 +1809,8 @@
     "analysis": "Drake Maye OVER 1.5 Passing TDs. THESIS: Maye averaging 2.4 pass TDs per game over last 5 starts. Jets allow 2.1 pass TDs/game (6th-worst). Maye threw for 3 TDs against this same Jets defense 3 weeks ago. RESULT: Maye went 25-of-34 for 281 yards but only 1 TD. Patriots' run-heavy game script (Henderson 3 rushing TDs) meant they never needed to pass in the red zone. Maye played great but volume wasn't there - wrong bet for a blowout scenario.",
     "fund": "VectorFund",
     "team": "Drake Maye",
-    "opponent": "New York Jets"
+    "opponent": "New York Jets",
+    "datePlaced": "2025-11-13T23:15:00.000Z"
   },
   {
     "id": 55,
@@ -1743,7 +1829,8 @@
     "analysis": "TreVeyon Henderson OVER 70.5 Rushing Yards. THESIS: Henderson averaging 92.3 rush YPG in his last 3 starts, Patriots give up 138.6 rush YPG (4th-worst in NFL). Jets defensive line depleted (Quinnen Williams traded). Volume projection: 18-22 carries. RESULT: Henderson scored 3 TDs but only got 52 yards - classic touchdown vulture scenario. Patriots got inside the 5-yard line 3 times, Henderson punched in from goal line each time. Negative game script killed yardage upside.",
     "fund": "VectorFund",
     "team": "TreVeyon Henderson",
-    "opponent": "Cincinnati Bengals"
+    "opponent": "Cincinnati Bengals",
+    "datePlaced": "2025-11-13T23:15:00.000Z"
   },
   {
     "id": 54,
@@ -1762,7 +1849,8 @@
     "analysis": "Under 43.5 Total Points. THESIS: Low-scoring Thursday Night Football matchup between two struggling offenses. Patriots' defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both teams run-heavy, clock-controlling game scripts. Weather in Foxborough: 40\u00b0F with 15mph winds (reduces passing efficiency by ~12%). RESULT: Hit comfortably at 41 points. Patriots dominated time of possession (34:18 to 25:42), ran 71 plays vs Jets' 52. Exactly as modeled.",
     "fund": "VectorFund",
     "team": "New York Jets",
-    "opponent": "New England Patriots"
+    "opponent": "New England Patriots",
+    "datePlaced": "2025-11-13T23:15:00.000Z"
   },
   {
     "id": 53,
@@ -1782,7 +1870,8 @@
     "opponent": "Washington Wizards",
     "gameTime": "8:00 PM ET",
     "slug": "sengun-points-nov12-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-12T12:00:00.000Z"
   },
   {
     "id": 52,
@@ -1802,7 +1891,8 @@
     "opponent": "Golden State Warriors",
     "gameTime": "8:30 PM ET",
     "slug": "wembanyama-points-nov12-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-12T12:00:00.000Z"
   },
   {
     "id": 51,
@@ -1821,7 +1911,8 @@
     "opponent": "Oklahoma City Thunder",
     "gameTime": "8:00 PM ET",
     "slug": "lakers-spread-nov12-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-12T12:00:00.000Z"
   },
   {
     "id": 50,
@@ -1840,7 +1931,8 @@
     "opponent": "Golden State Warriors",
     "gameTime": "8:30 PM ET",
     "slug": "spurs-spread-nov12-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-12T12:00:00.000Z"
   },
   {
     "id": 49,
@@ -1859,7 +1951,8 @@
     "team": "Boston Celtics",
     "opponent": "Philadelphia 76ers",
     "slug": "white-threes-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 48,
@@ -1878,7 +1971,8 @@
     "team": "Oklahoma City Thunder",
     "opponent": "Golden State Warriors",
     "slug": "mitchell-pra-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 47,
@@ -1896,7 +1990,8 @@
     "team": "Texas Tech",
     "opponent": "Illinois",
     "slug": "texas-tech-spread-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 46,
@@ -1915,7 +2010,8 @@
     "team": "Denver Nuggets",
     "opponent": "Sacramento Kings",
     "slug": "jokic-points-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 45,
@@ -1934,7 +2030,8 @@
     "team": "Philadelphia 76ers",
     "opponent": "Boston Celtics",
     "slug": "maxey-pts-ast-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 44,
@@ -1953,7 +2050,8 @@
     "team": "New York Knicks",
     "opponent": "Memphis Grizzlies",
     "slug": "brunson-assists-nov11-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-11T12:00:00.000Z"
   },
   {
     "id": 43,
@@ -1972,7 +2070,8 @@
     "team": "Philadelphia Eagles",
     "opponent": "Green Bay Packers",
     "slug": "smith-receptions-nov10-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-10T12:00:00.000Z"
   },
   {
     "id": 42,
@@ -1991,7 +2090,8 @@
     "team": "Philadelphia Eagles",
     "opponent": "Green Bay Packers",
     "slug": "hurts-td-nov10-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-10T12:00:00.000Z"
   },
   {
     "id": 41,
@@ -2009,7 +2109,8 @@
     "team": "Philadelphia Eagles",
     "opponent": "Green Bay Packers",
     "slug": "eagles-spread-nov10-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-10T12:00:00.000Z"
   },
   {
     "id": 40,
@@ -2028,7 +2129,8 @@
     "team": "Green Bay Packers",
     "opponent": "Philadelphia Eagles",
     "slug": "love-yards-nov10-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-10T12:00:00.000Z"
   },
   {
     "id": 39,
@@ -2047,7 +2149,8 @@
     "team": "Green Bay Packers",
     "opponent": "Philadelphia Eagles",
     "slug": "jacobs-td-nov10-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-10T12:00:00.000Z"
   },
   {
     "id": 38,
@@ -2066,7 +2169,8 @@
     "team": "Carolina Panthers",
     "opponent": "New Orleans Saints",
     "slug": "dowdle-attempts-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 37,
@@ -2085,7 +2189,8 @@
     "team": "Seattle Seahawks",
     "opponent": "Arizona Cardinals",
     "slug": "smith-njigba-yards-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 36,
@@ -2104,7 +2209,8 @@
     "team": "Tampa Bay Buccaneers",
     "opponent": "New England Patriots",
     "slug": "white-receptions-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 35,
@@ -2122,7 +2228,8 @@
     "team": "Jacksonville Jaguars",
     "opponent": "Houston Texans",
     "slug": "jaguars-texans-under-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 34,
@@ -2141,7 +2248,8 @@
     "team": "Cleveland Browns",
     "opponent": "New York Jets",
     "slug": "judkins-yards-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 33,
@@ -2160,7 +2268,8 @@
     "team": "Houston Texans",
     "opponent": "Jacksonville Jaguars",
     "slug": "collins-td-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 32,
@@ -2179,7 +2288,8 @@
     "team": "Buffalo Bills",
     "opponent": "Miami Dolphins",
     "slug": "cook-yards-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 31,
@@ -2198,7 +2308,8 @@
     "team": "Los Angeles Chargers",
     "opponent": "Pittsburgh Steelers",
     "slug": "allen-yards-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 30,
@@ -2217,7 +2328,8 @@
     "team": "Pittsburgh Steelers",
     "opponent": "Los Angeles Chargers",
     "slug": "gainwell-receptions-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 29,
@@ -2236,7 +2348,8 @@
     "team": "Los Angeles Chargers",
     "opponent": "Pittsburgh Steelers",
     "slug": "gadsden-yards-nov9-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-09T12:00:00.000Z"
   },
   {
     "id": 28,
@@ -2254,7 +2367,8 @@
     "team": "TCU",
     "opponent": "Iowa State",
     "slug": "tcu-nov8-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-08T12:00:00.000Z"
   },
   {
     "id": 27,
@@ -2272,7 +2386,8 @@
     "team": "Texas A&M",
     "opponent": "Missouri",
     "slug": "texas-am-nov8-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-08T12:00:00.000Z"
   },
   {
     "id": 26,
@@ -2290,7 +2405,8 @@
     "team": "Oregon",
     "opponent": "Iowa",
     "slug": "oregon-iowa-nov8-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-08T12:00:00.000Z"
   },
   {
     "id": 25,
@@ -2309,7 +2425,8 @@
     "team": "Toronto Raptors",
     "opponent": "Atlanta Hawks",
     "slug": "barrett-assists-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 24,
@@ -2328,7 +2445,8 @@
     "team": "Denver Nuggets",
     "opponent": "Golden State Warriors",
     "slug": "jokic-rebounds-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 23,
@@ -2347,7 +2465,8 @@
     "team": "Orlando Magic",
     "opponent": "Boston Celtics",
     "slug": "banchero-rebounds-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 22,
@@ -2366,7 +2485,8 @@
     "team": "Cleveland Cavaliers",
     "opponent": "Washington Wizards",
     "slug": "mitchell-points-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 21,
@@ -2385,7 +2505,8 @@
     "team": "Houston Rockets",
     "opponent": "San Antonio Spurs",
     "slug": "thompson-points-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 20,
@@ -2404,7 +2525,8 @@
     "team": "Chicago Bulls",
     "opponent": "Milwaukee Bucks",
     "slug": "giddey-assists-nov7-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-07T12:00:00.000Z"
   },
   {
     "id": 19,
@@ -2424,7 +2546,8 @@
     "opponent": "Denver Broncos",
     "gameTime": "7:25 PM ET",
     "slug": "smith-nov6-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 18,
@@ -2444,7 +2567,8 @@
     "opponent": "Las Vegas Raiders",
     "gameTime": "7:25 PM ET",
     "slug": "dobbins-nov6-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 17,
@@ -2464,7 +2588,8 @@
     "opponent": "Denver Broncos",
     "gameTime": "7:25 PM ET",
     "slug": "bowers-nov6-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 16,
@@ -2482,7 +2607,8 @@
     "team": "Illinois State",
     "opponent": "Ohio",
     "slug": "illinois-state-nov6-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 15,
@@ -2500,7 +2626,8 @@
     "team": "Jackson State",
     "opponent": "#11 Louisville",
     "slug": "jackson-state-nov6-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 14,
@@ -2518,7 +2645,8 @@
     "slug": "drake-robert-morris-nov6-2025",
     "fund": "VectorFund",
     "team": "Drake",
-    "opponent": "Robert Morris"
+    "opponent": "Robert Morris",
+    "datePlaced": "2025-11-06T12:00:00.000Z"
   },
   {
     "id": 2,
@@ -2538,7 +2666,8 @@
     "opponent": "New York Knicks",
     "gameTime": "7:30 PM ET",
     "slug": "randle-nov5-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-05T12:00:00.000Z"
   },
   {
     "id": 1,
@@ -2558,7 +2687,8 @@
     "opponent": "Los Angeles Lakers",
     "gameTime": "10:00 PM ET",
     "slug": "wembanyama-nov5-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-05T12:00:00.000Z"
   },
   {
     "id": 5,
@@ -2578,7 +2708,8 @@
     "opponent": "Portland Trail Blazers",
     "gameTime": "10:00 PM ET",
     "slug": "booker-nov4-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-04T12:00:00.000Z"
   },
   {
     "id": 4,
@@ -2598,7 +2729,8 @@
     "opponent": "Orlando Magic",
     "gameTime": "8:00 PM ET",
     "slug": "murphy-nov4-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-04T12:00:00.000Z"
   },
   {
     "id": 3,
@@ -2618,7 +2750,8 @@
     "opponent": "New York Knicks",
     "gameTime": "7:00 PM ET",
     "slug": "maxey-nov4-2025",
-    "fund": "VectorFund"
+    "fund": "VectorFund",
+    "datePlaced": "2025-11-04T12:00:00.000Z"
   },
   {
     "id": 142,
@@ -2637,7 +2770,8 @@
     "edge": 7.2,
     "expectedValue": 3.8,
     "conviction": 62,
-    "slug": "pittsburgh-spread-contra-nov29-2025"
+    "slug": "pittsburgh-spread-contra-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 143,
@@ -2656,7 +2790,8 @@
     "edge": 6.8,
     "expectedValue": 3.5,
     "conviction": 58,
-    "slug": "byu-spread-contra-nov29-2025"
+    "slug": "byu-spread-contra-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 144,
@@ -2675,7 +2810,8 @@
     "edge": 12.4,
     "expectedValue": 6.1,
     "conviction": 76,
-    "slug": "houston-christian-spread-sharp-nov29-2025"
+    "slug": "houston-christian-spread-sharp-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 145,
@@ -2694,7 +2830,8 @@
     "edge": 11.8,
     "expectedValue": 5.8,
     "conviction": 74,
-    "slug": "houston-christian-spread-vector-nov29-2025"
+    "slug": "houston-christian-spread-vector-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 146,
@@ -2713,7 +2850,8 @@
     "edge": 9.5,
     "expectedValue": 4.7,
     "conviction": 68,
-    "slug": "la-monroe-spread-catalyst-nov29-2025"
+    "slug": "la-monroe-spread-catalyst-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 147,
@@ -2732,7 +2870,8 @@
     "edge": 10.2,
     "expectedValue": 5.1,
     "conviction": 70,
-    "slug": "troy-spread-sharp-nov29-2025"
+    "slug": "troy-spread-sharp-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 148,
@@ -2751,7 +2890,8 @@
     "edge": 8.5,
     "expectedValue": 4.2,
     "conviction": 72,
-    "slug": "arkansas-spread-vector-nov29-2025"
+    "slug": "arkansas-spread-vector-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 149,
@@ -2770,7 +2910,8 @@
     "edge": 7.8,
     "expectedValue": 3.9,
     "conviction": 64,
-    "slug": "florida-st-spread-catalyst-nov29-2025"
+    "slug": "florida-st-spread-catalyst-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 150,
@@ -2789,7 +2930,8 @@
     "edge": 9.2,
     "expectedValue": 4.6,
     "conviction": 70,
-    "slug": "hornets-spread-vector-nov29-2025"
+    "slug": "hornets-spread-vector-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 151,
@@ -2808,7 +2950,8 @@
     "edge": 7.5,
     "expectedValue": 3.7,
     "conviction": 66,
-    "slug": "nets-spread-vector-nov29-2025"
+    "slug": "nets-spread-vector-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 152,
@@ -2827,7 +2970,8 @@
     "edge": 18.1,
     "expectedValue": 8.9,
     "conviction": 82,
-    "slug": "pelicans-spread-catalyst-nov29-2025"
+    "slug": "pelicans-spread-catalyst-nov29-2025",
+    "datePlaced": "2025-11-29"
   },
   {
     "id": 153,
@@ -2846,6 +2990,7 @@
     "edge": 17.5,
     "expectedValue": 8.6,
     "conviction": 80,
-    "slug": "pelicans-spread-vector-nov29-2025"
+    "slug": "pelicans-spread-vector-nov29-2025",
+    "datePlaced": "2025-11-29"
   }
 ]

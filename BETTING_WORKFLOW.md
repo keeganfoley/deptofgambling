@@ -38,10 +38,31 @@
 | `"loss"` | Bet lost |
 | `"push"` | Bet pushed (tie) |
 
+### DATE FIELDS (important distinction)
+
+| Field | Meaning | Example |
+|-------|---------|---------|
+| `date` | **Game date** - when the game is played | "2025-12-08" (Sunday game) |
+| `datePlaced` | **Placed date** - when bet was actually placed | "2025-12-02" (Monday when placed) |
+
+**Example: NFL bet placed Monday for Sunday game**
+```json
+{
+  "date": "2025-12-08",        // Sunday - game day
+  "datePlaced": "2025-12-02",  // Monday - when you placed it
+  "gameTime": "1:00 PM ET"
+}
+```
+
+**Why both dates matter:**
+- `date` = Used for P/L calculations, chart candles (when result counts)
+- `datePlaced` = Used to track advance picks for Instagram posts
+
 ### REQUIRED FIELDS (every bet must have ALL of these)
 ```
 id              - Sequential integer
-date            - "YYYY-MM-DD" format
+date            - Game date "YYYY-MM-DD" (when game is played)
+datePlaced      - Placed date "YYYY-MM-DD" (when bet was placed)
 sport           - From list above
 betType         - From list above
 fund            - From list above
@@ -62,6 +83,8 @@ slug            - Auto-generated URL slug
 - [ ] betType is exactly "spread", "total", "moneyline", or "props"
 - [ ] sport is exactly "NBA", "NFL", "NCAAB", "NCAAF", "NHL", or "Soccer"
 - [ ] fund is exactly "VectorFund", "SharpFund", "ContraFund", or "CatalystFund"
+- [ ] date is game date in YYYY-MM-DD format
+- [ ] datePlaced is today's date in YYYY-MM-DD format
 - [ ] team AND opponent are both filled in
 - [ ] edge, expectedValue, conviction are numbers
 - [ ] thesis is full analysis (not just one sentence)
@@ -96,17 +119,20 @@ User will say:
 **Claude's Job:** Immediately save to `data/bets.json` with `"result": "pending"`
 
 ### Next Day - Updating Results
-User says "check yesterday's bets" or "update results" or "what hit?"
+User says "update results" or "what hit?" or "check bets"
 
 **Claude's Job:**
 1. Find ALL pending bets in bets.json
-2. Web search final scores for each game
-3. Update results (win/loss/push, P/L, final score)
-4. Recalculate portfolio.json, chartData.json
-5. Create bet-analysis files
-6. Give summary
+2. Categorize by date:
+   - `date < today` → SETTLE (game finished)
+   - `date == today` → CHECK (might be in progress)
+   - `date > today` → SKIP (future game)
+3. Web search final scores for settleable games
+4. Update results (win/loss/push, P/L, final score)
+5. Run sync script to update portfolio, charts, metrics
+6. Report using standard format (✅ SETTLED / ⏳ IN PROGRESS / 🔮 FUTURE)
 
-**THE POINT:** User never re-tells what bets were placed. They're saved. Just say "update results" and Claude handles it.
+**THE POINT:** User never re-tells what bets were placed. They're saved. Just say "update results" and Claude handles ALL pending bets automatically - settling past games, checking today's games, skipping future games.
 
 ---
 
@@ -171,52 +197,83 @@ For each pick, I'll add to `data/bets.json`:
 
 ---
 
-## WORKFLOW 2: Updating Results
+## WORKFLOW 2: Updating Results (BULLETPROOF LOGIC)
 
-When you say **"update results for [date]"** or **"check yesterday's bets"**, I will:
+When you say **"update results"**, **"check bets"**, **"what hit?"**, or any variation:
 
-### Step 1: Find Pending Bets
+### RESULTS UPDATE RULES
 
-Look for bets with `result: "pending"` for the specified date.
+**Claude NEVER asks which date - processes ALL pending bets automatically**
 
-### Step 2: Search for Each Bet's Results
+### Step 1: Find ALL Pending Bets
 
-For each pending bet, I'll search:
+```
+Find all bets where result = "pending"
+```
+
+### Step 2: Categorize Each Bet by Date
+
+```python
+for each pending bet:
+    if bet.date < today:
+        # PAST = game finished → UPDATE IT
+        category = "SETTLE"
+
+    elif bet.date == today:
+        # TODAY = might still be playing
+        # Web search for "Final" confirmation
+        category = "CHECK_IF_FINAL"
+
+    else:  # bet.date > today
+        # FUTURE = game hasn't happened
+        category = "SKIP_FUTURE"
+```
+
+### Step 3: Process Each Category
+
+**For PAST games (bet.date < today):**
+- Web search for final score
+- Update result (win/loss/push)
+- Calculate profit/loss
+- Always settles (game definitely finished)
+
+**For TODAY's games (bet.date == today):**
+- Web search for "[Team] vs [Team] final score [date]"
+- If result shows "Final" → UPDATE
+- If "in progress" or "halftime" or no result → SKIP (report as ⏳)
+
+**For FUTURE games (bet.date > today):**
+- SKIP automatically (report as 🔮)
+- No web search needed
+
+### Step 4: Search Queries by Bet Type
 
 **For Spreads/Moneylines:**
 ```
-"[Team A] vs [Team B] final score November 27 2025"
-"[Team A] [Team B] closing line spread November 27"
+"[Team A] vs [Team B] final score [Month Day Year]"
 ```
 
 **For Totals:**
 ```
-"[Team A] [Team B] final score total points November 27"
-"[Team A] [Team B] closing over under line"
+"[Team A] [Team B] final score total points [Month Day Year]"
 ```
 
 **For Player Props:**
 ```
-"[Player name] [stat type] November 27 2025 final stats"
-"[Player name] game log November 27 2025"
+"[Player name] stats [Month Day Year]"
 ```
 
-### Step 3: Update Each Bet
+### Step 5: Update Settled Bets
 
-For each bet, I'll update:
+For each settled bet, update in bets.json:
 
 ```json
 {
   "result": "win" | "loss" | "push",
   "profit": [calculated based on odds and stake],
   "finalStat": "Final: LAL 112, SAC 108 (Won by 4)",
-  "closingLine": -4.0,    // What the line closed at
-  "clv": 50,              // CLV in cents (betLine vs closingLine)
-  "resultDetails": {
-    "finalScore": "Lakers 112, Kings 108",
-    "searchedAt": "2025-11-28T10:00:00Z",
-    "source": "ESPN"
-  }
+  "closingLine": -4.0,
+  "clv": 50
 }
 ```
 
@@ -224,41 +281,80 @@ For each bet, I'll update:
 
 **For Spreads:**
 - CLV = (closingLine - betLine) × 100 cents
-- Example: Bet Lakers -3.5, closed -4.0 → CLV = +50¢ (got half point better)
+- Example: Bet Lakers -3.5, closed -4.0 → CLV = +50¢
 
 **For Totals:**
-- CLV = (betLine - closingLine) × 100 cents for unders
-- CLV = (closingLine - betLine) × 100 cents for overs
+- Overs: CLV = (closingLine - betLine) × 100 cents
+- Unders: CLV = (betLine - closingLine) × 100 cents
 
-**For Moneylines:**
-- Convert odds to implied probability
-- CLV = (closing implied prob - bet implied prob) × 100
+### Step 6: Report Format (ALWAYS USE THIS)
 
-### Step 4: Run Sync Script (AUTOMATIC)
+```
+════════════════════════════════════════════════════════════
+RESULTS UPDATE
+════════════════════════════════════════════════════════════
+
+✅ SETTLED (X bets):
+━━━━━━━━━━━━━━━━━━━━
+[Sport]
+✅ [Team] [Line]: WIN +$XX
+❌ [Team] [Line]: LOSS -$XX
+
+⏳ IN PROGRESS (X bets):
+━━━━━━━━━━━━━━━━━━━━
+[Team] [Line] - game still live
+
+🔮 FUTURE (X bets):
+━━━━━━━━━━━━━━━━━━━━
+[Team] [Line] - game [date]
+
+════════════════════════════════════════════════════════════
+📊 Today's P/L: +$XXX | Record: X-X
+════════════════════════════════════════════════════════════
+```
+
+### Step 7: Auto-Sync (AUTOMATIC)
 
 **Immediately after updating bets.json**, run:
 ```bash
 npx tsx scripts/sync-all-data.ts
 ```
 
-This automatically updates:
+This updates:
 - portfolio.json (fund balances, records, P/L, ROI)
 - chartData.json (OHLC candles)
 - metrics.json (all stats)
 
-### Step 5: Show Verification (AUTOMATIC)
+### Step 8: Show Verification (AUTOMATIC)
 
-Display the DATA SYNC CHECK output to user:
-```
-════════════════════════════════════════════════════════════
-DATA SYNC CHECK
-════════════════════════════════════════════════════════════
-[Full verification output with ✅/❌ checks]
-```
+Display DATA SYNC CHECK output with ✅/❌ checks
 
-### Step 6: Generate Social Media Content (AUTOMATIC)
+### Step 9: Generate Social Media (AUTOMATIC)
 
-Generate the DAILY REPORT slides (see SOCIAL MEDIA AUTO-GENERATE section)
+Generate DAILY REPORT slides (see SOCIAL MEDIA section)
+
+---
+
+### TYPICAL WORKFLOW EXAMPLES
+
+**Example 1: Normal next-day update**
+- Saturday: Bet on NBA/NCAAF games (date = 2025-11-29)
+- Sunday morning: Say "update results"
+- All Saturday bets have date < today → All get settled ✅
+
+**Example 2: Mixed pending bets**
+- Have NFL advance picks for next Sunday (date = 2025-12-08)
+- Have NBA bets from last night (date = 2025-11-28)
+- Say "update results"
+- NBA bets (past) → SETTLED ✅
+- NFL picks (future) → SKIPPED 🔮
+
+**Example 3: Same-day partial update**
+- Morning: Bet on 3 NBA games tonight (date = today)
+- Night: 2 games finished, 1 still in 4th quarter
+- Say "update results"
+- 2 finished games → SETTLED ✅
+- 1 in-progress game → SKIPPED ⏳
 
 ---
 
@@ -365,9 +461,19 @@ Show total exposure per game:
 
 ### 4. SOCIAL MEDIA AUTO-GENERATE
 
-#### AFTER "placed" (Daily Picks Post)
+#### DETECTING PICK TYPE
 
-When I confirm bets are placed, automatically generate:
+When user says "placed", Claude checks:
+- If `date` (game date) = today → **DAILY PICKS POST**
+- If `date` (game date) > today → **ADVANCE PICKS POST**
+
+**Ask if unclear:** "Are these for today's games or a future date?"
+
+---
+
+#### DAILY PICKS POST (games TODAY)
+
+**Filter:** `date` = today's date
 
 **DAILY PICKS - SLIDE 1:**
 ```
@@ -396,6 +502,41 @@ FUND BREAKDOWN
 🟣 CATALYST: [X] PICKS | [X]U | $[X]
 [TOTAL PICKS] | [TOTAL UNITS]U | $[TOTAL]
 ```
+
+---
+
+#### ADVANCE PICKS POST (games in FUTURE)
+
+**Filter:** `date` > today AND `datePlaced` = today
+
+**ADVANCE PICKS - SLIDE 1:**
+```
+ADVANCE PICKS 🔒
+
+[SPORT 1]
+🟢 [PICK] ([ODDS]) [UNITS]U
+   📅 [GAME DATE] @ [GAME TIME]
+
+⚫️ [PICK] ([ODDS]) [UNITS]U
+   📅 [GAME DATE] @ [GAME TIME]
+
+[X] PICKS | [X]U | $[X]
+LOCKED IN EARLY 🔐
+```
+
+**ADVANCE PICKS - SLIDE 2 (EXPOSURE):**
+```
+ADVANCE EXPOSURE
+GAMES: [EARLIEST DATE] - [LATEST DATE]
+
+⚫️ VECTOR: [X] PICKS | [X]U | $[X]
+🟢 SHARP: [X] PICKS | [X]U | $[X]
+🟠 CONTRA: [X] PICKS | [X]U | $[X]
+🟣 CATALYST: [X] PICKS | [X]U | $[X]
+[TOTAL PICKS] | [TOTAL UNITS]U | $[TOTAL]
+```
+
+**Note:** Always show game date/time for advance picks so followers know when games are
 
 ---
 
