@@ -40,6 +40,154 @@ When user provides screenshots, detect pick type by SPORT:
 
 ---
 
+## ANALYSIS INPUT WORKFLOW (Claude Desktop → Claude Code)
+
+### WHY TWO CLAUDES?
+- **Claude Desktop:** Handles image processing (100+ screenshots)
+- **Claude Code:** Runs 4-fund analysis on structured text data
+
+### THE WORKFLOW
+
+```
+1. USER takes screenshots from Action Network
+2. USER pastes screenshots to CLAUDE DESKTOP
+3. CLAUDE DESKTOP summarizes data into structured text
+4. USER pastes text summary to CLAUDE CODE (me)
+5. CLAUDE CODE runs 4-fund analysis
+6. CLAUDE CODE outputs picks with fund attribution
+7. USER says "placed"
+8. CLAUDE CODE saves to bets.json + generates Instagram
+```
+
+---
+
+### CLAUDE DESKTOP SUMMARY PROMPT
+
+**Copy/paste this to Claude Desktop when summarizing screenshots:**
+
+```
+Summarize these Action Network Pro screenshots into this format:
+
+[SPORT] - [DATE]
+
+SPREADS:
+[Team] [Line] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
+
+TOTALS:
+[Game] O/U [X] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
+
+SHARP SIGNALS:
+[List any teams with Sharp Action ✓, Big Money ✓, or PRO Systems ✓ lit]
+
+LOPSIDED (70%+):
+[List any games with 70%+ on one side - Team | Bet% | Money% | Diff]
+
+PROPS (if shown):
+[Player] O/U [X] [stat]: Edge [X]%, Grade [X]
+```
+
+---
+
+### MINIMAL PASTE TEMPLATE (What Claude Code Needs)
+
+**Only paste paywalled Action Network data. Claude Code web searches for injuries, rest, weather.**
+
+```
+[SPORT] - [DATE]
+
+SPREADS:
+[Team] [Line] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
+
+TOTALS:
+[Game] O/U [X] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
+
+SHARP SIGNALS:
+[Team]: Sharp ✓, BigMoney ✓, PRO Systems ✓
+
+LOPSIDED (70%+):
+[Team] | Bet [X]% | Money [X]% | Diff [X]%
+
+PROPS (optional):
+[Player] O/U [X] [stat]: Edge [X]%, Grade [X]
+```
+
+**Example:**
+```
+NBA - Nov 30
+
+SPREADS:
+Thunder -5 | Open -5 | PRO -7.2 | Grade B+ | Edge 5.3% | Bet 45% | Money 52%
+Celtics -8 | Open -8 | PRO -9.1 | Grade B | Edge 3.8% | Bet 62% | Money 58%
+Heat +8 | Open +8 | PRO +9.1 | Grade B | Edge 3.8% | Bet 38% | Money 42%
+
+TOTALS:
+Lakers/Suns O225 | Open 223 | PRO 228.5 | Grade A- | Edge 8.2% | Bet 55% | Money 60%
+
+SHARP SIGNALS:
+Thunder: Sharp ✓, BigMoney ✓
+Nets: Sharp ✓
+
+LOPSIDED (70%+):
+Knicks | Bet 71% | Money 68% | Diff -3%
+
+PROPS:
+Tatum O24.5 pts: Edge 22%, Grade A
+Jokic O11.5 reb: Edge 18%, Grade B+
+```
+
+---
+
+### DATA RESPONSIBILITY SPLIT
+
+| You Paste (Paywalled) | I Web Search (Public) |
+|-----------------------|-----------------------|
+| PRO Line projections | Current injuries |
+| Grade (A+ to F) | Rest/schedule (B2B, etc.) |
+| Edge % | Travel situation |
+| Sharp Action / Big Money | Weather (outdoor) |
+| PRO Systems | Line verification (Odds API) |
+| Bet % / Money % / Diff | Bye weeks, revenge games |
+| Props edges | Recent form, matchups |
+
+**You give me the numbers. I give you the context.**
+
+---
+
+### TRIGGER PHRASES
+
+| User Says | What I Do |
+|-----------|-----------|
+| "NBA analysis" / "NFL analysis" / etc. | Run 4-fund analysis on pasted data |
+| "picks" / "what do we like" | Same - analyze for picks |
+| "run it" | Same - analyze for picks |
+| Just paste the data | Ask "Ready to analyze this?" then proceed |
+
+### MY ANALYSIS PROCESS
+
+1. **Parse** the structured text data
+2. **Web search** injuries, rest, travel, weather for each game
+3. **Apply** fund criteria from ANALYSIS_PROMPT.md:
+   - Vector: Grade/Edge thresholds
+   - Sharp: Sharp Score calculation
+   - Contra: Public % thresholds (blocked if Sharp lit)
+   - Catalyst: Situational scoring (from my research)
+4. **Calculate** conviction scores for each candidate
+5. **Verify** lines via Odds API
+6. **Output** using ANALYSIS_TEMPLATE.md format
+7. **Wait** for "placed" to save bets
+
+### REQUIRED FILES FOR ANALYSIS
+
+| File | Purpose |
+|------|---------|
+| `ANALYSIS_PROMPT.md` | Fund criteria, thresholds, scoring |
+| `ANALYSIS_TEMPLATE.md` | Output format template |
+| `HEDGE_FUND_ARCHITECTURE.md` | Full strategy documentation |
+
+**I read these before every analysis.**
+
+---
+
 ## DATA VALIDATION RULES
 
 **Before saving ANY bet, validate all fields match these exact values.**
@@ -136,15 +284,31 @@ slug            - Auto-generated URL slug
 
 ## GIT PUSH RULES
 
-**NEVER auto-push to GitHub. User controls when the website updates.**
+### ⚠️ CRITICAL: NEVER AUTO-PUSH
+
+**User has LIMITED monthly pushes. Claude NEVER pushes unless explicitly requested.**
 
 | User Says | Claude Does | Git Push? |
 |-----------|-------------|-----------|
 | **"placed"** | Save to bets.json, generate social media content | ❌ NO |
-| **"update results"** | Update bets.json, run `npx tsx scripts/sync-all-data.ts`, generate social media content | ❌ NO |
+| **"update results"** | Update bets.json, run sync script, generate social media | ❌ NO |
+| **"status"** | Show pending bets, portfolio balance, fund breakdown | ❌ NO |
 | **"push"** or **"deploy"** | Run git add, git commit, git push | ✅ YES |
 
-**Why:** Pending bets stay private until user decides to publish results to deptofgambling.com.
+### Push Triggers (ONLY these phrases)
+- "push"
+- "deploy"
+- "push to website"
+- "go live"
+- "publish"
+
+### After Making Changes, Always Say:
+> "Changes saved locally. Ready to push when you say 'push'."
+
+### Why This Matters
+- Pending bets stay private until user publishes
+- User controls website timing
+- Limited pushes = push strategically
 
 ---
 
@@ -515,22 +679,66 @@ When user says "placed", Claude checks:
 
 **Filter:** `date` = today's date
 
+**Early Bet Indicator:**
+- If `datePlaced` < `date` → add `- Placed [M/D]` at end of line
+- If `datePlaced` = `date` → nothing added (clean)
+
 **DAILY PICKS - SLIDE 1:**
 ```
 [DATE] - TODAY'S PICKS
 
 [SPORT 1]
-⚫️ [PICK] ([ODDS]) [UNITS]U
-🟢 [PICK] ([ODDS]) [UNITS]U
+🟢 [PICK] ([ODDS]) [UNITS]U - Placed [M/D]    ← only if placed early
+🟠 [PICK] ([ODDS]) [UNITS]U - Placed [M/D]    ← only if placed early
 
 [SPORT 2]
-🟠 [PICK] ([ODDS]) [UNITS]U
-🟣 [PICK] ([ODDS]) [UNITS]U
+⚫️ [PICK] ([ODDS]) [UNITS]U                   ← same-day, no date
+🟢 [PICK] ([ODDS]) [UNITS]U                   ← same-day, no date
 
 [X] PICKS | [X]U | $[X]
 ```
 
+**Example:**
+```
+SUN DEC 8 - TODAY'S PICKS
+
+NFL
+🟢 Chiefs -3.5 (-110) 2.0U - Placed 12/2
+🟠 Giants +7 (-110) 1.5U - Placed 12/4
+
+NBA
+⚫️ Lakers -4.5 (-110) 1.5U
+🟢 Celtics -7 (-110) 1.0U
+
+6 PICKS | 7.0U | $700
+```
+
 **GROUP BY SPORT:** NFL, NCAAF, NBA, NCAAB, NHL (only show sports with picks)
+
+**CAPTION GENERATION:**
+```
+[DATE IN ALL CAPS] | [Dynamic content]. #sportsbetting #deptofgambling #dog
+```
+
+**Caption Logic:**
+- Single sport: "[DATE] | [X] [sport] bets live."
+- Multi-sport: "[DATE] | Full card. [X] bets across [sports]."
+- Sunday NFL: "[DATE] | Sunday operations."
+- Big day (8+ bets): "[DATE] | Heavy day. [X] bets across [sports]."
+
+**Caption Examples:**
+```
+DECEMBER 8 | Full card. 6 bets across NFL and NBA. #sportsbetting #deptofgambling #dog
+```
+```
+NOVEMBER 30 | Today's picks are live. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 8 | Sunday operations. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 14 | 4 NBA bets live. #sportsbetting #deptofgambling #dog
+```
 
 **DAILY PICKS - SLIDE 2 (EXPOSURE):**
 ```
@@ -549,24 +757,62 @@ FUND BREAKDOWN
 
 **Filter:** `date` > today AND `datePlaced` = today
 
-**ADVANCE PICKS - SLIDE 1:**
+**EARLY BETS - SLIDE 1:**
 ```
-ADVANCE PICKS 🔒
+EARLY BETS 📅
 
-[SPORT 1]
+[SPORT] - [Game Day] [Game Date]
 🟢 [PICK] ([ODDS]) [UNITS]U
-   📅 [GAME DATE] @ [GAME TIME]
+🟠 [PICK] ([ODDS]) [UNITS]U
 
+[SPORT] - [Game Day] [Game Date]
 ⚫️ [PICK] ([ODDS]) [UNITS]U
-   📅 [GAME DATE] @ [GAME TIME]
 
 [X] PICKS | [X]U | $[X]
-LOCKED IN EARLY 🔐
 ```
 
-**ADVANCE PICKS - SLIDE 2 (EXPOSURE):**
+**Example:**
 ```
-ADVANCE EXPOSURE
+EARLY BETS 📅
+
+NFL - Sun Dec 8
+🟢 Chiefs -3.5 (-110) 2.0U
+🟠 Giants +7 (-110) 1.5U
+
+NCAAF - Sat Dec 7
+⚫️ Georgia -14 (-110) 2.5U
+
+3 PICKS | 5.5U | $550
+```
+
+**CAPTION GENERATION:**
+```
+[DATE IN ALL CAPS] | [Dynamic content]. #sportsbetting #deptofgambling #dog
+```
+
+**Caption Logic:**
+- Default: "[DATE] | Bets locked before the lines move."
+- NFL focus: "[DATE] | Early week entry. NFL Week [X]."
+- Adding more: "[DATE] | Adding to our [weekend/Sunday] exposure."
+- Single sport: "[DATE] | [Sport] positions set."
+
+**Caption Examples:**
+```
+DECEMBER 2 | Bets locked before the lines move. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 2 | Early week entry. NFL Week 14. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 4 | Adding to our Sunday exposure. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 3 | NCAAF positions set. #sportsbetting #deptofgambling #dog
+```
+
+**EARLY BETS - SLIDE 2 (EXPOSURE):**
+```
+EARLY BETS EXPOSURE
 GAMES: [EARLIEST DATE] - [LATEST DATE]
 
 ⚫️ VECTOR: [X] PICKS | [X]U | $[X]
@@ -576,7 +822,7 @@ GAMES: [EARLIEST DATE] - [LATEST DATE]
 [TOTAL PICKS] | [TOTAL UNITS]U | $[TOTAL]
 ```
 
-**Note:** Always show game date/time for advance picks so followers know when games are
+**GROUP BY:** Sport + Game Date (e.g., "NFL - Sun Dec 8")
 
 ---
 
@@ -612,6 +858,35 @@ When I update results and all bets are settled, automatically generate:
 ```
 
 **GROUP BY SPORT:** NFL, NCAAF, NBA, NCAAB, NHL (only show sports with bets)
+
+**CAPTION GENERATION:**
+```
+[DATE IN ALL CAPS] | [Dynamic content]. #sportsbetting #deptofgambling #dog
+```
+
+**Caption Logic:**
+- Winning day: "[DATE] | [W]-[L]. [Best fund] carried. +$[P/L]."
+- Losing day: "[DATE] | [W]-[L]. Down day. Back tomorrow."
+- Break even: "[DATE] | [W]-[L]. Flat day."
+- Big win: "[DATE] | [W]-[L]. Strong day. +$[P/L]."
+- Perfect day: "[DATE] | [W]-[L]. Clean sweep."
+
+**Caption Examples:**
+```
+DECEMBER 8 | 4-2. Solid day. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 8 | 5-1. Vector and Sharp carried. +$340. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 8 | 2-4. Down day. Back tomorrow. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 8 | 6-0. Clean sweep. +$580. #sportsbetting #deptofgambling #dog
+```
+```
+DECEMBER 8 | 3-3. Flat day. #sportsbetting #deptofgambling #dog
+```
 
 **DAILY REPORT - SLIDE 3 (CHART):**
 Generate a square (1080x1080) TradingView-style chart showing:
