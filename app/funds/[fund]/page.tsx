@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, notFound } from 'next/navigation';
 import gsap from 'gsap';
 import Link from 'next/link';
@@ -33,8 +33,56 @@ const fundLogoMap: Record<string, string> = {
   VectorFund: '/logos/vector-logo.png',
   SharpFund: '/logos/sharp-logo.png',
   ContraFund: '/logos/contra-logo.png',
-  CatalystFund: '/logos/catalyst-logo.png',
+  CatalystFund: '/catalyst-diamond.png',
 };
+
+// Collapsible Section Component for Mobile
+function CollapsibleSection({
+  title,
+  children,
+  defaultOpen = false,
+  icon
+}: {
+  title: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+  icon?: string;
+}) {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  return (
+    <div className="bg-white rounded-sm border-2 border-primary mb-4 md:mb-12 shadow-xl overflow-hidden">
+      {/* Mobile: Clickable Header */}
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full p-4 md:p-8 flex items-center justify-between md:cursor-default"
+      >
+        <h2 className="text-lg md:text-2xl font-bold text-primary flex items-center gap-2">
+          {icon && <span>{icon}</span>}
+          {title}
+        </h2>
+        <span className={`md:hidden text-2xl text-primary transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}>
+          ↓
+        </span>
+      </button>
+
+      {/* Content - Always visible on desktop, collapsible on mobile */}
+      <div
+        ref={contentRef}
+        className={`
+          px-4 md:px-8 pb-4 md:pb-8
+          md:block
+          ${isOpen ? 'block' : 'hidden md:block'}
+        `}
+      >
+        <div className="border-t-2 border-primary pt-4 md:pt-6">
+          {children}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 interface Bet {
   id: number;
@@ -276,26 +324,22 @@ export default function FundPage() {
         </div>
 
         {/* 2. Fund Overview */}
-        <div className="bg-white rounded-sm border-2 border-primary p-8 mb-12 shadow-xl">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-3">
-            FUND OVERVIEW
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Balance</div>
-              <div className="text-3xl font-bold text-primary mono-number">
+        <CollapsibleSection title="FUND OVERVIEW" defaultOpen={true}>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
+            <div className="bg-gray-50 p-3 md:p-5 rounded-sm">
+              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">Balance</div>
+              <div className="text-lg md:text-3xl font-bold text-primary mono-number">
                 {formatCurrency(fund.balance, false)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] md:text-sm text-gray-600 mt-1 md:mt-2 mono-number">
                 Starting: {formatCurrency(fund.startingBalance, false)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Net P/L</div>
+            <div className="bg-gray-50 p-3 md:p-5 rounded-sm">
+              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">Net P/L</div>
               <div
-                className={`text-3xl font-bold mono-number ${
+                className={`text-lg md:text-3xl font-bold mono-number ${
                   isDeploying && !hasActivity
                     ? 'text-text-muted'
                     : fund.netPL >= 0
@@ -305,31 +349,31 @@ export default function FundPage() {
               >
                 {isDeploying && !hasActivity ? '-' : formatCurrency(fund.netPL)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] md:text-sm text-gray-600 mt-1 md:mt-2 mono-number">
                 {isDeploying && !hasActivity
                   ? 'Awaiting first bet'
                   : `${fund.unitsWon >= 0 ? '+' : ''}${fund.unitsWon.toFixed(2)}u won`}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Record</div>
-              <div className="text-3xl font-bold text-primary mono-number">
+            <div className="bg-gray-50 p-3 md:p-5 rounded-sm">
+              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">Record</div>
+              <div className="text-lg md:text-3xl font-bold text-primary mono-number">
                 {isDeploying && !hasActivity
                   ? '-'
                   : formatRecord(fund.record.wins, fund.record.losses)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] md:text-sm text-gray-600 mt-1 md:mt-2 mono-number">
                 {isDeploying && !hasActivity
                   ? 'No bets yet'
                   : `${fund.winRate.toFixed(2)}% Win Rate`}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">ROI</div>
+            <div className="bg-gray-50 p-3 md:p-5 rounded-sm">
+              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">ROI</div>
               <div
-                className={`text-3xl font-bold mono-number ${
+                className={`text-lg md:text-3xl font-bold mono-number ${
                   isDeploying && !hasActivity
                     ? 'text-text-muted'
                     : fund.roi >= 0
@@ -339,171 +383,156 @@ export default function FundPage() {
               >
                 {isDeploying && !hasActivity ? '-' : formatPercent(fund.roi)}
               </div>
-              <div className="text-sm text-gray-600 mt-2">
+              <div className="text-[10px] md:text-sm text-gray-600 mt-1 md:mt-2">
                 {isDeploying && !hasActivity ? 'Deploying capital' : 'Since inception'}
               </div>
             </div>
           </div>
-        </div>
+        </CollapsibleSection>
 
         {/* 3. Drawdown Analysis */}
         {hasActivity && fundDrawdown && fundCurrentDrawdown && (
-          <div className="bg-white rounded-sm border-2 border-primary p-8 mb-12 shadow-xl">
-            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-3">
-              DRAWDOWN ANALYSIS
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <CollapsibleSection title="DRAWDOWN ANALYSIS">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               {/* Max Drawdown */}
-              <div className="bg-red-50 p-6 rounded-sm border-l-4 border-red-400">
-                <div className="text-sm text-gray-600 mb-2">Maximum Drawdown</div>
-                <div className="text-3xl font-bold mono-number text-loss">
+              <div className="bg-red-50 p-4 md:p-6 rounded-sm border-l-4 border-red-400">
+                <div className="text-xs md:text-sm text-gray-600 mb-1 md:mb-2">Maximum Drawdown</div>
+                <div className="text-xl md:text-3xl font-bold mono-number text-loss">
                   {formatCurrency(fundDrawdown.maxDrawdown)}
                 </div>
-                <div className="text-lg font-semibold mono-number text-loss mt-1">
+                <div className="text-sm md:text-lg font-semibold mono-number text-loss mt-1">
                   {fundDrawdown.maxDrawdownPercent.toFixed(2)}% of peak
                 </div>
-                <div className="text-xs text-gray-500 mt-3">
+                <div className="text-[10px] md:text-xs text-gray-500 mt-2 md:mt-3">
                   Peak: {formatCurrency(fundDrawdown.peakBalance)} ({fundDrawdown.peakDate})
                 </div>
-                <div className="text-xs text-gray-500">
+                <div className="text-[10px] md:text-xs text-gray-500">
                   Trough: {formatCurrency(fundDrawdown.troughBalance)} ({fundDrawdown.troughDate})
                 </div>
               </div>
 
               {/* Current Drawdown */}
-              <div className={`p-6 rounded-sm border-l-4 ${
+              <div className={`p-4 md:p-6 rounded-sm border-l-4 ${
                 fundCurrentDrawdown.amount < 0 ? 'bg-yellow-50 border-yellow-400' : 'bg-green-50 border-green-400'
               }`}>
-                <div className="text-sm text-gray-600 mb-2">Current Drawdown</div>
+                <div className="text-xs md:text-sm text-gray-600 mb-1 md:mb-2">Current Drawdown</div>
                 {fundCurrentDrawdown.amount < 0 ? (
                   <>
-                    <div className="text-3xl font-bold mono-number text-yellow-600">
+                    <div className="text-xl md:text-3xl font-bold mono-number text-yellow-600">
                       {formatCurrency(fundCurrentDrawdown.amount)}
                     </div>
-                    <div className="text-lg font-semibold mono-number text-yellow-600 mt-1">
+                    <div className="text-sm md:text-lg font-semibold mono-number text-yellow-600 mt-1">
                       {fundCurrentDrawdown.percentage.toFixed(2)}% from peak
                     </div>
-                    <div className="text-xs text-gray-500 mt-3">
+                    <div className="text-[10px] md:text-xs text-gray-500 mt-2 md:mt-3">
                       Peak: {formatCurrency(fundCurrentDrawdown.peakBalance)} ({fundCurrentDrawdown.peakDate})
                     </div>
-                    <div className="text-xs text-gray-500">
+                    <div className="text-[10px] md:text-xs text-gray-500">
                       {fundCurrentDrawdown.daysSincePeak} days since peak
                     </div>
                   </>
                 ) : (
                   <>
-                    <div className="text-3xl font-bold mono-number text-success">
+                    <div className="text-xl md:text-3xl font-bold mono-number text-success">
                       At Peak
                     </div>
-                    <div className="text-lg font-semibold mono-number text-success mt-1">
+                    <div className="text-sm md:text-lg font-semibold mono-number text-success mt-1">
                       No drawdown
                     </div>
-                    <div className="text-xs text-gray-500 mt-3">
+                    <div className="text-[10px] md:text-xs text-gray-500 mt-2 md:mt-3">
                       Current balance: {formatCurrency(fundCurrentDrawdown.currentBalance)}
                     </div>
                   </>
                 )}
               </div>
             </div>
-          </div>
+          </CollapsibleSection>
         )}
 
         {/* 4. Rolling Performance */}
         {hasActivity && fundRolling && (
-          <div className="bg-white rounded-sm border-2 border-primary p-8 mb-12 shadow-xl">
-            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-3">
-              ROLLING PERFORMANCE
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <CollapsibleSection title="ROLLING PERFORMANCE">
+            <div className="grid grid-cols-3 gap-2 md:gap-6">
               {/* Last 7 Days */}
-              <div className="bg-gray-50 p-5 rounded-sm">
-                <div className="text-sm text-gray-600 mb-2">Last 7 Days</div>
-                <div className="text-2xl font-bold mono-number text-primary">
+              <div className="bg-gray-50 p-2 md:p-5 rounded-sm">
+                <div className="text-[10px] md:text-sm text-gray-600 mb-1 md:mb-2">Last 7 Days</div>
+                <div className="text-base md:text-2xl font-bold mono-number text-primary">
                   {fundRolling.last7Days.wins}-{fundRolling.last7Days.losses}
                 </div>
-                <div className={`text-xl font-semibold mono-number mt-1 ${
+                <div className={`text-sm md:text-xl font-semibold mono-number mt-1 ${
                   fundRolling.last7Days.pnl >= 0 ? 'text-success' : 'text-loss'
                 }`}>
                   {formatCurrency(fundRolling.last7Days.pnl)}
                 </div>
-                <div className={`text-sm mono-number ${
+                <div className={`text-[10px] md:text-sm mono-number ${
                   fundRolling.last7Days.roi >= 0 ? 'text-success' : 'text-loss'
                 }`}>
-                  {formatPercent(fundRolling.last7Days.roi)} ROI
+                  ({formatPercent(fundRolling.last7Days.roi)})
                 </div>
               </div>
 
               {/* Last 30 Days */}
-              <div className="bg-gray-50 p-5 rounded-sm">
-                <div className="text-sm text-gray-600 mb-2">Last 30 Days</div>
-                <div className="text-2xl font-bold mono-number text-primary">
+              <div className="bg-gray-50 p-2 md:p-5 rounded-sm">
+                <div className="text-[10px] md:text-sm text-gray-600 mb-1 md:mb-2">Last 30 Days</div>
+                <div className="text-base md:text-2xl font-bold mono-number text-primary">
                   {fundRolling.last30Days.wins}-{fundRolling.last30Days.losses}
                 </div>
-                <div className={`text-xl font-semibold mono-number mt-1 ${
+                <div className={`text-sm md:text-xl font-semibold mono-number mt-1 ${
                   fundRolling.last30Days.pnl >= 0 ? 'text-success' : 'text-loss'
                 }`}>
                   {formatCurrency(fundRolling.last30Days.pnl)}
                 </div>
-                <div className={`text-sm mono-number ${
+                <div className={`text-[10px] md:text-sm mono-number ${
                   fundRolling.last30Days.roi >= 0 ? 'text-success' : 'text-loss'
                 }`}>
-                  {formatPercent(fundRolling.last30Days.roi)} ROI
+                  ({formatPercent(fundRolling.last30Days.roi)})
                 </div>
               </div>
 
               {/* Last 3 Days */}
-              <div className="bg-gray-50 p-5 rounded-sm">
-                <div className="text-sm text-gray-600 mb-2">Last 3 Days</div>
-                <div className="text-2xl font-bold mono-number text-primary">
+              <div className="bg-gray-50 p-2 md:p-5 rounded-sm">
+                <div className="text-[10px] md:text-sm text-gray-600 mb-1 md:mb-2">Last 3 Days</div>
+                <div className="text-base md:text-2xl font-bold mono-number text-primary">
                   {fundRolling.last3Days.wins}-{fundRolling.last3Days.losses}
                 </div>
-                <div className={`text-xl font-semibold mono-number mt-1 ${
+                <div className={`text-sm md:text-xl font-semibold mono-number mt-1 ${
                   fundRolling.last3Days.pnl >= 0 ? 'text-success' : 'text-loss'
                 }`}>
                   {formatCurrency(fundRolling.last3Days.pnl)}
                 </div>
-                <div className={`text-sm mono-number ${
+                <div className={`text-[10px] md:text-sm mono-number ${
                   fundRolling.last3Days.roi >= 0 ? 'text-success' : 'text-loss'
                 }`}>
-                  {formatPercent(fundRolling.last3Days.roi)} ROI
+                  ({formatPercent(fundRolling.last3Days.roi)})
                 </div>
               </div>
             </div>
-          </div>
+          </CollapsibleSection>
         )}
 
         {/* 5. Performance by Sport */}
         {Object.keys(fundSportBreakdown).length > 0 && (
-          <div className="bg-white rounded-sm border-2 border-primary p-8 mb-12 shadow-xl">
-            <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-3">
-              PERFORMANCE BY SPORT
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CollapsibleSection title="THE SPORTS">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
               {Object.values(fundSportBreakdown).map((sport) => (
                 <div
                   key={sport.sport}
-                  className="bg-gray-50 p-5 rounded-sm hover:shadow-lg transition-all duration-300"
+                  className="bg-gray-50 p-3 md:p-5 rounded-sm hover:shadow-lg transition-all duration-300"
                 >
-                  <h3 className="text-xl font-bold text-primary mb-4">{sport.sport}</h3>
+                  <h3 className="text-sm md:text-xl font-bold text-primary mb-2 md:mb-4">{sport.sport}</h3>
 
-                  <div className="space-y-3">
+                  <div className="space-y-2 md:space-y-3">
                     <div>
-                      <div className="text-xs text-gray-600 uppercase mb-1">Record</div>
-                      <div className="text-lg font-bold mono-number text-primary">
+                      <div className="text-[10px] md:text-xs text-gray-600 uppercase mb-1">Record</div>
+                      <div className="text-sm md:text-lg font-bold mono-number text-primary">
                         {formatRecord(sport.wins, sport.losses)}
-                      </div>
-                      <div className="text-xs text-gray-500 mono-number">
-                        {formatPercent(sport.winRate, false, 1)} Win Rate
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-xs text-gray-600 uppercase mb-1">Net P/L</div>
+                      <div className="text-[10px] md:text-xs text-gray-600 uppercase mb-1">P/L</div>
                       <div
-                        className={`text-lg font-bold mono-number ${
+                        className={`text-sm md:text-lg font-bold mono-number ${
                           sport.pnl >= 0 ? 'text-success' : 'text-loss'
                         }`}
                       >
@@ -512,9 +541,9 @@ export default function FundPage() {
                     </div>
 
                     <div>
-                      <div className="text-xs text-gray-600 uppercase mb-1">ROI</div>
+                      <div className="text-[10px] md:text-xs text-gray-600 uppercase mb-1">ROI</div>
                       <div
-                        className={`text-lg font-bold mono-number ${
+                        className={`text-sm md:text-lg font-bold mono-number ${
                           sport.roi >= 0 ? 'text-success' : 'text-loss'
                         }`}
                       >
@@ -525,7 +554,7 @@ export default function FundPage() {
                 </div>
               ))}
             </div>
-          </div>
+          </CollapsibleSection>
         )}
 
         {/* 6. Portfolio Growth Chart */}

@@ -124,12 +124,12 @@ export default function StickyNav() {
                     </svg>
                   </button>
                   {fundsDropdownOpen && (
-                    <div className="fixed mt-1 bg-[#161b22] border border-[#30363d] rounded-md shadow-lg py-1 min-w-[180px] z-[100]" style={{ top: '52px' }}>
+                    <div className="absolute left-0 top-full mt-1 bg-[#161b22] border border-[#30363d] rounded-md shadow-lg py-1 min-w-[160px] sm:min-w-[180px] z-[100]">
                       {fundLinks.map((fund) => (
                         <Link
                           key={fund.href}
                           href={fund.href}
-                          className="block px-4 py-2.5 text-sm text-[#8b949e] hover:text-white hover:bg-[#21262d] transition-colors"
+                          className="block px-3 sm:px-4 py-2 sm:py-2.5 text-xs sm:text-sm text-[#8b949e] hover:text-white hover:bg-[#21262d] transition-colors"
                           onClick={() => setFundsDropdownOpen(false)}
                         >
                           {fund.label}

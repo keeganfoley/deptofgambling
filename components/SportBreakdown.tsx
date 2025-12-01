@@ -1,14 +1,34 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { formatCurrency, formatPercent, formatUnits, formatRecord } from '@/lib/utils';
 import metricsData from '@/data/metrics.json';
 import Basketball from './icons/Basketball';
 import Football from './icons/Football';
+import Hockey from './icons/Hockey';
+import Soccer from './icons/Soccer';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// Map sport names to their icons
+function getSportIcon(sport: string, className: string = "w-7 h-7 text-accent") {
+  switch (sport) {
+    case 'NBA':
+    case 'NCAAB':
+      return <Basketball className={className} />;
+    case 'NFL':
+    case 'NCAAF':
+      return <Football className={className} />;
+    case 'NHL':
+      return <Hockey className={className} />;
+    case 'Soccer':
+      return <Soccer className={className} />;
+    default:
+      return <Football className={className} />;
+  }
+}
 
 interface SportCardProps {
   sport: string;
@@ -82,11 +102,7 @@ function SportCard({
       {/* Header with icon */}
       <div className="bg-primary px-6 py-4 flex items-center justify-center">
         <div className="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full">
-          {sport === 'NBA' || sport === 'NCAAB' ? (
-            <Basketball className="w-7 h-7 text-accent" />
-          ) : (
-            <Football className="w-7 h-7 text-accent" />
-          )}
+          {getSportIcon(sport, "w-7 h-7 text-accent")}
         </div>
       </div>
 
@@ -152,6 +168,91 @@ function SportCard({
   );
 }
 
+// Mobile Sport Accordion
+function MobileSportAccordion({ sport, record, roi, netPL, unitsWon }: {
+  sport: string;
+  record: { wins: number; losses: number; total: number };
+  roi: number;
+  netPL: number;
+  unitsWon: number;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!contentRef.current) return;
+    if (isOpen) {
+      gsap.to(contentRef.current, { height: 'auto', duration: 0.3, ease: 'power2.out' });
+    } else {
+      gsap.to(contentRef.current, { height: 0, duration: 0.25, ease: 'power2.in' });
+    }
+  }, [isOpen]);
+
+  return (
+    <div className="border-2 border-gray-200 rounded-lg overflow-hidden bg-white">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-4 py-3 flex items-center justify-between bg-white"
+      >
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
+            {getSportIcon(sport, "w-5 h-5 text-accent")}
+          </div>
+          <div className="text-left">
+            <div className="font-bold text-primary">{sport}</div>
+            <div className="text-xs text-gray-500">{formatRecord(record.wins, record.losses)}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <span className={`font-bold mono-number text-sm ${roi >= 0 ? 'text-success' : 'text-loss'}`}>
+            {formatPercent(roi)}
+          </span>
+          <svg
+            className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div ref={contentRef} className="overflow-hidden" style={{ height: 0 }}>
+        <div className="px-4 pb-4 pt-2 border-t border-gray-100">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">Win Rate</div>
+              <div className="text-sm font-bold text-primary mono-number">
+                {((record.wins / record.total) * 100).toFixed(1)}%
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">P/L</div>
+              <div className={`text-sm font-bold mono-number ${netPL >= 0 ? 'text-success' : 'text-loss'}`}>
+                {formatCurrency(netPL)}
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">Units</div>
+              <div className={`text-sm font-bold mono-number ${unitsWon >= 0 ? 'text-success' : 'text-loss'}`}>
+                {formatUnits(unitsWon)}
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">Total Bets</div>
+              <div className="text-sm font-bold text-primary mono-number">{record.total}</div>
+            </div>
+          </div>
+          <a
+            href={`/bets?sport=${sport}`}
+            className="block mt-3 text-center py-2 bg-secondary text-white font-bold text-xs rounded-md"
+          >
+            View {sport} Bets
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function SportBreakdown() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerLineTopRef = useRef<HTMLDivElement>(null);
@@ -178,27 +279,41 @@ export default function SportBreakdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white">
+    <section ref={sectionRef} id="sports" className="py-12 sm:py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        {/* Section Header with Lines (Government Doc Aesthetic) */}
-        <div className="mb-16">
+        {/* Section Header with Lines */}
+        <div className="mb-8 sm:mb-16">
           <div
             ref={headerLineTopRef}
-            className="h-[2px] bg-primary mb-6"
+            className="h-[2px] bg-primary mb-4 sm:mb-6"
             style={{ transformOrigin: 'center' }}
           />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
             THE SPORTS
           </h2>
           <div
             ref={headerLineBottomRef}
-            className="h-[2px] bg-primary mt-6"
+            className="h-[2px] bg-primary mt-4 sm:mt-6"
             style={{ transformOrigin: 'center' }}
           />
         </div>
 
-        {/* Sport Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        {/* Mobile: Accordion Style */}
+        <div className="md:hidden space-y-3">
+          {Object.values(sports).map((sport) => (
+            <MobileSportAccordion
+              key={sport.sport}
+              sport={sport.sport}
+              record={sport.record}
+              roi={sport.roi}
+              netPL={sport.pnl}
+              unitsWon={sport.unitsWon}
+            />
+          ))}
+        </div>
+
+        {/* Desktop: Sport Cards Grid */}
+        <div className="hidden md:grid grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {Object.values(sports).map((sport, index) => (
             <SportCard
               key={sport.sport}

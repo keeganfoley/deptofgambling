@@ -127,11 +127,11 @@ function getBasicBet(slug: string): BasicBet | null {
 }
 
 // Fund display info
-const fundInfo: Record<string, { label: string; color: string }> = {
-  VectorFund: { label: 'Vector', color: '#1a1a2e' },
-  SharpFund: { label: 'Sharp', color: '#22c55e' },
-  ContraFund: { label: 'Contra', color: '#f97316' },
-  CatalystFund: { label: 'Catalyst', color: '#8b5cf6' },
+const fundInfo: Record<string, { label: string; color: string; slug: string }> = {
+  VectorFund: { label: 'Vector', color: '#1a1a2e', slug: 'vector' },
+  SharpFund: { label: 'Sharp', color: '#22c55e', slug: 'sharp' },
+  ContraFund: { label: 'Contra', color: '#f97316', slug: 'contra' },
+  CatalystFund: { label: 'Catalyst', color: '#8b5cf6', slug: 'catalyst' },
 };
 
 export default async function BetDetailPage({
@@ -594,12 +594,13 @@ export default async function BetDetailPage({
                   {bet.description}
                 </h1>
                 {fund && (
-                  <span
-                    className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
+                  <Link
+                    href={`/funds/${fund.slug}`}
+                    className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white hover:opacity-80 transition-opacity"
                     style={{ backgroundColor: fund.color }}
                   >
                     {fund.label}
-                  </span>
+                  </Link>
                 )}
               </div>
               <p className="text-steel text-base sm:text-lg">

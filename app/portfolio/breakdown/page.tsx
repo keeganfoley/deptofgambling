@@ -69,76 +69,69 @@ export default function PortfolioBreakdownPage() {
           <p className="text-text-muted text-lg">
             Full mathematical analysis and performance metrics
           </p>
-          <div className="mt-6">
-            <Link
-              href="/"
-              className="text-secondary hover:text-accent font-bold transition-colors inline-flex items-center gap-2"
-            >
-              <span>←</span> Back to Portfolio
-            </Link>
-          </div>
         </div>
 
         {/* Portfolio Overview */}
-        <div className="bg-white rounded-sm border-2 border-primary p-8 mb-8 shadow-xl">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-primary pb-3">
-            📊 PORTFOLIO OVERVIEW
+        <div className="bg-white rounded-sm border-2 border-primary p-4 sm:p-8 mb-6 sm:mb-8 shadow-xl">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6 border-b-2 border-primary pb-3">
+            PORTFOLIO OVERVIEW
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Current Balance</div>
-              <div className="text-3xl font-bold text-primary mono-number">
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="data-label text-[10px] sm:text-xs uppercase mb-1 sm:mb-2">Current Balance</div>
+              <div className="text-lg sm:text-3xl font-bold text-primary mono-number">
                 {formatCurrency(portfolio.combined.balance, false)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] sm:text-sm text-gray-600 mt-1 sm:mt-2 mono-number">
                 Starting: {formatCurrency(portfolio.combined.startingBalance, false)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Net P/L</div>
-              <div className={`text-3xl font-bold mono-number ${
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="data-label text-[10px] sm:text-xs uppercase mb-1 sm:mb-2">Net P/L</div>
+              <div className={`text-lg sm:text-3xl font-bold mono-number ${
                 portfolio.combined.netPL >= 0 ? 'text-success' : 'text-loss'
               }`}>
                 {formatCurrency(portfolio.combined.netPL)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] sm:text-sm text-gray-600 mt-1 sm:mt-2 mono-number">
                 {portfolio.combined.unitsWon >= 0 ? '+' : ''}{typeof portfolio.combined.unitsWon === 'number' ? portfolio.combined.unitsWon.toFixed(2) : portfolio.combined.unitsWon}u won
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">Record</div>
-              <div className="text-3xl font-bold text-primary mono-number">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="data-label text-[10px] sm:text-xs uppercase mb-1 sm:mb-2">Record</div>
+              <div className="text-lg sm:text-3xl font-bold text-primary mono-number">
                 {formatRecord(portfolio.combined.record.wins, portfolio.combined.record.losses)}
               </div>
-              <div className="text-sm text-gray-600 mt-2 mono-number">
+              <div className="text-[10px] sm:text-sm text-gray-600 mt-1 sm:mt-2 mono-number">
                 {Number(portfolio.combined.winRate).toFixed(2)}% Win Rate
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="data-label text-xs uppercase mb-2">ROI</div>
-              <div className={`text-3xl font-bold mono-number ${
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="data-label text-[10px] sm:text-xs uppercase mb-1 sm:mb-2">ROI</div>
+              <div className={`text-lg sm:text-3xl font-bold mono-number ${
                 portfolio.combined.roi >= 0 ? 'text-success' : 'text-loss'
               }`}>
                 {formatPercent(portfolio.combined.roi)}
               </div>
-              <div className="text-sm text-gray-600 mt-2">
-                Return on capital risked
+              <div className="text-[10px] sm:text-sm text-gray-600 mt-1 sm:mt-2">
+                Return on capital
               </div>
             </div>
           </div>
         </div>
 
         {/* Fund Performance Comparison (NEW) */}
-        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
-            🏦 FUND PERFORMANCE COMPARISON
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-8 mb-6 sm:mb-8 shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6 border-b-2 border-gray-300 pb-3">
+            FUND PERFORMANCE
           </h2>
 
-          <div className="overflow-x-auto">
+          {/* Desktop Table */}
+          <div className="hidden md:block overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b-2 border-gray-300">
@@ -186,62 +179,113 @@ export default function PortfolioBreakdownPage() {
               </tbody>
             </table>
           </div>
+
+          {/* Mobile Card Layout */}
+          <div className="md:hidden space-y-3">
+            {fundMetrics && Object.entries(fundMetrics).map(([fundKey, fm]: [string, any]) => (
+              <div key={fundKey} className="border-2 border-gray-200 rounded-sm p-4 bg-gray-50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-bold text-primary text-lg">{fundKey.replace('Fund', '')}</span>
+                  <span className="mono-number font-semibold">
+                    {fm.wins > 0 || fm.losses > 0 ? formatRecord(fm.wins, fm.losses) : '—'}
+                  </span>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <div>
+                    <div className="text-gray-500 text-xs">P/L</div>
+                    <div className={`mono-number font-semibold ${fm.pnl >= 0 ? 'text-success' : 'text-loss'}`}>
+                      {fm.wins > 0 || fm.losses > 0 ? formatCurrency(fm.pnl) : '—'}
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-gray-500 text-xs">ROI</div>
+                    <div className={`mono-number ${fm.roi >= 0 ? 'text-success' : 'text-loss'}`}>
+                      {fm.wins > 0 || fm.losses > 0 ? formatPercent(fm.roi) : '—'}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-gray-500 text-xs">Win %</div>
+                    <div className="mono-number">
+                      {fm.wins > 0 || fm.losses > 0 ? `${Number(fm.winRate).toFixed(1)}%` : '—'}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Rolling Performance (NEW) */}
-        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
-            📈 ROLLING PERFORMANCE
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-8 mb-6 sm:mb-8 shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6 border-b-2 border-gray-300 pb-3">
+            ROLLING PERFORMANCE
           </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-3 gap-2 sm:gap-6">
             {rollingPerformance && (
               <>
-                <div className="bg-gray-50 p-5 rounded-sm">
-                  <div className="text-sm text-gray-600 mb-1">Last 7 Days</div>
-                  <div className="text-2xl font-bold mono-number text-primary">
+                <div className="bg-gray-50 p-2 sm:p-5 rounded-sm">
+                  <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Last 7 Days</div>
+                  <div className="text-base sm:text-2xl font-bold mono-number text-primary">
                     {formatRecord(rollingPerformance.last7Days.wins, rollingPerformance.last7Days.losses)}
                   </div>
-                  <div className={`text-lg font-semibold mono-number mt-1 ${
+                  <div className={`text-xs sm:text-lg font-semibold mono-number mt-1 ${
                     rollingPerformance.last7Days.pnl >= 0 ? 'text-success' : 'text-loss'
                   }`}>
-                    {formatCurrency(rollingPerformance.last7Days.pnl)} ({formatPercent(rollingPerformance.last7Days.roi)})
+                    {formatCurrency(rollingPerformance.last7Days.pnl)}
                   </div>
-                  <div className="text-xs text-gray-500 mt-1">
+                  <div className={`text-[9px] sm:text-xs mono-number ${
+                    rollingPerformance.last7Days.roi >= 0 ? 'text-success' : 'text-loss'
+                  }`}>
+                    ({formatPercent(rollingPerformance.last7Days.roi)})
+                  </div>
+                  <div className="text-[9px] sm:text-xs text-gray-500 mt-1">
                     {rollingPerformance.last7Days.bets} bets
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-5 rounded-sm">
-                  <div className="text-sm text-gray-600 mb-1">Last 30 Days</div>
-                  <div className="text-2xl font-bold mono-number text-primary">
+                <div className="bg-gray-50 p-2 sm:p-5 rounded-sm">
+                  <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Last 30 Days</div>
+                  <div className="text-base sm:text-2xl font-bold mono-number text-primary">
                     {formatRecord(rollingPerformance.last30Days.wins, rollingPerformance.last30Days.losses)}
                   </div>
-                  <div className={`text-lg font-semibold mono-number mt-1 ${
+                  <div className={`text-xs sm:text-lg font-semibold mono-number mt-1 ${
                     rollingPerformance.last30Days.pnl >= 0 ? 'text-success' : 'text-loss'
                   }`}>
-                    {formatCurrency(rollingPerformance.last30Days.pnl)} ({formatPercent(rollingPerformance.last30Days.roi)})
+                    {formatCurrency(rollingPerformance.last30Days.pnl)}
                   </div>
-                  <div className="text-xs text-gray-500 mt-1">
+                  <div className={`text-[9px] sm:text-xs mono-number ${
+                    rollingPerformance.last30Days.roi >= 0 ? 'text-success' : 'text-loss'
+                  }`}>
+                    ({formatPercent(rollingPerformance.last30Days.roi)})
+                  </div>
+                  <div className="text-[9px] sm:text-xs text-gray-500 mt-1">
                     {rollingPerformance.last30Days.bets} bets
                   </div>
                 </div>
 
-                <div className="bg-gray-50 p-5 rounded-sm">
-                  <div className="text-sm text-gray-600 mb-1">Last 3 Days</div>
-                  <div className="text-2xl font-bold mono-number text-primary">
+                <div className="bg-gray-50 p-2 sm:p-5 rounded-sm">
+                  <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Last 3 Days</div>
+                  <div className="text-base sm:text-2xl font-bold mono-number text-primary">
                     {rollingPerformance.last3Days
                       ? formatRecord(rollingPerformance.last3Days.wins, rollingPerformance.last3Days.losses)
                       : '—'}
                   </div>
-                  <div className={`text-lg font-semibold mono-number mt-1 ${
+                  <div className={`text-xs sm:text-lg font-semibold mono-number mt-1 ${
                     rollingPerformance.last3Days?.pnl >= 0 ? 'text-success' : 'text-loss'
                   }`}>
                     {rollingPerformance.last3Days
-                      ? `${formatCurrency(rollingPerformance.last3Days.pnl)} (${formatPercent(rollingPerformance.last3Days.roi)})`
+                      ? formatCurrency(rollingPerformance.last3Days.pnl)
                       : '—'}
                   </div>
-                  <div className="text-xs text-gray-500 mt-1">
+                  <div className={`text-[9px] sm:text-xs mono-number ${
+                    rollingPerformance.last3Days?.roi >= 0 ? 'text-success' : 'text-loss'
+                  }`}>
+                    {rollingPerformance.last3Days
+                      ? `(${formatPercent(rollingPerformance.last3Days.roi)})`
+                      : ''}
+                  </div>
+                  <div className="text-[9px] sm:text-xs text-gray-500 mt-1">
                     {rollingPerformance.last3Days?.bets || 0} bets
                   </div>
                 </div>
@@ -497,91 +541,91 @@ export default function PortfolioBreakdownPage() {
         </div>
 
         {/* Performance Metrics */}
-        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
-            📊 PERFORMANCE METRICS
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-8 mb-6 sm:mb-8 shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6 border-b-2 border-gray-300 pb-3">
+            PERFORMANCE METRICS
           </h2>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-green-50 p-5 rounded-sm">
-              <div className="text-sm text-green-700 mb-1">Total Won</div>
-              <div className="text-2xl font-bold mono-number text-green-600">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6">
+            <div className="bg-green-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-green-700 mb-1">Total Won</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-green-600">
                 {formatCurrency(totalWinnings, false)}
               </div>
             </div>
 
-            <div className="bg-red-50 p-5 rounded-sm">
-              <div className="text-sm text-red-700 mb-1">Total Lost</div>
-              <div className="text-2xl font-bold mono-number text-red-600">
+            <div className="bg-red-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-red-700 mb-1">Total Lost</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-red-600">
                 {formatCurrency(totalLossesAmount, false)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Avg Win</div>
-              <div className="text-2xl font-bold mono-number text-success">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Avg Win</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-success">
                 {formatCurrency(avgWin, false)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Avg Loss</div>
-              <div className="text-2xl font-bold mono-number text-loss">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Avg Loss</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-loss">
                 {formatCurrency(avgLoss)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Largest Win</div>
-              <div className="text-2xl font-bold mono-number text-success">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Largest Win</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-success">
                 {formatCurrency(largestWin, false)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Largest Loss</div>
-              <div className="text-2xl font-bold mono-number text-loss">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Largest Loss</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-loss">
                 {formatCurrency(largestLoss)}
               </div>
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">Sharpe Ratio</div>
-              <div className="text-2xl font-bold mono-number text-primary">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">Sharpe Ratio</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-primary">
                 {sharpeRatio !== null ? sharpeRatio.toFixed(2) : 'N/A'}
               </div>
               {sharpeRatioNote && (
-                <div className="text-xs text-gray-500 mt-1">{sharpeRatioNote}</div>
+                <div className="text-[9px] sm:text-xs text-gray-500 mt-1 leading-tight">{sharpeRatioNote}</div>
               )}
             </div>
 
-            <div className="bg-gray-50 p-5 rounded-sm">
-              <div className="text-sm text-gray-600 mb-1">CLV</div>
-              <div className="text-2xl font-bold mono-number text-primary">
+            <div className="bg-gray-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-gray-600 mb-1">CLV</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-primary">
                 {closingLineValue !== null && closingLineValue !== undefined
                   ? `+${closingLineValue.toFixed(1)}¢`
                   : 'Tracking'}
               </div>
-              <div className="text-xs text-gray-500 mt-1">
+              <div className="text-[9px] sm:text-xs text-gray-500 mt-1">
                 {closingLineValue !== null ? `${clvBetsTracked} bets` : 'Started Nov 27'}
               </div>
             </div>
           </div>
 
           {/* Streaks */}
-          <div className="grid grid-cols-2 gap-6 mt-6">
-            <div className="bg-green-50 p-5 rounded-sm">
-              <div className="text-sm text-green-700 mb-1">Best Win Streak</div>
-              <div className="text-2xl font-bold mono-number text-green-600">
+          <div className="grid grid-cols-2 gap-3 sm:gap-6 mt-4 sm:mt-6">
+            <div className="bg-green-50 p-3 sm:p-5 rounded-sm">
+              <div className="text-[10px] sm:text-sm text-green-700 mb-1">Best Win Streak</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-green-600">
                 {maxWinStreak} Wins
               </div>
             </div>
-            <div className="bg-green-50 p-5 rounded-sm border-2 border-green-300">
-              <div className="text-sm text-green-700 mb-1">Days Green Streak</div>
-              <div className="text-2xl font-bold mono-number text-green-600">
+            <div className="bg-green-50 p-3 sm:p-5 rounded-sm border-2 border-green-300">
+              <div className="text-[10px] sm:text-sm text-green-700 mb-1">Days Green Streak</div>
+              <div className="text-base sm:text-2xl font-bold mono-number text-green-600">
                 {daysGreenStreak?.current || 0} Days
               </div>
-              <div className="text-xs text-green-500 mt-1">
+              <div className="text-[9px] sm:text-xs text-green-500 mt-1">
                 Best: {daysGreenStreak?.best || 0} days
               </div>
             </div>
@@ -729,12 +773,13 @@ export default function PortfolioBreakdownPage() {
         </div>
 
         {/* Portfolio Growth Timeline */}
-        <div className="bg-white rounded-sm border-2 border-gray-200 p-8 mb-8 shadow-lg">
-          <h2 className="text-2xl font-bold text-primary mb-6 border-b-2 border-gray-300 pb-3">
-            📈 RECENT ACTIVITY
+        <div className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-8 mb-8 shadow-lg">
+          <h2 className="text-xl sm:text-2xl font-bold text-primary mb-4 sm:mb-6 border-b-2 border-gray-300 pb-3">
+            RECENT ACTIVITY
           </h2>
 
-          <div className="space-y-2 max-h-96 overflow-y-auto">
+          {/* Desktop Table Layout */}
+          <div className="hidden md:block space-y-2 max-h-96 overflow-y-auto">
             <div className="grid grid-cols-5 gap-2 text-xs font-bold text-gray-600 uppercase pb-2 border-b-2 border-gray-300 sticky top-0 bg-white">
               <div>Date</div>
               <div>Bet</div>
@@ -760,12 +805,45 @@ export default function PortfolioBreakdownPage() {
               </div>
             ))}
           </div>
+
+          {/* Mobile Card Layout */}
+          <div className="md:hidden space-y-3 max-h-[400px] overflow-y-auto">
+            {portfolioGrowth && portfolioGrowth.slice().reverse().slice(0, 15).map((entry: any, index: number) => (
+              <div key={index} className="border-2 border-gray-200 rounded-sm p-3 bg-gray-50">
+                <div className="flex justify-between items-start mb-2">
+                  <div>
+                    <div className="text-xs text-gray-500 mono-number">{entry.date}</div>
+                    <div className="text-sm text-gray-900 line-clamp-2">{entry.description}</div>
+                  </div>
+                  <span className="text-lg ml-2">
+                    {entry.result === 'win' ? '✅' : entry.result === 'push' ? '🔄' : '❌'}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center pt-2 border-t border-gray-200">
+                  <div>
+                    <div className="text-xs text-gray-500 uppercase">P/L</div>
+                    <div className={`mono-number font-bold ${
+                      entry.profit >= 0 ? 'text-success' : 'text-loss'
+                    }`}>
+                      {formatCurrency(entry.profit)}
+                    </div>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-xs text-gray-500 uppercase">Balance</div>
+                    <div className="mono-number font-bold text-primary">
+                      {formatCurrency(entry.balance, false)}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Transparency Statement */}
-        <div className="bg-gradient-to-br from-primary to-secondary text-white rounded-sm p-8 shadow-xl">
-          <h2 className="text-2xl font-bold mb-4">🔒 COMPLETE TRANSPARENCY</h2>
-          <div className="space-y-3 text-sm">
+        <div className="bg-gradient-to-br from-primary to-secondary text-white rounded-sm p-4 sm:p-8 shadow-xl">
+          <h2 className="text-lg sm:text-2xl font-bold mb-3 sm:mb-4">COMPLETE TRANSPARENCY</h2>
+          <div className="space-y-3 text-xs sm:text-sm">
             <p>
               Every statistic on this page is calculated from <strong>real betting data</strong>.
               We track every dollar risked, every position taken, and every outcome with complete accuracy.
@@ -776,21 +854,12 @@ export default function PortfolioBreakdownPage() {
               <strong>Starting Capital:</strong> {formatCurrency(portfolio.combined.startingBalance, false)}<br />
               <strong>Current Balance:</strong> {formatCurrency(portfolio.combined.balance, false)}
             </p>
-            <p className="text-xs pt-4 border-t border-white/30">
+            <p className="text-[10px] sm:text-xs pt-3 sm:pt-4 border-t border-white/30">
               All formulas are publicly disclosed. No simulation. No fake bets. 100% transparency.
             </p>
           </div>
         </div>
 
-        {/* Back to Home */}
-        <div className="text-center mt-12">
-          <Link
-            href="/"
-            className="inline-block px-8 py-4 bg-secondary hover:bg-accent text-white font-bold text-lg uppercase tracking-wide transition-all duration-300 rounded-sm"
-          >
-            ← Back to Portfolio
-          </Link>
-        </div>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import Link from 'next/link';
 import betsData from '@/data/bets.json';
 
 interface Bet {
@@ -28,14 +29,10 @@ interface DailyData {
   record: { wins: number; losses: number };
 }
 
-type FilterType = 'all' | '30' | '7' | 'new_era';
-
 const STARTING_BALANCE = 40000;
-const NEW_ERA_START = '2025-11-26'; // Day 1 of 4-fund system
 
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
-  const [filter, setFilter] = useState<FilterType>('7');
   const sectionRef = useRef<HTMLElement>(null);
 
   // Group bets by day and calculate daily stats
@@ -89,18 +86,10 @@ export default function DailyPerformanceHistory() {
 
   const dailyData = getDailyData();
 
-  // Filter data based on selected timeframe
+  // Always show only 7 days on home page - link to history page for more
   const getFilteredData = (): DailyData[] => {
-    if (filter === 'all') return dailyData;
-
-    if (filter === 'new_era') {
-      return dailyData.filter(day => day.date >= NEW_ERA_START);
-    }
-
-    const daysToShow = filter === '30' ? 30 : 7;
     const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - daysToShow);
-
+    cutoffDate.setDate(cutoffDate.getDate() - 7);
     return dailyData.filter(day => new Date(day.date) >= cutoffDate);
   };
 
@@ -154,48 +143,19 @@ export default function DailyPerformanceHistory() {
           </h2>
           <div className="h-[2px] bg-gradient-to-r from-[#c5a572] via-[#c5a572]/50 to-transparent mb-6 sm:mb-8"></div>
 
-          {/* Filter Tabs */}
+          {/* Filter Buttons - Same on mobile and desktop */}
           <div className="flex flex-wrap gap-2 sm:gap-4">
             <button
-              onClick={() => setFilter('new_era')}
-              className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${
-                filter === 'new_era'
-                  ? 'bg-[#22c55e] text-white border-[#22c55e]'
-                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
-              }`}
+              className="flex-1 sm:flex-none px-4 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 bg-[#c5a572] text-[#0a1f44] border-[#c5a572]"
             >
-              4-FUND ERA
+              PAST 7 DAYS
             </button>
-            <button
-              onClick={() => setFilter('all')}
-              className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${
-                filter === 'all'
-                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
-                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
-              }`}
+            <Link
+              href="/portfolio/history"
+              className="flex-1 sm:flex-none px-4 sm:px-6 py-2.5 text-xs sm:text-base font-semibold text-center transition-all duration-200 border-2 bg-transparent text-gray-400 border-gray-600 hover:border-gray-400 hover:text-white"
             >
-              ALL TIME
-            </button>
-            <button
-              onClick={() => setFilter('30')}
-              className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${
-                filter === '30'
-                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
-                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
-              }`}
-            >
-              30 DAYS
-            </button>
-            <button
-              onClick={() => setFilter('7')}
-              className={`flex-1 sm:flex-none px-3 sm:px-6 py-2.5 text-xs sm:text-base font-semibold transition-all duration-200 border-2 ${
-                filter === '7'
-                  ? 'bg-[#c5a572] text-[#0a1f44] border-[#c5a572]'
-                  : 'bg-transparent text-gray-400 border-gray-600 hover:border-gray-400'
-              }`}
-            >
-              7 DAYS
-            </button>
+              VIEW ALL HISTORY
+            </Link>
           </div>
         </div>
 

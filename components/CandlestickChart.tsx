@@ -92,7 +92,14 @@ export default function CandlestickChart() {
       const container = chartContainerRef.current;
       if (!container) return;
 
+      // Wait for container to have dimensions
+      const containerWidth = container.clientWidth || window.innerWidth - 32;
+      if (containerWidth <= 0) return;
+
       // Create the chart with premium dark financial theme
+      const isMobileChart = window.innerWidth < 768;
+      const chartHeight = isMobileChart ? 300 : 450;
+
       const chart = createChart(container, {
       layout: {
         background: { color: '#0d1117' },
@@ -103,8 +110,8 @@ export default function CandlestickChart() {
         vertLines: { color: '#21262d' },
         horzLines: { color: '#21262d' },
       },
-      width: container.clientWidth,
-      height: 450,
+      width: containerWidth,
+      height: chartHeight,
       crosshair: {
         mode: 0,
         vertLine: {
@@ -293,7 +300,12 @@ export default function CandlestickChart() {
     // Handle resize
     const handleResize = () => {
       if (chartRef.current && container) {
-        chartRef.current.applyOptions({ width: container.clientWidth });
+        const newIsMobile = window.innerWidth < 768;
+        const newHeight = newIsMobile ? 300 : 450;
+        chartRef.current.applyOptions({
+          width: container.clientWidth,
+          height: newHeight
+        });
       }
     };
 
@@ -362,8 +374,7 @@ export default function CandlestickChart() {
           {/* Chart */}
           <div
             ref={chartContainerRef}
-            className="w-full opacity-0 relative"
-            style={{ minHeight: '450px' }}
+            className="w-full opacity-0 relative min-h-[300px] md:min-h-[450px]"
           />
 
           {/* Custom Tooltip */}

@@ -13,11 +13,11 @@ import CheckCircle from '@/components/icons/CheckCircle';
 import XCircle from '@/components/icons/XCircle';
 
 // Fund display info
-const fundInfo: Record<string, { label: string; color: string }> = {
-  VectorFund: { label: 'Vector', color: portfolioData.funds.VectorFund.color },
-  SharpFund: { label: 'Sharp', color: portfolioData.funds.SharpFund.color },
-  ContraFund: { label: 'Contra', color: portfolioData.funds.ContraFund.color },
-  CatalystFund: { label: 'Catalyst', color: portfolioData.funds.CatalystFund.color },
+const fundInfo: Record<string, { label: string; color: string; slug: string }> = {
+  VectorFund: { label: 'Vector', color: portfolioData.funds.VectorFund.color, slug: 'vector' },
+  SharpFund: { label: 'Sharp', color: portfolioData.funds.SharpFund.color, slug: 'sharp' },
+  ContraFund: { label: 'Contra', color: portfolioData.funds.ContraFund.color, slug: 'contra' },
+  CatalystFund: { label: 'Catalyst', color: portfolioData.funds.CatalystFund.color, slug: 'catalyst' },
 };
 
 gsap.registerPlugin(ScrollTrigger);
@@ -111,12 +111,14 @@ function BetCard({ bet, index }: BetCardProps) {
           </div>
         </div>
         {fund && (
-          <span
-            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
+          <Link
+            href={`/funds/${fund.slug}`}
+            onClick={(e) => e.stopPropagation()}
+            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white hover:opacity-80 transition-opacity"
             style={{ backgroundColor: fund.color }}
           >
             {fund.label}
-          </span>
+          </Link>
         )}
       </div>
 
@@ -212,10 +214,19 @@ function BetsContent() {
   // Filter out pending bets - only show settled bets on public site
   const allBets = (betsData as Bet[]).filter(bet => bet.result !== 'pending');
 
+  // Map display names to actual betType values in data
+  const betTypeMap: Record<string, string> = {
+    'Spreads': 'spread',
+    'Props': 'props',
+    'Totals': 'total',
+    'Moneyline': 'moneyline',
+  };
+
   // Filter bets based on sport, type, and fund
   const filteredBets = allBets.filter(bet => {
     const matchesSport = currentSportFilter === 'All' || bet.sport === currentSportFilter;
-    const matchesType = currentTypeFilter === 'All' || bet.betType === currentTypeFilter.toLowerCase();
+    const expectedBetType = currentTypeFilter === 'All' ? null : betTypeMap[currentTypeFilter];
+    const matchesType = currentTypeFilter === 'All' || bet.betType === expectedBetType;
     const matchesFund = currentFundFilter === 'All' || bet.fund === currentFundFilter;
     return matchesSport && matchesType && matchesFund;
   });
@@ -282,176 +293,177 @@ function BetsContent() {
     <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white min-h-screen">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
-        <div className="mb-12">
+        <div className="mb-8">
           <div
             ref={headerLineTopRef}
             className="h-[2px] bg-primary mb-6"
             style={{ transformOrigin: 'center' }}
           />
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center mb-2">
-            ALL BETS
+            BET TRACKER
           </h1>
-          <p className="text-center text-text-muted text-sm sm:text-base">
-            Every position we&apos;ve entered into the portfolio
+          <p className="text-center text-text-muted text-sm sm:text-base mb-4">
+            {filteredBets.length} positions · {formatRecord(stats.record.wins, stats.record.losses)} · {formatPercent(stats.roi)} ROI
           </p>
           <div
             ref={headerLineBottomRef}
-            className="h-[2px] bg-primary mt-6"
+            className="h-[2px] bg-primary"
             style={{ transformOrigin: 'center' }}
           />
         </div>
 
-        {/* Portfolio Stats Summary */}
-        <div className="bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 rounded-sm p-6 sm:p-8 mb-12 shadow-lg">
-          <h3 className="text-xl sm:text-2xl font-bold text-primary text-center mb-6">
-            {currentSportFilter === 'All' && currentTypeFilter === 'All'
-              ? 'PORTFOLIO OVERVIEW'
-              : `${currentTypeFilter !== 'All' ? currentTypeFilter.toUpperCase() : ''} ${currentSportFilter !== 'All' ? currentSportFilter : ''} PERFORMANCE`.trim()}
-          </h3>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            <div className="text-center">
-              <div className="data-label text-xs uppercase mb-2">Record</div>
-              <div className="text-2xl sm:text-3xl data-value text-primary mono-number font-bold">
-                {formatRecord(stats.record.wins, stats.record.losses)}
-              </div>
-              <div className="text-xs text-gray-600 mt-1 mono-number">
-                {stats.winRate.toFixed(2)}% Win Rate
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="data-label text-xs uppercase mb-2">Net P/L</div>
-              <div className={`text-2xl sm:text-3xl data-value mono-number font-bold ${
-                stats.netPL >= 0 ? 'text-success' : 'text-loss'
-              }`}>
-                {formatCurrency(stats.netPL)}
-              </div>
-              <div className="text-xs text-gray-600 mt-1 mono-number">
-                {stats.unitsWon >= 0 ? '+' : ''}{stats.unitsWon.toFixed(2)}u
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="data-label text-xs uppercase mb-2">ROI</div>
-              <div className={`text-2xl sm:text-3xl data-value mono-number font-bold ${
-                stats.roi >= 0 ? 'text-success' : 'text-loss'
-              }`}>
-                {formatPercent(stats.roi)}
-              </div>
-            </div>
-
-            <div className="text-center">
-              <div className="data-label text-xs uppercase mb-2">Total Exposure</div>
-              <div className="text-2xl sm:text-3xl data-value text-primary mono-number font-bold">
-                {formatCurrency(stats.totalExposure, false)}
-              </div>
-              <div className="text-xs text-gray-600 mt-1 mono-number">
-                {stats.unitsRisked.toFixed(2)}u Risked
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Sport Filter Buttons */}
-        <div className="mb-6">
-          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Sport</div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {sports.map((sport) => (
+        {/* Combined Filter Bar - Responsive Design */}
+        <div className="bg-gray-50 border border-gray-200 rounded-lg p-3 sm:p-4 mb-6 sm:mb-8">
+          {/* Active Filters Display */}
+          {(currentSportFilter !== 'All' || currentTypeFilter !== 'All' || currentFundFilter !== 'All') && (
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3 pb-3 border-b border-gray-200">
+              <span className="text-[10px] sm:text-xs text-gray-500 uppercase">Active:</span>
+              {currentSportFilter !== 'All' && (
+                <span className="px-2 py-0.5 bg-secondary text-white text-[10px] sm:text-xs font-bold rounded">{currentSportFilter}</span>
+              )}
+              {currentTypeFilter !== 'All' && (
+                <span className="px-2 py-0.5 bg-primary text-white text-[10px] sm:text-xs font-bold rounded">{currentTypeFilter}</span>
+              )}
+              {currentFundFilter !== 'All' && fundInfo[currentFundFilter] && (
+                <span
+                  className="px-2 py-0.5 text-white text-[10px] sm:text-xs font-bold rounded"
+                  style={{ backgroundColor: fundInfo[currentFundFilter].color }}
+                >
+                  {fundInfo[currentFundFilter].label}
+                </span>
+              )}
               <button
-                key={sport}
                 onClick={() => {
-                  setCurrentSportFilter(sport);
-                  const params = new URLSearchParams();
-                  if (sport !== 'All') params.set('sport', sport);
-                  if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
-                  if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
-                  const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
-                  router.replace(url, { scroll: false });
+                  setCurrentSportFilter('All');
+                  setCurrentTypeFilter('All');
+                  setCurrentFundFilter('All');
+                  router.replace('/bets', { scroll: false });
                 }}
-                className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
-                  currentSportFilter === sport
-                    ? 'bg-secondary text-white'
-                    : 'bg-gray-100 text-primary hover:bg-gray-200'
-                }`}
+                className="px-2 py-0.5 text-[10px] sm:text-xs text-gray-500 hover:text-red-500 transition-colors"
               >
-                {sport}
+                ✕ Clear
               </button>
-            ))}
-          </div>
-        </div>
+            </div>
+          )}
 
-        {/* Bet Type Filter Buttons */}
-        <div className="mb-6">
-          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Bet Type</div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {betTypes.map((type) => (
-              <button
-                key={type}
-                onClick={() => {
-                  setCurrentTypeFilter(type);
-                  const params = new URLSearchParams();
-                  if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
-                  if (type !== 'All') params.set('type', type);
-                  if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
-                  const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
-                  router.replace(url, { scroll: false });
-                }}
-                className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
-                  currentTypeFilter === type
-                    ? 'bg-primary text-white'
-                    : 'bg-gray-100 text-primary hover:bg-gray-200'
-                }`}
-              >
-                {type}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Fund Filter Buttons */}
-        <div className="mb-12">
-          <div className="text-xs text-gray-500 uppercase tracking-wide text-center mb-3">Filter by Fund</div>
-          <div className="flex flex-wrap justify-center gap-2">
-            {funds.map((fundKey) => {
-              const fund = fundKey === 'All' ? null : fundInfo[fundKey];
-              return (
-                <button
-                  key={fundKey}
-                  onClick={() => {
-                    setCurrentFundFilter(fundKey);
+          {/* Filter Controls - Stack on Mobile */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+            {/* Sport & Type Dropdowns - Side by side on mobile */}
+            <div className="flex gap-2 sm:gap-4 w-full sm:w-auto">
+              <div className="flex items-center gap-2 flex-1 sm:flex-initial">
+                <span className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold whitespace-nowrap">Sport:</span>
+                <select
+                  value={currentSportFilter}
+                  onChange={(e) => {
+                    const sport = e.target.value;
+                    setCurrentSportFilter(sport);
                     const params = new URLSearchParams();
-                    if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                    if (sport !== 'All') params.set('sport', sport);
                     if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
-                    if (fundKey !== 'All') params.set('fund', fundKey);
+                    if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
                     const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                     router.replace(url, { scroll: false });
                   }}
-                  className={`px-4 py-2 rounded-sm font-semibold text-xs uppercase tracking-wide transition-all duration-300 ${
-                    currentFundFilter === fundKey
-                      ? 'text-white'
-                      : 'bg-gray-100 text-primary hover:bg-gray-200'
-                  }`}
-                  style={currentFundFilter === fundKey && fund ? { backgroundColor: fund.color } : currentFundFilter === fundKey ? { backgroundColor: '#1a1a1a' } : undefined}
+                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer"
                 >
-                  {fund ? fund.label : 'All'}
+                  {sports.map((sport) => (
+                    <option key={sport} value={sport}>{sport}</option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="flex items-center gap-2 flex-1 sm:flex-initial">
+                <span className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold whitespace-nowrap">Type:</span>
+                <select
+                  value={currentTypeFilter}
+                  onChange={(e) => {
+                    const type = e.target.value;
+                    setCurrentTypeFilter(type);
+                    const params = new URLSearchParams();
+                    if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                    if (type !== 'All') params.set('type', type);
+                    if (currentFundFilter !== 'All') params.set('fund', currentFundFilter);
+                    const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
+                    router.replace(url, { scroll: false });
+                  }}
+                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer"
+                >
+                  {betTypes.map((type) => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+
+            {/* Fund Pills - Visual & Clickable */}
+            <div className="flex items-center justify-center gap-2 w-full sm:w-auto">
+              <span className="text-[10px] sm:text-xs text-gray-500 uppercase font-semibold whitespace-nowrap">Fund:</span>
+              <div className="flex flex-wrap gap-1 justify-center">
+                <button
+                  onClick={() => {
+                    setCurrentFundFilter('All');
+                    const params = new URLSearchParams();
+                    if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                    if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
+                    const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
+                    router.replace(url, { scroll: false });
+                  }}
+                  className={`px-2 py-1 text-[10px] sm:text-xs font-bold rounded transition-all ${
+                    currentFundFilter === 'All'
+                      ? 'bg-gray-800 text-white'
+                      : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
+                  }`}
+                >
+                  All
                 </button>
-              );
-            })}
+                {Object.entries(fundInfo).map(([key, fund]) => (
+                  <button
+                    key={key}
+                    onClick={() => {
+                      setCurrentFundFilter(key);
+                      const params = new URLSearchParams();
+                      if (currentSportFilter !== 'All') params.set('sport', currentSportFilter);
+                      if (currentTypeFilter !== 'All') params.set('type', currentTypeFilter);
+                      params.set('fund', key);
+                      router.replace(`/bets?${params.toString()}`, { scroll: false });
+                    }}
+                    className={`px-1.5 sm:px-2 py-1 text-[10px] sm:text-xs font-bold rounded transition-all ${
+                      currentFundFilter === key
+                        ? 'text-white ring-2 ring-offset-1'
+                        : 'text-white opacity-50 hover:opacity-80'
+                    }`}
+                    style={{ backgroundColor: fund.color }}
+                  >
+                    {fund.label}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bet Count */}
-        <div className="text-center mb-8">
-          <p className="text-text-muted text-sm">
-            Showing <span className="font-bold text-primary">{filteredBets.length}</span> bet{filteredBets.length !== 1 ? 's' : ''}
-            {(currentSportFilter !== 'All' || currentTypeFilter !== 'All') && (
-              <span>
-                {currentTypeFilter !== 'All' && ` - ${currentTypeFilter}`}
-                {currentSportFilter !== 'All' && ` in ${currentSportFilter}`}
-              </span>
-            )}
-          </p>
+        {/* Quick Stats Bar - Compact on Mobile */}
+        <div className="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
+          <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
+            <div className="text-base sm:text-2xl font-bold text-primary mono-number">{formatRecord(stats.record.wins, stats.record.losses)}</div>
+            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">Record</div>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
+            <div className={`text-base sm:text-2xl font-bold mono-number ${stats.netPL >= 0 ? 'text-success' : 'text-loss'}`}>
+              {formatCurrency(stats.netPL)}
+            </div>
+            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">P/L</div>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
+            <div className={`text-base sm:text-2xl font-bold mono-number ${stats.roi >= 0 ? 'text-success' : 'text-loss'}`}>
+              {formatPercent(stats.roi)}
+            </div>
+            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">ROI</div>
+          </div>
+          <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
+            <div className="text-base sm:text-2xl font-bold text-primary mono-number">{stats.winRate.toFixed(1)}%</div>
+            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">Win %</div>
+          </div>
         </div>
 
         {/* Detailed Analysis Section (Expandable) */}
@@ -588,16 +600,6 @@ function BetsContent() {
           )}
         </div>
 
-        {/* Back to Home */}
-        <div className="text-center mt-12">
-          <Link
-            href="/"
-            className="text-secondary hover:text-accent font-bold text-lg tracking-wide transition-colors duration-300 group inline-flex items-center gap-2"
-          >
-            <span className="transition-transform duration-300 group-hover:-translate-x-1">←</span>
-            Back to Portfolio
-          </Link>
-        </div>
       </div>
     </section>
   );

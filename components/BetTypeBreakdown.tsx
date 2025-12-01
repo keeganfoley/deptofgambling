@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Link from 'next/link';
@@ -125,22 +125,113 @@ function BetTypeCard({ type, record, winRate, netPL, roi, index }: BetTypeCardPr
   );
 }
 
+// Mobile accordion for bet types
+function MobileBetTypeAccordion({ type, record, winRate, netPL, roi }: {
+  type: string;
+  record: { wins: number; losses: number };
+  winRate: number;
+  netPL: number;
+  roi: number;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!contentRef.current) return;
+    if (isOpen) {
+      gsap.to(contentRef.current, { height: 'auto', duration: 0.3, ease: 'power2.out' });
+    } else {
+      gsap.to(contentRef.current, { height: 0, duration: 0.25, ease: 'power2.in' });
+    }
+  }, [isOpen]);
+
+  const isBest = roi > 14;
+
+  return (
+    <div className={`border-2 rounded-lg overflow-hidden bg-white ${isBest ? 'border-accent' : 'border-gray-200'}`}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-4 py-3 flex items-center justify-between bg-white"
+      >
+        <div className="flex items-center gap-3">
+          <div className="text-left">
+            <div className="font-bold text-primary">{type.charAt(0).toUpperCase() + type.slice(1)}</div>
+            <div className="text-xs text-gray-500">{formatRecord(record.wins, record.losses)}</div>
+          </div>
+        </div>
+        <div className="flex items-center gap-3">
+          <div className="text-right">
+            <div className={`font-bold mono-number text-sm ${netPL >= 0 ? 'text-success' : 'text-loss'}`}>
+              {formatCurrency(netPL)}
+            </div>
+            <div className={`text-xs mono-number ${roi >= 0 ? 'text-success' : 'text-loss'}`}>
+              {formatPercent(roi)}
+            </div>
+          </div>
+          <svg
+            className={`w-5 h-5 text-gray-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
+            fill="none" stroke="currentColor" viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+          </svg>
+        </div>
+      </button>
+      <div ref={contentRef} className="overflow-hidden" style={{ height: 0 }}>
+        <div className="px-4 pb-4 pt-2 border-t border-gray-100">
+          <div className="grid grid-cols-2 gap-3">
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">Win Rate</div>
+              <div className={`text-sm font-bold mono-number ${winRate >= 60 ? 'text-success' : winRate >= 50 ? 'text-primary' : 'text-loss'}`}>
+                {formatPercent(winRate, false)}
+              </div>
+            </div>
+            <div className="bg-gray-50 rounded-md p-2 text-center">
+              <div className="text-[10px] text-gray-500 uppercase">Total Bets</div>
+              <div className="text-sm font-bold text-primary mono-number">{record.wins + record.losses}</div>
+            </div>
+          </div>
+          <Link
+            href={`/bets?type=${type}`}
+            className="block mt-3 text-center py-2 bg-secondary text-white font-bold text-xs rounded-md"
+          >
+            View All {type}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function BetTypeBreakdown() {
   const sectionRef = useRef<HTMLElement>(null);
   const betTypes = metricsData.betTypeBreakdown;
 
   return (
-    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-background">
+    <section ref={sectionRef} className="py-12 sm:py-20 px-4 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary mb-4">
-            PERFORMANCE BY CATEGORY
+        <div className="text-center mb-6 sm:mb-12">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-primary mb-2 sm:mb-4">
+            BY CATEGORY
           </h2>
         </div>
 
-        {/* Bet Type Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
+        {/* Mobile: Accordion Style */}
+        <div className="md:hidden space-y-3">
+          {Object.values(betTypes).map((betType) => (
+            <MobileBetTypeAccordion
+              key={betType.type}
+              type={betType.type}
+              record={betType.record}
+              winRate={betType.winRate}
+              netPL={betType.pnl}
+              roi={betType.roi}
+            />
+          ))}
+        </div>
+
+        {/* Desktop: Bet Type Cards Grid */}
+        <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {Object.values(betTypes).map((betType, index) => (
             <BetTypeCard
               key={betType.type}
