@@ -205,7 +205,7 @@ export default function PortfolioChart() {
         {/* Chart Container */}
         <div
           ref={chartContainerRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-6 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.1)] magenta-glow opacity-0"
+          className="bg-white rounded-sm border-2 border-gray-200 p-4 sm:p-6 md:p-8 shadow-[0_10px_40px_rgba(0,0,0,0.1)] magenta-glow"
         >
           <Line data={chartData} options={options} />
 

@@ -56,25 +56,7 @@ export default function CandlestickChart() {
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const isMobile = window.innerWidth < 768;
-
-    gsap.fromTo(
-      chartContainerRef.current,
-      { y: isMobile ? 20 : 50, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: isMobile ? 0.5 : 1,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
+    // Chart loads immediately without scroll-triggered animation
   }, []);
 
   useEffect(() => {
@@ -374,7 +356,7 @@ export default function CandlestickChart() {
           {/* Chart */}
           <div
             ref={chartContainerRef}
-            className="w-full opacity-0 relative min-h-[300px] md:min-h-[450px]"
+            className="w-full relative min-h-[300px] md:min-h-[450px]"
           />
 
           {/* Custom Tooltip */}

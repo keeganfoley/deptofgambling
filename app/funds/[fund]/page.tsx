@@ -34,7 +34,7 @@ const fundLogoMap: Record<string, string> = {
   VectorFund: '/logos/vector-logo.png',
   SharpFund: '/logos/sharp-logo.png',
   ContraFund: '/logos/contra-logo.png',
-  CatalystFund: '/catalyst-diamond.png',
+  CatalystFund: '/logos/catalyst-logo.png',
 };
 
 // Collapsible Section Component for Mobile
