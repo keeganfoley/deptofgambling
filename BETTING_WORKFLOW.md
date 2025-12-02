@@ -743,13 +743,83 @@ DECEMBER 14 | 4 NBA bets live. #sportsbetting #deptofgambling #dog
 **DAILY PICKS - SLIDE 2 (EXPOSURE):**
 ```
 TODAY'S EXPOSURE
-FUND BREAKDOWN
+
 ⚫️ VECTOR: [X] PICKS | [X]U | $[X]
 🟢 SHARP: [X] PICKS | [X]U | $[X]
 🟠 CONTRA: [X] PICKS | [X]U | $[X]
 🟣 CATALYST: [X] PICKS | [X]U | $[X]
+
 [TOTAL PICKS] | [TOTAL UNITS]U | $[TOTAL]
 ```
+
+---
+
+#### PINNED COMMENT / ANALYSIS BREAKDOWN (REQUIRED)
+
+**ALWAYS generate this when user says "placed"**
+
+This is a pinned comment for Instagram explaining our decision-making. 1-2 sentences per pick.
+
+**Format:**
+```
+THE ANALYSIS 🧵
+
+[SPORT EMOJI] [SPORT]:
+[Pick 1] — [1-2 sentence explanation of why. Reference model edge, sharp money, line movement, or situational factors. No external sources mentioned.]
+
+[Pick 2] — [1-2 sentence explanation]
+
+[SPORT EMOJI] [SPORT]:
+[Pick 3] — [1-2 sentence explanation]
+
+Let's work.
+```
+
+**Sport Emojis:**
+- 🏀 NBA
+- 🏈 NFL
+- 🏀 NCAAB
+- 🏈 NCAAF
+- 🏒 NHL
+
+**Example:**
+```
+THE ANALYSIS 🧵
+
+🏀 NBA:
+Mavericks +11.5 — Our model projects this as a 6-point game. Kyrie is out but the market overcorrected. 13% edge, biggest play of the day.
+
+Jazz +12.5 — Model says 7.7, market says 12.5. Houston's offense has been inconsistent. Value on the dog.
+
+Bulls +9 — Line inflated from 6.5 to 9. Model sees Chicago within 5. Taking the points.
+
+Nets +4.5 — Money moving opposite the public here. 26% of bets but 30% of dollars. Smart money likes Brooklyn at home.
+
+Pacers +6.5 — Sharp indicators lit. Cleveland missing Jarrett Allen. This line should be closer to 5.
+
+Hawks +9.5 — Public pounding Detroit. Line moved from 5.5 to 9.5. Too many points for a home dog.
+
+🏒 NHL:
+Ducks ML — 28% of bets but 52% of money. When the dollars don't match the tickets, follow the money.
+
+Jets/Sabres O6 — Both teams scoring lately. Sharp money confirmed on the over.
+
+🏀 NCAAB:
+Iona -1.5 — 75% of bets, 90% of money. That 15% gap is significant. Sharps see Iona covering.
+
+North Alabama +5.5 — Model grades this B+ with 6.3% edge. Line moved in our favor from 4.5 to 5.5.
+
+Middle Tenn +2.5 — Another B+ grade. Only 20% of public on Middle Tenn but the model likes them.
+
+Let's work.
+```
+
+**Rules:**
+- Never mention "Action Network" or "PRO projections" - just say "model" or "our model"
+- Never mention external sources
+- Walk through OUR decision making
+- Keep it conversational but professional
+- End with "Let's work." or "Let's eat."
 
 ---
 
@@ -986,7 +1056,7 @@ Generate an Instagram Story (1080x1920) cumulative candle chart showing:
 ```
 [DATE] PICKS
 
-[SPORT]
+[SPORT EMOJI] [SPORT]
 • [PICK] ([ODDS]) [UNITS]U
 • [PICK] ([ODDS]) [UNITS]U
 
@@ -995,21 +1065,69 @@ Generate an Instagram Story (1080x1920) cumulative candle chart showing:
 #GamblingTwitter #SportsBetting
 ```
 
+**Sport Emojis for Twitter:**
+- 🏀 NBA
+- 🏈 NFL
+- 🏀 NCAAB
+- 🏈 NCAAF
+- 🏒 NHL
+
 **Example:**
 ```
-NOV 30 PICKS
+DEC 1 PICKS
 
-NFL
-• Bills -3 (-110) 2U
-• Chiefs/Raiders O44.5 (-110) 1.5U
+🏀 NBA
+• Mavericks +11.5 (-110) 2U
+• Jazz +12.5 (-114) 1.5U
+• Nets +4.5 (-109) 1.5U
+• Bulls +9 (-110) 1U
+• Pacers +6.5 (-105) 1U
+• Hawks +9.5 (-110) 1U
 
-NBA
-• Celtics -7.5 (-110) 1U
+🏒 NHL
+• Ducks ML (+130) 1U
+• Jets/Sabres O6 (-115) 0.5U
 
-4 plays | 5.5U risked
+🏀 NCAAB
+• Iona -1.5 (-110) 1U
+• North Alabama +5.5 (-104) 1U
+• Middle Tenn +2.5 (-110) 0.5U
+
+11 plays | 12U risked
 
 #GamblingTwitter #SportsBetting
 ```
+
+**Twitter Thread Reply (The Breakdown) - REQUIRED:**
+```
+The breakdown 🧵
+
+🏀 NBA:
+Mavs +11.5 — Model says 6-pt game. Market overcorrected on Kyrie news.
+Jazz +12.5 — Model 7.7 vs market 12.5. Houston inconsistent.
+Nets +4.5 — 26% bets, 30% money. Sharp divergence.
+Pacers +6.5 — Sharp indicators + Cavs missing Allen.
+Hawks +9.5 — Line moved 5.5→9.5. Too many points.
+Bulls +9 — Model within 5. Line inflated.
+
+🏒 NHL:
+Ducks ML — 28% bets, 52% money. Follow the dollars.
+Jets/Sabres O6 — Sharp money confirmed on over.
+
+🏀 NCAAB:
+Iona -1.5 — 75% bets, 90% money. 15% gap = sharp.
+N. Alabama +5.5 — B+ model grade, line moved FOR us.
+Middle Tenn +2.5 — B+ grade, public fading them.
+
+Let's eat.
+```
+
+**Rules for Twitter Breakdown:**
+- Keep it condensed (Twitter character limits)
+- Use sport emojis before each section
+- 1 sentence per pick max
+- Same logic as Instagram pinned comment, just shorter
+- End with "Let's eat." or "Let's work."
 
 ---
 
@@ -1045,30 +1163,35 @@ Locked before lines move.
 
 **3. DAILY REPORT Twitter:**
 ```
-[DATE] RESULTS
+📊 [DATE] | [W]-[L]-[P] | [+/-]$[DAY P/L]
 
-[W]-[L] | [+/-]$[P/L]
+✅ [PICK]
+✅ [PICK]
+❌ [PICK]
+🔄 [PICK] (if push)
 
-✅ [PICK] +$[X]
-✅ [PICK] +$[X]
-❌ [PICK] -$[X]
-
-Portfolio: $[BALANCE] ([+/-]$[TOTAL P/L])
+💰 [ALL-TIME RECORD] | [+/-]$[ALL-TIME P/L] all-time
 
 #GamblingTwitter #SportsBetting
 ```
 
 **Example:**
 ```
-NOV 29 RESULTS
+📊 DEC 1 | 9-1-1 | +$895
 
-5-2 | +$209.05
+✅ Mavs +11.5
+✅ Jazz +12.5
+✅ Nets +4.5
+✅ Ducks ML
+✅ Bulls +9
+✅ Hawks +9.5
+✅ Iona -1.5
+✅ UNA +5.5
+✅ MTSU +2.5
+🔄 Jets/Sabres O6
+❌ Pacers +6.5
 
-✅ Bills -3 +$181.82
-✅ Celtics -7 +$90.91
-❌ Chiefs ML -$150
-
-Portfolio: $41,893.40 (+$1,893.40)
+💰 94-68-2 | +$2,706 all-time
 
 #GamblingTwitter #SportsBetting
 ```
@@ -1133,6 +1256,34 @@ All-time: +$1,893.40 (+4.73%)
 | `data/metrics.json` | Calculated metrics (auto-synced) |
 | `lib/types.ts` | TypeScript type definitions |
 | `scripts/sync-all-data.ts` | **Master sync script** - recalculates everything from bets.json |
+
+---
+
+## AUTO-UPDATING PAGES (CRITICAL)
+
+**All these pages read directly from bets.json - they auto-update when data changes:**
+
+| Page | Route | What It Shows |
+|------|-------|---------------|
+| **Bet Tracker** | `/bets` | ALL settled bets, filterable by sport/type/fund |
+| **Daily Performance** | Homepage `#history` | Past 7 days of daily results with expandable bet details |
+| **Portfolio History** | `/portfolio/history` | Full daily performance history (all time) |
+| **Recent Bets** | Homepage `#bets` | Last 3 settled bets |
+| **Fund Pages** | `/funds/[fund]` | Individual fund performance and bets |
+| **Bet Detail** | `/bets/[slug]` | Individual bet analysis with thesis |
+
+### IMPORTANT: When Adding New Bets
+When you add bets to bets.json, ALL of these pages update automatically:
+1. **No manual updates needed** - pages read from bets.json directly
+2. **Clear Next.js cache if needed** - run `rm -rf .next && npm run dev` if data doesn't appear
+3. **After settling results** - run `npx tsx scripts/sync-all-data.ts` to update portfolio/chart/metrics
+
+### Checklist After Adding/Settling Bets:
+- [ ] bets.json updated with new bets or results
+- [ ] Run `npx tsx scripts/sync-all-data.ts` (updates portfolio, chart, metrics)
+- [ ] If dev server was running, restart or clear cache
+- [ ] Verify on `/bets` page that new bets appear
+- [ ] Verify on homepage that Daily Performance shows new day
 
 ---
 

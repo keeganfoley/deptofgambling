@@ -568,6 +568,7 @@ export default async function BetDetailPage({
   // FALLBACK: Basic bet view (no detailed analysis file)
   const bet = basicBet!;
   const isWin = bet.result === 'win';
+  const isPush = bet.result === 'push';
   const isPending = bet.result === 'pending';
   const fund = bet.fund ? fundInfo[bet.fund] : null;
 
@@ -585,7 +586,7 @@ export default async function BetDetailPage({
 
         {/* Header Card */}
         <div className={`card-float p-6 sm:p-8 mb-8 border-l-4 ${
-          isPending ? 'border-gray-400' : isWin ? 'border-success' : 'border-loss'
+          isPending ? 'border-gray-400' : isPush ? 'border-amber-500' : isWin ? 'border-success' : 'border-loss'
         }`}>
           <div className="flex flex-col sm:flex-row items-start sm:justify-between gap-4 mb-4">
             <div className="flex-1">
@@ -609,14 +610,14 @@ export default async function BetDetailPage({
               </p>
             </div>
             <div className={`text-left sm:text-right ${
-              isPending ? 'text-gray-500' : isWin ? 'text-success' : 'text-loss'
+              isPending ? 'text-gray-500' : isPush ? 'text-amber-500' : isWin ? 'text-success' : 'text-loss'
             }`}>
               <div className="text-3xl sm:text-4xl font-bold mb-1">
-                {isPending ? '⏳ PENDING' : isWin ? '✅ HIT' : '❌ MISS'}
+                {isPending ? '⏳ PENDING' : isPush ? '⟳ PUSH' : isWin ? '✅ HIT' : '❌ MISS'}
               </div>
               {!isPending && (
                 <div className="text-xl sm:text-2xl font-bold">
-                  {formatCurrency(bet.profit, true)}
+                  {isPush ? 'PUSH $0.00' : formatCurrency(bet.profit, true)}
                 </div>
               )}
             </div>

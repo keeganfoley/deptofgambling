@@ -34,9 +34,12 @@ export function formatUnits(value: number, showSign: boolean = true): string {
 }
 
 /**
- * Format record as W-L
+ * Format record as W-L-P (includes pushes for transparency)
  */
-export function formatRecord(wins: number, losses: number): string {
+export function formatRecord(wins: number, losses: number, pushes?: number): string {
+  if (pushes && pushes > 0) {
+    return `${wins}-${losses}-${pushes}`;
+  }
   return `${wins}-${losses}`;
 }
 

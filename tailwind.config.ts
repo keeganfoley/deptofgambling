@@ -17,25 +17,38 @@ const config: Config = {
     },
     extend: {
       colors: {
-        // Department of Gambling Color Palette
+        // Department of Gambling - Premium Hedge Fund Palette
         primary: {
-          DEFAULT: '#0A1F44', // Navy Blue
-          dark: '#06152E',
+          DEFAULT: '#0A1628', // Deep Navy (darker, more sophisticated)
+          dark: '#050D1A',
+          light: '#1A2D4A',
         },
         secondary: {
-          DEFAULT: '#4A90E2', // Steel Blue
-          light: '#7CB9E8',
+          DEFAULT: '#3B82F6', // Refined Blue
+          light: '#60A5FA',
+          dark: '#2563EB',
         },
         accent: {
-          DEFAULT: '#FF0080', // Electric Magenta (Prompt A accent color)
-          glow: '#FF33A1',
+          DEFAULT: '#F59E0B', // Gold/Amber (premium hedge fund feel)
+          glow: '#FBBF24',
+          muted: '#D97706',
         },
-        success: '#2ECC71',
-        loss: '#E74C3C',
-        background: '#F8F9FA',
+        success: '#10B981', // Emerald (sophisticated green)
+        'success-light': '#34D399',
+        loss: '#EF4444', // Refined red
+        'loss-light': '#F87171',
+        background: '#F8FAFC', // Slightly cooler white
+        'background-dark': '#0F172A', // For dark sections
+        surface: '#FFFFFF',
+        'surface-elevated': '#FFFFFF',
         text: {
-          DEFAULT: '#2C3E50',
-          muted: '#6B7280',
+          DEFAULT: '#1E293B', // Darker, more contrast
+          muted: '#64748B',
+          light: '#94A3B8',
+        },
+        border: {
+          DEFAULT: '#E2E8F0',
+          light: '#F1F5F9',
         },
       },
       fontFamily: {
@@ -55,6 +68,9 @@ const config: Config = {
         'slide-in-bottom': 'slide-in-bottom 0.6s ease-out',
         'fade-in': 'fade-in 0.8s ease-out',
         'draw-line': 'draw-line 2s ease-out',
+        'shimmer': 'shimmer 2s linear infinite',
+        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
       },
       keyframes: {
         'pulse-glow': {
@@ -77,6 +93,24 @@ const config: Config = {
           '0%': { strokeDashoffset: '1000' },
           '100%': { strokeDashoffset: '0' },
         },
+        'shimmer': {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'glow-pulse': {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(245, 158, 11, 0.1)' },
+          '50%': { boxShadow: '0 0 40px rgba(245, 158, 11, 0.2)' },
+        },
+        'float': {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-5px)' },
+        },
+      },
+      boxShadow: {
+        'premium': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 20px 25px -5px rgba(0, 0, 0, 0.03)',
+        'premium-hover': '0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+        'inner-glow': 'inset 0 1px 0 0 rgba(255, 255, 255, 0.1)',
+        'gold-glow': '0 0 30px rgba(245, 158, 11, 0.15)',
       },
     },
   },

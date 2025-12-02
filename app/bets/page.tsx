@@ -11,6 +11,7 @@ import portfolioData from '@/data/portfolio.json';
 import metricsData from '@/data/metrics.json';
 import CheckCircle from '@/components/icons/CheckCircle';
 import XCircle from '@/components/icons/XCircle';
+import MinusCircle from '@/components/icons/MinusCircle';
 
 // Fund display info
 const fundInfo: Record<string, { label: string; color: string; slug: string }> = {
@@ -47,61 +48,32 @@ interface BetCardProps {
 function BetCard({ bet, index }: BetCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const isMobile = window.innerWidth < 768;
-
-    if (isMobile) {
-      // Minimal animation on mobile for performance
-      gsap.fromTo(
-        cardRef.current,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.3,
-          delay: index * 0.05,
-          ease: 'power1.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 95%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    } else {
-      gsap.fromTo(
-        cardRef.current,
-        { y: 30, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.5,
-          delay: index * 0.1,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    }
-  }, [index]);
-
   const isWin = bet.result === 'win';
+  const isPush = bet.result === 'push';
   const hasDetailPage = !!bet.slug;
   const fund = bet.fund ? fundInfo[bet.fund] : null;
+
+  // Determine icon color: green for win, red for loss, gray for push
+  const getResultColor = () => {
+    if (isWin) return 'text-success';
+    if (isPush) return 'text-gray-400';
+    return 'text-loss';
+  };
+
+  // Determine which icon to show
+  const getResultIcon = () => {
+    if (isWin) return <CheckCircle className="w-8 h-8" />;
+    if (isPush) return <MinusCircle className="w-8 h-8" />;
+    return <XCircle className="w-8 h-8" />;
+  };
 
   const cardContent = (
     <>
       {/* Header Row */}
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className={`${isWin ? 'text-success' : 'text-loss'}`}>
-            {isWin ? (
-              <CheckCircle className="w-8 h-8" />
-            ) : (
-              <XCircle className="w-8 h-8" />
-            )}
+          <div className={getResultColor()}>
+            {getResultIcon()}
           </div>
           <div>
             <div className="text-sm text-text-muted">{formatDate(bet.date)}</div>
@@ -111,14 +83,12 @@ function BetCard({ bet, index }: BetCardProps) {
           </div>
         </div>
         {fund && (
-          <Link
-            href={`/funds/${fund.slug}`}
-            onClick={(e) => e.stopPropagation()}
-            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white hover:opacity-80 transition-opacity"
+          <span
+            className="px-2 py-1 text-xs font-bold uppercase tracking-wide rounded-sm text-white"
             style={{ backgroundColor: fund.color }}
           >
             {fund.label}
-          </Link>
+          </span>
         )}
       </div>
 
@@ -178,7 +148,7 @@ function BetCard({ bet, index }: BetCardProps) {
       <Link href={`/bets/${bet.slug}`}>
         <div
           ref={cardRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer md:transform md:hover:-translate-y-1"
+          className="stat-card p-5 sm:p-6 cursor-pointer group"
         >
           {cardContent}
         </div>
@@ -189,7 +159,7 @@ function BetCard({ bet, index }: BetCardProps) {
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-lg transition-all duration-300"
+      className="stat-card p-5 sm:p-6"
     >
       {cardContent}
     </div>
@@ -212,7 +182,14 @@ function BetsContent() {
   const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
   // Filter out pending bets - only show settled bets on public site
-  const allBets = (betsData as Bet[]).filter(bet => bet.result !== 'pending');
+  // Sort by date (newest first), then by ID (highest first)
+  const allBets = (betsData as Bet[])
+    .filter(bet => bet.result !== 'pending')
+    .sort((a, b) => {
+      const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime();
+      if (dateCompare !== 0) return dateCompare;
+      return b.id - a.id;
+    });
 
   // Map display names to actual betType values in data
   const betTypeMap: Record<string, string> = {
@@ -239,7 +216,8 @@ function BetsContent() {
   const calculateFilteredStats = () => {
     const wins = filteredBets.filter(b => b.result === 'win').length;
     const losses = filteredBets.filter(b => b.result === 'loss').length;
-    const total = wins + losses;
+    const pushes = filteredBets.filter(b => b.result === 'push').length;
+    const total = wins + losses; // Pushes don't count toward W/L total for win rate
     const netPL = filteredBets.reduce((sum, bet) => sum + bet.profit, 0);
     const totalExposure = filteredBets.reduce((sum, bet) => sum + (bet.stake * 100), 0);
     const unitsRisked = filteredBets.reduce((sum, bet) => sum + bet.stake, 0);
@@ -248,7 +226,7 @@ function BetsContent() {
     const unitsWon = netPL / 100;
 
     return {
-      record: { wins, losses, total },
+      record: { wins, losses, pushes, total },
       netPL,
       roi,
       winRate,
@@ -303,7 +281,7 @@ function BetsContent() {
             BET TRACKER
           </h1>
           <p className="text-center text-text-muted text-sm sm:text-base mb-4">
-            {filteredBets.length} positions · {formatRecord(stats.record.wins, stats.record.losses)} · {formatPercent(stats.roi)} ROI
+            {filteredBets.length} positions · {formatRecord(stats.record.wins, stats.record.losses, stats.record.pushes)} · {formatPercent(stats.roi)} ROI
           </p>
           <div
             ref={headerLineBottomRef}
@@ -445,8 +423,8 @@ function BetsContent() {
         {/* Quick Stats Bar - Compact on Mobile */}
         <div className="grid grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
           <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
-            <div className="text-base sm:text-2xl font-bold text-primary mono-number">{formatRecord(stats.record.wins, stats.record.losses)}</div>
-            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">Record</div>
+            <div className="text-base sm:text-2xl font-bold text-primary mono-number">{formatRecord(stats.record.wins, stats.record.losses, stats.record.pushes)}</div>
+            <div className="text-[9px] sm:text-xs text-gray-500 uppercase">W-L-P</div>
           </div>
           <div className="bg-white border border-gray-200 rounded-lg p-2 sm:p-3 text-center">
             <div className={`text-base sm:text-2xl font-bold mono-number ${stats.netPL >= 0 ? 'text-success' : 'text-loss'}`}>

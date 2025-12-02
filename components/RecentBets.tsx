@@ -9,6 +9,7 @@ import betsData from '@/data/bets.json';
 import portfolioData from '@/data/portfolio.json';
 import CheckCircle from './icons/CheckCircle';
 import XCircle from './icons/XCircle';
+import MinusCircle from './icons/MinusCircle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,20 +88,31 @@ function BetCard({ bet, index }: BetCardProps) {
   }, [index]);
 
   const isWin = bet.result === 'win';
+  const isPush = bet.result === 'push';
   const hasDetailPage = !!bet.slug;
   const fund = bet.fund ? fundInfo[bet.fund] : null;
+
+  // Determine icon color: green for win, red for loss, gray for push
+  const getResultColor = () => {
+    if (isWin) return 'text-success';
+    if (isPush) return 'text-gray-400';
+    return 'text-loss';
+  };
+
+  // Determine which icon to show
+  const getResultIcon = () => {
+    if (isWin) return <CheckCircle className="w-8 h-8" />;
+    if (isPush) return <MinusCircle className="w-8 h-8" />;
+    return <XCircle className="w-8 h-8" />;
+  };
 
   const cardContent = (
     <>
       {/* Header Row */}
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className={`${isWin ? 'text-success' : 'text-loss'}`}>
-            {isWin ? (
-              <CheckCircle className="w-8 h-8" />
-            ) : (
-              <XCircle className="w-8 h-8" />
-            )}
+          <div className={getResultColor()}>
+            {getResultIcon()}
           </div>
           <div>
             <div className="text-sm text-text-muted">{formatDate(bet.date)}</div>
@@ -175,7 +187,7 @@ function BetCard({ bet, index }: BetCardProps) {
       <Link href={`/bets/${bet.slug}`}>
         <div
           ref={cardRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer md:transform md:hover:-translate-y-1"
+          className="stat-card p-5 sm:p-6 cursor-pointer group"
         >
           {cardContent}
         </div>
@@ -186,7 +198,7 @@ function BetCard({ bet, index }: BetCardProps) {
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-lg transition-all duration-300"
+      className="stat-card p-5 sm:p-6"
     >
       {cardContent}
     </div>
@@ -195,8 +207,6 @@ function BetCard({ bet, index }: BetCardProps) {
 
 export default function RecentBets() {
   const sectionRef = useRef<HTMLElement>(null);
-  const headerLineTopRef = useRef<HTMLDivElement>(null);
-  const headerLineBottomRef = useRef<HTMLDivElement>(null);
 
   // Show only the most recent 3 settled bets (filter out pending, sort by date descending, then ID descending)
   const recentBets = (betsData as Bet[])
@@ -207,41 +217,26 @@ export default function RecentBets() {
     })
     .slice(0, 3);
 
-  useEffect(() => {
-    gsap.fromTo(
-      [headerLineTopRef.current, headerLineBottomRef.current],
-      { scaleX: 0, transformOrigin: 'center' },
-      {
-        scaleX: 1,
-        duration: 1,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: 'top 80%',
-          toggleActions: 'play none none none',
-        },
-      }
-    );
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-16 sm:py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-16">
-          <div
-            ref={headerLineTopRef}
-            className="h-[2px] bg-primary mb-6"
-            style={{ transformOrigin: 'center' }}
-          />
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
-            RECENT POSITIONS
+    <section ref={sectionRef} className="py-16 sm:py-24 px-4 bg-background relative">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-success/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        {/* Section Header - Premium Style */}
+        <div className="text-center mb-10 sm:mb-14">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-success animate-pulse" />
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Recent Activity</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
+            Recent Positions
           </h2>
-          <div
-            ref={headerLineBottomRef}
-            className="h-[2px] bg-primary mt-6"
-            style={{ transformOrigin: 'center' }}
-          />
+          <p className="text-text-muted text-sm sm:text-base">
+            Latest settled positions across all funds
+          </p>
         </div>
 
         {/* Bet Timeline */}
@@ -255,12 +250,12 @@ export default function RecentBets() {
         <div className="text-center mt-12">
           <Link
             href="/bets"
-            className="text-secondary hover:text-accent font-bold text-lg tracking-wide transition-colors duration-300 group inline-flex items-center gap-2"
+            className="group inline-flex items-center gap-3 px-6 py-3 bg-white hover:bg-gray-50 text-primary font-semibold text-sm uppercase tracking-wide transition-all duration-300 rounded-lg border border-gray-200 hover:border-primary/20 shadow-sm hover:shadow-md"
           >
-            See All Bets
-            <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
+            <span>View All Positions</span>
+            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>

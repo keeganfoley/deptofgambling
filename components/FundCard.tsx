@@ -59,40 +59,23 @@ export default function FundCard({ fundKey, fund, index }: FundCardProps) {
   useEffect(() => {
     const isMobile = window.innerWidth < 768;
 
-    if (isMobile) {
-      gsap.fromTo(
-        cardRef.current,
-        { opacity: 0 },
-        {
-          opacity: 1,
-          duration: 0.4,
-          delay: index * 0.08,
-          ease: 'power2.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    } else {
-      gsap.fromTo(
-        cardRef.current,
-        { y: 50, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          delay: index * 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: cardRef.current,
-            start: 'top 85%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    }
+    gsap.fromTo(
+      cardRef.current,
+      { y: isMobile ? 20 : 40, opacity: 0, scale: 0.98 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        duration: isMobile ? 0.5 : 0.7,
+        delay: index * (isMobile ? 0.08 : 0.12),
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: cardRef.current,
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
   }, [index]);
 
   const slug = fundSlugMap[fundKey] || 'vector';
@@ -102,8 +85,8 @@ export default function FundCard({ fundKey, fund, index }: FundCardProps) {
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm overflow-hidden card-float opacity-0"
-      style={{ borderLeft: `4px solid ${fund.color}` }}
+      className="stat-card overflow-hidden opacity-0 group"
+      style={{ borderTop: `3px solid ${fund.color}` }}
     >
       {/* Content */}
       <div className="p-4">
@@ -141,12 +124,12 @@ export default function FundCard({ fundKey, fund, index }: FundCardProps) {
 
             {/* Record */}
             <div>
-              <div className="data-label text-xs uppercase mb-1">Record</div>
+              <div className="data-label text-xs uppercase mb-1">Record (W-L-P)</div>
               <div className="text-lg data-value text-primary mono-number">
                 {isDeploying && !hasActivity ? (
                   <span className="text-text-muted italic">Deploying</span>
                 ) : (
-                  formatRecord(fund.record.wins, fund.record.losses)
+                  formatRecord(fund.record.wins, fund.record.losses, fund.record.pushes)
                 )}
               </div>
             </div>
@@ -186,12 +169,15 @@ export default function FundCard({ fundKey, fund, index }: FundCardProps) {
         </div>
 
         {/* View Fund CTA */}
-        <div className="mt-4 pt-3 border-t border-gray-200">
+        <div className="mt-4 pt-3 border-t border-gray-100">
           <Link
             href={`/funds/${slug}`}
-            className="inline-block w-full text-center px-4 py-2.5 bg-secondary hover:bg-accent text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 rounded-sm"
+            className="flex items-center justify-center gap-2 w-full text-center px-4 py-3 bg-primary hover:bg-primary-light text-white font-semibold text-sm uppercase tracking-wide transition-all duration-300 rounded-lg group-hover:shadow-lg"
           >
-            View Fund →
+            <span>View Fund</span>
+            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </Link>
         </div>
       </div>

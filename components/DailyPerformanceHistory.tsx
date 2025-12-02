@@ -19,6 +19,8 @@ interface Bet {
   profit: number;
   betType: string;
   slug: string;
+  thesis?: string;
+  fund?: string;
 }
 
 interface DailyData {
@@ -26,10 +28,18 @@ interface DailyData {
   bets: Bet[];
   dailyPL: number;
   endingBalance: number;
-  record: { wins: number; losses: number };
+  record: { wins: number; losses: number; pushes: number };
 }
 
 const STARTING_BALANCE = 40000;
+
+// Format record with pushes
+const formatRecord = (wins: number, losses: number, pushes: number): string => {
+  if (pushes > 0) {
+    return `${wins}-${losses}-${pushes}`;
+  }
+  return `${wins}-${losses}`;
+};
 
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
@@ -70,13 +80,14 @@ export default function DailyPerformanceHistory() {
 
       const wins = bets.filter(b => b.result === 'win').length;
       const losses = bets.filter(b => b.result === 'loss').length;
+      const pushes = bets.filter(b => b.result === 'push').length;
 
       dailyDataReversed.push({
         date,
         bets,
         dailyPL,
         endingBalance: runningBalance,
-        record: { wins, losses }
+        record: { wins, losses, pushes }
       });
     });
 
@@ -196,7 +207,7 @@ export default function DailyPerformanceHistory() {
                     <div className="flex flex-col items-end">
                       <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Record</span>
                       <span className="text-gray-400 font-bold text-sm tracking-tight">
-                        {day.record.wins}-{day.record.losses}
+                        {formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
                       </span>
                     </div>
                   </div>
@@ -226,7 +237,7 @@ export default function DailyPerformanceHistory() {
                     {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {day.dailyPL >= 0 ? '▲' : '▼'}
                   </span>
                   <span className="text-gray-400">
-                    {day.record.wins}-{day.record.losses}
+                    {formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
                   </span>
                   <span className="ml-auto text-gray-500 text-sm">
                     {expandedDay === day.date ? '[Collapse ▲]' : '[Expand ▼]'}
@@ -244,13 +255,15 @@ export default function DailyPerformanceHistory() {
                       className={`block border-2 ${
                         bet.result === 'win'
                           ? 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10'
+                          : bet.result === 'push'
+                          ? 'border-[#c5a572] bg-[#c5a572]/5 hover:bg-[#c5a572]/10'
                           : 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10'
                       } p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
                     >
                       <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
                         <div className="flex items-start gap-2 sm:gap-3 flex-1">
-                          <span className={`text-xl sm:text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                            {bet.result === 'win' ? '✓' : '✗'}
+                          <span className={`text-xl sm:text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'}`}>
+                            {bet.result === 'win' ? '✓' : bet.result === 'push' ? '⟳' : '✗'}
                           </span>
                           <div className="flex-1 min-w-0">
                             <p className="text-white font-bold text-base sm:text-xl break-words">
@@ -267,10 +280,15 @@ export default function DailyPerformanceHistory() {
                         <p className="text-gray-300 text-xs sm:text-base font-mono break-words">
                           Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
                         </p>
+                        {bet.thesis && (
+                          <p className="text-gray-400 text-xs sm:text-sm italic break-words mt-2 border-l-2 border-[#c5a572]/50 pl-3">
+                            {bet.thesis}
+                          </p>
+                        )}
                         <p className={`font-bold text-xl sm:text-3xl font-mono ${
-                          bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'
+                          bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'
                         }`}>
-                          {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
+                          {bet.result === 'push' ? 'PUSH $0.00' : `${bet.profit >= 0 ? '+' : ''}$${bet.profit.toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
                         </p>
                       </div>
                     </a>

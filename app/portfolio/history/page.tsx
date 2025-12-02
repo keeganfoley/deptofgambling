@@ -19,6 +19,8 @@ interface Bet {
   profit: number;
   betType: string;
   slug: string;
+  thesis?: string;
+  fund?: string;
 }
 
 interface DailyData {
@@ -26,7 +28,7 @@ interface DailyData {
   bets: Bet[];
   dailyPL: number;
   endingBalance: number;
-  record: { wins: number; losses: number };
+  record: { wins: number; losses: number; pushes: number };
 }
 
 type FilterType = 'all' | '30' | '7';
@@ -73,13 +75,14 @@ export default function DailyHistoryPage() {
 
       const wins = bets.filter(b => b.result === 'win').length;
       const losses = bets.filter(b => b.result === 'loss').length;
+      const pushes = bets.filter(b => b.result === 'push').length;
 
       dailyDataReversed.push({
         date,
         bets,
         dailyPL,
         endingBalance: runningBalance,
-        record: { wins, losses }
+        record: { wins, losses, pushes }
       });
     });
 
@@ -110,6 +113,15 @@ export default function DailyHistoryPage() {
     totalPL: filteredData.reduce((sum, d) => sum + d.dailyPL, 0),
     totalWins: filteredData.reduce((sum, d) => sum + d.record.wins, 0),
     totalLosses: filteredData.reduce((sum, d) => sum + d.record.losses, 0),
+    totalPushes: filteredData.reduce((sum, d) => sum + d.record.pushes, 0),
+  };
+
+  // Format record with pushes
+  const formatDailyRecord = (wins: number, losses: number, pushes: number) => {
+    if (pushes > 0) {
+      return `${wins}-${losses}-${pushes}`;
+    }
+    return `${wins}-${losses}`;
   };
 
   // Format date for display (UTC to avoid timezone issues)
@@ -192,9 +204,9 @@ export default function DailyHistoryPage() {
             </div>
           </div>
           <div className="bg-[#1a2f54]/60 border-2 border-gray-700 p-4 text-center">
-            <div className="text-gray-400 text-xs uppercase mb-1">Record</div>
+            <div className="text-gray-400 text-xs uppercase mb-1">Record (W-L-P)</div>
             <div className="text-xl font-bold font-mono text-white">
-              {summaryStats.totalWins}-{summaryStats.totalLosses}
+              {formatDailyRecord(summaryStats.totalWins, summaryStats.totalLosses, summaryStats.totalPushes)}
             </div>
           </div>
           <div className="bg-[#1a2f54]/60 border-2 border-gray-700 p-4 text-center">
@@ -227,7 +239,7 @@ export default function DailyHistoryPage() {
                   </div>
                   <div className="flex items-center gap-4 sm:gap-6">
                     <span className="text-gray-400 text-sm hidden sm:inline">
-                      {day.record.wins}-{day.record.losses}
+                      {formatDailyRecord(day.record.wins, day.record.losses, day.record.pushes)}
                     </span>
                     <span className="text-white font-bold text-sm hidden sm:inline">
                       ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
@@ -254,25 +266,38 @@ export default function DailyHistoryPage() {
                     <div className="text-right">
                       <div className="text-gray-500 text-xs uppercase">Record</div>
                       <div className="text-white font-bold font-mono">
-                        {day.record.wins}-{day.record.losses}
+                        {formatDailyRecord(day.record.wins, day.record.losses, day.record.pushes)}
                       </div>
                     </div>
                   </div>
 
-                  {day.bets.map((bet) => (
+                  {day.bets.map((bet) => {
+                    const getBetStyles = () => {
+                      if (bet.result === 'win') return 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10';
+                      if (bet.result === 'push') return 'border-gray-500 bg-gray-500/5 hover:bg-gray-500/10';
+                      return 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10';
+                    };
+                    const getBetColor = () => {
+                      if (bet.result === 'win') return 'text-[#22c55e]';
+                      if (bet.result === 'push') return 'text-gray-400';
+                      return 'text-[#ef4444]';
+                    };
+                    const getBetIcon = () => {
+                      if (bet.result === 'win') return '✓';
+                      if (bet.result === 'push') return '—';
+                      return '✗';
+                    };
+
+                    return (
                     <Link
                       key={bet.id}
                       href={`/bets/${bet.slug}`}
-                      className={`block border-2 ${
-                        bet.result === 'win'
-                          ? 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10'
-                          : 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10'
-                      } p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
+                      className={`block border-2 ${getBetStyles()} p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
                     >
                       <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
                         <div className="flex items-start gap-2 sm:gap-3 flex-1">
-                          <span className={`text-xl sm:text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                            {bet.result === 'win' ? '✓' : '✗'}
+                          <span className={`text-xl sm:text-2xl font-bold ${getBetColor()}`}>
+                            {getBetIcon()}
                           </span>
                           <div className="flex-1 min-w-0">
                             <p className="text-white font-bold text-base sm:text-xl break-words">
@@ -290,14 +315,18 @@ export default function DailyHistoryPage() {
                         <p className="text-gray-300 text-xs sm:text-base font-mono break-words">
                           Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
                         </p>
-                        <p className={`font-bold text-xl sm:text-3xl font-mono ${
-                          bet.result === 'win' ? 'text-[#22c55e]' : 'text-[#ef4444]'
-                        }`}>
-                          {bet.profit >= 0 ? '+' : ''}${bet.profit.toFixed(2)} {bet.result === 'win' ? '↑' : '↓'}
+                        {bet.thesis && (
+                          <p className="text-gray-400 text-xs sm:text-sm italic break-words mt-2 border-l-2 border-[#c5a572]/50 pl-3">
+                            {bet.thesis}
+                          </p>
+                        )}
+                        <p className={`font-bold text-xl sm:text-3xl font-mono ${getBetColor()}`}>
+                          {bet.result === 'push' ? 'PUSH $0.00' : `${bet.profit >= 0 ? '+' : ''}$${bet.profit.toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
                         </p>
                       </div>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

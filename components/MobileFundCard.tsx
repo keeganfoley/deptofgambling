@@ -45,8 +45,8 @@ export default function MobileFundCard({ fundKey, fund }: MobileFundCardProps) {
 
   return (
     <div
-      className="bg-white rounded-lg overflow-hidden border-2 border-gray-100 shadow-sm"
-      style={{ borderLeftColor: fund.color, borderLeftWidth: '4px' }}
+      className="stat-card overflow-hidden"
+      style={{ borderTop: `3px solid ${fund.color}` }}
     >
       <div className="p-4">
         {/* Logo - smaller on mobile */}
@@ -75,9 +75,9 @@ export default function MobileFundCard({ fundKey, fund }: MobileFundCardProps) {
             </div>
           </div>
           <div className="bg-gray-50 rounded-md p-2">
-            <div className="text-[10px] text-gray-500 uppercase">Record</div>
+            <div className="text-[10px] text-gray-500 uppercase">W-L-P</div>
             <div className="text-sm font-bold text-primary mono-number">
-              {hasActivity ? formatRecord(fund.record.wins, fund.record.losses) : '-'}
+              {hasActivity ? formatRecord(fund.record.wins, fund.record.losses, fund.record.pushes) : '-'}
             </div>
           </div>
           <div className="bg-gray-50 rounded-md p-2">
@@ -97,9 +97,12 @@ export default function MobileFundCard({ fundKey, fund }: MobileFundCardProps) {
         {/* CTA Button */}
         <Link
           href={`/funds/${slug}`}
-          className="block mt-3 text-center py-2.5 bg-secondary hover:bg-accent text-white font-bold text-sm rounded-md transition-colors"
+          className="flex items-center justify-center gap-2 mt-3 py-3 bg-primary hover:bg-primary-light text-white font-semibold text-sm rounded-lg transition-all duration-300"
         >
-          View Fund Details
+          <span>View Fund</span>
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
         </Link>
       </div>
     </div>

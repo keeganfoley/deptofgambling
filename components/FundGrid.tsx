@@ -20,21 +20,21 @@ const fundSlugMap: Record<string, string> = {
 
 export default function FundGrid() {
   const sectionRef = useRef<HTMLElement>(null);
-  const headerLineTopRef = useRef<HTMLDivElement>(null);
-  const headerLineBottomRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const [activeFund, setActiveFund] = useState(0);
 
   const funds = portfolioData.funds;
   const fundEntries = Object.entries(funds);
 
   useEffect(() => {
-    // Header lines animation
+    // Header animation
     gsap.fromTo(
-      [headerLineTopRef.current, headerLineBottomRef.current],
-      { scaleX: 0, transformOrigin: 'center' },
+      headerRef.current,
+      { y: 20, opacity: 0 },
       {
-        scaleX: 1,
-        duration: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -46,23 +46,25 @@ export default function FundGrid() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="funds" className="py-12 sm:py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header with Lines */}
-        <div className="mb-8 sm:mb-16">
-          <div
-            ref={headerLineTopRef}
-            className="h-[2px] bg-primary mb-4 sm:mb-6"
-            style={{ transformOrigin: 'center' }}
-          />
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
-            THE FUNDS
+    <section ref={sectionRef} id="funds" className="py-16 sm:py-24 px-4 bg-white relative">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/3 rounded-full blur-3xl" />
+        <div className="absolute top-1/4 right-0 w-64 h-64 bg-accent/3 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        {/* Section Header - Premium Style */}
+        <div ref={headerRef} className="text-center mb-10 sm:mb-16 opacity-0">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Multi-Strategy Approach</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
+            The Funds
           </h2>
-          <div
-            ref={headerLineBottomRef}
-            className="h-[2px] bg-primary mt-4 sm:mt-6"
-            style={{ transformOrigin: 'center' }}
-          />
+          <p className="text-text-muted text-sm sm:text-base max-w-2xl mx-auto">
+            Four specialized strategies working in parallel to capture edge across different market conditions
+          </p>
         </div>
 
         {/* Mobile: Horizontal Swiper with Dots */}

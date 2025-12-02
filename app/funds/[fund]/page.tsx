@@ -11,6 +11,7 @@ import betsData from '@/data/bets.json';
 import metricsData from '@/data/metrics.json';
 import CheckCircle from '@/components/icons/CheckCircle';
 import XCircle from '@/components/icons/XCircle';
+import MinusCircle from '@/components/icons/MinusCircle';
 import FundChart from '@/components/FundChart';
 import {
   calculateDrawdown,
@@ -133,18 +134,28 @@ function BetCard({ bet, index }: { bet: Bet; index: number }) {
   }, [index]);
 
   const isWin = bet.result === 'win';
+  const isPush = bet.result === 'push';
   const hasDetailPage = !!bet.slug;
+
+  // Determine icon color and icon based on result
+  const getResultColor = () => {
+    if (isWin) return 'text-success';
+    if (isPush) return 'text-gray-400';
+    return 'text-loss';
+  };
+
+  const getResultIcon = () => {
+    if (isWin) return <CheckCircle className="w-8 h-8" />;
+    if (isPush) return <MinusCircle className="w-8 h-8" />;
+    return <XCircle className="w-8 h-8" />;
+  };
 
   const cardContent = (
     <>
       <div className="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
         <div className="flex items-center gap-3">
-          <div className={`${isWin ? 'text-success' : 'text-loss'}`}>
-            {isWin ? (
-              <CheckCircle className="w-8 h-8" />
-            ) : (
-              <XCircle className="w-8 h-8" />
-            )}
+          <div className={getResultColor()}>
+            {getResultIcon()}
           </div>
           <div>
             <div className="text-sm text-text-muted">{formatDate(bet.date)}</div>
@@ -208,7 +219,7 @@ function BetCard({ bet, index }: { bet: Bet; index: number }) {
       <Link href={`/bets/${bet.slug}`}>
         <div
           ref={cardRef}
-          className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6 hover:shadow-xl hover:border-accent/40 transition-all duration-300 cursor-pointer"
+          className="stat-card p-5 sm:p-6 cursor-pointer group"
         >
           {cardContent}
         </div>
@@ -219,7 +230,7 @@ function BetCard({ bet, index }: { bet: Bet; index: number }) {
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm border-2 border-gray-200 p-5 sm:p-6"
+      className="stat-card p-5 sm:p-6"
     >
       {cardContent}
     </div>
@@ -357,11 +368,11 @@ export default function FundPage() {
             </div>
 
             <div className="bg-gray-50 p-3 md:p-5 rounded-sm">
-              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">Record</div>
+              <div className="data-label text-[10px] md:text-xs uppercase mb-1 md:mb-2">Record (W-L-P)</div>
               <div className="text-lg md:text-3xl font-bold text-primary mono-number">
                 {isDeploying && !hasActivity
                   ? '-'
-                  : formatRecord(fund.record.wins, fund.record.losses)}
+                  : formatRecord(fund.record.wins, fund.record.losses, fund.record.pushes)}
               </div>
               <div className="text-[10px] md:text-sm text-gray-600 mt-1 md:mt-2 mono-number">
                 {isDeploying && !hasActivity

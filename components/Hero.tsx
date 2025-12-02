@@ -91,7 +91,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
         {/* Government Seal */}
-        <div ref={sealRef} className="mb-6 md:mb-8 flex justify-center opacity-0">
+        <div ref={sealRef} className="mb-6 md:mb-8 flex justify-center animate-[fadeIn_0.2s_ease-out_forwards]">
           <Image
             src="/logo.png"
             alt="Department of Gambling Official Seal"
@@ -113,7 +113,7 @@ export default function Hero() {
         {/* Main Title */}
         <h1
           ref={titleRef}
-          className="text-4xl sm:text-6xl md:text-8xl font-semibold text-white mb-4 opacity-0 leading-tight"
+          className="text-4xl sm:text-6xl md:text-8xl font-semibold text-white mb-4 animate-[fadeIn_0.2s_ease-out_0.05s_forwards] leading-tight"
         >
           DEPARTMENT OF
           <br />
@@ -123,7 +123,7 @@ export default function Hero() {
         {/* Subtitle */}
         <p
           ref={subtitleRef}
-          className="text-lg sm:text-xl md:text-2xl font-medium text-secondary-light mb-6 opacity-0"
+          className="text-lg sm:text-xl md:text-2xl font-medium text-secondary-light mb-6 animate-[fadeIn_0.2s_ease-out_0.1s_forwards]"
           style={{ letterSpacing: '0.04em' }}
         >
           Office of Odds & Wagers
@@ -132,7 +132,7 @@ export default function Hero() {
         {/* Tagline */}
         <p
           ref={taglineRef}
-          className="text-base md:text-lg text-gray-300 mb-12 font-medium italic opacity-0"
+          className="text-base md:text-lg text-gray-300 mb-12 font-medium italic animate-[fadeIn_0.2s_ease-out_0.15s_forwards]"
         >
           &ldquo;Systematic. Transparent. Mathematically Driven.&rdquo;
         </p>
@@ -145,7 +145,7 @@ export default function Hero() {
         />
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center opacity-0" ref={ctaRef}>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-[fadeIn_0.2s_ease-out_0.2s_forwards]" ref={ctaRef}>
           <button
             onClick={handleScrollToPortfolio}
             className="group relative px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-accent text-white font-bold text-base sm:text-lg tracking-wide transition-all duration-300 hover:bg-accent hover:border-accent hover:shadow-[0_0_30px_rgba(255,0,128,0.5)]"

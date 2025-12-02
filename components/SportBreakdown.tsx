@@ -32,7 +32,7 @@ function getSportIcon(sport: string, className: string = "w-7 h-7 text-accent") 
 
 interface SportCardProps {
   sport: string;
-  record: { wins: number; losses: number; total: number };
+  record: { wins: number; losses: number; pushes?: number; total: number };
   roi: number;
   netPL: number;
   unitsWon: number;
@@ -97,34 +97,34 @@ function SportCard({
   return (
     <div
       ref={cardRef}
-      className="bg-white rounded-sm overflow-hidden card-float magenta-glow opacity-0"
+      className="stat-card overflow-hidden opacity-0"
     >
       {/* Header with icon */}
-      <div className="bg-primary px-6 py-4 flex items-center justify-center">
-        <div className="w-12 h-12 flex items-center justify-center bg-secondary bg-opacity-20 rounded-full">
+      <div className="bg-primary px-6 py-5 flex items-center justify-center">
+        <div className="w-12 h-12 flex items-center justify-center bg-white/10 rounded-full">
           {getSportIcon(sport, "w-7 h-7 text-accent")}
         </div>
       </div>
 
       {/* Content */}
       <div className="p-5 sm:p-6">
-        <h3 className="text-xl sm:text-2xl font-medium text-primary mb-4" style={{ letterSpacing: '0.02em' }}>{sport}</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-primary mb-4 tracking-tight">{sport}</h3>
 
-        <div className="border-t border-gray-200 pt-4">
+        <div className="border-t border-gray-100 pt-4">
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             <div>
-              <div className="data-label text-xs uppercase mb-1">Record</div>
-              <div className="text-lg data-value text-primary mono-number">
-                {formatRecord(record.wins, record.losses)}
+              <div className="text-[10px] sm:text-xs uppercase tracking-widest text-text-muted font-medium mb-1">Record</div>
+              <div className="text-lg font-bold text-primary mono-number">
+                {formatRecord(record.wins, record.losses, record.pushes)}
               </div>
-              <div className="text-xs text-gray-600 mt-1 mono-number">
-                {((record.wins / record.total) * 100).toFixed(2)}% Win Rate
+              <div className="text-xs text-text-light mt-1 mono-number">
+                {((record.wins / record.total) * 100).toFixed(1)}% Win Rate
               </div>
             </div>
             <div>
-              <div className="data-label text-xs uppercase mb-1">ROI</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-widest text-text-muted font-medium mb-1">ROI</div>
               <div
-                className={`text-lg data-value mono-number ${
+                className={`text-lg font-bold mono-number ${
                   roi >= 0 ? 'text-success' : 'text-loss'
                 }`}
               >
@@ -132,9 +132,9 @@ function SportCard({
               </div>
             </div>
             <div>
-              <div className="data-label text-xs uppercase mb-1">P/L</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-widest text-text-muted font-medium mb-1">P/L</div>
               <div
-                className={`text-lg data-value mono-number ${
+                className={`text-lg font-bold mono-number ${
                   netPL >= 0 ? 'text-success' : 'text-loss'
                 }`}
               >
@@ -142,9 +142,9 @@ function SportCard({
               </div>
             </div>
             <div>
-              <div className="data-label text-xs uppercase mb-1">Units</div>
+              <div className="text-[10px] sm:text-xs uppercase tracking-widest text-text-muted font-medium mb-1">Units</div>
               <div
-                className={`text-lg data-value mono-number ${
+                className={`text-lg font-bold mono-number ${
                   unitsWon >= 0 ? 'text-success' : 'text-loss'
                 }`}
               >
@@ -155,12 +155,15 @@ function SportCard({
         </div>
 
         {/* View Bets CTA */}
-        <div className="mt-6 pt-4 border-t border-gray-200">
+        <div className="mt-6 pt-4 border-t border-gray-100">
           <a
             href={`/bets?sport=${sport}`}
-            className="inline-block w-full text-center px-6 py-3 bg-secondary hover:bg-accent text-white font-bold text-sm uppercase tracking-wide transition-all duration-300 rounded-sm"
+            className="flex items-center justify-center gap-2 w-full text-center px-6 py-3 bg-primary hover:bg-primary-light text-white font-semibold text-sm uppercase tracking-wide transition-all duration-300 rounded-lg group"
           >
-            View {sport} Bets →
+            <span>View {sport} Positions</span>
+            <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </a>
         </div>
       </div>
@@ -171,7 +174,7 @@ function SportCard({
 // Mobile Sport Accordion
 function MobileSportAccordion({ sport, record, roi, netPL, unitsWon }: {
   sport: string;
-  record: { wins: number; losses: number; total: number };
+  record: { wins: number; losses: number; pushes?: number; total: number };
   roi: number;
   netPL: number;
   unitsWon: number;
@@ -189,10 +192,10 @@ function MobileSportAccordion({ sport, record, roi, netPL, unitsWon }: {
   }, [isOpen]);
 
   return (
-    <div className="border-2 border-gray-200 rounded-lg overflow-hidden bg-white">
+    <div className="stat-card overflow-hidden">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full px-4 py-3 flex items-center justify-between bg-white"
+        className="w-full px-4 py-3 flex items-center justify-between"
       >
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 flex items-center justify-center bg-primary rounded-full">
@@ -200,7 +203,7 @@ function MobileSportAccordion({ sport, record, roi, netPL, unitsWon }: {
           </div>
           <div className="text-left">
             <div className="font-bold text-primary">{sport}</div>
-            <div className="text-xs text-gray-500">{formatRecord(record.wins, record.losses)}</div>
+            <div className="text-xs text-text-muted">{formatRecord(record.wins, record.losses, record.pushes)}</div>
           </div>
         </div>
         <div className="flex items-center gap-3">
@@ -255,19 +258,18 @@ function MobileSportAccordion({ sport, record, roi, netPL, unitsWon }: {
 
 export default function SportBreakdown() {
   const sectionRef = useRef<HTMLElement>(null);
-  const headerLineTopRef = useRef<HTMLDivElement>(null);
-  const headerLineBottomRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
 
   const sports = metricsData.sportBreakdown;
 
   useEffect(() => {
-    // Header lines animation
     gsap.fromTo(
-      [headerLineTopRef.current, headerLineBottomRef.current],
-      { scaleX: 0, transformOrigin: 'center' },
+      headerRef.current,
+      { y: 20, opacity: 0 },
       {
-        scaleX: 1,
-        duration: 1,
+        y: 0,
+        opacity: 1,
+        duration: 0.8,
         ease: 'power3.out',
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -279,23 +281,24 @@ export default function SportBreakdown() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="sports" className="py-12 sm:py-20 px-4 bg-white">
-      <div className="max-w-6xl mx-auto">
-        {/* Section Header with Lines */}
-        <div className="mb-8 sm:mb-16">
-          <div
-            ref={headerLineTopRef}
-            className="h-[2px] bg-primary mb-4 sm:mb-6"
-            style={{ transformOrigin: 'center' }}
-          />
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-semibold text-primary text-center">
-            THE SPORTS
+    <section ref={sectionRef} id="sports" className="py-16 sm:py-24 px-4 bg-background relative">
+      {/* Subtle background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-success/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="max-w-6xl mx-auto relative">
+        {/* Section Header - Premium Style */}
+        <div ref={headerRef} className="text-center mb-10 sm:mb-16 opacity-0">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 mb-6">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">Performance by Sport</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-primary mb-4 tracking-tight">
+            Sport Breakdown
           </h2>
-          <div
-            ref={headerLineBottomRef}
-            className="h-[2px] bg-primary mt-4 sm:mt-6"
-            style={{ transformOrigin: 'center' }}
-          />
+          <p className="text-text-muted text-sm sm:text-base max-w-2xl mx-auto">
+            Detailed performance metrics across each sport we analyze
+          </p>
         </div>
 
         {/* Mobile: Accordion Style */}
@@ -313,12 +316,12 @@ export default function SportBreakdown() {
         </div>
 
         {/* Desktop: Sport Cards Grid */}
-        <div className="hidden md:grid grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
+        <div className="hidden md:grid grid-cols-2 gap-6 max-w-5xl mx-auto">
           {Object.values(sports).map((sport, index) => (
             <SportCard
               key={sport.sport}
               sport={sport.sport}
-              record={sport.record}
+              record={sport.record as any}
               roi={sport.roi}
               netPL={sport.pnl}
               unitsWon={sport.unitsWon}
