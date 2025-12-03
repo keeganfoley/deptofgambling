@@ -1,117 +1,117 @@
 {
-  "totalBets": 164,
-  "wins": 94,
-  "losses": 68,
+  "totalBets": 175,
+  "wins": 101,
+  "losses": 72,
   "pushes": 2,
-  "winRate": "58.02",
-  "totalWinnings": 12271.03,
-  "totalLossesAmount": 9570,
-  "avgWin": 130.54,
-  "avgLoss": -140.74,
-  "avgProfitPerBet": 16.47,
+  "winRate": "58.38",
+  "totalWinnings": 12995.38,
+  "totalLossesAmount": 10070,
+  "avgWin": 128.67,
+  "avgLoss": -139.86,
+  "avgProfitPerBet": 16.72,
   "medianProfit": 0,
   "largestWin": 320,
   "largestLoss": -250,
-  "profitFactor": 1.282,
+  "profitFactor": 1.291,
   "maxWinStreak": 8,
   "maxLossStreak": 8,
-  "currentStreak": 3,
-  "totalCapitalRisked": 22965,
-  "unitsRisked": 229.65,
+  "currentStreak": -1,
+  "totalCapitalRisked": 24315,
+  "unitsRisked": 243.15,
   "maxDrawdown": -2015.87,
   "maxDrawdownPercent": -4.98,
-  "maxDrawdownPeak": "2025-12-01",
+  "maxDrawdownPeak": "2025-12-02",
   "maxDrawdownTrough": "2025-11-13",
-  "maxDrawdownPeakBalance": 42701.03,
+  "maxDrawdownPeakBalance": 43077.76,
   "maxDrawdownTroughBalance": 38496.1,
   "currentDrawdown": {
-    "amount": 0,
-    "percentage": 0,
+    "amount": -152.38,
+    "percentage": -0.35,
     "daysSincePeak": 1,
-    "peakBalance": 42701.03,
-    "peakDate": "2025-12-01",
-    "currentBalance": 42701.03
+    "peakBalance": 43077.76,
+    "peakDate": "2025-12-02",
+    "currentBalance": 42925.38
   },
   "sharpeRatio": null,
-  "sharpeRatioNote": "Requires 30+ days (currently 28 days)",
+  "sharpeRatioNote": "Requires 30+ days (currently 29 days)",
   "closingLineValue": null,
   "closingLineValueNote": "CLV tracking started Nov 27, 2025",
   "clvBetsTracked": 0,
   "clvTrackingStartDate": "2025-11-27",
   "rollingPerformance": {
     "last7Days": {
-      "wins": 43,
-      "losses": 18,
+      "wins": 42,
+      "losses": 20,
       "pushes": 1,
-      "pnl": 3320.0699999999997,
-      "roi": 37.94365714285714,
-      "bets": 62
+      "pnl": 2761.7300000000005,
+      "roi": 32.300935672514626,
+      "bets": 63
     },
     "last30Days": {
-      "wins": 94,
-      "losses": 68,
+      "wins": 101,
+      "losses": 72,
       "pushes": 2,
-      "pnl": 2701.0295670995674,
-      "roi": 11.761504755495613,
-      "bets": 164
+      "pnl": 2925.379567099568,
+      "roi": 12.031172391937355,
+      "bets": 175
     },
     "last3Days": {
-      "wins": 14,
-      "losses": 4,
+      "wins": 16,
+      "losses": 5,
       "pushes": 1,
-      "pnl": 807.63,
-      "roi": 35.89,
-      "bets": 19
+      "pnl": 1114.69,
+      "roi": 43.71,
+      "bets": 22
     }
   },
   "daysGreenStreak": {
-    "current": 1,
+    "current": 2,
     "best": 6
   },
   "edgeValidation": {
     "lowEdge": {
       "min": 0,
       "max": 5,
-      "wins": 16,
-      "losses": 5,
+      "wins": 21,
+      "losses": 6,
       "pushes": 1,
-      "pnl": 1424.14,
-      "roi": 55.85,
-      "bets": 22,
-      "winRate": 76.19
+      "pnl": 1824.08,
+      "roi": 57.91,
+      "bets": 28,
+      "winRate": 77.78
     },
     "midEdge": {
       "min": 5,
       "max": 8,
-      "wins": 19,
+      "wins": 20,
       "losses": 10,
       "pushes": 0,
-      "pnl": 1110.12,
-      "roi": 26.75,
-      "bets": 29,
-      "winRate": 65.52
+      "pnl": 1202.71,
+      "roi": 28.3,
+      "bets": 30,
+      "winRate": 66.67
     },
     "highEdge": {
       "min": 8,
       "max": 100,
-      "wins": 59,
-      "losses": 53,
+      "wins": 60,
+      "losses": 56,
       "pushes": 1,
-      "pnl": 166.77,
-      "roi": 1.03,
-      "bets": 113,
-      "winRate": 52.68
+      "pnl": -101.41,
+      "roi": -0.6,
+      "bets": 117,
+      "winRate": 51.72
     },
-    "isCorrelated": true,
-    "totalBetsWithEdge": 164
+    "isCorrelated": false,
+    "totalBetsWithEdge": 175
   },
   "evAnalysis": {
-    "totalExpectedValue": 2986.2,
-    "actualPL": 2701.03,
-    "variance": -285.17,
+    "totalExpectedValue": 3023.4,
+    "actualPL": 2925.38,
+    "variance": -98.02,
     "runningHot": false,
     "runningCold": true,
-    "betsTracked": 164
+    "betsTracked": 175
   },
   "sportBreakdown": {
     "NCAAF": {
@@ -134,49 +134,49 @@
       "sport": "NBA",
       "emoji": "🏀",
       "record": {
-        "wins": 33,
-        "losses": 25,
+        "wins": 35,
+        "losses": 27,
         "pushes": 0,
-        "total": 58
+        "total": 62
       },
-      "wins": 33,
-      "losses": 25,
-      "winRate": 56.896551724137936,
-      "roi": 7.154166666666669,
-      "pnl": 618.1200000000001,
-      "unitsWon": 6.181200000000001
+      "wins": 35,
+      "losses": 27,
+      "winRate": 56.451612903225815,
+      "roi": 7.42748917748918,
+      "pnl": 686.3000000000002,
+      "unitsWon": 6.863000000000002
     },
     "NHL": {
       "sport": "NHL",
       "emoji": "🏒",
       "record": {
-        "wins": 10,
-        "losses": 2,
+        "wins": 13,
+        "losses": 3,
         "pushes": 1,
-        "total": 13
+        "total": 17
       },
-      "wins": 10,
-      "losses": 2,
-      "winRate": 83.33333333333334,
-      "roi": 58.384,
-      "pnl": 875.7600000000001,
-      "unitsWon": 8.757600000000002
+      "wins": 13,
+      "losses": 3,
+      "winRate": 81.25,
+      "roi": 57.458947368421065,
+      "pnl": 1091.7200000000003,
+      "unitsWon": 10.917200000000003
     },
     "NCAAB": {
       "sport": "NCAAB",
       "emoji": "🎓",
       "record": {
-        "wins": 20,
-        "losses": 6,
+        "wins": 22,
+        "losses": 7,
         "pushes": 0,
-        "total": 26
+        "total": 29
       },
-      "wins": 20,
-      "losses": 6,
-      "winRate": 76.92307692307693,
-      "roi": 41.99794973544975,
-      "pnl": 1511.926190476191,
-      "unitsWon": 15.119261904761911
+      "wins": 22,
+      "losses": 7,
+      "winRate": 75.86206896551724,
+      "roi": 36.762941531042806,
+      "pnl": 1452.136190476191,
+      "unitsWon": 14.521361904761909
     },
     "NFL": {
       "sport": "NFL",
@@ -215,13 +215,13 @@
     "Spreads": {
       "type": "Spreads",
       "record": {
-        "wins": 56,
-        "losses": 32,
+        "wins": 63,
+        "losses": 35,
         "pushes": 1
       },
-      "winRate": 62.92134831460674,
-      "pnl": 3465.49619047619,
-      "roi": 26.17444252625521
+      "winRate": 63.63636363636363,
+      "pnl": 3739.8461904761903,
+      "roi": 25.721087967511625
     },
     "Totals": {
       "type": "Totals",
@@ -238,12 +238,12 @@
       "type": "Moneyline",
       "record": {
         "wins": 11,
-        "losses": 1,
+        "losses": 2,
         "pushes": 0
       },
-      "winRate": 91.66666666666666,
-      "pnl": 837.27,
-      "roi": 72.80608695652174
+      "winRate": 84.61538461538461,
+      "pnl": 787.27,
+      "roi": 65.60583333333334
     },
     "Props": {
       "type": "Props",
@@ -263,119 +263,119 @@
       "label": "Low Conviction",
       "range": "< 1u",
       "record": {
-        "wins": 8,
-        "losses": 6,
+        "wins": 9,
+        "losses": 7,
         "pushes": 1,
-        "total": 15
+        "total": 17
       },
-      "winRate": 57.14,
-      "pnl": 59.23,
-      "roi": 7.64
+      "winRate": 56.25,
+      "pnl": 56.85,
+      "roi": 6.5
     },
     "Standard": {
       "tier": "standard",
       "label": "Standard",
       "range": "1-1.5u",
       "record": {
-        "wins": 62,
-        "losses": 43,
+        "wins": 67,
+        "losses": 45,
         "pushes": 1,
-        "total": 106
+        "total": 113
       },
-      "winRate": 59.05,
-      "pnl": 1926.39,
-      "roi": 14.55
+      "winRate": 59.82,
+      "pnl": 2171.3,
+      "roi": 15.41
     },
     "High Conviction": {
       "tier": "high_conviction",
       "label": "High Conviction",
       "range": "2u+",
       "record": {
-        "wins": 24,
-        "losses": 19,
+        "wins": 25,
+        "losses": 20,
         "pushes": 0,
-        "total": 43
+        "total": 45
       },
-      "winRate": 55.81,
-      "pnl": 715.41,
-      "roi": 7.99
+      "winRate": 55.56,
+      "pnl": 697.23,
+      "roi": 7.46
     }
   },
   "fundMetrics": {
     "VectorFund": {
-      "wins": 65,
-      "losses": 56,
+      "wins": 67,
+      "losses": 58,
       "pushes": 1,
-      "pnl": 530.98,
-      "roi": 5.31,
-      "winRate": "53.72",
-      "totalStaked": 17215,
+      "pnl": 510.42,
+      "roi": 5.1,
+      "winRate": "53.60",
+      "totalStaked": 17715,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 65,
-        "losses": 56,
+        "wins": 67,
+        "losses": 58,
         "pushes": 1,
-        "pnl": 530.9795670995675,
-        "roi": 3.0844006221293494,
-        "bets": 122
+        "pnl": 510.4195670995674,
+        "roi": 2.8812846011829945,
+        "bets": 126
       }
     },
     "SharpFund": {
-      "wins": 15,
-      "losses": 7,
+      "wins": 17,
+      "losses": 8,
       "pushes": 0,
-      "pnl": 880.86,
-      "roi": 8.81,
-      "winRate": "68.18",
-      "totalStaked": 3200,
+      "pnl": 888,
+      "roi": 8.88,
+      "winRate": "68.00",
+      "totalStaked": 3650,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 15,
-        "losses": 7,
+        "wins": 17,
+        "losses": 8,
         "pushes": 0,
-        "pnl": 880.86,
-        "roi": 27.526875,
-        "bets": 22
+        "pnl": 888,
+        "roi": 24.32876712328767,
+        "bets": 25
       }
     },
     "ContraFund": {
-      "wins": 7,
+      "wins": 9,
       "losses": 2,
       "pushes": 0,
-      "pnl": 506.94,
-      "roi": 5.07,
-      "winRate": "77.78",
-      "totalStaked": 1150,
-      "maxDrawdown": null,
-      "currentDrawdown": null,
-      "rollingPerformance": {
-        "wins": 7,
-        "losses": 2,
-        "pushes": 0,
-        "pnl": 506.94000000000005,
-        "roi": 44.08173913043479,
-        "bets": 9
-      }
-    },
-    "CatalystFund": {
-      "wins": 7,
-      "losses": 3,
-      "pushes": 1,
-      "pnl": 782.25,
-      "roi": 7.82,
-      "winRate": "70.00",
+      "pnl": 735.89,
+      "roi": 7.36,
+      "winRate": "81.82",
       "totalStaked": 1400,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 7,
-        "losses": 3,
-        "pushes": 1,
-        "pnl": 782.25,
-        "roi": 55.875,
+        "wins": 9,
+        "losses": 2,
+        "pushes": 0,
+        "pnl": 735.8900000000001,
+        "roi": 52.56357142857143,
         "bets": 11
+      }
+    },
+    "CatalystFund": {
+      "wins": 8,
+      "losses": 4,
+      "pushes": 1,
+      "pnl": 791.07,
+      "roi": 7.91,
+      "winRate": "66.67",
+      "totalStaked": 1550,
+      "maxDrawdown": null,
+      "currentDrawdown": null,
+      "rollingPerformance": {
+        "wins": 8,
+        "losses": 4,
+        "pushes": 1,
+        "pnl": 791.07,
+        "roi": 51.036774193548396,
+        "bets": 13
       }
     }
   },
@@ -1527,7 +1527,84 @@
       "profit": 45.45,
       "description": "Middle Tenn +2.5",
       "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42651.03,
+      "profit": -50,
+      "description": "Bruins ML",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42551.03,
+      "profit": -100,
+      "description": "Wizards +13.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42643.62,
+      "profit": 92.59,
+      "description": "Texas A&M -3.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42702.44,
+      "profit": 58.82,
+      "description": "Maple Leafs +1.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42838.8,
+      "profit": 136.36,
+      "description": "Celtics +1",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 43020.62,
+      "profit": 181.82,
+      "description": "Pelicans +12.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 43077.76,
+      "profit": 57.14,
+      "description": "Wild +1.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42877.76,
+      "profit": -200,
+      "description": "Kansas +2.5",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42925.38,
+      "profit": 47.62,
+      "description": "UNC +6.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 43075.38,
+      "profit": 150,
+      "description": "Blackhawks +1.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-02",
+      "balance": 42925.38,
+      "profit": -150,
+      "description": "Warriors +11.5",
+      "result": "loss"
     }
   ],
-  "lastUpdated": "2025-12-02T14:51:53.956Z"
+  "lastUpdated": "2025-12-03T14:15:22.364Z"
 }
