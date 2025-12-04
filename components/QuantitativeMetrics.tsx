@@ -45,6 +45,10 @@ export default function QuantitativeMetrics() {
     closingLineValue,
     closingLineValueNote,
     clvBetsTracked,
+    clvBeatCount,
+    clvBeatPercent,
+    clvMissCount,
+    clvMissPercent,
     maxWinStreak,
     maxLossStreak,
   } = metricsData as {
@@ -60,6 +64,10 @@ export default function QuantitativeMetrics() {
     closingLineValue?: number | null;
     closingLineValueNote?: string;
     clvBetsTracked?: number;
+    clvBeatCount?: number;
+    clvBeatPercent?: number;
+    clvMissCount?: number;
+    clvMissPercent?: number;
     maxWinStreak?: number;
     maxLossStreak?: number;
   };
@@ -140,14 +148,16 @@ export default function QuantitativeMetrics() {
               <div className="text-xs sm:text-sm text-secondary-light uppercase font-normal mb-2" style={{ letterSpacing: '0.08em' }}>
                 Closing Line Value
               </div>
-              <div className="text-2xl sm:text-3xl data-value text-white mono-number">
-                {closingLineValue !== null && closingLineValue !== undefined
-                  ? `+${closingLineValue.toFixed(1)}¢`
-                  : 'Tracking'}
+              <div className="text-2xl sm:text-3xl data-value text-success mono-number">
+                {clvBeatPercent !== undefined
+                  ? `${clvBeatPercent.toFixed(1)}%`
+                  : closingLineValue !== null && closingLineValue !== undefined
+                    ? `+${closingLineValue.toFixed(1)}¢`
+                    : 'Tracking'}
               </div>
               <div className="text-xs text-secondary-light mt-1">
-                {closingLineValue !== null && closingLineValue !== undefined
-                  ? `${clvBetsTracked || 0} bets tracked`
+                {clvBetsTracked !== undefined && clvBetsTracked > 0
+                  ? `${clvBeatCount || 0}/${clvBetsTracked} bets beat close`
                   : closingLineValueNote || 'Started Nov 27'}
               </div>
             </div>
