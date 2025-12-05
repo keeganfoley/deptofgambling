@@ -99,9 +99,8 @@ export default function DailyPerformanceHistory() {
 
   // Always show only 7 days on home page - link to history page for more
   const getFilteredData = (): DailyData[] => {
-    const cutoffDate = new Date();
-    cutoffDate.setDate(cutoffDate.getDate() - 7);
-    return dailyData.filter(day => new Date(day.date) >= cutoffDate);
+    // Take the 7 most recent days with data
+    return dailyData.slice(0, 7);
   };
 
   const filteredData = getFilteredData();
