@@ -32,8 +32,8 @@
     "peakDate": "2025-12-04",
     "currentBalance": 43905.61
   },
-  "sharpeRatio": null,
-  "sharpeRatioNote": "Requires 30+ days (currently 31 days)",
+  "sharpeRatio": 5.61,
+  "sharpeRatioNote": "30-day sample",
   "closingLineValue": null,
   "closingLineValueNote": "CLV tracking started Nov 27, 2025",
   "clvBetsTracked": 0,
@@ -1732,5 +1732,5 @@
       "result": "loss"
     }
   ],
-  "lastUpdated": "2025-12-05T14:55:09.588Z"
+  "lastUpdated": "2025-12-05T19:02:17.901Z"
 }

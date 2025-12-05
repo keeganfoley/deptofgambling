@@ -608,8 +608,18 @@ export interface SharpeResult {
 
 /**
  * Calculate Sharpe Ratio from daily returns
+ *
+ * Uses √365 annualization factor (not √252) because:
+ * - √252 is for equity markets that trade 252 days/year
+ * - Sports betting operates 365 days/year
+ * - Our daily returns are measured every calendar day
+ *
+ * Formula: (Mean Daily Return / Std Dev of Daily Returns) × √365
+ * Risk-free rate assumed to be 0 (standard for betting analysis)
+ *
+ * Accepts either { value } or { close } format (OHLC data)
  */
-export function calculateSharpeRatio(chartData: { date: string; value: number }[]): SharpeResult {
+export function calculateSharpeRatio(chartData: { date: string; value?: number; close?: number }[]): SharpeResult {
   if (chartData.length < 30) {
     return {
       value: null,
@@ -619,8 +629,10 @@ export function calculateSharpeRatio(chartData: { date: string; value: number }[
 
   const dailyReturns: number[] = [];
   for (let i = 1; i < chartData.length; i++) {
-    const prev = chartData[i - 1].value;
-    const curr = chartData[i].value;
+    // Support both { value } and { close } (OHLC) formats
+    const prev = chartData[i - 1].value ?? chartData[i - 1].close ?? 0;
+    const curr = chartData[i].value ?? chartData[i].close ?? 0;
+    if (prev === 0) continue; // Skip invalid data
     dailyReturns.push((curr - prev) / prev);
   }
 
@@ -633,12 +645,12 @@ export function calculateSharpeRatio(chartData: { date: string; value: number }[
     return { value: null, note: 'Zero variance in returns' };
   }
 
-  // Annualized Sharpe
-  const sharpe = (meanReturn / stdDev) * Math.sqrt(252);
+  // Annualized Sharpe using √365 (betting operates 365 days/year, not 252 trading days)
+  const sharpe = (meanReturn / stdDev) * Math.sqrt(365);
 
   return {
     value: Math.round(sharpe * 100) / 100,
-    note: `Based on ${dailyReturns.length} days`
+    note: `${dailyReturns.length}-day sample`
   };
 }
 
