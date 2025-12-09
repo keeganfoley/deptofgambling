@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Performance - Last 7 Days</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 60px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.12) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 20px; }
+    .side-bars.right { right: 20px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #22c55e; }
+    .side-bar.red { background: #dc2626; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 120px;
+    }
+
+    /* HEADER */
+    .header { text-align: center; margin-bottom: 20px; }
+    .header-label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .date-range {
+      font-size: 58px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 4px;
+    }
+
+    /* TOP STATS BOX */
+    .stats-box {
+      width: 90%;
+      margin: 0 auto 20px;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(251, 191, 36, 0.4);
+      border-radius: 16px;
+      padding: 18px 40px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .stat-item { text-align: center; }
+    .stat-label {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .stat-value {
+      font-size: 38px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-value.white { color: white; }
+    .stat-value.positive { color: #22c55e; }
+    .stat-value.gold { color: #fbbf24; }
+
+    .stat-divider {
+      width: 1px;
+      height: 50px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* CHART CONTAINER - 20px margin above and below */
+    .chart-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 0 20px;
+    }
+
+    .chart-area {
+      flex: 1;
+      position: relative;
+      background: rgba(30, 41, 59, 0.4);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 15px 50px 45px 70px;
+    }
+
+    /* Y-axis labels - 11 labels from $40k to $45k */
+    .y-axis-label {
+      position: absolute;
+      left: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.6);
+      transform: translateY(50%);
+    }
+
+    /* Horizontal grid lines - 11 lines */
+    .h-grid-line {
+      position: absolute;
+      left: 65px;
+      right: 45px;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* Candlestick chart - 600px height */
+    .candlesticks {
+      position: absolute;
+      left: 70px;
+      right: 50px;
+      bottom: 45px;
+      height: 600px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+    }
+
+    .candle-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90px;
+    }
+
+    .candle {
+      position: relative;
+      width: 100%;
+      height: 600px;
+    }
+
+    .wick {
+      width: 4px;
+      border-radius: 2px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .wick.green { background: #22c55e; }
+    .wick.red { background: #dc2626; }
+
+    .body {
+      width: 45px;
+      border-radius: 4px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      min-height: 6px;
+    }
+    .body.green { background: #22c55e; }
+    .body.red { background: #dc2626; }
+
+    .candle-date {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 16px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* BOTTOM STATS BOX - 20px margin above */
+    .bottom-stats {
+      width: 90%;
+      margin: 20px auto 0;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(251, 191, 36, 0.4);
+      border-radius: 16px;
+      padding: 18px 40px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    /* FOOTER */
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 70px; height: 70px; margin: 0 auto 15px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 16px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">PORTFOLIO PERFORMANCE</div>
+        <div class="date-range">NOV 30 - DEC 6</div>
+      </div>
+
+      <div class="stats-box">
+        <div class="stat-item">
+          <div class="stat-label">BALANCE</div>
+          <div class="stat-value white">$43,544</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">NET P/L</div>
+          <div class="stat-value positive">+$3,544</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">ROI</div>
+          <div class="stat-value positive">+8.86%</div>
+        </div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-area">
+          <!--
+            Y-AXIS: $40,000 to $45,000 = $5,000 range
+            CHART HEIGHT: 600px
+            SCALE: 600 / 5000 = 0.12 px per dollar
+
+            11 LABELS at $500 increments:
+            $40.0k: 0px    → label at 45px
+            $40.5k: 60px   → label at 105px
+            $41.0k: 120px  → label at 165px
+            $41.5k: 180px  → label at 225px
+            $42.0k: 240px  → label at 285px
+            $42.5k: 300px  → label at 345px
+            $43.0k: 360px  → label at 405px
+            $43.5k: 420px  → label at 465px
+            $44.0k: 480px  → label at 525px
+            $44.5k: 540px  → label at 585px
+            $45.0k: 600px  → label at 645px
+          -->
+
+          <!-- 11 Y-AXIS LABELS -->
+          <div class="y-axis-label" style="bottom: 45px;">$40k</div>
+          <div class="y-axis-label" style="bottom: 105px;">$40.5k</div>
+          <div class="y-axis-label" style="bottom: 165px;">$41k</div>
+          <div class="y-axis-label" style="bottom: 225px;">$41.5k</div>
+          <div class="y-axis-label" style="bottom: 285px;">$42k</div>
+          <div class="y-axis-label" style="bottom: 345px;">$42.5k</div>
+          <div class="y-axis-label" style="bottom: 405px;">$43k</div>
+          <div class="y-axis-label" style="bottom: 465px;">$43.5k</div>
+          <div class="y-axis-label" style="bottom: 525px;">$44k</div>
+          <div class="y-axis-label" style="bottom: 585px;">$44.5k</div>
+          <div class="y-axis-label" style="bottom: 645px;">$45k</div>
+
+          <!-- 11 HORIZONTAL GRID LINES -->
+          <div class="h-grid-line" style="bottom: 45px;"></div>
+          <div class="h-grid-line" style="bottom: 105px;"></div>
+          <div class="h-grid-line" style="bottom: 165px;"></div>
+          <div class="h-grid-line" style="bottom: 225px;"></div>
+          <div class="h-grid-line" style="bottom: 285px;"></div>
+          <div class="h-grid-line" style="bottom: 345px;"></div>
+          <div class="h-grid-line" style="bottom: 405px;"></div>
+          <div class="h-grid-line" style="bottom: 465px;"></div>
+          <div class="h-grid-line" style="bottom: 525px;"></div>
+          <div class="h-grid-line" style="bottom: 585px;"></div>
+          <div class="h-grid-line" style="bottom: 645px;"></div>
+
+          <div class="candlesticks">
+            <!--
+              CANDLE CALCULATIONS:
+              Y-axis: $40k-$45k, Scale: 0.12 px/$
+
+              Nov 30: O:41893 H:41893 L:41535 C:41811 (RED)
+              Dec 1:  O:41811 H:42701 L:41811 C:42701 (GREEN)
+              Dec 2:  O:42701 H:43078 L:42551 C:42925 (GREEN)
+              Dec 3:  O:42925 H:43532 L:42925 C:43272 (GREEN)
+              Dec 4:  O:43272 H:44100 L:43272 C:43906 (GREEN)
+              Dec 5:  O:43906 H:44233 L:43784 C:43784 (RED)
+              Dec 6:  O:43784 H:44194 L:43544 C:43544 (RED)
+            -->
+
+            <!-- Nov 30: L:41535 H:41893 O:41893 C:41811 (RED) -->
+            <!-- wick: (41535-40000)*0.12=184, height=(41893-41535)*0.12=43 -->
+            <!-- body: (41811-40000)*0.12=217, height=(41893-41811)*0.12=10 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick red" style="bottom: 184px; height: 43px;"></div>
+                <div class="body red" style="bottom: 217px; height: 10px;"></div>
+              </div>
+              <div class="candle-date">11/30</div>
+            </div>
+
+            <!-- Dec 1: L:41811 H:42701 O:41811 C:42701 (GREEN) -->
+            <!-- wick: (41811-40000)*0.12=217, height=(42701-41811)*0.12=107 -->
+            <!-- body: 217, height=107 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick green" style="bottom: 217px; height: 107px;"></div>
+                <div class="body green" style="bottom: 217px; height: 107px;"></div>
+              </div>
+              <div class="candle-date">12/1</div>
+            </div>
+
+            <!-- Dec 2: L:42551 H:43078 O:42701 C:42925 (GREEN) -->
+            <!-- wick: (42551-40000)*0.12=306, height=(43078-42551)*0.12=63 -->
+            <!-- body: (42701-40000)*0.12=324, height=(42925-42701)*0.12=27 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick green" style="bottom: 306px; height: 63px;"></div>
+                <div class="body green" style="bottom: 324px; height: 27px;"></div>
+              </div>
+              <div class="candle-date">12/2</div>
+            </div>
+
+            <!-- Dec 3: L:42925 H:43532 O:42925 C:43272 (GREEN) -->
+            <!-- wick: (42925-40000)*0.12=351, height=(43532-42925)*0.12=73 -->
+            <!-- body: 351, height=(43272-42925)*0.12=42 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick green" style="bottom: 351px; height: 73px;"></div>
+                <div class="body green" style="bottom: 351px; height: 42px;"></div>
+              </div>
+              <div class="candle-date">12/3</div>
+            </div>
+
+            <!-- Dec 4: L:43272 H:44100 O:43272 C:43906 (GREEN) -->
+            <!-- wick: (43272-40000)*0.12=393, height=(44100-43272)*0.12=99 -->
+            <!-- body: 393, height=(43906-43272)*0.12=76 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick green" style="bottom: 393px; height: 99px;"></div>
+                <div class="body green" style="bottom: 393px; height: 76px;"></div>
+              </div>
+              <div class="candle-date">12/4</div>
+            </div>
+
+            <!-- Dec 5: L:43784 H:44233 O:43906 C:43784 (RED) -->
+            <!-- wick: (43784-40000)*0.12=454, height=(44233-43784)*0.12=54 -->
+            <!-- body: 454, height=(43906-43784)*0.12=15 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick red" style="bottom: 454px; height: 54px;"></div>
+                <div class="body red" style="bottom: 454px; height: 15px;"></div>
+              </div>
+              <div class="candle-date">12/5</div>
+            </div>
+
+            <!-- Dec 6: L:43544 H:44194 O:43784 C:43544 (RED) -->
+            <!-- wick: (43544-40000)*0.12=425, height=(44194-43544)*0.12=78 -->
+            <!-- body: 425, height=(43784-43544)*0.12=29 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="wick red" style="bottom: 425px; height: 78px;"></div>
+                <div class="body red" style="bottom: 425px; height: 29px;"></div>
+              </div>
+              <div class="candle-date">12/6</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-stats">
+        <div class="stat-item">
+          <div class="stat-label">RECORD</div>
+          <div class="stat-value gold">120-87-2</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">WIN RATE</div>
+          <div class="stat-value gold">57.97%</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-label">UNITS PROFITED</div>
+          <div class="stat-value positive">+35.44U</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="../../public/logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

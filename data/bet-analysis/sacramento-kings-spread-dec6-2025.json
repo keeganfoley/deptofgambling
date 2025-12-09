@@ -1,0 +1,87 @@
+{
+  "slug": "sacramento-kings-spread-dec6-2025",
+  "id": 212,
+  "sport": "NBA",
+  "betType": "spread",
+  "team": "Sacramento Kings",
+  "opponent": "Miami Heat",
+  "description": "Kings +8.5",
+  "line": "Kings +8.5",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "win",
+  "profit": 136.36,
+  "fund": "ContraFund",
+  "finalStat": "Won 127-111 (covered by 24.5)",
+  "gameDetails": {
+    "matchup": "Sacramento Kings @ Miami Heat",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Kaseya Center, Miami",
+    "finalScore": "Kings 127, Heat 111"
+  },
+  "preGameAnalysis": {
+    "edge": 4.5,
+    "expectedValue": 3.9,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Kings won outright by 16",
+      "cushion": "Covered +8.5 by 24.5 points",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Kings +8.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to ContraFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Kings 127, Heat 111",
+    "coverMargin": "Won 127-111 (covered by 24.5)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Won 127-111 (covered by 24.5)"
+      }
+    ],
+    "whenCleared": "Final",
+    "gamePace": "Dominant win - LaVine 42 points, 8 threes"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Result",
+        "description": "Won 127-111 (covered by 24.5)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Kings biggest road win ever in Miami",
+      "vsRecentForm": "Won 127-111 (covered by 24.5)",
+      "vsPropLine": "Covered Kings +8.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Won 127-111 (covered by 24.5)",
+    "Dominant win - LaVine 42 points, 8 threes"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Dominant win - LaVine 42 points, 8 threes"
+}

@@ -1,0 +1,87 @@
+{
+  "slug": "rhode-island-spread-dec6-2025",
+  "id": 214,
+  "sport": "NCAAB",
+  "betType": "spread",
+  "team": "Rhode Island",
+  "opponent": "Providence",
+  "description": "Rhode Island +7.5",
+  "line": "Rhode Island +7.5",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "profit": -150,
+  "fund": "ContraFund",
+  "finalStat": "Lost 71-90 (lost by 19)",
+  "gameDetails": {
+    "matchup": "Rhode Island @ Providence",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Amica Mutual Pavilion, Providence",
+    "finalScore": "Providence 90, Rhode Island 71"
+  },
+  "preGameAnalysis": {
+    "edge": 4.1,
+    "expectedValue": 3.5,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "URI 7-2 entering",
+      "cushion": "Lost by 19, had +7.5",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Rhode Island +7.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to ContraFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Providence 90, Rhode Island 71",
+    "coverMargin": "Lost 71-90 (lost by 19)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Lost 71-90 (lost by 19)"
+      }
+    ],
+    "whenCleared": "Did not cover",
+    "gamePace": "Providence dominated the rivalry matchup"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Result",
+        "description": "Lost 71-90 (lost by 19)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "URI blown out in rivalry game",
+      "vsRecentForm": "Lost 71-90 (lost by 19)",
+      "vsPropLine": "Did not cover Rhode Island +7.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Lost 71-90 (lost by 19)",
+    "Providence dominated the rivalry matchup"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Providence dominated the rivalry matchup"
+}

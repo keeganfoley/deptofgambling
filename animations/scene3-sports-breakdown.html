@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 3: Sports Breakdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 50%, #0d1117 0%, #050507 100%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.45);
+      transform-origin: center center;
+      overflow: hidden;
+      outline: 1px solid rgba(255, 255, 255, 0.2);
+      outline-offset: -1px;
+    }
+
+    .container.full-size {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Animated grid background */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Sports Table */
+    .sports-table {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 920px;
+      opacity: 0;
+    }
+
+    .table-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: #6b7280;
+      text-align: center;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      opacity: 0;
+    }
+
+    .sport-row {
+      background: linear-gradient(135deg, rgba(26,26,46,0.95) 0%, rgba(18,18,31,0.95) 100%);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      padding: 32px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sport-row.winner {
+      border-color: rgba(34, 197, 94, 0.4);
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.15);
+    }
+
+    .sport-row.winner::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: #22c55e;
+      box-shadow: 0 0 20px #22c55e;
+    }
+
+    .sport-row.loser {
+      border-color: rgba(239, 68, 68, 0.3);
+    }
+
+    .sport-row.loser::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 6px;
+      height: 100%;
+      background: #ef4444;
+    }
+
+    .sport-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-right: 30px;
+    }
+
+    .sport-info {
+      display: flex;
+      align-items: center;
+      min-width: 280px;
+    }
+
+    .sport-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .sport-stats {
+      display: flex;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .stat-block {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .stat-value.green { color: #22c55e; }
+    .stat-value.dim { color: #6b7280; }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+
+    .profit-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 44px;
+      font-weight: 900;
+      min-width: 160px;
+      text-align: right;
+    }
+
+    .profit-value.green { color: #22c55e; text-shadow: 0 0 30px rgba(34, 197, 94, 0.4); }
+    .profit-value.red { color: #ef4444; }
+
+    /* Pie Chart Section - BIGGER */
+    .pie-section {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 25;
+      background: transparent;
+    }
+
+    .pie-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    .pie-container {
+      position: relative;
+      width: 550px;
+      height: 550px;
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    .pie-chart {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .pie-bg {
+      fill: none;
+      stroke: rgba(255,255,255,0.08);
+      stroke-width: 65;
+    }
+
+    .pie-fill {
+      fill: none;
+      stroke: #22c55e;
+      stroke-width: 65;
+      stroke-linecap: round;
+      stroke-dasharray: 0 1507.96;
+      filter: drop-shadow(0 0 30px rgba(34, 197, 94, 0.7));
+    }
+
+    .pie-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .pie-percent {
+      font-family: 'Inter', sans-serif;
+      font-size: 140px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+    }
+
+    .pie-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 15px;
+      letter-spacing: 4px;
+    }
+
+    .pie-sublabel {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+
+    .pie-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #9ca3af;
+      margin-top: 80px;
+      opacity: 0;
+    }
+
+    .pie-tagline span {
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      top: calc(50% + 450px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #22c55e; color: #0a0a0f; }
+    .reset-btn { background: #374151; color: #ffffff; }
+
+    .timer {
+      position: fixed;
+      top: calc(50% - 480px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    /* Animations */
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes explodeIn {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      70% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <!-- Sports Table -->
+    <div class="sports-table" id="sports-table">
+      <div class="table-title" id="table-title">Week 5 Breakdown</div>
+
+      <div class="sport-row winner" id="row-nhl">
+        <div class="sport-info">
+          <img class="sport-logo" src="logos/nhl.png" alt="NHL">
+          <div class="sport-name">NHL</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">10-4-1</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value green">71%</div>
+          <div class="stat-label">Win %</div>
+        </div>
+        <div class="profit-value green">+$1,038</div>
+      </div>
+
+      <div class="sport-row winner" id="row-nba">
+        <div class="sport-info">
+          <img class="sport-logo" src="logos/nba.png" alt="NBA">
+          <div class="sport-name">NBA</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">14-8</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value green">64%</div>
+          <div class="stat-label">Win %</div>
+        </div>
+        <div class="profit-value green">+$634</div>
+      </div>
+
+      <div class="sport-row winner" id="row-ncaaf">
+        <div class="sport-info">
+          <img class="sport-logo" src="logos/ncaaf.png" alt="NCAAF">
+          <div class="sport-name">NCAAF</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">3-1</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value green">75%</div>
+          <div class="stat-label">Win %</div>
+        </div>
+        <div class="profit-value green">+$190</div>
+      </div>
+
+      <div class="sport-row" id="row-nfl">
+        <div class="sport-info">
+          <img class="sport-logo" src="logos/nfl.png" alt="NFL">
+          <div class="sport-name">NFL</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">2-2</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value dim">50%</div>
+          <div class="stat-label">Win %</div>
+        </div>
+        <div class="profit-value green">+$73</div>
+      </div>
+
+      <div class="sport-row loser" id="row-ncaab">
+        <div class="sport-info">
+          <img class="sport-logo" src="logos/ncaab.png" alt="NCAAB">
+          <div class="sport-name">NCAAB</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value">11-9</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-value dim">55%</div>
+          <div class="stat-label">Win %</div>
+        </div>
+        <div class="profit-value red">-$95</div>
+      </div>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="pie-section" id="pie-section">
+      <div class="pie-title">the strategy</div>
+      <div class="pie-container">
+        <svg class="pie-chart" viewBox="0 0 550 550">
+          <circle class="pie-bg" cx="275" cy="275" r="240"/>
+          <circle class="pie-fill" id="pie-fill" cx="275" cy="275" r="240"/>
+        </svg>
+        <div class="pie-center">
+          <div class="pie-percent" id="pie-percent">0%</div>
+          <div class="pie-label">SPREADS</div>
+          <div class="pie-sublabel">56 of 65 bets</div>
+        </div>
+      </div>
+      <div class="pie-tagline" id="pie-tagline"><span>Precision</span> over parlays</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+    <button class="reset-btn" onclick="toggleFullSize()" id="size-btn">Full Size (1080x1920)</button>
+  </div>
+
+  <script>
+    // ==================== SOUND EFFECTS ====================
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playPop() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.1);
+    }
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        const env = Math.sin((i / bufferSize) * Math.PI);
+        output[i] = (Math.random() * 2 - 1) * env * 0.3;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(600, audioCtx.currentTime);
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+      noise.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playFillSound(duration = 1500) {
+      const steps = 20;
+      const interval = duration / steps;
+      for (let i = 0; i < steps; i++) {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(500 + (i / steps) * 300, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.025, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.05);
+        }, i * interval);
+      }
+    }
+
+    // ==================== UI CONTROLS ====================
+    let isFullSize = false;
+    function toggleFullSize() {
+      const container = document.querySelector('.container');
+      const btn = document.getElementById('size-btn');
+      const controls = document.querySelector('.controls');
+      const timer = document.getElementById('timer');
+      if (isFullSize) {
+        container.classList.remove('full-size');
+        btn.textContent = 'Full Size (1080x1920)';
+        controls.style.display = 'flex';
+        timer.style.display = 'block';
+      } else {
+        container.classList.add('full-size');
+        btn.textContent = 'Preview Size';
+        controls.style.display = 'none';
+        timer.style.display = 'none';
+      }
+      isFullSize = !isFullSize;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') { resetAnimation(); }
+      else if (e.code === 'KeyF') { toggleFullSize(); }
+    });
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function animateValue(el, start, end, duration, suffix = '') {
+      const startT = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startT) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.floor(start + (end - start) * ease) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Show table container
+      document.getElementById('sports-table').style.opacity = '1';
+
+      // Show title (0.3s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('table-title').style.animation = 'fadeSlideIn 0.5s ease-out forwards';
+        playPop();
+      }, 300));
+
+      // Show rows one by one - SLOW
+      const rows = ['row-nhl', 'row-nba', 'row-ncaaf', 'row-nfl', 'row-ncaab'];
+      rows.forEach((id, i) => {
+        timeouts.push(setTimeout(() => {
+          document.getElementById(id).style.animation = 'fadeSlideIn 0.6s ease-out forwards';
+          playPop();
+        }, 1000 + i * 600)); // 600ms between each row
+      });
+
+      // Fade out table (5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('sports-table').style.transition = 'opacity 0.5s';
+        document.getElementById('sports-table').style.opacity = '0';
+        playWhoosh();
+      }, 5000));
+
+      // Show pie chart (5.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('pie-section').style.animation = 'explodeIn 0.6s ease-out forwards';
+
+        // Animate pie fill to 86%
+        setTimeout(() => {
+          const circumference = 2 * Math.PI * 240;
+          const fill = circumference * 0.86;
+          document.getElementById('pie-fill').style.transition = 'stroke-dasharray 1.8s ease-out';
+          document.getElementById('pie-fill').style.strokeDasharray = `${fill} ${circumference}`;
+          animateValue(document.getElementById('pie-percent'), 0, 86, 1800, '%');
+          playFillSound(1800);
+        }, 400);
+      }, 5500));
+
+      // Show tagline (8s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('pie-tagline').style.opacity = '1';
+        document.getElementById('pie-tagline').style.transition = 'opacity 0.6s';
+      }, 8000));
+
+      // End (12s)
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:12';
+      }, 12000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0:00';
+
+      // Reset table
+      document.getElementById('sports-table').style.opacity = '0';
+      document.getElementById('sports-table').style.transition = 'none';
+      document.getElementById('table-title').style.animation = 'none';
+      document.getElementById('table-title').style.opacity = '0';
+
+      const rows = ['row-nhl', 'row-nba', 'row-ncaaf', 'row-nfl', 'row-ncaab'];
+      rows.forEach(id => {
+        document.getElementById(id).style.animation = 'none';
+        document.getElementById(id).style.opacity = '0';
+        document.getElementById(id).style.transform = 'translateY(30px)';
+      });
+
+      // Reset pie
+      document.getElementById('pie-section').style.animation = 'none';
+      document.getElementById('pie-section').style.opacity = '0';
+      document.getElementById('pie-section').style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('pie-fill').style.transition = 'none';
+      document.getElementById('pie-fill').style.strokeDasharray = '0 1507.96';
+      document.getElementById('pie-percent').textContent = '0%';
+      document.getElementById('pie-tagline').style.opacity = '0';
+      document.getElementById('pie-tagline').style.transition = 'none';
+    }
+  </script>
+</body>
+</html>

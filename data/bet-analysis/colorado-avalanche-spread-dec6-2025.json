@@ -1,0 +1,87 @@
+{
+  "slug": "colorado-avalanche-spread-dec6-2025",
+  "id": 211,
+  "sport": "NHL",
+  "betType": "spread",
+  "team": "Colorado Avalanche",
+  "opponent": "New York Rangers",
+  "description": "Avalanche -1.5",
+  "line": "Avalanche -1.5",
+  "odds": 145,
+  "stake": 1.5,
+  "result": "loss",
+  "profit": -150,
+  "fund": "SharpFund",
+  "finalStat": "Won 3-2 OT (covered by 1, needed 2)",
+  "gameDetails": {
+    "matchup": "Colorado Avalanche @ New York Rangers",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Madison Square Garden, New York",
+    "finalScore": "Avalanche 3, Rangers 2 (OT)"
+  },
+  "preGameAnalysis": {
+    "edge": 5.2,
+    "expectedValue": 4.8,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Avs 20-2-6 on season",
+      "cushion": "Won by 1, needed -1.5",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Avalanche -1.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to SharpFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Avalanche 3, Rangers 2 (OT)",
+    "coverMargin": "Won 3-2 OT (covered by 1, needed 2)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Won 3-2 OT (covered by 1, needed 2)"
+      }
+    ],
+    "whenCleared": "Did not cover",
+    "gamePace": "MacKinnon OT winner but -1.5 doesnt cover"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Result",
+        "description": "Won 3-2 OT (covered by 1, needed 2)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Avs won but only by 1 in OT",
+      "vsRecentForm": "Won 3-2 OT (covered by 1, needed 2)",
+      "vsPropLine": "Did not cover Avalanche -1.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": 145,
+    "closingOdds": 145,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Won 3-2 OT (covered by 1, needed 2)",
+    "MacKinnon OT winner but -1.5 doesnt cover"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "MacKinnon OT winner but -1.5 doesnt cover"
+}

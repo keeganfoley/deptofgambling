@@ -1,0 +1,87 @@
+{
+  "slug": "duke-spread-dec6-2025",
+  "id": 217,
+  "sport": "NCAAF",
+  "betType": "spread",
+  "team": "Duke",
+  "opponent": "Virginia",
+  "description": "Duke +4.5",
+  "line": "Duke +4.5",
+  "odds": -115,
+  "stake": 1.5,
+  "result": "win",
+  "profit": 130.43,
+  "fund": "SharpFund",
+  "finalStat": "Won 27-20 OT (covered, won outright)",
+  "gameDetails": {
+    "matchup": "Duke vs Virginia",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Bank of America Stadium, Charlotte",
+    "finalScore": "Duke 27, Virginia 20 (OT)"
+  },
+  "preGameAnalysis": {
+    "edge": 5.8,
+    "expectedValue": 5.1,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "First ACC title since 1962",
+      "cushion": "Won outright as +4.5 dog",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Duke +4.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to SharpFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Duke 27, Virginia 20 (OT)",
+    "coverMargin": "Won 27-20 OT (covered, won outright)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Won 27-20 OT (covered, won outright)"
+      }
+    ],
+    "whenCleared": "Final",
+    "gamePace": "Duke wins first outright ACC title since 1962"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Result",
+        "description": "Won 27-20 OT (covered, won outright)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Duke covered +4.5, won by 7 in OT",
+      "vsRecentForm": "Won 27-20 OT (covered, won outright)",
+      "vsPropLine": "Covered Duke +4.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -115,
+    "closingOdds": -115,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Won 27-20 OT (covered, won outright)",
+    "Duke wins first outright ACC title since 1962"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Duke wins first outright ACC title since 1962"
+}

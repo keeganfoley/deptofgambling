@@ -1,0 +1,87 @@
+{
+  "slug": "alabama-spread-dec6-2025",
+  "id": 215,
+  "sport": "NCAAF",
+  "betType": "spread",
+  "team": "Alabama",
+  "opponent": "Georgia",
+  "description": "Alabama +2.5",
+  "line": "Alabama +2.5",
+  "odds": -105,
+  "stake": 2,
+  "result": "loss",
+  "profit": -200,
+  "fund": "SharpFund",
+  "finalStat": "Lost 7-28 (lost by 21)",
+  "gameDetails": {
+    "matchup": "Alabama vs Georgia",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Mercedes-Benz Stadium, Atlanta",
+    "finalScore": "Georgia 28, Alabama 7"
+  },
+  "preGameAnalysis": {
+    "edge": 5.5,
+    "expectedValue": 4.9,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "Bama 10-2 entering",
+      "cushion": "Lost by 21, had +2.5",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Alabama +2.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to SharpFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Georgia 28, Alabama 7",
+    "coverMargin": "Lost 7-28 (lost by 21)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Lost 7-28 (lost by 21)"
+      }
+    ],
+    "whenCleared": "Did not cover",
+    "gamePace": "Georgia too strong - dominated both sides"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Result",
+        "description": "Lost 7-28 (lost by 21)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Alabama dominated, lost by 21",
+      "vsRecentForm": "Lost 7-28 (lost by 21)",
+      "vsPropLine": "Did not cover Alabama +2.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -105,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Lost 7-28 (lost by 21)",
+    "Georgia too strong - dominated both sides"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Georgia too strong - dominated both sides"
+}

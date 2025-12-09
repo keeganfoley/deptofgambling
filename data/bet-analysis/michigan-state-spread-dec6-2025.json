@@ -1,0 +1,87 @@
+{
+  "slug": "michigan-state-spread-dec6-2025",
+  "id": 213,
+  "sport": "NCAAB",
+  "betType": "spread",
+  "team": "Michigan State",
+  "opponent": "Duke",
+  "description": "Michigan St +1",
+  "line": "Michigan St +1",
+  "odds": -110,
+  "stake": 1.5,
+  "result": "loss",
+  "profit": -150,
+  "fund": "VectorFund",
+  "finalStat": "Lost 60-66 (lost by 6)",
+  "gameDetails": {
+    "matchup": "Michigan State vs Duke",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Breslin Center, East Lansing",
+    "finalScore": "Duke 66, Michigan State 60"
+  },
+  "preGameAnalysis": {
+    "edge": 3.8,
+    "expectedValue": 3.2,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "MSU 8-1 entering",
+      "cushion": "Lost by 6, had +1",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Michigan St +1"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to VectorFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Duke 66, Michigan State 60",
+    "coverMargin": "Lost 60-66 (lost by 6)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Lost 60-66 (lost by 6)"
+      }
+    ],
+    "whenCleared": "Did not cover",
+    "gamePace": "Duke too talented - Boozer 18 pts"
+  },
+  "postGameAnalysis": {
+    "whatWentWrong": [
+      {
+        "title": "Result",
+        "description": "Lost 60-66 (lost by 6)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "MSU lost by 6 at home",
+      "vsRecentForm": "Lost 60-66 (lost by 6)",
+      "vsPropLine": "Did not cover Michigan St +1",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -110,
+    "closingOdds": -110,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Lost 60-66 (lost by 6)",
+    "Duke too talented - Boozer 18 pts"
+  ],
+  "wouldBetAgain": false,
+  "verdict": "Duke too talented - Boozer 18 pts"
+}

@@ -1,0 +1,464 @@
+<!--
+  ============================================================
+  WEEKLY RECAP SLIDE 1 - MASTER TEMPLATE
+  ============================================================
+  Location: templates/weekly-recap-slide1-master-template.html
+  Status: LOCKED - DO NOT MODIFY WITHOUT APPROVAL
+  Last Updated: December 8, 2024
+
+  DESIGN FEATURES:
+  - Week range header in gold
+  - Big hero P/L (120px) in green/red
+  - Stats grid: Record, Win Rate, ROI
+  - Secondary stats: Risked, Profit Factor, Green Days
+  - Best/Worst day with dates
+  - Avg Win/Loss stats
+
+  PLACEHOLDERS:
+  {{WEEK_NUMBER}}     - "5"
+  {{DATE_RANGE}}      - "DEC 1 - DEC 7"
+  {{PL_CLASS}}        - "positive" or "negative"
+  {{PL_DOLLARS}}      - "+$892" or "-$150"
+  {{PL_CENTS}}        - ".45"
+  {{UNITS}}           - "+8.92U"
+  {{RECORD}}          - "23-18"
+  {{WIN_RATE}}        - "56%"
+  {{ROI}}             - "+12%"
+  {{RISKED}}          - "$2,150"
+  {{PROFIT_FACTOR}}   - "1.29"
+  {{GREEN_DAYS}}      - "5-2"
+  {{BEST_DAY_DATE}}   - "WED 12/4"
+  {{BEST_DAY_PL}}     - "+$634"
+  {{WORST_DAY_DATE}}  - "FRI 12/6"
+  {{WORST_DAY_PL}}    - "-$121"
+  {{AVG_WIN}}         - "+$78.50"
+  {{AVG_LOSS}}        - "-$62.30"
+
+  OUTPUT: 1080x1350px Instagram portrait
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weekly Recap - Week {{WEEK_NUMBER}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 50px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    /* CANDLESTICKS AT BOTTOM */
+    .candles-bg {
+      position: absolute;
+      bottom: 160px;
+      left: 0; right: 0;
+      height: 200px;
+      opacity: 0.10;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 15px;
+      padding: 0 60px;
+    }
+    .candle { display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 3px; border-radius: 2px; }
+    .body { width: 14px; border-radius: 3px; }
+    .candle.green .wick, .candle.green .body { background: #22c55e; }
+    .candle.red .wick, .candle.red .body { background: #dc2626; }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 15px; }
+    .side-bars.right { right: 15px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #2d8a4e; }
+    .side-bar.red { background: #c0392b; }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; padding-bottom: 120px; }
+
+    /* HEADER */
+    .header { text-align: center; margin-bottom: 20px; }
+    .header-label {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+    .week-title {
+      font-size: 68px;
+      font-weight: 900;
+      letter-spacing: 5px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 4px;
+    }
+    .date-range {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: rgba(255,255,255,0.7);
+      margin-top: 10px;
+    }
+
+    /* HERO BOX */
+    .hero-box {
+      width: 92%;
+      margin: 0 auto 16px;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border: 3px solid #fbbf24;
+      border-radius: 16px;
+      padding: 20px 35px 16px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+      text-align: center;
+    }
+
+    .pl-section { margin-bottom: 10px; }
+    .big-pl-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+    }
+    .big-pl {
+      font-size: 120px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .big-pl.positive { color: #2d8a4e; }
+    .big-pl.negative { color: #c0392b; }
+    .cents {
+      font-size: 42px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      opacity: 0.8;
+      margin-left: 2px;
+    }
+    .cents.positive { color: #2d8a4e; }
+    .cents.negative { color: #c0392b; }
+
+    .units-row { margin-top: 4px; }
+    .units-value {
+      font-size: 28px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .units-value.positive { color: #2d8a4e; }
+    .units-value.negative { color: #c0392b; }
+
+    /* PRIMARY STATS ROW */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-box {
+      background: rgba(30, 45, 65, 0.6);
+      border-radius: 10px;
+      padding: 12px 28px;
+      border: 2px solid rgba(251,191,36,0.5);
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 48px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+      text-align: center;
+      line-height: 1;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 14px 0 10px;
+    }
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      height: 2px;
+      width: 100px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5));
+    }
+    .section-title::after {
+      background: linear-gradient(90deg, rgba(251,191,36,0.5), transparent);
+    }
+    .section-title span {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* SECONDARY STATS */
+    .secondary-stats {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .secondary-stat {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 14px 24px;
+      border: 2px solid rgba(255,255,255,0.15);
+      text-align: center;
+      flex: 1;
+      max-width: 300px;
+    }
+    .secondary-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .secondary-value {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      line-height: 1;
+    }
+
+    /* DAY STATS GRID */
+    .day-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 12px;
+    }
+    .day-card {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 16px 20px;
+      border: 2px solid rgba(255,255,255,0.15);
+      text-align: center;
+    }
+    .day-card.best { border-color: rgba(45, 138, 78, 0.5); }
+    .day-card.worst { border-color: rgba(192, 57, 43, 0.5); }
+    .day-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
+    .day-date {
+      font-size: 22px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+    .day-pl {
+      font-size: 40px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .day-pl.positive { color: #2d8a4e; }
+    .day-pl.negative { color: #c0392b; }
+
+    /* AVG STATS */
+    .avg-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .avg-card {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 14px 20px;
+      border: 2px solid rgba(255,255,255,0.15);
+      text-align: center;
+    }
+    .avg-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .avg-value {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .avg-value.positive { color: #2d8a4e; }
+    .avg-value.negative { color: #c0392b; }
+
+    /* FOOTER */
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 70px; height: 70px; margin: 0 auto 15px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 16px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <!-- CANDLESTICKS -->
+    <div class="candles-bg">
+      <div class="candle green"><div class="wick" style="height:100px"></div><div class="body" style="height:60px"></div></div>
+      <div class="candle red"><div class="wick" style="height:70px"></div><div class="body" style="height:40px"></div></div>
+      <div class="candle green"><div class="wick" style="height:120px"></div><div class="body" style="height:70px"></div></div>
+      <div class="candle red"><div class="wick" style="height:60px"></div><div class="body" style="height:35px"></div></div>
+      <div class="candle green"><div class="wick" style="height:90px"></div><div class="body" style="height:55px"></div></div>
+      <div class="candle green"><div class="wick" style="height:110px"></div><div class="body" style="height:65px"></div></div>
+      <div class="candle red"><div class="wick" style="height:80px"></div><div class="body" style="height:45px"></div></div>
+      <div class="candle green"><div class="wick" style="height:130px"></div><div class="body" style="height:75px"></div></div>
+      <div class="candle red"><div class="wick" style="height:65px"></div><div class="body" style="height:32px"></div></div>
+      <div class="candle green"><div class="wick" style="height:105px"></div><div class="body" style="height:58px"></div></div>
+      <div class="candle green"><div class="wick" style="height:115px"></div><div class="body" style="height:68px"></div></div>
+      <div class="candle red"><div class="wick" style="height:75px"></div><div class="body" style="height:42px"></div></div>
+      <div class="candle green"><div class="wick" style="height:95px"></div><div class="body" style="height:52px"></div></div>
+      <div class="candle green"><div class="wick" style="height:125px"></div><div class="body" style="height:72px"></div></div>
+    </div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">WEEKLY RECAP</div>
+        <div class="week-title">WEEK {{WEEK_NUMBER}}</div>
+        <div class="date-range">{{DATE_RANGE}}</div>
+      </div>
+
+      <!-- HERO BOX -->
+      <div class="hero-box">
+        <div class="pl-section">
+          <div class="big-pl-row">
+            <div class="big-pl {{PL_CLASS}}">{{PL_DOLLARS}}</div>
+            <div class="cents {{PL_CLASS}}">{{PL_CENTS}}</div>
+          </div>
+          <div class="units-row">
+            <span class="units-value {{PL_CLASS}}">{{UNITS}}</span>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-box">
+            <div class="stat-label">RECORD</div>
+            <div class="stat-value">{{RECORD}}</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">WIN RATE</div>
+            <div class="stat-value">{{WIN_RATE}}</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-label">ROI</div>
+            <div class="stat-value">{{ROI}}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-title">
+        <span>WEEK STATS</span>
+      </div>
+
+      <!-- SECONDARY STATS -->
+      <div class="secondary-stats">
+        <div class="secondary-stat">
+          <div class="secondary-label">RISKED</div>
+          <div class="secondary-value">{{RISKED}}</div>
+        </div>
+        <div class="secondary-stat">
+          <div class="secondary-label">PROFIT FACTOR</div>
+          <div class="secondary-value">{{PROFIT_FACTOR}}</div>
+        </div>
+        <div class="secondary-stat">
+          <div class="secondary-label">GREEN DAYS</div>
+          <div class="secondary-value">{{GREEN_DAYS}}</div>
+        </div>
+      </div>
+
+      <!-- BEST/WORST DAY -->
+      <div class="day-stats-grid">
+        <div class="day-card best">
+          <div class="day-label">BEST DAY</div>
+          <div class="day-date">{{BEST_DAY_DATE}}</div>
+          <div class="day-pl positive">{{BEST_DAY_PL}}</div>
+        </div>
+        <div class="day-card worst">
+          <div class="day-label">WORST DAY</div>
+          <div class="day-date">{{WORST_DAY_DATE}}</div>
+          <div class="day-pl negative">{{WORST_DAY_PL}}</div>
+        </div>
+      </div>
+
+      <!-- AVG WIN/LOSS -->
+      <div class="avg-stats">
+        <div class="avg-card">
+          <div class="avg-label">AVG WIN</div>
+          <div class="avg-value positive">{{AVG_WIN}}</div>
+        </div>
+        <div class="avg-card">
+          <div class="avg-label">AVG LOSS</div>
+          <div class="avg-value negative">{{AVG_LOSS}}</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="../../public/logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

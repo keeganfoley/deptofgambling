@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>December 6 Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0d1f3c; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 60px 35px;
+      position: relative;
+      background: linear-gradient(180deg, #1e4175 0%, #0d1f3c 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .side-bars.left { left: 20px; }
+    .side-bars.right { right: 20px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; }
+    .side-bar.green { background: rgba(34, 197, 94, 0.12); }
+    .side-bar.red { background: rgba(220, 38, 38, 0.12); }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    .header { text-align: center; margin-bottom: 25px; }
+    .header-label {
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 8px;
+    }
+    .date {
+      font-size: 80px;
+      font-weight: 800;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 12px;
+      text-decoration-thickness: 5px;
+    }
+
+    .picks-container { flex: 1; display: flex; flex-direction: column; }
+
+    .sport-section { margin-bottom: 6px; }
+    .sport-title {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+
+    .picks-row { display: flex; gap: 16px; margin-bottom: 12px; }
+
+    .pick-card {
+      flex: 1;
+      background: rgba(20, 40, 70, 0.9);
+      border-radius: 14px;
+      padding: 18px 22px;
+      border: 4px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pick-card.sharp { border-color: #22c55e; }
+    .pick-card.vector { border-color: #9ca3af; }
+    .pick-card.catalyst { border-color: #c084fc; }
+    .pick-card.contra { border-color: #fb923c; }
+
+    .pick-left { display: flex; align-items: center; gap: 14px; }
+    .result-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 900;
+    }
+    .result-icon.win {
+      background: rgba(34, 197, 94, 0.2);
+      color: #22c55e;
+      border: 3px solid #22c55e;
+    }
+    .result-icon.loss {
+      background: rgba(239, 68, 68, 0.2);
+      color: #ef4444;
+      border: 3px solid #ef4444;
+    }
+    .team-info { display: flex; flex-direction: column; }
+    .team-name { font-size: 26px; font-weight: 700; color: white; }
+    .pick-line { font-size: 18px; color: rgba(255,255,255,0.7); }
+    .pick-odds { color: #fbbf24; font-weight: 700; }
+    .result-pl {
+      font-size: 30px;
+      font-weight: 800;
+    }
+    .result-pl.positive { color: #22c55e; }
+    .result-pl.negative { color: #ef4444; }
+
+    .summary-bar {
+      background: rgba(30, 58, 95, 0.8);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+    .summary-item { text-align: center; }
+    .summary-value { font-size: 42px; font-weight: 800; color: white; }
+    .summary-value.negative { color: #ef4444; }
+    .summary-label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer { text-align: center; margin-top: 20px; }
+    .logo { width: 70px; height: 70px; margin: 0 auto 10px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 24px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">RESULTS</div>
+        <div class="date">DECEMBER 6</div>
+      </div>
+
+      <div class="picks-container">
+        <!-- NHL -->
+        <div class="sport-section">
+          <div class="sport-title">NHL</div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <div class="result-icon loss">✗</div>
+                <div class="team-info">
+                  <div class="team-name">AVALANCHE</div>
+                  <div class="pick-line">-1.5 <span class="pick-odds">(+145)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl negative">-$150</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NBA -->
+        <div class="sport-section">
+          <div class="sport-title">NBA</div>
+          <div class="picks-row">
+            <div class="pick-card contra">
+              <div class="pick-left">
+                <div class="result-icon win">✓</div>
+                <div class="team-info">
+                  <div class="team-name">KINGS</div>
+                  <div class="pick-line">+8.5 <span class="pick-odds">(-110)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl positive">+$136</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCAAB -->
+        <div class="sport-section">
+          <div class="sport-title">NCAAB</div>
+          <div class="picks-row">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <div class="result-icon loss">✗</div>
+                <div class="team-info">
+                  <div class="team-name">MICHIGAN ST</div>
+                  <div class="pick-line">+1 <span class="pick-odds">(-110)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl negative">-$150</div>
+            </div>
+            <div class="pick-card contra">
+              <div class="pick-left">
+                <div class="result-icon loss">✗</div>
+                <div class="team-info">
+                  <div class="team-name">RHODE ISLAND</div>
+                  <div class="pick-line">+7.5 <span class="pick-odds">(-110)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl negative">-$150</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCAAF -->
+        <div class="sport-section">
+          <div class="sport-title">NCAAF</div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <div class="result-icon loss">✗</div>
+                <div class="team-info">
+                  <div class="team-name">ALABAMA</div>
+                  <div class="pick-line">+2.5 <span class="pick-odds">(-105)</span> · 2.0U</div>
+                </div>
+              </div>
+              <div class="result-pl negative">-$200</div>
+            </div>
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <div class="result-icon win">✓</div>
+                <div class="team-info">
+                  <div class="team-name">INDIANA</div>
+                  <div class="pick-line">+5.5 <span class="pick-odds">(-105)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl positive">+$143</div>
+            </div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <div class="result-icon win">✓</div>
+                <div class="team-info">
+                  <div class="team-name">DUKE</div>
+                  <div class="pick-line">+4.5 <span class="pick-odds">(-115)</span> · 1.5U</div>
+                </div>
+              </div>
+              <div class="result-pl positive">+$130</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-bar">
+        <div class="summary-item">
+          <div class="summary-value">3-4</div>
+          <div class="summary-label">RECORD</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-value negative">-$240</div>
+          <div class="summary-label">DAY P/L</div>
+        </div>
+        <div class="summary-item">
+          <div class="summary-value">11U</div>
+          <div class="summary-label">UNITS</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="/logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

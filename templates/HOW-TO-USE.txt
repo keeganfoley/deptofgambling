@@ -1,0 +1,528 @@
+DEPARTMENT OF GAMBLING - SOCIAL IMAGE TEMPLATES
+================================================
+Size: 1080x1350 (4:5 Instagram Portrait)
+All templates share identical footer, background, and styling.
+
+MASTER TEMPLATES (LOCKED):
+==========================
+1. picks-master-template.html              - Daily picks by sport
+2. exposure-master-template.html           - Today's exposure / fund breakdown
+3. daily-report-master-template.html       - End of day P/L report
+4. portfolio-chart-master-template.html    - 7-day candlestick performance chart
+5. picks-results-master-template.html      - End of day picks results (wins/losses)
+6. weekly-briefing-slide1-master-template.html - Weekly briefing slide 1 (hero stats + statement)
+
+FUND COLORS (all templates):
+----------------------------
+Sharp:    #22c55e (green)
+Vector:   #9ca3af (gray)
+Catalyst: #c084fc (purple)
+Contra:   #fb923c (orange)
+
+P/L COLORS:
+-----------
+Positive: #22c55e (green)
+Negative: #ef4444 (red)
+Gold accent: #fbbf24
+
+
+============================================================
+DAILY REPORT TEMPLATE
+============================================================
+
+DESIGN:
+- Hero box with gold border showing P/L (green if +, red if -)
+- Units displayed below P/L (+6.34U format)
+- Stats row: Record | Win Rate | ROI (all in gold)
+- Fund breakdown: 2x2 grid with colored borders
+- Fund cards: Gold P/L, white "record * units" below
+- Inactive funds (0-0) are grayed out at 35% opacity
+
+PLACEHOLDERS:
+{{DATE}}           - "DECEMBER 4"
+{{PL_CLASS}}       - "positive" or "negative"
+{{PL_DOLLARS}}     - "+$634" or "-$150"
+{{PL_CENTS}}       - ".00"
+{{UNITS}}          - "+6.34U" or "-1.50U"
+{{RECORD}}         - "5-2"
+{{WIN_RATE}}       - "71%"
+{{ROI}}            - "+58%"
+
+FUND PLACEHOLDERS (SHARP, VECTOR, CONTRA, CATALYST):
+{{FUND_INACTIVE}}   - "inactive" or ""
+{{FUND_PL}}         - "+$478" or "$0"
+{{FUND_ZERO_CLASS}} - " zero" or "" (note leading space)
+{{FUND_DETAILS}}    - "4-1 * +4.78U"
+
+
+============================================================
+WORKFLOWS
+============================================================
+
+"UPDATE RESULTS" / "RESULTS ARE IN" WORKFLOW:
+---------------------------------------------
+When user says "update results" or "results are in":
+
+1. SHOW SETTLED BETS
+   - Query bets.json for today's settled bets
+   - Display each bet with outcome (W/L)
+   - Show P/L for each bet
+
+2. CALCULATE TOTALS
+   - Total P/L (dollars and units)
+   - Record (W-L)
+   - Win Rate (%)
+   - ROI (%)
+   - Per-fund breakdown
+
+3. ASK CONFIRMATION
+   - "Ready to generate picks results, daily report, and portfolio chart?"
+
+4. ON YES - GENERATE ALL THREE IMAGES:
+
+   A. PICKS RESULTS:
+   - Copy picks-results-master-template.html
+   - Replace {{DATE}}, {{RECORD}}, {{PROFIT}}, {{PROFIT_CLASS}}
+   - Generate result rows: WINS FIRST, then LOSSES
+   - Each row: team logo, name, line, fund badge, score, checkmark/X
+   - Rows use flex: 1 to fill space proportionally
+   - Generate PNG via Puppeteer
+   - Save to social-images/YYYY-MM-DD/picks-results.png
+
+   B. DAILY REPORT:
+   - Copy daily-report-master-template.html
+   - Replace placeholders with calculated data
+   - Generate PNG via Puppeteer
+   - Save to social-images/YYYY-MM-DD/daily-report.png
+
+   C. PORTFOLIO CHART:
+   - Copy portfolio-chart-master-template.html
+   - Pull last 7 days of data from chartData.json
+   - Calculate dynamic Y-axis range (min/max + padding)
+   - Scale candle positions to fit chart
+   - Update stats from portfolio.json
+   - Generate PNG via Puppeteer
+   - Save to social-images/YYYY-MM-DD/portfolio-chart.png
+
+5. OUTPUT LOCATION
+   social-images/
+   └── YYYY-MM-DD/
+       ├── picks-results.html
+       ├── picks-results.png
+       ├── daily-report.html
+       ├── daily-report.png
+       ├── portfolio-chart.html
+       └── portfolio-chart.png
+
+6. FACT CHECK (MANDATORY)
+   - Pull raw data from bets.json and portfolio.json
+   - Verify ALL numbers in images match backend
+   - Show verification table to user
+   - NO IMAGE DELIVERED WITHOUT FACT CHECK
+
+7. GENERATE CAPTIONS
+   - Provide Instagram and Twitter captions
+   - Follow caption template below
+   - Captions are dynamic based on day's results
+
+8. RECOMMEND TWITTER IMAGE
+   - Green day → Daily Report (shows profit)
+   - Lots of wins → Picks Results (shows checkmarks)
+   - Big week → Portfolio Chart (shows growth)
+
+
+============================================================
+SOCIAL MEDIA CAPTION TEMPLATE
+============================================================
+
+CAPTION STYLE:
+- Short, professional, not over the top
+- Summarize the day in words (don't list every pick)
+- Include record, profit, season stats
+- One emoji in header
+- Hashtags at end
+
+CAPTION STRUCTURE:
+{{DATE}} REPORT 📊 | {{RECORD}}
+
+{{1-2 sentences summarizing the day - which fund carried, what struggled, overall vibe}}
+
+{{PROFIT}}. {{SEASON_RECORD}} on the season.
+
+{{Closing line - varies based on day type}}
+
+#hashtags
+
+CLOSING LINE OPTIONS:
+- Big win day: "The process pays off."
+- Solid day: "Not every day's a heater. Profit is profit."
+- Mixed day: "Variance happens. Process doesn't change."
+- Rough day: "Tough day. Long game."
+- Hot streak: "X green days in a row. Don't expect it to last forever."
+
+INSTAGRAM HASHTAGS (use 8-10):
+#sportsbetting #betting #freepicks #gamblingtwitter #bettingtips #nfl #ncaab #deptofgambling
+
+TWITTER HASHTAGS (use 3-4):
+#sportsbetting #gamblingtwitter #freepicks
+
+Swap sport hashtags based on what was bet that day:
+- NFL day: #nfl #nflpicks
+- NBA day: #nba #nbapicks
+- NCAAB day: #ncaab #collegebasketball
+- NHL day: #nhl #nhlpicks
+
+EXAMPLE CAPTION (December 7):
+
+INSTAGRAM:
+```
+DECEMBER 7 REPORT 📊 | 5-4
+
+Decent day. Sharp Fund carried with a clean sweep. Vector struggled but the portfolio stays green.
+
++$107. 125-91-2 on the season.
+
+Not every day's a heater. Profit is profit.
+
+#sportsbetting #betting #freepicks #gamblingtwitter #bettingtips #nfl #ncaab #deptofgambling
+```
+
+TWITTER:
+```
+DECEMBER 7 REPORT 📊 | 5-4
+
+Decent day. Sharp Fund carried with a clean sweep. Vector struggled but the portfolio stays green.
+
++$107. 125-91-2 on the season.
+
+Not every day's a heater. Profit is profit.
+
+#sportsbetting #gamblingtwitter #freepicks
+```
+
+POSTING STRATEGY:
+- Instagram: Carousel (all 3 images) + caption
+- Twitter: 1 image (Daily Report recommended) + caption
+
+
+"PORTFOLIO CHART" / "GENERATE PORTFOLIO" WORKFLOW:
+--------------------------------------------------
+When user says "portfolio chart" or "generate portfolio":
+
+1. GET DATE
+   - Use specified date or default to today
+
+2. PULL DATA
+   - Load portfolio.json for current stats
+   - Load chartData.json for last 7 days OHLC data
+
+3. CALCULATE Y-AXIS
+   - Find min low and max high across 7 days
+   - Add ~10% padding above/below
+   - Round to clean $500 increments
+   - Scale: chart_height / range
+
+4. POSITION CANDLES
+   - For each day: wick bottom/height, body bottom/height
+   - Formula: bottom_px = offset + (value - y_min) * scale
+   - P/L label positioned above each candle
+
+5. UPDATE STATS
+   - Balance, Net P/L, ROI (row 1)
+   - Record, Win Rate, Units Profited (row 2)
+
+6. GENERATE PNG
+   - Save HTML to social-images/YYYY-MM-DD/portfolio-chart.html
+   - Screenshot with Puppeteer (1080x1350)
+   - Save to social-images/YYYY-MM-DD/portfolio-chart.png
+
+
+============================================================
+EXPOSURE TEMPLATE
+============================================================
+Line 145: Total amount (e.g., $1,150)
+Line 150: Number of picks (e.g., 9)
+Line 154: Total units (e.g., 11.5U)
+
+FUND SECTIONS:
+- SHARP: Amount, picks count, units
+- VECTOR: Amount, picks count, units
+- CATALYST: Amount, picks count, units
+- CONTRA: Amount, picks count, units
+
+Add class "zero" to fund-amount if $0
+
+
+============================================================
+PICKS TEMPLATE
+============================================================
+Line 132: Date (e.g., DECEMBER 5)
+
+Each pick card has:
+- Team logo: src="logos/TEAM.png"
+- Team name
+- Line (spread): +5.5
+- Odds: (-110)
+- Units: 1.0U
+- Border color class: sharp, vector, catalyst, contra
+
+To add/remove picks:
+- Copy a pick-card div for new picks
+- Delete pick-card divs to remove
+- Use picks-row with two pick-cards for side-by-side
+
+
+============================================================
+PICKS RESULTS TEMPLATE (LOCKED)
+============================================================
+
+DESIGN:
+- Shows settled bets with outcomes (wins first, losses after)
+- Stats row: Record | Profit (no ROI)
+- Each result row fills space proportionally (flex: 1)
+- Green border for wins, red border for losses
+- Checkmark (✓) for wins, X (✗) for losses
+
+PLACEHOLDERS:
+{{DATE}}         - "DECEMBER 4"
+{{RECORD}}       - "5-2"
+{{PROFIT}}       - "+$634" or "-$150"
+{{PROFIT_CLASS}} - "green" or "red"
+{{RESULT_ROWS}}  - Generated dynamically (wins first, then losses)
+
+RESULT ROW STRUCTURE:
+- Team logo (70px)
+- Team name (28px font)
+- Line/odds (20px font, e.g., "ML (-105)" or "+2.5 (+100)")
+- Fund badge (sharp/vector/catalyst/contra)
+- PROFIT AMOUNT (28px font, green for wins, red for losses)
+- Result icon (checkmark or X)
+
+GROUPED BY SPORT - Always organize results by sport with dividers:
+
+SPORT DIVIDER (insert before each sport section):
+<div class="sport-divider"><span class="sport-label">NHL</span></div>
+
+SPORT ORDER: NHL, NFL, NBA, NCAAB (or whatever sports are present)
+Within each sport: wins first, then losses
+
+WIN ROW:
+<div class="result-row win">
+  <div class="team-logo"><img src="../../public/logos/TEAM.png"></div>
+  <div class="team-info">
+    <div class="team-name">Team Name</div>
+    <div class="team-line">ML (-105)</div>
+  </div>
+  <div class="fund-badge sharp">SHARP</div>
+  <div class="profit-amount profit-positive">+$190</div>
+  <div class="result-icon win">✓</div>
+</div>
+
+LOSS ROW:
+<div class="result-row loss">
+  <div class="team-logo"><img src="../../public/logos/TEAM.png"></div>
+  <div class="team-info">
+    <div class="team-name">Team Name</div>
+    <div class="team-line">ML (-105)</div>
+  </div>
+  <div class="fund-badge vector">VECTOR</div>
+  <div class="profit-amount profit-negative">-$100</div>
+  <div class="result-icon loss">✗</div>
+</div>
+
+PROFIT CALCULATION:
+- Win at positive odds (+150): profit = stake * (odds / 100)
+- Win at negative odds (-110): profit = stake * (100 / abs(odds))
+- Loss: profit = -stake
+- Round to whole dollars for display
+
+LOGO NAMING (IMPORTANT - avoid confusion):
+- NHL LA Kings: la-kings.png
+- NBA Sacramento Kings: kings.png
+- Always use sport-specific names when teams share names
+
+FUND BADGE CLASSES: sharp, vector, catalyst, contra
+
+
+============================================================
+PORTFOLIO CHART TEMPLATE (LOCKED)
+============================================================
+
+DESIGN:
+- Blue gradient background (#4a7cb8 → #3a5a8a → #1a2d4a)
+- Red/green side accent bars
+- Grid pattern overlay
+- Single stats box with 2 rows (6 stats total)
+- Dark chart area (#0d1117) with 680px height
+- 7-day candlestick chart with trend line
+- Muted candle colors: green #2d8a4e, red #c0392b
+
+LAYOUT (top to bottom):
+1. HEADER
+   - "PORTFOLIO PERFORMANCE" label
+   - Date in gold (e.g., "DECEMBER 4")
+
+2. STATS BOX (2 rows, 6 stats)
+   Row 1: BALANCE (white) | NET P/L (green) | ROI (green)
+   Row 2: RECORD (white) | WIN RATE (green) | UNITS PROFITED (green)
+
+3. CHART SECTION
+   - "7 DAY PERFORMANCE" label
+   - Date range in gold (e.g., "NOV 28 - DEC 4")
+   - Dark chart area with candlesticks
+
+4. FOOTER
+   - Logo + DEPTOFGAMBLING.COM
+
+CHART SPECS:
+- Chart area: 680px height (fixed)
+- Usable height: 640px (40px for x-axis labels)
+- Y-axis: Dynamic based on data range + ~10% padding
+- Scale: usable_height / (y_max - y_min)
+- Candle body width: 52px
+- Wick width: 5px
+
+CANDLE CALCULATION:
+- bottom_px = 40 + (value - y_min) * scale
+- Wick: bottom = low position, height = high - low
+- Body: bottom = min(open,close), height = |close - open|
+- Color: green if close > open, red if close < open
+- P/L label: positioned above candle top
+
+Y-AXIS LABELS:
+- 6 labels at $500 increments within data range
+- White text, JetBrains Mono font
+
+TREND LINE:
+- SVG polyline connecting daily closes
+- Gradient fill below line
+- Color: rgba(45,138,78,0.5)
+
+DATA SOURCE: portfolio.json, chartData.json
+
+
+============================================================
+FILE LOCATIONS
+============================================================
+Main logo: public/logo.png
+Team logos: public/logos/TEAM.png
+Daily output: social-images/YYYY-MM-DD/
+Weekly output: social-images/weekly-recaps/weekX-MMMDD-DD-YYYY/
+
+WEEKLY RECAP FOLDER STRUCTURE:
+social-images/
+└── weekly-recaps/
+    └── week5-dec1-7-2025/
+        ├── slide1.html
+        ├── slide1.png
+        ├── slide2.html
+        ├── slide2.png
+        ├── slide3.html
+        ├── slide3.png
+        ├── slide4.html
+        └── slide4.png
+
+TO GENERATE PNG:
+1. Open HTML in browser
+2. Use Puppeteer: npx puppeteer screenshot --viewport="1080,1350"
+   OR use Node script with puppeteer library
+
+
+============================================================
+WEEKLY BRIEFING TEMPLATE (4-SLIDE CAROUSEL)
+============================================================
+
+SLIDE 1: Weekly Overview
+------------------------
+- Logo at top
+- "WEEKLY BRIEFING" title (72px gold)
+- Week number and date range badge
+- Hero P/L box (115px green/red)
+- Units below P/L (36px)
+- Record | Win Rate | ROI (58px gold each)
+- Official DOG Statement (28px italic)
+- Footer: WEEK X REPORT | DEPTOFGAMBLING.COM | SLIDE 1 OF 4
+
+DATA NEEDED FOR SLIDE 1:
+- Total P/L (rounded to whole dollar)
+- Total units
+- Record (W-L or W-L-P)
+- Win rate %
+- ROI %
+- Statement (see rules below)
+
+
+============================================================
+OFFICIAL DOG STATEMENT RULES
+============================================================
+
+STRUCTURE (2 sentences max):
+1. Opening - Set the tone for the week
+2. Details - Highlight key driver(s)
+
+WHAT TO MENTION (pick 2-3 that stand out):
+
+SPORTS (when one dominates):
+- "NHL led all sports with a 71% hit rate..."
+- "NBA carried the week with +$600 in proceeds..."
+- "NCAAF went perfect at 4-0..."
+
+FUNDS (when one stands out):
+- "Sharp Fund dominated with 75% win rate..."
+- "Contra Fund delivered clutch wins..."
+- "Vector volume plays showed resilience..."
+
+BIG DAYS (when there's a standout):
+- "A monster Wednesday drove gains..."
+- "Sunday's sweep set the tone..."
+- "Back-to-back green days..."
+
+RECOVERY/ADVERSITY (for tough weeks):
+- "Despite early setbacks, the Department recovered..."
+- "A challenging week saw the Department fight back..."
+- "Drawdowns on Thursday were offset by..."
+
+TONE BY WEEK TYPE:
++$1,500+     = Confident, dominant
++$500-1,500  = Solid, steady
++$0-500      = Measured, cautious optimism
+Negative     = Honest, forward-looking
+
+EXAMPLE STATEMENTS:
+
+Big Win Week:
+"Week X marked a dominant chapter for the Department. Sharp Fund
+led all divisions at 80% while NHL delivered over $1,200 in proceeds."
+
+Solid Week:
+"The Department posted steady gains in Week X. NBA and NHL combined
+for a 68% hit rate, carrying the portfolio through midweek volatility."
+
+Tough Week:
+"Week X tested the Department's discipline. Despite a rough Thursday,
+Contra Fund's late-week recovery limited drawdowns to manageable levels."
+
+
+============================================================
+WEEKLY BRIEFING DATA QUERIES
+============================================================
+
+To get all stats for a week, run these queries on bets.json:
+
+1. Filter bets by date range (Mon-Sun of that week)
+2. Calculate:
+   - Total P/L and units
+   - Record (W-L-P)
+   - Win rate and ROI
+   - By sport breakdown (for statement)
+   - By fund breakdown (for slide 2)
+   - By day breakdown (for statement)
+   - Best/worst day
+   - Biggest win/loss
+
+3. Identify standouts for statement:
+   - Which sport had highest P/L?
+   - Which sport had highest win rate (min 5 bets)?
+   - Which fund performed best?
+   - Any standout days (+$500 or more)?
+   - Any bad days to acknowledge?

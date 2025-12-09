@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene: NHL Spotlight</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 50%, #0d1117 0%, #050507 100%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.45);
+      transform-origin: center center;
+      overflow: hidden;
+      outline: 1px solid rgba(255, 255, 255, 0.2);
+      outline-offset: -1px;
+    }
+
+    .container.full-size {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    /* Ice rink inspired background */
+    .ice-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 70%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    }
+
+    /* Animated grid background */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    /* NHL Logo Section */
+    .nhl-logo-section {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .nhl-logo-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+
+    .nhl-logo-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.1) 40%, transparent 70%);
+      border-radius: 50%;
+      animation: logoGlow 2s ease-in-out infinite;
+      filter: blur(30px);
+    }
+
+    @keyframes logoGlow {
+      0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+    }
+
+    .nhl-logo {
+      position: relative;
+      width: 350px;
+      height: 350px;
+      object-fit: contain;
+      z-index: 5;
+      filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.5));
+    }
+
+    .nhl-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 900;
+      color: #ffffff;
+      margin-top: 40px;
+      letter-spacing: 8px;
+      text-shadow: 0 0 60px rgba(255, 255, 255, 0.3);
+    }
+
+    .nhl-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #6b7280;
+      margin-top: 15px;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+    }
+
+    /* Stats - Stacked Numbers Pop Style */
+    .stats-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .stats-row {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .stats-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      min-width: 200px;
+      text-align: right;
+    }
+
+    .stats-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 120px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1;
+      text-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
+      white-space: nowrap;
+    }
+
+    .stats-number.green {
+      color: #22c55e;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+    }
+
+    .stats-winrate {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #4ade80;
+      min-width: 140px;
+      text-align: left;
+    }
+
+    /* Win Rate Ring - ENHANCED */
+    .win-ring-section {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 25;
+    }
+
+    .win-ring-container {
+      position: relative;
+      width: 600px;
+      height: 600px;
+      margin: 0 auto;
+    }
+
+    /* Outer glow ring */
+    .win-ring-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+      filter: blur(40px);
+      opacity: 0;
+      animation: ringGlowPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes ringGlowPulse {
+      0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+      50% { opacity: 0.8; transform: translate(-50%, -50%) scale(1.05); }
+    }
+
+    /* Spinning outer ring */
+    .win-ring-outer {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px;
+      height: 580px;
+      border: 2px dashed rgba(34, 197, 94, 0.3);
+      border-radius: 50%;
+      animation: spinSlow 20s linear infinite;
+    }
+
+    @keyframes spinSlow {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .win-ring {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .win-ring .bg {
+      fill: none;
+      stroke: rgba(255,255,255,0.08);
+      stroke-width: 50;
+    }
+
+    .win-ring .fill {
+      fill: none;
+      stroke: url(#nhlGradient);
+      stroke-width: 50;
+      stroke-linecap: round;
+      stroke-dasharray: 0 1759.29;
+      filter: drop-shadow(0 0 40px rgba(34, 197, 94, 0.8));
+    }
+
+    /* Win markers around the ring */
+    .win-markers {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 520px;
+      height: 520px;
+    }
+
+    .win-marker {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 15px #22c55e, 0 0 30px rgba(34, 197, 94, 0.5);
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .win-marker.loss {
+      background: #ef4444;
+      box-shadow: 0 0 15px #ef4444, 0 0 30px rgba(239, 68, 68, 0.5);
+      width: 12px;
+      height: 12px;
+    }
+
+    .win-ring-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .win-ring-percent {
+      font-family: 'Inter', sans-serif;
+      font-size: 160px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.8), 0 0 120px rgba(34, 197, 94, 0.5);
+    }
+
+    .win-ring-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 10px;
+      letter-spacing: 6px;
+    }
+
+    .win-ring-sublabel {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 12px;
+    }
+
+    .win-ring-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.1) 100%);
+      border: 2px solid rgba(34, 197, 94, 0.5);
+      border-radius: 50px;
+      padding: 12px 35px;
+      margin-top: 30px;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .win-ring-badge-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #22c55e;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .nhl-logo-small {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 30px rgba(59, 130, 246, 0.6));
+      animation: logoBob 2s ease-in-out infinite;
+    }
+
+    @keyframes logoBob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* Particle burst for win rate */
+    .win-particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .win-particle {
+      position: absolute;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    /* Final Profit Section */
+    .final-profit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 30;
+    }
+
+    .final-logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.8));
+    }
+
+    .final-amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 200px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow:
+        0 0 80px rgba(34, 197, 94, 0.8),
+        0 0 160px rgba(34, 197, 94, 0.5);
+    }
+
+    .final-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 20px;
+      letter-spacing: 8px;
+      text-transform: lowercase;
+    }
+
+    .final-record {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: #ffffff;
+      margin-top: 50px;
+    }
+
+    .final-winrate {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #60a5fa;
+      margin-top: 15px;
+      opacity: 0;
+    }
+
+    .final-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #4b5563;
+      margin-top: 60px;
+      opacity: 0;
+    }
+
+    .final-tagline span {
+      color: #3b82f6;
+      font-weight: 700;
+    }
+
+    /* Confetti */
+    .confetti-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 90;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(2000px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Flash */
+    .flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #3b82f6;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      top: calc(50% + 450px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #3b82f6; color: #ffffff; }
+    .reset-btn { background: #374151; color: #ffffff; }
+
+    .timer {
+      position: fixed;
+      top: calc(50% - 480px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    /* Animations */
+    @keyframes explodeIn {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      70% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    @keyframes implodeOut {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; filter: blur(0); }
+      100% { transform: translate(-50%, -50%) scale(0); opacity: 0; filter: blur(10px); }
+    }
+
+    @keyframes fadeSlideIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      20% { opacity: 0.6; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes megaPulse {
+      0%, 100% {
+        text-shadow: 0 0 80px rgba(34, 197, 94, 0.8), 0 0 160px rgba(34, 197, 94, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 120px rgba(34, 197, 94, 1), 0 0 240px rgba(34, 197, 94, 0.7);
+        transform: scale(1.02);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="ice-bg"></div>
+    <div class="grid-bg"></div>
+    <div class="flash" id="flash"></div>
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- NHL Logo Intro -->
+    <div class="nhl-logo-section" id="nhl-logo-section">
+      <div class="nhl-logo-container">
+        <div class="nhl-logo-glow"></div>
+        <img class="nhl-logo" src="logos/nhl.png" alt="NHL">
+      </div>
+      <div class="nhl-title">NHL</div>
+      <div class="nhl-subtitle">Our Top Performer</div>
+    </div>
+
+    <!-- Stats - Stacked Numbers Pop -->
+    <div class="stats-container" id="stats-container">
+      <div class="stats-row" id="stat-row-1">
+        <div class="stats-label">This Week</div>
+        <div class="stats-number">10-4</div>
+        <div class="stats-winrate">71%</div>
+      </div>
+      <div class="stats-row" id="stat-row-2">
+        <div class="stats-label">Week Profit</div>
+        <div class="stats-number green">+$1,038</div>
+        <div class="stats-winrate"></div>
+      </div>
+      <div class="stats-row" id="stat-row-3">
+        <div class="stats-label">Season</div>
+        <div class="stats-number">19-6</div>
+        <div class="stats-winrate">76%</div>
+      </div>
+      <div class="stats-row" id="stat-row-4">
+        <div class="stats-label">Total Profit</div>
+        <div class="stats-number green">+$1,800</div>
+        <div class="stats-winrate"></div>
+      </div>
+    </div>
+
+    <!-- Win Rate Ring - ENHANCED -->
+    <div class="win-ring-section" id="win-ring-section">
+      <img class="nhl-logo-small" src="logos/nhl.png" alt="NHL">
+      <div class="win-ring-container">
+        <div class="win-ring-glow" id="win-ring-glow"></div>
+        <div class="win-ring-outer"></div>
+        <div class="win-markers" id="win-markers"></div>
+        <div class="win-particles" id="win-particles"></div>
+        <svg class="win-ring" viewBox="0 0 600 600">
+          <defs>
+            <linearGradient id="nhlGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#22c55e"/>
+              <stop offset="50%" stop-color="#4ade80"/>
+              <stop offset="100%" stop-color="#22c55e"/>
+            </linearGradient>
+          </defs>
+          <circle class="bg" cx="300" cy="300" r="280"/>
+          <circle class="fill" id="win-ring-fill" cx="300" cy="300" r="280"/>
+        </svg>
+        <div class="win-ring-center">
+          <div class="win-ring-percent" id="win-ring-percent">0%</div>
+          <div class="win-ring-label">WIN RATE</div>
+          <div class="win-ring-sublabel" id="win-ring-sublabel">0 wins / 25 bets</div>
+          <div class="win-ring-badge" id="win-ring-badge">
+            <span class="win-ring-badge-text">DOMINATING</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Final Profit -->
+    <div class="final-profit" id="final-profit">
+      <img class="final-logo" src="logos/nhl.png" alt="NHL">
+      <div class="final-amount" id="final-amount">+$1,800</div>
+      <div class="final-label">season profit</div>
+      <div class="final-record" id="final-record">19-6</div>
+      <div class="final-winrate" id="final-winrate">76% Win Rate</div>
+      <div class="final-tagline" id="final-tagline">The <span>ice</span> is on our side</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+    <button class="reset-btn" onclick="toggleFullSize()" id="size-btn">Full Size (1080x1920)</button>
+  </div>
+
+  <script>
+    // ==================== SOUND EFFECTS ====================
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playPop() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(300, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(150, audioCtx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.1);
+    }
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        const env = Math.sin((i / bufferSize) * Math.PI);
+        output[i] = (Math.random() * 2 - 1) * env * 0.3;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(600, audioCtx.currentTime);
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+      noise.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playFillSound(duration = 1500) {
+      const steps = 20;
+      const interval = duration / steps;
+      for (let i = 0; i < steps; i++) {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(500 + (i / steps) * 300, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.025, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.05);
+        }, i * interval);
+      }
+    }
+
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(80, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.15);
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playChaChing() {
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(1800, audioCtx.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.08);
+      gain1.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start();
+      osc1.stop(audioCtx.currentTime + 0.1);
+
+      setTimeout(() => {
+        const osc2 = audioCtx.createOscillator();
+        const gain2 = audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(2400, audioCtx.currentTime);
+        gain2.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+        osc2.connect(gain2);
+        gain2.connect(audioCtx.destination);
+        osc2.start();
+        osc2.stop(audioCtx.currentTime + 0.5);
+      }, 100);
+    }
+
+    // ==================== UI CONTROLS ====================
+    let isFullSize = false;
+    function toggleFullSize() {
+      const container = document.querySelector('.container');
+      const btn = document.getElementById('size-btn');
+      const controls = document.querySelector('.controls');
+      const timer = document.getElementById('timer');
+      if (isFullSize) {
+        container.classList.remove('full-size');
+        btn.textContent = 'Full Size (1080x1920)';
+        controls.style.display = 'flex';
+        timer.style.display = 'block';
+      } else {
+        container.classList.add('full-size');
+        btn.textContent = 'Preview Size';
+        controls.style.display = 'none';
+        timer.style.display = 'none';
+      }
+      isFullSize = !isFullSize;
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') { resetAnimation(); }
+      else if (e.code === 'KeyF') { toggleFullSize(); }
+    });
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function animateValue(el, start, end, duration, suffix = '') {
+      const startT = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startT) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.floor(start + (end - start) * ease) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#3b82f6', '#60a5fa', '#22c55e', '#4ade80', '#ffffff'];
+      for (let i = 0; i < 80; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + '%';
+        c.style.top = '-20px';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.width = (8 + Math.random() * 8) + 'px';
+        c.style.height = (8 + Math.random() * 8) + 'px';
+        c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        c.style.animation = `confettiFall ${2 + Math.random() * 2}s ease-out forwards`;
+        c.style.animationDelay = Math.random() * 0.5 + 's';
+        container.appendChild(c);
+      }
+    }
+
+    // Create win/loss markers around the ring
+    function createWinMarkers() {
+      const container = document.getElementById('win-markers');
+      container.innerHTML = '';
+      const results = [];
+      // 19 wins, 6 losses - mixed order for visual interest
+      for (let i = 0; i < 19; i++) results.push('win');
+      for (let i = 0; i < 6; i++) results.push('loss');
+      // Shuffle to spread losses around
+      results.sort(() => Math.random() - 0.5);
+
+      const total = 25;
+      const radius = 260; // Half of container width
+
+      results.forEach((result, i) => {
+        const marker = document.createElement('div');
+        marker.className = 'win-marker' + (result === 'loss' ? ' loss' : '');
+
+        // Position around the circle
+        const angle = (i / total) * Math.PI * 2 - Math.PI / 2;
+        const x = radius + Math.cos(angle) * radius - 8;
+        const y = radius + Math.sin(angle) * radius - 8;
+        marker.style.left = x + 'px';
+        marker.style.top = y + 'px';
+
+        container.appendChild(marker);
+      });
+
+      return container.children;
+    }
+
+    // Animate win markers appearing one by one
+    function animateWinMarkers(markers, startDelay = 0) {
+      Array.from(markers).forEach((marker, i) => {
+        timeouts.push(setTimeout(() => {
+          marker.style.transition = 'opacity 0.2s, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          marker.style.opacity = '1';
+          marker.style.transform = 'scale(1)';
+
+          // Play tick sound for each marker
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(marker.classList.contains('loss') ? 300 : 800, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.05);
+        }, startDelay + i * 80));
+      });
+    }
+
+    // Create particle burst for win rate completion
+    function createWinParticles() {
+      const container = document.getElementById('win-particles');
+      container.innerHTML = '';
+
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'win-particle';
+        const size = 6 + Math.random() * 10;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+
+        const angle = (i / 30) * Math.PI * 2;
+        const dist = 200 + Math.random() * 200;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist;
+
+        p.animate([
+          { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+          { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+        ], { duration: 800, easing: 'ease-out', fill: 'forwards' });
+
+        container.appendChild(p);
+      }
+    }
+
+    // Play victory sound
+    function playVictorySound() {
+      // Rising triumphant sound
+      [0, 100, 200].forEach((delay, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(600 + i * 200, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.3);
+        }, delay);
+      });
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // PHASE 1: NHL Logo (0-3s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('nhl-logo-section').style.animation = 'explodeIn 0.8s ease-out forwards';
+        playImpact();
+      }, 300));
+
+      // Fade out logo (3s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('nhl-logo-section').style.animation = 'implodeOut 0.5s ease-in forwards';
+        playWhoosh();
+      }, 3000));
+
+      // PHASE 2: Stats - Pop in one by one, stay on screen
+      timeouts.push(setTimeout(() => {
+        document.getElementById('stats-container').style.opacity = '1';
+      }, 3400));
+
+      // Row 1 - Week Record (3.5s)
+      timeouts.push(setTimeout(() => {
+        const row = document.getElementById('stat-row-1');
+        row.style.transition = 'opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        row.style.opacity = '1';
+        row.style.transform = 'scale(1)';
+        playPop();
+      }, 3500));
+
+      // Row 2 - Week Profit (4.2s)
+      timeouts.push(setTimeout(() => {
+        const row = document.getElementById('stat-row-2');
+        row.style.transition = 'opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        row.style.opacity = '1';
+        row.style.transform = 'scale(1)';
+        playChaChing();
+      }, 4200));
+
+      // Row 3 - Season Record (4.9s)
+      timeouts.push(setTimeout(() => {
+        const row = document.getElementById('stat-row-3');
+        row.style.transition = 'opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        row.style.opacity = '1';
+        row.style.transform = 'scale(1)';
+        playPop();
+      }, 4900));
+
+      // Row 4 - Total Profit (5.6s)
+      timeouts.push(setTimeout(() => {
+        const row = document.getElementById('stat-row-4');
+        row.style.transition = 'opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        row.style.opacity = '1';
+        row.style.transform = 'scale(1)';
+        playChaChing();
+      }, 5600));
+
+      // All stats fade out together (7s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('stats-container').style.transition = 'opacity 0.4s';
+        document.getElementById('stats-container').style.opacity = '0';
+        playWhoosh();
+      }, 7000));
+
+      // PHASE 3: Win Rate Ring - ENHANCED (7.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('win-ring-section').style.animation = 'explodeIn 0.6s ease-out forwards';
+        playImpact();
+
+        // Show glow
+        setTimeout(() => {
+          document.getElementById('win-ring-glow').style.opacity = '1';
+        }, 300);
+
+        // Create and animate win markers
+        const markers = createWinMarkers();
+        animateWinMarkers(markers, 600);
+
+        // Animate ring fill
+        setTimeout(() => {
+          const circumference = 2 * Math.PI * 280; // Updated radius
+          const fill = circumference * 0.76; // 76% win rate
+          document.getElementById('win-ring-fill').style.transition = 'stroke-dasharray 2.2s ease-out';
+          document.getElementById('win-ring-fill').style.strokeDasharray = `${fill} ${circumference}`;
+
+          // Animate percent with better timing
+          animateValue(document.getElementById('win-ring-percent'), 0, 76, 2200, '%');
+
+          // Animate sublabel wins count
+          const sublabel = document.getElementById('win-ring-sublabel');
+          const startT = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - startT) / 2200, 1);
+            const ease = 1 - Math.pow(1 - p, 4);
+            sublabel.textContent = Math.floor(19 * ease) + ' wins / 25 bets';
+            if (p < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+
+          playFillSound(2200);
+        }, 500);
+
+        // Show badge with particle burst when fill completes
+        setTimeout(() => {
+          createWinParticles();
+          playVictorySound();
+
+          const badge = document.getElementById('win-ring-badge');
+          badge.style.transition = 'opacity 0.4s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          badge.style.opacity = '1';
+          badge.style.transform = 'scale(1)';
+        }, 2800);
+      }, 7500));
+
+      // Fade out ring (11s - extended for enhanced animation)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('win-ring-section').style.animation = 'implodeOut 0.5s ease-in forwards';
+        playWhoosh();
+      }, 11000));
+
+      // PHASE 4: Final Profit (11.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('flash').style.animation = 'flashBang 0.5s ease-out forwards';
+        createConfetti();
+        document.getElementById('final-profit').style.animation = 'explodeIn 0.7s ease-out forwards';
+        playChaChing();
+      }, 11500));
+
+      // Pulse
+      timeouts.push(setTimeout(() => {
+        document.getElementById('final-amount').style.animation = 'megaPulse 2s ease-in-out infinite';
+      }, 12200));
+
+      // Win rate
+      timeouts.push(setTimeout(() => {
+        document.getElementById('final-winrate').style.opacity = '1';
+        document.getElementById('final-winrate').style.transition = 'opacity 0.5s';
+      }, 13000));
+
+      // Tagline
+      timeouts.push(setTimeout(() => {
+        document.getElementById('final-tagline').style.opacity = '1';
+        document.getElementById('final-tagline').style.transition = 'opacity 0.5s';
+      }, 13700));
+
+      // End (16s)
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:16';
+      }, 16000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0:00';
+
+      // Reset NHL logo
+      const logoSection = document.getElementById('nhl-logo-section');
+      logoSection.style.animation = 'none';
+      logoSection.style.opacity = '0';
+      logoSection.style.transform = 'translate(-50%, -50%) scale(0)';
+
+      // Reset stats - stacked rows
+      document.getElementById('stats-container').style.opacity = '0';
+      document.getElementById('stats-container').style.transition = 'none';
+      ['stat-row-1', 'stat-row-2', 'stat-row-3', 'stat-row-4'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+        el.style.transform = 'scale(0)';
+      });
+
+      // Reset win ring - ENHANCED
+      const ringSection = document.getElementById('win-ring-section');
+      ringSection.style.animation = 'none';
+      ringSection.style.opacity = '0';
+      ringSection.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('win-ring-glow').style.opacity = '0';
+      document.getElementById('win-ring-fill').style.transition = 'none';
+      document.getElementById('win-ring-fill').style.strokeDasharray = '0 1759.29';
+      document.getElementById('win-ring-percent').textContent = '0%';
+      document.getElementById('win-ring-sublabel').textContent = '0 wins / 25 bets';
+      document.getElementById('win-markers').innerHTML = '';
+      document.getElementById('win-particles').innerHTML = '';
+      const badge = document.getElementById('win-ring-badge');
+      badge.style.opacity = '0';
+      badge.style.transform = 'scale(0.8)';
+      badge.style.transition = 'none';
+
+      // Reset final
+      document.getElementById('flash').style.animation = 'none';
+      document.getElementById('confetti-container').innerHTML = '';
+      const finalProfit = document.getElementById('final-profit');
+      finalProfit.style.animation = 'none';
+      finalProfit.style.opacity = '0';
+      finalProfit.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('final-amount').style.animation = 'none';
+      document.getElementById('final-winrate').style.opacity = '0';
+      document.getElementById('final-winrate').style.transition = 'none';
+      document.getElementById('final-tagline').style.opacity = '0';
+      document.getElementById('final-tagline').style.transition = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 2: The Numbers V4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 50%, #0d1117 0%, #050507 100%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.45);
+      transform-origin: center center;
+      overflow: hidden;
+      /* Crop guide border - line up your screen recording to this */
+      outline: 1px solid rgba(255, 255, 255, 0.2);
+      outline-offset: -1px;
+    }
+
+    .container.full-size {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .container.hide-guide {
+      outline: none;
+    }
+
+    /* Animated grid background */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      animation: gridPulse 4s ease-in-out infinite;
+    }
+
+    @keyframes gridPulse {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.6; }
+    }
+
+    /* Floating ambient particles */
+    .ambient-particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .ambient-particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(34, 197, 94, 0.4);
+      border-radius: 50%;
+      animation: float 8s ease-in-out infinite;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+      25% { transform: translateY(-30px) translateX(10px); opacity: 0.6; }
+      50% { transform: translateY(-60px) translateX(-10px); opacity: 0.4; }
+      75% { transform: translateY(-30px) translateX(15px); opacity: 0.6; }
+    }
+
+    /* Scrolling bets */
+    .bets-scroll {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 950px;
+      height: 100%;
+      overflow: hidden;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .bets-track {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bet-card {
+      background: linear-gradient(135deg, rgba(26,26,46,0.9) 0%, rgba(18,18,31,0.9) 100%);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 18px 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bet-card.win {
+      border-color: rgba(34, 197, 94, 0.5);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.2), inset 0 0 30px rgba(34, 197, 94, 0.05);
+    }
+
+    .bet-card.win::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #22c55e;
+      box-shadow: 0 0 15px #22c55e;
+    }
+
+    .bet-card.loss {
+      border-color: rgba(239, 68, 68, 0.4);
+      box-shadow: 0 0 20px rgba(239, 68, 68, 0.15), inset 0 0 30px rgba(239, 68, 68, 0.03);
+    }
+
+    .bet-card.loss::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background: #ef4444;
+      box-shadow: 0 0 15px #ef4444;
+    }
+
+    .bet-card .team {
+      font-size: 30px;
+      font-weight: 700;
+      color: #ffffff;
+      flex: 1;
+    }
+
+    .bet-card .details {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .bet-card .odds {
+      font-size: 24px;
+      font-weight: 600;
+      color: #6b7280;
+      font-family: 'SF Mono', monospace;
+    }
+
+    .bet-card .stake {
+      font-size: 26px;
+      font-weight: 700;
+      color: #22c55e;
+      min-width: 90px;
+      text-align: right;
+    }
+
+    .bet-card .type {
+      font-size: 16px;
+      font-weight: 600;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 6px;
+    }
+
+    /* 65 Bets with circular progress */
+    .bets-number-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .progress-ring {
+      width: 500px;
+      height: 500px;
+      position: relative;
+    }
+
+    .progress-ring svg {
+      transform: rotate(-90deg);
+      width: 100%;
+      height: 100%;
+    }
+
+    .progress-ring .bg {
+      fill: none;
+      stroke: rgba(255,255,255,0.1);
+      stroke-width: 8;
+    }
+
+    .progress-ring .progress {
+      fill: none;
+      stroke: url(#greenGradient);
+      stroke-width: 8;
+      stroke-linecap: round;
+      stroke-dasharray: 1445;
+      stroke-dashoffset: 1445;
+      transition: stroke-dashoffset 1.5s ease-out;
+      filter: drop-shadow(0 0 10px rgba(34, 197, 94, 0.5));
+    }
+
+    .bets-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .bets-number .number {
+      font-family: 'Inter', sans-serif;
+      font-size: 200px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(255,255,255,0.3);
+    }
+
+    .bets-number .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 10px;
+      letter-spacing: 6px;
+      text-transform: lowercase;
+    }
+
+    /* Tank visualization with coins */
+    .tanks-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 120px;
+      align-items: flex-end;
+      opacity: 0;
+      z-index: 15;
+    }
+
+    .tank-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .tank {
+      width: 220px;
+      height: 650px;
+      background: rgba(255,255,255,0.03);
+      border: 3px solid rgba(255,255,255,0.1);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .tank-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      border-radius: 0 0 20px 20px;
+      transition: height 2.5s ease-out;
+    }
+
+    .tank-fill.wagered {
+      background: linear-gradient(180deg, #9ca3af 0%, #6b7280 50%, #4b5563 100%);
+    }
+
+    .tank-fill.returned {
+      background: linear-gradient(180deg, #4ade80 0%, #22c55e 50%, #16a34a 100%);
+      box-shadow: 0 0 60px rgba(34, 197, 94, 0.5), inset 0 0 30px rgba(255,255,255,0.1);
+    }
+
+    /* Coins inside tank */
+    .coins-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .coin {
+      position: absolute;
+      font-size: 30px;
+      opacity: 0;
+      animation: coinDrop 0.6s ease-out forwards;
+    }
+
+    @keyframes coinDrop {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(0) rotate(360deg); opacity: 0.8; }
+    }
+
+    /* Floating money symbols */
+    .money-floaters {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .money-float {
+      position: absolute;
+      font-size: 36px;
+      color: #22c55e;
+      opacity: 0;
+      text-shadow: 0 0 20px rgba(34, 197, 94, 0.5);
+    }
+
+    @keyframes moneyRise {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      100% { transform: translateY(-300px) scale(0.5); opacity: 0; }
+    }
+
+    .tank-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 500;
+      color: #6b7280;
+      margin-top: 35px;
+      letter-spacing: 3px;
+      text-transform: lowercase;
+    }
+
+    .tank-value {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 40px;
+      font-weight: 800;
+      color: #ffffff;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+      opacity: 0;
+      z-index: 5;
+    }
+
+    /* VS indicator */
+    .vs-indicator {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 60px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.1);
+      opacity: 0;
+    }
+
+    /* Difference arrow */
+    .diff-arrow {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+    }
+
+    .diff-arrow .amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 800;
+      color: #22c55e;
+      text-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+    }
+
+    .diff-arrow .arrow {
+      font-size: 60px;
+      color: #22c55e;
+      animation: bounce 1s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    /* Flash and effects */
+    .flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    /* Confetti */
+    .confetti-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 90;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(2000px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Light trail */
+    .light-trail {
+      position: absolute;
+      width: 4px;
+      height: 200px;
+      background: linear-gradient(180deg, transparent, #22c55e, transparent);
+      opacity: 0;
+      filter: blur(2px);
+      z-index: 80;
+    }
+
+    /* Profit reveal */
+    .profit-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 50;
+    }
+
+    .profit-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 240px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow:
+        0 0 80px rgba(34, 197, 94, 0.8),
+        0 0 160px rgba(34, 197, 94, 0.5),
+        0 0 240px rgba(34, 197, 94, 0.3);
+      animation: none;
+    }
+
+    .profit-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 25px;
+      letter-spacing: 10px;
+      text-transform: lowercase;
+    }
+
+    .profit-stats {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-top: 60px;
+      opacity: 0;
+    }
+
+    .profit-stat {
+      text-align: center;
+    }
+
+    .profit-stat .value {
+      font-family: 'Inter', sans-serif;
+      font-size: 52px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .profit-stat .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 8px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .profit-divider {
+      width: 400px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #374151, transparent);
+      margin: 50px auto;
+      opacity: 0;
+    }
+
+    .profit-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 34px;
+      font-weight: 600;
+      color: #4b5563;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    /* Glow orb */
+    .glow-orb {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 5;
+      filter: blur(40px);
+    }
+
+    /* Explosion ring */
+    .explosion-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 4px solid #22c55e;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 45;
+      box-shadow: 0 0 60px #22c55e, inset 0 0 60px rgba(34, 197, 94, 0.3);
+    }
+
+    /* Particles */
+    .particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 40;
+    }
+
+    .particle {
+      position: absolute;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    /* Controls - positioned below the scaled container */
+    .controls {
+      position: fixed;
+      top: calc(50% + 450px); /* Below the 0.45 scaled container (1920 * 0.45 / 2 = 432px) */
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #22c55e; color: #0a0a0f; }
+    .reset-btn { background: #374151; color: #ffffff; }
+
+    .timer {
+      position: fixed;
+      top: calc(50% - 480px); /* Above the scaled container */
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    /* Animations */
+    @keyframes explodeIn {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      70% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    @keyframes implodeOut {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; filter: blur(0); }
+      100% { transform: translate(-50%, -50%) scale(0); opacity: 0; filter: blur(10px); }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      20% { opacity: 0.5; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes ringExpand {
+      0% { width: 50px; height: 50px; opacity: 1; border-width: 4px; }
+      100% { width: 1200px; height: 1200px; opacity: 0; border-width: 1px; }
+    }
+
+    @keyframes megaPulse {
+      0%, 100% {
+        text-shadow: 0 0 80px rgba(34, 197, 94, 0.8), 0 0 160px rgba(34, 197, 94, 0.5);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 120px rgba(34, 197, 94, 1), 0 0 240px rgba(34, 197, 94, 0.7);
+        transform: scale(1.02);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Animated grid background -->
+    <div class="grid-bg"></div>
+
+    <!-- Ambient floating particles -->
+    <div class="ambient-particles" id="ambient-particles"></div>
+
+    <!-- Glow orbs -->
+    <div class="glow-orb" id="glow-orb-1" style="top: 20%; left: 20%;"></div>
+    <div class="glow-orb" id="glow-orb-2" style="top: 60%; left: 70%;"></div>
+
+    <!-- Flash -->
+    <div class="flash" id="flash"></div>
+
+    <!-- Confetti -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- Light trails -->
+    <div class="light-trail" id="light-trail-1"></div>
+    <div class="light-trail" id="light-trail-2"></div>
+
+    <!-- Scrolling bets -->
+    <div class="bets-scroll" id="bets-scroll">
+      <div class="bets-track" id="bets-track"></div>
+    </div>
+
+    <!-- 65 Bets with progress ring -->
+    <div class="bets-number-wrapper" id="bets-wrapper">
+      <div class="progress-ring">
+        <svg viewBox="0 0 500 500">
+          <defs>
+            <linearGradient id="greenGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#4ade80"/>
+            </linearGradient>
+          </defs>
+          <circle class="bg" cx="250" cy="250" r="230"/>
+          <circle class="progress" id="progress-circle" cx="250" cy="250" r="230"/>
+        </svg>
+        <div class="bets-number">
+          <div class="number" id="bets-counter">0</div>
+          <div class="label">bets placed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tanks -->
+    <div class="tanks-container" id="tanks-container">
+      <div class="tank-wrapper">
+        <div class="tank" id="tank-wagered">
+          <div class="tank-fill wagered" id="fill-wagered"></div>
+          <div class="coins-container" id="coins-wagered"></div>
+          <div class="tank-value" id="value-wagered">$0</div>
+        </div>
+        <div class="tank-label">wagered</div>
+        <div class="money-floaters" id="floaters-wagered"></div>
+      </div>
+
+      <!-- Diff arrow removed - tanks tell the story visually -->
+
+      <div class="tank-wrapper">
+        <div class="tank" id="tank-returned">
+          <div class="tank-fill returned" id="fill-returned"></div>
+          <div class="coins-container" id="coins-returned"></div>
+          <div class="tank-value" id="value-returned">$0</div>
+        </div>
+        <div class="tank-label">returned</div>
+        <div class="money-floaters" id="floaters-returned"></div>
+      </div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Explosion ring -->
+    <div class="explosion-ring" id="explosion-ring"></div>
+
+    <!-- Profit -->
+    <div class="profit-container" id="profit-container">
+      <div class="profit-number" id="profit-number">+$1,840</div>
+      <div class="profit-label">profit</div>
+      <div class="profit-stats" id="profit-stats">
+        <div class="profit-stat">
+          <div class="value">40-24</div>
+          <div class="label">Record</div>
+        </div>
+        <div class="profit-stat">
+          <div class="value">62%</div>
+          <div class="label">Hit Rate</div>
+        </div>
+      </div>
+      <div class="profit-divider" id="profit-divider"></div>
+      <div class="profit-tagline" id="profit-tagline">no parlays</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+    <button class="reset-btn" onclick="toggleFullSize()" id="size-btn">Full Size (1080x1920)</button>
+  </div>
+
+  <script>
+    // ==================== SOUND EFFECTS ====================
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let scrollTickInterval = null;
+
+    // Soft tick for scrolling bets - plays repeatedly during scroll
+    function playScrollTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+
+      gain.gain.setValueAtTime(0.015, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.03);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.03);
+    }
+
+    // Start scroll ticking
+    function startScrollSound() {
+      scrollTickInterval = setInterval(playScrollTick, 60);
+    }
+
+    // Stop scroll ticking
+    function stopScrollSound() {
+      if (scrollTickInterval) {
+        clearInterval(scrollTickInterval);
+        scrollTickInterval = null;
+      }
+    }
+
+    // Counter adding up sound - rising pitch ticks
+    function playCountUp(duration = 1200) {
+      const steps = 20;
+      const interval = duration / steps;
+      for (let i = 0; i < steps; i++) {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          // Pitch rises as we count up
+          const pitch = 400 + (i / steps) * 400;
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(pitch, audioCtx.currentTime);
+
+          gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.05);
+        }, i * interval);
+      }
+    }
+
+    // Money adding up sound - casino-style counter
+    function playMoneyCount(duration = 2500) {
+      const steps = 30;
+      const interval = duration / steps;
+      for (let i = 0; i < steps; i++) {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(800 + Math.random() * 200, audioCtx.currentTime);
+
+          gain.gain.setValueAtTime(0.025, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.04);
+
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.04);
+        }, i * interval);
+      }
+    }
+
+    // Whoosh transition
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        const env = Math.sin((i / bufferSize) * Math.PI);
+        output[i] = (Math.random() * 2 - 1) * env * 0.3;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(600, audioCtx.currentTime);
+
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+      noise.stop(audioCtx.currentTime + 0.2);
+    }
+
+    // Impact for explosion/transition
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(80, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.15);
+
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    // Cha-ching money sound for profit reveal
+    function playChaChing() {
+      // First "cha" - quick metallic hit
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(1800, audioCtx.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(1200, audioCtx.currentTime + 0.08);
+      gain1.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start();
+      osc1.stop(audioCtx.currentTime + 0.1);
+
+      // Second "ching" - bright ring
+      setTimeout(() => {
+        const osc2 = audioCtx.createOscillator();
+        const gain2 = audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(2400, audioCtx.currentTime);
+        gain2.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain2.gain.setValueAtTime(0.12, audioCtx.currentTime + 0.05);
+        gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+        osc2.connect(gain2);
+        gain2.connect(audioCtx.destination);
+        osc2.start();
+        osc2.stop(audioCtx.currentTime + 0.5);
+
+        // Harmonic shimmer
+        const osc3 = audioCtx.createOscillator();
+        const gain3 = audioCtx.createGain();
+        osc3.type = 'sine';
+        osc3.frequency.setValueAtTime(4800, audioCtx.currentTime);
+        gain3.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain3.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+        osc3.connect(gain3);
+        gain3.connect(audioCtx.destination);
+        osc3.start();
+        osc3.stop(audioCtx.currentTime + 0.3);
+      }, 100);
+    }
+
+    // ==================== UI CONTROLS ====================
+    let isFullSize = false;
+    function toggleFullSize() {
+      const container = document.querySelector('.container');
+      const btn = document.getElementById('size-btn');
+      const controls = document.querySelector('.controls');
+      const timer = document.getElementById('timer');
+      if (isFullSize) {
+        container.classList.remove('full-size');
+        btn.textContent = 'Full Size (1080x1920)';
+        controls.style.display = 'flex';
+        timer.style.display = 'block';
+      } else {
+        container.classList.add('full-size');
+        btn.textContent = 'Preview Size';
+        controls.style.display = 'none'; // Hide controls in full size for clean recording
+        timer.style.display = 'none';
+      }
+      isFullSize = !isFullSize;
+    }
+
+    // Keyboard shortcuts: Space = play, R = reset, F = toggle full size
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        startAnimation();
+      } else if (e.code === 'KeyR') {
+        resetAnimation();
+      } else if (e.code === 'KeyF') {
+        toggleFullSize();
+      }
+    });
+
+    let timeouts = [];
+    let intervals = [];
+    let timerInterval;
+    let startTime;
+
+    // Real bets with results
+    const realBets = [
+      { team: "VIKINGS", odds: "-110", stake: "$200", type: "SPREAD", result: "win" },
+      { team: "RAIDERS", odds: "-110", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "BEARS", odds: "-105", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "CARDINALS", odds: "-109", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "NORTHEASTERN", odds: "-102", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "LSU", odds: "-109", stake: "$250", type: "SPREAD", result: "loss" },
+      { team: "UNLV", odds: "-106", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "SMU", odds: "-110", stake: "$50", type: "SPREAD", result: "win" },
+      { team: "CREIGHTON", odds: "-115", stake: "$50", type: "SPREAD", result: "loss" },
+      { team: "INDIANA", odds: "-105", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "DUKE", odds: "-115", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "KINGS", odds: "-110", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "AVALANCHE", odds: "+145", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "ALABAMA", odds: "-105", stake: "$200", type: "SPREAD", result: "loss" },
+      { team: "MICHIGAN ST", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "RHODE ISLAND", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "JETS", odds: "+192", stake: "$125", type: "ML", result: "win" },
+      { team: "HEAT", odds: "-115", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "LAKERS", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "KENTUCKY", odds: "-110", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "TROY", odds: "-107", stake: "$125", type: "SPREAD", result: "win" },
+      { team: "JAZZ", odds: "-110", stake: "$200", type: "SPREAD", result: "loss" },
+      { team: "HORNETS", odds: "-114", stake: "$125", type: "SPREAD", result: "win" },
+      { team: "CANUCKS", odds: "-220", stake: "$75", type: "SPREAD", result: "loss" },
+      { team: "MAVERICKS", odds: "-108", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "PENGUINS", odds: "+140", stake: "$200", type: "ML", result: "win" },
+      { team: "RANGERS", odds: "+110", stake: "$150", type: "ML", result: "win" },
+      { team: "BRUINS", odds: "+122", stake: "$150", type: "ML", result: "win" },
+      { team: "USF", odds: "+100", stake: "$200", type: "SPREAD", result: "win" },
+      { team: "NETS", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "FLAMES", odds: "+106", stake: "$100", type: "ML", result: "win" },
+      { team: "UCSB", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "SPURS", odds: "-115", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "BLAZERS", odds: "-108", stake: "$200", type: "SPREAD", result: "win" },
+      { team: "TOWSON", odds: "-110", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "DETROIT MERCY", odds: "-112", stake: "$125", type: "SPREAD", result: "win" },
+      { team: "CLEVELAND ST", odds: "-110", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "BUCKS", odds: "-108", stake: "$50", type: "SPREAD", result: "win" },
+      { team: "MAVERICKS", odds: "-105", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "NORTHWESTERN", odds: "-115", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "BRUINS", odds: "+165", stake: "$50", type: "ML", result: "loss" },
+      { team: "WIZARDS", odds: "-105", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "TEXAS A&M", odds: "-108", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "MAPLE LEAFS", odds: "-170", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "CELTICS", odds: "-110", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "PELICANS", odds: "-110", stake: "$200", type: "SPREAD", result: "win" },
+      { team: "WILD", odds: "-175", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "KANSAS", odds: "-106", stake: "$200", type: "SPREAD", result: "loss" },
+      { team: "UNC", odds: "-105", stake: "$50", type: "SPREAD", result: "win" },
+      { team: "BLACKHAWKS", odds: "+100", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "WARRIORS", odds: "-110", stake: "$150", type: "SPREAD", result: "loss" },
+      { team: "HAWKS", odds: "-110", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "NETS", odds: "-109", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "BULLS", odds: "-110", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "DUCKS", odds: "+130", stake: "$100", type: "ML", result: "win" },
+      { team: "JAZZ", odds: "-114", stake: "$150", type: "SPREAD", result: "win" },
+      { team: "MAVERICKS", odds: "-110", stake: "$200", type: "SPREAD", result: "win" },
+      { team: "PACERS", odds: "-105", stake: "$100", type: "SPREAD", result: "loss" },
+      { team: "IONA", odds: "-110", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "N. ALABAMA", odds: "-104", stake: "$100", type: "SPREAD", result: "win" },
+      { team: "MIDDLE TENN", odds: "-110", stake: "$50", type: "SPREAD", result: "win" },
+    ];
+
+    function createAmbientParticles() {
+      const container = document.getElementById('ambient-particles');
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'ambient-particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.animationDelay = Math.random() * 8 + 's';
+        p.style.animationDuration = (6 + Math.random() * 4) + 's';
+        container.appendChild(p);
+      }
+    }
+
+    function generateBetCards() {
+      const track = document.getElementById('bets-track');
+      track.innerHTML = '';
+      for (let i = 0; i < 2; i++) {
+        realBets.forEach(bet => {
+          const card = document.createElement('div');
+          card.className = `bet-card ${bet.result}`;
+          card.innerHTML = `
+            <span class="team">${bet.team}</span>
+            <div class="details">
+              <span class="odds">${bet.odds}</span>
+              <span class="stake">${bet.stake}</span>
+              <span class="type">${bet.type}</span>
+            </div>
+          `;
+          track.appendChild(card);
+        });
+      }
+    }
+
+    function animateValue(el, start, end, duration, prefix = '') {
+      const startT = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startT) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 4);
+        el.textContent = prefix + Math.floor(start + (end - start) * ease).toLocaleString();
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function createMoneyFloaters(containerId, count) {
+      const container = document.getElementById(containerId);
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const m = document.createElement('div');
+          m.className = 'money-float';
+          m.textContent = '$';
+          m.style.left = (20 + Math.random() * 60) + '%';
+          m.style.bottom = '10%';
+          m.style.animation = `moneyRise ${1 + Math.random()}s ease-out forwards`;
+          container.appendChild(m);
+          setTimeout(() => m.remove(), 2000);
+        }, i * 150);
+      }
+    }
+
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#22c55e', '#4ade80', '#86efac', '#ffffff', '#fbbf24'];
+      for (let i = 0; i < 100; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + '%';
+        c.style.top = '-20px';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.width = (8 + Math.random() * 8) + 'px';
+        c.style.height = (8 + Math.random() * 8) + 'px';
+        c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        c.style.animation = `confettiFall ${2 + Math.random() * 2}s ease-out forwards`;
+        c.style.animationDelay = Math.random() * 0.5 + 's';
+        container.appendChild(c);
+      }
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      container.innerHTML = '';
+      for (let i = 0; i < 40; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = 4 + Math.random() * 16;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        const angle = (i / 40) * Math.PI * 2;
+        const dist = 150 + Math.random() * 400;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist;
+        p.animate([
+          { transform: 'translate(0,0) scale(1)', opacity: 1 },
+          { transform: `translate(${tx}px,${ty}px) scale(0)`, opacity: 0 }
+        ], { duration: 1000, easing: 'ease-out', fill: 'forwards' });
+        container.appendChild(p);
+      }
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      createAmbientParticles();
+      generateBetCards();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Show glow orbs
+      document.getElementById('glow-orb-1').style.opacity = '0.5';
+      document.getElementById('glow-orb-2').style.opacity = '0.5';
+
+      // PHASE 1: Scroll bets (0-3s)
+      const betsScroll = document.getElementById('bets-scroll');
+      const betsTrack = document.getElementById('bets-track');
+      betsScroll.style.opacity = '1';
+      startScrollSound(); // 🔊 Start ticking as bets scroll
+
+      setTimeout(() => {
+        betsTrack.style.transition = 'transform 3s cubic-bezier(0.4, 0, 0.2, 1)';
+        betsTrack.style.transform = 'translateY(-6000px)';
+      }, 100);
+
+      // Stop scroll sound when scrolling finishes (3.1s)
+      timeouts.push(setTimeout(() => {
+        stopScrollSound(); // 🔊 Stop scroll ticking when scroll ends
+      }, 3100));
+
+      // PHASE 2: 65 with ring (3.2s)
+      timeouts.push(setTimeout(() => {
+        betsScroll.style.transition = 'opacity 0.3s';
+        betsScroll.style.opacity = '0';
+
+        const wrapper = document.getElementById('bets-wrapper');
+        wrapper.style.animation = 'explodeIn 0.6s ease-out forwards';
+        playCountUp(1200); // 🔊 Count up sound for 65
+
+        // Animate counter
+        animateValue(document.getElementById('bets-counter'), 0, 65, 1200);
+
+        // Animate ring
+        setTimeout(() => {
+          document.getElementById('progress-circle').style.strokeDashoffset = '0';
+        }, 200);
+      }, 3200));
+
+      // Implode 65 (4.8s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('bets-wrapper').style.animation = 'implodeOut 0.5s ease-in forwards';
+        playWhoosh(); // 🔊 Whoosh for implode
+      }, 4800));
+
+      // PHASE 3: Tanks (5.3s)
+      timeouts.push(setTimeout(() => {
+        const tanks = document.getElementById('tanks-container');
+        tanks.style.opacity = '1';
+        tanks.style.transition = 'opacity 0.5s';
+
+        setTimeout(() => {
+          document.getElementById('fill-wagered').style.height = '65%';
+          document.getElementById('fill-returned').style.height = '82%';
+          playMoneyCount(2500); // 🔊 Money counting sound for tanks
+
+          document.getElementById('value-wagered').style.opacity = '1';
+          document.getElementById('value-returned').style.opacity = '1';
+
+          animateValue(document.getElementById('value-wagered'), 0, 8375, 2200, '$');
+          animateValue(document.getElementById('value-returned'), 0, 10220, 2800, '$');
+
+          createMoneyFloaters('floaters-wagered', 8);
+          createMoneyFloaters('floaters-returned', 12);
+        }, 400);
+      }, 5300));
+
+      // Difference arrow removed - tanks tell the story visually
+
+      // PHASE 4: Explosion (10s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('flash').style.animation = 'flashBang 0.5s ease-out forwards';
+        document.getElementById('tanks-container').style.opacity = '0';
+        createParticles();
+        createConfetti();
+        document.getElementById('explosion-ring').style.opacity = '1';
+        document.getElementById('explosion-ring').style.animation = 'ringExpand 1s ease-out forwards';
+        playImpact(); // 🔊 Impact sound
+      }, 10000));
+
+      // PHASE 5: Profit (10.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-container').style.animation = 'explodeIn 0.7s ease-out forwards';
+        playChaChing(); // 🔊 Cha-ching money sound!
+      }, 10500));
+
+      // Pulse
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-number').style.animation = 'megaPulse 2s ease-in-out infinite';
+      }, 11200));
+
+      // Stats
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-stats').style.opacity = '1';
+        document.getElementById('profit-stats').style.transition = 'opacity 0.5s';
+      }, 12000));
+
+      // Divider
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-divider').style.opacity = '1';
+        document.getElementById('profit-divider').style.transition = 'opacity 0.5s';
+      }, 12800));
+
+      // Tagline
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-tagline').style.opacity = '1';
+        document.getElementById('profit-tagline').style.transition = 'opacity 0.5s';
+      }, 13300));
+
+      // Stop
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:15';
+      }, 15000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      stopScrollSound(); // Stop any scroll sounds
+      document.getElementById('timer').textContent = '0:00';
+
+      document.getElementById('ambient-particles').innerHTML = '';
+      document.getElementById('glow-orb-1').style.opacity = '0';
+      document.getElementById('glow-orb-2').style.opacity = '0';
+
+      const betsScroll = document.getElementById('bets-scroll');
+      const betsTrack = document.getElementById('bets-track');
+      betsScroll.style.opacity = '0';
+      betsTrack.style.transition = 'none';
+      betsTrack.style.transform = 'translateY(0)';
+
+      const wrapper = document.getElementById('bets-wrapper');
+      wrapper.style.animation = 'none';
+      wrapper.style.opacity = '0';
+      wrapper.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('progress-circle').style.strokeDashoffset = '1445';
+      document.getElementById('bets-counter').textContent = '0';
+
+      const tanks = document.getElementById('tanks-container');
+      tanks.style.opacity = '0';
+      document.getElementById('fill-wagered').style.height = '0%';
+      document.getElementById('fill-returned').style.height = '0%';
+      document.getElementById('value-wagered').style.opacity = '0';
+      document.getElementById('value-returned').style.opacity = '0';
+      document.getElementById('value-wagered').textContent = '$0';
+      document.getElementById('value-returned').textContent = '$0';
+      // diff-arrow removed
+      document.getElementById('floaters-wagered').innerHTML = '';
+      document.getElementById('floaters-returned').innerHTML = '';
+
+      document.getElementById('flash').style.animation = 'none';
+      document.getElementById('particles').innerHTML = '';
+      document.getElementById('confetti-container').innerHTML = '';
+      document.getElementById('explosion-ring').style.animation = 'none';
+      document.getElementById('explosion-ring').style.opacity = '0';
+
+      const profit = document.getElementById('profit-container');
+      profit.style.animation = 'none';
+      profit.style.opacity = '0';
+      profit.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('profit-number').style.animation = 'none';
+      document.getElementById('profit-stats').style.opacity = '0';
+      document.getElementById('profit-divider').style.opacity = '0';
+      document.getElementById('profit-tagline').style.opacity = '0';
+    }
+  </script>
+</body>
+</html>

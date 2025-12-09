@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 2: The Numbers V2</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050507;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(180deg, #0a0a0f 0%, #0d1117 50%, #0a0a0f 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.45);
+      transform-origin: center center;
+    }
+
+    /* Scrolling bets */
+    .bets-scroll {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 100%;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .bets-track {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      transform: translateY(0);
+    }
+
+    .bet-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+      border: 1px solid #2a2a4a;
+      border-radius: 16px;
+      padding: 30px 50px;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    .bet-card .odds {
+      font-size: 28px;
+      color: #22c55e;
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    /* 65 bets number */
+    .bets-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+    }
+
+    .bets-number .number {
+      font-family: 'Inter', sans-serif;
+      font-size: 220px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      text-shadow: 0 0 60px rgba(255,255,255,0.2);
+    }
+
+    .bets-number .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 20px;
+      letter-spacing: 4px;
+      text-transform: lowercase;
+    }
+
+    /* Side by side race */
+    .race-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 100px;
+      opacity: 0;
+    }
+
+    .race-column {
+      text-align: center;
+    }
+
+    .race-column .number {
+      font-family: 'Inter', sans-serif;
+      font-size: 110px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1;
+      min-width: 350px;
+    }
+
+    .race-column .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 20px;
+      letter-spacing: 3px;
+      text-transform: lowercase;
+    }
+
+    .race-column.winner .number {
+      color: #22c55e;
+      text-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+    }
+
+    .vs-divider {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 4px;
+      height: 0;
+      background: linear-gradient(180deg, transparent, #374151, transparent);
+      opacity: 0;
+    }
+
+    /* Collision particles */
+    .particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    /* Profit reveal */
+    .profit-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+    }
+
+    .profit-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 200px;
+      font-weight: 800;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.6),
+                   0 0 160px rgba(34, 197, 94, 0.3);
+    }
+
+    .profit-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 40px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 30px;
+      letter-spacing: 6px;
+      text-transform: lowercase;
+    }
+
+    .profit-divider {
+      width: 300px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #374151, transparent);
+      margin: 50px auto 40px auto;
+      opacity: 0;
+    }
+
+    .profit-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 500;
+      color: #4b5563;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    /* Glow ring */
+    .glow-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border: 3px solid #22c55e;
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow: 0 0 40px #22c55e, inset 0 0 40px rgba(34, 197, 94, 0.3);
+    }
+
+    /* Flash overlay */
+    .flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .controls button {
+      padding: 12px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .play-btn {
+      background: #22c55e;
+      color: #0a0a0f;
+    }
+
+    .reset-btn {
+      background: #374151;
+      color: #ffffff;
+    }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #6b7280;
+      z-index: 1000;
+    }
+
+    /* Animations */
+    @keyframes scrollBets {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-3000px); }
+    }
+
+    @keyframes explodeIn {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeSlideOut {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(0.8);
+        opacity: 0;
+      }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 80px rgba(34, 197, 94, 0.6),
+                     0 0 160px rgba(34, 197, 94, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 100px rgba(34, 197, 94, 0.8),
+                     0 0 200px rgba(34, 197, 94, 0.5);
+      }
+    }
+
+    @keyframes ringExpand {
+      0% {
+        width: 50px;
+        height: 50px;
+        opacity: 1;
+      }
+      100% {
+        width: 800px;
+        height: 800px;
+        opacity: 0;
+      }
+    }
+
+    @keyframes particleBurst {
+      0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      10% { opacity: 0.3; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Flash overlay -->
+    <div class="flash" id="flash"></div>
+
+    <!-- Scrolling bets -->
+    <div class="bets-scroll" id="bets-scroll">
+      <div class="bets-track" id="bets-track">
+        <!-- Bet cards will be generated by JS -->
+      </div>
+    </div>
+
+    <!-- 65 Bets explosion -->
+    <div class="bets-number" id="bets-number">
+      <div class="number" id="bets-counter">65</div>
+      <div class="label">bets placed</div>
+    </div>
+
+    <!-- Side by side race -->
+    <div class="race-container" id="race-container">
+      <div class="race-column" id="wagered-col">
+        <div class="number" id="wagered-counter">$0</div>
+        <div class="label">wagered</div>
+      </div>
+      <div class="race-column" id="returned-col">
+        <div class="number" id="returned-counter">$0</div>
+        <div class="label">returned</div>
+      </div>
+    </div>
+
+    <div class="vs-divider" id="vs-divider"></div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Glow ring -->
+    <div class="glow-ring" id="glow-ring"></div>
+
+    <!-- Profit reveal -->
+    <div class="profit-container" id="profit-container">
+      <div class="profit-number" id="profit-number">+$1,840</div>
+      <div class="profit-label">profit</div>
+      <div class="profit-divider" id="profit-divider"></div>
+      <div class="profit-tagline" id="profit-tagline">no parlays</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    let animationTimeouts = [];
+    let animationIntervals = [];
+    let timerInterval;
+    let startTime;
+
+    const bets = [
+      { team: 'VIKINGS', line: '-3.5' },
+      { team: 'LAKERS', line: 'ML' },
+      { team: 'BRUINS', line: '-1.5' },
+      { team: 'CHIEFS', line: '-7' },
+      { team: 'CELTICS', line: '-4.5' },
+      { team: 'RANGERS', line: '+120' },
+      { team: 'RAIDERS', line: '+8.5' },
+      { team: 'KENTUCKY', line: '-6' },
+      { team: 'AVALANCHE', line: '-1.5' },
+      { team: 'DUKE', line: '-12' },
+      { team: 'WARRIORS', line: 'ML' },
+      { team: 'MAPLE LEAFS', line: '-1.5' },
+      { team: 'BILLS', line: '-3' },
+      { team: 'HEAT', line: '+3.5' },
+      { team: 'PENGUINS', line: '+130' },
+      { team: 'ALABAMA', line: '-14' },
+      { team: 'NETS', line: '+7' },
+      { team: 'FLAMES', line: 'ML' },
+      { team: 'BEARS', line: '+6' },
+      { team: 'GONZAGA', line: '-8.5' },
+    ];
+
+    function generateBetCards() {
+      const track = document.getElementById('bets-track');
+      track.innerHTML = '';
+      // Generate multiple sets for scrolling
+      for (let i = 0; i < 4; i++) {
+        bets.forEach(bet => {
+          const card = document.createElement('div');
+          card.className = 'bet-card';
+          card.innerHTML = `${bet.team} <div class="odds">${bet.line}</div>`;
+          track.appendChild(card);
+        });
+      }
+    }
+
+    function animateCounter(element, start, end, duration, prefix = '', suffix = '', callback) {
+      const startTimestamp = performance.now();
+      const step = (timestamp) => {
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 4);
+        const current = Math.floor(start + (end - start) * easeOut);
+        element.textContent = prefix + current.toLocaleString() + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else if (callback) {
+          callback();
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    function animateRace(el1, end1, el2, end2, duration) {
+      const startTimestamp = performance.now();
+      const step = (timestamp) => {
+        const elapsed = timestamp - startTimestamp;
+        const progress1 = Math.min(elapsed / (duration * 0.7), 1); // Wagered finishes first
+        const progress2 = Math.min(elapsed / duration, 1);
+
+        const ease1 = 1 - Math.pow(1 - progress1, 3);
+        const ease2 = 1 - Math.pow(1 - progress2, 3);
+
+        el1.textContent = '$' + Math.floor(end1 * ease1).toLocaleString();
+        el2.textContent = '$' + Math.floor(end2 * ease2).toLocaleString();
+
+        if (progress2 < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      container.innerHTML = '';
+      const numParticles = 20;
+
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const angle = (i / numParticles) * Math.PI * 2;
+        const distance = 150 + Math.random() * 200;
+        const tx = Math.cos(angle) * distance;
+        const ty = Math.sin(angle) * distance;
+
+        particle.style.cssText = `
+          opacity: 1;
+          animation: particleBurst 0.8s ease-out forwards;
+          transform: translate(${tx}px, ${ty}px) scale(0);
+        `;
+
+        // Use custom animation per particle
+        particle.animate([
+          { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+          { transform: `translate(${tx}px, ${ty}px) scale(0)`, opacity: 0 }
+        ], {
+          duration: 800,
+          easing: 'ease-out',
+          fill: 'forwards'
+        });
+
+        container.appendChild(particle);
+      }
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const seconds = Math.floor(elapsed);
+      document.getElementById('timer').textContent = `0:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      generateBetCards();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      const betsScroll = document.getElementById('bets-scroll');
+      const betsTrack = document.getElementById('bets-track');
+      const betsNumber = document.getElementById('bets-number');
+      const raceContainer = document.getElementById('race-container');
+      const vsDivider = document.getElementById('vs-divider');
+      const profitContainer = document.getElementById('profit-container');
+      const flash = document.getElementById('flash');
+      const glowRing = document.getElementById('glow-ring');
+
+      // PHASE 1: Scrolling bets (0-3s)
+      betsScroll.style.opacity = '1';
+      betsTrack.style.animation = 'scrollBets 2.5s ease-in-out forwards';
+
+      // Bets number explosion (2.5s)
+      animationTimeouts.push(setTimeout(() => {
+        betsScroll.style.transition = 'opacity 0.3s';
+        betsScroll.style.opacity = '0';
+        betsNumber.style.animation = 'explodeIn 0.5s ease-out forwards';
+      }, 2500));
+
+      // Fade out bets number (3.5s)
+      animationTimeouts.push(setTimeout(() => {
+        betsNumber.style.animation = 'fadeSlideOut 0.4s ease-in forwards';
+      }, 3800));
+
+      // PHASE 2: Side by side race (4-9s)
+      animationTimeouts.push(setTimeout(() => {
+        raceContainer.style.opacity = '1';
+        raceContainer.style.transition = 'opacity 0.3s';
+        vsDivider.style.opacity = '1';
+        vsDivider.style.height = '300px';
+        vsDivider.style.transition = 'all 0.5s ease-out';
+
+        animateRace(
+          document.getElementById('wagered-counter'), 8375,
+          document.getElementById('returned-counter'), 10220,
+          3500
+        );
+      }, 4200));
+
+      // Highlight winner (8s)
+      animationTimeouts.push(setTimeout(() => {
+        document.getElementById('returned-col').classList.add('winner');
+      }, 7800));
+
+      // PHASE 3: Collision (9-9.5s)
+      animationTimeouts.push(setTimeout(() => {
+        // Flash
+        flash.style.animation = 'flashBang 0.4s ease-out forwards';
+
+        // Hide race
+        raceContainer.style.opacity = '0';
+        vsDivider.style.opacity = '0';
+
+        // Particles
+        createParticles();
+
+        // Glow ring
+        glowRing.style.opacity = '1';
+        glowRing.style.animation = 'ringExpand 0.8s ease-out forwards';
+      }, 9000));
+
+      // PHASE 4: Profit reveal (9.5-15s)
+      animationTimeouts.push(setTimeout(() => {
+        profitContainer.style.animation = 'explodeIn 0.6s ease-out forwards';
+        document.getElementById('profit-number').style.animation = 'pulseGlow 2s ease-in-out infinite';
+      }, 9500));
+
+      // Divider fade in
+      animationTimeouts.push(setTimeout(() => {
+        document.getElementById('profit-divider').style.opacity = '1';
+        document.getElementById('profit-divider').style.transition = 'opacity 0.5s';
+      }, 10500));
+
+      // Tagline fade in
+      animationTimeouts.push(setTimeout(() => {
+        document.getElementById('profit-tagline').style.opacity = '1';
+        document.getElementById('profit-tagline').style.transition = 'opacity 0.5s';
+      }, 11000));
+
+      // Stop timer
+      animationTimeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:15';
+      }, 15000));
+    }
+
+    function resetAnimation() {
+      animationTimeouts.forEach(t => clearTimeout(t));
+      animationIntervals.forEach(i => clearInterval(i));
+      animationTimeouts = [];
+      animationIntervals = [];
+      clearInterval(timerInterval);
+
+      document.getElementById('timer').textContent = '0:00';
+
+      // Reset all elements
+      document.getElementById('bets-scroll').style.opacity = '0';
+      document.getElementById('bets-track').style.animation = 'none';
+      document.getElementById('bets-number').style.animation = 'none';
+      document.getElementById('bets-number').style.opacity = '0';
+      document.getElementById('bets-number').style.transform = 'translate(-50%, -50%) scale(0)';
+
+      document.getElementById('race-container').style.opacity = '0';
+      document.getElementById('wagered-counter').textContent = '$0';
+      document.getElementById('returned-counter').textContent = '$0';
+      document.getElementById('returned-col').classList.remove('winner');
+
+      document.getElementById('vs-divider').style.opacity = '0';
+      document.getElementById('vs-divider').style.height = '0';
+
+      document.getElementById('flash').style.animation = 'none';
+      document.getElementById('glow-ring').style.animation = 'none';
+      document.getElementById('glow-ring').style.opacity = '0';
+      document.getElementById('particles').innerHTML = '';
+
+      document.getElementById('profit-container').style.animation = 'none';
+      document.getElementById('profit-container').style.opacity = '0';
+      document.getElementById('profit-container').style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('profit-number').style.animation = 'none';
+      document.getElementById('profit-divider').style.opacity = '0';
+      document.getElementById('profit-tagline').style.opacity = '0';
+    }
+  </script>
+</body>
+</html>

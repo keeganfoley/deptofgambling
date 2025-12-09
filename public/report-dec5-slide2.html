@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: #0a0f14;
+      font-family: 'Inter', -apple-system, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 50px 35px;
+    }
+
+    .header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 25px;
+    }
+
+    .header-left h1 {
+      font-size: 34px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: 2px;
+    }
+
+    .header-left .subtitle {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 4px;
+    }
+
+    .header-right {
+      text-align: right;
+    }
+
+    .header-right .balance-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .header-right .balance {
+      font-size: 40px;
+      font-weight: 800;
+      color: #22c55e;
+    }
+
+    .header-right .today-pl {
+      font-size: 17px;
+      font-weight: 600;
+      color: #ef4444;
+      margin-top: 2px;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 45px;
+      margin-bottom: 25px;
+    }
+
+    .stat-item .label {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .stat-item .value {
+      font-size: 24px;
+      font-weight: 800;
+      color: white;
+      margin-top: 2px;
+    }
+    .stat-item .value.green { color: #22c55e; }
+
+    .chart-area {
+      flex: 1;
+      position: relative;
+      background: rgba(15, 20, 30, 0.5);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 25px;
+    }
+
+    .chart-grid {
+      position: absolute;
+      inset: 25px;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 100% 100px, 110px 100%;
+    }
+
+    /* Candlestick chart - staircase style */
+    .candles-container {
+      position: absolute;
+      bottom: 120px;
+      left: 50px;
+      right: 50px;
+      height: 750px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+
+    .candle-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      width: 80px;
+    }
+
+    .candle-wrapper {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .candle {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wick {
+      width: 4px;
+      border-radius: 2px;
+    }
+
+    .body {
+      width: 55px;
+      border-radius: 4px;
+      min-height: 12px;
+    }
+
+    .candle.green .wick { background: #22c55e; }
+    .candle.green .body { background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%); }
+
+    .candle.red .wick { background: #ef4444; }
+    .candle.red .body { background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%); }
+
+    .candle-label {
+      position: absolute;
+      bottom: -50px;
+      text-align: center;
+    }
+
+    .candle-label .date {
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .candle-label .day {
+      font-size: 10px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .candle-col.today .candle-label .date {
+      color: #fbbf24;
+    }
+    .candle-col.today .candle-label .day {
+      color: #f97316;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .footer-text {
+      font-size: 18px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 2px;
+    }
+
+    .logo-img {
+      width: 90px;
+      height: 90px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="header-row">
+      <div class="header-left">
+        <h1>DEPARTMENT OF GAMBLING</h1>
+        <div class="subtitle">Portfolio Performance</div>
+      </div>
+      <div class="header-right">
+        <div class="balance-label">Balance</div>
+        <div class="balance">$43,905.61</div>
+        <div class="today-pl">TODAY: -$121.57</div>
+      </div>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="label">Record</div>
+        <div class="value">117-83-2</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">ROI</div>
+        <div class="value green">+9.76%</div>
+      </div>
+      <div class="stat-item">
+        <div class="label">All Time P/L</div>
+        <div class="value green">+$3,905.61</div>
+      </div>
+    </div>
+
+    <div class="chart-area">
+      <div class="chart-grid"></div>
+
+      <div class="candles-container">
+        <!-- 11/28 - small green at bottom (starting point ~$40,000) -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 0px;">
+            <div class="candle green">
+              <div class="wick" style="height:10px"></div>
+              <div class="body" style="height:40px"></div>
+              <div class="wick" style="height:8px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">11/28</div>
+            <div class="day">Fri</div>
+          </div>
+        </div>
+
+        <!-- 11/29 - small green, slightly higher -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 30px;">
+            <div class="candle green">
+              <div class="wick" style="height:12px"></div>
+              <div class="body" style="height:45px"></div>
+              <div class="wick" style="height:10px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">11/29</div>
+            <div class="day">Sat</div>
+          </div>
+        </div>
+
+        <!-- 11/30 - red, slight dip but still at similar level -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 20px;">
+            <div class="candle red">
+              <div class="wick" style="height:8px"></div>
+              <div class="body" style="height:35px"></div>
+              <div class="wick" style="height:12px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">11/30</div>
+            <div class="day">Sun</div>
+          </div>
+        </div>
+
+        <!-- 12/1 - BIG green jump up (~$1,836 profit) -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 80px;">
+            <div class="candle green">
+              <div class="wick" style="height:18px"></div>
+              <div class="body" style="height:180px"></div>
+              <div class="wick" style="height:14px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">12/1</div>
+            <div class="day">Mon</div>
+          </div>
+        </div>
+
+        <!-- 12/2 - medium green, higher up (~$224 profit) -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 280px;">
+            <div class="candle green">
+              <div class="wick" style="height:12px"></div>
+              <div class="body" style="height:60px"></div>
+              <div class="wick" style="height:10px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">12/2</div>
+            <div class="day">Tue</div>
+          </div>
+        </div>
+
+        <!-- 12/3 - medium green, even higher (~$346 profit) -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 360px;">
+            <div class="candle green">
+              <div class="wick" style="height:14px"></div>
+              <div class="body" style="height:85px"></div>
+              <div class="wick" style="height:12px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">12/3</div>
+            <div class="day">Wed</div>
+          </div>
+        </div>
+
+        <!-- 12/4 - large green, near top (~$634 profit) -->
+        <div class="candle-col">
+          <div class="candle-wrapper" style="bottom: 460px;">
+            <div class="candle green">
+              <div class="wick" style="height:16px"></div>
+              <div class="body" style="height:140px"></div>
+              <div class="wick" style="height:12px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">12/4</div>
+            <div class="day">Thu</div>
+          </div>
+        </div>
+
+        <!-- 12/5 - red at highest level (small loss -$121) -->
+        <div class="candle-col today">
+          <div class="candle-wrapper" style="bottom: 580px;">
+            <div class="candle red">
+              <div class="wick" style="height:10px"></div>
+              <div class="body" style="height:40px"></div>
+              <div class="wick" style="height:8px"></div>
+            </div>
+          </div>
+          <div class="candle-label">
+            <div class="date">12/5</div>
+            <div class="day">Today</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-text">DEPTOFGAMBLING.COM</div>
+      <img src="logo.png" class="logo-img" alt="DOG">
+      <div class="footer-text">11/28 - 12/05</div>
+    </div>
+  </div>
+</body>
+</html>

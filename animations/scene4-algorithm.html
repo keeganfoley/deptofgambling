@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 4: The Algorithm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 40%, #080c10 0%, #020304 100%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.45);
+      overflow: hidden;
+      outline: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .container.full-size { transform: translate(-50%, -50%) scale(1); }
+
+    /* Subtle grid */
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0;
+    }
+
+    /* Central scrolling list */
+    .scroll-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 750px;
+      height: 700px;
+      overflow: hidden;
+      opacity: 0;
+      mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 8%, black 92%, transparent 100%);
+    }
+
+    .scroll-track {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .game-row {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      background: rgba(12, 16, 22, 0.9);
+      border: 1px solid rgba(255,255,255,0.04);
+      border-radius: 6px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      opacity: 0.6;
+      transition: all 0.15s;
+    }
+
+    .game-row.active {
+      opacity: 1;
+      border-color: rgba(34, 197, 94, 0.3);
+      background: rgba(34, 197, 94, 0.08);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.15);
+    }
+
+    .game-row.locked {
+      opacity: 1;
+      border-color: rgba(34, 197, 94, 0.6);
+      background: rgba(34, 197, 94, 0.12);
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.25);
+    }
+
+    .game-row .team { color: #fff; font-weight: 600; width: 140px; }
+    .game-row .spread { color: #6b7280; width: 70px; text-align: center; }
+    .game-row .odds { color: #9ca3af; width: 70px; text-align: center; }
+    .game-row .prob { color: #4b5563; width: 70px; text-align: center; font-size: 12px; }
+    .game-row .ev {
+      color: #22c55e;
+      width: 80px;
+      text-align: right;
+      font-weight: 600;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+    .game-row.active .ev, .game-row.locked .ev { opacity: 1; }
+
+    /* Scan line - single clean one */
+    .scan-bar {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 770px;
+      height: 50px;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(34, 197, 94, 0.1) 40%,
+        rgba(34, 197, 94, 0.2) 50%,
+        rgba(34, 197, 94, 0.1) 60%,
+        transparent 100%);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .scan-bar::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #22c55e 20%, #22c55e 80%, transparent);
+      box-shadow: 0 0 15px #22c55e;
+    }
+
+    /* Analysis popup */
+    .analysis-popup {
+      position: absolute;
+      right: 80px;
+      padding: 12px 18px;
+      background: rgba(10, 15, 20, 0.95);
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      border-radius: 8px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: #22c55e;
+      opacity: 0;
+      transform: translateX(20px);
+      transition: all 0.2s;
+      z-index: 20;
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.2);
+    }
+
+    .analysis-popup.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .analysis-popup .label {
+      color: #6b7280;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .analysis-popup .value {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    /* Top header */
+    .top-header {
+      position: absolute;
+      top: 220px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 30;
+    }
+
+    .top-header .status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #22c55e;
+      margin-bottom: 15px;
+    }
+
+    .top-header .dot {
+      width: 8px;
+      height: 8px;
+      background: #22c55e;
+      border-radius: 50%;
+      animation: pulse 1s ease-in-out infinite;
+      box-shadow: 0 0 10px #22c55e;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    .top-header .sports {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #4b5563;
+      letter-spacing: 3px;
+    }
+
+    /* Progress bar */
+    .progress-container {
+      position: absolute;
+      top: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 500px;
+      opacity: 0;
+    }
+
+    .progress-bar {
+      height: 4px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #22c55e, #4ade80);
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+      transition: width 0.1s linear;
+    }
+
+    /* Bottom stats */
+    .bottom-stats {
+      position: absolute;
+      bottom: 280px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 40px;
+      opacity: 0;
+      z-index: 30;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item .value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 36px;
+      font-weight: 700;
+      color: #22c55e;
+      text-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    }
+
+    .stat-item .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+
+    /* Final reveal */
+    .edges-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 100;
+    }
+
+    .edges-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 280px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 120px rgba(34, 197, 94, 0.7);
+    }
+
+    .edges-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 10px;
+    }
+
+    .edges-sub {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      color: #374151;
+      margin-top: 30px;
+      opacity: 0;
+    }
+
+    .flash {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 200;
+    }
+
+    .controls {
+      position: fixed;
+      top: calc(50% + 450px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .play-btn { background: #22c55e; color: #0a0a0f; }
+    .reset-btn { background: #374151; color: #fff; }
+
+    .timer {
+      position: fixed;
+      top: calc(50% - 480px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    @keyframes explodeIn {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      60% { transform: translate(-50%, -50%) scale(1.05); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      10% { opacity: 0.2; }
+      100% { opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg" id="grid-bg"></div>
+
+    <!-- Header -->
+    <div class="top-header" id="top-header">
+      <div class="status">
+        <div class="dot"></div>
+        <span>SCANNING MARKETS</span>
+      </div>
+      <div class="sports">NFL • NBA • NHL • NCAAB • NCAAF</div>
+    </div>
+
+    <!-- Progress -->
+    <div class="progress-container" id="progress-container">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- Scrolling games -->
+    <div class="scroll-container" id="scroll-container">
+      <div class="scroll-track" id="scroll-track"></div>
+    </div>
+
+    <!-- Scan bar -->
+    <div class="scan-bar" id="scan-bar"></div>
+
+    <!-- Analysis popup -->
+    <div class="analysis-popup" id="analysis-popup">
+      <div class="label">Expected Value</div>
+      <div class="value" id="popup-value">+3.2%</div>
+    </div>
+
+    <!-- Bottom stats -->
+    <div class="bottom-stats" id="bottom-stats">
+      <div class="stat-item">
+        <div class="value" id="stat-games">0</div>
+        <div class="label">Games</div>
+      </div>
+      <div class="stat-item">
+        <div class="value" id="stat-lines">0</div>
+        <div class="label">Lines</div>
+      </div>
+      <div class="stat-item">
+        <div class="value" id="stat-ev">0.0%</div>
+        <div class="label">Avg EV</div>
+      </div>
+      <div class="stat-item">
+        <div class="value" id="stat-edges">0</div>
+        <div class="label">Edges</div>
+      </div>
+    </div>
+
+    <div class="flash" id="flash"></div>
+
+    <div class="edges-wrapper" id="edges-wrapper">
+      <div class="edges-number" id="edges-number">0</div>
+      <div class="edges-label">edges found</div>
+      <div class="edges-sub" id="edges-sub">deploying capital</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+    <button class="reset-btn" onclick="toggleFullSize()" id="size-btn">Full Size</button>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    let ambientOsc, ambientGain;
+
+    function startAmbient() {
+      ambientOsc = audioCtx.createOscillator();
+      ambientGain = audioCtx.createGain();
+      const filter = audioCtx.createBiquadFilter();
+      ambientOsc.type = 'sine';
+      ambientOsc.frequency.setValueAtTime(55, audioCtx.currentTime);
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(120, audioCtx.currentTime);
+      ambientGain.gain.setValueAtTime(0, audioCtx.currentTime);
+      ambientGain.gain.linearRampToValueAtTime(0.02, audioCtx.currentTime + 0.5);
+      ambientOsc.connect(filter);
+      filter.connect(ambientGain);
+      ambientGain.connect(audioCtx.destination);
+      ambientOsc.start();
+    }
+
+    function stopAmbient() {
+      if (ambientGain) {
+        ambientGain.gain.linearRampToValueAtTime(0, audioCtx.currentTime + 0.3);
+        setTimeout(() => { if (ambientOsc) ambientOsc.stop(); }, 300);
+      }
+    }
+
+    function playTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(700 + Math.random() * 300, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.008, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.02);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.02);
+    }
+
+    function playLock() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+      osc.frequency.setValueAtTime(900, audioCtx.currentTime + 0.06);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.15);
+    }
+
+    function playChime() {
+      [523, 659, 784].forEach((f, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.4);
+        }, i * 100);
+      });
+    }
+
+    let isFullSize = false;
+    function toggleFullSize() {
+      isFullSize = !isFullSize;
+      document.querySelector('.container').classList.toggle('full-size', isFullSize);
+      document.querySelector('.controls').style.display = isFullSize ? 'none' : 'flex';
+      document.getElementById('timer').style.display = isFullSize ? 'none' : 'block';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') resetAnimation();
+      else if (e.code === 'KeyF') toggleFullSize();
+    });
+
+    let timeouts = [], intervals = [], timerInterval, startTime;
+
+    const teams = [
+      'VIKINGS', 'PACKERS', 'BEARS', 'LIONS', 'CHIEFS', 'RAIDERS', 'BRONCOS', 'CHARGERS',
+      'COWBOYS', 'EAGLES', 'GIANTS', 'BILLS', 'DOLPHINS', 'PATRIOTS', 'JETS', 'RAVENS',
+      'BENGALS', 'BROWNS', 'STEELERS', '49ERS', 'SEAHAWKS', 'RAMS', 'CARDINALS',
+      'CELTICS', 'NETS', 'KNICKS', '76ERS', 'BUCKS', 'BULLS', 'CAVALIERS', 'HEAT',
+      'HAWKS', 'HORNETS', 'MAGIC', 'NUGGETS', 'THUNDER', 'JAZZ', 'WARRIORS', 'LAKERS',
+      'SUNS', 'KINGS', 'MAVERICKS', 'ROCKETS', 'GRIZZLIES', 'PELICANS', 'SPURS',
+      'BRUINS', 'SABRES', 'RED WINGS', 'CANADIENS', 'LIGHTNING', 'MAPLE LEAFS',
+      'HURRICANES', 'DEVILS', 'RANGERS', 'FLYERS', 'PENGUINS', 'CAPITALS',
+      'BLACKHAWKS', 'AVALANCHE', 'STARS', 'WILD', 'PREDATORS', 'BLUES', 'FLAMES',
+      'DUKE', 'UNC', 'KENTUCKY', 'KANSAS', 'GONZAGA', 'PURDUE', 'INDIANA', 'MICHIGAN',
+      'ALABAMA', 'AUBURN', 'TENNESSEE', 'FLORIDA', 'LSU', 'TEXAS', 'OKLAHOMA'
+    ];
+
+    const spreads = ['-1.5', '-2.5', '-3.0', '-3.5', '-4.5', '-5.5', '-6.5', '-7.0', '-7.5', '+1.5', '+2.5', '+3.0', '+3.5', '+4.5', '+5.5', '+6.5', '+7.0'];
+    const oddsList = ['-115', '-112', '-110', '-108', '-105', '+100', '+105', '+110', '+115', '+120', '+130', '+150'];
+
+    function generateGames(count) {
+      const games = [];
+      for (let i = 0; i < count; i++) {
+        const hasEdge = Math.random() > 0.88;
+        const ev = hasEdge ? `+${(Math.random() * 3.5 + 1.5).toFixed(1)}%` : `${(Math.random() - 0.3).toFixed(1)}%`;
+        games.push({
+          team: teams[Math.floor(Math.random() * teams.length)],
+          spread: spreads[Math.floor(Math.random() * spreads.length)],
+          odds: oddsList[Math.floor(Math.random() * oddsList.length)],
+          prob: `${Math.floor(Math.random() * 25 + 42)}%`,
+          ev, hasEdge
+        });
+      }
+      return games;
+    }
+
+    function populateGames() {
+      const track = document.getElementById('scroll-track');
+      track.innerHTML = '';
+      const games = generateGames(60);
+
+      games.forEach((g, i) => {
+        const row = document.createElement('div');
+        row.className = 'game-row';
+        row.id = `row-${i}`;
+        row.dataset.hasEdge = g.hasEdge;
+        row.dataset.ev = g.ev;
+        row.innerHTML = `
+          <span class="team">${g.team}</span>
+          <span class="spread">${g.spread}</span>
+          <span class="odds">${g.odds}</span>
+          <span class="prob">${g.prob}</span>
+          <span class="ev">${g.ev}</span>
+        `;
+        track.appendChild(row);
+      });
+    }
+
+    function animateValue(el, start, end, duration, suffix = '', decimals = 0) {
+      const startT = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startT) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const val = start + (end - start) * ease;
+        el.textContent = decimals ? val.toFixed(decimals) + suffix : Math.floor(val) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      populateGames();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Phase 1: Show UI
+      document.getElementById('grid-bg').style.transition = 'opacity 0.5s';
+      document.getElementById('grid-bg').style.opacity = '1';
+      document.getElementById('top-header').style.transition = 'opacity 0.4s';
+      document.getElementById('top-header').style.opacity = '1';
+      document.getElementById('progress-container').style.transition = 'opacity 0.4s';
+      document.getElementById('progress-container').style.opacity = '1';
+      document.getElementById('bottom-stats').style.transition = 'opacity 0.4s';
+      document.getElementById('bottom-stats').style.opacity = '1';
+
+      startAmbient();
+
+      // Start counter animations
+      timeouts.push(setTimeout(() => {
+        animateValue(document.getElementById('stat-games'), 0, 847, 5500);
+        animateValue(document.getElementById('stat-lines'), 0, 2134, 5500);
+        animateValue(document.getElementById('stat-ev'), 0, 2.4, 5500, '%', 1);
+      }, 300));
+
+      // Phase 2: Show scroll + scan bar
+      timeouts.push(setTimeout(() => {
+        document.getElementById('scroll-container').style.transition = 'opacity 0.5s';
+        document.getElementById('scroll-container').style.opacity = '1';
+        document.getElementById('scan-bar').style.transition = 'opacity 0.3s';
+        document.getElementById('scan-bar').style.opacity = '1';
+      }, 400));
+
+      // Phase 3: Scan through rows
+      timeouts.push(setTimeout(() => {
+        const rows = document.querySelectorAll('.game-row');
+        const scanBar = document.getElementById('scan-bar');
+        const popup = document.getElementById('analysis-popup');
+        const track = document.getElementById('scroll-track');
+        let edgeCount = 0;
+        let currentRow = 0;
+
+        const scanInterval = setInterval(() => {
+          if (currentRow >= rows.length) {
+            clearInterval(scanInterval);
+            return;
+          }
+
+          // Remove active from previous
+          rows.forEach(r => r.classList.remove('active'));
+
+          const row = rows[currentRow];
+          row.classList.add('active');
+          playTick();
+
+          // Position scan bar (scroll container is centered at 960px, height 700px, so top is ~610px)
+          const containerTop = 610;
+          const rowTop = row.offsetTop;
+          const scrollOffset = currentRow > 8 ? (currentRow - 8) * 38 : 0;
+          scanBar.style.top = (containerTop + rowTop - scrollOffset + 5) + 'px';
+
+          // Scroll track
+          if (currentRow > 8) {
+            track.style.transition = 'transform 0.15s ease-out';
+            track.style.transform = `translateY(-${(currentRow - 8) * 38}px)`;
+          }
+
+          // Update progress
+          const progress = (currentRow / rows.length) * 100;
+          document.getElementById('progress-fill').style.width = progress + '%';
+
+          // Show popup for edges
+          if (row.dataset.hasEdge === 'true') {
+            popup.style.top = (containerTop + rowTop - scrollOffset) + 'px';
+            document.getElementById('popup-value').textContent = row.dataset.ev;
+            popup.classList.add('show');
+
+            setTimeout(() => {
+              row.classList.remove('active');
+              row.classList.add('locked');
+              edgeCount++;
+              document.getElementById('stat-edges').textContent = edgeCount;
+              playLock();
+            }, 100);
+
+            setTimeout(() => popup.classList.remove('show'), 400);
+          }
+
+          currentRow++;
+        }, 80);
+
+        intervals.push(scanInterval);
+      }, 800));
+
+      // Phase 4: Fade out
+      timeouts.push(setTimeout(() => {
+        stopAmbient();
+        ['grid-bg', 'top-header', 'progress-container', 'scroll-container', 'scan-bar', 'bottom-stats', 'analysis-popup'].forEach(id => {
+          const el = document.getElementById(id);
+          el.style.transition = 'opacity 0.4s';
+          el.style.opacity = '0';
+        });
+      }, 6200));
+
+      // Phase 5: Final reveal
+      timeouts.push(setTimeout(() => {
+        document.getElementById('flash').style.animation = 'flashBang 0.4s ease-out forwards';
+        document.getElementById('edges-wrapper').style.animation = 'explodeIn 0.6s ease-out forwards';
+        animateValue(document.getElementById('edges-number'), 0, 12, 600);
+        playChime();
+      }, 6700));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('edges-sub').style.transition = 'opacity 0.5s';
+        document.getElementById('edges-sub').style.opacity = '1';
+      }, 7500));
+
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:08';
+      }, 8000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      intervals.forEach(i => clearInterval(i));
+      timeouts = []; intervals = [];
+      clearInterval(timerInterval);
+      stopAmbient();
+      document.getElementById('timer').textContent = '0:00';
+
+      ['grid-bg', 'top-header', 'progress-container', 'scroll-container', 'scan-bar', 'bottom-stats', 'analysis-popup'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+      });
+
+      document.getElementById('scroll-track').style.transform = 'translateY(0)';
+      document.getElementById('progress-fill').style.width = '0%';
+      document.getElementById('analysis-popup').classList.remove('show');
+
+      document.getElementById('stat-games').textContent = '0';
+      document.getElementById('stat-lines').textContent = '0';
+      document.getElementById('stat-ev').textContent = '0.0%';
+      document.getElementById('stat-edges').textContent = '0';
+
+      const wrapper = document.getElementById('edges-wrapper');
+      wrapper.style.animation = 'none';
+      wrapper.style.opacity = '0';
+      wrapper.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.getElementById('edges-number').textContent = '0';
+      document.getElementById('edges-sub').style.opacity = '0';
+      document.getElementById('flash').style.animation = 'none';
+    }
+  </script>
+</body>
+</html>

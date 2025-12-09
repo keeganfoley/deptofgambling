@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #1a4f80 0%, #1d5a8c 15%, #165070 40%, #0e3a55 70%, #081f30 100%);
+      font-family: 'Inter', -apple-system, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Side bars - matching picks-dec5.png */
+    .side-left {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .side-right {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sbar { border-radius: 0 4px 4px 0; }
+    .sbar.right { border-radius: 4px 0 0 4px; }
+    .sbar.g { background: #22c55e; }
+    .sbar.r { background: #7c2d12; }
+
+    /* Bottom section - matching picks-dec5.png exactly */
+    .bottom-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+    }
+
+    .bg-line {
+      position: absolute;
+      bottom: 100px;
+      left: 0;
+      right: 0;
+      height: 100px;
+      opacity: 0.3;
+    }
+
+    .bottom-chart {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: flex-end;
+      gap: 3px;
+    }
+
+    .chart-bar {
+      width: 20px;
+      border-radius: 2px 2px 0 0;
+    }
+    .chart-bar.g { background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%); }
+    .chart-bar.r { background: linear-gradient(180deg, #7c2d12 0%, #5c1d0e 100%); }
+
+    .footer {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 20;
+    }
+
+    .logo-img {
+      width: 90px;
+      height: 90px;
+    }
+
+    .website {
+      font-size: 32px;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 5px;
+      margin-top: 12px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 55px 200px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .label {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 8px;
+    }
+
+    .date {
+      font-size: 85px;
+      font-weight: 800;
+      color: #fbbf24;
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .sport-label {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+      margin: 12px 0 10px;
+    }
+
+    .bets-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .bets-grid.single {
+      grid-template-columns: 1fr;
+    }
+
+    .bet-card {
+      background: rgba(15, 40, 70, 0.6);
+      border-radius: 12px;
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 4px solid;
+    }
+
+    .bet-card.win.sharp { border-color: #22c55e; }
+    .bet-card.loss.sharp { border-color: #22c55e; }
+    .bet-card.win.vector { border-color: #6b7280; }
+    .bet-card.loss.vector { border-color: #6b7280; }
+    .bet-card.win.contra { border-color: #f97316; }
+    .bet-card.loss.contra { border-color: #f97316; }
+
+    .result-icon {
+      font-size: 28px;
+      width: 32px;
+      flex-shrink: 0;
+    }
+
+    .team-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .bet-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .team-name {
+      font-size: 26px;
+      font-weight: 800;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .bet-line {
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .bet-line.win { color: #22c55e; }
+    .bet-line.loss { color: #ef4444; }
+
+    .bet-units {
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      flex-shrink: 0;
+    }
+
+    .bet-pnl {
+      font-size: 24px;
+      font-weight: 800;
+      text-align: right;
+      min-width: 85px;
+      flex-shrink: 0;
+    }
+    .bet-pnl.pos { color: #22c55e; }
+    .bet-pnl.neg { color: #ef4444; }
+
+    .summary-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      padding: 20px 40px;
+      background: rgba(15, 35, 64, 0.75);
+      border-radius: 14px;
+      margin-top: 18px;
+    }
+
+    .summary-item { text-align: center; }
+
+    .summary-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .summary-value {
+      font-size: 36px;
+      font-weight: 800;
+      color: white;
+      margin-top: 4px;
+    }
+    .summary-value.red { color: #ef4444; }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+
+  <!-- Side bars left - matching picks-dec5.png pattern -->
+  <div class="side-left">
+    <div class="sbar g" style="width:30px;height:22px"></div>
+    <div class="sbar r" style="width:22px;height:18px"></div>
+    <div class="sbar g" style="width:35px;height:25px"></div>
+    <div class="sbar r" style="width:18px;height:15px"></div>
+    <div class="sbar g" style="width:25px;height:20px"></div>
+    <div class="sbar r" style="width:28px;height:22px"></div>
+    <div class="sbar g" style="width:20px;height:16px"></div>
+    <div class="sbar r" style="width:32px;height:24px"></div>
+    <div class="sbar g" style="width:24px;height:18px"></div>
+    <div class="sbar r" style="width:28px;height:20px"></div>
+  </div>
+
+  <!-- Side bars right - matching picks-dec5.png pattern -->
+  <div class="side-right">
+    <div class="sbar right g" style="width:25px;height:18px"></div>
+    <div class="sbar right r" style="width:30px;height:22px"></div>
+    <div class="sbar right g" style="width:20px;height:16px"></div>
+    <div class="sbar right r" style="width:35px;height:26px"></div>
+    <div class="sbar right g" style="width:28px;height:20px"></div>
+    <div class="sbar right r" style="width:22px;height:17px"></div>
+    <div class="sbar right g" style="width:32px;height:24px"></div>
+    <div class="sbar right r" style="width:26px;height:19px"></div>
+    <div class="sbar right g" style="width:30px;height:22px"></div>
+    <div class="sbar right r" style="width:24px;height:18px"></div>
+  </div>
+
+  <!-- Bottom section with line and bars -->
+  <div class="bottom-section">
+    <div class="bg-line">
+      <svg width="100%" height="100%" viewBox="0 0 1080 100" preserveAspectRatio="none">
+        <path d="M0 95 Q150 90 300 80 Q450 65 550 50 Q650 38 750 25 Q850 15 950 10 L1080 5" stroke="#22c55e" stroke-width="2.5" fill="none"/>
+      </svg>
+    </div>
+    <div class="bottom-chart">
+      <div class="chart-bar g" style="height:40px"></div>
+      <div class="chart-bar g" style="height:50px"></div>
+      <div class="chart-bar r" style="height:60px"></div>
+      <div class="chart-bar g" style="height:35px"></div>
+      <div class="chart-bar g" style="height:55px"></div>
+      <div class="chart-bar r" style="height:70px"></div>
+      <div class="chart-bar g" style="height:45px"></div>
+      <div class="chart-bar g" style="height:52px"></div>
+      <div class="chart-bar r" style="height:58px"></div>
+      <div class="chart-bar g" style="height:42px"></div>
+      <div class="chart-bar g" style="height:62px"></div>
+      <div class="chart-bar r" style="height:55px"></div>
+      <div class="chart-bar g" style="height:48px"></div>
+      <div class="chart-bar g" style="height:68px"></div>
+      <div class="chart-bar r" style="height:52px"></div>
+      <div class="chart-bar g" style="height:58px"></div>
+      <div class="chart-bar g" style="height:50px"></div>
+      <div class="chart-bar r" style="height:45px"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="logo.png" class="logo-img" alt="DOG">
+    <div class="website">DEPTOFGAMBLING.COM</div>
+  </div>
+
+  <div class="content">
+    <div class="header">
+      <div class="label">Results</div>
+      <div class="date">December 5</div>
+    </div>
+
+    <div class="sport-label">NHL</div>
+    <div class="bets-grid">
+      <div class="bet-card win sharp">
+        <div class="result-icon">✅</div>
+        <img src="logos/jets.png" class="team-logo" alt="Jets">
+        <div class="bet-info">
+          <div class="team-name">Jets</div>
+          <div class="bet-line win">-1.5 (+192)</div>
+        </div>
+        <div class="bet-units">1.25U</div>
+        <div class="bet-pnl pos">+$240</div>
+      </div>
+      <div class="bet-card loss contra">
+        <div class="result-icon">❌</div>
+        <img src="logos/canucks.png" class="team-logo" alt="Canucks">
+        <div class="bet-info">
+          <div class="team-name">Canucks</div>
+          <div class="bet-line loss">+1.5 (-220)</div>
+        </div>
+        <div class="bet-units">0.75U</div>
+        <div class="bet-pnl neg">-$75</div>
+      </div>
+    </div>
+
+    <div class="sport-label">NBA</div>
+    <div class="bets-grid">
+      <div class="bet-card loss vector">
+        <div class="result-icon">❌</div>
+        <img src="logos/jazz.png" class="team-logo" alt="Jazz">
+        <div class="bet-info">
+          <div class="team-name">Jazz</div>
+          <div class="bet-line loss">+15.5 (-110)</div>
+        </div>
+        <div class="bet-units">2.0U</div>
+        <div class="bet-pnl neg">-$200</div>
+      </div>
+      <div class="bet-card loss vector">
+        <div class="result-icon">❌</div>
+        <img src="logos/lakers.png" class="team-logo" alt="Lakers">
+        <div class="bet-info">
+          <div class="team-name">Lakers</div>
+          <div class="bet-line loss">+8.5 (-110)</div>
+        </div>
+        <div class="bet-units">1.5U</div>
+        <div class="bet-pnl neg">-$150</div>
+      </div>
+      <div class="bet-card win sharp">
+        <div class="result-icon">✅</div>
+        <img src="logos/heat.png" class="team-logo" alt="Heat">
+        <div class="bet-info">
+          <div class="team-name">Heat</div>
+          <div class="bet-line win">+6.5 (-115)</div>
+        </div>
+        <div class="bet-units">1.0U</div>
+        <div class="bet-pnl pos">+$87</div>
+      </div>
+      <div class="bet-card win contra">
+        <div class="result-icon">✅</div>
+        <img src="logos/hornets.png" class="team-logo" alt="Hornets">
+        <div class="bet-info">
+          <div class="team-name">Hornets</div>
+          <div class="bet-line win">+7.5 (-114)</div>
+        </div>
+        <div class="bet-units">1.25U</div>
+        <div class="bet-pnl pos">+$110</div>
+      </div>
+    </div>
+    <!-- Mavericks as full width single row -->
+    <div class="bets-grid single">
+      <div class="bet-card loss vector">
+        <div class="result-icon">❌</div>
+        <img src="logos/mavericks.png" class="team-logo" alt="Mavericks">
+        <div class="bet-info">
+          <div class="team-name">Mavericks</div>
+          <div class="bet-line loss">+15.5 (-108)</div>
+        </div>
+        <div class="bet-units">1.5U</div>
+        <div class="bet-pnl neg">-$150</div>
+      </div>
+    </div>
+
+    <div class="sport-label">NCAAB</div>
+    <div class="bets-grid single">
+      <div class="bet-card loss vector">
+        <div class="result-icon">❌</div>
+        <img src="logos/kentucky.png" class="team-logo" alt="Kentucky">
+        <div class="bet-info">
+          <div class="team-name">Kentucky</div>
+          <div class="bet-line loss">+5.5 (-110)</div>
+        </div>
+        <div class="bet-units">1.0U</div>
+        <div class="bet-pnl neg">-$100</div>
+      </div>
+    </div>
+
+    <div class="sport-label">NCAAF</div>
+    <div class="bets-grid single">
+      <div class="bet-card win sharp">
+        <div class="result-icon">✅</div>
+        <img src="logos/troy.png" class="team-logo" alt="Troy">
+        <div class="bet-info">
+          <div class="team-name">Troy</div>
+          <div class="bet-line win">+24.5 (-107)</div>
+        </div>
+        <div class="bet-units">1.25U</div>
+        <div class="bet-pnl pos">+$117</div>
+      </div>
+    </div>
+
+    <div class="summary-bar">
+      <div class="summary-item">
+        <div class="summary-label">Record</div>
+        <div class="summary-value">4-5</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-label">Day P/L</div>
+        <div class="summary-value red">-$121.57</div>
+      </div>
+      <div class="summary-item">
+        <div class="summary-label">Units</div>
+        <div class="summary-value">11.5U</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

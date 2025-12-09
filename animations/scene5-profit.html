@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 5: Week 5 Profit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 45%, #080c10 0%, #020304 100%);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.45);
+      overflow: hidden;
+      outline: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .container.full-size { transform: translate(-50%, -50%) scale(1); }
+
+    /* Week label */
+    .week-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .week-label .week {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .week-label .profit-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #4b5563;
+      letter-spacing: 6px;
+    }
+
+    /* Main content - centered */
+    .main-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+    }
+
+    /* Big profit number */
+    .profit-display {
+      opacity: 0;
+      transform: scale(0);
+      margin-bottom: 50px;
+    }
+
+    .profit-display .amount {
+      font-family: 'Inter', sans-serif;
+      font-size: 160px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.5);
+    }
+
+    .profit-display .plus {
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .profit-display .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 6px;
+      margin-top: 15px;
+    }
+
+    /* Stats row */
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      opacity: 0;
+      margin-bottom: 60px;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-item .value {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .stat-item .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 8px;
+    }
+
+    /* Season total card - the metaphor */
+    .season-card {
+      display: inline-block;
+      padding: 40px 80px;
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+      border: 2px solid rgba(34, 197, 94, 0.3);
+      border-radius: 20px;
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .season-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.1), transparent);
+      animation: shimmer 2s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .season-card .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      opacity: 0.9;
+    }
+
+    .season-card .title {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #22c55e;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .season-card .total {
+      font-family: 'Inter', sans-serif;
+      font-size: 80px;
+      font-weight: 900;
+      color: #22c55e;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+      line-height: 1;
+    }
+
+    .season-card .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      color: #4b5563;
+      margin-top: 15px;
+      letter-spacing: 2px;
+    }
+
+    /* Growth bar */
+    .growth-bar {
+      width: 400px;
+      height: 8px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 4px;
+      margin: 25px auto 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .growth-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #22c55e, #4ade80);
+      border-radius: 4px;
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+    }
+
+    .growth-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #4b5563;
+      margin-top: 10px;
+      letter-spacing: 1px;
+      opacity: 0;
+    }
+
+    /* Glow effect */
+    .glow-bg {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 500px;
+      background: radial-gradient(ellipse, rgba(34, 197, 94, 0.12) 0%, transparent 70%);
+      opacity: 0;
+      z-index: 0;
+    }
+
+    /* Floating plus signs */
+    .floating-plus {
+      position: absolute;
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: rgba(34, 197, 94, 0.3);
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    /* Flash */
+    .flash {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .controls {
+      position: fixed;
+      top: calc(50% + 450px);
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .play-btn { background: #22c55e; color: #0a0a0f; }
+    .reset-btn { background: #374151; color: #fff; }
+
+    .timer {
+      position: fixed;
+      top: calc(50% - 480px);
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    @keyframes explodeIn {
+      0% { transform: scale(0); opacity: 0; }
+      60% { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes cardReveal {
+      0% { transform: translateY(30px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      15% { opacity: 0.2; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes floatUp {
+      0% { opacity: 0; transform: translateY(0); }
+      20% { opacity: 0.5; }
+      100% { opacity: 0; transform: translateY(-200px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glow-bg" id="glow-bg"></div>
+
+    <!-- Floating plus signs -->
+    <div id="floating-elements"></div>
+
+    <!-- Week label (shows first) -->
+    <div class="week-label" id="week-label">
+      <div class="week">Week 5</div>
+      <div class="profit-label">Results</div>
+    </div>
+
+    <!-- Main centered content -->
+    <div class="main-content">
+      <!-- Big profit reveal -->
+      <div class="profit-display" id="profit-display">
+        <div class="amount"><span class="plus">+</span>$<span id="profit-amount">0</span></div>
+        <div class="label">week 5 profit</div>
+      </div>
+
+      <!-- Stats row -->
+      <div class="stats-row" id="stats-row">
+        <div class="stat-item">
+          <div class="value" id="win-rate">0%</div>
+          <div class="label">Win Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="value" id="record">0-0</div>
+          <div class="label">Record</div>
+        </div>
+        <div class="stat-item">
+          <div class="value" id="roi">0%</div>
+          <div class="label">ROI</div>
+        </div>
+      </div>
+
+      <!-- Season total card -->
+      <div class="season-card" id="season-card">
+        <div class="icon">📈</div>
+        <div class="title">Season Bankroll</div>
+        <div class="total">+$<span id="season-total">0</span></div>
+        <div class="subtitle">and counting</div>
+        <div class="growth-bar" id="growth-bar">
+          <div class="growth-fill" id="growth-fill"></div>
+        </div>
+        <div class="growth-label" id="growth-label">36.5% toward $10K goal</div>
+      </div>
+    </div>
+
+    <div class="flash" id="flash"></div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+    <button class="reset-btn" onclick="toggleFullSize()" id="size-btn">Full Size</button>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playReveal() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(700, audioCtx.currentTime + 0.12);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.25);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.25);
+    }
+
+    function playChime() {
+      [523, 659, 784, 1047].forEach((f, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.4);
+        }, i * 70);
+      });
+    }
+
+    function playTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(500 + Math.random() * 200, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.015, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.02);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.02);
+    }
+
+    function playSuccess() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+      osc.frequency.setValueAtTime(1000, audioCtx.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    }
+
+    let isFullSize = false;
+    function toggleFullSize() {
+      isFullSize = !isFullSize;
+      document.querySelector('.container').classList.toggle('full-size', isFullSize);
+      document.querySelector('.controls').style.display = isFullSize ? 'none' : 'flex';
+      document.getElementById('timer').style.display = isFullSize ? 'none' : 'block';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') resetAnimation();
+      else if (e.code === 'KeyF') toggleFullSize();
+    });
+
+    let timeouts = [], timerInterval, startTime;
+
+    function createFloatingElements() {
+      const container = document.getElementById('floating-elements');
+      container.innerHTML = '';
+      const symbols = ['+$', '+', '$', '📈', '💰', '✓'];
+      for (let i = 0; i < 15; i++) {
+        const el = document.createElement('div');
+        el.className = 'floating-plus';
+        el.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+        el.style.left = (20 + Math.random() * 60) + '%';
+        el.style.top = (50 + Math.random() * 20) + '%';
+        el.style.fontSize = (20 + Math.random() * 30) + 'px';
+        container.appendChild(el);
+      }
+    }
+
+    function animateFloatingElements() {
+      const elements = document.querySelectorAll('.floating-plus');
+      elements.forEach((el, i) => {
+        setTimeout(() => {
+          el.style.animation = `floatUp ${2 + Math.random()}s ease-out forwards`;
+        }, i * 100);
+      });
+    }
+
+    function animateValue(el, start, end, duration, prefix = '', suffix = '') {
+      const startT = performance.now();
+      const step = (now) => {
+        const p = Math.min((now - startT) / duration, 1);
+        const ease = 1 - Math.pow(1 - p, 3);
+        const val = Math.floor(start + (end - start) * ease);
+        el.textContent = prefix + val.toLocaleString() + suffix;
+        if (p < 1) {
+          if (Math.random() > 0.6) playTick();
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      createFloatingElements();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Phase 1: Show week label
+      timeouts.push(setTimeout(() => {
+        document.getElementById('week-label').style.transition = 'opacity 0.5s';
+        document.getElementById('week-label').style.opacity = '1';
+      }, 100));
+
+      // Phase 2: Fade out label, show glow
+      timeouts.push(setTimeout(() => {
+        document.getElementById('week-label').style.opacity = '0';
+        document.getElementById('glow-bg').style.transition = 'opacity 0.6s';
+        document.getElementById('glow-bg').style.opacity = '1';
+      }, 1300));
+
+      // Phase 3: Big profit reveal
+      timeouts.push(setTimeout(() => {
+        document.getElementById('flash').style.animation = 'flashBang 0.4s ease-out forwards';
+        document.getElementById('profit-display').style.animation = 'explodeIn 0.5s ease-out forwards';
+        animateFloatingElements();
+        playChime();
+
+        animateValue(document.getElementById('profit-amount'), 0, 1840, 1000);
+      }, 1800));
+
+      // Phase 4: Show stats row
+      timeouts.push(setTimeout(() => {
+        const statsRow = document.getElementById('stats-row');
+        statsRow.style.transition = 'opacity 0.4s, transform 0.4s';
+        statsRow.style.opacity = '1';
+        statsRow.style.transform = 'translateY(0)';
+        playReveal();
+
+        setTimeout(() => {
+          document.getElementById('win-rate').textContent = '57.9%';
+          document.getElementById('record').textContent = '125-91';
+          document.getElementById('roi').textContent = '12.1%';
+        }, 200);
+      }, 3200));
+
+      // Phase 5: Show season card
+      timeouts.push(setTimeout(() => {
+        document.getElementById('season-card').style.animation = 'cardReveal 0.6s ease-out forwards';
+        playSuccess();
+
+        setTimeout(() => {
+          animateValue(document.getElementById('season-total'), 0, 3650, 1200);
+        }, 300);
+      }, 4000));
+
+      // Phase 6: Show growth bar
+      timeouts.push(setTimeout(() => {
+        const bar = document.getElementById('growth-bar');
+        const label = document.getElementById('growth-label');
+        bar.style.transition = 'opacity 0.3s';
+        bar.style.opacity = '1';
+        label.style.transition = 'opacity 0.3s';
+        label.style.opacity = '1';
+
+        setTimeout(() => {
+          document.getElementById('growth-fill').style.transition = 'width 1s ease-out';
+          document.getElementById('growth-fill').style.width = '36.5%';
+        }, 200);
+      }, 5500));
+
+      // End
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:08';
+      }, 8000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0:00';
+
+      document.getElementById('week-label').style.transition = 'none';
+      document.getElementById('week-label').style.opacity = '0';
+
+      document.getElementById('glow-bg').style.transition = 'none';
+      document.getElementById('glow-bg').style.opacity = '0';
+
+      document.getElementById('profit-display').style.animation = 'none';
+      document.getElementById('profit-display').style.opacity = '0';
+      document.getElementById('profit-display').style.transform = 'scale(0)';
+      document.getElementById('profit-amount').textContent = '0';
+
+      const statsRow = document.getElementById('stats-row');
+      statsRow.style.transition = 'none';
+      statsRow.style.opacity = '0';
+      statsRow.style.transform = 'translateY(20px)';
+      document.getElementById('win-rate').textContent = '0%';
+      document.getElementById('record').textContent = '0-0';
+      document.getElementById('roi').textContent = '0%';
+
+      document.getElementById('season-card').style.animation = 'none';
+      document.getElementById('season-card').style.opacity = '0';
+      document.getElementById('season-card').style.transform = 'translateY(30px)';
+      document.getElementById('season-total').textContent = '0';
+
+      document.getElementById('growth-bar').style.transition = 'none';
+      document.getElementById('growth-bar').style.opacity = '0';
+      document.getElementById('growth-fill').style.transition = 'none';
+      document.getElementById('growth-fill').style.width = '0%';
+      document.getElementById('growth-label').style.transition = 'none';
+      document.getElementById('growth-label').style.opacity = '0';
+
+      document.getElementById('floating-elements').innerHTML = '';
+      document.getElementById('flash').style.animation = 'none';
+    }
+  </script>
+</body>
+</html>

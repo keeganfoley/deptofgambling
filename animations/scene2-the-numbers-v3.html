@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 2: The Numbers V3</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #050507;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(180deg, #0a0a0f 0%, #0d1117 50%, #0a0a0f 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.45);
+      transform-origin: center center;
+    }
+
+    /* Scrolling bets - real data */
+    .bets-scroll {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 100%;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .bets-track {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .bet-card {
+      background: linear-gradient(135deg, #1a1a2e 0%, #12121f 100%);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 20px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .bet-card .team {
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      flex: 1;
+    }
+
+    .bet-card .details {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .bet-card .odds {
+      font-size: 26px;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    .bet-card .stake {
+      font-size: 28px;
+      font-weight: 700;
+      color: #22c55e;
+      min-width: 100px;
+      text-align: right;
+    }
+
+    .bet-card .type {
+      font-size: 18px;
+      font-weight: 500;
+      color: #4b5563;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      min-width: 120px;
+      text-align: right;
+    }
+
+    /* 65 Bets number */
+    .bets-number {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .bets-number .number {
+      font-family: 'Inter', sans-serif;
+      font-size: 280px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(255,255,255,0.3);
+    }
+
+    .bets-number .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 20px;
+      letter-spacing: 6px;
+      text-transform: lowercase;
+    }
+
+    /* Tank containers */
+    .tanks-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 80px;
+      align-items: flex-end;
+      opacity: 0;
+    }
+
+    .tank-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .tank {
+      width: 200px;
+      height: 600px;
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tank-fill {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      border-radius: 0 0 18px 18px;
+      transition: height 2s ease-out;
+    }
+
+    .tank-fill.wagered {
+      background: linear-gradient(180deg, #6b7280 0%, #4b5563 100%);
+    }
+
+    .tank-fill.returned {
+      background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+    }
+
+    .tank-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 30px;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+    }
+
+    .tank-value {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      opacity: 0;
+      z-index: 5;
+    }
+
+    /* Difference indicator */
+    .difference-bar {
+      position: absolute;
+      right: -60px;
+      width: 40px;
+      background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%);
+      border-radius: 8px;
+      opacity: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    }
+
+    .difference-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+    }
+
+    /* Flash */
+    .flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 50;
+    }
+
+    /* Profit reveal */
+    .profit-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      text-align: center;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .profit-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 220px;
+      font-weight: 800;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 100px rgba(34, 197, 94, 0.7),
+                   0 0 200px rgba(34, 197, 94, 0.4);
+    }
+
+    .profit-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 44px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 30px;
+      letter-spacing: 8px;
+      text-transform: lowercase;
+    }
+
+    .profit-divider {
+      width: 350px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #374151, transparent);
+      margin: 60px auto 50px auto;
+      opacity: 0;
+    }
+
+    .profit-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      color: #4b5563;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    /* Particles */
+    .particles {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 15;
+    }
+
+    .particle {
+      position: absolute;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+
+    /* Glow ring */
+    .glow-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50px;
+      height: 50px;
+      border: 3px solid #22c55e;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 14;
+      box-shadow: 0 0 60px #22c55e;
+    }
+
+    /* Money particles floating up */
+    .money-particle {
+      position: absolute;
+      font-size: 40px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .controls button {
+      padding: 12px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .play-btn { background: #22c55e; color: #0a0a0f; }
+    .reset-btn { background: #374151; color: #ffffff; }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #6b7280;
+      z-index: 1000;
+    }
+
+    /* Animations */
+    @keyframes explodeIn {
+      0% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+      60% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+    }
+
+    @keyframes implode {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(0); opacity: 0; }
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      15% { opacity: 0.4; }
+      100% { opacity: 0; }
+    }
+
+    @keyframes ringExpand {
+      0% { width: 50px; height: 50px; opacity: 1; }
+      100% { width: 1000px; height: 1000px; opacity: 0; }
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% {
+        text-shadow: 0 0 100px rgba(34, 197, 94, 0.7), 0 0 200px rgba(34, 197, 94, 0.4);
+      }
+      50% {
+        text-shadow: 0 0 120px rgba(34, 197, 94, 0.9), 0 0 250px rgba(34, 197, 94, 0.6);
+      }
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(-200px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flash" id="flash"></div>
+
+    <!-- Scrolling real bets -->
+    <div class="bets-scroll" id="bets-scroll">
+      <div class="bets-track" id="bets-track"></div>
+    </div>
+
+    <!-- 65 Bets explosion -->
+    <div class="bets-number" id="bets-number">
+      <div class="number">65</div>
+      <div class="label">bets placed</div>
+    </div>
+
+    <!-- Tank visualization -->
+    <div class="tanks-container" id="tanks-container">
+      <div class="tank-wrapper">
+        <div class="tank" id="tank-wagered">
+          <div class="tank-fill wagered" id="fill-wagered"></div>
+          <div class="tank-value" id="value-wagered">$0</div>
+        </div>
+        <div class="tank-label">wagered</div>
+      </div>
+      <div class="tank-wrapper">
+        <div class="tank" id="tank-returned">
+          <div class="tank-fill returned" id="fill-returned"></div>
+          <div class="tank-value" id="value-returned">$0</div>
+          <div class="difference-bar" id="difference-bar">
+            <span class="difference-label">+$1,840</span>
+          </div>
+        </div>
+        <div class="tank-label">returned</div>
+      </div>
+    </div>
+
+    <!-- Particles -->
+    <div class="particles" id="particles"></div>
+    <div class="glow-ring" id="glow-ring"></div>
+
+    <!-- Profit reveal -->
+    <div class="profit-container" id="profit-container">
+      <div class="profit-number">+$1,840</div>
+      <div class="profit-label">profit</div>
+      <div class="profit-divider" id="profit-divider"></div>
+      <div class="profit-tagline" id="profit-tagline">no parlays</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    let timeouts = [];
+    let intervals = [];
+    let timerInterval;
+    let startTime;
+
+    // Real Week 5 bets
+    const realBets = [
+      { team: "VIKINGS", odds: "-110", stake: "$200", type: "SPREAD" },
+      { team: "RAIDERS", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "BEARS", odds: "-105", stake: "$100", type: "SPREAD" },
+      { team: "CARDINALS", odds: "-109", stake: "$100", type: "SPREAD" },
+      { team: "NORTHEASTERN", odds: "-102", stake: "$150", type: "SPREAD" },
+      { team: "LSU", odds: "-109", stake: "$250", type: "SPREAD" },
+      { team: "UNLV", odds: "-106", stake: "$150", type: "SPREAD" },
+      { team: "SMU", odds: "-110", stake: "$50", type: "SPREAD" },
+      { team: "CREIGHTON", odds: "-115", stake: "$50", type: "SPREAD" },
+      { team: "INDIANA", odds: "-105", stake: "$150", type: "SPREAD" },
+      { team: "DUKE", odds: "-115", stake: "$150", type: "SPREAD" },
+      { team: "KINGS", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "AVALANCHE", odds: "+145", stake: "$150", type: "SPREAD" },
+      { team: "ALABAMA", odds: "-105", stake: "$200", type: "SPREAD" },
+      { team: "MICHIGAN ST", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "RHODE ISLAND", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "JETS", odds: "+192", stake: "$125", type: "SPREAD" },
+      { team: "HEAT", odds: "-115", stake: "$100", type: "SPREAD" },
+      { team: "LAKERS", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "KENTUCKY", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "TROY", odds: "-107", stake: "$125", type: "SPREAD" },
+      { team: "JAZZ", odds: "-110", stake: "$200", type: "SPREAD" },
+      { team: "HORNETS", odds: "-114", stake: "$125", type: "SPREAD" },
+      { team: "CANUCKS", odds: "-220", stake: "$75", type: "SPREAD" },
+      { team: "MAVERICKS", odds: "-108", stake: "$150", type: "SPREAD" },
+      { team: "PENGUINS", odds: "+140", stake: "$200", type: "ML" },
+      { team: "RANGERS", odds: "+110", stake: "$150", type: "ML" },
+      { team: "BRUINS", odds: "+122", stake: "$150", type: "ML" },
+      { team: "USF", odds: "+100", stake: "$200", type: "SPREAD" },
+      { team: "NETS", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "FLAMES", odds: "+106", stake: "$100", type: "ML" },
+      { team: "UCSB", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "SPURS", odds: "-115", stake: "$150", type: "SPREAD" },
+      { team: "UNDER", odds: "-115", stake: "$50", type: "TOTAL" },
+      { team: "BLAZERS", odds: "-108", stake: "$200", type: "SPREAD" },
+      { team: "TOWSON", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "DETROIT MERCY", odds: "-112", stake: "$125", type: "SPREAD" },
+      { team: "CLEVELAND ST", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "UNDER", odds: "-105", stake: "$100", type: "TOTAL" },
+      { team: "BUCKS", odds: "-108", stake: "$50", type: "SPREAD" },
+      { team: "KINGS", odds: "-109", stake: "$150", type: "SPREAD" },
+      { team: "MAVERICKS", odds: "-105", stake: "$150", type: "SPREAD" },
+      { team: "NORTHWESTERN", odds: "-115", stake: "$100", type: "SPREAD" },
+      { team: "BRUINS", odds: "+165", stake: "$50", type: "ML" },
+      { team: "WIZARDS", odds: "-105", stake: "$100", type: "SPREAD" },
+      { team: "TEXAS A&M", odds: "-108", stake: "$100", type: "SPREAD" },
+      { team: "MAPLE LEAFS", odds: "-170", stake: "$100", type: "SPREAD" },
+      { team: "CELTICS", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "PELICANS", odds: "-110", stake: "$200", type: "SPREAD" },
+      { team: "WILD", odds: "-175", stake: "$100", type: "SPREAD" },
+      { team: "KANSAS", odds: "-106", stake: "$200", type: "SPREAD" },
+      { team: "UNC", odds: "-105", stake: "$50", type: "SPREAD" },
+      { team: "BLACKHAWKS", odds: "+100", stake: "$150", type: "SPREAD" },
+      { team: "WARRIORS", odds: "-110", stake: "$150", type: "SPREAD" },
+      { team: "HAWKS", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "JETS", odds: "-115", stake: "$50", type: "TOTAL" },
+      { team: "NETS", odds: "-109", stake: "$150", type: "SPREAD" },
+      { team: "BULLS", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "DUCKS", odds: "+130", stake: "$100", type: "ML" },
+      { team: "JAZZ", odds: "-114", stake: "$150", type: "SPREAD" },
+      { team: "MAVERICKS", odds: "-110", stake: "$200", type: "SPREAD" },
+      { team: "PACERS", odds: "-105", stake: "$100", type: "SPREAD" },
+      { team: "IONA", odds: "-110", stake: "$100", type: "SPREAD" },
+      { team: "N. ALABAMA", odds: "-104", stake: "$100", type: "SPREAD" },
+      { team: "MIDDLE TENN", odds: "-110", stake: "$50", type: "SPREAD" },
+    ];
+
+    function generateBetCards() {
+      const track = document.getElementById('bets-track');
+      track.innerHTML = '';
+      // Generate 3 sets for continuous scrolling
+      for (let i = 0; i < 3; i++) {
+        realBets.forEach(bet => {
+          const card = document.createElement('div');
+          card.className = 'bet-card';
+          card.innerHTML = `
+            <span class="team">${bet.team}</span>
+            <div class="details">
+              <span class="odds">${bet.odds}</span>
+              <span class="stake">${bet.stake}</span>
+              <span class="type">${bet.type}</span>
+            </div>
+          `;
+          track.appendChild(card);
+        });
+      }
+    }
+
+    function animateValue(element, start, end, duration, prefix = '') {
+      const startTime = performance.now();
+      const animate = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        const value = Math.floor(start + (end - start) * ease);
+        element.textContent = prefix + value.toLocaleString();
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      container.innerHTML = '';
+      for (let i = 0; i < 30; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        const size = 4 + Math.random() * 12;
+        p.style.width = size + 'px';
+        p.style.height = size + 'px';
+        const angle = (i / 30) * Math.PI * 2;
+        const dist = 100 + Math.random() * 300;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist;
+        p.animate([
+          { transform: 'translate(0,0) scale(1)', opacity: 1 },
+          { transform: `translate(${tx}px,${ty}px) scale(0)`, opacity: 0 }
+        ], { duration: 800, easing: 'ease-out', fill: 'forwards' });
+        container.appendChild(p);
+      }
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `0:${Math.floor(elapsed).toString().padStart(2,'0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      generateBetCards();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      const betsScroll = document.getElementById('bets-scroll');
+      const betsTrack = document.getElementById('bets-track');
+      const betsNumber = document.getElementById('bets-number');
+      const tanksContainer = document.getElementById('tanks-container');
+      const fillWagered = document.getElementById('fill-wagered');
+      const fillReturned = document.getElementById('fill-returned');
+      const valueWagered = document.getElementById('value-wagered');
+      const valueReturned = document.getElementById('value-returned');
+      const differenceBar = document.getElementById('difference-bar');
+      const profitContainer = document.getElementById('profit-container');
+      const flash = document.getElementById('flash');
+      const glowRing = document.getElementById('glow-ring');
+
+      // PHASE 1: Scroll bets (0-3.5s)
+      betsScroll.style.opacity = '1';
+      betsTrack.style.transition = 'transform 3s cubic-bezier(0.25, 0.1, 0.25, 1)';
+      betsTrack.style.transform = 'translateY(-8000px)';
+
+      // Bets number explodes in (3s)
+      timeouts.push(setTimeout(() => {
+        betsScroll.style.transition = 'opacity 0.2s';
+        betsScroll.style.opacity = '0';
+        betsNumber.style.animation = 'explodeIn 0.5s ease-out forwards';
+      }, 3000));
+
+      // Bets number implodes out (4s)
+      timeouts.push(setTimeout(() => {
+        betsNumber.style.animation = 'implode 0.4s ease-in forwards';
+      }, 4200));
+
+      // PHASE 2: Tanks fill (4.5-9.5s)
+      timeouts.push(setTimeout(() => {
+        tanksContainer.style.opacity = '1';
+        tanksContainer.style.transition = 'opacity 0.4s';
+
+        // Start filling tanks
+        setTimeout(() => {
+          fillWagered.style.height = '70%'; // $8,375 relative
+          fillReturned.style.height = '85%'; // $10,220 relative (higher!)
+
+          // Show values
+          valueWagered.style.opacity = '1';
+          valueReturned.style.opacity = '1';
+          valueWagered.style.transition = 'opacity 0.3s';
+          valueReturned.style.transition = 'opacity 0.3s';
+
+          animateValue(valueWagered, 0, 8375, 2000, '$');
+          animateValue(valueReturned, 0, 10220, 2500, '$');
+        }, 300);
+      }, 4600));
+
+      // Show difference bar (8s)
+      timeouts.push(setTimeout(() => {
+        const returnedTank = document.getElementById('tank-returned');
+        differenceBar.style.bottom = '70%';
+        differenceBar.style.height = '15%';
+        differenceBar.style.opacity = '1';
+        differenceBar.style.transition = 'opacity 0.5s';
+      }, 8000));
+
+      // PHASE 3: Collapse and explode (9.5s)
+      timeouts.push(setTimeout(() => {
+        // Flash
+        flash.style.animation = 'flashBang 0.5s ease-out forwards';
+
+        // Hide tanks
+        tanksContainer.style.opacity = '0';
+        tanksContainer.style.transition = 'opacity 0.2s';
+
+        // Particles
+        createParticles();
+
+        // Glow ring
+        glowRing.style.opacity = '1';
+        glowRing.style.animation = 'ringExpand 1s ease-out forwards';
+      }, 9500));
+
+      // PHASE 4: Profit reveal (10s)
+      timeouts.push(setTimeout(() => {
+        profitContainer.style.animation = 'explodeIn 0.6s ease-out forwards';
+      }, 10000));
+
+      // Pulse glow
+      timeouts.push(setTimeout(() => {
+        document.querySelector('.profit-number').style.animation = 'pulseGlow 2s ease-in-out infinite';
+      }, 10600));
+
+      // Divider
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-divider').style.opacity = '1';
+        document.getElementById('profit-divider').style.transition = 'opacity 0.5s';
+      }, 11500));
+
+      // Tagline
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-tagline').style.opacity = '1';
+        document.getElementById('profit-tagline').style.transition = 'opacity 0.5s';
+      }, 12000));
+
+      // Stop timer
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:15';
+      }, 15000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      intervals.forEach(i => clearInterval(i));
+      timeouts = [];
+      intervals = [];
+      clearInterval(timerInterval);
+
+      document.getElementById('timer').textContent = '0:00';
+
+      const betsScroll = document.getElementById('bets-scroll');
+      const betsTrack = document.getElementById('bets-track');
+      betsScroll.style.opacity = '0';
+      betsTrack.style.transition = 'none';
+      betsTrack.style.transform = 'translateY(0)';
+
+      const betsNumber = document.getElementById('bets-number');
+      betsNumber.style.animation = 'none';
+      betsNumber.style.opacity = '0';
+      betsNumber.style.transform = 'translate(-50%, -50%) scale(0)';
+
+      const tanksContainer = document.getElementById('tanks-container');
+      tanksContainer.style.opacity = '0';
+      document.getElementById('fill-wagered').style.height = '0%';
+      document.getElementById('fill-returned').style.height = '0%';
+      document.getElementById('value-wagered').style.opacity = '0';
+      document.getElementById('value-returned').style.opacity = '0';
+      document.getElementById('value-wagered').textContent = '$0';
+      document.getElementById('value-returned').textContent = '$0';
+      document.getElementById('difference-bar').style.opacity = '0';
+
+      document.getElementById('flash').style.animation = 'none';
+      document.getElementById('glow-ring').style.animation = 'none';
+      document.getElementById('glow-ring').style.opacity = '0';
+      document.getElementById('particles').innerHTML = '';
+
+      const profitContainer = document.getElementById('profit-container');
+      profitContainer.style.animation = 'none';
+      profitContainer.style.opacity = '0';
+      profitContainer.style.transform = 'translate(-50%, -50%) scale(0)';
+      document.querySelector('.profit-number').style.animation = 'none';
+      document.getElementById('profit-divider').style.opacity = '0';
+      document.getElementById('profit-tagline').style.opacity = '0';
+    }
+  </script>
+</body>
+</html>

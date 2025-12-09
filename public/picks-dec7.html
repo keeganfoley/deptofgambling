@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Picks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0d1f3c; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 50px 60px;
+      position: relative;
+      background: linear-gradient(180deg, #1e4175 0%, #0d1f3c 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 120px; bottom: 120px;
+      width: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    .side-bars.left { left: 20px; }
+    .side-bars.right { right: 20px; }
+    .side-bar { width: 100%; height: 45px; border-radius: 4px; }
+    .side-bar.green { background: rgba(34, 197, 94, 0.12); }
+    .side-bar.red { background: rgba(220, 38, 38, 0.12); }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    .header { text-align: center; margin-bottom: 45px; }
+    .header-label {
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 10px;
+    }
+    .date {
+      font-size: 90px;
+      font-weight: 800;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 15px;
+      text-decoration-thickness: 6px;
+    }
+
+    .picks-container { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; }
+
+    .sport-section { margin-bottom: 25px; }
+    .sport-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 18px;
+    }
+
+    .picks-row { display: flex; gap: 20px; margin-bottom: 18px; }
+
+    .pick-card {
+      flex: 1;
+      background: rgba(20, 40, 70, 0.9);
+      border-radius: 16px;
+      padding: 24px 28px;
+      border: 4px solid;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pick-card.full-width { flex: 1; }
+    .pick-card.sharp { border-color: #22c55e; }
+    .pick-card.vector { border-color: #9ca3af; }
+    .pick-card.catalyst { border-color: #c084fc; }
+    .pick-card.contra { border-color: #fb923c; }
+
+    .pick-left { display: flex; align-items: center; gap: 18px; }
+    .team-logo {
+      width: 65px;
+      height: 65px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.1);
+    }
+    .team-info { display: flex; flex-direction: column; }
+    .team-name { font-size: 32px; font-weight: 700; color: white; }
+    .pick-line { font-size: 24px; color: rgba(255,255,255,0.9); }
+    .pick-odds { color: #fbbf24; font-weight: 700; }
+    .units {
+      font-size: 26px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.1);
+      padding: 14px 24px;
+      border-radius: 12px;
+    }
+
+    .footer { text-align: center; margin-top: auto; padding-top: 30px; }
+    .logo { width: 80px; height: 80px; margin: 0 auto 12px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 26px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">TODAY'S PICKS</div>
+        <div class="date">DECEMBER 7</div>
+      </div>
+
+      <div class="picks-container">
+        <!-- NFL -->
+        <div class="sport-section">
+          <div class="sport-title">NFL</div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="logos/vikings.png" alt="Vikings" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">VIKINGS</div>
+                  <div class="pick-line">+1.5 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">2.0U</div>
+            </div>
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img src="logos/raiders.png" alt="Raiders" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">RAIDERS</div>
+                  <div class="pick-line">+8.5 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img src="logos/bears.png" alt="Bears" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">BEARS</div>
+                  <div class="pick-line">+6.5 <span class="pick-odds">(-105)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+            <div class="pick-card contra">
+              <div class="pick-left">
+                <img src="logos/cardinals.png" alt="Cardinals" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">CARDINALS</div>
+                  <div class="pick-line">+9.5 <span class="pick-odds">(-109)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCAAB -->
+        <div class="sport-section">
+          <div class="sport-title">NCAAB</div>
+          <div class="picks-row">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img src="logos/northeastern.png" alt="Northeastern" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">NORTHEASTERN</div>
+                  <div class="pick-line">-1.5 <span class="pick-odds">(-102)</span></div>
+                </div>
+              </div>
+              <div class="units">1.5U</div>
+            </div>
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img src="logos/lsu.png" alt="LSU" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">LSU</div>
+                  <div class="pick-line">+5.5 <span class="pick-odds">(-109)</span></div>
+                </div>
+              </div>
+              <div class="units">2.5U</div>
+            </div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card contra">
+              <div class="pick-left">
+                <img src="logos/unlv.png" alt="UNLV" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">UNLV</div>
+                  <div class="pick-line">+9.5 <span class="pick-odds">(-106)</span></div>
+                </div>
+              </div>
+              <div class="units">1.5U</div>
+            </div>
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="logos/smu.png" alt="SMU" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">SMU</div>
+                  <div class="pick-line">+2 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">0.5U</div>
+            </div>
+          </div>
+          <div class="picks-row" style="justify-content: center;">
+            <div class="pick-card vector" style="flex: 0 0 calc(50% - 8px);">
+              <div class="pick-left">
+                <img src="logos/creighton.png" alt="Creighton" class="team-logo">
+                <div class="team-info">
+                  <div class="team-name">CREIGHTON</div>
+                  <div class="pick-line">+5.5 <span class="pick-odds">(-115)</span></div>
+                </div>
+              </div>
+              <div class="units">0.5U</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

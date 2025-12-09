@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #0a0a0a 0%, #111827 50%, #0f172a 100%);
+      font-family: 'IBM Plex Mono', monospace;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 50px;
+    }
+
+    /* Bloomberg Terminal Header */
+    .terminal-header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ff6600;
+      margin-bottom: 30px;
+    }
+
+    .terminal-title {
+      font-size: 14px;
+      color: #ff6600;
+      letter-spacing: 2px;
+    }
+
+    .terminal-time {
+      font-size: 14px;
+      color: #00ff00;
+    }
+
+    /* Main Title */
+    .main-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 52px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+      background: linear-gradient(90deg, #fff 0%, #94a3b8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 50px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .stat {
+      color: #00ff00;
+    }
+
+    .stat-label {
+      color: #6b7280;
+      font-size: 14px;
+      margin-right: 8px;
+    }
+
+    /* Stacked Bar Section */
+    .bar-section {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .bar-label {
+      font-size: 12px;
+      color: #6b7280;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+
+    .stacked-bar {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #333;
+    }
+
+    .bar-segment {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #000;
+      position: relative;
+    }
+
+    .bar-vector { background: linear-gradient(180deg, #6b7280 0%, #4b5563 100%); flex: 1.5; }
+    .bar-sharp { background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%); flex: 8.5; }
+    .bar-contra { background: repeating-linear-gradient(45deg, #374151, #374151 10px, #4b5563 10px, #4b5563 20px); flex: 0.5; min-width: 40px; }
+    .bar-catalyst { background: linear-gradient(180deg, #a855f7 0%, #7c3aed 100%); flex: 1; }
+
+    .bar-segment span {
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* Fund Grid */
+    .fund-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .fund-card {
+      background: rgba(0,0,0,0.6);
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 25px 20px;
+      text-align: center;
+    }
+
+    .fund-card.vector { border-top: 3px solid #6b7280; }
+    .fund-card.sharp { border-top: 3px solid #22c55e; }
+    .fund-card.contra { border-top: 3px solid #f97316; }
+    .fund-card.catalyst { border-top: 3px solid #a855f7; }
+
+    .fund-logo {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 15px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+    }
+
+    .fund-logo.sharp { filter: none; }
+    .fund-logo.contra { filter: none; }
+    .fund-logo.catalyst { filter: none; }
+
+    .fund-name {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .fund-name.vector { color: #9ca3af; }
+    .fund-name.sharp { color: #22c55e; }
+    .fund-name.contra { color: #f97316; }
+    .fund-name.catalyst { color: #a855f7; }
+
+    .fund-stat {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid #222;
+      font-size: 13px;
+    }
+
+    .fund-stat:last-child { border-bottom: none; }
+
+    .fund-stat-label { color: #6b7280; }
+    .fund-stat-value { color: #fff; font-weight: 600; }
+    .fund-stat-value.green { color: #22c55e; }
+    .fund-stat-value.zero { color: #4b5563; }
+
+    /* Ticker Tape */
+    .ticker-section {
+      width: 100%;
+      background: #000;
+      border: 1px solid #333;
+      padding: 15px 25px;
+      margin-bottom: 50px;
+      border-radius: 4px;
+    }
+
+    .ticker-content {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+    }
+
+    .ticker-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ticker-symbol { color: #fff; font-weight: 600; }
+    .ticker-value { color: #22c55e; }
+    .ticker-pct { color: #22c55e; font-size: 12px; }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-logo {
+      width: 80px;
+      height: 80px;
+    }
+
+    .footer-url {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fbbf24;
+      letter-spacing: 2px;
+    }
+
+    .disclaimer {
+      font-size: 10px;
+      color: #4b5563;
+      text-align: center;
+      max-width: 800px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="terminal-header">
+    <div class="terminal-title">DEPT OF GAMBLING TERMINAL</div>
+    <div class="terminal-time">DEC 05 2024 | 16:30 EST</div>
+  </div>
+
+  <div class="main-title">TODAY'S EXPOSURE</div>
+
+  <div class="stats-row">
+    <div class="stat"><span class="stat-label">PICKS</span>7</div>
+    <div class="stat"><span class="stat-label">UNITS</span>11.0U</div>
+    <div class="stat"><span class="stat-label">RISK</span>$1,100</div>
+  </div>
+
+  <div class="bar-section">
+    <div class="bar-label">ALLOCATION BY FUND</div>
+    <div class="stacked-bar">
+      <div class="bar-segment bar-vector"><span>VEC 14%</span></div>
+      <div class="bar-segment bar-sharp"><span>SHARP 77%</span></div>
+      <div class="bar-segment bar-contra"><span></span></div>
+      <div class="bar-segment bar-catalyst"><span>CAT 9%</span></div>
+    </div>
+  </div>
+
+  <div class="fund-grid">
+    <div class="fund-card vector">
+      <img src="logos/vector-logo.png" class="fund-logo" alt="Vector">
+      <div class="fund-name vector">VECTOR</div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">PICKS</span>
+        <span class="fund-stat-value">1</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">UNITS</span>
+        <span class="fund-stat-value">1.5U</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">RISK</span>
+        <span class="fund-stat-value green">$150</span>
+      </div>
+    </div>
+
+    <div class="fund-card sharp">
+      <img src="logos/sharp-logo.png" class="fund-logo sharp" alt="Sharp">
+      <div class="fund-name sharp">SHARP</div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">PICKS</span>
+        <span class="fund-stat-value">5</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">UNITS</span>
+        <span class="fund-stat-value">8.5U</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">RISK</span>
+        <span class="fund-stat-value green">$850</span>
+      </div>
+    </div>
+
+    <div class="fund-card contra">
+      <img src="logos/contra-logo.png" class="fund-logo contra" alt="Contra">
+      <div class="fund-name contra">CONTRA</div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">PICKS</span>
+        <span class="fund-stat-value zero">0</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">UNITS</span>
+        <span class="fund-stat-value zero">0U</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">RISK</span>
+        <span class="fund-stat-value zero">$0</span>
+      </div>
+    </div>
+
+    <div class="fund-card catalyst">
+      <img src="logos/catalyst-logo.png" class="fund-logo catalyst" alt="Catalyst">
+      <div class="fund-name catalyst">CATALYST</div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">PICKS</span>
+        <span class="fund-stat-value">1</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">UNITS</span>
+        <span class="fund-stat-value">1.0U</span>
+      </div>
+      <div class="fund-stat">
+        <span class="fund-stat-label">RISK</span>
+        <span class="fund-stat-value green">$100</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="ticker-section">
+    <div class="ticker-content">
+      <div class="ticker-item">
+        <span class="ticker-symbol">SHARP</span>
+        <span class="ticker-value">+77%</span>
+        <span class="ticker-pct">LEADING</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol">NHL</span>
+        <span class="ticker-value">4 picks</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol">NBA</span>
+        <span class="ticker-value">1 pick</span>
+      </div>
+      <div class="ticker-item">
+        <span class="ticker-symbol">NCAAB</span>
+        <span class="ticker-value">2 picks</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <img src="dog-logo.png" class="footer-logo" alt="DoG">
+    <div class="footer-url">DEPTOFGAMBLING.COM</div>
+    <div class="disclaimer">
+      ALL PROJECTIONS BASED ON STATISTICAL LIKELIHOOD, EXPECTED VALUE, AND VARIANCE MODELING. FULL BREAKDOWNS AVAILABLE ON SITE.
+    </div>
+  </div>
+</body>
+</html>

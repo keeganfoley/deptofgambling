@@ -1,0 +1,87 @@
+{
+  "slug": "indiana-spread-dec6-2025",
+  "id": 216,
+  "sport": "NCAAF",
+  "betType": "spread",
+  "team": "Indiana",
+  "opponent": "Ohio State",
+  "description": "Indiana +5.5",
+  "line": "Indiana +5.5",
+  "odds": -105,
+  "stake": 1.5,
+  "result": "win",
+  "profit": 142.86,
+  "fund": "SharpFund",
+  "finalStat": "Won 13-10 (covered, won outright)",
+  "gameDetails": {
+    "matchup": "Indiana vs Ohio State",
+    "date": "December 6, 2025",
+    "gameTime": "TBD",
+    "venue": "Lucas Oil Stadium, Indianapolis",
+    "finalScore": "Indiana 13, Ohio State 10"
+  },
+  "preGameAnalysis": {
+    "edge": 6.2,
+    "expectedValue": 5.6,
+    "estimatedProbability": 55,
+    "impliedProbability": 52.4,
+    "recentPerformance": {
+      "hitRate": "3-0 in Big Ten Championship games",
+      "cushion": "Won outright as +5.5 dog",
+      "last5Games": "See game notes"
+    },
+    "keyFactors": [
+      {
+        "title": "Line Value",
+        "description": "Model identified value on Indiana +5.5"
+      },
+      {
+        "title": "Fund Assignment",
+        "description": "Assigned to SharpFund"
+      }
+    ],
+    "riskFactors": [
+      "Standard variance",
+      "Line movement risk"
+    ]
+  },
+  "gameResults": {
+    "finalScore": "Indiana 13, Ohio State 10",
+    "coverMargin": "Won 13-10 (covered, won outright)",
+    "quarterBreakdown": [
+      {
+        "quarter": "Final",
+        "description": "Won 13-10 (covered, won outright)"
+      }
+    ],
+    "whenCleared": "Final",
+    "gamePace": "Historic upset - Indiana wins first Big Ten title since 1945"
+  },
+  "postGameAnalysis": {
+    "whatWentRight": [
+      {
+        "title": "Result",
+        "description": "Won 13-10 (covered, won outright)"
+      }
+    ],
+    "statisticalContext": {
+      "vsSeasonAverage": "Indiana covered as 5.5-pt dog, won outright",
+      "vsRecentForm": "Won 13-10 (covered, won outright)",
+      "vsPropLine": "Covered Indiana +5.5",
+      "percentileRanking": "N/A"
+    }
+  },
+  "closingLineValue": {
+    "ourOdds": -105,
+    "closingOdds": -105,
+    "clvCents": 0,
+    "clvPercentage": 0,
+    "verdict": "Line held"
+  },
+  "keyTakeaways": [
+    "Won 13-10 (covered, won outright)",
+    "Historic upset - Indiana wins first Big Ten title since 1945"
+  ],
+  "wouldBetAgain": true,
+  "verdict": "Historic upset - Indiana wins first Big Ten title since 1945"
+}

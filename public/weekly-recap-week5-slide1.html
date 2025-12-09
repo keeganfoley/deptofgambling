@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 5 Recap - Slide 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 35px 45px;
+      position: relative;
+      background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #061224 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Subtle grid */
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(251,191,36,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(251,191,36,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Gold corner accents */
+    .corner-accent {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 3px solid rgba(251,191,36,0.3);
+    }
+    .corner-accent.tl { top: 20px; left: 20px; border-right: none; border-bottom: none; }
+    .corner-accent.tr { top: 20px; right: 20px; border-left: none; border-bottom: none; }
+    .corner-accent.bl { bottom: 20px; left: 20px; border-right: none; border-top: none; }
+    .corner-accent.br { bottom: 20px; right: 20px; border-left: none; border-top: none; }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    /* HEADER WITH LOGO */
+    .header-section {
+      text-align: center;
+      padding: 20px 0 30px;
+      border-bottom: 2px solid rgba(251,191,36,0.2);
+      margin-bottom: 35px;
+    }
+    .logo-container {
+      margin-bottom: 18px;
+    }
+    .logo-container img {
+      width: 150px;
+      height: 150px;
+      filter: drop-shadow(0 0 30px rgba(251,191,36,0.3));
+    }
+    .dept-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 12px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 8px;
+    }
+    .report-title {
+      font-size: 72px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      margin-bottom: 12px;
+    }
+    .report-period {
+      display: inline-block;
+      background: rgba(251,191,36,0.15);
+      border: 2px solid rgba(251,191,36,0.4);
+      padding: 12px 40px;
+      border-radius: 6px;
+    }
+    .report-period span {
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: #fbbf24;
+    }
+
+    /* HERO P/L */
+    .hero-section {
+      background: linear-gradient(135deg, rgba(45,138,78,0.15) 0%, rgba(30,41,59,0.8) 100%);
+      border: 3px solid rgba(45,138,78,0.5);
+      border-radius: 20px;
+      padding: 40px 50px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 12px;
+    }
+    .hero-pl {
+      font-size: 115px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 50px rgba(34,197,94,0.4);
+    }
+    .hero-units {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+      margin-top: 8px;
+      letter-spacing: 3px;
+    }
+
+    /* PRIMARY STATS */
+    .primary-stats {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+    .primary-stat {
+      flex: 1;
+      background: rgba(30, 41, 59, 0.6);
+      border: 2px solid rgba(251,191,36,0.3);
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: center;
+    }
+    .primary-stat-label {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 10px;
+    }
+    .primary-stat-value {
+      font-size: 58px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+      line-height: 1;
+    }
+
+    /* OFFICIAL STATEMENT */
+    .statement-section {
+      background: linear-gradient(135deg, rgba(251,191,36,0.12) 0%, rgba(20,35,60,0.9) 50%, rgba(251,191,36,0.08) 100%);
+      border: 2px solid rgba(251,191,36,0.5);
+      border-radius: 14px;
+      padding: 24px 35px;
+      text-align: center;
+      box-shadow: 0 0 40px rgba(251,191,36,0.15), inset 0 0 60px rgba(251,191,36,0.05);
+      position: relative;
+    }
+    .statement-section::before {
+      content: '"';
+      position: absolute;
+      top: 12px;
+      left: 25px;
+      font-size: 80px;
+      font-family: Georgia, serif;
+      color: rgba(251,191,36,0.25);
+      line-height: 1;
+    }
+    .statement-section::after {
+      content: '"';
+      position: absolute;
+      bottom: -15px;
+      right: 25px;
+      font-size: 80px;
+      font-family: Georgia, serif;
+      color: rgba(251,191,36,0.25);
+      line-height: 1;
+    }
+    .statement-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .statement-badge {
+      background: linear-gradient(135deg, rgba(251,191,36,0.35) 0%, rgba(251,191,36,0.2) 100%);
+      border: 2px solid #fbbf24;
+      padding: 8px 24px;
+      border-radius: 6px;
+      box-shadow: 0 0 25px rgba(251,191,36,0.35);
+    }
+    .statement-badge-text {
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-shadow: 0 0 15px rgba(251,191,36,0.5);
+    }
+    .statement-text {
+      font-size: 27px;
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.45;
+      font-style: italic;
+      max-width: 920px;
+      margin: 0 auto;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 1;
+    }
+    .statement-text .highlight {
+      color: #fbbf24;
+      font-weight: 600;
+      text-shadow: 0 0 15px rgba(251,191,36,0.4);
+    }
+    /* FOOTER */
+    .footer {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid rgba(251,191,36,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-left {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 3px;
+    }
+    .footer-center {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.6);
+    }
+    .footer-right {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="corner-accent tl"></div>
+    <div class="corner-accent tr"></div>
+    <div class="corner-accent bl"></div>
+    <div class="corner-accent br"></div>
+
+    <div class="content">
+      <!-- HEADER -->
+      <div class="header-section">
+        <div class="logo-container">
+          <img src="logo.png" alt="Department of Gambling">
+        </div>
+        <div class="dept-name">DEPARTMENT OF GAMBLING</div>
+        <div class="report-title">WEEKLY BRIEFING</div>
+        <div class="report-period">
+          <span>WEEK 5 · DEC 1-7, 2025</span>
+        </div>
+      </div>
+
+      <!-- HERO P/L -->
+      <div class="hero-section">
+        <div class="hero-label">NET WEEKLY PROCEEDS</div>
+        <div class="hero-pl">+$1,845</div>
+        <div class="hero-units">+18.45 UNITS</div>
+      </div>
+
+      <!-- PRIMARY STATS -->
+      <div class="primary-stats">
+        <div class="primary-stat">
+          <div class="primary-stat-label">RECORD</div>
+          <div class="primary-stat-value">40-24-1</div>
+        </div>
+        <div class="primary-stat">
+          <div class="primary-stat-label">WIN RATE</div>
+          <div class="primary-stat-value">63%</div>
+        </div>
+        <div class="primary-stat">
+          <div class="primary-stat-label">ROI</div>
+          <div class="primary-stat-value">+22%</div>
+        </div>
+      </div>
+
+      <!-- OFFICIAL STATEMENT -->
+      <div class="statement-section">
+        <div class="statement-header">
+          <div class="statement-badge">
+            <div class="statement-badge-text">OFFICIAL DOG STATEMENT</div>
+          </div>
+        </div>
+        <div class="statement-text">"Week 5 marked another profitable chapter for the Department. <span class="highlight">NHL</span> led all sports with a dominant <span class="highlight">71%</span> hit rate and over <span class="highlight">$1,000</span> in proceeds, while a monster Wednesday and strong <span class="highlight">NBA</span> performances drove the majority of weekly gains."</div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-left">WEEK 5 REPORT</div>
+        <div class="footer-center">DEPTOFGAMBLING.COM</div>
+        <div class="footer-right">SLIDE 1 OF 4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

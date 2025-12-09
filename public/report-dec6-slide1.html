@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>December 6 Daily Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #0d1f3c; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 45px 70px 40px;
+      position: relative;
+      background: linear-gradient(180deg, #1e4175 0%, #0d1f3c 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .side-bars.left { left: 22px; }
+    .side-bars.right { right: 22px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; }
+    .side-bar.green { background: rgba(34, 197, 94, 0.12); }
+    .side-bar.red { background: rgba(220, 38, 38, 0.12); }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    .header { text-align: center; margin-bottom: 20px; }
+    .header-label {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 5px;
+    }
+    .date {
+      font-size: 85px;
+      font-weight: 900;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 12px;
+      text-decoration-thickness: 5px;
+      margin-bottom: 15px;
+    }
+    .total-amount {
+      font-size: 160px;
+      font-weight: 900;
+      color: #ef4444;
+      line-height: 1;
+    }
+    .record {
+      font-size: 80px;
+      font-weight: 900;
+      color: white;
+      margin-top: 5px;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin: 20px 0;
+    }
+    .stat-box {
+      background: rgba(30, 58, 95, 0.8);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 18px;
+      padding: 22px 60px;
+      text-align: center;
+    }
+    .stat-value { font-size: 60px; font-weight: 700; color: white; }
+    .stat-label {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 5px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 20px;
+    }
+
+    .funds-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .fund-card {
+      background: rgba(20, 40, 70, 0.9);
+      border-radius: 20px;
+      padding: 28px;
+      border: 5px solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .fund-card.sharp { border-color: #22c55e; }
+    .fund-card.vector { border-color: #9ca3af; }
+    .fund-card.catalyst { border-color: #c084fc; }
+    .fund-card.contra { border-color: #fb923c; }
+
+    .fund-header { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .fund-dot { width: 20px; height: 20px; border-radius: 50%; }
+    .fund-dot.sharp { background: #22c55e; }
+    .fund-dot.vector { background: #9ca3af; }
+    .fund-dot.catalyst { background: #c084fc; }
+    .fund-dot.contra { background: #fb923c; }
+    .fund-name { font-size: 24px; font-weight: 700; letter-spacing: 2px; color: white; }
+    .fund-amount { font-size: 75px; font-weight: 800; margin-bottom: 8px; }
+    .fund-amount.positive { color: #22c55e; }
+    .fund-amount.negative { color: #ef4444; }
+    .fund-amount.zero { color: rgba(255,255,255,0.25); }
+    .fund-details { font-size: 20px; color: rgba(255,255,255,0.5); }
+
+    .footer { text-align: center; margin-top: 25px; }
+    .logo { width: 75px; height: 75px; margin: 0 auto 10px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 26px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">DAILY REPORT</div>
+        <div class="date">DECEMBER 6</div>
+        <div class="total-amount">-$240</div>
+        <div class="record">3-4</div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-box">
+          <div class="stat-value">7</div>
+          <div class="stat-label">PICKS</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-value">11U</div>
+          <div class="stat-label">UNITS</div>
+        </div>
+      </div>
+
+      <div class="section-title">FUND PERFORMANCE</div>
+
+      <div class="funds-grid">
+        <div class="fund-card sharp">
+          <div class="fund-header">
+            <div class="fund-dot sharp"></div>
+            <div class="fund-name">SHARP FUND</div>
+          </div>
+          <div class="fund-amount negative">-$77</div>
+          <div class="fund-details">4 picks · 6.5U · 2-2</div>
+        </div>
+        <div class="fund-card vector">
+          <div class="fund-header">
+            <div class="fund-dot vector"></div>
+            <div class="fund-name">VECTOR FUND</div>
+          </div>
+          <div class="fund-amount negative">-$150</div>
+          <div class="fund-details">1 pick · 1.5U · 0-1</div>
+        </div>
+        <div class="fund-card catalyst">
+          <div class="fund-header">
+            <div class="fund-dot catalyst"></div>
+            <div class="fund-name">CATALYST FUND</div>
+          </div>
+          <div class="fund-amount zero">$0</div>
+          <div class="fund-details">0 picks · 0U · 0-0</div>
+        </div>
+        <div class="fund-card contra">
+          <div class="fund-header">
+            <div class="fund-dot contra"></div>
+            <div class="fund-name">CONTRA FUND</div>
+          </div>
+          <div class="fund-amount negative">-$14</div>
+          <div class="fund-details">2 picks · 3.0U · 1-1</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="/logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

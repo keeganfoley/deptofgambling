@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1350px;
+      background: linear-gradient(180deg, #0c1220 0%, #1a2332 100%);
+      font-family: 'Source Sans Pro', sans-serif;
+      color: #e8e8e8;
+      display: flex;
+      flex-direction: column;
+      padding: 60px;
+    }
+
+    /* Elegant Header */
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .header-date {
+      font-size: 14px;
+      color: #d4af37;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 3px;
+      margin-bottom: 10px;
+    }
+
+    .header-subtitle {
+      font-size: 16px;
+      font-weight: 300;
+      color: #8892a0;
+      letter-spacing: 2px;
+    }
+
+    /* Summary Cards */
+    .summary-row {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 50px;
+    }
+
+    .summary-item {
+      text-align: center;
+    }
+
+    .summary-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #d4af37;
+    }
+
+    .summary-label {
+      font-size: 13px;
+      color: #8892a0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 8px;
+    }
+
+    /* Allocation Bar - Sophisticated Style */
+    .allocation-section {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 35px;
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      color: #8892a0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .stacked-bar-wrap {
+      position: relative;
+      margin-bottom: 30px;
+    }
+
+    .stacked-bar {
+      width: 100%;
+      height: 35px;
+      display: flex;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .bar-seg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.3s;
+    }
+
+    .bar-seg.vector { background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%); flex: 14; color: #fff; }
+    .bar-seg.sharp { background: linear-gradient(135deg, #34d399 0%, #059669 100%); flex: 77; color: #0c1220; }
+    .bar-seg.contra { background: transparent; flex: 1; min-width: 8px; border-top: 2px dashed #f97316; border-bottom: 2px dashed #f97316; }
+    .bar-seg.catalyst { background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%); flex: 9; color: #fff; }
+
+    /* Legend */
+    .legend-row {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .legend-bar {
+      width: 24px;
+      height: 8px;
+      border-radius: 2px;
+    }
+
+    .legend-bar.vector { background: #6b7280; }
+    .legend-bar.sharp { background: #34d399; }
+    .legend-bar.contra { background: transparent; border: 1px dashed #f97316; }
+    .legend-bar.catalyst { background: #a78bfa; }
+
+    .legend-text {
+      font-size: 13px;
+      color: #8892a0;
+    }
+
+    /* Fund Table - Report Style */
+    .funds-table {
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .table-header {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      padding: 15px 25px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 11px;
+      color: #8892a0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .table-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      padding: 25px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      align-items: center;
+      transition: background 0.2s;
+    }
+
+    .table-row:hover {
+      background: rgba(255,255,255,0.02);
+    }
+
+    .table-row.inactive {
+      opacity: 0.4;
+    }
+
+    .fund-cell {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .fund-logo-sm {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    .fund-logo-sm.vector { filter: brightness(0) invert(0.7); }
+
+    .fund-name-col {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .fund-name {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .fund-desc {
+      font-size: 12px;
+      color: #8892a0;
+      margin-top: 3px;
+    }
+
+    .table-value {
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      text-align: center;
+    }
+
+    .table-value.highlight {
+      color: #34d399;
+    }
+
+    .table-value.zero {
+      color: #4b5563;
+    }
+
+    .pct-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .pct-badge.vector { background: rgba(107, 114, 128, 0.2); color: #9ca3af; }
+    .pct-badge.sharp { background: rgba(52, 211, 153, 0.2); color: #34d399; }
+    .pct-badge.contra { background: rgba(249, 115, 22, 0.1); color: #f97316; border: 1px dashed #f97316; }
+    .pct-badge.catalyst { background: rgba(167, 139, 250, 0.2); color: #a78bfa; }
+
+    /* Insight Box */
+    .insight-box {
+      background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(52, 211, 153, 0.05) 100%);
+      border-left: 3px solid #34d399;
+      padding: 25px 30px;
+      margin-bottom: 50px;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .insight-label {
+      font-size: 11px;
+      color: #34d399;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .insight-text {
+      font-size: 18px;
+      color: #fff;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      width: 75px;
+      height: 75px;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: #d4af37;
+      letter-spacing: 4px;
+    }
+
+    .footer-disclaimer {
+      font-size: 11px;
+      color: #6b7280;
+      text-align: center;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="header-date">December 5, 2024</div>
+    <div class="header-title">DAILY EXPOSURE</div>
+    <div class="header-subtitle">Portfolio Allocation Report</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="summary-item">
+      <div class="summary-value">7</div>
+      <div class="summary-label">Active Positions</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-value">11.0</div>
+      <div class="summary-label">Total Units</div>
+    </div>
+    <div class="summary-item">
+      <div class="summary-value">$1,100</div>
+      <div class="summary-label">Capital at Risk</div>
+    </div>
+  </div>
+
+  <div class="allocation-section">
+    <div class="section-title">Fund Allocation</div>
+    <div class="stacked-bar-wrap">
+      <div class="stacked-bar">
+        <div class="bar-seg vector">14%</div>
+        <div class="bar-seg sharp">77%</div>
+        <div class="bar-seg contra"></div>
+        <div class="bar-seg catalyst">9%</div>
+      </div>
+    </div>
+    <div class="legend-row">
+      <div class="legend-item"><div class="legend-bar vector"></div><span class="legend-text">Vector</span></div>
+      <div class="legend-item"><div class="legend-bar sharp"></div><span class="legend-text">Sharp</span></div>
+      <div class="legend-item"><div class="legend-bar contra"></div><span class="legend-text">Contra</span></div>
+      <div class="legend-item"><div class="legend-bar catalyst"></div><span class="legend-text">Catalyst</span></div>
+    </div>
+  </div>
+
+  <div class="funds-table">
+    <div class="table-header">
+      <div>Fund</div>
+      <div style="text-align: center;">Picks</div>
+      <div style="text-align: center;">Units</div>
+      <div style="text-align: center;">Risk</div>
+      <div style="text-align: center;">Allocation</div>
+    </div>
+
+    <div class="table-row">
+      <div class="fund-cell">
+        <img src="logos/vector-logo.png" class="fund-logo-sm vector" alt="Vector">
+        <div class="fund-name-col">
+          <div class="fund-name">Vector</div>
+          <div class="fund-desc">Mathematical Edge</div>
+        </div>
+      </div>
+      <div class="table-value">1</div>
+      <div class="table-value">1.5U</div>
+      <div class="table-value highlight">$150</div>
+      <div style="text-align: center;"><span class="pct-badge vector">14%</span></div>
+    </div>
+
+    <div class="table-row">
+      <div class="fund-cell">
+        <img src="logos/sharp-logo.png" class="fund-logo-sm" alt="Sharp">
+        <div class="fund-name-col">
+          <div class="fund-name">Sharp</div>
+          <div class="fund-desc">Line Movement</div>
+        </div>
+      </div>
+      <div class="table-value">5</div>
+      <div class="table-value">8.5U</div>
+      <div class="table-value highlight">$850</div>
+      <div style="text-align: center;"><span class="pct-badge sharp">77%</span></div>
+    </div>
+
+    <div class="table-row inactive">
+      <div class="fund-cell">
+        <img src="logos/contra-logo.png" class="fund-logo-sm" alt="Contra">
+        <div class="fund-name-col">
+          <div class="fund-name">Contra</div>
+          <div class="fund-desc">Contrarian Value</div>
+        </div>
+      </div>
+      <div class="table-value zero">0</div>
+      <div class="table-value zero">0U</div>
+      <div class="table-value zero">$0</div>
+      <div style="text-align: center;"><span class="pct-badge contra">0%</span></div>
+    </div>
+
+    <div class="table-row">
+      <div class="fund-cell">
+        <img src="logos/catalyst-logo.png" class="fund-logo-sm" alt="Catalyst">
+        <div class="fund-name-col">
+          <div class="fund-name">Catalyst</div>
+          <div class="fund-desc">High Conviction</div>
+        </div>
+      </div>
+      <div class="table-value">1</div>
+      <div class="table-value">1.0U</div>
+      <div class="table-value highlight">$100</div>
+      <div style="text-align: center;"><span class="pct-badge catalyst">9%</span></div>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="insight-label">Today's Thesis</div>
+    <div class="insight-text">Sharp Fund leading with 77% of exposure across 5 line movement plays. Heavy NHL slate with supporting NCAAB positions.</div>
+  </div>
+
+  <div class="footer">
+    <img src="dog-logo.png" class="footer-logo" alt="DoG">
+    <div class="footer-brand">DEPTOFGAMBLING.COM</div>
+    <div class="footer-disclaimer">
+      All projections based on statistical likelihood, expected value, and variance modeling. Full analysis available on site.
+    </div>
+  </div>
+</body>
+</html>

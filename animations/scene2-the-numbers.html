@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scene 2: The Numbers</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0a0a0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Instagram Reels aspect ratio 9:16 */
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: linear-gradient(180deg, #0a0a0f 0%, #0d1117 50%, #0a0a0f 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.45);
+      transform-origin: center center;
+    }
+
+    .scene {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .number {
+      font-family: 'Inter', sans-serif;
+      font-size: 160px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1;
+      letter-spacing: -4px;
+    }
+
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: #6b7280;
+      margin-top: 20px;
+      letter-spacing: 2px;
+      text-transform: lowercase;
+    }
+
+    .profit-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 180px;
+      font-weight: 700;
+      color: #22c55e;
+      line-height: 1;
+      letter-spacing: -4px;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.5),
+                   0 0 120px rgba(34, 197, 94, 0.3);
+    }
+
+    .comparison {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .comparison .number {
+      font-size: 120px;
+    }
+
+    .comparison .muted {
+      color: #6b7280;
+      font-size: 100px;
+    }
+
+    .arrow {
+      font-size: 60px;
+      color: #374151;
+      opacity: 0;
+    }
+
+    .divider {
+      width: 200px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #374151, transparent);
+      margin: 40px 0 30px 0;
+      opacity: 0;
+    }
+
+    .no-parlays {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #4b5563;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0;
+      margin-top: 60px;
+    }
+
+    /* Glow effect */
+    .glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, transparent 70%);
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      pointer-events: none;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    @keyframes fadeOutUp {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(-50%, -60%) scale(0.95);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+      }
+    }
+
+    @keyframes profitPulse {
+      0%, 100% {
+        text-shadow: 0 0 60px rgba(34, 197, 94, 0.5),
+                     0 0 120px rgba(34, 197, 94, 0.3);
+      }
+      50% {
+        text-shadow: 0 0 80px rgba(34, 197, 94, 0.7),
+                     0 0 160px rgba(34, 197, 94, 0.4);
+      }
+    }
+
+    .scene.active {
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    .scene.exit {
+      animation: fadeOutUp 0.5s ease-in forwards;
+    }
+
+    .profit-number.pulse {
+      animation: profitPulse 2s ease-in-out infinite;
+    }
+
+    .glow.active {
+      animation: pulseGlow 1s ease-out forwards;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 1000;
+    }
+
+    .controls button {
+      padding: 12px 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .play-btn {
+      background: #22c55e;
+      color: #0a0a0f;
+    }
+
+    .play-btn:hover {
+      background: #16a34a;
+    }
+
+    .reset-btn {
+      background: #374151;
+      color: #ffffff;
+    }
+
+    .reset-btn:hover {
+      background: #4b5563;
+    }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      color: #6b7280;
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Scene 1: 65 Bets -->
+    <div class="scene" id="scene-bets">
+      <div class="number" id="bets-counter">0</div>
+      <div class="label">bets placed</div>
+    </div>
+
+    <!-- Scene 2: Wagered -->
+    <div class="scene" id="scene-wagered">
+      <div class="number" id="wagered-counter">$0</div>
+      <div class="label">wagered</div>
+    </div>
+
+    <!-- Scene 3: Returned -->
+    <div class="scene" id="scene-returned">
+      <div class="number" id="returned-counter">$0</div>
+      <div class="label">returned</div>
+    </div>
+
+    <!-- Scene 4: Comparison -->
+    <div class="scene" id="scene-comparison">
+      <div class="comparison">
+        <div class="number muted">$8,375</div>
+        <div class="arrow" id="arrow">↓</div>
+        <div class="number">$10,220</div>
+      </div>
+    </div>
+
+    <!-- Scene 5: Profit -->
+    <div class="scene" id="scene-profit">
+      <div class="glow" id="glow"></div>
+      <div class="profit-number" id="profit-counter">+$0</div>
+      <div class="label">profit</div>
+      <div class="divider" id="divider"></div>
+      <div class="no-parlays" id="no-parlays">no parlays</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    let animationTimeout = [];
+    let timerInterval;
+    let startTime;
+
+    function animateCounter(element, start, end, duration, prefix = '', suffix = '') {
+      const startTimestamp = performance.now();
+      const step = (timestamp) => {
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(start + (end - start) * easeOut);
+        element.textContent = prefix + current.toLocaleString() + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      };
+      requestAnimationFrame(step);
+    }
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const seconds = Math.floor(elapsed);
+      const ms = Math.floor((elapsed % 1) * 100);
+      document.getElementById('timer').textContent = `0:${seconds.toString().padStart(2, '0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      const sceneBets = document.getElementById('scene-bets');
+      const sceneWagered = document.getElementById('scene-wagered');
+      const sceneReturned = document.getElementById('scene-returned');
+      const sceneComparison = document.getElementById('scene-comparison');
+      const sceneProfit = document.getElementById('scene-profit');
+
+      // Scene 1: Bets (0-3s)
+      animationTimeout.push(setTimeout(() => {
+        sceneBets.classList.add('active');
+        animateCounter(document.getElementById('bets-counter'), 0, 65, 1500);
+      }, 0));
+
+      animationTimeout.push(setTimeout(() => {
+        sceneBets.classList.remove('active');
+        sceneBets.classList.add('exit');
+      }, 2500));
+
+      // Scene 2: Wagered (3-6s)
+      animationTimeout.push(setTimeout(() => {
+        sceneBets.classList.remove('exit');
+        sceneBets.style.opacity = '0';
+        sceneWagered.classList.add('active');
+        animateCounter(document.getElementById('wagered-counter'), 0, 8375, 1500, '$');
+      }, 3000));
+
+      animationTimeout.push(setTimeout(() => {
+        sceneWagered.classList.remove('active');
+        sceneWagered.classList.add('exit');
+      }, 5500));
+
+      // Scene 3: Returned (6-9s)
+      animationTimeout.push(setTimeout(() => {
+        sceneWagered.classList.remove('exit');
+        sceneWagered.style.opacity = '0';
+        sceneReturned.classList.add('active');
+        animateCounter(document.getElementById('returned-counter'), 0, 10220, 1500, '$');
+      }, 6000));
+
+      animationTimeout.push(setTimeout(() => {
+        sceneReturned.classList.remove('active');
+        sceneReturned.classList.add('exit');
+      }, 8500));
+
+      // Scene 4: Comparison (9-12s)
+      animationTimeout.push(setTimeout(() => {
+        sceneReturned.classList.remove('exit');
+        sceneReturned.style.opacity = '0';
+        sceneComparison.classList.add('active');
+      }, 9000));
+
+      animationTimeout.push(setTimeout(() => {
+        document.getElementById('arrow').style.opacity = '1';
+        document.getElementById('arrow').style.transition = 'opacity 0.5s';
+      }, 9500));
+
+      animationTimeout.push(setTimeout(() => {
+        sceneComparison.classList.remove('active');
+        sceneComparison.classList.add('exit');
+      }, 11500));
+
+      // Scene 5: Profit (12-15s)
+      animationTimeout.push(setTimeout(() => {
+        sceneComparison.classList.remove('exit');
+        sceneComparison.style.opacity = '0';
+        sceneProfit.classList.add('active');
+        document.getElementById('glow').classList.add('active');
+        animateCounter(document.getElementById('profit-counter'), 0, 1840, 1200, '+$');
+      }, 12000));
+
+      animationTimeout.push(setTimeout(() => {
+        document.getElementById('profit-counter').classList.add('pulse');
+      }, 13200));
+
+      animationTimeout.push(setTimeout(() => {
+        document.getElementById('divider').style.opacity = '1';
+        document.getElementById('divider').style.transition = 'opacity 0.5s';
+      }, 13500));
+
+      animationTimeout.push(setTimeout(() => {
+        document.getElementById('no-parlays').style.opacity = '1';
+        document.getElementById('no-parlays').style.transition = 'opacity 0.5s';
+      }, 14000));
+
+      // Stop timer at 15s
+      animationTimeout.push(setTimeout(() => {
+        clearInterval(timerInterval);
+        document.getElementById('timer').textContent = '0:15';
+      }, 15000));
+    }
+
+    function resetAnimation() {
+      // Clear all timeouts
+      animationTimeout.forEach(t => clearTimeout(t));
+      animationTimeout = [];
+      clearInterval(timerInterval);
+
+      // Reset timer
+      document.getElementById('timer').textContent = '0:00';
+
+      // Reset all scenes
+      const scenes = document.querySelectorAll('.scene');
+      scenes.forEach(scene => {
+        scene.classList.remove('active', 'exit');
+        scene.style.opacity = '0';
+      });
+
+      // Reset counters
+      document.getElementById('bets-counter').textContent = '0';
+      document.getElementById('wagered-counter').textContent = '$0';
+      document.getElementById('returned-counter').textContent = '$0';
+      document.getElementById('profit-counter').textContent = '+$0';
+      document.getElementById('profit-counter').classList.remove('pulse');
+
+      // Reset other elements
+      document.getElementById('arrow').style.opacity = '0';
+      document.getElementById('glow').classList.remove('active');
+      document.getElementById('divider').style.opacity = '0';
+      document.getElementById('no-parlays').style.opacity = '0';
+    }
+  </script>
+</body>
+</html>
