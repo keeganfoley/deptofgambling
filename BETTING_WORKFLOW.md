@@ -896,9 +896,38 @@ GAMES: [EARLIEST DATE] - [LATEST DATE]
 
 ---
 
-#### AFTER "update results" (Daily Report Post)
+#### AFTER "update results" - COMPLETE WORKFLOW
 
-When I update results and all bets are settled, automatically generate:
+**STEP 1: Update Data**
+1. Update bets.json with results (win/loss/push)
+2. Run `npx tsx scripts/sync-all-data.ts` to sync portfolio/chart/metrics
+3. Start dev server: `npm run dev`
+4. Provide local link (e.g., http://localhost:3000) and confirm data is updated
+
+**STEP 2: Confirm with User**
+- Show summary: Record, P/L, Fund breakdown
+- Wait for user confirmation before generating slides
+
+**STEP 3: Generate 4 Deliverables (after confirmation)**
+
+| # | Slide | Template | Output |
+|---|-------|----------|--------|
+| 1 | **Daily Report** | `daily-report-master-template.html` | `social-images/YYYY-MM-DD/daily-report.png` |
+| 2 | **Picks Results** | `picks-results-master-template.html` | `social-images/YYYY-MM-DD/picks-results.png` |
+| 3 | **Portfolio Chart** | `portfolio-chart-master-template.html` | `social-images/YYYY-MM-DD/portfolio-chart.png` |
+| 4 | **Story (Cumulative)** | Script: `generate-cumulative-candles.ts` | `daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png` |
+
+**Day Numbering:**
+- Day 1 = Nov 4, 2025 (portfolio start)
+- Day 36 = Dec 9, 2025
+- Tomorrow = Day 37, etc.
+
+**STEP 4: Provide Captions**
+- Instagram caption
+- Twitter post
+- Pinned comment (if applicable)
+
+---
 
 **DAILY REPORT - SLIDE 1:**
 ```

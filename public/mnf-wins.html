@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MNF Wins</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1080px;
+      padding: 60px 50px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .header-title {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fbbf24;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Ticket style bet card */
+    .bet-card {
+      background: rgba(20, 30, 45, 0.95);
+      border-radius: 12px;
+      width: 850px;
+      height: 120px;
+      border: 2px solid #22c55e;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left section - logo */
+    .ticket-left {
+      width: 120px;
+      height: 100%;
+      background: rgba(30, 45, 65, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 2px dashed rgba(255,255,255,0.2);
+    }
+
+    .team-logo {
+      width: 70px;
+      height: 70px;
+    }
+
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Middle section - bet info */
+    .ticket-middle {
+      flex: 1;
+      padding: 0 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .bet-pick {
+      font-size: 36px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .bet-odds {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Right section - amounts */
+    .ticket-right {
+      width: 280px;
+      height: 100%;
+      background: rgba(34, 197, 94, 0.15);
+      border-left: 2px dashed rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 25px;
+    }
+
+    .amounts {
+      text-align: center;
+    }
+
+    .bet-wager {
+      font-size: 16px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+
+    .bet-payout {
+      font-size: 46px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+      text-shadow: 0 0 20px rgba(34, 197, 94, 0.6);
+    }
+
+    .win-badge {
+      background: #22c55e;
+      color: white;
+      font-size: 18px;
+      font-weight: 800;
+      padding: 10px 16px;
+      border-radius: 8px;
+      letter-spacing: 2px;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 35px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .footer-logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    .footer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .website {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-title">Monday Night Football</div>
+      </div>
+
+      <!-- Chargers +2.5 -->
+      <div class="bet-card">
+        <div class="ticket-left">
+          <div class="team-logo">
+            <img src="logos/chargers.png" alt="Chargers">
+          </div>
+        </div>
+        <div class="ticket-middle">
+          <div class="bet-pick">Chargers +2.5</div>
+          <div class="bet-odds">+100</div>
+        </div>
+        <div class="ticket-right">
+          <div class="amounts">
+            <div class="bet-wager">RISKED $200</div>
+            <div class="bet-payout">+$200</div>
+          </div>
+          <div class="win-badge">WIN</div>
+        </div>
+      </div>
+
+      <!-- Under 41.5 -->
+      <div class="bet-card">
+        <div class="ticket-left">
+          <div class="team-logo">
+            <img src="logos/eagles.png" alt="Eagles">
+          </div>
+        </div>
+        <div class="ticket-middle">
+          <div class="bet-pick">Under 41.5</div>
+          <div class="bet-odds">-105</div>
+        </div>
+        <div class="ticket-right">
+          <div class="amounts">
+            <div class="bet-wager">RISKED $100</div>
+            <div class="bet-payout">+$95</div>
+          </div>
+          <div class="win-badge">WIN</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-logo">
+        <img src="logo.png" alt="DoG">
+      </div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

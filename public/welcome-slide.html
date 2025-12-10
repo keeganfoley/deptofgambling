@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to the Department of Gambling</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 20px 35px 20px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 80px; bottom: 80px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 10px; }
+    .side-bars.right { right: 10px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #22c55e; }
+    .side-bar.red { background: #ef4444; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* HEADER WITH SEAL */
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .seal {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 8px;
+    }
+    .seal img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 25px rgba(251, 191, 36, 0.5));
+    }
+
+    .title {
+      font-size: 68px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      color: #fbbf24;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .tagline {
+      font-size: 30px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+
+    /* INTRO TEXT */
+    .intro-box {
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(251, 191, 36, 0.4);
+      border-radius: 14px;
+      padding: 16px 28px;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .intro-text {
+      font-size: 28px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.4;
+    }
+    .intro-text strong {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+    .intro-text .green {
+      color: #22c55e;
+      font-weight: 700;
+    }
+
+    /* STARTING CAPITAL */
+    .capital-box {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border: 3px solid #fbbf24;
+      border-radius: 14px;
+      padding: 12px 60px;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .capital-label {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 2px;
+    }
+
+    .capital-value {
+      font-size: 78px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .section-title::before,
+    .section-title::after {
+      content: '';
+      height: 2px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5));
+    }
+    .section-title::after {
+      background: linear-gradient(90deg, rgba(251,191,36,0.5), transparent);
+    }
+    .section-title span {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    /* FUND GRID */
+    .fund-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .fund-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 25px 25px;
+      border: 3px solid;
+      display: flex;
+      flex-direction: column;
+    }
+    .fund-card.sharp { border-color: #22c55e; }
+    .fund-card.vector { border-color: #9ca3af; }
+    .fund-card.contra { border-color: #fb923c; }
+    .fund-card.catalyst { border-color: #c084fc; }
+
+    .fund-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+    }
+
+    .fund-logo {
+      width: 85px;
+      height: 85px;
+    }
+    .fund-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .fund-info {
+      flex: 1;
+    }
+
+    .fund-name {
+      font-size: 48px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    .fund-aum {
+      font-size: 42px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+    }
+
+    .fund-description {
+      font-size: 28px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.3;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    /* FOOTER */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .footer-logo {
+      width: 50px;
+      height: 50px;
+    }
+    .footer-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .website {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="seal">
+          <img src="logo.png" alt="Department of Gambling">
+        </div>
+        <div class="title">Department of Gambling</div>
+        <div class="tagline">A Sports Betting Hedge Fund</div>
+      </div>
+
+      <div class="intro-box">
+        <div class="intro-text">
+          We treat sports betting like Wall Street treats the market.<br>
+          <strong>4 specialized funds</strong>, each finding unique edges,<br>
+          all tracked with <span class="green">full transparency</span>.
+        </div>
+      </div>
+
+      <div class="capital-box">
+        <div class="capital-label">STARTING CAPITAL</div>
+        <div class="capital-value">$40,000</div>
+      </div>
+
+      <div class="section-title">
+        <span>THE FOUR FUNDS</span>
+      </div>
+
+      <div class="fund-grid">
+        <!-- SHARP FUND -->
+        <div class="fund-card sharp">
+          <div class="fund-header">
+            <div class="fund-logo">
+              <img src="logos/sharp-logo.png" alt="Sharp">
+            </div>
+            <div class="fund-info">
+              <div class="fund-name">Sharp</div>
+              <div class="fund-aum">$10,000</div>
+            </div>
+          </div>
+          <div class="fund-description">
+            Follows professional betting money and line moves
+          </div>
+        </div>
+
+        <!-- VECTOR FUND -->
+        <div class="fund-card vector">
+          <div class="fund-header">
+            <div class="fund-logo">
+              <img src="logos/vector-logo.png" alt="Vector">
+            </div>
+            <div class="fund-info">
+              <div class="fund-name">Vector</div>
+              <div class="fund-aum">$10,000</div>
+            </div>
+          </div>
+          <div class="fund-description">
+            AI-powered statistical models and predictions
+          </div>
+        </div>
+
+        <!-- CONTRA FUND -->
+        <div class="fund-card contra">
+          <div class="fund-header">
+            <div class="fund-logo">
+              <img src="logos/contra-logo.png" alt="Contra">
+            </div>
+            <div class="fund-info">
+              <div class="fund-name">Contra</div>
+              <div class="fund-aum">$10,000</div>
+            </div>
+          </div>
+          <div class="fund-description">
+            Fades heavy public action when sharps disagree
+          </div>
+        </div>
+
+        <!-- CATALYST FUND -->
+        <div class="fund-card catalyst">
+          <div class="fund-header">
+            <div class="fund-logo">
+              <img src="logos/catalyst-logo.png" alt="Catalyst">
+            </div>
+            <div class="fund-info">
+              <div class="fund-name">Catalyst</div>
+              <div class="fund-aum">$10,000</div>
+            </div>
+          </div>
+          <div class="fund-description">
+            Exploits rest, revenge, and travel edges
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-logo">
+          <img src="logo.png" alt="DoG">
+        </div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
