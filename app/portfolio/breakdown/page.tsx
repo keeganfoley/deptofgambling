@@ -53,6 +53,7 @@ export default function PortfolioBreakdownPage() {
     edgeValidation,
     evAnalysis,
     fundMetrics,
+    multiFundConsensus,
     daysGreenStreak,
   } = metricsData as any;
 
@@ -231,6 +232,91 @@ export default function PortfolioBreakdownPage() {
             ))}
           </div>
         </div>
+
+        {/* Multi-Fund Consensus - HERO SECTION */}
+        {multiFundConsensus && multiFundConsensus.totalPicks > 0 && (
+          <div className="mb-8 relative">
+            {/* Main Hero Card */}
+            <div className="stat-hero rounded-xl p-6 sm:p-8 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-accent opacity-100" />
+
+              {/* Decorative elements */}
+              <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-48 h-48 bg-success/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+
+              <div className="relative">
+                {/* Header */}
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+                  <div>
+                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 mb-3">
+                      <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-white/80">High Conviction Signal</span>
+                    </div>
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white uppercase tracking-wide">
+                      Multi-Fund Consensus
+                    </h2>
+                  </div>
+                  <div className="text-right">
+                    <div className="text-4xl sm:text-5xl font-bold text-accent mono-number">
+                      {multiFundConsensus.winRate}%
+                    </div>
+                    <div className="text-white/60 text-sm">win rate</div>
+                  </div>
+                </div>
+
+                {/* Key Message */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-5 mb-6 border border-white/10">
+                  <p className="text-white/90 text-sm sm:text-base leading-relaxed">
+                    <strong className="text-white">When 2+ funds independently identify the same pick, confidence increases significantly.</strong> Each fund uses different models and data — when they converge on the same opportunity, it validates the edge from multiple angles.
+                  </p>
+                </div>
+
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+                  <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-xl border border-white/10">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 font-medium mb-2">Record</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-white mono-number">
+                      {formatRecord(multiFundConsensus.wins, multiFundConsensus.losses)}
+                    </div>
+                    <div className="text-xs text-white/50 mt-1">
+                      {multiFundConsensus.totalPicks} total picks
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-xl border border-white/10">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 font-medium mb-2">vs Overall</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-accent mono-number">
+                      +{(Number(multiFundConsensus.winRate) - Number(portfolio.combined.winRate)).toFixed(0)}%
+                    </div>
+                    <div className="text-xs text-white/50 mt-1">
+                      above baseline
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-xl border border-white/10">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 font-medium mb-2">Net Profit</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-success mono-number">
+                      {formatCurrency(multiFundConsensus.pnl)}
+                    </div>
+                    <div className="text-xs text-white/50 mt-1">
+                      from consensus
+                    </div>
+                  </div>
+
+                  <div className="bg-white/10 backdrop-blur-sm p-4 sm:p-5 rounded-xl border border-white/10">
+                    <div className="text-[10px] sm:text-xs uppercase tracking-widest text-white/50 font-medium mb-2">ROI</div>
+                    <div className="text-2xl sm:text-3xl font-bold text-success mono-number">
+                      {formatPercent(multiFundConsensus.roi)}
+                    </div>
+                    <div className="text-xs text-white/50 mt-1">
+                      return on risk
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Rolling Performance */}
         <div className="stat-card p-6 sm:p-8 mb-8">

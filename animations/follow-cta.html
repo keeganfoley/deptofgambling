@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Follow CTA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 40%, #0d1117 0%, #050507 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(1.15);
+      transform-origin: center center;
+      outline: 2px solid rgba(255, 255, 255, 0.3);
+      outline-offset: -2px;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.5;
+    }
+
+    .glow-green {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    .handle-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 70px;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .platform-icon {
+      width: 90px;
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 22px;
+      font-size: 44px;
+    }
+
+    .handle {
+      font-family: 'Inter', sans-serif;
+      font-size: 96px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -2px;
+    }
+
+    .at-symbol {
+      color: #22c55e;
+    }
+
+    .socials-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 100px;
+    }
+
+    .social-badge {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 70px;
+      padding: 24px 48px;
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    .social-badge.right {
+      transform: translateX(30px);
+    }
+
+    .social-icon {
+      font-size: 42px;
+    }
+
+    .social-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .divider-line {
+      width: 600px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.5), transparent);
+      margin: 0 auto 80px;
+      opacity: 0;
+    }
+
+    .site-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+      opacity: 0;
+    }
+
+    .site-url {
+      font-family: 'Inter', sans-serif;
+      font-size: 88px;
+      font-weight: 800;
+      color: #22c55e;
+      letter-spacing: 2px;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.6);
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .site-tagline {
+      font-family: 'Inter', sans-serif;
+      font-size: 38px;
+      font-weight: 500;
+      color: #9ca3af;
+      margin-top: 40px;
+      opacity: 0;
+    }
+
+    .highlight {
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: rgba(34, 197, 94, 0.6);
+      border-radius: 50%;
+      animation: floatUp 4s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0; }
+      10% { opacity: 1; }
+      100% { transform: translateY(-400px) scale(0); opacity: 0; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 60px rgba(34, 197, 94, 0.5); }
+      50% { text-shadow: 0 0 100px rgba(34, 197, 94, 0.9), 0 0 150px rgba(34, 197, 94, 0.4); }
+    }
+
+    @keyframes borderGlow {
+      0%, 100% { border-color: rgba(34, 197, 94, 0.3); box-shadow: 0 0 20px rgba(34, 197, 94, 0.1); }
+      50% { border-color: rgba(34, 197, 94, 0.6); box-shadow: 0 0 40px rgba(34, 197, 94, 0.3); }
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #22c55e; color: #000; }
+    .reset-btn { background: #374151; color: #fff; }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="grid-bg"></div>
+    <div class="glow-green" style="top: 20%; left: 10%;"></div>
+    <div class="glow-green" style="top: 50%; right: 5%;"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="content">
+      <div class="tagline" id="tagline">Follow The Plays</div>
+
+      <div class="handle-row" id="handle-row">
+        <span class="handle"><span class="at-symbol">@</span>deptofgambling</span>
+      </div>
+
+      <div class="socials-row">
+        <div class="social-badge" id="social-1">
+          <span class="social-icon">📸</span>
+          <span class="social-text">Instagram</span>
+        </div>
+        <div class="social-badge right" id="social-2">
+          <span class="social-icon">𝕏</span>
+          <span class="social-text">Twitter</span>
+        </div>
+      </div>
+
+      <div class="divider-line" id="divider"></div>
+
+      <div class="site-label" id="site-label">Full Portfolio Breakdown</div>
+      <div class="site-url" id="site-url">deptofgambling.com</div>
+      <div class="site-tagline" id="site-tagline">Every bet. Every result. <span class="highlight">Full transparency.</span></div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0s</div>
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.15;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1200, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.15);
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+    }
+
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(80, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(35, audioCtx.currentTime + 0.25);
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.35);
+    }
+
+    function playPop() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(700, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(250, audioCtx.currentTime + 0.07);
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.07);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.07);
+    }
+
+    function playShimmer() {
+      [0, 50, 100, 150].forEach((delay, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(2000 + i * 300, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.1);
+        }, delay);
+      });
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        setTimeout(() => {
+          const p = document.createElement('div');
+          p.className = 'particle';
+          p.style.left = (30 + Math.random() * 40) + '%';
+          p.style.top = (60 + Math.random() * 20) + '%';
+          p.style.animationDelay = '0s';
+          container.appendChild(p);
+          setTimeout(() => p.remove(), 4000);
+        }, i * 150);
+      }
+    }
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `${elapsed.toFixed(1)}s`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Tagline drops in (0.2s)
+      timeouts.push(setTimeout(() => {
+        const tagline = document.getElementById('tagline');
+        tagline.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        tagline.style.opacity = '1';
+        tagline.style.transform = 'translateY(0)';
+        playWhoosh();
+      }, 200));
+
+      // Handle slams in (0.7s)
+      timeouts.push(setTimeout(() => {
+        const handle = document.getElementById('handle-row');
+        handle.style.transition = 'opacity 0.3s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        handle.style.opacity = '1';
+        handle.style.transform = 'scale(1)';
+        playImpact();
+        createParticles();
+      }, 700));
+
+      // Social badges slide in (1.3s)
+      timeouts.push(setTimeout(() => {
+        const social1 = document.getElementById('social-1');
+        social1.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        social1.style.opacity = '1';
+        social1.style.transform = 'translateX(0)';
+        playPop();
+      }, 1300));
+
+      timeouts.push(setTimeout(() => {
+        const social2 = document.getElementById('social-2');
+        social2.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        social2.style.opacity = '1';
+        social2.style.transform = 'translateX(0)';
+        playPop();
+      }, 1500));
+
+      // Divider line (1.9s)
+      timeouts.push(setTimeout(() => {
+        const divider = document.getElementById('divider');
+        divider.style.transition = 'opacity 0.5s';
+        divider.style.opacity = '1';
+      }, 1900));
+
+      // Site label (2.2s)
+      timeouts.push(setTimeout(() => {
+        const siteLabel = document.getElementById('site-label');
+        siteLabel.style.transition = 'opacity 0.4s';
+        siteLabel.style.opacity = '1';
+      }, 2200));
+
+      // Site URL pops (2.5s)
+      timeouts.push(setTimeout(() => {
+        const siteUrl = document.getElementById('site-url');
+        siteUrl.style.transition = 'opacity 0.3s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        siteUrl.style.opacity = '1';
+        siteUrl.style.transform = 'scale(1)';
+        playImpact();
+        playShimmer();
+      }, 2500));
+
+      // Site tagline (3s)
+      timeouts.push(setTimeout(() => {
+        const tagline = document.getElementById('site-tagline');
+        tagline.style.transition = 'opacity 0.4s';
+        tagline.style.opacity = '1';
+      }, 3000));
+
+      // Add pulsing glow (3.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('site-url').style.animation = 'pulse 2s ease-in-out infinite';
+        document.getElementById('social-1').style.animation = 'borderGlow 2s ease-in-out infinite';
+        document.getElementById('social-2').style.animation = 'borderGlow 2s ease-in-out infinite 0.5s';
+      }, 3500));
+
+      // Stop timer at 5s
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+      }, 5000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0s';
+      document.getElementById('particles').innerHTML = '';
+
+      document.getElementById('tagline').style.transition = 'none';
+      document.getElementById('tagline').style.opacity = '0';
+      document.getElementById('tagline').style.transform = 'translateY(-20px)';
+
+      document.getElementById('handle-row').style.transition = 'none';
+      document.getElementById('handle-row').style.opacity = '0';
+      document.getElementById('handle-row').style.transform = 'scale(0.8)';
+
+      document.getElementById('social-1').style.transition = 'none';
+      document.getElementById('social-1').style.opacity = '0';
+      document.getElementById('social-1').style.transform = 'translateX(-30px)';
+      document.getElementById('social-1').style.animation = 'none';
+
+      document.getElementById('social-2').style.transition = 'none';
+      document.getElementById('social-2').style.opacity = '0';
+      document.getElementById('social-2').style.transform = 'translateX(30px)';
+      document.getElementById('social-2').style.animation = 'none';
+
+      document.getElementById('divider').style.transition = 'none';
+      document.getElementById('divider').style.opacity = '0';
+
+      document.getElementById('site-label').style.transition = 'none';
+      document.getElementById('site-label').style.opacity = '0';
+
+      document.getElementById('site-url').style.transition = 'none';
+      document.getElementById('site-url').style.opacity = '0';
+      document.getElementById('site-url').style.transform = 'scale(0.9)';
+      document.getElementById('site-url').style.animation = 'none';
+
+      document.getElementById('site-tagline').style.transition = 'none';
+      document.getElementById('site-tagline').style.opacity = '0';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') resetAnimation();
+    });
+  </script>
+</body>
+</html>

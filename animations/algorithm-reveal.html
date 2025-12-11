@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algorithm Reveal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 30%, #080c10 0%, #020304 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.85);
+      transform-origin: center center;
+      outline: 2px solid rgba(255, 255, 255, 0.3);
+      outline-offset: -2px;
+    }
+
+    /* Matrix rain background */
+    .matrix-rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .matrix-column {
+      position: absolute;
+      top: -100%;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      color: #22c55e;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      line-height: 1.2;
+      opacity: 0.3;
+      animation: matrixFall linear infinite;
+      text-shadow: 0 0 10px #22c55e;
+    }
+
+    @keyframes matrixFall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(300%); }
+    }
+
+    /* Scan line */
+    .scan-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent 0%, #22c55e 50%, transparent 100%);
+      box-shadow: 0 0 30px #22c55e, 0 0 60px #22c55e;
+      opacity: 0;
+      z-index: 5;
+    }
+
+    /* Grid overlay */
+    .grid-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.4;
+      z-index: 2;
+    }
+
+    /* Data pillars */
+    .pillars-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 50px;
+      opacity: 0;
+      z-index: 15;
+    }
+
+    .pillar {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.03) 100%);
+      border: 2px solid rgba(34, 197, 94, 0.4);
+      border-radius: 20px;
+      padding: 35px 70px;
+      text-align: center;
+      opacity: 0;
+      transform: scale(0.9);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.15), transparent);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0% { left: -100%; }
+      100% { left: 100%; }
+    }
+
+    .pillar-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 34px;
+      font-weight: 700;
+      color: #22c55e;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      text-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    }
+
+    .pillar-connector {
+      width: 3px;
+      height: 30px;
+      background: linear-gradient(180deg, #22c55e, rgba(34, 197, 94, 0.2));
+      opacity: 0;
+      box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+    }
+
+    /* Data flow particles */
+    .data-particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #22c55e;
+      opacity: 0;
+    }
+
+    /* Feedback loop */
+    .feedback-loop {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+      z-index: 18;
+    }
+
+    .loop-circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 350px;
+      height: 350px;
+      border: 3px solid transparent;
+      border-top-color: #22c55e;
+      border-radius: 50%;
+      animation: spin 3s linear infinite;
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+    }
+
+    .loop-circle:nth-child(2) {
+      width: 280px;
+      height: 280px;
+      border-top-color: transparent;
+      border-right-color: #22c55e;
+      animation-direction: reverse;
+      animation-duration: 2s;
+    }
+
+    .loop-circle:nth-child(3) {
+      width: 210px;
+      height: 210px;
+      border-top-color: #22c55e;
+      animation-duration: 1.5s;
+    }
+
+    .loop-circle:nth-child(4) {
+      width: 140px;
+      height: 140px;
+      border-top-color: transparent;
+      border-left-color: #22c55e;
+      animation-direction: reverse;
+      animation-duration: 1s;
+    }
+
+    @keyframes spin {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .loop-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    .loop-icon {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .loop-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #22c55e;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    /* Training text */
+    .training-container {
+      position: absolute;
+      bottom: 350px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .training-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 52px;
+      font-weight: 600;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    .training-highlight {
+      color: #22c55e;
+      font-weight: 700;
+      text-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    }
+
+    /* Pulse ring */
+    .pulse-ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      border: 2px solid #22c55e;
+      border-radius: 50%;
+      opacity: 0;
+      z-index: 17;
+    }
+
+    @keyframes pulseExpand {
+      0% {
+        width: 100px;
+        height: 100px;
+        opacity: 0.8;
+        border-width: 3px;
+      }
+      100% {
+        width: 600px;
+        height: 600px;
+        opacity: 0;
+        border-width: 1px;
+      }
+    }
+
+    /* Glow */
+    .glow-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(60px);
+      opacity: 0;
+      z-index: 3;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .controls button:hover {
+      transform: scale(1.05);
+    }
+
+    .play-btn {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .reset-btn {
+      background: #374151;
+      color: #fff;
+    }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Background elements -->
+    <div class="grid-overlay"></div>
+    <div class="matrix-rain" id="matrix-rain"></div>
+    <div class="scan-line" id="scan-line"></div>
+    <div class="glow-center" id="glow-center"></div>
+
+    <!-- Pulse rings -->
+    <div class="pulse-ring" id="pulse-1"></div>
+    <div class="pulse-ring" id="pulse-2"></div>
+    <div class="pulse-ring" id="pulse-3"></div>
+
+    <!-- Data pillars -->
+    <div class="pillars-container" id="pillars-container">
+      <div class="pillar" id="pillar-1">
+        <div class="pillar-text">Line Movement</div>
+      </div>
+      <div class="pillar-connector" id="connector-1"></div>
+      <div class="pillar" id="pillar-2">
+        <div class="pillar-text">Market Inefficiencies</div>
+      </div>
+      <div class="pillar-connector" id="connector-2"></div>
+      <div class="pillar" id="pillar-3">
+        <div class="pillar-text">Historical Edges</div>
+      </div>
+    </div>
+
+    <!-- Feedback loop -->
+    <div class="feedback-loop" id="feedback-loop">
+      <div class="loop-circle"></div>
+      <div class="loop-circle"></div>
+      <div class="loop-circle"></div>
+      <div class="loop-circle"></div>
+      <div class="loop-center">
+        <div class="loop-icon">⚡</div>
+        <div class="loop-text">Processing</div>
+      </div>
+    </div>
+
+    <!-- Training container -->
+    <div class="training-container" id="training-container">
+      <div class="training-text">
+        Actively training <span class="training-highlight">every single day</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    // Audio context for sound effects
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playElectronicHum() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(80, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 2.5);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 2.5);
+    }
+
+    function playScanSound() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.linearRampToValueAtTime(1500, audioCtx.currentTime + 2);
+      gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 2);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 2);
+    }
+
+    function playDataBlip() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(1000 + Math.random() * 400, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.15);
+    }
+
+    function playLockSound() {
+      // Two-tone lock
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(800, audioCtx.currentTime);
+      gain1.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start();
+      osc1.stop(audioCtx.currentTime + 0.1);
+
+      setTimeout(() => {
+        const osc2 = audioCtx.createOscillator();
+        const gain2 = audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(1200, audioCtx.currentTime);
+        gain2.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+        osc2.connect(gain2);
+        gain2.connect(audioCtx.destination);
+        osc2.start();
+        osc2.stop(audioCtx.currentTime + 0.15);
+      }, 100);
+    }
+
+    function playProcessingHum() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.setValueAtTime(200, audioCtx.currentTime + 1);
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime + 2);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime + 3);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 4);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 4);
+    }
+
+    function playPulse() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(100, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(50, audioCtx.currentTime + 0.3);
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    }
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.25;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize) * 0.12;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2000, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.25);
+      noise.connect(filter);
+      filter.connect(audioCtx.destination);
+      noise.start();
+    }
+
+    // Create matrix rain
+    function createMatrixRain() {
+      const container = document.getElementById('matrix-rain');
+      const chars = '01アイウエオカキクケコ$%+-=<>{}[]';
+      for (let i = 0; i < 35; i++) {
+        const col = document.createElement('div');
+        col.className = 'matrix-column';
+        col.style.left = (i * 2.9) + '%';
+        col.style.animationDuration = (4 + Math.random() * 5) + 's';
+        col.style.animationDelay = Math.random() * 3 + 's';
+        col.style.opacity = 0.08 + Math.random() * 0.2;
+
+        let text = '';
+        for (let j = 0; j < 25; j++) {
+          text += chars[Math.floor(Math.random() * chars.length)] + ' ';
+        }
+        col.textContent = text;
+        container.appendChild(col);
+      }
+    }
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const secs = Math.floor(elapsed);
+      const ms = Math.floor((elapsed - secs) * 10);
+      document.getElementById('timer').textContent = `${secs}:${ms.toString().padStart(1, '0')}`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      createMatrixRain();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // 0s - Matrix rain fades in
+      timeouts.push(setTimeout(() => {
+        document.getElementById('matrix-rain').style.transition = 'opacity 1s';
+        document.getElementById('matrix-rain').style.opacity = '1';
+        document.getElementById('glow-center').style.transition = 'opacity 1.5s';
+        document.getElementById('glow-center').style.opacity = '1';
+        playElectronicHum();
+      }, 200));
+
+      // 1s - Scan line sweeps
+      timeouts.push(setTimeout(() => {
+        const scanLine = document.getElementById('scan-line');
+        scanLine.style.opacity = '1';
+        scanLine.style.transition = 'top 2s linear';
+        scanLine.style.top = '100%';
+        playScanSound();
+      }, 1000));
+
+      // 3s - Scan complete, show pillars container
+      timeouts.push(setTimeout(() => {
+        document.getElementById('matrix-rain').style.opacity = '0.15';
+        document.getElementById('scan-line').style.opacity = '0';
+
+        const pillarsContainer = document.getElementById('pillars-container');
+        pillarsContainer.style.transition = 'opacity 0.5s';
+        pillarsContainer.style.opacity = '1';
+      }, 3000));
+
+      // 3.5s - First pillar
+      timeouts.push(setTimeout(() => {
+        const pillar1 = document.getElementById('pillar-1');
+        pillar1.style.transition = 'opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        pillar1.style.opacity = '1';
+        pillar1.style.transform = 'scale(1)';
+        playDataBlip();
+      }, 3500));
+
+      // 4.2s - Connector 1
+      timeouts.push(setTimeout(() => {
+        const conn1 = document.getElementById('connector-1');
+        conn1.style.transition = 'opacity 0.4s';
+        conn1.style.opacity = '1';
+      }, 4200));
+
+      // 4.5s - Second pillar
+      timeouts.push(setTimeout(() => {
+        const pillar2 = document.getElementById('pillar-2');
+        pillar2.style.transition = 'opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        pillar2.style.opacity = '1';
+        pillar2.style.transform = 'scale(1)';
+        playDataBlip();
+      }, 4500));
+
+      // 5.2s - Connector 2
+      timeouts.push(setTimeout(() => {
+        const conn2 = document.getElementById('connector-2');
+        conn2.style.transition = 'opacity 0.4s';
+        conn2.style.opacity = '1';
+      }, 5200));
+
+      // 5.5s - Third pillar
+      timeouts.push(setTimeout(() => {
+        const pillar3 = document.getElementById('pillar-3');
+        pillar3.style.transition = 'opacity 0.5s ease-out, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        pillar3.style.opacity = '1';
+        pillar3.style.transform = 'scale(1)';
+        playDataBlip();
+        playLockSound();
+      }, 5500));
+
+      // 7s - Fade pillars, show feedback loop
+      timeouts.push(setTimeout(() => {
+        document.getElementById('pillars-container').style.transition = 'opacity 0.6s';
+        document.getElementById('pillars-container').style.opacity = '0';
+        playWhoosh();
+      }, 7000));
+
+      // 7.5s - Feedback loop appears
+      timeouts.push(setTimeout(() => {
+        const loop = document.getElementById('feedback-loop');
+        loop.style.transition = 'opacity 0.6s ease-out';
+        loop.style.opacity = '1';
+        playProcessingHum();
+
+        // Pulse rings
+        for (let i = 0; i < 3; i++) {
+          setTimeout(() => {
+            const pulse = document.getElementById(`pulse-${i + 1}`);
+            pulse.style.animation = 'pulseExpand 1.5s ease-out forwards';
+            playPulse();
+          }, i * 800);
+        }
+      }, 7500));
+
+      // 9s - Training text
+      timeouts.push(setTimeout(() => {
+        const training = document.getElementById('training-container');
+        training.style.transition = 'opacity 0.6s ease-out';
+        training.style.opacity = '1';
+      }, 9000));
+
+      // 12s - End
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+      }, 12000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0:0';
+
+      // Reset matrix
+      document.getElementById('matrix-rain').innerHTML = '';
+      document.getElementById('matrix-rain').style.transition = 'none';
+      document.getElementById('matrix-rain').style.opacity = '0';
+
+      // Reset scan line
+      const scanLine = document.getElementById('scan-line');
+      scanLine.style.transition = 'none';
+      scanLine.style.opacity = '0';
+      scanLine.style.top = '0';
+
+      // Reset glow
+      document.getElementById('glow-center').style.transition = 'none';
+      document.getElementById('glow-center').style.opacity = '0';
+
+      // Reset pillars
+      const pillarsContainer = document.getElementById('pillars-container');
+      pillarsContainer.style.transition = 'none';
+      pillarsContainer.style.opacity = '0';
+
+      ['pillar-1', 'pillar-2', 'pillar-3'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+        el.style.transform = 'scale(0.9)';
+      });
+
+      ['connector-1', 'connector-2'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+      });
+
+      // Reset pulse rings
+      ['pulse-1', 'pulse-2', 'pulse-3'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.animation = 'none';
+      });
+
+      // Reset feedback loop
+      document.getElementById('feedback-loop').style.transition = 'none';
+      document.getElementById('feedback-loop').style.opacity = '0';
+
+      // Reset training
+      document.getElementById('training-container').style.transition = 'none';
+      document.getElementById('training-container').style.opacity = '0';
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        startAnimation();
+      } else if (e.code === 'KeyR') {
+        resetAnimation();
+      }
+    });
+  </script>
+</body>
+</html>

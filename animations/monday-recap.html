@@ -1,0 +1,1218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monday Dec 8 Recap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 30%, #0d1117 0%, #050507 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(1.15);
+      transform-origin: center center;
+      outline: 2px solid rgba(255, 255, 255, 0.3);
+      outline-offset: -2px;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.5;
+    }
+
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(34, 197, 94, 0.5);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.3; }
+      50% { transform: translateY(-30px) translateX(15px); opacity: 0.6; }
+    }
+
+    .glow-green {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    /* ===== PHASE 1: DATE CARD ===== */
+    .date-card {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      text-align: center;
+      opacity: 0;
+      z-index: 20;
+    }
+
+    .date-day {
+      font-family: 'Inter', sans-serif;
+      font-size: 140px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: 12px;
+      text-transform: uppercase;
+    }
+
+    .date-full {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 8px;
+      margin-top: 15px;
+    }
+
+    .date-line {
+      width: 300px;
+      height: 5px;
+      background: linear-gradient(90deg, transparent, #22c55e, transparent);
+      margin: 40px auto;
+      opacity: 0;
+    }
+
+    .date-picks {
+      font-family: 'Inter', sans-serif;
+      font-size: 38px;
+      font-weight: 700;
+      color: #22c55e;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      opacity: 0;
+    }
+
+    /* ===== PHASE 2: SPORT BREAKDOWN ===== */
+    .sports-breakdown {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      gap: 30px;
+      opacity: 0;
+      z-index: 15;
+    }
+
+    .sport-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 24px;
+      padding: 40px 45px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(40px) scale(0.8);
+    }
+
+    .sport-icon {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 20px;
+      filter: brightness(1.2);
+    }
+
+    .sport-count {
+      font-family: 'Inter', sans-serif;
+      font-size: 56px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .sport-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    /* ===== PHASE 3: HEADER + PICKS ===== */
+    .day-header {
+      position: absolute;
+      top: 180px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .day-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+    }
+
+    .day-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 4px;
+      margin-top: 8px;
+    }
+
+    .stats-bar {
+      position: absolute;
+      top: 360px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 80px;
+      opacity: 0;
+      z-index: 10;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 72px;
+      font-weight: 800;
+      color: #22c55e;
+    }
+
+    .stat-value.record {
+      color: #ffffff;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-top: 6px;
+    }
+
+    .picks-container {
+      position: absolute;
+      top: 520px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 980px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      z-index: 10;
+    }
+
+    .pick-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.03) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 16px;
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      opacity: 0;
+      transform: translateX(-100px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pick-card.win {
+      border-color: rgba(34, 197, 94, 0.35);
+    }
+
+    .pick-card.win::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: #22c55e;
+      box-shadow: 0 0 20px #22c55e;
+    }
+
+    .pick-card.loss {
+      border-color: rgba(239, 68, 68, 0.35);
+    }
+
+    .pick-card.loss::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 5px;
+      background: #ef4444;
+      box-shadow: 0 0 20px #ef4444;
+    }
+
+    .pick-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 10px rgba(255,255,255,0.25));
+    }
+
+    .pick-info {
+      flex: 1;
+    }
+
+    .pick-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .pick-type {
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #6b7280;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 4px;
+    }
+
+    .pick-result {
+      text-align: right;
+    }
+
+    .pick-odds {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 18px;
+      font-weight: 600;
+      color: #9ca3af;
+    }
+
+    .pick-profit {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .pick-profit.win { color: #22c55e; }
+    .pick-profit.loss { color: #ef4444; }
+
+    /* ===== PHASE 4: SPOTLIGHT ===== */
+    .spotlight-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      opacity: 0;
+      z-index: 20;
+      pointer-events: none;
+    }
+
+    .chargers-spotlight {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      z-index: 30;
+      text-align: center;
+    }
+
+    .spotlight-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .matchup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      margin-bottom: 60px;
+    }
+
+    .matchup-logo {
+      width: 160px;
+      height: 160px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 35px rgba(255,255,255,0.35));
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .matchup-logo.left { transform: scale(0.5) translateX(-50px); }
+    .matchup-logo.right { transform: scale(0.5) translateX(50px); }
+
+    .matchup-vs {
+      font-family: 'Inter', sans-serif;
+      font-size: 42px;
+      font-weight: 300;
+      color: #4b5563;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .spotlight-bets {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-bottom: 50px;
+    }
+
+    .spotlight-bet {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.18) 0%, rgba(34, 197, 94, 0.06) 100%);
+      border: 1px solid rgba(34, 197, 94, 0.5);
+      border-radius: 16px;
+      padding: 24px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-width: 550px;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .spotlight-bet-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .spotlight-bet-profit {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+
+    .spotlight-check {
+      color: #22c55e;
+      font-size: 32px;
+      margin-left: 12px;
+    }
+
+    .spotlight-total {
+      margin-top: 40px;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .spotlight-total-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .spotlight-total-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 100px;
+      font-weight: 800;
+      color: #22c55e;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.7);
+    }
+
+    .spotlight-subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 500;
+      color: #9ca3af;
+      margin-top: 12px;
+    }
+
+    /* ===== PHASE 5: DAY SUMMARY ===== */
+    .day-summary {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      opacity: 0;
+      z-index: 35;
+    }
+
+    .summary-profit {
+      font-family: 'Inter', sans-serif;
+      font-size: 200px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 100px rgba(34, 197, 94, 0.7);
+      transform: scale(0.5);
+      opacity: 0;
+    }
+
+    .summary-record {
+      font-family: 'Inter', sans-serif;
+      font-size: 90px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .summary-day {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-top: 40px;
+      opacity: 0;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #22c55e; color: #000; }
+    .reset-btn { background: #374151; color: #fff; }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 80px rgba(34, 197, 94, 0.7); }
+      50% { text-shadow: 0 0 120px rgba(34, 197, 94, 1), 0 0 180px rgba(34, 197, 94, 0.6); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <div class="grid-bg"></div>
+    <div class="particles" id="particles"></div>
+    <div class="glow-green" style="top: 10%; left: 15%;"></div>
+    <div class="glow-green" style="top: 55%; right: 5%;"></div>
+
+    <!-- PHASE 1: Date Card -->
+    <div class="date-card" id="date-card">
+      <div class="date-day">MONDAY</div>
+      <div class="date-full">December 8, 2025</div>
+      <div class="date-line" id="date-line"></div>
+      <div class="date-picks" id="date-picks">8 PICKS</div>
+    </div>
+
+    <!-- PHASE 2: Sports Breakdown -->
+    <div class="sports-breakdown" id="sports-breakdown">
+      <div class="sport-card" id="sport-1">
+        <img src="../animations/logos/nhl.png" class="sport-icon" alt="NHL">
+        <div class="sport-count">3</div>
+        <div class="sport-name">Hockey</div>
+      </div>
+      <div class="sport-card" id="sport-2">
+        <img src="../animations/logos/nfl.png" class="sport-icon" alt="NFL">
+        <div class="sport-count">2</div>
+        <div class="sport-name">NFL</div>
+      </div>
+      <div class="sport-card" id="sport-3">
+        <img src="../animations/logos/ncaab.png" class="sport-icon" alt="NCAAB">
+        <div class="sport-count">2</div>
+        <div class="sport-name">NCAAB</div>
+      </div>
+      <div class="sport-card" id="sport-4">
+        <img src="../animations/logos/nba.png" class="sport-icon" alt="NBA">
+        <div class="sport-count">1</div>
+        <div class="sport-name">NBA</div>
+      </div>
+    </div>
+
+    <!-- PHASE 3: Header + Picks -->
+    <div class="day-header" id="day-header">
+      <div class="day-name">MONDAY</div>
+      <div class="day-date">DEC 8</div>
+    </div>
+
+    <div class="stats-bar" id="stats-bar">
+      <div class="stat">
+        <div class="stat-value record" id="record">7-1</div>
+        <div class="stat-label">Record</div>
+      </div>
+      <div class="stat">
+        <div class="stat-value" id="profit-counter">+$0</div>
+        <div class="stat-label">Profit</div>
+      </div>
+    </div>
+
+    <div class="picks-container" id="picks-container">
+      <div class="pick-card win" id="pick-0">
+        <img src="../public/logos/la-kings.png" class="pick-logo" alt="Kings">
+        <div class="pick-info">
+          <div class="pick-name">Kings ML</div>
+          <div class="pick-type">NHL</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-105</div>
+          <div class="pick-profit win">+$190</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-1">
+        <img src="../public/logos/chargers.png" class="pick-logo" alt="Chargers">
+        <div class="pick-info">
+          <div class="pick-name">Chargers +2.5</div>
+          <div class="pick-type">NFL • MNF</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">+100</div>
+          <div class="pick-profit win">+$200</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-2">
+        <img src="../public/logos/pelicans.png" class="pick-logo" alt="Pelicans">
+        <div class="pick-info">
+          <div class="pick-name">Pelicans +9.5</div>
+          <div class="pick-type">NBA</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-112</div>
+          <div class="pick-profit win">+$134</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-3">
+        <img src="../public/logos/grambling.png" class="pick-logo" alt="Grambling">
+        <div class="pick-info">
+          <div class="pick-name">Grambling St +8.5</div>
+          <div class="pick-type">NCAAB</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-105</div>
+          <div class="pick-profit win">+$95</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-4">
+        <img src="../public/logos/grambling.png" class="pick-logo" alt="Grambling">
+        <div class="pick-info">
+          <div class="pick-name">Grambling St +8.5</div>
+          <div class="pick-type">NCAAB • 2x</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-105</div>
+          <div class="pick-profit win">+$95</div>
+        </div>
+      </div>
+      <div class="pick-card loss" id="pick-5">
+        <img src="../public/logos/sabres.png" class="pick-logo" alt="Sabres">
+        <div class="pick-info">
+          <div class="pick-name">Sabres ML</div>
+          <div class="pick-type">NHL</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-105</div>
+          <div class="pick-profit loss">-$100</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-6">
+        <img src="../public/logos/wild.png" class="pick-logo" alt="Wild">
+        <div class="pick-info">
+          <div class="pick-name">Wild ML</div>
+          <div class="pick-type">NHL</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-134</div>
+          <div class="pick-profit win">+$112</div>
+        </div>
+      </div>
+      <div class="pick-card win" id="pick-7">
+        <img src="../public/logos/eagles.png" class="pick-logo" alt="Eagles">
+        <div class="pick-info">
+          <div class="pick-name">Under 41.5</div>
+          <div class="pick-type">NFL • MNF</div>
+        </div>
+        <div class="pick-result">
+          <div class="pick-odds">-105</div>
+          <div class="pick-profit win">+$95</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE 4: Spotlight -->
+    <div class="spotlight-overlay" id="spotlight-overlay"></div>
+    <div class="chargers-spotlight" id="chargers-spotlight">
+      <div class="spotlight-title" id="spotlight-title">Monday Night Football</div>
+      <div class="matchup">
+        <img src="../public/logos/chargers.png" class="matchup-logo left" id="logo-left" alt="Chargers">
+        <div class="matchup-vs" id="matchup-vs">VS</div>
+        <img src="../public/logos/eagles.png" class="matchup-logo right" id="logo-right" alt="Eagles">
+      </div>
+      <div class="spotlight-bets">
+        <div class="spotlight-bet" id="bet-1">
+          <span class="spotlight-bet-name">Chargers +2.5</span>
+          <span><span class="spotlight-bet-profit">+$200</span><span class="spotlight-check">✓</span></span>
+        </div>
+        <div class="spotlight-bet" id="bet-2">
+          <span class="spotlight-bet-name">Under 41.5</span>
+          <span><span class="spotlight-bet-profit">+$95</span><span class="spotlight-check">✓</span></span>
+        </div>
+      </div>
+      <div class="spotlight-total" id="spotlight-total">
+        <div class="spotlight-total-label">From One Game</div>
+        <div class="spotlight-total-value" id="spotlight-profit">$0</div>
+        <div class="spotlight-subtitle">Both cashed</div>
+      </div>
+    </div>
+
+    <!-- PHASE 5: Day Summary -->
+    <div class="day-summary" id="day-summary">
+      <div class="summary-profit" id="summary-profit">+$0</div>
+      <div class="summary-record" id="summary-record">7-1</div>
+      <div class="summary-day" id="summary-day">Good Monday</div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playBassHit() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(55, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(28, audioCtx.currentTime + 0.25);
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.35);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.35);
+    }
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.15;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        data[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize);
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'bandpass';
+      filter.frequency.setValueAtTime(1000, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.15);
+      const gain = audioCtx.createGain();
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+      noise.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+      noise.start();
+    }
+
+    function playDing() {
+      const osc = audioCtx.createOscillator();
+      const osc2 = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc2.type = 'sine';
+      osc.frequency.setValueAtTime(1400, audioCtx.currentTime);
+      osc2.frequency.setValueAtTime(1800, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+      osc.connect(gain);
+      osc2.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc2.start();
+      osc.stop(audioCtx.currentTime + 0.4);
+      osc2.stop(audioCtx.currentTime + 0.4);
+    }
+
+    function playLoss() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(250, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(80, audioCtx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playChaChing() {
+      [0, 80, 160].forEach((delay, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(1600 + i * 400, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.15);
+        }, delay);
+      });
+    }
+
+    function playPop() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.08);
+    }
+
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(80, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.3);
+      gain.gain.setValueAtTime(0.6, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.4);
+      // Add click
+      const click = audioCtx.createOscillator();
+      const clickGain = audioCtx.createGain();
+      click.type = 'square';
+      click.frequency.setValueAtTime(100, audioCtx.currentTime);
+      clickGain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+      clickGain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.05);
+      click.connect(clickGain);
+      clickGain.connect(audioCtx.destination);
+      click.start();
+      click.stop(audioCtx.currentTime + 0.05);
+    }
+
+    function playCountTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(1200, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.05, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.03);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.03);
+    }
+
+    function playRiser() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(200, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.5);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.08, audioCtx.currentTime + 0.4);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.5);
+    }
+
+    function animateCounter(element, start, end, duration, prefix = '+$') {
+      const startTime = performance.now();
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (end - start) * eased);
+        element.textContent = prefix + current;
+        if (progress < 1) {
+          if (Math.random() < 0.3) playCountTick();
+          requestAnimationFrame(update);
+        }
+      };
+      requestAnimationFrame(update);
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.animationDelay = Math.random() * 6 + 's';
+        container.appendChild(p);
+      }
+    }
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `${Math.floor(elapsed)}s`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      createParticles();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // PHASE 1: Date Card (0-2.5s)
+      timeouts.push(setTimeout(() => {
+        const dateCard = document.getElementById('date-card');
+        dateCard.style.transition = 'opacity 0.4s, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        dateCard.style.opacity = '1';
+        dateCard.style.transform = 'translate(-50%, -50%) scale(1)';
+        playImpact();
+      }, 200));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('date-line').style.transition = 'opacity 0.4s';
+        document.getElementById('date-line').style.opacity = '1';
+      }, 700));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('date-picks').style.transition = 'opacity 0.4s';
+        document.getElementById('date-picks').style.opacity = '1';
+        playDing();
+      }, 1100));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('date-card').style.opacity = '0';
+      }, 2300));
+
+      // PHASE 2: Sports Breakdown (2.5-4.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('sports-breakdown').style.transition = 'opacity 0.3s';
+        document.getElementById('sports-breakdown').style.opacity = '1';
+      }, 2500));
+
+      const sports = ['sport-1', 'sport-2', 'sport-3', 'sport-4'];
+      sports.forEach((id, i) => {
+        timeouts.push(setTimeout(() => {
+          const el = document.getElementById(id);
+          el.style.transition = 'opacity 0.3s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0) scale(1)';
+          playPop();
+        }, 2650 + i * 180));
+      });
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('sports-breakdown').style.opacity = '0';
+      }, 4300));
+
+      // PHASE 3: Header + Picks (4.5-9.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('day-header').style.transition = 'opacity 0.4s';
+        document.getElementById('day-header').style.opacity = '1';
+        document.getElementById('stats-bar').style.transition = 'opacity 0.4s';
+        document.getElementById('stats-bar').style.opacity = '1';
+        playBassHit();
+        // Start counter
+        animateCounter(document.getElementById('profit-counter'), 0, 822, 1500);
+      }, 4500));
+
+      const picks = document.querySelectorAll('.pick-card');
+      picks.forEach((pick, i) => {
+        timeouts.push(setTimeout(() => {
+          pick.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+          pick.style.opacity = '1';
+          pick.style.transform = 'translateX(0)';
+          if (pick.classList.contains('loss')) playLoss();
+          else playWhoosh();
+        }, 5000 + i * 260));
+      });
+
+      // PHASE 4: Spotlight (9.5-13.5s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('spotlight-overlay').style.transition = 'opacity 0.6s';
+        document.getElementById('spotlight-overlay').style.opacity = '1';
+        document.getElementById('day-header').style.opacity = '0';
+        document.getElementById('stats-bar').style.opacity = '0';
+        picks.forEach(p => { p.style.opacity = '0'; });
+        playRiser();
+      }, 9500));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('chargers-spotlight').style.opacity = '1';
+      }, 9800));
+
+      // Staggered spotlight elements
+      timeouts.push(setTimeout(() => {
+        const title = document.getElementById('spotlight-title');
+        title.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        title.style.opacity = '1';
+        title.style.transform = 'translateY(0)';
+      }, 10000));
+
+      timeouts.push(setTimeout(() => {
+        const left = document.getElementById('logo-left');
+        left.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        left.style.opacity = '1';
+        left.style.transform = 'scale(1) translateX(0)';
+        playImpact();
+      }, 10200));
+
+      timeouts.push(setTimeout(() => {
+        const vs = document.getElementById('matchup-vs');
+        vs.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        vs.style.opacity = '1';
+        vs.style.transform = 'scale(1)';
+        playPop();
+      }, 10400));
+
+      timeouts.push(setTimeout(() => {
+        const right = document.getElementById('logo-right');
+        right.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        right.style.opacity = '1';
+        right.style.transform = 'scale(1) translateX(0)';
+        playImpact();
+      }, 10600));
+
+      timeouts.push(setTimeout(() => {
+        const bet1 = document.getElementById('bet-1');
+        bet1.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        bet1.style.opacity = '1';
+        bet1.style.transform = 'translateY(0)';
+        playWhoosh();
+      }, 10900));
+
+      timeouts.push(setTimeout(() => {
+        const bet2 = document.getElementById('bet-2');
+        bet2.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        bet2.style.opacity = '1';
+        bet2.style.transform = 'translateY(0)';
+        playWhoosh();
+      }, 11100));
+
+      timeouts.push(setTimeout(() => {
+        const total = document.getElementById('spotlight-total');
+        total.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        total.style.opacity = '1';
+        total.style.transform = 'scale(1)';
+        animateCounter(document.getElementById('spotlight-profit'), 0, 295, 800, '$');
+        playChaChing();
+      }, 11400));
+
+      // PHASE 5: Day Summary (13.5-16s)
+      timeouts.push(setTimeout(() => {
+        document.getElementById('spotlight-overlay').style.opacity = '0';
+        document.getElementById('chargers-spotlight').style.opacity = '0';
+      }, 13500));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('day-summary').style.opacity = '1';
+        const profit = document.getElementById('summary-profit');
+        profit.style.transition = 'opacity 0.5s, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        profit.style.opacity = '1';
+        profit.style.transform = 'scale(1)';
+        animateCounter(profit, 0, 822, 1000);
+        playImpact();
+      }, 13800));
+
+      timeouts.push(setTimeout(() => {
+        const record = document.getElementById('summary-record');
+        record.style.transition = 'opacity 0.4s, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        record.style.opacity = '1';
+        record.style.transform = 'translateY(0)';
+        playPop();
+      }, 14300));
+
+      timeouts.push(setTimeout(() => {
+        const day = document.getElementById('summary-day');
+        day.style.transition = 'opacity 0.4s';
+        day.style.opacity = '1';
+        playChaChing();
+      }, 14600));
+
+      timeouts.push(setTimeout(() => {
+        document.getElementById('summary-profit').style.animation = 'pulse 2s ease-in-out infinite';
+      }, 15000));
+
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+      }, 16000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0s';
+      document.getElementById('particles').innerHTML = '';
+
+      const dateCard = document.getElementById('date-card');
+      dateCard.style.transition = 'none';
+      dateCard.style.opacity = '0';
+      dateCard.style.transform = 'translate(-50%, -50%) scale(0.9)';
+      document.getElementById('date-line').style.transition = 'none';
+      document.getElementById('date-line').style.opacity = '0';
+      document.getElementById('date-picks').style.transition = 'none';
+      document.getElementById('date-picks').style.opacity = '0';
+
+      document.getElementById('sports-breakdown').style.transition = 'none';
+      document.getElementById('sports-breakdown').style.opacity = '0';
+      ['sport-1','sport-2','sport-3','sport-4'].forEach(id => {
+        const el = document.getElementById(id);
+        el.style.transition = 'none';
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(40px) scale(0.8)';
+      });
+
+      document.getElementById('day-header').style.transition = 'none';
+      document.getElementById('day-header').style.opacity = '0';
+      document.getElementById('stats-bar').style.transition = 'none';
+      document.getElementById('stats-bar').style.opacity = '0';
+      document.getElementById('profit-counter').textContent = '+$0';
+
+      document.querySelectorAll('.pick-card').forEach(p => {
+        p.style.transition = 'none';
+        p.style.opacity = '0';
+        p.style.transform = 'translateX(-100px)';
+      });
+
+      document.getElementById('spotlight-overlay').style.transition = 'none';
+      document.getElementById('spotlight-overlay').style.opacity = '0';
+      document.getElementById('chargers-spotlight').style.opacity = '0';
+      document.getElementById('spotlight-title').style.transition = 'none';
+      document.getElementById('spotlight-title').style.opacity = '0';
+      document.getElementById('spotlight-title').style.transform = 'translateY(-30px)';
+      document.getElementById('logo-left').style.transition = 'none';
+      document.getElementById('logo-left').style.opacity = '0';
+      document.getElementById('logo-left').style.transform = 'scale(0.5) translateX(-50px)';
+      document.getElementById('logo-right').style.transition = 'none';
+      document.getElementById('logo-right').style.opacity = '0';
+      document.getElementById('logo-right').style.transform = 'scale(0.5) translateX(50px)';
+      document.getElementById('matchup-vs').style.transition = 'none';
+      document.getElementById('matchup-vs').style.opacity = '0';
+      document.getElementById('matchup-vs').style.transform = 'scale(0)';
+      document.getElementById('bet-1').style.transition = 'none';
+      document.getElementById('bet-1').style.opacity = '0';
+      document.getElementById('bet-1').style.transform = 'translateY(30px)';
+      document.getElementById('bet-2').style.transition = 'none';
+      document.getElementById('bet-2').style.opacity = '0';
+      document.getElementById('bet-2').style.transform = 'translateY(30px)';
+      document.getElementById('spotlight-total').style.transition = 'none';
+      document.getElementById('spotlight-total').style.opacity = '0';
+      document.getElementById('spotlight-total').style.transform = 'scale(0.8)';
+      document.getElementById('spotlight-profit').textContent = '$0';
+
+      document.getElementById('day-summary').style.opacity = '0';
+      const summaryProfit = document.getElementById('summary-profit');
+      summaryProfit.style.transition = 'none';
+      summaryProfit.style.opacity = '0';
+      summaryProfit.style.transform = 'scale(0.5)';
+      summaryProfit.style.animation = 'none';
+      summaryProfit.textContent = '+$0';
+      document.getElementById('summary-record').style.transition = 'none';
+      document.getElementById('summary-record').style.opacity = '0';
+      document.getElementById('summary-record').style.transform = 'translateY(20px)';
+      document.getElementById('summary-day').style.transition = 'none';
+      document.getElementById('summary-day').style.opacity = '0';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') resetAnimation();
+    });
+  </script>
+</body>
+</html>

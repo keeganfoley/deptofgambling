@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two-Day Summary - Dec 8-9</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: radial-gradient(ellipse at 50% 30%, #0d1117 0%, #050507 100%);
+      position: relative;
+      overflow: hidden;
+      transform: scale(0.85);
+      transform-origin: center center;
+      outline: 2px solid rgba(255, 255, 255, 0.3);
+      outline-offset: -2px;
+    }
+
+    /* Ambient grid */
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      opacity: 0.5;
+    }
+
+    /* Floating particles */
+    .particles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: rgba(34, 197, 94, 0.4);
+      border-radius: 50%;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+      50% { transform: translateY(-20px) translateX(10px); opacity: 0.5; }
+    }
+
+    /* Glow effects */
+    .glow-green {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      z-index: 1;
+    }
+
+    /* Main content */
+    .main-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      z-index: 10;
+    }
+
+    /* Header */
+    .header {
+      opacity: 0;
+      margin-bottom: 60px;
+    }
+
+    .header-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .header-days {
+      font-family: 'Inter', sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 4px;
+    }
+
+    .header-date {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    /* Big profit number */
+    .profit-display {
+      opacity: 0;
+      margin-bottom: 50px;
+    }
+
+    .profit-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 160px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.6);
+    }
+
+    .profit-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 8px;
+      text-transform: uppercase;
+      margin-top: 16px;
+    }
+
+    /* Record display */
+    .record-display {
+      opacity: 0;
+      margin-bottom: 60px;
+    }
+
+    .record-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 120px;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .record-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-top: 12px;
+    }
+
+    /* Win rate bar */
+    .winrate-container {
+      opacity: 0;
+      margin-bottom: 60px;
+    }
+
+    .winrate-bar {
+      width: 600px;
+      height: 16px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .winrate-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #22c55e 0%, #4ade80 100%);
+      border-radius: 8px;
+      transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.5);
+    }
+
+    .winrate-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #22c55e;
+      margin-top: 20px;
+    }
+
+    .winrate-sublabel {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #6b7280;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    /* Day breakdown */
+    .day-breakdown {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      opacity: 0;
+    }
+
+    .day-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 30px 50px;
+      text-align: center;
+    }
+
+    .day-card-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #9ca3af;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .day-card-record {
+      font-family: 'Inter', sans-serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+
+    .day-card-profit {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+
+    /* Confetti */
+    .confetti-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 50;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
+
+    @keyframes confettiFall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(2000px) rotate(720deg); opacity: 0; }
+    }
+
+    /* Flash */
+    .flash {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #22c55e;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0; }
+      20% { opacity: 0.4; }
+      100% { opacity: 0; }
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .controls button:hover {
+      transform: scale(1.05);
+    }
+
+    .play-btn {
+      background: #22c55e;
+      color: #000;
+    }
+
+    .reset-btn {
+      background: #374151;
+      color: #fff;
+    }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    /* Pulse animation */
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 80px rgba(34, 197, 94, 0.6);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 120px rgba(34, 197, 94, 0.9), 0 0 160px rgba(34, 197, 94, 0.5);
+        transform: scale(1.02);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Background elements -->
+    <div class="grid-bg"></div>
+    <div class="particles" id="particles"></div>
+    <div class="glow-green" style="top: 20%; left: 30%;"></div>
+    <div class="glow-green" style="top: 50%; right: 20%;"></div>
+    <div class="flash" id="flash"></div>
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <!-- Header -->
+      <div class="header" id="header">
+        <div class="header-label">Two-Day Total</div>
+        <div class="header-days">MONDAY + TUESDAY</div>
+        <div class="header-date">December 8-9</div>
+      </div>
+
+      <!-- Big profit -->
+      <div class="profit-display" id="profit-display">
+        <div class="profit-number" id="profit-number">$1,262</div>
+        <div class="profit-label">Total Profit</div>
+      </div>
+
+      <!-- Record -->
+      <div class="record-display" id="record-display">
+        <div class="record-number" id="record-number">13-3</div>
+        <div class="record-label">Combined Record</div>
+      </div>
+
+      <!-- Win rate -->
+      <div class="winrate-container" id="winrate-container">
+        <div class="winrate-bar">
+          <div class="winrate-fill" id="winrate-fill"></div>
+        </div>
+        <div class="winrate-label" id="winrate-label">81%</div>
+        <div class="winrate-sublabel">Win Rate</div>
+      </div>
+
+      <!-- Day breakdown -->
+      <div class="day-breakdown" id="day-breakdown">
+        <div class="day-card">
+          <div class="day-card-name">Monday</div>
+          <div class="day-card-record">7-1</div>
+          <div class="day-card-profit">+$822</div>
+        </div>
+        <div class="day-card">
+          <div class="day-card-name">Tuesday</div>
+          <div class="day-card-record">6-2</div>
+          <div class="day-card-profit">+$441</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0:00</div>
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    // Audio context for sound effects
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playBassHit() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(60, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.4, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.3);
+    }
+
+    function playBigBass() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(50, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(25, audioCtx.currentTime + 0.4);
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.5);
+    }
+
+    function playRiser() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(600, audioCtx.currentTime + 0.8);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.06, audioCtx.currentTime + 0.7);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.8);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.8);
+    }
+
+    function playChaChing() {
+      const osc1 = audioCtx.createOscillator();
+      const gain1 = audioCtx.createGain();
+      osc1.type = 'triangle';
+      osc1.frequency.setValueAtTime(1800, audioCtx.currentTime);
+      gain1.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+      osc1.connect(gain1);
+      gain1.connect(audioCtx.destination);
+      osc1.start();
+      osc1.stop(audioCtx.currentTime + 0.1);
+
+      setTimeout(() => {
+        const osc2 = audioCtx.createOscillator();
+        const gain2 = audioCtx.createGain();
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(2400, audioCtx.currentTime);
+        gain2.gain.setValueAtTime(0.12, audioCtx.currentTime);
+        gain2.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.5);
+        osc2.connect(gain2);
+        gain2.connect(audioCtx.destination);
+        osc2.start();
+        osc2.stop(audioCtx.currentTime + 0.5);
+
+        // Extra shimmer
+        const osc3 = audioCtx.createOscillator();
+        const gain3 = audioCtx.createGain();
+        osc3.type = 'sine';
+        osc3.frequency.setValueAtTime(3600, audioCtx.currentTime);
+        gain3.gain.setValueAtTime(0.05, audioCtx.currentTime);
+        gain3.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+        osc3.connect(gain3);
+        gain3.connect(audioCtx.destination);
+        osc3.start();
+        osc3.stop(audioCtx.currentTime + 0.3);
+      }, 120);
+    }
+
+    function playWhoosh() {
+      const bufferSize = audioCtx.sampleRate * 0.2;
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const output = buffer.getChannelData(0);
+      for (let i = 0; i < bufferSize; i++) {
+        output[i] = (Math.random() * 2 - 1) * (1 - i / bufferSize) * 0.15;
+      }
+      const noise = audioCtx.createBufferSource();
+      noise.buffer = buffer;
+      const filter = audioCtx.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(3000, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(300, audioCtx.currentTime + 0.2);
+      noise.connect(filter);
+      filter.connect(audioCtx.destination);
+      noise.start();
+    }
+
+    function playCountTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600 + Math.random() * 200, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.03, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.03);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.03);
+    }
+
+    // Create particles
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 25; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.top = Math.random() * 100 + '%';
+        p.style.animationDelay = Math.random() * 6 + 's';
+        container.appendChild(p);
+      }
+    }
+
+    function createConfetti() {
+      const container = document.getElementById('confetti-container');
+      const colors = ['#22c55e', '#4ade80', '#86efac', '#ffffff', '#fbbf24'];
+      for (let i = 0; i < 80; i++) {
+        const c = document.createElement('div');
+        c.className = 'confetti';
+        c.style.left = Math.random() * 100 + '%';
+        c.style.top = '-20px';
+        c.style.background = colors[Math.floor(Math.random() * colors.length)];
+        c.style.width = (8 + Math.random() * 10) + 'px';
+        c.style.height = (8 + Math.random() * 10) + 'px';
+        c.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+        c.style.animation = `confettiFall ${2 + Math.random() * 2}s ease-out forwards`;
+        c.style.animationDelay = Math.random() * 0.5 + 's';
+        container.appendChild(c);
+      }
+    }
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      const secs = Math.floor(elapsed);
+      const ms = Math.floor((elapsed - secs) * 10);
+      document.getElementById('timer').textContent = `${secs}:${ms.toString().padStart(1, '0')}`;
+    }
+
+    function animateCounter(element, target, duration, prefix = '', suffix = '') {
+      const start = 0;
+      const startTime = performance.now();
+      let lastTick = 0;
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(start + (target - start) * eased);
+        element.textContent = prefix + current.toLocaleString() + suffix;
+
+        // Play tick sound every ~5%
+        if (Math.floor(progress * 20) > lastTick) {
+          lastTick = Math.floor(progress * 20);
+          playCountTick();
+        }
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        }
+      }
+      requestAnimationFrame(update);
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      createParticles();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // 0.2s - Header appears
+      timeouts.push(setTimeout(() => {
+        const header = document.getElementById('header');
+        header.style.transition = 'opacity 0.5s ease-out';
+        header.style.opacity = '1';
+        playBassHit();
+      }, 200));
+
+      // 1.5s - Profit number explodes in
+      timeouts.push(setTimeout(() => {
+        const profitDisplay = document.getElementById('profit-display');
+        profitDisplay.style.transition = 'opacity 0.4s ease-out, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1)';
+        profitDisplay.style.opacity = '1';
+        profitDisplay.style.transform = 'scale(1)';
+
+        document.getElementById('flash').style.animation = 'flashBang 0.4s ease-out forwards';
+        playBigBass();
+        playChaChing();
+        createConfetti();
+
+        // Counter animation
+        animateCounter(document.getElementById('profit-number'), 1262, 1200, '$');
+      }, 1500));
+
+      // 3s - Profit pulses
+      timeouts.push(setTimeout(() => {
+        document.getElementById('profit-number').style.animation = 'pulse 2s ease-in-out infinite';
+      }, 3000));
+
+      // 3.5s - Record appears
+      timeouts.push(setTimeout(() => {
+        const recordDisplay = document.getElementById('record-display');
+        recordDisplay.style.transition = 'opacity 0.4s ease-out';
+        recordDisplay.style.opacity = '1';
+        playWhoosh();
+      }, 3500));
+
+      // 4.5s - Win rate bar
+      timeouts.push(setTimeout(() => {
+        const winrateContainer = document.getElementById('winrate-container');
+        winrateContainer.style.transition = 'opacity 0.4s ease-out';
+        winrateContainer.style.opacity = '1';
+        playRiser();
+
+        setTimeout(() => {
+          document.getElementById('winrate-fill').style.width = '81%';
+        }, 200);
+      }, 4500));
+
+      // 6s - Day breakdown
+      timeouts.push(setTimeout(() => {
+        const dayBreakdown = document.getElementById('day-breakdown');
+        dayBreakdown.style.transition = 'opacity 0.5s ease-out';
+        dayBreakdown.style.opacity = '1';
+        playWhoosh();
+      }, 6000));
+
+      // 10s - End
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+      }, 10000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0:0';
+      document.getElementById('particles').innerHTML = '';
+      document.getElementById('confetti-container').innerHTML = '';
+
+      // Reset header
+      document.getElementById('header').style.transition = 'none';
+      document.getElementById('header').style.opacity = '0';
+
+      // Reset profit
+      const profitDisplay = document.getElementById('profit-display');
+      profitDisplay.style.transition = 'none';
+      profitDisplay.style.opacity = '0';
+      profitDisplay.style.transform = 'scale(0.8)';
+      document.getElementById('profit-number').textContent = '$1,262';
+      document.getElementById('profit-number').style.animation = 'none';
+
+      // Reset record
+      document.getElementById('record-display').style.transition = 'none';
+      document.getElementById('record-display').style.opacity = '0';
+
+      // Reset win rate
+      document.getElementById('winrate-container').style.transition = 'none';
+      document.getElementById('winrate-container').style.opacity = '0';
+      document.getElementById('winrate-fill').style.width = '0%';
+
+      // Reset day breakdown
+      document.getElementById('day-breakdown').style.transition = 'none';
+      document.getElementById('day-breakdown').style.opacity = '0';
+
+      // Reset flash
+      document.getElementById('flash').style.animation = 'none';
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        startAnimation();
+      } else if (e.code === 'KeyR') {
+        resetAnimation();
+      }
+    });
+  </script>
+</body>
+</html>

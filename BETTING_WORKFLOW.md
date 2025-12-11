@@ -912,15 +912,25 @@ GAMES: [EARLIEST DATE] - [LATEST DATE]
 
 | # | Slide | Template | Output |
 |---|-------|----------|--------|
-| 1 | **Daily Report** | `daily-report-master-template.html` | `social-images/YYYY-MM-DD/daily-report.png` |
-| 2 | **Picks Results** | `picks-results-master-template.html` | `social-images/YYYY-MM-DD/picks-results.png` |
-| 3 | **Portfolio Chart** | `portfolio-chart-master-template.html` | `social-images/YYYY-MM-DD/portfolio-chart.png` |
-| 4 | **Story (Cumulative)** | Script: `generate-cumulative-candles.ts` | `daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png` |
+| 1 | **Daily Report** | `daily-report-master-template.html` | `social-images/YYYY-MM-DD/1-daily-report.png` |
+| 2 | **Picks Results** | `picks-results-master-template.html` | `social-images/YYYY-MM-DD/2-picks-results.png` |
+| 3 | **Portfolio Chart** | `portfolio-chart-master-template.html` | `social-images/YYYY-MM-DD/3-portfolio-chart.png` |
+| 4 | **Story (Cumulative)** | Script: `generate-cumulative-candles.ts` | `social-images/YYYY-MM-DD/story-dayXX.png` |
+
+**FOLDER STRUCTURE (ALWAYS USE THIS):**
+```
+social-images/
+└── YYYY-MM-DD/
+    ├── 1-daily-report.png      ← Slide 1 (post first)
+    ├── 2-picks-results.png     ← Slide 2
+    ├── 3-portfolio-chart.png   ← Slide 3
+    └── story-dayXX.png         ← Instagram Story
+```
 
 **Day Numbering:**
 - Day 1 = Nov 4, 2025 (portfolio start)
-- Day 36 = Dec 9, 2025
-- Tomorrow = Day 37, etc.
+- Day 37 = Dec 10, 2025
+- Calculate: (date - Nov 4) + 1
 
 **STEP 4: Provide Captions**
 - Instagram caption

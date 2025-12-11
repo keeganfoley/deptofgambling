@@ -390,6 +390,16 @@
       }
     }
   },
+  "multiFundConsensus": {
+    "totalPicks": 9,
+    "wins": 7,
+    "losses": 2,
+    "winRate": "77.8",
+    "pnl": 2018.45,
+    "roi": 63.6,
+    "totalStaked": 3175,
+    "avgFundsPerPick": 2.2
+  },
   "portfolioGrowth": [
     {
       "date": "2025-11-04",
@@ -2093,5 +2103,5 @@
       "result": "win"
     }
   ],
-  "lastUpdated": "2025-12-11T15:13:00.684Z"
+  "lastUpdated": "2025-12-11T20:40:56.732Z"
 }

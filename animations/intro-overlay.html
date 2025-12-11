@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intro Overlay</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding-top: 50px;
+    }
+
+    .container {
+      width: 1080px;
+      height: 580px;
+      background: linear-gradient(180deg, rgba(5, 5, 7, 0.95) 0%, rgba(5, 5, 7, 0.85) 70%, transparent 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image:
+        linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
+      background-size: 30px 30px;
+      opacity: 0.5;
+    }
+
+    .glow-green {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(34, 197, 94, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(60px);
+      top: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 60px;
+    }
+
+    .label {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      opacity: 0;
+    }
+
+    .profit {
+      font-family: 'Inter', sans-serif;
+      font-size: 140px;
+      font-weight: 900;
+      color: #22c55e;
+      line-height: 1;
+      text-shadow: 0 0 80px rgba(34, 197, 94, 0.6);
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .sub-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 400;
+      color: #9ca3af;
+      letter-spacing: 4px;
+      margin-top: 15px;
+      opacity: 0;
+    }
+
+    .stats-row {
+      display: flex;
+      gap: 80px;
+      margin-top: 50px;
+    }
+
+    .stat-item {
+      text-align: center;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .stat-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 64px;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .stat-value.green {
+      color: #22c55e;
+    }
+
+    .stat-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #6b7280;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 8px;
+    }
+
+    .divider {
+      width: 2px;
+      height: 80px;
+      background: linear-gradient(180deg, transparent, rgba(255,255,255,0.2), transparent);
+      align-self: center;
+      opacity: 0;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 9999;
+    }
+
+    .controls button {
+      padding: 14px 28px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .controls button:hover { transform: scale(1.05); }
+    .play-btn { background: #22c55e; color: #000; }
+    .reset-btn { background: #374151; color: #fff; }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      color: #6b7280;
+      z-index: 9999;
+    }
+
+    .dimensions {
+      position: fixed;
+      top: 20px;
+      left: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #4b5563;
+      z-index: 9999;
+    }
+
+    @keyframes pulse {
+      0%, 100% { text-shadow: 0 0 60px rgba(34, 197, 94, 0.6); }
+      50% { text-shadow: 0 0 100px rgba(34, 197, 94, 1), 0 0 150px rgba(34, 197, 94, 0.5); }
+    }
+  </style>
+</head>
+<body>
+  <div class="dimensions">1080 x 580 (overlay for top of reel)</div>
+
+  <div class="container" id="container">
+    <div class="grid-bg"></div>
+    <div class="glow-green"></div>
+
+    <div class="content">
+      <div class="label" id="label">Past Two Days</div>
+      <div class="profit" id="profit">+$0</div>
+      <div class="sub-label" id="sub-label">Monday & Tuesday</div>
+
+      <div class="stats-row">
+        <div class="stat-item" id="stat-1">
+          <div class="stat-value" id="record">0-0</div>
+          <div class="stat-label">Record</div>
+        </div>
+        <div class="divider" id="divider-1"></div>
+        <div class="stat-item" id="stat-2">
+          <div class="stat-value green" id="winrate">0%</div>
+          <div class="stat-label">Win Rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timer" id="timer">0s</div>
+  <div class="controls">
+    <button class="play-btn" onclick="startAnimation()">Play Animation</button>
+    <button class="reset-btn" onclick="resetAnimation()">Reset</button>
+  </div>
+
+  <script>
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(70, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(30, audioCtx.currentTime + 0.3);
+      gain.gain.setValueAtTime(0.5, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.4);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.4);
+    }
+
+    function playCountTick() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(1200, audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.02);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.02);
+    }
+
+    function playPop() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(600, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.08);
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.08);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.08);
+    }
+
+    function playChaChing() {
+      [0, 70, 140].forEach((delay, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(1600 + i * 400, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.1, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.12);
+        }, delay);
+      });
+    }
+
+    function animateCounter(element, start, end, duration, prefix = '+$', suffix = '') {
+      const startTime = performance.now();
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const current = Math.round(start + (end - start) * eased);
+        element.textContent = prefix + current + suffix;
+        if (progress < 1) {
+          if (Math.random() < 0.25) playCountTick();
+          requestAnimationFrame(update);
+        }
+      };
+      requestAnimationFrame(update);
+    }
+
+    function animateRecord(element, wins, losses, duration) {
+      const startTime = performance.now();
+      const update = (currentTime) => {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const currentWins = Math.round(wins * eased);
+        const currentLosses = Math.round(losses * eased);
+        element.textContent = currentWins + '-' + currentLosses;
+        if (progress < 1) {
+          if (Math.random() < 0.2) playCountTick();
+          requestAnimationFrame(update);
+        }
+      };
+      requestAnimationFrame(update);
+    }
+
+    let timeouts = [];
+    let timerInterval;
+    let startTime;
+
+    function updateTimer() {
+      const elapsed = (Date.now() - startTime) / 1000;
+      document.getElementById('timer').textContent = `${elapsed.toFixed(1)}s`;
+    }
+
+    function startAnimation() {
+      resetAnimation();
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // Label fades in (0-0.3s)
+      timeouts.push(setTimeout(() => {
+        const label = document.getElementById('label');
+        label.style.transition = 'opacity 0.4s';
+        label.style.opacity = '1';
+      }, 100));
+
+      // Profit slams in and counts (0.4s)
+      timeouts.push(setTimeout(() => {
+        const profit = document.getElementById('profit');
+        profit.style.transition = 'opacity 0.3s, transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        profit.style.opacity = '1';
+        profit.style.transform = 'scale(1)';
+        animateCounter(profit, 0, 1262, 1200);
+        playImpact();
+      }, 400));
+
+      // Sub-label fades in (1s)
+      timeouts.push(setTimeout(() => {
+        const subLabel = document.getElementById('sub-label');
+        subLabel.style.transition = 'opacity 0.4s';
+        subLabel.style.opacity = '1';
+      }, 1000));
+
+      // Stats row appears (1.5s)
+      timeouts.push(setTimeout(() => {
+        const stat1 = document.getElementById('stat-1');
+        stat1.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        stat1.style.opacity = '1';
+        stat1.style.transform = 'translateY(0)';
+        animateRecord(document.getElementById('record'), 13, 3, 800);
+        playPop();
+      }, 1500));
+
+      timeouts.push(setTimeout(() => {
+        const divider = document.getElementById('divider-1');
+        divider.style.transition = 'opacity 0.3s';
+        divider.style.opacity = '1';
+      }, 1700));
+
+      timeouts.push(setTimeout(() => {
+        const stat2 = document.getElementById('stat-2');
+        stat2.style.transition = 'opacity 0.3s, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)';
+        stat2.style.opacity = '1';
+        stat2.style.transform = 'translateY(0)';
+        animateCounter(document.getElementById('winrate'), 0, 81, 800, '', '%');
+        playPop();
+      }, 1900));
+
+      // Cha-ching at the end
+      timeouts.push(setTimeout(() => {
+        playChaChing();
+        document.getElementById('profit').style.animation = 'pulse 2s ease-in-out infinite';
+      }, 2800));
+
+      // Stop timer at 4s
+      timeouts.push(setTimeout(() => {
+        clearInterval(timerInterval);
+      }, 4000));
+    }
+
+    function resetAnimation() {
+      timeouts.forEach(t => clearTimeout(t));
+      timeouts = [];
+      clearInterval(timerInterval);
+      document.getElementById('timer').textContent = '0s';
+
+      document.getElementById('label').style.transition = 'none';
+      document.getElementById('label').style.opacity = '0';
+
+      const profit = document.getElementById('profit');
+      profit.style.transition = 'none';
+      profit.style.opacity = '0';
+      profit.style.transform = 'scale(0.8)';
+      profit.style.animation = 'none';
+      profit.textContent = '+$0';
+
+      document.getElementById('sub-label').style.transition = 'none';
+      document.getElementById('sub-label').style.opacity = '0';
+
+      document.getElementById('stat-1').style.transition = 'none';
+      document.getElementById('stat-1').style.opacity = '0';
+      document.getElementById('stat-1').style.transform = 'translateY(20px)';
+      document.getElementById('record').textContent = '0-0';
+
+      document.getElementById('divider-1').style.transition = 'none';
+      document.getElementById('divider-1').style.opacity = '0';
+
+      document.getElementById('stat-2').style.transition = 'none';
+      document.getElementById('stat-2').style.opacity = '0';
+      document.getElementById('stat-2').style.transform = 'translateY(20px)';
+      document.getElementById('winrate').textContent = '0%';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') { e.preventDefault(); startAnimation(); }
+      else if (e.code === 'KeyR') resetAnimation();
+    });
+  </script>
+</body>
+</html>
