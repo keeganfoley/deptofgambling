@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import Link from 'next/link';
 import { formatCurrency, formatPercent, formatRecord } from '@/lib/utils';
@@ -9,6 +9,7 @@ import metricsData from '@/data/metrics.json';
 
 export default function PortfolioBreakdownPage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [showConsensusPicks, setShowConsensusPicks] = useState(false);
 
   useEffect(() => {
     gsap.fromTo(
@@ -313,6 +314,78 @@ export default function PortfolioBreakdownPage() {
                     </div>
                   </div>
                 </div>
+
+                {/* Accordion Toggle */}
+                <button
+                  onClick={() => setShowConsensusPicks(!showConsensusPicks)}
+                  className="w-full mt-6 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/10 transition-all duration-200 flex items-center justify-between group"
+                >
+                  <span className="text-white font-medium">
+                    View All {multiFundConsensus.totalPicks} Consensus Picks
+                  </span>
+                  <span className={`text-white/60 transition-transform duration-200 ${showConsensusPicks ? 'rotate-180' : ''}`}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </span>
+                </button>
+
+                {/* Picks List */}
+                {showConsensusPicks && multiFundConsensus.picks && (
+                  <div className="mt-4 space-y-3 animate-in slide-in-from-top-2 duration-200">
+                    {multiFundConsensus.picks.map((pick: any, idx: number) => (
+                      <div
+                        key={idx}
+                        className={`bg-white/5 backdrop-blur-sm rounded-xl p-4 border ${
+                          pick.result === 'win' ? 'border-success/30' : 'border-loss/30'
+                        }`}
+                      >
+                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                          {/* Left side - Pick info */}
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold ${
+                                pick.result === 'win' ? 'bg-success/20 text-success' : 'bg-loss/20 text-loss'
+                              }`}>
+                                {pick.result === 'win' ? 'W' : 'L'}
+                              </span>
+                              <span className="text-white font-bold">{pick.description}</span>
+                            </div>
+                            <div className="flex items-center gap-3 text-xs text-white/50">
+                              <span>{pick.date}</span>
+                              <span className="uppercase">{pick.sport}</span>
+                              <span className="mono-number">{pick.odds > 0 ? `+${pick.odds}` : pick.odds}</span>
+                            </div>
+                          </div>
+
+                          {/* Right side - Funds */}
+                          <div className="flex flex-col items-end gap-2">
+                            <div className="flex flex-wrap gap-1 justify-end">
+                              {pick.funds.map((fund: string, fidx: number) => (
+                                <span
+                                  key={fidx}
+                                  className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide ${
+                                    fund === 'Vector' ? 'bg-gray-500/30 text-gray-200' :
+                                    fund === 'Sharp' ? 'bg-success/30 text-success' :
+                                    fund === 'Contra' ? 'bg-orange-500/30 text-orange-300' :
+                                    'bg-purple-500/30 text-purple-300'
+                                  }`}
+                                >
+                                  {fund}
+                                </span>
+                              ))}
+                            </div>
+                            <div className={`text-sm font-bold mono-number ${
+                              pick.totalProfit >= 0 ? 'text-success' : 'text-loss'
+                            }`}>
+                              {formatCurrency(pick.totalProfit)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>

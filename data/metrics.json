@@ -398,7 +398,136 @@
     "pnl": 2018.45,
     "roi": 63.6,
     "totalStaked": 3175,
-    "avgFundsPerPick": 2.2
+    "picks": [
+      {
+        "date": "2025-12-09",
+        "description": "Stars ML",
+        "sport": "NHL",
+        "result": "win",
+        "funds": [
+          "Sharp",
+          "Catalyst"
+        ],
+        "fundCount": 2,
+        "totalProfit": 228.88,
+        "totalStake": 325,
+        "odds": -142
+      },
+      {
+        "date": "2025-12-08",
+        "description": "Grambling St +8.5",
+        "sport": "NCAAB",
+        "result": "win",
+        "funds": [
+          "Vector",
+          "Sharp"
+        ],
+        "fundCount": 2,
+        "totalProfit": 190.48,
+        "totalStake": 200,
+        "odds": -105
+      },
+      {
+        "date": "2025-11-29",
+        "description": "HCU +7.5",
+        "sport": "NCAAF",
+        "result": "loss",
+        "funds": [
+          "Sharp",
+          "Vector"
+        ],
+        "fundCount": 2,
+        "totalProfit": -250,
+        "totalStake": 250,
+        "odds": -115
+      },
+      {
+        "date": "2025-11-29",
+        "description": "Pelicans +9",
+        "sport": "NBA",
+        "result": "win",
+        "funds": [
+          "Catalyst",
+          "Vector"
+        ],
+        "fundCount": 2,
+        "totalProfit": 401.78,
+        "totalStake": 450,
+        "odds": -112
+      },
+      {
+        "date": "2025-11-27",
+        "description": "Cowboys +3",
+        "sport": "NFL",
+        "result": "win",
+        "funds": [
+          "Vector",
+          "Sharp",
+          "Contra",
+          "Catalyst"
+        ],
+        "fundCount": 4,
+        "totalProfit": 800,
+        "totalStake": 800,
+        "odds": 100
+      },
+      {
+        "date": "2025-11-27",
+        "description": "Cowboys/Chiefs Under 53",
+        "sport": "NFL",
+        "result": "loss",
+        "funds": [
+          "Vector",
+          "Catalyst"
+        ],
+        "fundCount": 2,
+        "totalProfit": -200,
+        "totalStake": 200,
+        "odds": -110
+      },
+      {
+        "date": "2025-11-26",
+        "description": "Fresno State -1.5",
+        "sport": "NCAAB",
+        "result": "win",
+        "funds": [
+          "Vector",
+          "Contra"
+        ],
+        "fundCount": 2,
+        "totalProfit": 174.68,
+        "totalStake": 200,
+        "odds": -115
+      },
+      {
+        "date": "2025-11-26",
+        "description": "MIN +10.5",
+        "sport": "NBA",
+        "result": "win",
+        "funds": [
+          "Vector",
+          "Catalyst"
+        ],
+        "fundCount": 2,
+        "totalProfit": 380.96,
+        "totalStake": 400,
+        "odds": -105
+      },
+      {
+        "date": "2025-11-26",
+        "description": "Houston Christian +1.5",
+        "sport": "NCAAB",
+        "result": "win",
+        "funds": [
+          "Vector",
+          "Sharp"
+        ],
+        "fundCount": 2,
+        "totalProfit": 291.67,
+        "totalStake": 350,
+        "odds": -120
+      }
+    ]
   },
   "portfolioGrowth": [
     {
@@ -2103,5 +2232,5 @@
       "result": "win"
     }
   ],
-  "lastUpdated": "2025-12-11T20:40:56.732Z"
+  "lastUpdated": "2025-12-11T21:02:58.516Z"
 }
