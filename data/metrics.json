@@ -1,11 +1,11 @@
 {
-  "totalBets": 252,
-  "wins": 149,
-  "losses": 101,
+  "totalBets": 260,
+  "wins": 154,
+  "losses": 104,
   "pushes": 2,
-  "winRate": "59.60",
-  "totalWinnings": 19290.46,
-  "totalLossesAmount": 13845,
+  "winRate": "59.69",
+  "totalWinnings": 19785.65,
+  "totalLossesAmount": 14395.0,
   "avgWin": 129.47,
   "avgLoss": -137.08,
   "avgProfitPerBet": 21.61,
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 45445.46,
   "maxDrawdownTroughBalance": 38496.1,
   "currentDrawdown": {
-    "amount": 0,
-    "percentage": 0,
+    "amount": 54.81,
+    "percentage": 0.12,
     "daysSincePeak": 1,
     "peakBalance": 45445.46,
     "peakDate": "2025-12-11",
-    "currentBalance": 45445.46
+    "currentBalance": 45390.65
   },
   "sharpeRatio": 6.47,
   "sharpeRatioNote": "37-day sample",
@@ -116,55 +116,55 @@
   "sportBreakdown": {
     "NBA": {
       "sport": "NBA",
-      "emoji": "🏀",
+      "emoji": "\ud83c\udfc0",
       "record": {
-        "wins": 46,
-        "losses": 34,
+        "wins": 47,
+        "losses": 36,
         "pushes": 0,
-        "total": 80
+        "total": 83
       },
-      "wins": 46,
-      "losses": 34,
-      "winRate": 57.49999999999999,
-      "roi": 7.890139652983495,
-      "pnl": 932.22,
-      "unitsWon": 9.3222
+      "wins": 47,
+      "losses": 36,
+      "winRate": 56.62650602409639,
+      "roi": 5.488218507949449,
+      "pnl": 673.13,
+      "unitsWon": 6.73
     },
     "NHL": {
       "sport": "NHL",
-      "emoji": "🏒",
+      "emoji": "\ud83c\udfd2",
       "record": {
-        "wins": 28,
-        "losses": 8,
+        "wins": 30,
+        "losses": 9,
         "pushes": 1,
-        "total": 37
+        "total": 40
       },
-      "wins": 28,
-      "losses": 8,
-      "winRate": 77.77777777777779,
-      "roi": 59.10344827586207,
-      "pnl": 2571,
-      "unitsWon": 25.71
+      "wins": 30,
+      "losses": 9,
+      "winRate": 76.92307692307693,
+      "roi": 53.13465968586387,
+      "pnl": 2537.18,
+      "unitsWon": 25.37
     },
     "NCAAB": {
       "sport": "NCAAB",
-      "emoji": "🎓",
+      "emoji": "\ud83c\udf93",
       "record": {
-        "wins": 36,
+        "wins": 38,
         "losses": 21,
         "pushes": 0,
-        "total": 57
+        "total": 59
       },
-      "wins": 36,
+      "wins": 38,
       "losses": 21,
-      "winRate": 63.1578947368421,
-      "roi": 18.039411952700547,
-      "pnl": 1343.9361904761909,
-      "unitsWon": 13.439361904761908
+      "winRate": 64.40677966101694,
+      "roi": 20.545924551638844,
+      "pnl": 1582.04,
+      "unitsWon": 15.82
     },
     "NFL": {
       "sport": "NFL",
-      "emoji": "🏈",
+      "emoji": "\ud83c\udfc8",
       "record": {
         "wins": 29,
         "losses": 26,
@@ -175,12 +175,12 @@
       "losses": 26,
       "winRate": 52.72727272727272,
       "roi": 8.64549337705484,
-      "pnl": 650.5733766233767,
-      "unitsWon": 6.505733766233767
+      "pnl": 650.57,
+      "unitsWon": 6.51
     },
     "NCAAF": {
       "sport": "NCAAF",
-      "emoji": "🏟️",
+      "emoji": "\ud83c\udfdf\ufe0f",
       "record": {
         "wins": 10,
         "losses": 11,
@@ -191,12 +191,12 @@
       "losses": 11,
       "winRate": 47.61904761904761,
       "roi": 3.12736,
-      "pnl": 97.72999999999999,
-      "unitsWon": 0.9773
+      "pnl": 97.73,
+      "unitsWon": 0.98
     },
     "Soccer": {
       "sport": "Soccer",
-      "emoji": "⚽",
+      "emoji": "\u26bd",
       "record": {
         "wins": 0,
         "losses": 1,
@@ -205,8 +205,8 @@
       },
       "wins": 0,
       "losses": 1,
-      "winRate": 0,
-      "roi": -100,
+      "winRate": 0.0,
+      "roi": -100.0,
       "pnl": -150,
       "unitsWon": -1.5
     }
@@ -618,7 +618,7 @@
       "date": "2025-11-07",
       "balance": 40128.83,
       "profit": -150,
-      "description": "Jokić U12.5 rebounds",
+      "description": "Joki\u0107 U12.5 rebounds",
       "result": "loss"
     },
     {
