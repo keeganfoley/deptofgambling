@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>December 11 Results</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ff00ff; /* MAGENTA - zero green, safe chroma key */
+      min-height: 100vh;
+      padding: 16px;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 420px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* PLAY BUTTON */
+    .play-btn {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: rgba(0,0,0,0.7);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, opacity 0.3s;
+    }
+
+    .play-btn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .play-btn::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 35px solid white;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      margin-left: 8px;
+    }
+
+    .play-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    .header.show {
+      animation: slideDown 0.4s ease forwards;
+    }
+
+    .header.fade-out {
+      animation: fadeOut 0.3s ease forwards;
+    }
+
+    .date {
+      font-size: 28px;
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      text-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    }
+
+    .subtitle {
+      font-size: 10px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 2px;
+    }
+
+    /* Tickets Container */
+    .tickets {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .tickets.fade-out .ticket {
+      animation: fadeOut 0.3s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.95);
+      }
+    }
+
+    /* Individual Ticket - SUPER COMPACT */
+    .ticket {
+      background: rgba(22, 27, 34, 0.97);
+      border-radius: 10px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateX(50px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .ticket.winner {
+      border-left: 4px solid #22c55e;
+      box-shadow:
+        0 3px 16px rgba(34, 197, 94, 0.12),
+        0 0 30px rgba(34, 197, 94, 0.05);
+    }
+
+    .ticket.winner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(34, 197, 94, 0.08) 0%, transparent 35%);
+      pointer-events: none;
+    }
+
+    .ticket.loser {
+      border-left: 4px solid #ef4444;
+      box-shadow: 0 2px 10px rgba(239, 68, 68, 0.06);
+      transform: translateX(50px) scale(0.96);
+    }
+
+    .ticket.loser::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(239, 68, 68, 0.05) 0%, transparent 35%);
+      pointer-events: none;
+    }
+
+    .ticket.loser .team-logo {
+      filter: grayscale(30%);
+      opacity: 0.85;
+    }
+
+    .ticket.show {
+      animation: ticketIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .ticket.loser.show {
+      animation: ticketInLoser 0.3s ease forwards;
+    }
+
+    .ticket.winner.show {
+      animation: ticketIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, glowPulse 2.5s ease-in-out 0.35s infinite;
+    }
+
+    @keyframes ticketIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes ticketInLoser {
+      to {
+        opacity: 0.75;
+        transform: translateX(0) scale(0.96);
+      }
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        box-shadow:
+          0 3px 16px rgba(34, 197, 94, 0.12),
+          0 0 30px rgba(34, 197, 94, 0.05);
+      }
+      50% {
+        box-shadow:
+          0 3px 22px rgba(34, 197, 94, 0.2),
+          0 0 40px rgba(34, 197, 94, 0.08);
+      }
+    }
+
+    @keyframes slideDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Team Logo - smaller */
+    .team-logo {
+      width: 36px;
+      height: 36px;
+      border-radius: 6px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.05);
+      padding: 3px;
+    }
+
+    /* Ticket Info */
+    .ticket-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .team-name {
+      font-size: 15px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+    }
+
+    .matchup {
+      font-size: 10px;
+      color: rgba(255,255,255,0.4);
+      margin-top: 2px;
+      margin-bottom: 3px;
+    }
+
+    .line-odds {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .line {
+      font-size: 13px;
+      font-weight: 700;
+      color: white;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .odds {
+      font-size: 11px;
+      font-weight: 600;
+      color: #fbbf24;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Ticket Result - BIG EMPHASIS */
+    .ticket-result {
+      text-align: right;
+      min-width: 90px;
+    }
+
+    .result-label {
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 1px;
+    }
+
+    .winner .result-label {
+      color: #22c55e;
+    }
+
+    .loser .result-label {
+      color: #ef4444;
+    }
+
+    .profit {
+      font-size: 24px;
+      font-weight: 900;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -0.5px;
+    }
+
+    .winner .profit {
+      color: #22c55e;
+      text-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+    }
+
+    .loser .profit {
+      color: #ef4444;
+    }
+
+    .stake {
+      font-size: 9px;
+      color: rgba(255,255,255,0.3);
+      margin-top: 1px;
+    }
+
+    /* SUMMARY - replaces tickets */
+    .summary {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .summary.show {
+      display: block;
+      animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes popIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .record {
+      font-size: 100px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -4px;
+      text-shadow: 0 6px 40px rgba(0,0,0,0.4);
+      line-height: 1;
+    }
+
+    .total-profit {
+      font-size: 72px;
+      font-weight: 900;
+      color: #22c55e;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: -3px;
+      margin-top: 10px;
+      text-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+      animation: profitGlow 1.5s ease-in-out infinite;
+    }
+
+    @keyframes profitGlow {
+      0%, 100% {
+        text-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+        transform: scale(1);
+      }
+      50% {
+        text-shadow: 0 0 100px rgba(34, 197, 94, 0.8);
+        transform: scale(1.02);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- PLAY BUTTON - click to start -->
+  <button class="play-btn" id="playBtn" onclick="startAnimation()"></button>
+
+  <div class="container">
+    <div class="header" id="header">
+      <div class="date">December 11</div>
+      <div class="subtitle">Results</div>
+    </div>
+
+    <div class="tickets" id="tickets">
+      <div class="ticket winner" data-delay="250">
+        <img src="logos/falcons.png" alt="Falcons" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Falcons</div>
+          <div class="matchup">vs Buccaneers</div>
+          <div class="line-odds">
+            <span class="line">ML</span>
+            <span class="odds">(+230)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$345</div>
+          <div class="stake">$150 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="500">
+        <img src="logos/clippers.png" alt="Clippers" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Clippers</div>
+          <div class="matchup">vs Rockets</div>
+          <div class="line-odds">
+            <span class="line">+9.5</span>
+            <span class="odds">(-105)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$143</div>
+          <div class="stake">$150 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="750">
+        <img src="logos/bucks.png" alt="Bucks" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Bucks</div>
+          <div class="matchup">vs Celtics</div>
+          <div class="line-odds">
+            <span class="line">+9.5</span>
+            <span class="odds">(-110)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$136</div>
+          <div class="stake">$150 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="1000">
+        <img src="logos/iowa.png" alt="Iowa" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Iowa</div>
+          <div class="matchup">vs Iowa State</div>
+          <div class="line-odds">
+            <span class="line">+12.5</span>
+            <span class="odds">(-110)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$114</div>
+          <div class="stake">$125 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="1250">
+        <img src="logos/bruins.png" alt="Bruins" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Bruins</div>
+          <div class="matchup">vs Jets</div>
+          <div class="line-odds">
+            <span class="line">ML</span>
+            <span class="odds">(+130)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$97</div>
+          <div class="stake">$75 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="1500">
+        <img src="logos/sabres.png" alt="Sabres" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Sabres</div>
+          <div class="matchup">vs Canucks</div>
+          <div class="line-odds">
+            <span class="line">ML</span>
+            <span class="odds">(-115)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$87</div>
+          <div class="stake">$100 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket winner" data-delay="1750">
+        <img src="logos/avalanche.png" alt="Avalanche" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Avalanche</div>
+          <div class="matchup">vs Panthers</div>
+          <div class="line-odds">
+            <span class="line">ML</span>
+            <span class="odds">(-225)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Cashed ✓</div>
+          <div class="profit">+$44</div>
+          <div class="stake">$100 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket loser" data-delay="2100">
+        <img src="logos/kings.png" alt="Kings" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Kings</div>
+          <div class="matchup">vs Nuggets</div>
+          <div class="line-odds">
+            <span class="line">+10.5</span>
+            <span class="odds">(-110)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Loss ✗</div>
+          <div class="profit">-$200</div>
+          <div class="stake">$200 wager</div>
+        </div>
+      </div>
+
+      <div class="ticket loser" data-delay="2350">
+        <img src="logos/iowa.png" alt="Iowa" class="team-logo">
+        <div class="ticket-info">
+          <div class="team-name">Iowa/ISU</div>
+          <div class="matchup">Total</div>
+          <div class="line-odds">
+            <span class="line">O140.5</span>
+            <span class="odds">(-110)</span>
+          </div>
+        </div>
+        <div class="ticket-result">
+          <div class="result-label">Loss ✗</div>
+          <div class="profit">-$125</div>
+          <div class="stake">$125 wager</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary - replaces tickets -->
+    <div class="summary" id="summary">
+      <div class="record">7-2</div>
+      <div class="total-profit">+$641</div>
+    </div>
+  </div>
+
+  <script>
+    function startAnimation() {
+      const playBtn = document.getElementById('playBtn');
+      const tickets = document.querySelectorAll('.ticket');
+      const ticketsContainer = document.getElementById('tickets');
+      const header = document.getElementById('header');
+      const summary = document.getElementById('summary');
+
+      // Hide play button immediately
+      playBtn.classList.add('hidden');
+
+      // Wait 1 second before starting
+      setTimeout(() => {
+      // Show header
+      header.classList.add('show');
+
+      // Show tickets one by one
+      tickets.forEach(ticket => {
+        const delay = parseInt(ticket.dataset.delay) || 0;
+        setTimeout(() => {
+          ticket.classList.add('show');
+        }, delay);
+      });
+
+      // After all tickets shown, fade them out
+      setTimeout(() => {
+        ticketsContainer.classList.add('fade-out');
+        header.classList.add('fade-out');
+      }, 3200);
+
+      // Show summary after fade
+      setTimeout(() => {
+        ticketsContainer.style.display = 'none';
+        header.style.display = 'none';
+        summary.classList.add('show');
+      }, 3500);
+      }, 1000); // 1 second delay after clicking play
+    }
+  </script>
+</body>
+</html>

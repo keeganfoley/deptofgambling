@@ -56,6 +56,7 @@ export default function PortfolioBreakdownPage() {
     fundMetrics,
     multiFundConsensus,
     daysGreenStreak,
+    convictionPerformance,
   } = metricsData as any;
 
   const portfolio = portfolioData as any;
@@ -612,6 +613,83 @@ export default function PortfolioBreakdownPage() {
             </>
           )}
         </div>
+
+        {/* Conviction Score Performance */}
+        {convictionPerformance && (
+          <div className="stat-card p-6 sm:p-8 mb-8">
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-1 h-6 bg-accent rounded-full" />
+              <h2 className="text-lg sm:text-xl font-bold text-primary uppercase tracking-wide">
+                Conviction Score Performance
+              </h2>
+            </div>
+            <p className="text-text-muted text-sm mb-6 ml-3">
+              How do model conviction scores correlate with actual returns?
+            </p>
+
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4 mb-6">
+              {Object.entries(convictionPerformance)
+                .sort((a, b) => {
+                  // Sort by range descending (80+ first, 40-49 last)
+                  const aVal = a[0].includes('+') ? 100 : parseInt(a[0].split('-')[0]);
+                  const bVal = b[0].includes('+') ? 100 : parseInt(b[0].split('-')[0]);
+                  return bVal - aVal;
+                })
+                .map(([range, data]: [string, any]) => (
+                <div
+                  key={range}
+                  className={`bg-gray-50/50 p-4 sm:p-5 rounded-xl border-l-4 ${
+                    range === '80+' ? 'border-success' :
+                    range === '70-79' ? 'border-accent' :
+                    range === '60-69' ? 'border-secondary' :
+                    range === '50-59' ? 'border-primary' :
+                    'border-gray-400'
+                  }`}
+                >
+                  <div className="text-xs text-text-muted mb-2 uppercase tracking-wide font-bold">
+                    {range}
+                  </div>
+                  <div className="text-lg sm:text-xl font-bold mono-number text-primary">
+                    {formatRecord(data.wins, data.losses)}
+                  </div>
+                  <div className={`text-sm font-bold mono-number ${
+                    data.roi >= 0 ? 'text-success' : 'text-loss'
+                  }`}>
+                    {formatPercent(data.roi)} ROI
+                  </div>
+                  <div className={`text-xs mono-number ${
+                    data.pnl >= 0 ? 'text-success/70' : 'text-loss/70'
+                  }`}>
+                    {formatCurrency(data.pnl)}
+                  </div>
+                  <div className="text-[10px] text-text-light mt-2">
+                    {data.bets} picks · {data.winRate.toFixed(0)}% win
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Best performing range highlight */}
+            {(() => {
+              const entries = Object.entries(convictionPerformance) as [string, any][];
+              const bestByROI = entries.reduce((best: [string, any], curr: [string, any]) =>
+                curr[1].roi > best[1].roi ? curr : best
+              );
+              const bestByWinRate = entries.reduce((best: [string, any], curr: [string, any]) =>
+                curr[1].winRate > best[1].winRate ? curr : best
+              );
+
+              return (
+                <div className="bg-accent/10 border border-accent/30 rounded-xl p-4 text-center">
+                  <span className="text-sm sm:text-base font-bold text-accent">
+                    Best ROI: {bestByROI[0]} range ({formatPercent(bestByROI[1].roi)}) ·
+                    Best Win Rate: {bestByWinRate[0]} range ({bestByWinRate[1].winRate.toFixed(1)}%)
+                  </span>
+                </div>
+              );
+            })()}
+          </div>
+        )}
 
         {/* EV Analysis */}
         <div className="stat-card p-6 sm:p-8 mb-8">

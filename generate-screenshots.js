@@ -8,7 +8,7 @@ async function generateScreenshots() {
   // Set viewport to Instagram size
   await page.setViewport({ width: 1080, height: 1350 });
 
-  const dateFolder = '2025-12-11';
+  const dateFolder = '2025-12-13';
   const baseDir = path.join(__dirname, 'social-images', dateFolder);
 
   // Generate daily report screenshot

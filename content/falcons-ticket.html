@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falcons Ticket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #FF00FF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden {
+      display: none;
+    }
+
+    /* Ticket */
+    .ticket {
+      background: #fff;
+      border-radius: 16px;
+      padding: 50px 60px;
+      box-shadow: 0 40px 100px rgba(0,0,0,0.5);
+      min-width: 400px;
+      position: relative;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .ticket.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Perforated edge effect */
+    .ticket::before,
+    .ticket::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background: radial-gradient(circle, #FF00FF 10px, transparent 10px);
+      background-size: 30px 20px;
+      background-position: 0 10px;
+    }
+
+    .ticket::before {
+      top: -10px;
+    }
+
+    .ticket::after {
+      bottom: -10px;
+      transform: rotate(180deg);
+    }
+
+    .ticket-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .team-name {
+      font-size: 36px;
+      font-weight: 900;
+      color: #A71930;
+      letter-spacing: -1px;
+    }
+
+    .bet-type {
+      font-size: 16px;
+      color: #666;
+      font-weight: 600;
+      margin-top: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .odds-section {
+      text-align: center;
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 2px dashed #ddd;
+    }
+
+    .odds {
+      font-size: 64px;
+      font-weight: 900;
+      color: #000;
+    }
+
+    .odds-label {
+      font-size: 12px;
+      color: #999;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .details-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    .detail {
+      text-align: center;
+    }
+
+    .detail-label {
+      font-size: 11px;
+      color: #999;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .detail-value {
+      font-size: 24px;
+      font-weight: 900;
+      color: #000;
+    }
+
+    .payout-section {
+      background: linear-gradient(145deg, #16a34a, #15803d);
+      margin: -50px -60px;
+      margin-top: 0;
+      padding: 35px;
+      border-radius: 0 0 16px 16px;
+      text-align: center;
+    }
+
+    .payout-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.8);
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    .payout-amount {
+      font-size: 80px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    }
+
+    .profit {
+      font-size: 20px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      margin-top: 8px;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .control-btn.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="start-btn" id="startBtn">TAP TO START</button>
+
+    <div class="ticket" id="ticket">
+      <div class="ticket-header">
+        <div class="team-name">FALCONS ML</div>
+        <div class="bet-type">vs Buccaneers</div>
+      </div>
+
+      <div class="odds-section">
+        <div class="odds-label">Odds</div>
+        <div class="odds">+230</div>
+      </div>
+
+      <div class="details-row">
+        <div class="detail">
+          <div class="detail-label">Wager</div>
+          <div class="detail-value">$150</div>
+        </div>
+        <div class="detail">
+          <div class="detail-label">Profit</div>
+          <div class="detail-value">+$345</div>
+        </div>
+      </div>
+
+      <div class="payout-section">
+        <div class="payout-label">Total Payout</div>
+        <div class="payout-amount">$495</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playCash() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(800, audioContext.currentTime);
+      osc.frequency.setValueAtTime(1200, audioContext.currentTime + 0.1);
+      osc.frequency.setValueAtTime(1600, audioContext.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.4);
+    }
+
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const ticket = document.getElementById('ticket');
+
+    function runAnimation() {
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+      ticket.classList.remove('show');
+
+      setTimeout(() => {
+        ticket.classList.add('show');
+        playCash();
+      }, 1000);
+
+      setTimeout(() => {
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 2000);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioContext.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      ticket.classList.remove('show');
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioContext.resume();
+        ticket.classList.remove('show');
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

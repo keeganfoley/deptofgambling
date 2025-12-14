@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Algorithm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #FF00FF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .algo-box {
+      background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
+      border: 2px solid #333;
+      border-radius: 16px;
+      padding: 40px 60px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.4s ease-out;
+    }
+
+    .algo-box.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .algo-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: #16a34a;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .scan-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .scan-line {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      opacity: 0;
+      transform: translateX(-20px);
+      transition: all 0.3s ease-out;
+    }
+
+    .scan-line.show {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .scan-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: #666;
+      min-width: 140px;
+    }
+
+    .scan-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .scan-value.green {
+      color: #4ade80;
+    }
+
+    .scan-value.yellow {
+      color: #facc15;
+    }
+
+    .scan-value.red {
+      color: #f87171;
+    }
+
+    .result-badge {
+      background: linear-gradient(145deg, #16a34a, #15803d);
+      padding: 15px 40px;
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(22, 163, 74, 0.5);
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .result-badge.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .result-text {
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .control-btn.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <button class="start-btn" id="startBtn">TAP TO START</button>
+
+  <div class="container">
+    <div class="algo-box" id="algoBox">
+      <div class="algo-header">// analyzing falcons @ bucs</div>
+      <div class="scan-lines">
+        <div class="scan-line" id="line1">
+          <span class="scan-label">recent_form:</span>
+          <span class="scan-value red">4L in last 5</span>
+        </div>
+        <div class="scan-line" id="line2">
+          <span class="scan-label">public_money:</span>
+          <span class="scan-value red">88% TAMPA</span>
+        </div>
+        <div class="scan-line" id="line3">
+          <span class="scan-label">sharp_action:</span>
+          <span class="scan-value green">ATLANTA</span>
+        </div>
+        <div class="scan-line" id="line4">
+          <span class="scan-label">projected_line:</span>
+          <span class="scan-value yellow">+186</span>
+        </div>
+        <div class="scan-line" id="line5">
+          <span class="scan-label">market_line:</span>
+          <span class="scan-value green">+230</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="result-badge" id="result">
+      <div class="result-text">SIGNAL DETECTED</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playBeep() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(800, audioContext.currentTime);
+      gain.gain.setValueAtTime(0.15, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.08);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.08);
+    }
+
+    function playSuccess() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(600, audioContext.currentTime);
+      osc.frequency.setValueAtTime(900, audioContext.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.25);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.25);
+    }
+
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const algoBox = document.getElementById('algoBox');
+    const lines = [
+      document.getElementById('line1'),
+      document.getElementById('line2'),
+      document.getElementById('line3'),
+      document.getElementById('line4'),
+      document.getElementById('line5')
+    ];
+    const result = document.getElementById('result');
+
+    function resetAll() {
+      algoBox.classList.remove('show');
+      lines.forEach(l => l.classList.remove('show'));
+      result.classList.remove('show');
+    }
+
+    function runAnimation() {
+      resetAll();
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+
+      setTimeout(() => {
+        algoBox.classList.add('show');
+      }, 1000);
+
+      lines.forEach((line, i) => {
+        setTimeout(() => {
+          line.classList.add('show');
+          playBeep();
+        }, 1300 + (i * 250));
+      });
+
+      setTimeout(() => {
+        result.classList.add('show');
+        playSuccess();
+      }, 2800);
+
+      setTimeout(() => {
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 3500);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioContext.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      resetAll();
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioContext.resume();
+        resetAll();
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

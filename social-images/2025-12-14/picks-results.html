@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picks Results - DEC 13</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #1a2d4a; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 25px 45px 20px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 15px; }
+    .side-bars.right { right: 15px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #2d8a4e; }
+    .side-bar.red { background: #c0392b; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header { text-align: center; margin-bottom: 6px; }
+    .header-label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 6px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .date {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 6px;
+      text-decoration-thickness: 3px;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .side-stat {
+      text-align: center;
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 10px;
+      padding: 8px 14px;
+      border: 2px solid rgba(251,191,36,0.5);
+      min-width: 90px;
+    }
+    .side-stat-label {
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .side-stat-value {
+      font-size: 32px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+    }
+    .big-profit-box {
+      background: rgba(15, 30, 50, 0.95);
+      border-radius: 16px;
+      padding: 10px 40px 12px;
+      border: 4px solid #fbbf24;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .big-profit-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .big-profit {
+      font-size: 65px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #ef4444;
+      line-height: 1;
+    }
+
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .result-row {
+      display: flex;
+      align-items: center;
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 10px;
+      padding: 6px 12px;
+      border: 3px solid;
+      gap: 10px;
+      min-height: 58px;
+    }
+    .result-row.win { border-color: #22c55e; }
+    .result-row.loss { border-color: #c0392b; }
+
+    .team-logo {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+    }
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .team-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .team-name {
+      font-size: 19px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0;
+    }
+    .team-line {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .fund-badge {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: white;
+    }
+    .fund-badge.sharp { background: rgba(34, 197, 94, 0.3); border: 2px solid #22c55e; }
+    .fund-badge.vector { background: rgba(156, 163, 175, 0.3); border: 2px solid #9ca3af; }
+    .fund-badge.catalyst { background: rgba(192, 132, 252, 0.3); border: 2px solid #c084fc; }
+    .fund-badge.contra { background: rgba(251, 146, 60, 0.3); border: 2px solid #fb923c; }
+
+    .profit-amount {
+      font-size: 18px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center;
+      min-width: 75px;
+    }
+    .profit-amount.profit-positive { color: #22c55e; }
+    .profit-amount.profit-negative { color: #ef4444; }
+
+    .sport-divider {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 2px 0;
+      margin: 1px 0;
+    }
+    .sport-divider::before,
+    .sport-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+    .sport-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      padding: 2px 8px;
+      background: rgba(30, 41, 59, 0.5);
+      border-radius: 4px;
+    }
+
+    .result-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .result-icon.win {
+      background: linear-gradient(135deg, #2d8a4e 0%, #22c55e 100%);
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    }
+    .result-icon.loss {
+      background: linear-gradient(135deg, #c0392b 0%, #ef4444 100%);
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .logo { width: 50px; height: 50px; margin: 0 auto 8px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 14px; font-weight: 700; letter-spacing: 4px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">PICKS RESULTS</div>
+        <div class="date">DEC 13</div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="side-stat">
+          <div class="side-stat-label">ROI</div>
+          <div class="side-stat-value">-32%</div>
+        </div>
+        <div class="big-profit-box">
+          <div class="big-profit-label">P/L</div>
+          <div class="big-profit">-$496</div>
+        </div>
+        <div class="side-stat">
+          <div class="side-stat-label">RECORD</div>
+          <div class="side-stat-value">4-8</div>
+        </div>
+      </div>
+
+      <div class="results-list">
+        <!-- NHL -->
+        <div class="sport-divider"><span class="sport-label">NHL</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/edm.png" alt="EDM"></div>
+          <div class="team-info">
+            <div class="team-name">Oilers -1.5</div>
+            <div class="team-line">+190 · Won 6-3</div>
+          </div>
+          <div class="fund-badge catalyst">CATALYST</div>
+          <div class="profit-amount profit-positive">+$190</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/ana.png" alt="ANA"></div>
+          <div class="team-info">
+            <div class="team-name">Ducks ML</div>
+            <div class="team-line">+100 · Lost 1-4</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/car.png" alt="CAR"></div>
+          <div class="team-info">
+            <div class="team-name">Hurricanes -1.5</div>
+            <div class="team-line">+158 · Won 4-3 SO</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$125</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png" alt="MTL"></div>
+          <div class="team-info">
+            <div class="team-name">Canadiens ML</div>
+            <div class="team-line">+115 · Lost 4-5 OT</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$200</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/mtl.png" alt="MTL"></div>
+          <div class="team-info">
+            <div class="team-name">Canadiens ML</div>
+            <div class="team-line">+115 · Lost 4-5 OT</div>
+          </div>
+          <div class="fund-badge catalyst">CATALYST</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <!-- NCAAF -->
+        <div class="sport-divider"><span class="sport-label">NCAAF</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2426.png" alt="NAVY"></div>
+          <div class="team-info">
+            <div class="team-name">Army-Navy U38.5</div>
+            <div class="team-line">-110 · Total: 33</div>
+          </div>
+          <div class="fund-badge catalyst">CATALYST</div>
+          <div class="profit-amount profit-positive">+$136</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- NCAAB -->
+        <div class="sport-divider"><span class="sport-label">NCAAB</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/45.png" alt="GW"></div>
+          <div class="team-info">
+            <div class="team-name">G Washington +14.5</div>
+            <div class="team-line">-110 · Lost by 10</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-positive">+$136</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/356.png" alt="ILL"></div>
+          <div class="team-info">
+            <div class="team-name">Illinois -10.5</div>
+            <div class="team-line">-110 · Lost 80-83</div>
+          </div>
+          <div class="fund-badge contra">CONTRA</div>
+          <div class="profit-amount profit-negative">-$100</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/152.png" alt="NCST"></div>
+          <div class="team-info">
+            <div class="team-name">NC State -2.5</div>
+            <div class="team-line">-110 · Lost 76-77 OT</div>
+          </div>
+          <div class="fund-badge contra">CONTRA</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2579.png" alt="SCAR"></div>
+          <div class="team-info">
+            <div class="team-name">S Carolina -23</div>
+            <div class="team-line">-110 · Won by 16</div>
+          </div>
+          <div class="fund-badge contra">CONTRA</div>
+          <div class="profit-amount profit-negative">-$100</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <!-- NBA -->
+        <div class="sport-divider"><span class="sport-label">NBA</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/sa.png" alt="SAS"></div>
+          <div class="team-info">
+            <div class="team-name">SAS/OKC U232.5</div>
+            <div class="team-line">-109 · Total: 220</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-positive">+$92</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/orl.png" alt="ORL"></div>
+          <div class="team-info">
+            <div class="team-name">Magic +4.5</div>
+            <div class="team-line">-102 · Lost by 12</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-negative">-$75</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="../../public/logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

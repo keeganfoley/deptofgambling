@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruins ML Breakdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #00FF00;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #FFB81C;
+      border: 3px solid #FFB81C;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden { display: none; }
+
+    .el {
+      position: absolute;
+      opacity: 0;
+      transform: scale(0.85) translateY(15px);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .el.show {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .el.exit {
+      opacity: 0;
+      transform: scale(0.95) translateY(-10px);
+      transition: all 0.2s ease-out;
+    }
+
+    /* ========== 1. THE WIN - START HERE ========== */
+    .win-section {
+      text-align: center;
+    }
+
+    .win-ticket {
+      background: linear-gradient(145deg, #111, #1a1a1a);
+      border: 4px solid #4ade80;
+      border-radius: 24px;
+      padding: 40px 60px;
+      box-shadow: 0 0 60px rgba(74, 222, 128, 0.3);
+    }
+
+    .win-status {
+      background: linear-gradient(145deg, #16a34a, #15803d);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 8px 20px;
+      border-radius: 20px;
+      letter-spacing: 3px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .win-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .win-team {
+      font-size: 36px;
+      font-weight: 900;
+      color: #FFB81C;
+      margin-bottom: 5px;
+    }
+
+    .win-bet {
+      font-size: 20px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 20px;
+    }
+
+    .win-odds {
+      font-size: 56px;
+      font-weight: 900;
+      color: #4ade80;
+      margin-bottom: 10px;
+    }
+
+    .win-profit {
+      font-size: 28px;
+      font-weight: 700;
+      color: #4ade80;
+    }
+
+    /* ========== 2. MATCHUP ========== */
+    .matchup-section {
+      text-align: center;
+    }
+
+    .matchup-card {
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      border-radius: 24px;
+      padding: 40px 60px;
+      border: 3px solid #333;
+    }
+
+    .matchup-date {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .matchup-teams {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .matchup-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .matchup-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .matchup-name {
+      font-size: 24px;
+      font-weight: 800;
+      color: #fff;
+    }
+
+    .matchup-name.bruins { color: #FFB81C; }
+
+    .matchup-at {
+      font-size: 28px;
+      color: #555;
+      font-weight: 700;
+    }
+
+    .matchup-location {
+      margin-top: 20px;
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 2px;
+    }
+
+    /* ========== 4. THE SETUP - SHARP SCORE ========== */
+    .setup-section {
+      text-align: center;
+    }
+
+    .setup-card {
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      border-radius: 24px;
+      padding: 40px 60px;
+      border: 3px solid #f59e0b;
+    }
+
+    .setup-context {
+      font-size: 14px;
+      color: #f59e0b;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .setup-record {
+      font-size: 80px;
+      font-weight: 900;
+      color: #f59e0b;
+      margin-bottom: 10px;
+    }
+
+    .setup-subtitle {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 2px;
+    }
+
+    /* ========== 5. PUBLIC BETTING ========== */
+    .public-section {
+      text-align: center;
+    }
+
+    .public-header {
+      font-size: 16px;
+      color: #fff;
+      background: rgba(0,0,0,0.85);
+      padding: 12px 30px;
+      border-radius: 25px;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
+    }
+
+    .public-visual {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .public-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .public-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .public-bar-container {
+      width: 120px;
+      height: 20px;
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .public-bar {
+      height: 100%;
+      border-radius: 10px;
+    }
+
+    .public-bar.jets {
+      width: 58%;
+      background: linear-gradient(90deg, #041E42, #0a3d6e);
+    }
+
+    .public-bar.bruins {
+      width: 42%;
+      background: linear-gradient(90deg, #FFB81C, #d4940f);
+    }
+
+    .public-pct {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .public-pct.jets { color: #6b93c4; }
+    .public-pct.bruins { color: #FFB81C; }
+
+    .public-label {
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+
+    .public-vs {
+      font-size: 24px;
+      color: #555;
+      font-weight: 700;
+    }
+
+    .public-insight {
+      margin-top: 25px;
+      font-size: 18px;
+      color: #fff;
+      background: rgba(0,0,0,0.85);
+      padding: 12px 30px;
+      border-radius: 25px;
+    }
+
+    /* ========== 6. THE TELL - MONEY ========== */
+    .money-section {
+      text-align: center;
+    }
+
+    .money-header {
+      font-size: 20px;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(145deg, #7c3aed, #6d28d9);
+      padding: 15px 40px;
+      border-radius: 16px;
+      margin-bottom: 30px;
+      letter-spacing: 1px;
+    }
+
+    .money-explanation {
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      border-radius: 20px;
+      padding: 30px 50px;
+      border: 3px solid #333;
+    }
+
+    .money-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .money-metric {
+      text-align: center;
+    }
+
+    .money-metric-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .money-metric-value {
+      font-size: 42px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .money-metric-value.highlight {
+      color: #4ade80;
+    }
+
+    .money-arrow {
+      font-size: 36px;
+      color: #4ade80;
+    }
+
+    .money-insight {
+      font-size: 16px;
+      color: #fff;
+      background: rgba(74, 222, 128, 0.15);
+      border: 2px solid #4ade80;
+      padding: 15px 30px;
+      border-radius: 12px;
+      margin-top: 10px;
+    }
+
+    /* ========== 7. SHARPS ========== */
+    .sharps-section {
+      text-align: center;
+    }
+
+    .sharps-header {
+      font-size: 16px;
+      color: #fff;
+      background: rgba(0,0,0,0.85);
+      padding: 12px 30px;
+      border-radius: 25px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .sharps-card {
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      border-radius: 20px;
+      padding: 30px 50px;
+      border: 3px solid #f59e0b;
+    }
+
+    .sharps-badge {
+      background: linear-gradient(145deg, #f59e0b, #d97706);
+      padding: 12px 30px;
+      border-radius: 10px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .sharps-badge-text {
+      font-size: 18px;
+      font-weight: 900;
+      color: #000;
+      letter-spacing: 2px;
+    }
+
+    .sharps-target {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .sharps-arrow-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .sharps-arrow {
+      width: 30px;
+      height: 6px;
+      background: #f59e0b;
+      border-radius: 3px;
+      animation: flow 0.4s ease-in-out infinite;
+    }
+
+    .sharps-arrow:nth-child(1) { animation-delay: 0s; }
+    .sharps-arrow:nth-child(2) { animation-delay: 0.1s; }
+    .sharps-arrow:nth-child(3) { animation-delay: 0.2s; }
+
+    @keyframes flow {
+      0%, 100% { opacity: 0.3; transform: scaleX(0.7); }
+      50% { opacity: 1; transform: scaleX(1); }
+    }
+
+    .sharps-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .sharps-team-name {
+      font-size: 28px;
+      font-weight: 900;
+      color: #FFB81C;
+    }
+
+    /* ========== 8. THE VALUE ========== */
+    .value-section {
+      text-align: center;
+    }
+
+    .value-context {
+      font-size: 16px;
+      color: #fff;
+      background: rgba(0,0,0,0.85);
+      padding: 12px 30px;
+      border-radius: 25px;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+    }
+
+    .value-card {
+      background: linear-gradient(145deg, #111, #000);
+      border: 4px solid #FFB81C;
+      border-radius: 24px;
+      padding: 40px 70px;
+    }
+
+    .value-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .value-odds {
+      font-size: 72px;
+      font-weight: 900;
+      color: #4ade80;
+    }
+
+    .value-label {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 3px;
+      margin-top: 10px;
+    }
+
+    /* ========== 9. BRUINS IDENTITY ========== */
+    .identity-section {
+      text-align: center;
+    }
+
+    .identity-card {
+      background: linear-gradient(145deg, #111, #000);
+      border: 4px solid #FFB81C;
+      border-radius: 24px;
+      padding: 40px 60px;
+    }
+
+    .identity-logo {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .identity-name {
+      font-size: 36px;
+      font-weight: 900;
+      color: #FFB81C;
+      margin-bottom: 15px;
+    }
+
+    .identity-stats {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .identity-stat {
+      text-align: center;
+    }
+
+    .identity-stat-value {
+      font-size: 28px;
+      font-weight: 900;
+      color: #4ade80;
+    }
+
+    .identity-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+
+    /* ========== 10. FINAL SCORE ========== */
+    .score-section {
+      text-align: center;
+    }
+
+    .score-header {
+      font-size: 16px;
+      color: #fff;
+      background: rgba(0,0,0,0.85);
+      padding: 12px 30px;
+      border-radius: 25px;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .score-card {
+      background: linear-gradient(145deg, #1a1a1a, #2d2d2d);
+      border-radius: 24px;
+      padding: 30px 50px;
+      border: 3px solid #4ade80;
+    }
+
+    .score-teams {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .score-team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .score-logo {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+    }
+
+    .score-name {
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .score-name.win { color: #FFB81C; }
+    .score-name.lose { color: #6b7280; }
+
+    .score-num {
+      font-size: 64px;
+      font-weight: 900;
+    }
+
+    .score-num.win { color: #4ade80; }
+    .score-num.lose { color: #6b7280; }
+
+    .score-dash {
+      font-size: 48px;
+      color: #555;
+    }
+
+    /* ========== 11. CASHED ========== */
+    .cashed-section {
+      text-align: center;
+    }
+
+    .cashed-card {
+      background: linear-gradient(145deg, #0f3d1a, #1a5c2a);
+      border: 4px solid #4ade80;
+      border-radius: 24px;
+      padding: 50px 80px;
+      box-shadow: 0 0 80px rgba(74, 222, 128, 0.3);
+    }
+
+    .cashed-logo {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+
+    .cashed-amount {
+      font-size: 64px;
+      font-weight: 900;
+      color: #4ade80;
+      margin-bottom: 10px;
+    }
+
+    .cashed-text {
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 5px;
+    }
+
+    /* Controls */
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .timer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-size: 18px;
+      font-weight: 600;
+      font-family: monospace;
+    }
+
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="start-btn" id="startBtn">BOSTON BRUINS ML</button>
+
+    <!-- 1. THE WIN - Start with the result -->
+    <div class="el win-section" id="win">
+      <div class="win-ticket">
+        <div class="win-status">WINNER</div>
+        <img src="../public/logos/bruins.png" alt="Bruins" class="win-logo">
+        <div class="win-team">BOSTON BRUINS</div>
+        <div class="win-bet">MONEYLINE</div>
+        <div class="win-odds">+130</div>
+        <div class="win-profit">+$97</div>
+      </div>
+    </div>
+
+
+    <!-- 3. The Matchup -->
+    <div class="el matchup-section" id="matchup">
+      <div class="matchup-card">
+        <div class="matchup-date">DECEMBER 11, 2025</div>
+        <div class="matchup-teams">
+          <div class="matchup-team">
+            <img src="../public/logos/bruins.png" alt="Bruins" class="matchup-logo">
+            <div class="matchup-name bruins">BRUINS</div>
+          </div>
+          <div class="matchup-at">@</div>
+          <div class="matchup-team">
+            <img src="../public/logos/jets.png" alt="Jets" class="matchup-logo">
+            <div class="matchup-name">JETS</div>
+          </div>
+        </div>
+        <div class="matchup-location">WINNIPEG, MANITOBA</div>
+      </div>
+    </div>
+
+    <!-- 4. The Setup - Sharp Score -->
+    <div class="el setup-section" id="setup">
+      <div class="setup-card">
+        <div class="setup-context">SHARP SCORE</div>
+        <div class="setup-record">3</div>
+        <div class="setup-subtitle">SHARP ACTION LIT</div>
+      </div>
+    </div>
+
+    <!-- 5. Public Betting -->
+    <div class="el public-section" id="public">
+      <div class="public-header">WHERE THE PUBLIC BET</div>
+      <div class="public-visual">
+        <div class="public-side">
+          <img src="../public/logos/jets.png" alt="Jets" class="public-logo">
+          <div class="public-pct jets">58%</div>
+          <div class="public-bar-container">
+            <div class="public-bar jets"></div>
+          </div>
+          <div class="public-label">OF BETS</div>
+        </div>
+        <div class="public-vs">vs</div>
+        <div class="public-side">
+          <img src="../public/logos/bruins.png" alt="Bruins" class="public-logo">
+          <div class="public-pct bruins">42%</div>
+          <div class="public-bar-container">
+            <div class="public-bar bruins"></div>
+          </div>
+          <div class="public-label">OF BETS</div>
+        </div>
+      </div>
+      <div class="public-insight">Slight majority on the home favorite</div>
+    </div>
+
+    <!-- 6. The Tell - Money -->
+    <div class="el money-section" id="money">
+      <div class="money-header">BUT FOLLOW THE MONEY</div>
+      <div class="money-explanation">
+        <div class="money-row">
+          <div class="money-metric">
+            <div class="money-metric-label">TICKETS ON BOSTON</div>
+            <div class="money-metric-value">42%</div>
+          </div>
+          <div class="money-arrow">vs</div>
+          <div class="money-metric">
+            <div class="money-metric-label">DOLLARS ON BOSTON</div>
+            <div class="money-metric-value highlight">48%</div>
+          </div>
+        </div>
+        <div class="money-insight">Fewer bets, but BIGGER bets on Boston</div>
+      </div>
+    </div>
+
+    <!-- 7. Sharps -->
+    <div class="el sharps-section" id="sharps">
+      <div class="sharps-header">WHAT DOES THAT MEAN?</div>
+      <div class="sharps-card">
+        <div class="sharps-badge">
+          <span class="sharps-badge-text">SHARP ACTION</span>
+        </div>
+        <div class="sharps-target">
+          <div class="sharps-arrow-group">
+            <div class="sharps-arrow"></div>
+            <div class="sharps-arrow"></div>
+            <div class="sharps-arrow"></div>
+          </div>
+          <img src="../public/logos/bruins.png" alt="Bruins" class="sharps-logo">
+          <div class="sharps-team-name">BOSTON</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. The Value -->
+    <div class="el value-section" id="value">
+      <div class="value-context">ROAD UNDERDOG</div>
+      <div class="value-card">
+        <img src="../public/logos/bruins.png" alt="Bruins" class="value-logo">
+        <div class="value-odds">+130</div>
+        <div class="value-label">PLUS MONEY VALUE</div>
+      </div>
+    </div>
+
+    <!-- 9. Bruins Identity -->
+    <div class="el identity-section" id="identity">
+      <div class="identity-card">
+        <img src="../public/logos/bruins.png" alt="Bruins" class="identity-logo">
+        <div class="identity-name">BOSTON BRUINS</div>
+        <div class="identity-stats">
+          <div class="identity-stat">
+            <div class="identity-stat-value">10-6-2</div>
+            <div class="identity-stat-label">ROAD RECORD</div>
+          </div>
+          <div class="identity-stat">
+            <div class="identity-stat-value">QUALITY</div>
+            <div class="identity-stat-label">FRANCHISE</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Final Score -->
+    <div class="el score-section" id="score">
+      <div class="score-header">FINAL SCORE</div>
+      <div class="score-card">
+        <div class="score-teams">
+          <div class="score-team">
+            <img src="../public/logos/bruins.png" alt="Bruins" class="score-logo">
+            <div class="score-name win">BOS</div>
+          </div>
+          <div class="score-num win">6</div>
+          <div class="score-dash">-</div>
+          <div class="score-num lose">3</div>
+          <div class="score-team">
+            <img src="../public/logos/jets.png" alt="Jets" class="score-logo">
+            <div class="score-name lose">WPG</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Cashed -->
+    <div class="el cashed-section" id="cashed">
+      <div class="cashed-card">
+        <img src="../public/logos/bruins.png" alt="Bruins" class="cashed-logo">
+        <div class="cashed-amount">+$97</div>
+        <div class="cashed-text">CASHED</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="timer hidden" id="timer">0.0s</div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    // ===== AUDIO ENGINE =====
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playWhoosh() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      const filter = audioCtx.createBiquadFilter();
+
+      osc.connect(filter);
+      filter.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      filter.type = 'lowpass';
+      filter.frequency.setValueAtTime(2000, audioCtx.currentTime);
+      filter.frequency.exponentialRampToValueAtTime(200, audioCtx.currentTime + 0.2);
+
+      osc.type = 'sawtooth';
+      osc.frequency.setValueAtTime(150, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(50, audioCtx.currentTime + 0.2);
+
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playImpact() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(120, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(40, audioCtx.currentTime + 0.15);
+
+      gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.15);
+    }
+
+    function playReveal() {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(400, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(800, audioCtx.currentTime + 0.15);
+
+      gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.2);
+
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.2);
+    }
+
+    function playTell() {
+      // Two-tone reveal
+      [400, 600].forEach((freq, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.15, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.1);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.1);
+        }, i * 100);
+      });
+    }
+
+    function playScore() {
+      // Victory chime - ascending notes
+      [500, 700, 900].forEach((freq, i) => {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.2, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.15);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.15);
+        }, i * 80);
+      });
+    }
+
+    function playCash() {
+      for (let i = 0; i < 3; i++) {
+        setTimeout(() => {
+          const osc = audioCtx.createOscillator();
+          const gain = audioCtx.createGain();
+          osc.connect(gain);
+          gain.connect(audioCtx.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(1000 + i * 300, audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.18, audioCtx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+          osc.start();
+          osc.stop(audioCtx.currentTime + 0.12);
+        }, i * 100);
+      }
+    }
+
+    // ===== ELEMENTS =====
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const timer = document.getElementById('timer');
+
+    const elements = {
+      win: document.getElementById('win'),
+      matchup: document.getElementById('matchup'),
+      setup: document.getElementById('setup'),
+      public: document.getElementById('public'),
+      money: document.getElementById('money'),
+      sharps: document.getElementById('sharps'),
+      value: document.getElementById('value'),
+      identity: document.getElementById('identity'),
+      score: document.getElementById('score'),
+      cashed: document.getElementById('cashed')
+    };
+
+    let timerInterval, startTime;
+
+    function updateTimer() {
+      timer.textContent = ((Date.now() - startTime) / 1000).toFixed(1) + 's';
+    }
+
+    function resetAll() {
+      Object.values(elements).forEach(el => {
+        el.classList.remove('show', 'exit');
+      });
+    }
+
+    function show(el, sound = playWhoosh) {
+      el.classList.remove('exit');
+      el.classList.add('show');
+      if (sound) sound();
+    }
+
+    function hide(el) {
+      el.classList.remove('show');
+      el.classList.add('exit');
+    }
+
+    // ===== TIMELINE - SLOWER ~35 seconds =====
+    async function runAnimation() {
+      resetAll();
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+      timer.classList.remove('hidden');
+
+      startTime = Date.now();
+      timerInterval = setInterval(updateTimer, 100);
+
+      // 0.5s: Win ticket - START WITH THE RESULT
+      setTimeout(() => show(elements.win, playCash), 500);
+
+      // 4s: Matchup
+      setTimeout(() => hide(elements.win), 4000);
+      setTimeout(() => show(elements.matchup, playImpact), 4200);
+
+      // 8s: Setup - Winnipeg
+      setTimeout(() => hide(elements.matchup), 8000);
+      setTimeout(() => show(elements.setup, playWhoosh), 8200);
+
+      // 12s: Public
+      setTimeout(() => hide(elements.setup), 12000);
+      setTimeout(() => show(elements.public, playWhoosh), 12200);
+
+      // 16s: Money divergence
+      setTimeout(() => hide(elements.public), 16000);
+      setTimeout(() => show(elements.money, playTell), 16200);
+
+      // 20s: Sharps
+      setTimeout(() => hide(elements.money), 20000);
+      setTimeout(() => show(elements.sharps, playReveal), 20200);
+
+      // 24s: Value
+      setTimeout(() => hide(elements.sharps), 24000);
+      setTimeout(() => show(elements.value, playImpact), 24200);
+
+      // 27s: Identity
+      setTimeout(() => hide(elements.value), 27000);
+      setTimeout(() => show(elements.identity, playWhoosh), 27200);
+
+      // 30s: Final score
+      setTimeout(() => hide(elements.identity), 30000);
+      setTimeout(() => show(elements.score, playScore), 30200);
+
+      // 33s: Cashed
+      setTimeout(() => hide(elements.score), 33000);
+      setTimeout(() => show(elements.cashed, playCash), 33200);
+
+      // 36s: Done
+      setTimeout(() => {
+        clearInterval(timerInterval);
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 36000);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioCtx.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      resetAll();
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      timer.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioCtx.resume();
+        resetAll();
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        timer.classList.toggle('hidden');
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

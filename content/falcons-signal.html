@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Signal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #FF00FF;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .versus {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      opacity: 0;
+      transition: all 0.5s ease-out;
+    }
+
+    .side.show {
+      opacity: 1;
+    }
+
+    .side.public {
+      transform: translateX(-50px);
+    }
+
+    .side.public.show {
+      transform: translateX(0);
+    }
+
+    .side.sharps {
+      transform: translateX(50px);
+    }
+
+    .side.sharps.show {
+      transform: translateX(0);
+    }
+
+    .side-box {
+      padding: 30px 50px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .public .side-box {
+      background: linear-gradient(145deg, #dc2626, #b91c1c);
+      box-shadow: 0 15px 50px rgba(220, 38, 38, 0.4);
+    }
+
+    .sharps .side-box {
+      background: linear-gradient(145deg, #16a34a, #15803d);
+      box-shadow: 0 15px 50px rgba(22, 163, 74, 0.4);
+    }
+
+    .side-label {
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .side-value {
+      font-size: 48px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .side-team {
+      font-size: 18px;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(0,0,0,0.3);
+      padding: 8px 20px;
+      border-radius: 8px;
+    }
+
+    .vs {
+      font-size: 32px;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: all 0.3s ease-out;
+    }
+
+    .vs.show {
+      opacity: 1;
+    }
+
+    .result {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .result.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .arrow-down {
+      font-size: 48px;
+      color: #16a34a;
+      animation: bounce 0.6s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .follow-badge {
+      background: linear-gradient(145deg, #f59e0b, #d97706);
+      padding: 20px 40px;
+      border-radius: 16px;
+      box-shadow: 0 15px 50px rgba(245, 158, 11, 0.5);
+    }
+
+    .follow-text {
+      font-size: 28px;
+      font-weight: 900;
+      color: #000;
+      letter-spacing: 1px;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .control-btn.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <button class="start-btn" id="startBtn">TAP TO START</button>
+
+  <div class="container">
+    <div class="versus">
+      <div class="side public" id="public">
+        <div class="side-box">
+          <div class="side-label">Public</div>
+          <div class="side-value">88%</div>
+        </div>
+        <div class="side-team">TAMPA</div>
+      </div>
+
+      <div class="vs" id="vs">VS</div>
+
+      <div class="side sharps" id="sharps">
+        <div class="side-box">
+          <div class="side-label">Sharps</div>
+          <div class="side-value">PROS</div>
+        </div>
+        <div class="side-team">ATLANTA</div>
+      </div>
+    </div>
+
+    <div class="result" id="result">
+      <div class="arrow-down">↓</div>
+      <div class="follow-badge">
+        <div class="follow-text">FOLLOW THE MONEY</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playWhoosh() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(800, audioContext.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.1);
+    }
+
+    function playPop() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(600, audioContext.currentTime);
+      osc.frequency.setValueAtTime(900, audioContext.currentTime + 0.1);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.2);
+    }
+
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const publicSide = document.getElementById('public');
+    const vs = document.getElementById('vs');
+    const sharps = document.getElementById('sharps');
+    const result = document.getElementById('result');
+
+    function resetAll() {
+      publicSide.classList.remove('show');
+      vs.classList.remove('show');
+      sharps.classList.remove('show');
+      result.classList.remove('show');
+    }
+
+    function runAnimation() {
+      resetAll();
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+
+      setTimeout(() => {
+        publicSide.classList.add('show');
+        playWhoosh();
+      }, 1000);
+
+      setTimeout(() => {
+        vs.classList.add('show');
+      }, 1400);
+
+      setTimeout(() => {
+        sharps.classList.add('show');
+        playWhoosh();
+      }, 1800);
+
+      setTimeout(() => {
+        result.classList.add('show');
+        playPop();
+      }, 2600);
+
+      setTimeout(() => {
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 3500);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioContext.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      resetAll();
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioContext.resume();
+        resetAll();
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

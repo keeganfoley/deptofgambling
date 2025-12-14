@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>December 11 Profit</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #ff00ff;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      position: relative;
+    }
+
+    /* Play button */
+    .play-btn {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100px;
+      height: 100px;
+      background: rgba(0,0,0,0.7);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s, opacity 0.3s;
+    }
+
+    .play-btn:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    .play-btn::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-left: 35px solid white;
+      border-top: 22px solid transparent;
+      border-bottom: 22px solid transparent;
+      margin-left: 8px;
+    }
+
+    .play-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Record */
+    .record {
+      font-size: 120px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: -5px;
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .record.show {
+      animation: popIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes popIn {
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Counter wrapper */
+    .counter-wrapper {
+      margin-top: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .counter-wrapper.show {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Odometer style counter */
+    .counter {
+      display: inline-flex;
+      align-items: center;
+      background: #000000;
+      padding: 20px 40px;
+      border-radius: 16px;
+      border: 3px solid #22c55e;
+      box-shadow: none;
+    }
+
+    .counter-prefix {
+      font-size: 80px;
+      font-weight: 900;
+      color: #22c55e;
+      margin-right: 5px;
+    }
+
+    .counter-dollar {
+      font-size: 80px;
+      font-weight: 900;
+      color: #22c55e;
+      margin-right: 10px;
+    }
+
+    /* Individual digit */
+    .digit-container {
+      width: 65px;
+      height: 100px;
+      overflow: hidden;
+      position: relative;
+      background: rgba(34, 197, 94, 0.1);
+      border-radius: 8px;
+      margin: 0 3px;
+    }
+
+    .digit-roller {
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.15s ease-out;
+    }
+
+    .digit {
+      width: 65px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 72px;
+      font-weight: 900;
+      color: #22c55e;
+      flex-shrink: 0;
+    }
+
+
+    .counter.done {
+      animation: counterPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes counterPop {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.08); }
+      100% { transform: scale(1); }
+    }
+
+    /* Flicker effect while counting */
+    .digit-container.active {
+      background: rgba(34, 197, 94, 0.2);
+    }
+
+    .digit-container.active .digit {
+      animation: flicker 0.05s linear infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+  </style>
+</head>
+<body>
+  <button class="play-btn" id="playBtn" onclick="startAnimation()"></button>
+
+  <div class="container" id="container">
+    <div class="record" id="record">7-2</div>
+    <div class="counter-wrapper" id="counterWrapper">
+      <div class="counter" id="counter">
+        <span class="counter-prefix">+</span>
+        <span class="counter-dollar">$</span>
+        <div class="digit-container" id="d1">
+          <div class="digit-roller">
+            <div class="digit">0</div>
+            <div class="digit">1</div>
+            <div class="digit">2</div>
+            <div class="digit">3</div>
+            <div class="digit">4</div>
+            <div class="digit">5</div>
+            <div class="digit">6</div>
+            <div class="digit">7</div>
+            <div class="digit">8</div>
+            <div class="digit">9</div>
+          </div>
+        </div>
+        <div class="digit-container" id="d2">
+          <div class="digit-roller">
+            <div class="digit">0</div>
+            <div class="digit">1</div>
+            <div class="digit">2</div>
+            <div class="digit">3</div>
+            <div class="digit">4</div>
+            <div class="digit">5</div>
+            <div class="digit">6</div>
+            <div class="digit">7</div>
+            <div class="digit">8</div>
+            <div class="digit">9</div>
+          </div>
+        </div>
+        <div class="digit-container" id="d3">
+          <div class="digit-roller">
+            <div class="digit">0</div>
+            <div class="digit">1</div>
+            <div class="digit">2</div>
+            <div class="digit">3</div>
+            <div class="digit">4</div>
+            <div class="digit">5</div>
+            <div class="digit">6</div>
+            <div class="digit">7</div>
+            <div class="digit">8</div>
+            <div class="digit">9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function startAnimation() {
+      const playBtn = document.getElementById('playBtn');
+      const record = document.getElementById('record');
+      const counterWrapper = document.getElementById('counterWrapper');
+      const counter = document.getElementById('counter');
+
+      playBtn.classList.add('hidden');
+
+      setTimeout(() => {
+        record.classList.add('show');
+
+        setTimeout(() => {
+          counterWrapper.classList.add('show');
+
+          setTimeout(() => {
+            animateCounter(641, 2500);
+          }, 400);
+        }, 600);
+      }, 1000);
+    }
+
+    function animateCounter(target, duration) {
+      const d1 = document.getElementById('d1');
+      const d2 = document.getElementById('d2');
+      const d3 = document.getElementById('d3');
+      const counter = document.getElementById('counter');
+
+      const digits = [d1, d2, d3];
+      const rollers = digits.map(d => d.querySelector('.digit-roller'));
+
+      const startTime = performance.now();
+
+      // Activate flicker
+      digits.forEach(d => d.classList.add('active'));
+
+      function easeOutQuart(t) {
+        return 1 - Math.pow(1 - t, 4);
+      }
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        const current = Math.floor(target * easedProgress);
+
+        // Get individual digits
+        const hundreds = Math.floor(current / 100);
+        const tens = Math.floor((current % 100) / 10);
+        const ones = current % 10;
+
+        // Animate rollers
+        rollers[0].style.transform = `translateY(-${hundreds * 100}px)`;
+        rollers[1].style.transform = `translateY(-${tens * 100}px)`;
+        rollers[2].style.transform = `translateY(-${ones * 100}px)`;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          // Done - remove flicker, add celebration
+          digits.forEach(d => d.classList.remove('active'));
+          counter.classList.add('done');
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+  </script>
+</body>
+</html>
