@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Picks - DEC 14</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #1a2d4a; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 50px 140px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .candles-bg {
+      position: absolute;
+      bottom: 160px;
+      left: 0; right: 0;
+      height: 280px;
+      opacity: 0.12;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 80px;
+    }
+    .candle { display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 3px; border-radius: 2px; }
+    .body { width: 16px; border-radius: 3px; }
+    .candle.green .wick, .candle.green .body { background: #22c55e; }
+    .candle.red .wick, .candle.red .body { background: #dc2626; }
+
+    .volume-bg {
+      position: absolute;
+      bottom: 140px; left: 0; right: 0;
+      height: 80px;
+      opacity: 0.10;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: 18px;
+      padding: 0 60px 20px;
+    }
+    .vol-bar { width: 14px; border-radius: 2px 2px 0 0; }
+    .vol-bar.green { background: #22c55e; }
+    .vol-bar.red { background: #dc2626; }
+
+    .line-chart {
+      position: absolute;
+      bottom: 200px; left: 100px; right: 100px;
+      height: 120px;
+      opacity: 0.08;
+      border-bottom: 3px solid #fbbf24;
+      background: linear-gradient(to top, rgba(251,191,36,0.15), transparent);
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 15px; }
+    .side-bars.right { right: 15px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #22c55e; }
+    .side-bar.red { background: #dc2626; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header { text-align: center; margin-bottom: 22px; }
+    .header-label {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 12px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .date {
+      font-size: 76px;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 12px;
+      text-decoration-thickness: 5px;
+    }
+
+    .picks-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .sport-section { }
+    .sport-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 12px;
+    }
+    .sport-header::before, .sport-header::after {
+      content: '';
+      height: 2px;
+      width: 130px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.6));
+    }
+    .sport-header::after {
+      background: linear-gradient(90deg, rgba(251,191,36,0.6), transparent);
+    }
+    .sport-title {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: 7px;
+      color: #FFFFFF;
+      background: rgba(0,0,0,0.3);
+      padding: 6px 28px;
+      border-radius: 4px;
+    }
+
+    .picks-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+    .picks-row:last-child { margin-bottom: 0; }
+
+    .pick-card {
+      flex: 1;
+      max-width: 465px;
+      background: rgba(30, 41, 59, 0.65);
+      backdrop-filter: blur(10px);
+      border-radius: 14px;
+      padding: 16px 20px;
+      border: 4px solid;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 95px;
+    }
+    .pick-card.sharp { border-color: #22c55e; }
+    .pick-card.vector { border-color: #9ca3af; }
+    .pick-card.catalyst { border-color: #c084fc; }
+    .pick-card.contra { border-color: #fb923c; }
+    .pick-card.single {
+      flex: 0 0 465px;
+    }
+
+    .pick-left { display: flex; align-items: center; gap: 14px; flex: 1; min-width: 0; }
+    .team-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.1);
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .team-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+    .team-row { display: flex; align-items: baseline; }
+    .team-name { font-size: 28px; font-weight: 700; color: white; }
+    .opponent { font-size: 15px; font-weight: 500; color: rgba(255,255,255,0.5); margin-left: 6px; }
+    .pick-line { font-size: 22px; font-family: 'JetBrains Mono', monospace; color: rgba(255,255,255,0.9); }
+    .pick-odds { color: #fbbf24; font-weight: 700; }
+
+    .units {
+      font-size: 30px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.85);
+      background: rgba(255,255,255,0.12);
+      padding: 14px 18px;
+      border-radius: 12px;
+    }
+
+    .stats-bar {
+      display: flex;
+      background: rgba(30, 41, 59, 0.65);
+      backdrop-filter: blur(10px);
+      border: 4px solid #fbbf24;
+      border-radius: 16px;
+      margin-top: auto;
+      overflow: hidden;
+    }
+    .stat-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 10px;
+      min-height: 95px;
+    }
+    .stat-col:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat-value {
+      font-size: 40px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.85);
+      line-height: 1;
+    }
+    .stat-value.gold {
+      font-size: 48px;
+      color: #fbbf24;
+    }
+    .stat-label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.45);
+      margin-top: 6px;
+    }
+    .stat-label.gold {
+      font-size: 15px;
+      letter-spacing: 4px;
+      color: #fbbf24;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 70px; height: 70px; margin: 0 auto 12px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 18px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="candles-bg">
+      <div class="candle green"><div class="wick" style="height:140px"></div><div class="body" style="height:80px"></div></div>
+      <div class="candle red"><div class="wick" style="height:100px"></div><div class="body" style="height:50px"></div></div>
+      <div class="candle green"><div class="wick" style="height:160px"></div><div class="body" style="height:90px"></div></div>
+      <div class="candle red"><div class="wick" style="height:80px"></div><div class="body" style="height:45px"></div></div>
+      <div class="candle green"><div class="wick" style="height:130px"></div><div class="body" style="height:70px"></div></div>
+      <div class="candle green"><div class="wick" style="height:150px"></div><div class="body" style="height:85px"></div></div>
+      <div class="candle red"><div class="wick" style="height:110px"></div><div class="body" style="height:55px"></div></div>
+      <div class="candle green"><div class="wick" style="height:170px"></div><div class="body" style="height:95px"></div></div>
+      <div class="candle red"><div class="wick" style="height:90px"></div><div class="body" style="height:40px"></div></div>
+      <div class="candle green"><div class="wick" style="height:145px"></div><div class="body" style="height:75px"></div></div>
+      <div class="candle green"><div class="wick" style="height:155px"></div><div class="body" style="height:88px"></div></div>
+      <div class="candle red"><div class="wick" style="height:105px"></div><div class="body" style="height:52px"></div></div>
+      <div class="candle green"><div class="wick" style="height:135px"></div><div class="body" style="height:72px"></div></div>
+      <div class="candle green"><div class="wick" style="height:165px"></div><div class="body" style="height:92px"></div></div>
+      <div class="candle red"><div class="wick" style="height:95px"></div><div class="body" style="height:48px"></div></div>
+      <div class="candle green"><div class="wick" style="height:140px"></div><div class="body" style="height:78px"></div></div>
+      <div class="candle red"><div class="wick" style="height:85px"></div><div class="body" style="height:42px"></div></div>
+      <div class="candle green"><div class="wick" style="height:150px"></div><div class="body" style="height:82px"></div></div>
+      <div class="candle green"><div class="wick" style="height:175px"></div><div class="body" style="height:98px"></div></div>
+      <div class="candle red"><div class="wick" style="height:100px"></div><div class="body" style="height:50px"></div></div>
+      <div class="candle green"><div class="wick" style="height:160px"></div><div class="body" style="height:88px"></div></div>
+      <div class="candle green"><div class="wick" style="height:145px"></div><div class="body" style="height:76px"></div></div>
+    </div>
+
+    <div class="line-chart"></div>
+
+    <div class="volume-bg">
+      <div class="vol-bar green" style="height:35px"></div>
+      <div class="vol-bar red" style="height:25px"></div>
+      <div class="vol-bar green" style="height:40px"></div>
+      <div class="vol-bar red" style="height:20px"></div>
+      <div class="vol-bar green" style="height:45px"></div>
+      <div class="vol-bar green" style="height:30px"></div>
+      <div class="vol-bar red" style="height:22px"></div>
+      <div class="vol-bar green" style="height:38px"></div>
+      <div class="vol-bar red" style="height:28px"></div>
+      <div class="vol-bar green" style="height:42px"></div>
+      <div class="vol-bar green" style="height:32px"></div>
+      <div class="vol-bar red" style="height:26px"></div>
+      <div class="vol-bar green" style="height:36px"></div>
+      <div class="vol-bar green" style="height:44px"></div>
+      <div class="vol-bar red" style="height:24px"></div>
+      <div class="vol-bar green" style="height:40px"></div>
+      <div class="vol-bar red" style="height:30px"></div>
+      <div class="vol-bar green" style="height:46px"></div>
+      <div class="vol-bar green" style="height:34px"></div>
+      <div class="vol-bar red" style="height:28px"></div>
+      <div class="vol-bar green" style="height:42px"></div>
+      <div class="vol-bar green" style="height:38px"></div>
+    </div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">TODAY'S PICKS</div>
+        <div class="date">DEC 14</div>
+      </div>
+
+      <div class="picks-container">
+        <!-- NFL -->
+        <div class="sport-section">
+          <div class="sport-header">
+            <div class="sport-title">NFL</div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Bills</span>
+                    <span class="opponent">@ NE</span>
+                  </div>
+                  <div class="pick-line">-2.5 <span class="pick-odds">(-105)</span></div>
+                </div>
+              </div>
+              <div class="units">1.5U</div>
+            </div>
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Ravens</span>
+                    <span class="opponent">@ CIN</span>
+                  </div>
+                  <div class="pick-line">-2.5 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card sharp single">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Saints</span>
+                    <span class="opponent">vs CAR</span>
+                  </div>
+                  <div class="pick-line">+1.5 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">1.5U</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NBA -->
+        <div class="sport-section">
+          <div class="sport-header">
+            <div class="sport-title">NBA</div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nba/500/wsh.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Wizards</span>
+                    <span class="opponent">@ IND</span>
+                  </div>
+                  <div class="pick-line">+10 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nba/500/bkn.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Nets</span>
+                    <span class="opponent">vs MIL</span>
+                  </div>
+                  <div class="pick-line">+1.5 <span class="pick-odds">(-102)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NHL -->
+        <div class="sport-section">
+          <div class="sport-header">
+            <div class="sport-title">NHL</div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card sharp single">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/nhl/500/bos.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Bruins</span>
+                    <span class="opponent">@ MIN</span>
+                  </div>
+                  <div class="pick-line">ML <span class="pick-odds">(+120)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCAAB -->
+        <div class="sport-section">
+          <div class="sport-header">
+            <div class="sport-title">NCAAB</div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/151.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">E. Carolina</span>
+                  </div>
+                  <div class="pick-line">+1.5 <span class="pick-odds">(-125)</span></div>
+                </div>
+              </div>
+              <div class="units">0.75U</div>
+            </div>
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/5.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">UAB</span>
+                  </div>
+                  <div class="pick-line">-6.5 <span class="pick-odds">(-105)</span></div>
+                </div>
+              </div>
+              <div class="units">1.0U</div>
+            </div>
+          </div>
+          <div class="picks-row">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2130.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Chicago St</span>
+                  </div>
+                  <div class="pick-line">+13.5 <span class="pick-odds">(-109)</span></div>
+                </div>
+              </div>
+              <div class="units">0.75U</div>
+            </div>
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img src="https://a.espncdn.com/i/teamlogos/ncaa/500/68.png" class="team-logo">
+                <div class="team-info">
+                  <div class="team-row">
+                    <span class="team-name">Boise St</span>
+                  </div>
+                  <div class="pick-line">+2.5 <span class="pick-odds">(-110)</span></div>
+                </div>
+              </div>
+              <div class="units">0.5U</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-bar">
+          <div class="stat-col">
+            <div class="stat-value">10</div>
+            <div class="stat-label">PICKS</div>
+          </div>
+          <div class="stat-col">
+            <div class="stat-value gold">$1,000</div>
+            <div class="stat-label gold">EXPOSURE</div>
+          </div>
+          <div class="stat-col">
+            <div class="stat-value">10.0U</div>
+            <div class="stat-label">UNITS</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>
