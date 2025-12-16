@@ -273,73 +273,80 @@ To add/remove picks:
 
 
 ============================================================
-PICKS RESULTS TEMPLATE (LOCKED)
+PICKS RESULTS TEMPLATE (LOCKED - Updated Dec 16, 2024)
 ============================================================
 
 DESIGN:
-- Shows settled bets with outcomes (wins first, losses after)
-- Stats row: Record | Profit (no ROI)
-- Each result row fills space proportionally (flex: 1)
+- Hero stats: ROI (left) | BIG P/L 100px (center) | RECORD (right)
+- Results organized BY SPORT (NHL, NBA, NFL, NCAAB, etc.)
+- Within each sport: wins first, then losses
+- Team name + odds/line on SAME ROW (horizontal, side by side)
+- Bigger fonts for readability
+- ESPN CDN for team logos
 - Green border for wins, red border for losses
 - Checkmark (✓) for wins, X (✗) for losses
 
-PLACEHOLDERS:
-{{DATE}}         - "DECEMBER 4"
-{{RECORD}}       - "5-2"
-{{PROFIT}}       - "+$634" or "-$150"
-{{PROFIT_CLASS}} - "green" or "red"
-{{RESULT_ROWS}}  - Generated dynamically (wins first, then losses)
+LAYOUT PER ROW:
+[Logo 70px] [Team Name 32px] [Line 22px] [Fund Badge] [Profit 32px] [Icon 55px]
 
-RESULT ROW STRUCTURE:
-- Team logo (70px)
-- Team name (28px font)
-- Line/odds (20px font, e.g., "ML (-105)" or "+2.5 (+100)")
-- Fund badge (sharp/vector/catalyst/contra)
-- PROFIT AMOUNT (28px font, green for wins, red for losses)
-- Result icon (checkmark or X)
+SIZING BY PICK COUNT:
+- 7 picks (standard): gap 8px, logo 70px, name 32px, line 22px, profit 32px
+- 8-9 picks (compact): gap 6px, logo 65px, name 30px, line 20px, profit 30px
+- 10-12 picks (very compact): gap 5px, logo 55px, name 26px, line 18px, profit 26px
+- 13+ picks (ultra compact): gap 4px, logo 50px, name 24px, line 16px, profit 24px
+
+PLACEHOLDERS:
+{{DATE}}         - "DECEMBER 15"
+{{ROI}}          - "+36%" or "-5%"
+{{RECORD}}       - "5-2"
+{{PROFIT}}       - "+$258" or "-$150"
+{{PROFIT_CLASS}} - "" (positive/green) or "negative" (red)
+{{RESULT_ROWS}}  - Generated dynamically by sport
+{{LOGO_PATH}}    - Absolute path to DOG logo
 
 GROUPED BY SPORT - Always organize results by sport with dividers:
 
 SPORT DIVIDER (insert before each sport section):
 <div class="sport-divider"><span class="sport-label">NHL</span></div>
 
-SPORT ORDER: NHL, NFL, NBA, NCAAB (or whatever sports are present)
+SPORT ORDER: NHL, NBA, NFL, NCAAB (or whatever sports are present)
 Within each sport: wins first, then losses
 
-WIN ROW:
+WIN ROW (horizontal team name + line):
 <div class="result-row win">
-  <div class="team-logo"><img src="../../public/logos/TEAM.png"></div>
+  <div class="team-logo"><img src="ESPN_CDN_URL" alt="TEAM"></div>
   <div class="team-info">
-    <div class="team-name">Team Name</div>
-    <div class="team-line">ML (-105)</div>
+    <div class="team-name">Ducks</div>
+    <div class="team-line">ML (+100)</div>
   </div>
   <div class="fund-badge sharp">SHARP</div>
-  <div class="profit-amount profit-positive">+$190</div>
+  <div class="profit-amount profit-positive">+$100</div>
   <div class="result-icon win">✓</div>
 </div>
 
 LOSS ROW:
 <div class="result-row loss">
-  <div class="team-logo"><img src="../../public/logos/TEAM.png"></div>
+  <div class="team-logo"><img src="ESPN_CDN_URL" alt="TEAM"></div>
   <div class="team-info">
-    <div class="team-name">Team Name</div>
-    <div class="team-line">ML (-105)</div>
+    <div class="team-name">Gardner-Webb</div>
+    <div class="team-line">+10.5 (+100)</div>
   </div>
   <div class="fund-badge vector">VECTOR</div>
-  <div class="profit-amount profit-negative">-$100</div>
+  <div class="profit-amount profit-negative">-$75</div>
   <div class="result-icon loss">✗</div>
 </div>
+
+ESPN LOGO CDN:
+- NHL: https://a.espncdn.com/i/teamlogos/nhl/500/TEAM.png (ana, fla, nsh, etc.)
+- NBA: https://a.espncdn.com/i/teamlogos/nba/500/TEAM.png (tor, mem, etc.)
+- NFL: https://a.espncdn.com/i/teamlogos/nfl/500/TEAM.png (mia, pit, etc.)
+- NCAAB: https://a.espncdn.com/i/teamlogos/ncaa/500/TEAM_ID.png (use ESPN ID)
 
 PROFIT CALCULATION:
 - Win at positive odds (+150): profit = stake * (odds / 100)
 - Win at negative odds (-110): profit = stake * (100 / abs(odds))
 - Loss: profit = -stake
 - Round to whole dollars for display
-
-LOGO NAMING (IMPORTANT - avoid confusion):
-- NHL LA Kings: la-kings.png
-- NBA Sacramento Kings: kings.png
-- Always use sport-specific names when teams share names
 
 FUND BADGE CLASSES: sharp, vector, catalyst, contra
 

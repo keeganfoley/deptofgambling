@@ -1,140 +1,8 @@
-<!--
-  ============================================================
-  PICKS RESULTS MASTER TEMPLATE - LOCKED
-  ============================================================
-  Location: templates/picks-results-master-template.html
-  Status: LOCKED - DO NOT MODIFY WITHOUT APPROVAL
-  Last Updated: December 16, 2024
-
-  DESIGN FEATURES:
-  - Hero stats: ROI (left) | BIG P/L (center, 100px) | RECORD (right)
-  - Results organized BY SPORT (NHL, NBA, NFL, NCAAB, etc.)
-  - Within each sport: wins first, then losses
-  - Team name + odds/line on SAME ROW (horizontal, side by side)
-  - Bigger fonts for readability
-  - ESPN CDN for team logos
-  - Flex: 1 rows auto-size to fill space
-
-  LAYOUT PER ROW:
-  [Logo 70px] [Team Name 32px] [Line 22px] [Fund Badge] [Profit 32px] [Icon 55px]
-
-  ============================================================
-  SIZING BY PICK COUNT
-  ============================================================
-
-  7 PICKS (Standard - like Dec 15):
-  - gap: 8px between rows
-  - .team-logo: 70px
-  - .team-name: 32px
-  - .team-line: 22px
-  - .profit-amount: 32px
-  - .result-icon: 55px
-
-  8-9 PICKS (Slightly Compact):
-  - gap: 6px between rows
-  - .team-logo: 65px
-  - .team-name: 30px
-  - .team-line: 20px
-  - .profit-amount: 30px
-  - .result-icon: 50px
-
-  10-12 PICKS (Compact):
-  - gap: 5px between rows
-  - .team-logo: 55px
-  - .team-name: 26px
-  - .team-line: 18px
-  - .profit-amount: 26px
-  - .result-icon: 45px
-  - .sport-divider padding: 2px 0
-
-  13+ PICKS (Very Compact):
-  - gap: 4px between rows
-  - .team-logo: 50px
-  - .team-name: 24px
-  - .team-line: 16px
-  - .profit-amount: 24px
-  - .result-icon: 40px
-  - .sport-divider padding: 1px 0
-
-  ============================================================
-  PLACEHOLDERS
-  ============================================================
-  {{DATE}}           - "DECEMBER 15"
-  {{ROI}}            - "+36%" or "-5%"
-  {{RECORD}}         - "5-2"
-  {{PROFIT}}         - "+$258" or "-$150"
-  {{PROFIT_CLASS}}   - "" (positive/green) or "negative" (red)
-  {{RESULT_ROWS}}    - Generated dynamically by sport
-
-  ============================================================
-  SPORT ORGANIZATION
-  ============================================================
-  Order sports by volume/importance: NHL, NBA, NFL, NCAAB
-  Within each sport: WINS first, then LOSSES
-
-  SPORT DIVIDER:
-  <div class="sport-divider"><span class="sport-label">NHL</span></div>
-
-  ============================================================
-  RESULT ROW TEMPLATES
-  ============================================================
-
-  WIN ROW:
-  <div class="result-row win">
-    <div class="team-logo"><img src="ESPN_CDN_URL" alt="TEAM"></div>
-    <div class="team-info">
-      <div class="team-name">Team Name</div>
-      <div class="team-line">ML (+100)</div>
-    </div>
-    <div class="fund-badge FUND">FUND</div>
-    <div class="profit-amount profit-positive">+$XXX</div>
-    <div class="result-icon win">✓</div>
-  </div>
-
-  LOSS ROW:
-  <div class="result-row loss">
-    <div class="team-logo"><img src="ESPN_CDN_URL" alt="TEAM"></div>
-    <div class="team-info">
-      <div class="team-name">Team Name</div>
-      <div class="team-line">+5.5 (-110)</div>
-    </div>
-    <div class="fund-badge FUND">FUND</div>
-    <div class="profit-amount profit-negative">-$XXX</div>
-    <div class="result-icon loss">✗</div>
-  </div>
-
-  ============================================================
-  ESPN LOGO CDN
-  ============================================================
-  NHL:   https://a.espncdn.com/i/teamlogos/nhl/500/TEAM.png
-  NBA:   https://a.espncdn.com/i/teamlogos/nba/500/TEAM.png
-  NFL:   https://a.espncdn.com/i/teamlogos/nfl/500/TEAM.png
-  NCAAB: https://a.espncdn.com/i/teamlogos/ncaa/500/TEAM_ID.png
-  NCAAF: https://a.espncdn.com/i/teamlogos/ncaa/500/TEAM_ID.png
-
-  Common team codes:
-  - NHL: ana, fla, nsh, nyr, bos, etc.
-  - NBA: tor, mem, lac, mia, etc.
-  - NFL: mia, pit, buf, etc.
-  - NCAAB: Use ESPN team ID number (e.g., 2241 for Gardner-Webb)
-
-  ============================================================
-  FUND BADGE CLASSES
-  ============================================================
-  .fund-badge.sharp    - Green border (#22c55e)
-  .fund-badge.vector   - Gray border (#9ca3af)
-  .fund-badge.catalyst - Purple border (#c084fc)
-  .fund-badge.contra   - Orange border (#fb923c)
-
-  ============================================================
-  OUTPUT: 1080x1350px Instagram portrait
-  ============================================================
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Picks Results - {{DATE}}</title>
+  <title>Picks Results - DECEMBER 15</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -182,7 +50,6 @@
       padding-bottom: 110px;
     }
 
-    /* HEADER */
     .header { text-align: center; margin-bottom: 8px; }
     .header-label {
       font-size: 16px;
@@ -201,7 +68,6 @@
       text-decoration-thickness: 3px;
     }
 
-    /* HERO STATS */
     .hero-stats {
       display: flex;
       justify-content: center;
@@ -254,7 +120,6 @@
     }
     .big-profit.negative { color: #ef4444; }
 
-    /* RESULTS LIST - Flex fills space */
     .results-list {
       display: flex;
       flex-direction: column;
@@ -262,7 +127,6 @@
       flex: 1;
     }
 
-    /* RESULT ROW - Each row fills proportionally */
     .result-row {
       display: flex;
       align-items: center;
@@ -276,7 +140,6 @@
     .result-row.win { border-color: #22c55e; }
     .result-row.loss { border-color: #c0392b; }
 
-    /* TEAM LOGO */
     .team-logo {
       width: 70px;
       height: 70px;
@@ -288,7 +151,6 @@
       object-fit: contain;
     }
 
-    /* TEAM INFO - Horizontal layout: Name + Line side by side */
     .team-info {
       flex: 1;
       min-width: 0;
@@ -308,7 +170,6 @@
       color: rgba(255,255,255,0.6);
     }
 
-    /* FUND BADGE */
     .fund-badge {
       padding: 8px 14px;
       border-radius: 10px;
@@ -322,7 +183,6 @@
     .fund-badge.catalyst { background: rgba(192, 132, 252, 0.3); border: 2px solid #c084fc; }
     .fund-badge.contra { background: rgba(251, 146, 60, 0.3); border: 2px solid #fb923c; }
 
-    /* PROFIT AMOUNT */
     .profit-amount {
       font-size: 32px;
       font-weight: 800;
@@ -333,7 +193,6 @@
     .profit-amount.profit-positive { color: #22c55e; }
     .profit-amount.profit-negative { color: #ef4444; }
 
-    /* SPORT DIVIDER */
     .sport-divider {
       display: flex;
       align-items: center;
@@ -358,7 +217,6 @@
       border-radius: 4px;
     }
 
-    /* RESULT ICON */
     .result-icon {
       width: 55px;
       height: 55px;
@@ -379,7 +237,6 @@
       box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
     }
 
-    /* FOOTER */
     .footer {
       position: absolute;
       bottom: 25px;
@@ -407,32 +264,119 @@
     <div class="content">
       <div class="header">
         <div class="header-label">PICKS RESULTS</div>
-        <div class="date">{{DATE}}</div>
+        <div class="date">DECEMBER 15</div>
       </div>
 
       <div class="hero-stats">
         <div class="side-stat">
           <div class="side-stat-label">ROI</div>
-          <div class="side-stat-value">{{ROI}}</div>
+          <div class="side-stat-value">+36%</div>
         </div>
         <div class="big-profit-box">
           <div class="big-profit-label">P/L</div>
-          <div class="big-profit {{PROFIT_CLASS}}">{{PROFIT}}</div>
+          <div class="big-profit">+$258</div>
         </div>
         <div class="side-stat">
           <div class="side-stat-label">RECORD</div>
-          <div class="side-stat-value">{{RECORD}}</div>
+          <div class="side-stat-value">5-2</div>
         </div>
       </div>
 
       <div class="results-list">
-        {{RESULT_ROWS}}
+        <!-- NHL (3-0) -->
+        <div class="sport-divider"><span class="sport-label">NHL</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/ana.png" alt="Ducks"></div>
+          <div class="team-info">
+            <div class="team-name">Ducks</div>
+            <div class="team-line">ML (+100)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$100</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/fla.png" alt="Panthers"></div>
+          <div class="team-info">
+            <div class="team-name">Panthers</div>
+            <div class="team-line">ML (+105)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$105</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/nsh.png" alt="Predators"></div>
+          <div class="team-info">
+            <div class="team-name">Predators</div>
+            <div class="team-line">ML (-105)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$95</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- NBA (2-0) -->
+        <div class="sport-divider"><span class="sport-label">NBA</span></div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/tor.png" alt="Raptors"></div>
+          <div class="team-info">
+            <div class="team-name">Raptors</div>
+            <div class="team-line">+6 (-109)</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-positive">+$92</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/mem.png" alt="Grizzlies"></div>
+          <div class="team-info">
+            <div class="team-name">Grizzlies</div>
+            <div class="team-line">+4.5 (-110)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$91</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- NFL (0-1) -->
+        <div class="sport-divider"><span class="sport-label">NFL</span></div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nfl/500/mia.png" alt="Dolphins"></div>
+          <div class="team-info">
+            <div class="team-name">MIA/PIT Under</div>
+            <div class="team-line">U42.5 (-110)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <!-- NCAAB (0-1) -->
+        <div class="sport-divider"><span class="sport-label">NCAAB</span></div>
+
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/2241.png" alt="Gardner-Webb"></div>
+          <div class="team-info">
+            <div class="team-name">Gardner-Webb</div>
+            <div class="team-line">+10.5 (+100)</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-negative">-$75</div>
+          <div class="result-icon loss">✗</div>
+        </div>
       </div>
 
     </div>
 
     <div class="footer">
-      <div class="logo"><img src="{{LOGO_PATH}}" alt="DoG"></div>
+      <div class="logo"><img src="/Users/keeganfoley/Department of Gambling/public/logo.png" alt="DoG"></div>
       <div class="website">DEPTOFGAMBLING.COM</div>
     </div>
   </div>

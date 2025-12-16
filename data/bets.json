@@ -5735,7 +5735,8 @@
     "thesis": "Line opened at -4.5, getting 2 full points of value on Buffalo traveling to New England. Bills are 4-1 ATS in last 5 vs Patriots. Sharp money moved this line from -4.5 to -2.5, indicating value on Bills at current number.",
     "profit": 142.86,
     "finalStat": "Final: BUF 35-31 NE (Won by 4, covered -2.5)",
-    "slug": "bills-spread-dec14"
+    "slug": "bills-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 282,
@@ -5751,7 +5752,8 @@
     "thesis": "Baltimore laying less than a field goal in Cincy feels like value. Ravens have been dominant this season. Sharp Action detected. Ravens are 27-33 against divisional opponents - but this line is too short for their recent form.",
     "profit": 90.91,
     "finalStat": "Final: BAL 24-0 CIN (Won by 24, covered -2.5)",
-    "slug": "ravens-spread-dec14"
+    "slug": "ravens-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 283,
@@ -5767,7 +5769,8 @@
     "thesis": "Home team getting points in a coin-flip game vs Buffalo. ECU at home should be favored or pick'em. Sharp Action + Big Money detected on ECU in Getting the hook at +1.5 provides value in what should be a tight game.",
     "profit": 60.0,
     "finalStat": "Final: ECU 73-70 Buffalo (Won outright by 3)",
-    "slug": "east-carolina-spread-dec14"
+    "slug": "east-carolina-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 284,
@@ -5783,7 +5786,8 @@
     "thesis": "Blazers at home, Troy struggles on the road. UAB is 7-3 at home this season. Sharp Action detected with RLM - only 57% of bets but 72% of money on UAB. Line moved from -6 to -7, sharp money pushing it. NCAAB spread is our 70% proven filter.",
     "profit": -100.0,
     "finalStat": "Final: Troy 86-85 UAB (Lost by 1, needed -6.5)",
-    "slug": "uab-spread-dec14"
+    "slug": "uab-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 285,
@@ -5799,7 +5803,8 @@
     "thesis": "Double digits is too many for a road favorite. Sharp Action + Model Projection detected. Wizards are bad but 10 points is a lot. Also flagging Washington. Taking the points at Indiana in a potential blowout hedge.",
     "profit": 90.91,
     "finalStat": "Final: WAS 108-89 IND (Won outright by 19)",
-    "slug": "wizards-spread-dec14"
+    "slug": "wizards-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 286,
@@ -5815,7 +5820,8 @@
     "thesis": "POWER PLAY (5/6 signals). New Orleans home dog getting points against a Carolina team that can't win on the road. Sharp Action + Big Money + Model Projection + RLM (33% bets, 51% money). Panthers on short week. NFL spread dog filter is 8-0. Line opened +2.5, now +1.5 - sharps moved it.",
     "profit": 136.36,
     "finalStat": "Final: NO 20-17 CAR (Won outright by 3)",
-    "slug": "saints-spread-dec14"
+    "slug": "saints-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 287,
@@ -5831,7 +5837,8 @@
     "thesis": "Big number to cover at Loyola. Sharp Action + Model Projection detected. Chicago State getting nearly two touchdowns. NCAAB spread is our 70% proven filter. Even bad teams can stay within 13.5 at times.",
     "profit": 68.81,
     "finalStat": "Final: Chicago State 84-75 Loyola Illinois (Won outright by 9!)",
-    "slug": "chicago-state-spread-dec14"
+    "slug": "chicago-state-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 288,
@@ -5847,7 +5854,8 @@
     "thesis": "Boston plus-money on the road at Minnesota. Sharp Action detected with RLM - only 20% of bets but 31% of money on Bruins. NHL Moneyline is our 75% proven filter (21-7 record). Getting +120 on a quality road team provides significant value.",
     "profit": -100.0,
     "finalStat": "Final: MIN 6-2 BOS",
-    "slug": "bruins-ml-dec14"
+    "slug": "bruins-ml-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 289,
@@ -5863,7 +5871,8 @@
     "thesis": "Home dog getting points vs Saint Mary's. Sharp Action detected. Boise State at home should be competitive. NCAAB spread is our 70% proven filter. Value on the Broncos getting points in their own building.",
     "profit": 45.45,
     "finalStat": "Final: BSU 68-67 SMC (Won outright by 1)",
-    "slug": "boise-state-spread-dec14"
+    "slug": "boise-state-spread-dec14",
+    "datePlaced": "2025-12-14"
   },
   {
     "id": 290,
@@ -5879,6 +5888,154 @@
     "thesis": "Brooklyn home dog getting a free point against Milwaukee. Sharp Action detected. Line feels off - Nets at home should be closer to pick'em. Milwaukee on road in potential letdown spot. Taking the points at Barclays.",
     "profit": 98.04,
     "finalStat": "Final: BKN 127-82 MIL (Won outright by 45!)",
-    "slug": "nets-spread-dec14"
+    "slug": "nets-spread-dec14",
+    "datePlaced": "2025-12-14"
+  },
+  {
+    "id": 291,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NHL",
+    "description": "Ducks ML",
+    "odds": 100,
+    "stake": 1.0,
+    "result": "win",
+    "betType": "moneyline",
+    "team": "Anaheim Ducks",
+    "opponent": "New York Rangers",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 60,
+    "thesis": "Significant reverse line movement. Only 22% of tickets but 42% of money on Ducks = sharp money. Rangers struggling at home recently (2-4 L6). Getting even money on an underdog the sharps want. NHL moneyline is our 68.9% proven filter.",
+    "edge": 3.5,
+    "expectedValue": 1.8,
+    "slug": "ducks-ml-sharp-dec15-2025",
+    "profit": 100.0
+  },
+  {
+    "id": 292,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NHL",
+    "description": "Panthers ML",
+    "odds": 105,
+    "stake": 1.0,
+    "result": "win",
+    "betType": "moneyline",
+    "team": "Florida Panthers",
+    "opponent": "Tampa Bay Lightning",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 65,
+    "thesis": "Defending champs getting plus money on the road in a rivalry game. Sharp Action + Big Money lit. RLM: 23% bets but 36% money (+13% differential). Panthers 14-6 in last 20 vs Lightning. NHL moneyline is our 68.9% proven filter.",
+    "edge": 4.2,
+    "expectedValue": 2.1,
+    "slug": "panthers-ml-sharp-dec15-2025",
+    "profit": 105.0
+  },
+  {
+    "id": 293,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NCAAB",
+    "description": "Gardner-Webb +10.5",
+    "odds": 100,
+    "stake": 0.75,
+    "result": "loss",
+    "betType": "spread",
+    "team": "Gardner-Webb",
+    "opponent": "Wofford",
+    "gameTime": "7:00 PM ET",
+    "fund": "VectorFund",
+    "conviction": 55,
+    "thesis": "Model Projection active. Wofford favored by double digits but model projects 9.1. NCAAB spread is our 70%+ proven filter. Getting the dog plus a hook at home with plus money odds. Gardner-Webb 8-3 ATS this season. Grade C with +2.4% edge.",
+    "edge": 2.4,
+    "expectedValue": 1.2,
+    "slug": "gardner-webb-spread-vector-dec15-2025",
+    "profit": -75.0
+  },
+  {
+    "id": 294,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NBA",
+    "description": "Raptors +6",
+    "odds": -109,
+    "stake": 1.0,
+    "result": "win",
+    "betType": "spread",
+    "team": "Toronto Raptors",
+    "opponent": "Miami Heat",
+    "gameTime": "7:30 PM ET",
+    "fund": "VectorFund",
+    "conviction": 64,
+    "thesis": "Grade B with +5.1% edge - our second-strongest Vector play in a week. Model projects this closer to a 3.5-point game. Heat dealing with injuries. Toronto getting 6 points is an overcorrection. Line moved from +3.5 to +6 creating value.",
+    "edge": 5.1,
+    "expectedValue": 2.6,
+    "slug": "raptors-spread-vector-dec15-2025",
+    "profit": 91.74
+  },
+  {
+    "id": 295,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NHL",
+    "description": "Predators ML",
+    "odds": -105,
+    "stake": 1.0,
+    "result": "win",
+    "betType": "moneyline",
+    "team": "Nashville Predators",
+    "opponent": "St. Louis Blues",
+    "gameTime": "8:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 58,
+    "thesis": "Sharp Action lit with strong RLM. 25% of bets but 44% of money = 19% differential on Nashville. Blues have lost 4 of last 6. Saros has been stellar lately. Getting near pick'em price on a team sharps are loading up on. NHL is our 68.9% filter.",
+    "edge": 3.8,
+    "expectedValue": 1.9,
+    "slug": "predators-ml-sharp-dec15-2025",
+    "profit": 95.24
+  },
+  {
+    "id": 296,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NFL",
+    "description": "Dolphins/Steelers Under 42.5",
+    "odds": -110,
+    "stake": 1.5,
+    "result": "loss",
+    "betType": "total",
+    "team": "Miami Dolphins",
+    "opponent": "Pittsburgh Steelers",
+    "gameTime": "8:15 PM ET",
+    "fund": "SharpFund",
+    "conviction": 72,
+    "thesis": "TRIPLE SIGNAL STACK - Sharp Action + Model Projection + Top Experts all on Under despite 67% public on Over. Best signal of the day. Cold weather in Pittsburgh, both defenses solid. Steelers allow 19.3 PPG at home. Tua struggles in cold weather. Line dropped from 44.5 to 42.5 showing sharp money on under.",
+    "edge": 4.5,
+    "expectedValue": 2.3,
+    "slug": "dolphins-steelers-under-sharp-dec15-2025",
+    "profit": -150.0
+  },
+  {
+    "id": 297,
+    "date": "2025-12-15",
+    "datePlaced": "2025-12-15",
+    "sport": "NBA",
+    "description": "Grizzlies +4.5",
+    "odds": -110,
+    "stake": 1.0,
+    "result": "win",
+    "betType": "spread",
+    "team": "Memphis Grizzlies",
+    "opponent": "Los Angeles Clippers",
+    "gameTime": "10:30 PM ET",
+    "fund": "SharpFund",
+    "conviction": 58,
+    "thesis": "Sharp Action detected. Memphis getting nearly 5 points on the road is too many. Line opened +2.5, moved to +4.5 creating value. Clippers without Kawhi. Ja Morant averaging 28 PPG in December. Grade C with +1.9% edge supporting the sharp signal.",
+    "edge": 3.2,
+    "expectedValue": 1.6,
+    "slug": "grizzlies-spread-sharp-dec15-2025",
+    "profit": 90.91
   }
 ]

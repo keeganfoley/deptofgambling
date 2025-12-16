@@ -1,51 +1,51 @@
 {
-  "asOfDate": "2025-12-15",
+  "asOfDate": "2025-12-16",
   "combined": {
-    "balance": 45428.45,
+    "balance": 45686.34,
     "startingBalance": 40000,
-    "netPL": 5428.45,
-    "roi": 13.57,
+    "netPL": 5686.34,
+    "roi": 14.22,
     "record": {
-      "wins": 166,
-      "losses": 114,
+      "wins": 171,
+      "losses": 116,
       "pushes": 2
     },
-    "winRate": 59.29,
-    "unitsWon": 54.28,
-    "sharpe": 5.97
+    "winRate": 59.58,
+    "unitsWon": 56.86,
+    "sharpe": 6.16
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 10169.11,
+      "balance": 10185.85,
       "startingBalance": 10000,
-      "netPL": 169.11,
-      "roi": 1.69,
+      "netPL": 185.85,
+      "roi": 1.86,
       "record": {
-        "wins": 83,
-        "losses": 74,
+        "wins": 84,
+        "losses": 75,
         "pushes": 1
       },
-      "winRate": 52.87,
-      "unitsWon": 1.69,
+      "winRate": 52.83,
+      "unitsWon": 1.86,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 13072.21,
+      "balance": 13313.36,
       "startingBalance": 10000,
-      "netPL": 3072.21,
-      "roi": 30.72,
+      "netPL": 3313.36,
+      "roi": 33.13,
       "record": {
-        "wins": 50,
-        "losses": 23,
+        "wins": 54,
+        "losses": 24,
         "pushes": 0
       },
-      "winRate": 68.49,
-      "unitsWon": 30.72,
+      "winRate": 69.23,
+      "unitsWon": 33.13,
       "color": "#22c55e",
       "status": "active"
     },
