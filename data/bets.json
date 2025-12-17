@@ -4016,7 +4016,7 @@
     "profit": 223.21428571428572,
     "betType": "total",
     "slug": "jets-patriots-under-nov13-2025",
-    "analysis": "Under 43.5 Total Points. THESIS: Low-scoring Thursday Night Football matchup between two struggling offenses. Patriots' defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both teams run-heavy, clock-controlling game scripts. Weather in Foxborough: 40\u00b0F with 15mph winds (reduces passing efficiency by ~12%). RESULT: Hit comfortably at 41 points. Patriots dominated time of possession (34:18 to 25:42), ran 71 plays vs Jets' 52. Exactly as modeled.",
+    "analysis": "Under 43.5 Total Points. THESIS: Low-scoring Thursday Night Football matchup between two struggling offenses. Patriots' defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both teams run-heavy, clock-controlling game scripts. Weather in Foxborough: 40°F with 15mph winds (reduces passing efficiency by ~12%). RESULT: Hit comfortably at 41 points. Patriots dominated time of possession (34:18 to 25:42), ran 71 plays vs Jets' 52. Exactly as modeled.",
     "fund": "VectorFund",
     "team": "New York Jets",
     "opponent": "New England Patriots",
@@ -4602,7 +4602,7 @@
     "id": 24,
     "date": "2025-11-07T12:00:00.000Z",
     "sport": "NBA",
-    "description": "Joki\u0107 U12.5 rebounds",
+    "description": "Jokić U12.5 rebounds",
     "odds": -105,
     "stake": 1.5,
     "result": "loss",
@@ -4611,7 +4611,7 @@
     "expectedValue": 27.3,
     "profit": -150,
     "betType": "props",
-    "player": "Nikola Joki\u0107",
+    "player": "Nikola Jokić",
     "team": "Denver Nuggets",
     "opponent": "Golden State Warriors",
     "slug": "jokic-rebounds-nov7-2025",
@@ -4942,7 +4942,7 @@
     "edge": 6,
     "expectedValue": 5.1,
     "slug": "delaware-gw-over-152-dec10-2025",
-    "profit": -150.0
+    "profit": -150
   },
   {
     "id": 244,
@@ -4951,7 +4951,7 @@
     "sport": "NCAAB",
     "description": "UMass +1.5",
     "odds": -109,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "UMass",
@@ -4993,7 +4993,7 @@
     "sport": "NCAAB",
     "description": "Liberty @ NC State Over 151.5",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "betType": "total",
     "team": "Liberty",
@@ -5005,7 +5005,7 @@
     "edge": 4,
     "expectedValue": 3.6,
     "slug": "liberty-ncstate-over-151-dec10-2025",
-    "profit": -100.0
+    "profit": -100
   },
   {
     "id": 247,
@@ -5014,7 +5014,7 @@
     "sport": "NCAAB",
     "description": "Liberty +12.5",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "betType": "spread",
     "team": "Liberty",
@@ -5026,7 +5026,7 @@
     "edge": 5,
     "expectedValue": 4.5,
     "slug": "liberty-spread-dec10-2025",
-    "profit": -100.0
+    "profit": -100
   },
   {
     "id": 248,
@@ -5068,7 +5068,7 @@
     "edge": 6,
     "expectedValue": 5.1,
     "slug": "eastern-illinois-spread-dec10-2025",
-    "profit": -125.0
+    "profit": -125
   },
   {
     "id": 250,
@@ -5077,7 +5077,7 @@
     "sport": "NHL",
     "description": "LA Kings -1.5",
     "odds": 180,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "betType": "puckline",
     "team": "Los Angeles Kings",
@@ -5089,7 +5089,7 @@
     "edge": 8,
     "expectedValue": 14.4,
     "slug": "kings-puckline-sharp-dec10-2025",
-    "profit": -100.0
+    "profit": -100
   },
   {
     "id": 251,
@@ -5098,7 +5098,7 @@
     "sport": "NBA",
     "description": "Spurs +7.5",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "San Antonio Spurs",
@@ -5119,7 +5119,7 @@
     "sport": "NBA",
     "description": "Kings +10.5",
     "odds": -110,
-    "stake": 2.0,
+    "stake": 2,
     "result": "loss",
     "betType": "spread",
     "team": "Sacramento Kings",
@@ -5131,7 +5131,7 @@
     "edge": 12.7,
     "expectedValue": 6.5,
     "slug": "kings-spread-vector-dec11-2025",
-    "profit": -200.0
+    "profit": -200
   },
   {
     "id": 253,
@@ -5152,7 +5152,7 @@
     "edge": 10.2,
     "expectedValue": 5.1,
     "slug": "bucks-spread-vector-dec11-2025",
-    "profit": 136.0
+    "profit": 136
   },
   {
     "id": 254,
@@ -5173,7 +5173,7 @@
     "edge": 9.7,
     "expectedValue": 4.8,
     "slug": "clippers-spread-vector-dec11-2025",
-    "profit": 143.0
+    "profit": 143
   },
   {
     "id": 255,
@@ -5194,7 +5194,7 @@
     "edge": 5.1,
     "expectedValue": 2.6,
     "slug": "iowa-spread-sharp-dec11-2025",
-    "profit": 114.0
+    "profit": 114
   },
   {
     "id": 256,
@@ -5215,7 +5215,7 @@
     "edge": 6.1,
     "expectedValue": 3.1,
     "slug": "iowa-isu-over-sharp-dec11-2025",
-    "profit": -125.0
+    "profit": -125
   },
   {
     "id": 257,
@@ -5236,7 +5236,7 @@
     "edge": 4.2,
     "expectedValue": 3.8,
     "slug": "falcons-ml-contra-dec11-2025",
-    "profit": 345.0
+    "profit": 345
   },
   {
     "id": 258,
@@ -5245,7 +5245,7 @@
     "sport": "NHL",
     "description": "Sabres ML",
     "odds": -115,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Buffalo Sabres",
@@ -5254,10 +5254,10 @@
     "fund": "SharpFund",
     "conviction": 50,
     "thesis": "Sharp Score 5. Massive reverse line movement - opened +105 (underdog) and flipped to -115 (favorite). When sharps pound a line so hard it crosses from dog to favorite, that's a screaming signal. 57% of bets on Sabres but only 43% of money - the dollars that moved this line came from limits, not volume. Sharps see something the public doesn't.",
-    "edge": 5.0,
+    "edge": 5,
     "expectedValue": 4.3,
     "slug": "sabres-ml-sharp-dec11-2025",
-    "profit": 87.0
+    "profit": 87
   },
   {
     "id": 259,
@@ -5278,7 +5278,7 @@
     "edge": 3.5,
     "expectedValue": 4.6,
     "slug": "bruins-ml-sharp-dec11-2025",
-    "profit": 97.0
+    "profit": 97
   },
   {
     "id": 260,
@@ -5287,7 +5287,7 @@
     "sport": "NHL",
     "description": "Avalanche ML",
     "odds": -225,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Colorado Avalanche",
@@ -5296,10 +5296,10 @@
     "fund": "CatalystFund",
     "conviction": 41,
     "thesis": "Situational Score 3.1. Panthers traveling cross-country from Florida to Colorado - 3+ time zones qualifies for 2 pts. Game in Denver provides altitude advantage (1.5 pts at 0.75x = 1.125 pts). Big Money indicator confirms sharp agreement. Colorado dominates at home where visiting teams struggle with altitude adjustment. Panthers on long road trip facing significant situational disadvantage.",
-    "edge": 4.0,
+    "edge": 4,
     "expectedValue": 1.8,
     "slug": "avalanche-ml-catalyst-dec11-2025",
-    "profit": 44.0
+    "profit": 44
   },
   {
     "id": 261,
@@ -5308,7 +5308,7 @@
     "sport": "NBA",
     "description": "Nets +7.5",
     "odds": 100,
-    "stake": 2.0,
+    "stake": 2,
     "result": "loss",
     "betType": "spread",
     "team": "Brooklyn Nets",
@@ -5320,7 +5320,7 @@
     "edge": 9.8,
     "expectedValue": 4.9,
     "slug": "nets-spread-vector-dec12-2025",
-    "profit": -200.0
+    "profit": -200
   },
   {
     "id": 262,
@@ -5329,7 +5329,7 @@
     "sport": "NBA",
     "description": "Jazz +7.5",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "Utah Jazz",
@@ -5383,7 +5383,7 @@
     "edge": 9.8,
     "expectedValue": 4.9,
     "slug": "nets-spread-sharp-dec12-2025",
-    "profit": -150.0
+    "profit": -150
   },
   {
     "id": 265,
@@ -5392,7 +5392,7 @@
     "sport": "NHL",
     "description": "Blackhawks ML",
     "odds": -109,
-    "stake": 2.0,
+    "stake": 2,
     "result": "loss",
     "betType": "moneyline",
     "team": "Chicago Blackhawks",
@@ -5404,7 +5404,7 @@
     "edge": 6.5,
     "expectedValue": 3.2,
     "slug": "blackhawks-ml-sharp-dec12-2025",
-    "profit": -200.0
+    "profit": -200
   },
   {
     "id": 266,
@@ -5434,7 +5434,7 @@
     "sport": "NCAAB",
     "description": "Austin Peay +3.5",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "Austin Peay Governors",
@@ -5455,7 +5455,7 @@
     "sport": "NHL",
     "description": "Utah HC ML",
     "odds": -180,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Utah Hockey Club",
@@ -5539,7 +5539,7 @@
     "sport": "NCAAB",
     "description": "Illinois -10.5",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "betType": "spread",
     "team": "Illinois",
@@ -5548,8 +5548,8 @@
     "fund": "ContraFund",
     "conviction": 48,
     "thesis": "Fading 65% public on Nebraska. Money lagging at 54% (-11% DIFF). Sharps not confirming the Nebraska love. Illinois at home in Big Ten play.",
-    "edge": 4.0,
-    "expectedValue": 2.0,
+    "edge": 4,
+    "expectedValue": 2,
     "slug": "illinois-spread-contra-dec13-2025",
     "profit": -100
   },
@@ -5602,7 +5602,7 @@
     "sport": "NHL",
     "description": "Oilers -1.5",
     "odds": 190,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "puckline",
     "team": "Edmonton Oilers",
@@ -5611,7 +5611,7 @@
     "fund": "CatalystFund",
     "conviction": 55,
     "thesis": "Situational Score 5.5. Tristan Jarry making first start after trade from Pittsburgh - motivated to prove himself. +18% money differential on puck line. Leafs starting backup Hildeby. Got +190 instead of +125 quoted - massive line value.",
-    "edge": 6.0,
+    "edge": 6,
     "expectedValue": 5.7,
     "slug": "oilers-puckline-catalyst-dec13-2025",
     "profit": 190
@@ -5644,7 +5644,7 @@
     "sport": "NHL",
     "description": "Canadiens ML",
     "odds": 115,
-    "stake": 2.0,
+    "stake": 2,
     "result": "loss",
     "betType": "moneyline",
     "team": "Montreal Canadiens",
@@ -5686,7 +5686,7 @@
     "sport": "NCAAB",
     "description": "South Carolina -23",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "betType": "spread",
     "team": "South Carolina",
@@ -5707,7 +5707,7 @@
     "sport": "NBA",
     "description": "Spurs/Thunder Under 232.5",
     "odds": -109,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "total",
     "team": "San Antonio Spurs",
@@ -5745,7 +5745,7 @@
     "betType": "spread",
     "description": "Ravens -2.5 vs Bengals",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "fund": "SharpFund",
     "conviction": 68,
@@ -5767,7 +5767,7 @@
     "fund": "VectorFund",
     "conviction": 58,
     "thesis": "Home team getting points in a coin-flip game vs Buffalo. ECU at home should be favored or pick'em. Sharp Action + Big Money detected on ECU in Getting the hook at +1.5 provides value in what should be a tight game.",
-    "profit": 60.0,
+    "profit": 60,
     "finalStat": "Final: ECU 73-70 Buffalo (Won outright by 3)",
     "slug": "east-carolina-spread-dec14",
     "datePlaced": "2025-12-14"
@@ -5779,12 +5779,12 @@
     "betType": "spread",
     "description": "UAB -6.5 vs Troy",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "fund": "SharpFund",
     "conviction": 65,
     "thesis": "Blazers at home, Troy struggles on the road. UAB is 7-3 at home this season. Sharp Action detected with RLM - only 57% of bets but 72% of money on UAB. Line moved from -6 to -7, sharp money pushing it. NCAAB spread is our 70% proven filter.",
-    "profit": -100.0,
+    "profit": -100,
     "finalStat": "Final: Troy 86-85 UAB (Lost by 1, needed -6.5)",
     "slug": "uab-spread-dec14",
     "datePlaced": "2025-12-14"
@@ -5796,7 +5796,7 @@
     "betType": "spread",
     "description": "Wizards +10 vs Pacers",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "fund": "SharpFund",
     "conviction": 62,
@@ -5847,12 +5847,12 @@
     "betType": "moneyline",
     "description": "Bruins ML vs Wild",
     "odds": 120,
-    "stake": 1.0,
+    "stake": 1,
     "result": "loss",
     "fund": "VectorFund",
     "conviction": 64,
     "thesis": "Boston plus-money on the road at Minnesota. Sharp Action detected with RLM - only 20% of bets but 31% of money on Bruins. NHL Moneyline is our 75% proven filter (21-7 record). Getting +120 on a quality road team provides significant value.",
-    "profit": -100.0,
+    "profit": -100,
     "finalStat": "Final: MIN 6-2 BOS",
     "slug": "bruins-ml-dec14",
     "datePlaced": "2025-12-14"
@@ -5881,7 +5881,7 @@
     "betType": "spread",
     "description": "Nets +1.5 vs Bucks",
     "odds": -102,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "fund": "SharpFund",
     "conviction": 60,
@@ -5898,7 +5898,7 @@
     "sport": "NHL",
     "description": "Ducks ML",
     "odds": 100,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Anaheim Ducks",
@@ -5910,7 +5910,7 @@
     "edge": 3.5,
     "expectedValue": 1.8,
     "slug": "ducks-ml-sharp-dec15-2025",
-    "profit": 100.0
+    "profit": 100
   },
   {
     "id": 292,
@@ -5919,7 +5919,7 @@
     "sport": "NHL",
     "description": "Panthers ML",
     "odds": 105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Florida Panthers",
@@ -5931,7 +5931,7 @@
     "edge": 4.2,
     "expectedValue": 2.1,
     "slug": "panthers-ml-sharp-dec15-2025",
-    "profit": 105.0
+    "profit": 105
   },
   {
     "id": 293,
@@ -5952,7 +5952,7 @@
     "edge": 2.4,
     "expectedValue": 1.2,
     "slug": "gardner-webb-spread-vector-dec15-2025",
-    "profit": -75.0
+    "profit": -75
   },
   {
     "id": 294,
@@ -5961,7 +5961,7 @@
     "sport": "NBA",
     "description": "Raptors +6",
     "odds": -109,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "Toronto Raptors",
@@ -5982,7 +5982,7 @@
     "sport": "NHL",
     "description": "Predators ML",
     "odds": -105,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "moneyline",
     "team": "Nashville Predators",
@@ -6015,7 +6015,7 @@
     "edge": 4.5,
     "expectedValue": 2.3,
     "slug": "dolphins-steelers-under-sharp-dec15-2025",
-    "profit": -150.0
+    "profit": -150
   },
   {
     "id": 297,
@@ -6024,7 +6024,7 @@
     "sport": "NBA",
     "description": "Grizzlies +4.5",
     "odds": -110,
-    "stake": 1.0,
+    "stake": 1,
     "result": "win",
     "betType": "spread",
     "team": "Memphis Grizzlies",
@@ -6037,5 +6037,137 @@
     "expectedValue": 1.6,
     "slug": "grizzlies-spread-sharp-dec15-2025",
     "profit": 90.91
+  },
+  {
+    "id": 298,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NCAAF",
+    "description": "Jacksonville State -2.5",
+    "odds": -115,
+    "stake": 1.5,
+    "result": "win",
+    "betType": "spread",
+    "team": "Jacksonville State Gamecocks",
+    "opponent": "Troy Trojans",
+    "gameTime": "9:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 85,
+    "edge": 7.5,
+    "expectedValue": 4.2,
+    "thesis": "Troy QB Goose Crowder is OUT on crutches after re-injuring himself in the Sun Belt title game. Backup Tucker Kilcrease not at same level. Jax State has Cam Cook, the nation's leading rusher (1,659 yards). Sharp Action + Top Experts aligned on Jax State. RLM confirmed - line flipped from Troy -3 to Jax State -2.5. Highest conviction play of the day.",
+    "slug": "jacksonville-state-spread-sharp-dec16-2025",
+    "finalStat": "Jax State 17, Troy 13 (won by 4, covered -2.5)",
+    "profit": 130.43478260869566
+  },
+  {
+    "id": 299,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NHL",
+    "description": "Flyers ML",
+    "odds": 108,
+    "stake": 2,
+    "result": "win",
+    "betType": "moneyline",
+    "team": "Philadelphia Flyers",
+    "opponent": "Montreal Canadiens",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 80,
+    "edge": 8,
+    "expectedValue": 4.5,
+    "thesis": "21% of bets but 71% of money - 50-point differential, clearest sharp signal on the board. Both Sharp Action AND Big Money lit on Philly. Montreal's Montembeault was sick recently. When tickets and dollars diverge this hard, you follow the money. Plus value at plus odds.",
+    "slug": "philadelphia-flyers-moneyline-sharp-dec16-2025",
+    "finalStat": "Flyers 4, Canadiens 1",
+    "profit": 216
+  },
+  {
+    "id": 300,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NHL",
+    "description": "Blackhawks ML",
+    "odds": 175,
+    "stake": 1.25,
+    "result": "loss",
+    "betType": "moneyline",
+    "team": "Chicago Blackhawks",
+    "opponent": "Toronto Maple Leafs",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 60,
+    "edge": 6,
+    "expectedValue": 3.8,
+    "thesis": "Biggest bet/money split in NHL today: 12% of bets, 66% of money (+54% differential). Public sees Toronto at home and hammers them, but professionals loading up on Chicago at plus-money. Woll (TOR goalie) just returned from injury, may be rusty. Getting paid +175 to take the sharp side.",
+    "slug": "chicago-blackhawks-moneyline-sharp-dec16-2025",
+    "finalStat": "Blackhawks 2, Maple Leafs 3",
+    "profit": -125
+  },
+  {
+    "id": 301,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NHL",
+    "description": "Islanders ML",
+    "odds": 112,
+    "stake": 1,
+    "result": "loss",
+    "betType": "moneyline",
+    "team": "New York Islanders",
+    "opponent": "Detroit Red Wings",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 60,
+    "edge": 5.5,
+    "expectedValue": 3.2,
+    "thesis": "28% of bets, 60% of money (+32% differential). Big Money indicator lit AND Model Projection agrees on Islanders. Detroit getting public love (72% of bets) but the money says otherwise. Two separate signals - sharp money and model - pointing same direction on a home dog.",
+    "slug": "new-york-islanders-moneyline-sharp-dec16-2025",
+    "finalStat": "Islanders 2, Red Wings 3",
+    "profit": -100
+  },
+  {
+    "id": 302,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NHL",
+    "description": "Ducks ML",
+    "odds": 120,
+    "stake": 1,
+    "result": "loss",
+    "betType": "moneyline",
+    "team": "Anaheim Ducks",
+    "opponent": "Columbus Blue Jackets",
+    "gameTime": "7:00 PM ET",
+    "fund": "SharpFund",
+    "conviction": 55,
+    "edge": 5,
+    "expectedValue": 2.8,
+    "thesis": "35% of bets, 82% of money (+47% differential). Sharp money clearly on Anaheim despite Columbus being at home. Model Projection favors Columbus which lowers conviction, but when 82% of dollars back a 35% ticket side, that's professional money.",
+    "slug": "anaheim-ducks-moneyline-sharp-dec16-2025",
+    "finalStat": "Ducks 3, Blue Jackets 4 (OT)",
+    "profit": -100
+  },
+  {
+    "id": 303,
+    "date": "2025-12-16",
+    "datePlaced": "2025-12-16",
+    "sport": "NCAAB",
+    "description": "Lipscomb +31.5",
+    "odds": -105,
+    "stake": 1.5,
+    "result": "win",
+    "betType": "spread",
+    "team": "Lipscomb Bisons",
+    "opponent": "Duke Blue Devils",
+    "gameTime": "6:00 PM ET",
+    "fund": "VectorFund",
+    "conviction": 78,
+    "edge": 5.2,
+    "expectedValue": 3.5,
+    "thesis": "All 4 PRO indicators lit - Sharp Action, Big Money, Model Projection, Top Experts - extremely rare signal. Line moved from 33.5 to 31.5 IN OUR FAVOR. Duke is 10-0 and #3 in the country at home, but 31+ points with every indicator aligned is actionable. Lipscomb can shoot (10.9 threes/game, 17th in assists).",
+    "slug": "lipscomb-bisons-spread-vector-dec16-2025",
+    "finalStat": "Lipscomb 73, Duke 97 (lost by 24, covered +31.5)",
+    "profit": 142.85714285714283
   }
 ]

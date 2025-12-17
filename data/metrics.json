@@ -1,72 +1,68 @@
 {
-  "totalBets": 289,
-  "wins": 171,
-  "losses": 116,
+  "totalBets": 295,
+  "wins": 174,
+  "losses": 119,
   "pushes": 2,
-  "winRate": "59.58",
-  "totalWinnings": 21556.34,
-  "totalLossesAmount": 15870,
-  "avgWin": 126.06,
-  "avgLoss": -136.81,
-  "avgProfitPerBet": 19.68,
-  "medianProfit": 0,
+  "winRate": 59.39,
+  "totalWinnings": 22045.63,
+  "totalLossesAmount": 16195,
+  "avgWin": 126.7,
+  "avgLoss": -136.09,
+  "avgProfitPerBet": 19.83,
+  "medianProfit": 86.96,
   "largestWin": 345,
   "largestLoss": -250,
-  "profitFactor": 1.358,
+  "profitFactor": 1.361,
   "maxWinStreak": 8,
   "maxLossStreak": 8,
   "currentStreak": 1,
-  "totalCapitalRisked": 38815,
-  "unitsRisked": 388.15,
+  "totalCapitalRisked": 39640,
+  "unitsRisked": 396.4,
   "maxDrawdown": -2015.87,
   "maxDrawdownPercent": -4.98,
-  "maxDrawdownPeak": "2025-12-15",
+  "maxDrawdownPeak": "2025-12-16",
   "maxDrawdownTrough": "2025-11-13",
-  "maxDrawdownPeakBalance": 45745.43,
+  "maxDrawdownPeakBalance": 46032.77,
   "maxDrawdownTroughBalance": 38496.1,
   "currentDrawdown": {
-    "amount": -59.09,
-    "percentage": -0.13,
+    "amount": -182.14,
+    "percentage": -0.4,
     "daysSincePeak": 1,
-    "peakBalance": 45745.43,
-    "peakDate": "2025-12-15",
-    "currentBalance": 45686.34
+    "peakBalance": 46032.77,
+    "peakDate": "2025-12-16",
+    "currentBalance": 45850.63
   },
-  "sharpeRatio": 6.16,
-  "sharpeRatioNote": "41-day sample",
+  "sharpeRatio": null,
+  "sharpeRatioNote": "Calculated",
   "closingLineValue": null,
   "closingLineValueNote": "CLV tracking started Nov 27, 2025",
   "clvBetsTracked": 0,
   "clvTrackingStartDate": "2025-11-27",
   "rollingPerformance": {
     "last7Days": {
-      "wins": 33,
-      "losses": 22,
+      "wins": 32,
+      "losses": 20,
       "pushes": 0,
-      "pnl": 773.08,
-      "roi": 11.625263157894738,
-      "bets": 55
+      "pnl": 1046.1719254658385,
+      "roi": 16.346436335403727,
+      "bets": 52
     },
     "last30Days": {
-      "wins": 147,
+      "wins": 146,
       "losses": 84,
       "pushes": 2,
-      "pnl": 6895.589999999994,
-      "roi": 22.54197450147105,
-      "bets": 233
+      "pnl": 6846.401925465833,
+      "roi": 22.614044345056428,
+      "bets": 232
     },
-    "last3Days": {
-      "wins": 13,
+    "last10Bets": {
+      "wins": 6,
       "losses": 4,
       "pushes": 0,
-      "pnl": 791.23,
-      "roi": 45.87,
-      "bets": 17
+      "pnl": 292.18192546583845,
+      "roi": 22.916229448301053,
+      "bets": 10
     }
-  },
-  "daysGreenStreak": {
-    "current": 2,
-    "best": 6
   },
   "edgeValidation": {
     "lowEdge": {
@@ -75,43 +71,40 @@
       "wins": 39,
       "losses": 16,
       "pushes": 1,
-      "pnl": 2641.68,
       "roi": 43.31,
+      "pnl": 2641.68,
       "bets": 56,
       "winRate": 70.91
     },
     "midEdge": {
       "min": 5,
       "max": 8,
-      "wins": 47,
-      "losses": 29,
+      "wins": 49,
+      "losses": 32,
       "pushes": 0,
-      "pnl": 1958.6,
-      "roi": 19.64,
-      "bets": 76,
-      "winRate": 61.84
+      "roi": 17.99,
+      "pnl": 1906.89,
+      "bets": 81,
+      "winRate": 60.49
     },
     "highEdge": {
       "min": 8,
       "max": 100,
-      "wins": 72,
+      "wins": 73,
       "losses": 67,
       "pushes": 1,
-      "pnl": -81.28,
-      "roi": -0.39,
-      "bets": 140,
-      "winRate": 51.8
+      "roi": 0.65,
+      "pnl": 134.72,
+      "bets": 141,
+      "winRate": 52.14
     },
-    "isCorrelated": false,
-    "totalBetsWithEdge": 272
+    "isCorrelated": false
   },
   "evAnalysis": {
-    "totalExpectedValue": 3460.5,
-    "actualPL": 4519,
-    "variance": 1058.5,
-    "runningHot": true,
-    "runningCold": false,
-    "betsTracked": 272
+    "totalExpectedValue": null,
+    "actualPL": 5850.63,
+    "variance": null,
+    "runningHot": false
   },
   "sportBreakdown": {
     "NBA": {
@@ -134,33 +127,33 @@
       "sport": "NHL",
       "emoji": "🏒",
       "record": {
-        "wins": 34,
-        "losses": 14,
+        "wins": 35,
+        "losses": 17,
         "pushes": 1,
-        "total": 49
+        "total": 53
       },
-      "wins": 34,
-      "losses": 14,
-      "winRate": 70.83333333333334,
-      "roi": 39.02406779661016,
-      "pnl": 2302.4199999999996,
-      "unitsWon": 23.024199999999997
+      "wins": 35,
+      "losses": 17,
+      "winRate": 67.3076923076923,
+      "roi": 34.1388326848249,
+      "pnl": 2193.4199999999996,
+      "unitsWon": 21.934199999999997
     },
     "NCAAB": {
       "sport": "NCAAB",
       "emoji": "🎓",
       "record": {
-        "wins": 42,
+        "wins": 43,
         "losses": 26,
         "pushes": 0,
-        "total": 68
+        "total": 69
       },
-      "wins": 42,
+      "wins": 43,
       "losses": 26,
-      "winRate": 61.76470588235294,
-      "roi": 15.949343329168405,
-      "pnl": 1367.656190476191,
-      "unitsWon": 13.67656190476191
+      "winRate": 62.31884057971014,
+      "roi": 17.312473734479468,
+      "pnl": 1510.5133333333338,
+      "unitsWon": 15.105133333333338
     },
     "NFL": {
       "sport": "NFL",
@@ -182,17 +175,17 @@
       "sport": "NCAAF",
       "emoji": "🏟️",
       "record": {
-        "wins": 11,
+        "wins": 12,
         "losses": 11,
         "pushes": 0,
-        "total": 22
+        "total": 23
       },
-      "wins": 11,
+      "wins": 12,
       "losses": 11,
-      "winRate": 50,
-      "roi": 7.147786259541984,
-      "pnl": 234.09,
-      "unitsWon": 2.3409
+      "winRate": 52.17391304347826,
+      "roi": 10.643059346239289,
+      "pnl": 364.52478260869566,
+      "unitsWon": 3.6452478260869565
     },
     "Soccer": {
       "sport": "Soccer",
@@ -215,33 +208,33 @@
     "Moneyline": {
       "type": "Moneyline",
       "record": {
-        "wins": 28,
-        "losses": 9,
+        "wins": 29,
+        "losses": 12,
         "pushes": 0
       },
-      "winRate": 75.67567567567568,
-      "pnl": 2118.8699999999994,
-      "roi": 47.88406779661016
+      "winRate": 70.73170731707317,
+      "pnl": 2009.8699999999994,
+      "roi": 40.60343434343433
     },
-    "Spreads": {
-      "type": "Spreads",
+    "Spread": {
+      "type": "Spread",
       "record": {
-        "wins": 109,
+        "wins": 111,
         "losses": 64,
         "pushes": 1
       },
-      "winRate": 62.643678160919535,
-      "pnl": 5315.406190476187,
-      "roi": 22.064782857933526
+      "winRate": 63.42857142857142,
+      "pnl": 5588.698115942026,
+      "roi": 22.913891414276446
     },
-    "Totals": {
-      "type": "Totals",
+    "Total": {
+      "type": "Total",
       "record": {
         "wins": 11,
         "losses": 15,
         "pushes": 1
       },
-      "winRate": 40.74074074074074,
+      "winRate": 42.30769230769231,
       "pnl": -531.4957142857143,
       "roi": -15.632226890756302
     },
@@ -256,8 +249,8 @@
       "pnl": -1181.4409090909091,
       "roi": -17.96868302799862
     },
-    "puckline": {
-      "type": "puckline",
+    "Puckline": {
+      "type": "Puckline",
       "record": {
         "wins": 1,
         "losses": 2,
@@ -279,7 +272,7 @@
         "pushes": 1,
         "total": 29
       },
-      "winRate": 60.71,
+      "winRate": 61,
       "pnl": 278.34,
       "roi": 16.87
     },
@@ -288,67 +281,67 @@
       "label": "Standard",
       "range": "1-1.5u",
       "record": {
-        "wins": 122,
-        "losses": 78,
+        "wins": 124,
+        "losses": 81,
         "pushes": 1,
-        "total": 201
+        "total": 206
       },
-      "winRate": 61,
-      "pnl": 4782.43,
-      "roi": 19.16
+      "winRate": 60,
+      "pnl": 4730.72,
+      "roi": 18.49
     },
     "High Conviction": {
       "tier": "high_conviction",
       "label": "High Conviction",
       "range": "2u+",
       "record": {
-        "wins": 32,
+        "wins": 33,
         "losses": 27,
         "pushes": 0,
-        "total": 59
+        "total": 60
       },
-      "winRate": 54.24,
-      "pnl": 625.57,
-      "roi": 5.13
+      "winRate": 55,
+      "pnl": 841.57,
+      "roi": 6.79
     }
   },
   "fundMetrics": {
     "VectorFund": {
-      "wins": 84,
+      "wins": 85,
       "losses": 75,
       "pushes": 1,
-      "pnl": 185.85,
-      "roi": 1.86,
-      "winRate": "52.83",
-      "totalStaked": 22215,
+      "pnl": 328.70670995671026,
+      "roi": 1.4697371337210385,
+      "winRate": 53.125,
+      "totalStaked": 22365,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 84,
+        "wins": 85,
         "losses": 75,
         "pushes": 1,
-        "pnl": 185.84956709956742,
-        "roi": 0.8365949453052777,
-        "bets": 160
+        "pnl": 328.70670995671026,
+        "roi": 1.4697371337210385,
+        "bets": 161
       }
     },
     "SharpFund": {
-      "wins": 54,
-      "losses": 24,
+      "wins": 56,
+      "losses": 27,
       "pushes": 0,
-      "pnl": 3313.36,
-      "roi": 33.13,
-      "winRate": "69.23",
-      "totalStaked": 10575,
+      "pnl": 3334.794782608695,
+      "roi": 29.64262028985507,
+      "winRate": 67.46987951807229,
+      "totalStaked": 11250,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 54,
-        "losses": 24,
+        "wins": 56,
+        "losses": 27,
         "pushes": 0,
-        "pnl": 3313.3599999999997,
-        "roi": 31.33200945626477,
-        "bets": 78
+        "pnl": 3334.794782608695,
+        "roi": 29.64262028985507,
+        "bets": 83
       }
     },
     "ContraFund": {
@@ -356,8 +349,8 @@
       "losses": 9,
       "pushes": 0,
       "pnl": 977.81,
-      "roi": 9.78,
-      "winRate": "64.00",
+      "roi": 32.05934426229508,
+      "winRate": 64,
       "totalStaked": 3050,
       "maxDrawdown": null,
       "currentDrawdown": null,
@@ -375,8 +368,8 @@
       "losses": 8,
       "pushes": 1,
       "pnl": 1209.32,
-      "roi": 12.09,
-      "winRate": "68.00",
+      "roi": 40.64941176470588,
+      "winRate": 68,
       "totalStaked": 2975,
       "maxDrawdown": null,
       "currentDrawdown": null,
@@ -389,187 +382,6 @@
         "bets": 26
       }
     }
-  },
-  "multiFundConsensus": {
-    "totalPicks": 12,
-    "wins": 8,
-    "losses": 4,
-    "winRate": "66.7",
-    "pnl": 1556.55,
-    "roi": 37.7,
-    "totalStaked": 4125,
-    "picks": [
-      {
-        "date": "2025-12-13",
-        "description": "Canadiens ML",
-        "sport": "NHL",
-        "result": "loss",
-        "funds": [
-          "Sharp",
-          "Catalyst"
-        ],
-        "fundCount": 2,
-        "totalProfit": -350,
-        "totalStake": 350,
-        "odds": 115
-      },
-      {
-        "date": "2025-12-12",
-        "description": "Nets +7.5",
-        "sport": "NBA",
-        "result": "loss",
-        "funds": [
-          "Vector",
-          "Sharp"
-        ],
-        "fundCount": 2,
-        "totalProfit": -350,
-        "totalStake": 350,
-        "odds": 100
-      },
-      {
-        "date": "2025-12-12",
-        "description": "Austin Peay +3.5",
-        "sport": "NCAAB",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Sharp"
-        ],
-        "fundCount": 2,
-        "totalProfit": 238.1,
-        "totalStake": 250,
-        "odds": -105
-      },
-      {
-        "date": "2025-12-09",
-        "description": "Stars ML",
-        "sport": "NHL",
-        "result": "win",
-        "funds": [
-          "Sharp",
-          "Catalyst"
-        ],
-        "fundCount": 2,
-        "totalProfit": 228.88,
-        "totalStake": 325,
-        "odds": -142
-      },
-      {
-        "date": "2025-12-08",
-        "description": "Grambling St +8.5",
-        "sport": "NCAAB",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Sharp"
-        ],
-        "fundCount": 2,
-        "totalProfit": 190.48,
-        "totalStake": 200,
-        "odds": -105
-      },
-      {
-        "date": "2025-11-29",
-        "description": "HCU +7.5",
-        "sport": "NCAAF",
-        "result": "loss",
-        "funds": [
-          "Sharp",
-          "Vector"
-        ],
-        "fundCount": 2,
-        "totalProfit": -250,
-        "totalStake": 250,
-        "odds": -115
-      },
-      {
-        "date": "2025-11-29",
-        "description": "Pelicans +9",
-        "sport": "NBA",
-        "result": "win",
-        "funds": [
-          "Catalyst",
-          "Vector"
-        ],
-        "fundCount": 2,
-        "totalProfit": 401.78,
-        "totalStake": 450,
-        "odds": -112
-      },
-      {
-        "date": "2025-11-27",
-        "description": "Cowboys +3",
-        "sport": "NFL",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Sharp",
-          "Contra",
-          "Catalyst"
-        ],
-        "fundCount": 4,
-        "totalProfit": 800,
-        "totalStake": 800,
-        "odds": 100
-      },
-      {
-        "date": "2025-11-27",
-        "description": "Cowboys/Chiefs Under 53",
-        "sport": "NFL",
-        "result": "loss",
-        "funds": [
-          "Vector",
-          "Catalyst"
-        ],
-        "fundCount": 2,
-        "totalProfit": -200,
-        "totalStake": 200,
-        "odds": -110
-      },
-      {
-        "date": "2025-11-26",
-        "description": "Fresno State -1.5",
-        "sport": "NCAAB",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Contra"
-        ],
-        "fundCount": 2,
-        "totalProfit": 174.68,
-        "totalStake": 200,
-        "odds": -115
-      },
-      {
-        "date": "2025-11-26",
-        "description": "MIN +10.5",
-        "sport": "NBA",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Catalyst"
-        ],
-        "fundCount": 2,
-        "totalProfit": 380.96,
-        "totalStake": 400,
-        "odds": -105
-      },
-      {
-        "date": "2025-11-26",
-        "description": "Houston Christian +1.5",
-        "sport": "NCAAB",
-        "result": "win",
-        "funds": [
-          "Vector",
-          "Sharp"
-        ],
-        "fundCount": 2,
-        "totalProfit": 291.67,
-        "totalStake": 350,
-        "odds": -120
-      }
-    ]
   },
   "portfolioGrowth": [
     {
@@ -595,273 +407,273 @@
     },
     {
       "date": "2025-11-05",
-      "balance": 40371.06,
+      "balance": 40371.060000000005,
       "profit": 127.12,
       "description": "Randle O20.5 points",
       "result": "win"
     },
     {
       "date": "2025-11-05",
-      "balance": 40271.06,
+      "balance": 40271.060000000005,
       "profit": -100,
       "description": "Wembanyama O12.5 rebounds",
       "result": "loss"
     },
     {
       "date": "2025-11-06",
-      "balance": 40361.97,
+      "balance": 40361.97000000001,
       "profit": 90.91,
       "description": "Smith U10.5 rushing yards",
       "result": "win"
     },
     {
       "date": "2025-11-06",
-      "balance": 40511.97,
+      "balance": 40511.97000000001,
       "profit": 150,
       "description": "Dobbins O70.5 rushing yards",
       "result": "win"
     },
     {
       "date": "2025-11-06",
-      "balance": 40361.97,
+      "balance": 40361.97000000001,
       "profit": -150,
       "description": "Bowers O64.5 receiving yards",
       "result": "loss"
     },
     {
       "date": "2025-11-06",
-      "balance": 40211.97,
+      "balance": 40211.97000000001,
       "profit": -150,
       "description": "Illinois State +1.5",
       "result": "loss"
     },
     {
       "date": "2025-11-06",
-      "balance": 40354.83,
+      "balance": 40354.83000000001,
       "profit": 142.86,
       "description": "Jackson State +38.5",
       "result": "win"
     },
     {
       "date": "2025-11-06",
-      "balance": 40154.83,
+      "balance": 40154.83000000001,
       "profit": -200,
       "description": "Drake/Robert Morris U150.5",
       "result": "loss"
     },
     {
       "date": "2025-11-07",
-      "balance": 40278.83,
+      "balance": 40278.83000000001,
       "profit": 124,
       "description": "Barrett O3.5 assists",
       "result": "win"
     },
     {
       "date": "2025-11-07",
-      "balance": 40128.83,
+      "balance": 40128.83000000001,
       "profit": -150,
       "description": "Jokić U12.5 rebounds",
       "result": "loss"
     },
     {
       "date": "2025-11-07",
-      "balance": 40293.83,
+      "balance": 40293.83000000001,
       "profit": 165,
       "description": "Banchero O8.5 rebounds",
       "result": "win"
     },
     {
       "date": "2025-11-07",
-      "balance": 40143.83,
+      "balance": 40143.83000000001,
       "profit": -150,
       "description": "Mitchell U26.5 points",
       "result": "loss"
     },
     {
       "date": "2025-11-07",
-      "balance": 39993.83,
+      "balance": 39993.83000000001,
       "profit": -150,
       "description": "Thompson U16.5 points",
       "result": "loss"
     },
     {
       "date": "2025-11-07",
-      "balance": 40147.68,
+      "balance": 40147.68000000001,
       "profit": 153.85,
       "description": "Giddey O8.5 assists",
       "result": "win"
     },
     {
       "date": "2025-11-08",
-      "balance": 40047.68,
+      "balance": 40047.68000000001,
       "profit": -100,
       "description": "TCU -7.5",
       "result": "loss"
     },
     {
       "date": "2025-11-08",
-      "balance": 40178.11,
+      "balance": 40178.11000000001,
       "profit": 130.43,
       "description": "Texas A&M -6.5",
       "result": "win"
     },
     {
       "date": "2025-11-08",
-      "balance": 40359.93,
+      "balance": 40359.93000000001,
       "profit": 181.82,
       "description": "Oregon @ Iowa U41.5",
       "result": "win"
     },
     {
       "date": "2025-11-09",
-      "balance": 40159.93,
+      "balance": 40159.93000000001,
       "profit": -200,
       "description": "Dowdle O19.5 rush attempts",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 40009.93,
+      "balance": 40009.93000000001,
       "profit": -150,
       "description": "Smith-Njigba O96.5 receiving yards",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 40111.93,
+      "balance": 40111.93000000001,
       "profit": 102,
       "description": "White O3.5 receptions",
       "result": "win"
     },
     {
       "date": "2025-11-09",
-      "balance": 40011.93,
+      "balance": 40011.93000000001,
       "profit": -100,
       "description": "Jaguars @ Texans U37.5",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 39911.93,
+      "balance": 39911.93000000001,
       "profit": -100,
       "description": "Judkins O81.5 rushing yards",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 39836.93,
+      "balance": 39836.93000000001,
       "profit": -75,
       "description": "Collins Anytime TD",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 39786.93,
+      "balance": 39786.93000000001,
       "profit": -50,
       "description": "Cook O84.5 rushing yards",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 39917.36,
+      "balance": 39917.36000000001,
       "profit": 130.43,
       "description": "Allen U44.5 receiving yards",
       "result": "win"
     },
     {
       "date": "2025-11-09",
-      "balance": 39817.36,
+      "balance": 39817.36000000001,
       "profit": -100,
       "description": "Gainwell O2.5 receptions",
       "result": "loss"
     },
     {
       "date": "2025-11-09",
-      "balance": 39717.36,
+      "balance": 39717.36000000001,
       "profit": -100,
       "description": "Gadsden O53.5 receiving yards",
       "result": "loss"
     },
     {
       "date": "2025-11-10",
-      "balance": 39617.36,
+      "balance": 39617.36000000001,
       "profit": -100,
       "description": "Smith O4.5 receptions",
       "result": "loss"
     },
     {
       "date": "2025-11-10",
-      "balance": 39417.36,
+      "balance": 39417.36000000001,
       "profit": -200,
       "description": "Hurts Anytime TD",
       "result": "loss"
     },
     {
       "date": "2025-11-10",
-      "balance": 39584.03,
+      "balance": 39584.030000000006,
       "profit": 166.67,
       "description": "Eagles +1.5",
       "result": "win"
     },
     {
       "date": "2025-11-10",
-      "balance": 39334.03,
+      "balance": 39334.030000000006,
       "profit": -250,
       "description": "Love O225.5 passing yards",
       "result": "loss"
     },
     {
       "date": "2025-11-10",
-      "balance": 39512.6,
+      "balance": 39512.600000000006,
       "profit": 178.57,
       "description": "Jacobs Anytime TD",
       "result": "win"
     },
     {
       "date": "2025-11-11",
-      "balance": 39412.6,
+      "balance": 39412.600000000006,
       "profit": -100,
       "description": "White U3.5 three-pointers",
       "result": "loss"
     },
     {
       "date": "2025-11-11",
-      "balance": 39312.6,
+      "balance": 39312.600000000006,
       "profit": -100,
       "description": "Mitchell O23.5 PRA",
       "result": "loss"
     },
     {
       "date": "2025-11-11",
-      "balance": 39162.6,
+      "balance": 39162.600000000006,
       "profit": -150,
       "description": "Texas Tech +3.5",
       "result": "loss"
     },
     {
       "date": "2025-11-11",
-      "balance": 39249.56,
+      "balance": 39249.560000000005,
       "profit": 86.96,
       "description": "Jokic O26.5 points",
       "result": "win"
     },
     {
       "date": "2025-11-11",
-      "balance": 38999.56,
+      "balance": 38999.560000000005,
       "profit": -250,
       "description": "Maxey O37.5 PTS+AST",
       "result": "loss"
     },
     {
       "date": "2025-11-11",
-      "balance": 39160.85,
+      "balance": 39160.850000000006,
       "profit": 161.29,
       "description": "Brunson O6.5 assists",
       "result": "win"
     },
     {
       "date": "2025-11-12",
-      "balance": 39060.85,
+      "balance": 39060.850000000006,
       "profit": -100,
       "description": "Sengun O22.5 points",
       "result": "loss"
@@ -896,1705 +708,1747 @@
     },
     {
       "date": "2025-11-13",
-      "balance": 38846.1,
-      "profit": 90.91,
+      "balance": 38846.09909090909,
+      "profit": 90.9090909090909,
       "description": "Breece Hall UNDER 58.5 Rushing Yards",
       "result": "win"
     },
     {
       "date": "2025-11-13",
-      "balance": 38696.1,
+      "balance": 38696.09909090909,
       "profit": -150,
       "description": "Drake Maye OVER 1.5 Passing TDs",
       "result": "loss"
     },
     {
       "date": "2025-11-13",
-      "balance": 38496.1,
+      "balance": 38496.09909090909,
       "profit": -200,
       "description": "TreVeyon Henderson OVER 70.5 Rushing Yards",
       "result": "loss"
     },
     {
       "date": "2025-11-13",
-      "balance": 38719.31,
-      "profit": 223.21,
+      "balance": 38719.31337662337,
+      "profit": 223.21428571428572,
       "description": "Jets vs Patriots UNDER 43.5",
       "result": "win"
     },
     {
       "date": "2025-11-14",
-      "balance": 38909.79,
-      "profit": 190.48,
+      "balance": 38909.789567099564,
+      "profit": 190.47619047619048,
       "description": "Arizona -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-14",
-      "balance": 38709.79,
+      "balance": 38709.789567099564,
       "profit": -200,
       "description": "Mavericks +3.5",
       "result": "loss"
     },
     {
       "date": "2025-11-14",
-      "balance": 38609.79,
+      "balance": 38609.789567099564,
       "profit": -100,
       "description": "76ers +2",
       "result": "loss"
     },
     {
       "date": "2025-11-15",
-      "balance": 38800.27,
+      "balance": 38800.26956709957,
       "profit": 190.48,
       "description": "Oklahoma +6.5",
       "result": "win"
     },
     {
       "date": "2025-11-15",
-      "balance": 38600.27,
+      "balance": 38600.26956709957,
       "profit": -200,
       "description": "Texas +4.5",
       "result": "loss"
     },
     {
       "date": "2025-11-15",
-      "balance": 38790.75,
+      "balance": 38790.74956709957,
       "profit": 190.48,
       "description": "Iowa +6.5",
       "result": "win"
     },
     {
       "date": "2025-11-16",
-      "balance": 38885.99,
+      "balance": 38885.98956709957,
       "profit": 95.24,
       "description": "Hurts O30.5 rushing yards",
       "result": "win"
     },
     {
       "date": "2025-11-16",
-      "balance": 38685.99,
+      "balance": 38685.98956709957,
       "profit": -200,
       "description": "St. Brown O7.5 receptions",
       "result": "loss"
     },
     {
       "date": "2025-11-16",
-      "balance": 38867.81,
+      "balance": 38867.80956709957,
       "profit": 181.82,
       "description": "Barkley O70.5 rushing yards",
       "result": "win"
     },
     {
       "date": "2025-11-17",
-      "balance": 38767.81,
+      "balance": 38767.80956709957,
       "profit": -100,
       "description": "Gonzaga/Southern Utah Under 160.5",
       "result": "loss"
     },
     {
       "date": "2025-11-17",
-      "balance": 38627.81,
+      "balance": 38627.80956709957,
       "profit": -140,
       "description": "Pacers +10.5",
       "result": "loss"
     },
     {
       "date": "2025-11-17",
-      "balance": 38774.87,
+      "balance": 38774.869567099566,
       "profit": 147.06,
       "description": "Timberwolves -14.5",
       "result": "win"
     },
     {
       "date": "2025-11-17",
-      "balance": 39004.23,
+      "balance": 39004.229567099566,
       "profit": 229.36,
       "description": "Pistons -11",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 39066.23,
+      "balance": 39066.229567099566,
       "profit": 62,
       "description": "Suns ML",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 39256.71,
+      "balance": 39256.70956709957,
       "profit": 190.48,
       "description": "Suns +2.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 39347.62,
+      "balance": 39347.61956709957,
       "profit": 90.91,
       "description": "Duke -10.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 39438.53,
+      "balance": 39438.52956709958,
       "profit": 90.91,
       "description": "Magic +3.5",
       "result": "win"
     },
     {
       "date": "2025-11-18",
-      "balance": 39188.53,
+      "balance": 39188.52956709958,
       "profit": -250,
       "description": "Hawks +1.5",
       "result": "loss"
     },
     {
       "date": "2025-11-19",
-      "balance": 39324.89,
+      "balance": 39324.88956709958,
       "profit": 136.36,
       "description": "Heat -10",
       "result": "win"
     },
     {
       "date": "2025-11-19",
-      "balance": 39417.48,
+      "balance": 39417.47956709957,
       "profit": 92.59,
       "description": "Arizona +6.5",
       "result": "win"
     },
     {
       "date": "2025-11-19",
-      "balance": 39537.48,
+      "balance": 39537.47956709957,
       "profit": 120,
       "description": "Raptors ML",
       "result": "win"
     },
     {
       "date": "2025-11-19",
-      "balance": 39580.96,
+      "balance": 39580.95956709958,
       "profit": 43.48,
       "description": "Capitals ML",
       "result": "win"
     },
     {
       "date": "2025-11-20",
-      "balance": 39780.96,
+      "balance": 39780.95956709958,
       "profit": 200,
       "description": "Texans +5.5",
       "result": "win"
     },
     {
       "date": "2025-11-20",
-      "balance": 39917.32,
+      "balance": 39917.31956709958,
       "profit": 136.36,
       "description": "Under 44.5",
       "result": "win"
     },
     {
       "date": "2025-11-20",
-      "balance": 39977.93,
+      "balance": 39977.92956709958,
       "profit": 60.61,
       "description": "Lightning ML",
       "result": "win"
     },
     {
       "date": "2025-11-20",
-      "balance": 39877.93,
+      "balance": 39877.92956709958,
       "profit": -100,
       "description": "Hawks +1.5",
       "result": "loss"
     },
     {
       "date": "2025-11-20",
-      "balance": 39921.79,
+      "balance": 39921.78956709958,
       "profit": 43.86,
       "description": "Cook O73.5 Rush Yds",
       "result": "win"
     },
     {
       "date": "2025-11-21",
-      "balance": 39821.79,
+      "balance": 39821.78956709958,
       "profit": -100,
       "description": "Nuggets/Rockets O235.5",
       "result": "loss"
     },
     {
       "date": "2025-11-21",
-      "balance": 39721.79,
+      "balance": 39721.78956709958,
       "profit": -100,
       "description": "Timberwolves -4.5",
       "result": "loss"
     },
     {
       "date": "2025-11-21",
-      "balance": 39793.22,
+      "balance": 39793.21956709958,
       "profit": 71.43,
       "description": "Hurricanes ML",
       "result": "win"
     },
     {
       "date": "2025-11-21",
-      "balance": 39643.22,
+      "balance": 39643.21956709958,
       "profit": -150,
       "description": "Castellanos O235.5 pass yds",
       "result": "loss"
     },
     {
       "date": "2025-11-21",
-      "balance": 39779.58,
+      "balance": 39779.57956709958,
       "profit": 136.36,
       "description": "Mitchell O28.5 pts",
       "result": "win"
     },
     {
       "date": "2025-11-22",
-      "balance": 39917.19,
+      "balance": 39917.18956709958,
       "profit": 137.61,
       "description": "Pistons -8",
       "result": "win"
     },
     {
       "date": "2025-11-22",
-      "balance": 39867.19,
+      "balance": 39867.18956709958,
       "profit": -50,
       "description": "Illinois -8.5",
       "result": "loss"
     },
     {
       "date": "2025-11-22",
-      "balance": 39717.19,
+      "balance": 39717.18956709958,
       "profit": -150,
       "description": "Towns O11.5 Rebs",
       "result": "loss"
     },
     {
       "date": "2025-11-22",
-      "balance": 39567.19,
+      "balance": 39567.18956709958,
       "profit": -150,
       "description": "Daniels O2.5 stl",
       "result": "loss"
     },
     {
       "date": "2025-11-22",
-      "balance": 39417.19,
+      "balance": 39417.18956709958,
       "profit": -150,
       "description": "Haaland Anytime Goal",
       "result": "loss"
     },
     {
       "date": "2025-11-22",
-      "balance": 39267.19,
+      "balance": 39267.18956709958,
       "profit": -150,
       "description": "Army -10",
       "result": "loss"
     },
     {
       "date": "2025-11-23",
-      "balance": 39167.19,
+      "balance": 39167.18956709958,
       "profit": -100,
       "description": "Eagles -3",
       "result": "loss"
     },
     {
       "date": "2025-11-23",
-      "balance": 39067.19,
+      "balance": 39067.18956709958,
       "profit": -100,
       "description": "Patriots -7.5",
       "result": "loss"
     },
     {
       "date": "2025-11-23",
-      "balance": 39067.19,
+      "balance": 39067.18956709958,
       "profit": 0,
       "description": "Bears -3",
       "result": "push"
     },
     {
       "date": "2025-11-23",
-      "balance": 38967.19,
+      "balance": 38967.18956709958,
       "profit": -100,
       "description": "Lions/Giants U50.5",
       "result": "loss"
     },
     {
       "date": "2025-11-23",
-      "balance": 39054.15,
+      "balance": 39054.14956709958,
       "profit": 86.96,
       "description": "Maye O255.5 pass yds",
       "result": "win"
     },
     {
       "date": "2025-11-23",
-      "balance": 39096.52,
+      "balance": 39096.51956709958,
       "profit": 42.37,
       "description": "Heat ML",
       "result": "win"
     },
     {
       "date": "2025-11-24",
-      "balance": 39243.58,
+      "balance": 39243.57956709958,
       "profit": 147.06,
       "description": "Gonzaga -4.5",
       "result": "win"
     },
     {
       "date": "2025-11-24",
-      "balance": 39343.58,
+      "balance": 39343.57956709958,
       "profit": 100,
       "description": "McCaffrey O16.5 rush att",
       "result": "win"
     },
     {
       "date": "2025-11-24",
-      "balance": 39474.01,
+      "balance": 39474.00956709958,
       "profit": 130.43,
       "description": "Nuggets -7.5",
       "result": "win"
     },
     {
       "date": "2025-11-24",
-      "balance": 39564.92,
+      "balance": 39564.91956709958,
       "profit": 90.91,
       "description": "St. John's +2.5",
       "result": "win"
     },
     {
       "date": "2025-11-25",
-      "balance": 39364.92,
+      "balance": 39364.91956709958,
       "profit": -200,
       "description": "Houston/Tennessee U135.5",
       "result": "loss"
     },
     {
       "date": "2025-11-25",
-      "balance": 39462.96,
+      "balance": 39462.959567099584,
       "profit": 98.04,
       "description": "William & Mary -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-25",
-      "balance": 39262.96,
+      "balance": 39262.959567099584,
       "profit": -200,
       "description": "Hawks -10.5",
       "result": "loss"
     },
     {
       "date": "2025-11-25",
-      "balance": 39380.96,
+      "balance": 39380.959567099584,
       "profit": 118,
       "description": "Stars ML",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 39467.92,
+      "balance": 39467.91956709958,
       "profit": 86.96,
       "description": "Fresno State -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 39555.64,
+      "balance": 39555.639567099584,
       "profit": 87.72,
       "description": "Fresno State -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 39746.12,
+      "balance": 39746.11956709959,
       "profit": 190.48,
       "description": "MIN +10.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 39936.6,
+      "balance": 39936.59956709959,
       "profit": 190.48,
       "description": "MIN +10.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 40061.6,
+      "balance": 40061.59956709959,
       "profit": 125,
       "description": "Houston Christian +1.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 40228.27,
+      "balance": 40228.26956709959,
       "profit": 166.67,
       "description": "Houston Christian +1.5",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 40128.27,
+      "balance": 40128.26956709959,
       "profit": -100,
       "description": "Florida Panthers ML",
       "result": "loss"
     },
     {
       "date": "2025-11-26",
-      "balance": 39928.27,
+      "balance": 39928.26956709959,
       "profit": -200,
       "description": "New Orleans Pelicans +3.5",
       "result": "loss"
     },
     {
       "date": "2025-11-26",
-      "balance": 40043.65,
+      "balance": 40043.64956709959,
       "profit": 115.38,
       "description": "Minnesota Wild ML",
       "result": "win"
     },
     {
       "date": "2025-11-26",
-      "balance": 40163.65,
+      "balance": 40163.64956709959,
       "profit": 120,
       "description": "Dallas Stars ML",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40211.27,
+      "balance": 40211.26956709959,
       "profit": 47.62,
       "description": "Packers +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40411.27,
+      "balance": 40411.26956709959,
       "profit": 200,
       "description": "Illinois St -5.5",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40261.27,
+      "balance": 40261.26956709959,
       "profit": -150,
       "description": "TCU/Florida Under 157",
       "result": "loss"
     },
     {
       "date": "2025-11-27",
-      "balance": 40404.13,
+      "balance": 40404.12956709959,
       "profit": 142.86,
       "description": "Arkansas +11.5",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40304.13,
+      "balance": 40304.12956709959,
       "profit": -100,
       "description": "Ravens -7",
       "result": "loss"
     },
     {
       "date": "2025-11-27",
-      "balance": 40404.13,
+      "balance": 40404.12956709959,
       "profit": 100,
       "description": "Bengals +7",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40554.13,
+      "balance": 40554.12956709959,
       "profit": 150,
       "description": "Cowboys +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40704.13,
+      "balance": 40704.12956709959,
       "profit": 150,
       "description": "Cowboys +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 40854.13,
+      "balance": 40854.12956709959,
       "profit": 150,
       "description": "Cowboys +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 41054.13,
+      "balance": 41054.12956709959,
       "profit": 200,
       "description": "Cowboys +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 41204.13,
+      "balance": 41204.12956709959,
       "profit": 150,
       "description": "Cowboys +3",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 41104.13,
+      "balance": 41104.12956709959,
       "profit": -100,
       "description": "Cowboys/Chiefs Under 53",
       "result": "loss"
     },
     {
       "date": "2025-11-27",
-      "balance": 41004.13,
+      "balance": 41004.12956709959,
       "profit": -100,
       "description": "Cowboys/Chiefs Under 53",
       "result": "loss"
     },
     {
       "date": "2025-11-27",
-      "balance": 41151.19,
+      "balance": 41151.18956709959,
       "profit": 147.06,
       "description": "Michigan St -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 41238.15,
+      "balance": 41238.14956709959,
       "profit": 86.96,
       "description": "Stanford -2",
       "result": "win"
     },
     {
       "date": "2025-11-27",
-      "balance": 41428.63,
+      "balance": 41428.62956709959,
       "profit": 190.48,
       "description": "Wisconsin -6.5",
       "result": "win"
     },
     {
       "date": "2025-11-28",
-      "balance": 41571.49,
+      "balance": 41571.48956709959,
       "profit": 142.86,
       "description": "Avalanche/Wild Under 6",
       "result": "win"
     },
     {
       "date": "2025-11-28",
-      "balance": 41371.49,
+      "balance": 41371.48956709959,
       "profit": -200,
       "description": "Golden Knights -1.5",
       "result": "loss"
     },
     {
       "date": "2025-11-28",
-      "balance": 41691.49,
+      "balance": 41691.48956709959,
       "profit": 320,
       "description": "Capitals -1.5",
       "result": "win"
     },
     {
       "date": "2025-11-28",
-      "balance": 41834.35,
+      "balance": 41834.34956709959,
       "profit": 142.86,
       "description": "TCU +6.5",
       "result": "win"
     },
     {
       "date": "2025-11-28",
-      "balance": 41684.35,
+      "balance": 41684.34956709959,
       "profit": -150,
       "description": "Nets +7.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41869.54,
+      "balance": 41869.53956709959,
       "profit": 185.19,
       "description": "Troy +6.5",
       "result": "win"
     },
     {
       "date": "2025-11-29",
-      "balance": 41669.54,
+      "balance": 41669.53956709959,
       "profit": -200,
       "description": "HCU +7.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41519.54,
+      "balance": 41519.53956709959,
       "profit": -150,
       "description": "Pitt +6.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41662.4,
+      "balance": 41662.399567099594,
       "profit": 142.86,
       "description": "BYU -17.5",
       "result": "win"
     },
     {
       "date": "2025-11-29",
-      "balance": 41798.76,
+      "balance": 41798.759567099594,
       "profit": 136.36,
       "description": "ULM +10.5",
       "result": "win"
     },
     {
       "date": "2025-11-29",
-      "balance": 41748.76,
+      "balance": 41748.759567099594,
       "profit": -50,
       "description": "FSU +1.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41927.33,
+      "balance": 41927.329567099594,
       "profit": 178.57,
       "description": "Pelicans +9",
       "result": "win"
     },
     {
       "date": "2025-11-29",
-      "balance": 41877.33,
+      "balance": 41877.329567099594,
       "profit": -50,
       "description": "HCU +7.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41727.33,
+      "balance": 41727.329567099594,
       "profit": -150,
       "description": "Arkansas +4.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41870.19,
+      "balance": 41870.189567099595,
       "profit": 142.86,
       "description": "Hornets +9",
       "result": "win"
     },
     {
       "date": "2025-11-29",
-      "balance": 41670.19,
+      "balance": 41670.189567099595,
       "profit": -200,
       "description": "Nets +11.5",
       "result": "loss"
     },
     {
       "date": "2025-11-29",
-      "balance": 41893.4,
+      "balance": 41893.399567099594,
       "profit": 223.21,
       "description": "Pelicans +9",
       "result": "win"
     },
     {
       "date": "2025-11-30",
-      "balance": 41743.4,
+      "balance": 41743.399567099594,
       "profit": -150,
       "description": "Colts -3",
       "result": "loss"
     },
     {
       "date": "2025-11-30",
-      "balance": 41788.85,
+      "balance": 41788.84956709959,
       "profit": 45.45,
       "description": "SF/CLE Under 35.5",
       "result": "win"
     },
     {
       "date": "2025-11-30",
-      "balance": 41881.44,
+      "balance": 41881.43956709959,
       "profit": 92.59,
       "description": "Jets +3",
       "result": "win"
     },
     {
       "date": "2025-11-30",
-      "balance": 41681.44,
+      "balance": 41681.43956709959,
       "profit": -200,
       "description": "Jazz +11.5",
       "result": "loss"
     },
     {
       "date": "2025-11-30",
-      "balance": 41735.44,
+      "balance": 41735.43956709959,
       "profit": 54,
       "description": "Blackhawks ML",
       "result": "win"
     },
     {
       "date": "2025-11-30",
-      "balance": 41535.44,
+      "balance": 41535.43956709959,
       "profit": -200,
       "description": "Steelers +3",
       "result": "loss"
     },
     {
       "date": "2025-11-30",
-      "balance": 41674.33,
+      "balance": 41674.32956709959,
       "profit": 138.89,
       "description": "Trail Blazers +11.5",
       "result": "win"
     },
     {
       "date": "2025-11-30",
-      "balance": 41810.69,
+      "balance": 41810.68956709959,
       "profit": 136.36,
       "description": "Celtics +7",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 41901.6,
+      "balance": 41901.59956709959,
       "profit": 90.91,
       "description": "Hawks +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 41901.6,
+      "balance": 41901.59956709959,
       "profit": 0,
       "description": "Jets/Sabres Over 6",
       "result": "push"
     },
     {
       "date": "2025-12-01",
-      "balance": 42039.21,
+      "balance": 42039.20956709959,
       "profit": 137.61,
       "description": "Nets +4.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42130.12,
+      "balance": 42130.119567099595,
       "profit": 90.91,
       "description": "Bulls +9",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42260.12,
+      "balance": 42260.119567099595,
       "profit": 130,
       "description": "Ducks ML",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42391.7,
+      "balance": 42391.6995670996,
       "profit": 131.58,
       "description": "Jazz +12.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42573.52,
+      "balance": 42573.519567099596,
       "profit": 181.82,
       "description": "Mavericks +11.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42468.52,
+      "balance": 42468.519567099596,
       "profit": -105,
       "description": "Pacers +6.5",
       "result": "loss"
     },
     {
       "date": "2025-12-01",
-      "balance": 42559.43,
+      "balance": 42559.4295670996,
       "profit": 90.91,
       "description": "Iona -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42655.58,
+      "balance": 42655.5795670996,
       "profit": 96.15,
       "description": "North Alabama +5.5",
       "result": "win"
     },
     {
       "date": "2025-12-01",
-      "balance": 42701.03,
+      "balance": 42701.0295670996,
       "profit": 45.45,
       "description": "Middle Tenn +2.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 42651.03,
+      "balance": 42651.0295670996,
       "profit": -50,
       "description": "Bruins ML",
       "result": "loss"
     },
     {
       "date": "2025-12-02",
-      "balance": 42551.03,
+      "balance": 42551.0295670996,
       "profit": -100,
       "description": "Wizards +13.5",
       "result": "loss"
     },
     {
       "date": "2025-12-02",
-      "balance": 42643.62,
+      "balance": 42643.619567099595,
       "profit": 92.59,
       "description": "Texas A&M -3.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 42702.44,
+      "balance": 42702.439567099595,
       "profit": 58.82,
       "description": "Maple Leafs +1.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 42838.8,
+      "balance": 42838.799567099595,
       "profit": 136.36,
       "description": "Celtics +1",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 43020.62,
+      "balance": 43020.619567099595,
       "profit": 181.82,
       "description": "Pelicans +12.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 43077.76,
+      "balance": 43077.759567099594,
       "profit": 57.14,
       "description": "Wild +1.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 42877.76,
+      "balance": 42877.759567099594,
       "profit": -200,
       "description": "Kansas +2.5",
       "result": "loss"
     },
     {
       "date": "2025-12-02",
-      "balance": 42925.38,
+      "balance": 42925.3795670996,
       "profit": 47.62,
       "description": "UNC +6.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 43075.38,
+      "balance": 43075.3795670996,
       "profit": 150,
       "description": "Blackhawks +1.5",
       "result": "win"
     },
     {
       "date": "2025-12-02",
-      "balance": 42925.38,
+      "balance": 42925.3795670996,
       "profit": -150,
       "description": "Warriors +11.5",
       "result": "loss"
     },
     {
       "date": "2025-12-03",
-      "balance": 43055.81,
+      "balance": 43055.8095670996,
       "profit": 130.43,
       "description": "Spurs +8.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43099.29,
+      "balance": 43099.2895670996,
       "profit": 43.48,
       "description": "Stars/Devils Under 6",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43284.48,
+      "balance": 43284.4795670996,
       "profit": 185.19,
       "description": "Trail Blazers +11.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43420.84,
+      "balance": 43420.8395670996,
       "profit": 136.36,
       "description": "Towson -6.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43532.45,
+      "balance": 43532.449567099604,
       "profit": 111.61,
       "description": "Detroit -3.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43432.45,
+      "balance": 43432.449567099604,
       "profit": -100,
       "description": "Cleveland St +12.5",
       "result": "loss"
     },
     {
       "date": "2025-12-03",
-      "balance": 43332.45,
+      "balance": 43332.449567099604,
       "profit": -100,
       "description": "Sabres/Flyers Under 6",
       "result": "loss"
     },
     {
       "date": "2025-12-03",
-      "balance": 43378.75,
+      "balance": 43378.74956709961,
       "profit": 46.3,
       "description": "Bucks +4.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43228.75,
+      "balance": 43228.74956709961,
       "profit": -150,
       "description": "Kings +15.5",
       "result": "loss"
     },
     {
       "date": "2025-12-03",
-      "balance": 43371.61,
+      "balance": 43371.60956709961,
       "profit": 142.86,
       "description": "Mavericks +4.5",
       "result": "win"
     },
     {
       "date": "2025-12-03",
-      "balance": 43271.61,
+      "balance": 43271.60956709961,
       "profit": -100,
       "description": "Northwestern +10.5",
       "result": "loss"
     },
     {
       "date": "2025-12-04",
-      "balance": 43551.61,
+      "balance": 43551.60956709961,
       "profit": 280,
       "description": "Penguins ML",
       "result": "win"
     },
     {
       "date": "2025-12-04",
-      "balance": 43716.61,
+      "balance": 43716.60956709961,
       "profit": 165,
       "description": "Rangers ML",
       "result": "win"
     },
     {
       "date": "2025-12-04",
-      "balance": 43899.61,
+      "balance": 43899.60956709961,
       "profit": 183,
       "description": "Bruins ML",
       "result": "win"
     },
     {
       "date": "2025-12-04",
-      "balance": 44099.61,
+      "balance": 44099.60956709961,
       "profit": 200,
       "description": "S. Florida -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-04",
-      "balance": 43949.61,
+      "balance": 43949.60956709961,
       "profit": -150,
       "description": "Nets +5.5",
       "result": "loss"
     },
     {
       "date": "2025-12-04",
-      "balance": 44055.61,
+      "balance": 44055.60956709961,
       "profit": 106,
       "description": "Flames ML",
       "result": "win"
     },
     {
       "date": "2025-12-04",
-      "balance": 43905.61,
+      "balance": 43905.60956709961,
       "profit": -150,
       "description": "UCSB -13.5",
       "result": "loss"
     },
     {
       "date": "2025-12-05",
-      "balance": 44145.61,
+      "balance": 44145.60956709961,
       "profit": 240,
       "description": "Jets -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-05",
-      "balance": 44232.57,
+      "balance": 44232.56956709961,
       "profit": 86.96,
       "description": "Heat +6.5",
       "result": "win"
     },
     {
       "date": "2025-12-05",
-      "balance": 44082.57,
+      "balance": 44082.56956709961,
       "profit": -150,
       "description": "Lakers +8.5",
       "result": "loss"
     },
     {
       "date": "2025-12-05",
-      "balance": 43982.57,
+      "balance": 43982.56956709961,
       "profit": -100,
       "description": "Kentucky +5.5",
       "result": "loss"
     },
     {
       "date": "2025-12-05",
-      "balance": 44099.39,
+      "balance": 44099.389567099606,
       "profit": 116.82,
       "description": "Troy +24.5",
       "result": "win"
     },
     {
       "date": "2025-12-05",
-      "balance": 43899.39,
+      "balance": 43899.389567099606,
       "profit": -200,
       "description": "Jazz +15.5",
       "result": "loss"
     },
     {
       "date": "2025-12-05",
-      "balance": 44009.04,
+      "balance": 44009.03956709961,
       "profit": 109.65,
       "description": "Hornets +7.5",
       "result": "win"
     },
     {
       "date": "2025-12-05",
-      "balance": 43934.04,
+      "balance": 43934.03956709961,
       "profit": -75,
       "description": "Canucks +1.5",
       "result": "loss"
     },
     {
       "date": "2025-12-05",
-      "balance": 43784.04,
+      "balance": 43784.03956709961,
       "profit": -150,
       "description": "Mavericks +15.5",
       "result": "loss"
     },
     {
       "date": "2025-12-06",
-      "balance": 43634.04,
+      "balance": 43634.03956709961,
       "profit": -150,
       "description": "Rhode Island +7.5",
       "result": "loss"
     },
     {
       "date": "2025-12-06",
-      "balance": 43484.04,
+      "balance": 43484.03956709961,
       "profit": -150,
       "description": "Michigan St +1",
       "result": "loss"
     },
     {
       "date": "2025-12-06",
-      "balance": 43284.04,
+      "balance": 43284.03956709961,
       "profit": -200,
       "description": "Alabama +2.5",
       "result": "loss"
     },
     {
       "date": "2025-12-06",
-      "balance": 43134.04,
+      "balance": 43134.03956709961,
       "profit": -150,
       "description": "Avalanche -1.5",
       "result": "loss"
     },
     {
       "date": "2025-12-06",
-      "balance": 43270.4,
+      "balance": 43270.39956709961,
       "profit": 136.36,
       "description": "Kings +8.5",
       "result": "win"
     },
     {
       "date": "2025-12-06",
-      "balance": 43413.26,
+      "balance": 43413.25956709961,
       "profit": 142.86,
       "description": "Indiana +5.5",
       "result": "win"
     },
     {
       "date": "2025-12-06",
-      "balance": 43543.69,
+      "balance": 43543.68956709961,
       "profit": 130.43,
       "description": "Duke +4.5",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43725.51,
+      "balance": 43725.50956709961,
       "profit": 181.82,
       "description": "Vikings +1.5",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43816.42,
+      "balance": 43816.41956709961,
       "profit": 90.91,
       "description": "Raiders +8.5",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43716.42,
+      "balance": 43716.41956709961,
       "profit": -100,
       "description": "Bears +6.5",
       "result": "loss"
     },
     {
       "date": "2025-12-07",
-      "balance": 43616.42,
+      "balance": 43616.41956709961,
       "profit": -100,
       "description": "Cardinals +9.5",
       "result": "loss"
     },
     {
       "date": "2025-12-07",
-      "balance": 43763.48,
+      "balance": 43763.47956709961,
       "profit": 147.06,
       "description": "Northeastern -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43513.48,
+      "balance": 43513.47956709961,
       "profit": -250,
       "description": "LSU +5.5",
       "result": "loss"
     },
     {
       "date": "2025-12-07",
-      "balance": 43654.99,
+      "balance": 43654.98956709961,
       "profit": 141.51,
       "description": "UNLV +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43700.44,
+      "balance": 43700.43956709961,
       "profit": 45.45,
       "description": "SMU +2",
       "result": "win"
     },
     {
       "date": "2025-12-07",
-      "balance": 43650.44,
+      "balance": 43650.43956709961,
       "profit": -50,
       "description": "Creighton +5.5",
       "result": "loss"
     },
     {
       "date": "2025-12-08",
-      "balance": 43840.92,
+      "balance": 43840.91956709961,
       "profit": 190.48,
       "description": "Kings ML",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44040.92,
+      "balance": 44040.91956709961,
       "profit": 200,
       "description": "Chargers +2.5",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44174.85,
+      "balance": 44174.84956709961,
       "profit": 133.93,
       "description": "Pelicans +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44270.09,
+      "balance": 44270.08956709961,
       "profit": 95.24,
       "description": "Grambling St +8.5",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44365.33,
+      "balance": 44365.32956709961,
       "profit": 95.24,
       "description": "Grambling St +8.5",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44265.33,
+      "balance": 44265.32956709961,
       "profit": -100,
       "description": "Sabres ML",
       "result": "loss"
     },
     {
       "date": "2025-12-08",
-      "balance": 44377.27,
+      "balance": 44377.26956709961,
       "profit": 111.94,
       "description": "Wild ML",
       "result": "win"
     },
     {
       "date": "2025-12-08",
-      "balance": 44472.51,
+      "balance": 44472.50956709961,
       "profit": 95.24,
       "description": "Eagles/Chargers Under 41.5",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44372.51,
+      "balance": 44372.50956709961,
       "profit": -100,
       "description": "Heat ML",
       "result": "loss"
     },
     {
       "date": "2025-12-09",
-      "balance": 44462.51,
+      "balance": 44462.50956709961,
       "profit": 90,
       "description": "Hurricanes -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44555.97,
+      "balance": 44555.96956709961,
       "profit": 93.46,
       "description": "Illinois -3",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44693.47,
+      "balance": 44693.46956709961,
       "profit": 137.5,
       "description": "Bruins ML",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44834.32,
+      "balance": 44834.31956709961,
       "profit": 140.85,
       "description": "Stars ML",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44922.35,
+      "balance": 44922.349567099605,
       "profit": 88.03,
       "description": "Stars ML",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 45013.26,
+      "balance": 45013.25956709961,
       "profit": 90.91,
       "description": "UConn -3.5",
       "result": "win"
     },
     {
       "date": "2025-12-09",
-      "balance": 44913.26,
+      "balance": 44913.25956709961,
       "profit": -100,
       "description": "LBSU/SJSU Under 141",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44763.26,
+      "balance": 44763.25956709961,
       "profit": -150,
       "description": "Delaware @ George Washington Over 152.5",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44855,
+      "balance": 44854.99956709961,
       "profit": 91.74,
       "description": "UMass +1.5",
       "result": "win"
     },
     {
       "date": "2025-12-10",
-      "balance": 44997.86,
+      "balance": 44997.85956709961,
       "profit": 142.86,
       "description": "Colgate +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-10",
-      "balance": 44897.86,
+      "balance": 44897.85956709961,
       "profit": -100,
       "description": "Liberty @ NC State Over 151.5",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44797.86,
+      "balance": 44797.85956709961,
       "profit": -100,
       "description": "Liberty +12.5",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44934.22,
+      "balance": 44934.21956709961,
       "profit": 136.36,
       "description": "Minnesota @ Purdue Under 143",
       "result": "win"
     },
     {
       "date": "2025-12-10",
-      "balance": 44809.22,
+      "balance": 44809.21956709961,
       "profit": -125,
       "description": "Eastern Illinois +5.5",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44709.22,
+      "balance": 44709.21956709961,
       "profit": -100,
       "description": "LA Kings -1.5",
       "result": "loss"
     },
     {
       "date": "2025-12-10",
-      "balance": 44804.46,
+      "balance": 44804.459567099606,
       "profit": 95.24,
       "description": "Spurs +7.5",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 44604.46,
+      "balance": 44604.459567099606,
       "profit": -200,
       "description": "Kings +10.5",
       "result": "loss"
     },
     {
       "date": "2025-12-11",
-      "balance": 44740.46,
+      "balance": 44740.459567099606,
       "profit": 136,
       "description": "Bucks +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 44883.46,
+      "balance": 44883.459567099606,
       "profit": 143,
       "description": "Clippers +9.5",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 44997.46,
+      "balance": 44997.459567099606,
       "profit": 114,
       "description": "Iowa +12.5",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 44872.46,
+      "balance": 44872.459567099606,
       "profit": -125,
       "description": "Iowa/Iowa St O140.5",
       "result": "loss"
     },
     {
       "date": "2025-12-11",
-      "balance": 45217.46,
+      "balance": 45217.459567099606,
       "profit": 345,
       "description": "Falcons ML",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 45304.46,
+      "balance": 45304.459567099606,
       "profit": 87,
       "description": "Sabres ML",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 45401.46,
+      "balance": 45401.459567099606,
       "profit": 97,
       "description": "Bruins ML",
       "result": "win"
     },
     {
       "date": "2025-12-11",
-      "balance": 45445.46,
+      "balance": 45445.459567099606,
       "profit": 44,
       "description": "Avalanche ML",
       "result": "win"
     },
     {
       "date": "2025-12-12",
-      "balance": 45245.46,
+      "balance": 45245.459567099606,
       "profit": -200,
       "description": "Nets +7.5",
       "result": "loss"
     },
     {
       "date": "2025-12-12",
-      "balance": 45336.37,
+      "balance": 45336.36956709961,
       "profit": 90.91,
       "description": "Jazz +7.5",
       "result": "win"
     },
     {
       "date": "2025-12-12",
-      "balance": 45479.23,
+      "balance": 45479.22956709961,
       "profit": 142.86,
       "description": "Austin Peay +3.5",
       "result": "win"
     },
     {
       "date": "2025-12-12",
-      "balance": 45329.23,
+      "balance": 45329.22956709961,
       "profit": -150,
       "description": "Nets +7.5",
       "result": "loss"
     },
     {
       "date": "2025-12-12",
-      "balance": 45129.23,
+      "balance": 45129.22956709961,
       "profit": -200,
       "description": "Blackhawks ML",
       "result": "loss"
     },
     {
       "date": "2025-12-12",
-      "balance": 45239.85,
+      "balance": 45239.84956709961,
       "profit": 110.62,
       "description": "Blackhawks/Blues Under 6",
       "result": "win"
     },
     {
       "date": "2025-12-12",
-      "balance": 45335.09,
+      "balance": 45335.08956709961,
       "profit": 95.24,
       "description": "Austin Peay +3.5",
       "result": "win"
     },
     {
       "date": "2025-12-12",
-      "balance": 45390.65,
+      "balance": 45390.64956709961,
       "profit": 55.56,
       "description": "Utah HC ML",
       "result": "win"
     },
     {
       "date": "2025-12-13",
-      "balance": 45240.65,
+      "balance": 45240.64956709961,
       "profit": -150,
       "description": "Ducks ML",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 45377.01,
+      "balance": 45377.00956709961,
       "profit": 136.36,
       "description": "George Washington +14.5",
       "result": "win"
     },
     {
       "date": "2025-12-13",
-      "balance": 45513.37,
+      "balance": 45513.36956709961,
       "profit": 136.36,
       "description": "Army/Navy Under 38.5",
       "result": "win"
     },
     {
       "date": "2025-12-13",
-      "balance": 45413.37,
+      "balance": 45413.36956709961,
       "profit": -100,
       "description": "Illinois -10.5",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 45263.37,
+      "balance": 45263.36956709961,
       "profit": -150,
       "description": "NC State -2.5",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 45188.37,
+      "balance": 45188.36956709961,
       "profit": -75,
       "description": "Magic +4.5",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 45378.37,
+      "balance": 45378.36956709961,
       "profit": 190,
       "description": "Oilers -1.5",
       "result": "win"
     },
     {
       "date": "2025-12-13",
-      "balance": 45253.37,
+      "balance": 45253.36956709961,
       "profit": -125,
       "description": "Hurricanes -1.5",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 45053.37,
+      "balance": 45053.36956709961,
       "profit": -200,
       "description": "Canadiens ML",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 44903.37,
+      "balance": 44903.36956709961,
       "profit": -150,
       "description": "Canadiens ML",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 44803.37,
+      "balance": 44803.36956709961,
       "profit": -100,
       "description": "South Carolina -23",
       "result": "loss"
     },
     {
       "date": "2025-12-13",
-      "balance": 44895.11,
+      "balance": 44895.10956709961,
       "profit": 91.74,
       "description": "Spurs/Thunder Under 232.5",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45037.97,
+      "balance": 45037.96956709961,
       "profit": 142.86,
       "description": "Bills -2.5 vs Patriots",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45128.88,
+      "balance": 45128.87956709961,
       "profit": 90.91,
       "description": "Ravens -2.5 vs Bengals",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45188.88,
+      "balance": 45188.87956709961,
       "profit": 60,
       "description": "East Carolina +1.5 vs Buffalo",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45088.88,
+      "balance": 45088.87956709961,
       "profit": -100,
       "description": "UAB -6.5 vs Troy",
       "result": "loss"
     },
     {
       "date": "2025-12-14",
-      "balance": 45179.79,
+      "balance": 45179.789567099615,
       "profit": 90.91,
       "description": "Wizards +10 vs Pacers",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45316.15,
+      "balance": 45316.149567099616,
       "profit": 136.36,
       "description": "Saints +1.5 vs Panthers",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45384.96,
+      "balance": 45384.95956709961,
       "profit": 68.81,
       "description": "Chicago State +13.5 vs Loyola Illinois",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45284.96,
+      "balance": 45284.95956709961,
       "profit": -100,
       "description": "Bruins ML vs Wild",
       "result": "loss"
     },
     {
       "date": "2025-12-14",
-      "balance": 45330.41,
+      "balance": 45330.40956709961,
       "profit": 45.45,
       "description": "Boise State +2.5 vs Saint Mary's",
       "result": "win"
     },
     {
       "date": "2025-12-14",
-      "balance": 45428.45,
+      "balance": 45428.44956709961,
       "profit": 98.04,
       "description": "Nets +1.5 vs Bucks",
       "result": "win"
     },
     {
       "date": "2025-12-15",
-      "balance": 45528.45,
+      "balance": 45528.44956709961,
       "profit": 100,
       "description": "Ducks ML",
       "result": "win"
     },
     {
       "date": "2025-12-15",
-      "balance": 45633.45,
+      "balance": 45633.44956709961,
       "profit": 105,
       "description": "Panthers ML",
       "result": "win"
     },
     {
       "date": "2025-12-15",
-      "balance": 45558.45,
+      "balance": 45558.44956709961,
       "profit": -75,
       "description": "Gardner-Webb +10.5",
       "result": "loss"
     },
     {
       "date": "2025-12-15",
-      "balance": 45650.19,
+      "balance": 45650.18956709961,
       "profit": 91.74,
       "description": "Raptors +6",
       "result": "win"
     },
     {
       "date": "2025-12-15",
-      "balance": 45745.43,
+      "balance": 45745.42956709961,
       "profit": 95.24,
       "description": "Predators ML",
       "result": "win"
     },
     {
       "date": "2025-12-15",
-      "balance": 45595.43,
+      "balance": 45595.42956709961,
       "profit": -150,
       "description": "Dolphins/Steelers Under 42.5",
       "result": "loss"
     },
     {
       "date": "2025-12-15",
-      "balance": 45686.34,
+      "balance": 45686.33956709961,
       "profit": 90.91,
       "description": "Grizzlies +4.5",
       "result": "win"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 45816.77434970831,
+      "profit": 130.43478260869566,
+      "description": "Jacksonville State -2.5",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 46032.77434970831,
+      "profit": 216,
+      "description": "Flyers ML",
+      "result": "win"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 45907.77434970831,
+      "profit": -125,
+      "description": "Blackhawks ML",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 45807.77434970831,
+      "profit": -100,
+      "description": "Islanders ML",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 45707.77434970831,
+      "profit": -100,
+      "description": "Ducks ML",
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-16",
+      "balance": 45850.63149256545,
+      "profit": 142.85714285714283,
+      "description": "Lipscomb +31.5",
+      "result": "win"
     }
   ],
-  "lastUpdated": "2025-12-16T18:38:13.915Z"
+  "lastUpdated": "2025-12-17T15:09:35.755Z"
 }

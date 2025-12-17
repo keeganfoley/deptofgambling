@@ -1,5 +1,13 @@
 # SOCIAL POST FORMATS - DAILY PICKS
-## Use these EXACT formats every time picks PNG is delivered
+## LOCKED: December 16, 2025
+
+Use these EXACT formats every time picks are placed.
+
+---
+
+## TRIGGER WORDS
+
+When user says "placed", "captions", "instagram", or "twitter" after picks are confirmed, generate all 3 formats below.
 
 ---
 
@@ -8,29 +16,22 @@
 ```
 THE ANALYSIS 📊
 
-NFL 🏈
-    ⁃    [Team] [Line] — [Thesis explanation]
-    ⁃    [Team] [Line] — [Thesis explanation]
+[SPORT] [EMOJI]
+    ⁃    [Team] [Line] — [Thesis 1-2 sentences]
+    ⁃    [Team] [Line] — [Thesis 1-2 sentences]
 
-NBA 🏀
-    ⁃    [Team] [Line] — [Thesis explanation]
-
-NCAAB 🏀
-    ⁃    [Team] [Line] — [Thesis explanation]
-
-NHL 🏒
-    ⁃    [Team] [Line] — [Thesis explanation]
-    ⁃    [Team] [Line] — [Thesis explanation]
+[SPORT] [EMOJI]
+    ⁃    [Team] [Line] — [Thesis 1-2 sentences]
 
 Let's work.
 ```
 
 ### Rules:
-- Sport emoji after sport name
-- Bullet points with analysis
-- If same pick appears twice (different funds), explain: "Listed twice = 1u Vector + 1u Sharp = 2u total"
-- Keep thesis to 1-2 sentences max
-- End with "Let's work."
+- Group picks by sport
+- Sport emoji AFTER sport name
+- Thesis = 1-2 sentences explaining WHY (sharp money %, model edge, situational factor)
+- If same pick in multiple funds: "Listed twice = 1u Vector + 1u Sharp = 2u total"
+- Always end with "Let's work."
 
 ---
 
@@ -42,7 +43,7 @@ Let's work.
 
 ### Example:
 ```
-DECEMBER 8 | 8 picks across NFL, NBA, NCAAB, NHL. Full breakdown in pinned. #sportsbetting #deptofgambling #freepicks
+DECEMBER 16 | 6 picks across NCAAF, NCAAB, NHL. Full breakdown in pinned. #sportsbetting #deptofgambling #freepicks
 ```
 
 ---
@@ -52,12 +53,9 @@ DECEMBER 8 | 8 picks across NFL, NBA, NCAAB, NHL. Full breakdown in pinned. #spo
 ```
 [DATE] PICKS 🎯
 
-🏈 [Team] [Line] ([Odds])
-🏈 [Team] [Line] ([Odds])
-🏀 [Team] [Line] ([Odds])
-🏀 [Team] [Line] ([Odds]) x2
-🏒 [Team] ML ([Odds])
-🏒 [Team] ML ([Odds])
+[emoji] [Team] [Line] ([Odds])
+[emoji] [Team] [Line] ([Odds])
+[emoji] [Team] [Line] ([Odds])
 
 X picks | Xu | $X,XXX
 
@@ -66,22 +64,56 @@ Let's work 🔒
 #GamblingTwitter #SportsBetting #FreePicks
 ```
 
-### Rules:
-- 🏈 for NFL
-- 🏀 for NBA and NCAAB
-- 🏒 for NHL
-- Add "x2" if same pick from multiple funds
-- Show totals: picks | units | dollars
-- End with "Let's work 🔒"
-- 3 hashtags: #GamblingTwitter #SportsBetting #FreePicks
+### Example:
+```
+DEC 16 PICKS 🎯
+
+🏈 Jax State -2.5 (-115)
+🏀 Lipscomb +31.5 (-105)
+🏒 Flyers ML (+108)
+🏒 Blackhawks ML (+175)
+🏒 Islanders ML (+112)
+🏒 Ducks ML (+120)
+
+6 picks | 8.25u | $825
+
+Let's work 🔒
+
+#GamblingTwitter #SportsBetting #FreePicks
+```
+
+---
+
+## SPORT EMOJIS
+
+- 🏈 NFL / NCAAF
+- 🏀 NBA / NCAAB
+- 🏒 NHL
+
+---
+
+## THESIS WRITING RULES
+
+DO write:
+- "Only 12% of bets but 66% of the money is on [Team]. Big-money bettors backing them."
+- "Model edge on a massive spread. [Team] likely to ease off in a blowout."
+- "Home ice advantage against [Team] who struggles on the road."
+
+DO NOT write:
+- "PRO model projects..."
+- "Action Pro shows..."
+- "Sharp signals indicate..."
+- Letter grades (A, A+, B, etc.)
+
+Keep it plain English - explain what the numbers mean, not where they came from.
 
 ---
 
 ## DELIVERY CHECKLIST
 
-When delivering picks PNG, ALWAYS provide:
-1. ✅ picks-[date].png
-2. ✅ exposure-[date].png
-3. ✅ THE ANALYSIS (pinned comment)
-4. ✅ Instagram caption (2 sentences + hashtags)
-5. ✅ Twitter post (formatted list + hashtags)
+When picks are placed, deliver:
+1. picks.png (1080x1350)
+2. exposure.png (1080x1350)
+3. THE ANALYSIS (pinned comment text)
+4. Instagram caption
+5. Twitter post
