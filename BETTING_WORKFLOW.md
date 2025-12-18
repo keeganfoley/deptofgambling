@@ -162,6 +162,33 @@ Jokic O11.5 reb: Edge 18%, Grade B+
 | "run it" | Same - analyze for picks |
 | Just paste the data | Ask "Ready to analyze this?" then proceed |
 
+### DISCORD TRIGGERS (AUTOMATIC + MANUAL)
+
+**AUTOMATIC - These happen automatically as part of the workflow:**
+
+| Trigger | What Outputs (Automatic) |
+|---------|-------------------------|
+| **"placed"** | After saving bets → Output #all-picks messages + #consensus-plays (if any) |
+| **"update results"** | After settling bets → Output #daily-performance message |
+
+**MANUAL - Use these to re-generate Discord output:**
+
+| User Says | What I Output |
+|-----------|---------------|
+| **"discord picks"** | #all-picks + #consensus-plays for today's bets (or specify date) |
+| **"discord daily"** | #daily-performance for most recent settled day |
+| **"discord weekly"** | #weekly-performance (Mon-Sun of last complete week) + #overall-standing |
+| **"discord all"** | All of the above |
+
+**Script for manual testing:**
+```bash
+npx tsx scripts/test-discord.ts picks [date]   # #all-picks + #consensus
+npx tsx scripts/test-discord.ts daily [date]   # #daily-performance
+npx tsx scripts/test-discord.ts weekly         # #weekly-performance
+npx tsx scripts/test-discord.ts alltime        # #overall-standing
+npx tsx scripts/test-discord.ts all [date]     # Everything
+```
+
 ### MY ANALYSIS PROCESS
 
 1. **Parse** the structured text data
@@ -320,7 +347,9 @@ User will say:
 - "Bets placed" + screenshot
 - Just paste picks and say "placed"
 
-**Claude's Job:** Immediately save to `data/bets.json` with `"result": "pending"`
+**Claude's Job:**
+1. Immediately save to `data/bets.json` with `"result": "pending"`
+2. **Generate Discord messages** (see DISCORD OUTPUT below)
 
 ### Next Day - Updating Results
 User says "update results" or "what hit?" or "check bets"
@@ -335,8 +364,78 @@ User says "update results" or "what hit?" or "check bets"
 4. Update results (win/loss/push, P/L, final score)
 5. Run sync script to update portfolio, charts, metrics
 6. Report using standard format (✅ SETTLED / ⏳ IN PROGRESS / 🔮 FUTURE)
+7. **Generate Discord daily-performance message** (see DISCORD OUTPUT below)
 
 **THE POINT:** User never re-tells what bets were placed. They're saved. Just say "update results" and Claude handles ALL pending bets automatically - settling past games, checking today's games, skipping future games.
+
+---
+
+## DISCORD OUTPUT (AUTOMATIC)
+
+**CRITICAL: Claude ALWAYS outputs Discord messages automatically after these triggers.**
+
+Discord messages are generated automatically as part of the workflow. See `DISCORD.md` for full format specs.
+
+### After "placed" - AUTOMATICALLY Output These:
+
+**#all-picks** - One message per bet with track records:
+```
+🏒 Panthers ML @ +105
+SharpFund | NHL | 1u
+
+📊 Track Record:
+• SharpFund NHL: 19-10 (65.5%)
+• NHL moneylines: 21-8 (72.4%)
+• SharpFund Overall: 50-23 (68.5%)
+
+💡 Defending champs getting plus money. Sharp Action + Big Money lit.
+```
+
+**#consensus-plays** - If 2+ funds on same pick (auto-detected):
+```
+🎯 Grizzlies +4.5 @ -110
+SharpFund + VectorFund | NBA | Dec 15
+
+📊 Consensus Record: 8-4 (66.7%)
+Last 5: ✅ ✅ ❌ ✅ ✅
+
+Two funds. Same side. Here's why.
+
+⚫ VectorFund
+Model projects +2.1. Getting 4.5 means embedded value.
+
+🟢 SharpFund
+42% tickets, 58% money. Sharps loading up.
+
+➡️ Multiple signals aligned. We're in.
+```
+
+### After "update results" - AUTOMATICALLY Output This:
+
+**#daily-performance**:
+```
+📅 DAY 42 | Dec 15, 2025
+
+RESULTS
+━━━━━━━━━━━━━━━━━━━━
+✅ Panthers ML +105 → W (+1.05u)
+❌ Dolphins U42.5 -110 → L (-1.50u)
+✅ Grizzlies +4.5 -110 → W (+0.91u)
+
+Today: 5-2 | +2.58u
+
+PORTFOLIO
+━━━━━━━━━━━━━━━━━━━━
+💰 Balance: $45,686.34
+📊 Net P/L: +$5,686.34
+📈 ROI: +14.22%
+🎯 Record: 171-116-2 (59.6%)
+```
+
+### Code Location:
+- Functions: `lib/discord.ts`
+- Test script: `scripts/test-discord.ts`
+- Full spec: `DISCORD.md`
 
 ---
 
@@ -900,37 +999,52 @@ GAMES: [EARLIEST DATE] - [LATEST DATE]
 
 **STEP 1: Update Data**
 1. Update bets.json with results (win/loss/push)
-2. Run `npx tsx scripts/sync-all-data.ts` to sync portfolio/chart/metrics
-3. Start dev server: `npm run dev`
-4. Provide local link (e.g., http://localhost:3000) and confirm data is updated
+2. Run `npx tsx scripts/daily-update.ts` to sync portfolio/chart/metrics
 
-**STEP 2: Confirm with User**
-- Show summary: Record, P/L, Fund breakdown
-- Wait for user confirmation before generating slides
+**STEP 2: AUTO-GENERATE ALL SOCIAL IMAGES**
 
-**STEP 3: Generate 4 Deliverables (after confirmation)**
+Claude automatically generates all 5 images after settling results:
 
-| # | Slide | Template | Output |
-|---|-------|----------|--------|
-| 1 | **Daily Report** | `daily-report-master-template.html` | `social-images/YYYY-MM-DD/1-daily-report.png` |
-| 2 | **Picks Results** | `picks-results-master-template.html` | `social-images/YYYY-MM-DD/2-picks-results.png` |
-| 3 | **Portfolio Chart** | `portfolio-chart-master-template.html` | `social-images/YYYY-MM-DD/3-portfolio-chart.png` |
-| 4 | **Story (Cumulative)** | Script: `generate-cumulative-candles.ts` | `social-images/YYYY-MM-DD/story-dayXX.png` |
+| # | Image | Description | Output Location |
+|---|-------|-------------|-----------------|
+| 1 | **picks-results.png** | Each bet with ✅/❌ and P/L | `social-images/YYYY-MM-DD/picks-results.png` |
+| 2 | **daily-report.png** | Day summary + fund breakdown | `social-images/YYYY-MM-DD/daily-report.png` |
+| 3 | **portfolio-chart.png** | 7-day candlestick chart | `social-images/YYYY-MM-DD/portfolio-chart.png` |
+| 4 | **dayXX-YYYY-MM-DD.png** | All-time cumulative candle chart (IG Story) | `social-images/YYYY-MM-DD/dayXX-YYYY-MM-DD.png` |
 
-**FOLDER STRUCTURE (ALWAYS USE THIS):**
+**NOTE:** The cumulative candle chart is also saved to `daily-images/cumulative-candles/` for archival.
+
+**DAY NUMBER CALCULATION (auto-calculated):**
 ```
-social-images/
-└── YYYY-MM-DD/
-    ├── 1-daily-report.png      ← Slide 1 (post first)
-    ├── 2-picks-results.png     ← Slide 2
-    ├── 3-portfolio-chart.png   ← Slide 3
-    └── story-dayXX.png         ← Instagram Story
+Day 1 = Nov 4, 2025 (portfolio start)
+Day Number = (current_date - Nov 4, 2025) + 1
+
+Examples:
+- Dec 16, 2025 = Day 43
+- Dec 17, 2025 = Day 44
+- Dec 18, 2025 = Day 45
 ```
 
-**Day Numbering:**
-- Day 1 = Nov 4, 2025 (portfolio start)
-- Day 37 = Dec 10, 2025
-- Calculate: (date - Nov 4) + 1
+**Story generation command (run automatically):**
+```bash
+npx tsx scripts/generate-cumulative-candles.ts YYYY-MM-DD
+# Then copy to social-images folder:
+cp daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png social-images/YYYY-MM-DD/
+```
+
+**FOLDER STRUCTURE (STANDARD FOR EVERY DAY):**
+```
+social-images/YYYY-MM-DD/
+├── picks.png               ← Feed slide 1 (today's picks)
+├── exposure.png            ← Feed slide 2 (fund breakdown)
+├── picks-results.png       ← Feed slide 3 (results with W/L)
+├── daily-report.png        ← Feed slide 4 (day summary)
+├── portfolio-chart.png     ← Feed slide 5 (7-day chart)
+└── dayXX-YYYY-MM-DD.png    ← IG Story (all-time cumulative candles)
+
+daily-images/cumulative-candles/
+└── dayXX-YYYY-MM-DD.png    ← Archive copy
+```
 
 **STEP 4: Provide Captions**
 - Instagram caption
@@ -1014,28 +1128,31 @@ Save chart to: `daily-images/[date]-chart.png`
 
 #### INSTAGRAM STORY - CUMULATIVE PORTFOLIO CHART
 
-**ALWAYS GENERATE THIS** after "update results" alongside the Instagram POST chart.
+**AUTO-GENERATED** as part of "update results" workflow (see STEP 2 above).
 
-Generate an Instagram Story (1080x1920) cumulative candle chart showing:
-- **ALL candles from Day 1 to current day** (not just last 7 days)
+**What it shows:**
+- 1080x1920 TradingView-style cumulative candle chart
+- ALL candles from Day 1 to current day
 - Day number and date in header
-- Portfolio balance with total P/L and percentage
+- Portfolio balance with total P/L and ROI
 - Stats: Record, Net P/L, Today's P/L
-- Bloomberg terminal style with dense grid
 
-**Script:** `npx tsx scripts/generate-cumulative-candles.ts [DAY_NUMBER]`
+**Day calculation (automatic):**
+```javascript
+const start = new Date('2025-11-04');
+const today = new Date(betDate);
+const dayNum = Math.floor((today - start) / (1000 * 60 * 60 * 24)) + 1;
+```
 
 **Output:** `daily-images/cumulative-candles/dayXX-YYYY-MM-DD.png`
 
-**What to deliver after "update results":**
-1. Instagram CAPTION (for post)
-2. Instagram POST image (1080x1080, last 7 days with x-axis dates)
-3. Instagram STORY image (1080x1920, all days since Day 1)
-
-**Example workflow:**
-- Day 27 (Nov 30): Run `npx tsx scripts/generate-cumulative-candles.ts 27`
-- This creates `day27-2025-11-30.png` with 27 candles (Nov 4 - Nov 30)
-- User posts this to Instagram Story to show full portfolio journey
+**What to deliver after "update results" (ALL AUTO-GENERATED):**
+1. picks-results.png (feed)
+2. daily-report.png (feed)
+3. portfolio-chart.png (feed)
+4. dayXX-YYYY-MM-DD.png (story)
+5. Instagram caption
+6. Twitter post
 
 ---
 

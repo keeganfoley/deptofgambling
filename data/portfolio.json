@@ -1,18 +1,18 @@
 {
-  "asOfDate": "2025-12-17",
+  "asOfDate": "2025-12-18",
   "combined": {
-    "balance": 45850.63,
+    "balance": 46152.63,
     "startingBalance": 40000,
-    "netPL": 5850.63,
-    "roi": 14.76,
+    "netPL": 6152.63,
+    "roi": 15.38,
     "record": {
-      "wins": 174,
-      "losses": 119,
+      "wins": 178,
+      "losses": 121,
       "pushes": 2
     },
-    "winRate": 59.4,
-    "unitsWon": 58.51,
-    "sharpe": null
+    "winRate": 59.53,
+    "unitsWon": 61.53,
+    "sharpe": 6.18
   },
   "funds": {
     "VectorFund": {
@@ -21,13 +21,13 @@
       "balance": 10328.71,
       "startingBalance": 10000,
       "netPL": 328.71,
-      "roi": 1.47,
+      "roi": 3.29,
       "record": {
-        "wins": 85,
+        "wins": 86,
         "losses": 75,
         "pushes": 1
       },
-      "winRate": 53.1,
+      "winRate": 53.42,
       "unitsWon": 3.29,
       "color": "#1a1a1a",
       "status": "active"
@@ -38,13 +38,13 @@
       "balance": 13334.79,
       "startingBalance": 10000,
       "netPL": 3334.79,
-      "roi": 29.64,
+      "roi": 33.35,
       "record": {
-        "wins": 56,
-        "losses": 27,
+        "wins": 58,
+        "losses": 28,
         "pushes": 0
       },
-      "winRate": 67.5,
+      "winRate": 67.44,
       "unitsWon": 33.35,
       "color": "#22c55e",
       "status": "active"
@@ -55,7 +55,7 @@
       "balance": 10977.81,
       "startingBalance": 10000,
       "netPL": 977.81,
-      "roi": 32.06,
+      "roi": 9.78,
       "record": {
         "wins": 16,
         "losses": 9,
@@ -72,13 +72,13 @@
       "balance": 11209.32,
       "startingBalance": 10000,
       "netPL": 1209.32,
-      "roi": 40.65,
+      "roi": 12.09,
       "record": {
-        "wins": 17,
-        "losses": 8,
+        "wins": 18,
+        "losses": 9,
         "pushes": 1
       },
-      "winRate": 68,
+      "winRate": 66.67,
       "unitsWon": 12.09,
       "color": "#8b5cf6",
       "status": "active"

@@ -15,7 +15,6 @@
       "NCAAB": "https://a.espncdn.com/i/teamlogos/ncaa/500/{id}.png"
     }
   },
-
   "NFL": {
     "Arizona Cardinals": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
     "Cardinals": "https://a.espncdn.com/i/teamlogos/nfl/500/ari.png",
@@ -82,7 +81,6 @@
     "Washington Commanders": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png",
     "Commanders": "https://a.espncdn.com/i/teamlogos/nfl/500/wsh.png"
   },
-
   "NBA": {
     "Atlanta Hawks": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
     "Hawks": "https://a.espncdn.com/i/teamlogos/nba/500/atl.png",
@@ -150,7 +148,6 @@
     "Washington Wizards": "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png",
     "Wizards": "https://a.espncdn.com/i/teamlogos/nba/500/wsh.png"
   },
-
   "NHL": {
     "Anaheim Ducks": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
     "Ducks": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
@@ -221,7 +218,6 @@
     "Caps": "https://a.espncdn.com/i/teamlogos/nhl/500/wsh.png",
     "Winnipeg Jets": "https://a.espncdn.com/i/teamlogos/nhl/500/wpg.png"
   },
-
   "NCAAF": {
     "Alabama Crimson Tide": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
     "Alabama": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
@@ -390,9 +386,11 @@
     "West Virginia": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
     "WVU": "https://a.espncdn.com/i/teamlogos/ncaa/500/277.png",
     "Wisconsin Badgers": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
-    "Wisconsin": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png"
+    "Wisconsin": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
+    "Delaware Fightin' Blue Hens": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+    "Delaware": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+    "Delaware Blue Hens": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png"
   },
-
   "NCAAB": {
     "Alabama Crimson Tide": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
     "Alabama": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
@@ -587,8 +585,14 @@
     "VCU Rams": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
     "VCU": "https://a.espncdn.com/i/teamlogos/ncaa/500/2670.png",
     "Wichita State Shockers": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
-    "Wichita State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png"
+    "Wichita State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2724.png",
+    "Gardner-Webb Bulldogs": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+    "Gardner-Webb": "https://a.espncdn.com/i/teamlogos/ncaa/500/2193.png",
+    "Lipscomb Bisons": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
+    "Lipscomb": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
+    "Jacksonville State Gamecocks": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+    "Jacksonville State": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+    "Jax State": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png"
   },
-
   "fallback": "https://a.espncdn.com/i/teamlogos/default-team-logo-500.png"
 }
