@@ -6189,7 +6189,8 @@
     "expectedValue": 3.2,
     "thesis": "Sharp Action lit on Jets. Blues missing two leading scorers (Dylan Holloway, Jordan Kyrou). Blues defense ranked 32nd in NHL allowing 3.56 goals/game. Jets dominate H2H (15-20 historically). 75% bets but 90% of money on Winnipeg - 15% DIFF confirms smart money alignment.",
     "slug": "winnipeg-jets-moneyline-sharp-dec17-2025",
-    "payout": 0.0
+    "payout": 0.0,
+    "profit": -100
   },
   {
     "id": 305,
@@ -6210,7 +6211,8 @@
     "expectedValue": 2.8,
     "thesis": "Key injuries to opponent criterion met. Blues missing Dylan Holloway and Jordan Kyrou (two leading scorers). St. Louis has allowed 5+ goals in 3 of last 4 games. Situational advantage with depleted Blues roster facing road-heavy Jets who dominate this matchup historically.",
     "slug": "winnipeg-jets-moneyline-catalyst-dec17-2025",
-    "payout": 0.0
+    "payout": 0.0,
+    "profit": -50
   },
   {
     "id": 306,
@@ -6231,7 +6233,8 @@
     "expectedValue": 4.2,
     "thesis": "PRO Model projects +6.8, getting +8.5 (B+ grade, 7% edge). Top Experts also favor Grizzlies. Anthony Edwards QUESTIONABLE (foot) for Minnesota - line may not fully reflect this. Memphis won 6 of 8 recently. Ja Morant playing through ankle but team finding ways to win. Model and experts aligned on value.",
     "slug": "memphis-grizzlies-spread-vector-dec17-2025",
-    "payout": 3.82
+    "payout": 3.82,
+    "profit": 182
   },
   {
     "id": 307,
@@ -6252,7 +6255,8 @@
     "expectedValue": 3.5,
     "thesis": "Sharp Action AND Big Money indicators both lit on Bulls. Cavaliers decimated by injuries: Evan Mobley OUT (calf), Sam Merrill OUT (hand), Larry Nance Jr OUT (calf), Max Strus OUT (foot) - 4 key rotation players missing. Sharp Score of 5 with injury edge makes this the cleanest play on the board.",
     "slug": "chicago-bulls-spread-sharp-dec17-2025",
-    "payout": 2.86
+    "payout": 2.86,
+    "profit": 136
   },
   {
     "id": 308,
@@ -6273,7 +6277,8 @@
     "expectedValue": 3.0,
     "thesis": "Key injuries to opponent criterion met with 4 Cleveland players OUT. Mobley is a star-level player, plus Nance, Strus, and Merrill all out. Bulls snapped 7-game losing streak, showing life. Jarrett Allen just returned but Cavs still undermanned. Situational score of 5.0 supports dual-fund play.",
     "slug": "chicago-bulls-spread-catalyst-dec17-2025",
-    "payout": 1.91
+    "payout": 1.91,
+    "profit": 91
   },
   {
     "id": 309,
@@ -6294,6 +6299,7 @@
     "expectedValue": 2.0,
     "thesis": "Massive RLM confirmed - line moved from Louisiana -3.5 to Delaware -1.5 at some books (5-point swing). Original data showed 57% bets but 82% money on Delaware (+25% DIFF). Sharps hammered this line so hard Delaware became favorites. Reduced stake due to late entry after steam moved line.",
     "slug": "delaware-fightin-blue-hens-spread-sharp-dec17-2025",
-    "payout": 0.93
+    "payout": 0.93,
+    "profit": 43
   }
 ]
