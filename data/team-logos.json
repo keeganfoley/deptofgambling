@@ -389,7 +389,13 @@
     "Wisconsin": "https://a.espncdn.com/i/teamlogos/ncaa/500/275.png",
     "Delaware Fightin' Blue Hens": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
     "Delaware": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
-    "Delaware Blue Hens": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png"
+    "Delaware Blue Hens": "https://a.espncdn.com/i/teamlogos/ncaa/500/48.png",
+    "Missouri State Bears": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+    "Missouri State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+    "Missouri St": "https://a.espncdn.com/i/teamlogos/ncaa/500/2623.png",
+    "Arkansas State Red Wolves": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+    "Arkansas State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png",
+    "Arkansas St": "https://a.espncdn.com/i/teamlogos/ncaa/500/2032.png"
   },
   "NCAAB": {
     "Alabama Crimson Tide": "https://a.espncdn.com/i/teamlogos/ncaa/500/333.png",
@@ -592,7 +598,23 @@
     "Lipscomb": "https://a.espncdn.com/i/teamlogos/ncaa/500/288.png",
     "Jacksonville State Gamecocks": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
     "Jacksonville State": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
-    "Jax State": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png"
+    "Jax State": "https://a.espncdn.com/i/teamlogos/ncaa/500/55.png",
+    "Florida A&M Rattlers": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png",
+    "Florida A&M": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png",
+    "FAMU": "https://a.espncdn.com/i/teamlogos/ncaa/500/50.png",
+    "Tarleton State Texans": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png",
+    "Tarleton State": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png",
+    "Tarleton": "https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png",
+    "Belmont Bruins": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+    "Belmont": "https://a.espncdn.com/i/teamlogos/ncaa/500/2057.png",
+    "UC Irvine Anteaters": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+    "UC Irvine": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+    "UCI": "https://a.espncdn.com/i/teamlogos/ncaa/500/300.png",
+    "Loyola Marymount Lions": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
+    "Loyola Marymount": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
+    "LMU": "https://a.espncdn.com/i/teamlogos/ncaa/500/2350.png",
+    "Seattle Redhawks": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png",
+    "Seattle U": "https://a.espncdn.com/i/teamlogos/ncaa/500/2547.png"
   },
   "fallback": "https://a.espncdn.com/i/teamlogos/default-team-logo-500.png"
 }
