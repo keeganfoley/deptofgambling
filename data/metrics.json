@@ -1,22 +1,22 @@
 {
-  "totalBets": 354,
-  "wins": 204,
-  "losses": 148,
+  "totalBets": 361,
+  "wins": 209,
+  "losses": 150,
   "pushes": 2,
-  "winRate": "57.95",
-  "totalWinnings": 25040.16,
-  "totalLossesAmount": 19545,
+  "winRate": "58.22",
+  "totalWinnings": 25846.1,
+  "totalLossesAmount": 19745.0,
   "avgWin": 122.75,
   "avgLoss": -132.06,
   "avgProfitPerBet": 15.61,
   "medianProfit": 0,
   "largestWin": 345,
   "largestLoss": -250,
-  "profitFactor": 1.281,
+  "profitFactor": 1.309,
   "maxWinStreak": 9,
   "maxLossStreak": 7,
   "currentStreak": -1,
-  "totalCapitalRisked": 46040.0,
+  "totalCapitalRisked": 46865.0,
   "unitsRisked": 460.4,
   "maxDrawdown": -2040.62,
   "maxDrawdownPercent": -5.04,
@@ -118,17 +118,17 @@
       "sport": "NBA",
       "emoji": "\ud83c\udfc0",
       "record": {
-        "wins": 70,
-        "losses": 43,
+        "wins": 72,
+        "losses": 45,
         "pushes": 0,
-        "total": 113
+        "total": 117
       },
-      "wins": 70,
-      "losses": 43,
-      "winRate": 61.95,
-      "roi": 14.18,
-      "pnl": 2242.61,
-      "unitsWon": 22.43
+      "wins": 72,
+      "losses": 45,
+      "winRate": 61.54,
+      "roi": 15.6,
+      "pnl": 2544.43,
+      "unitsWon": 25.44
     },
     "NCAAB": {
       "sport": "NCAAB",
@@ -150,17 +150,17 @@
       "sport": "NFL",
       "emoji": "\ud83c\udfc8",
       "record": {
-        "wins": 35,
+        "wins": 38,
         "losses": 34,
-        "pushes": 1,
-        "total": 70
+        "pushes": 0,
+        "total": 72
       },
-      "wins": 35,
+      "wins": 38,
       "losses": 34,
-      "winRate": 50.72,
-      "roi": 5.21,
-      "pnl": 466.16,
-      "unitsWon": 4.66
+      "winRate": 52.78,
+      "roi": 8.3,
+      "pnl": 770.28,
+      "unitsWon": 7.7
     },
     "NCAAF": {
       "sport": "NCAAF",
@@ -184,8 +184,8 @@
       "record": {
         "wins": 38,
         "losses": 25,
-        "pushes": 1,
-        "total": 64
+        "pushes": 0,
+        "total": 63
       },
       "wins": 38,
       "losses": 25,
@@ -314,13 +314,13 @@
   },
   "fundMetrics": {
     "VectorFund": {
-      "wins": 92,
-      "losses": 84,
+      "wins": 93,
+      "losses": 85,
       "pushes": 1,
-      "pnl": -10.49,
-      "roi": -0.04,
-      "winRate": "52.27",
-      "totalStaked": 24490.0,
+      "pnl": 46.33,
+      "roi": 0.19,
+      "winRate": "52.25",
+      "totalStaked": 24815.0,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
@@ -333,13 +333,13 @@
       }
     },
     "SharpFund": {
-      "wins": 75,
-      "losses": 40,
+      "wins": 79,
+      "losses": 41,
       "pushes": 0,
-      "pnl": 3643.75,
-      "roi": 25.0,
-      "winRate": "65.22",
-      "totalStaked": 14575.0,
+      "pnl": 4192.87,
+      "roi": 27.81,
+      "winRate": "65.83",
+      "totalStaked": 15075.0,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {

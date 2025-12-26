@@ -7479,7 +7479,7 @@
     "description": "Spurs +10",
     "odds": -110,
     "stake": 2.0,
-    "result": "pending",
+    "result": "win",
     "betType": "spread",
     "team": "San Antonio Spurs",
     "opponent": "Oklahoma City Thunder",
@@ -7489,7 +7489,9 @@
     "expectedValue": 5.7,
     "conviction": 100,
     "thesis": "The Thunder are 0-2 against the Spurs this season while going 26-2 against everyone else. San Antonio accounts for half of OKC's losses. The Spurs snapped OKC's 16-game win streak on Dec 16 (111-109), then blew them out 130-110 on Tuesday. The Thunder have been outscored by 34 points in the 44 minutes Wembanyama has played against them. Double digits is too many against a team that owns them.",
-    "slug": "spurs-spread-vector-dec25-2025"
+    "slug": "spurs-spread-vector-dec25-2025",
+    "profit": 181.82,
+    "finalStat": "Final: Spurs 117, Thunder 102 (Won by 15, covered +10)"
   },
   {
     "id": 364,
@@ -7499,7 +7501,7 @@
     "description": "Spurs ML",
     "odds": 320,
     "stake": 1.0,
-    "result": "pending",
+    "result": "win",
     "betType": "moneyline",
     "team": "San Antonio Spurs",
     "opponent": "Oklahoma City Thunder",
@@ -7509,7 +7511,9 @@
     "expectedValue": 3.9,
     "conviction": 92,
     "thesis": "Only 12% of bets are on the Spurs but 28% of the money. When dollars diverge from tickets like this, follow the money. San Antonio has already beaten OKC twice this season and can go 3-0 against them on Christmas. Wembanyama averages 24.4 points, 12.3 rebounds, and 3.3 blocks in his career against Holmgren. Last Christmas, Wemby had 42 points and 18 rebounds. At +320, we only need them to win 24% of the time.",
-    "slug": "spurs-ml-sharp-dec25-2025"
+    "slug": "spurs-ml-sharp-dec25-2025",
+    "profit": 320.0,
+    "finalStat": "Final: Spurs 117, Thunder 102 (Spurs won outright)"
   },
   {
     "id": 365,
@@ -7519,7 +7523,7 @@
     "description": "Vikings +7.5",
     "odds": -110,
     "stake": 1.25,
-    "result": "pending",
+    "result": "win",
     "betType": "spread",
     "team": "Minnesota Vikings",
     "opponent": "Detroit Lions",
@@ -7529,7 +7533,9 @@
     "expectedValue": 2.2,
     "conviction": 70,
     "thesis": "The Lions have 11 players listed as questionable including Amon-Ra St. Brown (knee irritation) and David Montgomery (illness). Two players are already ruled OUT: Avonte Maddox and Giovanni Manu. The line opened at Detroit -2.5 and has ballooned to -7.5 as the injury news piled up. The smart money is buying back Minnesota at home in a divisional game against a banged-up Lions team.",
-    "slug": "vikings-spread-sharp-dec25-2025"
+    "slug": "vikings-spread-sharp-dec25-2025",
+    "profit": 113.64,
+    "finalStat": "Final: Vikings 23, Lions 10 (Vikings won outright, covered +7.5)"
   },
   {
     "id": 366,
@@ -7539,7 +7545,7 @@
     "description": "Lions/Vikings U43.5",
     "odds": -105,
     "stake": 1.0,
-    "result": "pending",
+    "result": "win",
     "betType": "total",
     "team": "Under",
     "opponent": "Lions vs Vikings",
@@ -7549,7 +7555,9 @@
     "expectedValue": 2.0,
     "conviction": 65,
     "thesis": "Both offenses are compromised. Minnesota is starting Max Brosmer in place of the injured J.J. McCarthy - Brosmer threw 4 interceptions in his first start this season. Detroit has 11 players questionable including their top receiver and lead running back. December football in Minnesota with two banged-up offenses screams low-scoring game.",
-    "slug": "lions-vikings-under-sharp-dec25-2025"
+    "slug": "lions-vikings-under-sharp-dec25-2025",
+    "profit": 95.24,
+    "finalStat": "Final: Vikings 23, Lions 10 (Total: 33, Under 43.5)"
   },
   {
     "id": 367,
@@ -7559,7 +7567,7 @@
     "description": "Mavericks +8.5",
     "odds": -110,
     "stake": 1.25,
-    "result": "pending",
+    "result": "loss",
     "betType": "spread",
     "team": "Dallas Mavericks",
     "opponent": "Golden State Warriors",
@@ -7569,7 +7577,9 @@
     "expectedValue": 3.6,
     "conviction": 85,
     "thesis": "The line opened at Dallas +4.5 and has moved to +8.5. Klay Thompson is probable for his first return to Chase Center since leaving the Warriors after 13 seasons and 4 championships. Against his former team this season, Thompson is averaging 19.8 points on 47.7% from three - well above his season averages of 14.0 points on 39.1%. He hit 13 threes in his first two meetings vs Golden State. Emotional game, motivated Mavs team getting too many points.",
-    "slug": "mavericks-spread-vector-dec25-2025"
+    "slug": "mavericks-spread-vector-dec25-2025",
+    "profit": -125.0,
+    "finalStat": "Final: Warriors 126, Mavericks 116 (Lost by 10, did not cover +8.5)"
   },
   {
     "id": 368,
@@ -7579,7 +7589,7 @@
     "description": "Mavericks ML",
     "odds": 270,
     "stake": 0.75,
-    "result": "pending",
+    "result": "loss",
     "betType": "moneyline",
     "team": "Dallas Mavericks",
     "opponent": "Golden State Warriors",
@@ -7589,7 +7599,9 @@
     "expectedValue": 2.2,
     "conviction": 70,
     "thesis": "Smart money is on Dallas outright. Klay Thompson has been on a mission against Golden State - he's shooting 47.7% from three against his old team compared to 39.1% for the season. The Warriors are just 15-15 and inconsistent. Thompson wants this one badly, and at +270 with the money flowing to Dallas, this is worth a sprinkle.",
-    "slug": "mavericks-ml-sharp-dec25-2025"
+    "slug": "mavericks-ml-sharp-dec25-2025",
+    "profit": -75.0,
+    "finalStat": "Final: Warriors 126, Mavericks 116 (Mavericks lost)"
   },
   {
     "id": 369,
@@ -7599,7 +7611,7 @@
     "description": "Chiefs +13.5",
     "odds": -105,
     "stake": 1.0,
-    "result": "pending",
+    "result": "win",
     "betType": "spread",
     "team": "Kansas City Chiefs",
     "opponent": "Denver Broncos",
@@ -7609,6 +7621,8 @@
     "expectedValue": 1.8,
     "conviction": 50,
     "thesis": "The market overcorrected. Patrick Mahomes tore two knee ligaments two weeks ago. Gardner Minshew tore his knee last week. The line swung 18 points from Chiefs -4.5 to +13.5. Chris Oladokun makes his first career start, but he went 11-of-16 for 111 yards with no turnovers in relief last week. Andy Reid said the playbook will be simplified but they can still do enough. Reid at home on Christmas as a 13.5-point dog? The smart money says that's too many points.",
-    "slug": "chiefs-spread-sharp-dec25-2025"
+    "slug": "chiefs-spread-sharp-dec25-2025",
+    "profit": 95.24,
+    "finalStat": "Final: Broncos 20, Chiefs 13 (Lost by 7, covered +13.5)"
   }
 ]
