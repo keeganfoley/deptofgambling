@@ -1,0 +1,474 @@
+<!--
+  Portfolio Performance - December 25, 2025 (Christmas Edition)
+  Balance: $46,101 | Net P/L: +$6,101 | ROI: +15.25%
+  7-day chart: Dec 18-25 (Dec 24 skipped - no bets)
+  Fixed Y-axis range: $45.0k to $46.5k
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Performance - DECEMBER 25</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 60px;
+      position: relative;
+      background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 50%, #091a2e 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Snowflake decorations */
+    .snowflake {
+      position: absolute;
+      opacity: 0.15;
+      pointer-events: none;
+    }
+    .snowflake-1 { top: 50px; left: 80px; width: 80px; }
+    .snowflake-2 { top: 120px; right: 100px; width: 60px; }
+    .snowflake-3 { bottom: 200px; left: 60px; width: 50px; }
+    .snowflake-4 { bottom: 300px; right: 80px; width: 70px; }
+    .snowflake-5 { top: 400px; left: 40px; width: 45px; }
+    .snowflake-6 { top: 500px; right: 50px; width: 55px; }
+
+    /* Christmas lights at top */
+    .christmas-lights {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
+      z-index: 20;
+    }
+    .christmas-lights img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 20px; }
+    .side-bars.right { right: 20px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #2d8a4e; }
+    .side-bar.red { background: #c0392b; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 120px;
+      padding-top: 20px;
+    }
+
+    .header { text-align: center; margin-bottom: 20px; }
+    .header-label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .header-date {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #c41e3a;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 4px;
+      text-decoration-color: #228b22;
+    }
+
+    .stats-box {
+      width: 95%;
+      margin: 0 auto 25px;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(196, 30, 58, 0.5);
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+    .stats-row + .stats-row {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-item { text-align: center; min-width: 180px; }
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .stat-value {
+      font-size: 38px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-value.white { color: white; }
+    .stat-value.green { color: #22c55e; }
+
+    .stat-divider {
+      width: 1px;
+      height: 45px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .chart-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .chart-label {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 5px;
+    }
+    .chart-date-range {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #c41e3a;
+    }
+
+    .chart-container {
+      margin: 0 10px;
+      height: 720px;
+    }
+
+    .chart-area {
+      position: relative;
+      background: #0d1117;
+      border-radius: 12px;
+      border: 2px solid rgba(196, 30, 58, 0.3);
+      overflow: visible;
+      height: 680px;
+      margin-bottom: 40px;
+    }
+
+    .y-axis-label {
+      position: absolute;
+      left: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.6);
+      transform: translateY(50%);
+    }
+
+    .h-grid-line {
+      position: absolute;
+      left: 70px;
+      right: 15px;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+
+    .trend-line {
+      position: absolute;
+      left: 75px;
+      right: 20px;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+    }
+    .trend-line svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .candlesticks {
+      position: absolute;
+      left: 75px;
+      right: 20px;
+      bottom: 0;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      z-index: 5;
+    }
+
+    .candle-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 95px;
+      position: relative;
+      height: 100%;
+    }
+
+    .candle {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .body {
+      width: 58px;
+      border-radius: 6px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      min-height: 12px;
+    }
+    .body.green {
+      background: linear-gradient(180deg, #228b22 0%, #166416 100%);
+      box-shadow: 0 4px 15px rgba(34, 139, 34, 0.4);
+    }
+    .body.red {
+      background: linear-gradient(180deg, #c41e3a 0%, #8b0000 100%);
+      box-shadow: 0 4px 15px rgba(196, 30, 58, 0.4);
+    }
+
+    .pl-label {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+      z-index: 10;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .pl-label.positive {
+      color: #228b22;
+      background: rgba(34, 139, 34, 0.2);
+    }
+    .pl-label.negative {
+      color: #c41e3a;
+      background: rgba(196, 30, 58, 0.2);
+    }
+
+    .candle-date {
+      position: absolute;
+      bottom: -32px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 70px; height: 70px; margin: 0 auto 15px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 16px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Christmas lights at top -->
+    <div class="christmas-lights">
+      <img src="christmas-lights.png" alt="">
+    </div>
+
+    <!-- Snowflake decorations -->
+    <img class="snowflake snowflake-1" src="snowflake-single.png" alt="">
+    <img class="snowflake snowflake-2" src="snowflake-single.png" alt="">
+    <img class="snowflake snowflake-3" src="snowflake-single.png" alt="">
+    <img class="snowflake snowflake-4" src="snowflake-single.png" alt="">
+    <img class="snowflake snowflake-5" src="snowflake-single.png" alt="">
+    <img class="snowflake snowflake-6" src="snowflake-single.png" alt="">
+
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">PORTFOLIO PERFORMANCE</div>
+        <div class="header-date">DECEMBER 25</div>
+      </div>
+
+      <div class="stats-box">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-label">BALANCE</div>
+            <div class="stat-value white">$46,101</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">NET P/L</div>
+            <div class="stat-value green">+$6,101</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">ROI</div>
+            <div class="stat-value green">+15.25%</div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-label">RECORD</div>
+            <div class="stat-value white">209-150-2</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">WIN RATE</div>
+            <div class="stat-value green">58.2%</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">UNITS PROFITED</div>
+            <div class="stat-value green">+61.01U</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-header">
+        <div class="chart-label">7 DAY PERFORMANCE</div>
+        <div class="chart-date-range">DEC 18 - DEC 25</div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-area">
+          <!-- Y-AXIS LABELS - range $45.0k to $46.5k (1500 range, 0.453px/$) -->
+          <div class="y-axis-label" style="bottom: 32px;">$45.0k</div>
+          <div class="h-grid-line" style="bottom: 32px;"></div>
+          <div class="y-axis-label" style="bottom: 168px;">$45.3k</div>
+          <div class="h-grid-line" style="bottom: 168px;"></div>
+          <div class="y-axis-label" style="bottom: 304px;">$45.6k</div>
+          <div class="h-grid-line" style="bottom: 304px;"></div>
+          <div class="y-axis-label" style="bottom: 440px;">$45.9k</div>
+          <div class="h-grid-line" style="bottom: 440px;"></div>
+          <div class="y-axis-label" style="bottom: 576px;">$46.2k</div>
+          <div class="h-grid-line" style="bottom: 576px;"></div>
+          <div class="y-axis-label" style="bottom: 637px;">$46.5k</div>
+          <div class="h-grid-line" style="bottom: 637px;"></div>
+
+          <div class="trend-line">
+            <svg viewBox="0 0 845 680" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#228b22;stop-opacity:0.15" />
+                  <stop offset="100%" style="stop-color:#228b22;stop-opacity:0.02" />
+                </linearGradient>
+              </defs>
+              <polygon points="60,680 60,358 181,471 302,449 423,320 543,401 664,456 785,181 785,680" fill="url(#areaGrad)" />
+              <polyline points="60,358 181,471 302,449 423,320 543,401 664,456 785,181" fill="none" stroke="#228b22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+            </svg>
+          </div>
+
+          <div class="candlesticks">
+            <!-- Dec 18: RED -$442 (open 46153 → 522px, close 45710 → 322px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 322px; height: 200px;"></div>
+                <div class="pl-label negative" style="bottom: 537px;">-$442</div>
+              </div>
+              <div class="candle-date">12/18</div>
+            </div>
+            <!-- Dec 19: RED -$249 (open 45710 → 322px, close 45462 → 209px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 209px; height: 113px;"></div>
+                <div class="pl-label negative" style="bottom: 337px;">-$249</div>
+              </div>
+              <div class="candle-date">12/19</div>
+            </div>
+            <!-- Dec 20: GREEN +$49 (open 45462 → 209px, close 45510 → 231px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 209px; height: 22px;"></div>
+                <div class="pl-label positive" style="bottom: 246px;">+$49</div>
+              </div>
+              <div class="candle-date">12/20</div>
+            </div>
+            <!-- Dec 21: GREEN +$285 (open 45510 → 231px, close 45796 → 360px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 231px; height: 129px;"></div>
+                <div class="pl-label positive" style="bottom: 375px;">+$285</div>
+              </div>
+              <div class="candle-date">12/21</div>
+            </div>
+            <!-- Dec 22: RED -$180 (open 45796 → 360px, close 45615 → 279px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 279px; height: 81px;"></div>
+                <div class="pl-label negative" style="bottom: 375px;">-$180</div>
+              </div>
+              <div class="candle-date">12/22</div>
+            </div>
+            <!-- Dec 23: RED -$120 (open 45615 → 279px, close 45495 → 224px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 224px; height: 55px;"></div>
+                <div class="pl-label negative" style="bottom: 294px;">-$120</div>
+              </div>
+              <div class="candle-date">12/23</div>
+            </div>
+            <!-- Dec 25: GREEN +$606 (open 45495 → 224px, close 46101 → 499px) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 224px; height: 275px;"></div>
+                <div class="pl-label positive" style="bottom: 514px;">+$606</div>
+              </div>
+              <div class="candle-date">12/25</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

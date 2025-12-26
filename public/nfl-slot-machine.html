@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>NFL 6-0 Slot Machine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF00FF;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      min-width: 1080px;
+      min-height: 1920px;
+      max-width: 1080px;
+      max-height: 1920px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: #FF00FF;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    /* Fixed positioned elements - nothing can move */
+    .header {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+
+    .header .nfl {
+      color: #ffffff;
+      font-size: 120px;
+      font-weight: 900;
+      display: block;
+      letter-spacing: 10px;
+    }
+
+    .header .subtitle {
+      color: #ffd700;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+    }
+
+    .slot-machine {
+      position: absolute;
+      top: 300px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(180deg, #2a2a3e 0%, #1a1a28 50%, #0f0f18 100%);
+      border-radius: 35px;
+      padding: 30px 45px 45px;
+      border: 5px solid #ffd700;
+    }
+
+    .slot-top {
+      background: linear-gradient(180deg, #ffd700, #ff8c00);
+      color: #000;
+      font-size: 26px;
+      font-weight: 900;
+      padding: 14px 35px;
+      border-radius: 12px;
+      margin-bottom: 22px;
+      text-transform: uppercase;
+      letter-spacing: 5px;
+      text-align: center;
+    }
+
+    .reels-container {
+      background: #000;
+      border-radius: 18px;
+      padding: 20px;
+      border: 5px solid #333;
+    }
+
+    .reels {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .reel {
+      background: linear-gradient(180deg, #1a1a1a 0%, #0a0a0a 50%, #1a1a1a 100%);
+      border-radius: 12px;
+      width: 110px;
+      height: 140px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 80px;
+      font-weight: 900;
+      color: #00ff88;
+      border: 4px solid #444;
+      overflow: hidden;
+    }
+
+    .reel.money {
+      width: 320px;
+      font-size: 72px;
+      color: #ffd700;
+    }
+
+    .reel-value {
+      opacity: 0;
+    }
+
+    .reel.spinning .reel-value {
+      animation: spin 0.08s linear infinite;
+      opacity: 0.7;
+    }
+
+    .reel.landed .reel-value {
+      opacity: 1;
+      animation: land 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    @keyframes spin {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    @keyframes land {
+      0% { transform: scale(1.5) translateY(-20px); opacity: 0; }
+      60% { transform: scale(0.9) translateY(5px); }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .jackpot {
+      position: absolute;
+      top: 700px;
+      left: 0;
+      right: 0;
+      font-size: 72px;
+      font-weight: 900;
+      color: #ffd700;
+      opacity: 0;
+      text-transform: uppercase;
+      letter-spacing: 12px;
+      text-align: center;
+    }
+
+    .jackpot.show {
+      animation: jackpotBounce 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    @keyframes jackpotBounce {
+      0% { opacity: 0; transform: scale(0) rotate(-10deg); }
+      40% { opacity: 1; transform: scale(1.4) rotate(5deg); }
+      60% { opacity: 1; transform: scale(0.85) rotate(-3deg); }
+      80% { opacity: 1; transform: scale(1.15) rotate(2deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    .money-counter {
+      position: absolute;
+      top: 800px;
+      left: 0;
+      right: 0;
+      font-size: 72px;
+      font-weight: 900;
+      color: #00ff88;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .money-counter.show {
+      opacity: 1;
+      animation: counterPop 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    @keyframes counterPop {
+      0% { transform: scale(0.5); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .picks-container {
+      position: absolute;
+      top: 920px;
+      left: 40px;
+      right: 40px;
+    }
+
+    .pick {
+      background: linear-gradient(145deg, #1e1e30, #15152a);
+      border-radius: 20px;
+      padding: 20px 28px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 3px solid #2a2a40;
+      opacity: 0;
+      transform: translateX(100px);
+    }
+
+    .pick.show {
+      animation: slideIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .pick-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .team-logo {
+      width: 70px;
+      height: 70px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      border: 3px solid #333;
+      flex-shrink: 0;
+    }
+
+    .team-logo img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+    }
+
+    .pick-info {
+      text-align: left;
+    }
+
+    .pick-bet {
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .pick-matchup {
+      color: #888;
+      font-size: 20px;
+      margin-top: 4px;
+    }
+
+    .pick-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .pick-numbers {
+      text-align: right;
+    }
+
+    .pick-wager {
+      color: #aaa;
+      font-size: 20px;
+    }
+
+    .pick-profit {
+      color: #00ff88;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .checkmark {
+      background: #00ff88;
+      color: #000;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .confetti {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 100;
+    }
+
+    .confetti.show {
+      animation: confettiFall 3s ease-out forwards;
+    }
+
+    @keyframes confettiFall {
+      0% { opacity: 1; transform: translateY(-100px) rotate(0deg); }
+      100% { opacity: 0; transform: translateY(2000px) rotate(720deg); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .flash-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #ffffff;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .flash-overlay.show {
+      animation: flashBang 0.4s ease-out;
+    }
+
+    @keyframes flashBang {
+      0% { opacity: 0.9; }
+      100% { opacity: 0; }
+    }
+
+    .slot-machine.winner {
+      animation: machineShake 0.5s ease-out forwards;
+    }
+
+    @keyframes machineShake {
+      0% { transform: translateX(-50%); }
+      20% { transform: translateX(calc(-50% - 10px)); }
+      40% { transform: translateX(calc(-50% + 10px)); }
+      60% { transform: translateX(calc(-50% - 6px)); }
+      80% { transform: translateX(calc(-50% + 6px)); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .coin {
+      position: absolute;
+      width: 35px;
+      height: 35px;
+      background: linear-gradient(135deg, #ffd700, #ffec8b, #ffd700);
+      border-radius: 50%;
+      border: 3px solid #daa520;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .coin::before {
+      content: '$';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      font-weight: 900;
+      color: #8b6914;
+    }
+
+    .coin.show {
+      animation: coinFall 1.5s ease-in forwards;
+    }
+
+    @keyframes coinFall {
+      0% { opacity: 1; transform: translateY(-100px) rotateY(0deg); }
+      100% { opacity: 0; transform: translateY(2000px) rotateY(1080deg); }
+    }
+
+    .lights {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+    }
+
+    .light {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #ffd700;
+      animation: blink 0.5s infinite alternate;
+    }
+
+    .light:nth-child(2) { animation-delay: 0.1s; }
+    .light:nth-child(3) { animation-delay: 0.2s; }
+    .light:nth-child(4) { animation-delay: 0.3s; }
+    .light:nth-child(5) { animation-delay: 0.4s; }
+
+    @keyframes blink {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
+    }
+
+    .start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #FF00FF;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+
+    .start-overlay .tap-text {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .start-overlay .tap-sub {
+      color: rgba(255,255,255,0.8);
+      font-size: 32px;
+      margin-top: 20px;
+      font-weight: 700;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    .start-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="tap-text">Tap to Start</div>
+    <div class="tap-sub">Sound on for best experience</div>
+  </div>
+
+  <div class="flash-overlay" id="flashOverlay"></div>
+
+  <div class="header">
+    <span class="nfl">NFL</span>
+    <span class="subtitle">Last 7 Days</span>
+  </div>
+
+  <div class="slot-machine" id="slotMachine">
+    <div class="lights">
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+      <div class="light"></div>
+    </div>
+    <div class="slot-top">Triple Jackpot</div>
+    <div class="reels-container">
+      <div class="reels">
+        <div class="reel" id="reel1">
+          <span class="reel-value">6</span>
+        </div>
+        <div class="reel" id="reel2">
+          <span class="reel-value">-</span>
+        </div>
+        <div class="reel" id="reel3">
+          <span class="reel-value">0</span>
+        </div>
+        <div class="reel money" id="reel4">
+          <span class="reel-value">$1,010</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="jackpot" id="jackpot">JACKPOT!</div>
+  <div class="money-counter" id="counter">+$0</div>
+
+  <div class="picks-container">
+    <div class="pick" id="pick1">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Chargers">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">CHARGERS +2.5</div>
+          <div class="pick-matchup">vs Eagles • MNF</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$200 → $400</div>
+          <div class="pick-profit">+$200</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+
+    <div class="pick" id="pick2">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Eagles">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">UNDER 41.5</div>
+          <div class="pick-matchup">Chargers/Eagles • MNF</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$100 → $195</div>
+          <div class="pick-profit">+$95</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+
+    <div class="pick" id="pick3">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Falcons">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">FALCONS +230</div>
+          <div class="pick-matchup">vs Buccaneers • TNF</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$150 → $495</div>
+          <div class="pick-profit">+$345</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+
+    <div class="pick" id="pick4">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/buf.png" alt="Bills">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">BILLS -2.5</div>
+          <div class="pick-matchup">vs Patriots • Sunday</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$150 → $293</div>
+          <div class="pick-profit">+$143</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+
+    <div class="pick" id="pick5">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/bal.png" alt="Ravens">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">RAVENS -2.5</div>
+          <div class="pick-matchup">vs Bengals • Sunday</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$100 → $191</div>
+          <div class="pick-profit">+$91</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+
+    <div class="pick" id="pick6">
+      <div class="pick-left">
+        <div class="team-logo">
+          <img src="https://a.espncdn.com/i/teamlogos/nfl/500/no.png" alt="Saints">
+        </div>
+        <div class="pick-info">
+          <div class="pick-bet">SAINTS +1.5</div>
+          <div class="pick-matchup">vs Panthers • Sunday</div>
+        </div>
+      </div>
+      <div class="pick-right">
+        <div class="pick-numbers">
+          <div class="pick-wager">$150 → $286</div>
+          <div class="pick-profit">+$136</div>
+        </div>
+        <div class="checkmark">✓</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sound Effects -->
+  <audio id="spinSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/212/212-preview.mp3"></audio>
+  <audio id="reelStop" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/270/270-preview.mp3"></audio>
+  <audio id="jackpotSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/1993/1993-preview.mp3"></audio>
+  <audio id="coinSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+  <audio id="winSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2001/2001-preview.mp3"></audio>
+  <audio id="dingSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+  <audio id="chaChing" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+  <audio id="tickSound" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/146/146-preview.mp3"></audio>
+
+  <script>
+    const profits = [200, 295, 640, 783, 874, 1010];
+    let currentProfit = 0;
+    let tickInterval = null;
+
+    function playSound(id, volume = 0.5) {
+      try {
+        const sound = document.getElementById(id);
+        if (sound) {
+          sound.volume = Math.min(volume, 1);
+          sound.currentTime = 0;
+          sound.play().catch(() => {});
+        }
+      } catch (e) {}
+    }
+
+    function startTickSound() {
+      tickInterval = setInterval(() => {
+        playSound('tickSound', 0.25);
+      }, 60);
+    }
+
+    function stopTickSound() {
+      if (tickInterval) {
+        clearInterval(tickInterval);
+        tickInterval = null;
+      }
+    }
+
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    function createConfetti() {
+      const colors = ['#00ff88', '#ffd700', '#ff6b6b', '#fff', '#44aaff', '#ff8c00'];
+      for (let i = 0; i < 60; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 1080 + 'px';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.borderRadius = Math.random() > 0.5 ? '50%' : '0';
+        confetti.style.width = Math.random() * 18 + 8 + 'px';
+        confetti.style.height = Math.random() * 18 + 8 + 'px';
+        confetti.style.animationDelay = Math.random() * 0.8 + 's';
+        document.body.appendChild(confetti);
+        setTimeout(() => confetti.classList.add('show'), 10);
+      }
+    }
+
+    function createCoins() {
+      for (let i = 0; i < 20; i++) {
+        const coin = document.createElement('div');
+        coin.className = 'coin';
+        coin.style.left = Math.random() * 1000 + 40 + 'px';
+        coin.style.animationDelay = Math.random() * 0.6 + 's';
+        document.body.appendChild(coin);
+        setTimeout(() => coin.classList.add('show'), 10);
+      }
+    }
+
+    function animateCounter(target, duration = 350) {
+      const counter = document.getElementById('counter');
+      const start = currentProfit;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const value = Math.floor(start + (target - start) * easeOut);
+        counter.textContent = '+$' + value.toLocaleString();
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          currentProfit = target;
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    async function runAnimation() {
+      const reels = [
+        document.getElementById('reel1'),
+        document.getElementById('reel2'),
+        document.getElementById('reel3'),
+        document.getElementById('reel4')
+      ];
+
+      // Start spinning
+      playSound('spinSound', 0.5);
+      reels.forEach(reel => reel.classList.add('spinning'));
+
+      await sleep(1500);
+
+      // Land reels one by one
+      playSound('reelStop', 0.6);
+      reels[0].classList.remove('spinning');
+      reels[0].classList.add('landed');
+      await sleep(350);
+
+      playSound('reelStop', 0.6);
+      reels[1].classList.remove('spinning');
+      reels[1].classList.add('landed');
+      await sleep(350);
+
+      playSound('reelStop', 0.6);
+      reels[2].classList.remove('spinning');
+      reels[2].classList.add('landed');
+      await sleep(500);
+
+      // Money reel - big moment
+      playSound('reelStop', 0.8);
+      reels[3].classList.remove('spinning');
+      reels[3].classList.add('landed');
+      await sleep(250);
+
+      // JACKPOT!!!
+      document.getElementById('flashOverlay').classList.add('show');
+      document.getElementById('slotMachine').classList.add('winner');
+      playSound('jackpotSound', 0.7);
+      playSound('winSound', 0.6);
+
+      await sleep(100);
+      document.getElementById('jackpot').classList.add('show');
+      createConfetti();
+      createCoins();
+
+      await sleep(150);
+      playSound('coinSound', 0.6);
+
+      await sleep(500);
+
+      // Show counter
+      document.getElementById('counter').classList.add('show');
+      playSound('chaChing', 0.5);
+      startTickSound();
+
+      await sleep(350);
+
+      // Show picks with counting
+      for (let i = 1; i <= 6; i++) {
+        playSound('dingSound', 0.4);
+        document.getElementById('pick' + i).classList.add('show');
+        animateCounter(profits[i - 1], 280);
+        await sleep(320);
+      }
+
+      stopTickSound();
+
+      // Final celebration
+      await sleep(150);
+      playSound('chaChing', 0.6);
+      playSound('winSound', 0.4);
+    }
+
+    // Start on click
+    document.getElementById('startOverlay').addEventListener('click', async () => {
+      // Enable all audio
+      const sounds = ['spinSound', 'reelStop', 'jackpotSound', 'coinSound', 'winSound', 'dingSound', 'chaChing', 'tickSound'];
+      for (const id of sounds) {
+        const s = document.getElementById(id);
+        if (s) {
+          s.volume = 0.01;
+          try { await s.play(); s.pause(); s.currentTime = 0; } catch(e) {}
+        }
+      }
+
+      // Hide overlay with fade
+      document.getElementById('startOverlay').classList.add('hidden');
+
+      // Start animation after 1 second
+      setTimeout(runAnimation, 1000);
+    });
+  </script>
+</body>
+</html>

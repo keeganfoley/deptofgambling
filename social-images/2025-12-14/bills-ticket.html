@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Betting Slip</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0f0f0f;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+
+    .ticket {
+      width: 340px;
+      background: #1a1a1a;
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #2a2a2a;
+      padding: 24px;
+    }
+
+    .selection {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+
+    .meta {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #2a2a2a;
+    }
+
+    .meta-item {
+    }
+
+    .meta-label {
+      font-size: 9px;
+      color: #555;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+
+    .meta-value {
+      font-size: 14px;
+      color: #ccc;
+      font-weight: 500;
+    }
+
+    .money-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .money-label {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .money-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff;
+    }
+
+    .payout-row {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid #2a2a2a;
+      margin-top: 12px;
+    }
+
+    .payout-label {
+      font-size: 13px;
+      color: #22c55e;
+      font-weight: 600;
+    }
+
+    .payout-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 18px;
+      font-weight: 700;
+      color: #22c55e;
+    }
+  </style>
+</head>
+<body>
+  <div class="ticket">
+    <div class="selection">Buffalo Bills -2.5</div>
+
+    <div class="meta">
+      <div class="meta-item">
+        <div class="meta-label">Odds</div>
+        <div class="meta-value">-105</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Date</div>
+        <div class="meta-value">Dec 14, 2025</div>
+      </div>
+    </div>
+
+    <div class="money-row">
+      <span class="money-label">Wager</span>
+      <span class="money-value">$150.00</span>
+    </div>
+    <div class="money-row">
+      <span class="money-label">To Win</span>
+      <span class="money-value">$142.86</span>
+    </div>
+
+    <div class="payout-row">
+      <span class="payout-label">Total Payout</span>
+      <span class="payout-value">$292.86</span>
+    </div>
+  </div>
+</body>
+</html>

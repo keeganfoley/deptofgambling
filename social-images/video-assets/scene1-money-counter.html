@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scene 1 - Money Counter</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #FF2D87;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 1080px;
+      height: 1920px;
+      background: #FF2D87;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .money {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 160px;
+      font-weight: 800;
+      color: #22c55e;
+      letter-spacing: -2px;
+      opacity: 0;
+    }
+
+    .money.visible {
+      opacity: 1;
+    }
+
+    .money::before {
+      content: '+$';
+    }
+
+    .play-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 32px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      background: #22c55e;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .play-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .play-btn.hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="money" id="counter">0</div>
+    <button class="play-btn" id="playBtn">▶ PLAY</button>
+  </div>
+
+  <script>
+    // Web Audio API - same pattern as working falcons-ticket.html
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playTick() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(1800, audioContext.currentTime);
+      gain.gain.setValueAtTime(0.15, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.05);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.05);
+    }
+
+    function playChaching() {
+      // First part - coin drop
+      const osc1 = audioContext.createOscillator();
+      const gain1 = audioContext.createGain();
+      osc1.connect(gain1);
+      gain1.connect(audioContext.destination);
+      osc1.frequency.setValueAtTime(2000, audioContext.currentTime);
+      osc1.frequency.setValueAtTime(2500, audioContext.currentTime + 0.05);
+      osc1.frequency.setValueAtTime(3000, audioContext.currentTime + 0.1);
+      gain1.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+      osc1.start();
+      osc1.stop(audioContext.currentTime + 0.3);
+
+      // Second part - register ding
+      setTimeout(() => {
+        const osc2 = audioContext.createOscillator();
+        const gain2 = audioContext.createGain();
+        osc2.connect(gain2);
+        gain2.connect(audioContext.destination);
+        osc2.type = 'sine';
+        osc2.frequency.setValueAtTime(1400, audioContext.currentTime);
+        gain2.gain.setValueAtTime(0.4, audioContext.currentTime);
+        gain2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+        osc2.start();
+        osc2.stop(audioContext.currentTime + 0.5);
+      }, 150);
+    }
+
+    const counter = document.getElementById('counter');
+    const playBtn = document.getElementById('playBtn');
+
+    const targetNumber = 6989;
+    const duration = 4000;
+    let startTime = null;
+    let lastPlayedTick = 0;
+
+    function easeOutQuart(t) {
+      return 1 - Math.pow(1 - t, 4);
+    }
+
+    function animate(currentTime) {
+      if (!startTime) startTime = currentTime;
+
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easedProgress = easeOutQuart(progress);
+
+      const currentValue = Math.floor(easedProgress * targetNumber);
+      counter.textContent = currentValue.toLocaleString();
+
+      // Play tick sound every $400
+      if (currentValue - lastPlayedTick >= 400) {
+        playTick();
+        lastPlayedTick = currentValue;
+      }
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        counter.textContent = targetNumber.toLocaleString();
+        setTimeout(() => {
+          playChaching();
+        }, 200);
+      }
+    }
+
+    playBtn.addEventListener('click', () => {
+      // CRITICAL: Resume audio context on user interaction
+      audioContext.resume();
+
+      playBtn.classList.add('hidden');
+
+      // 1 second delay before starting
+      setTimeout(() => {
+        counter.classList.add('visible');
+        startTime = null;
+        lastPlayedTick = 0;
+        playTick();
+        requestAnimationFrame(animate);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

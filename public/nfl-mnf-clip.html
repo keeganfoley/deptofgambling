@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>MNF Breakdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF00FF;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: #FF00FF;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    /* Start Overlay */
+    .start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #FF00FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .start-overlay .tap-text {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 900;
+      text-transform: uppercase;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .start-overlay.hidden { display: none; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    /* Scenes */
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Scene 1: MNF + Teams */
+    .badge {
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      font-size: 42px;
+      font-weight: 900;
+      padding: 25px 60px;
+      border-radius: 60px;
+      letter-spacing: 6px;
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    .badge.show {
+      animation: dropIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes dropIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .matchup {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .team-logo {
+      width: 280px;
+      height: 280px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 8px solid #333;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .team-logo.show-left {
+      animation: popLeft 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .team-logo.show-right {
+      animation: popRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes popLeft {
+      from { opacity: 0; transform: scale(0) translateX(-100px); }
+      to { opacity: 1; transform: scale(1) translateX(0); }
+    }
+
+    @keyframes popRight {
+      from { opacity: 0; transform: scale(0) translateX(100px); }
+      to { opacity: 1; transform: scale(1) translateX(0); }
+    }
+
+    .team-logo img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .vs {
+      color: #fff;
+      font-size: 90px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .vs.show {
+      animation: vsPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes vsPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .scene.exit-zoom {
+      animation: zoomOut 0.4s ease-in forwards;
+    }
+
+    @keyframes zoomOut {
+      to { opacity: 0; transform: scale(1.2); }
+    }
+
+    /* Scene 2: Picks */
+    .picks-container {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .pick-big {
+      background: #000;
+      border-radius: 35px;
+      padding: 55px 70px;
+      border: 8px solid #00ff88;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      opacity: 0;
+      transform: translateX(-100px) scale(0.8);
+      min-width: 750px;
+    }
+
+    .pick-big.show {
+      animation: slideInBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .pick-big.show-delay {
+      animation: slideInBounce 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+    }
+
+    @keyframes slideInBounce {
+      to { opacity: 1; transform: translateX(0) scale(1); }
+    }
+
+    .pick-text {
+      color: #00ff88;
+      font-size: 72px;
+      font-weight: 900;
+    }
+
+    .pick-check {
+      width: 100px;
+      height: 100px;
+      background: #00ff88;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      color: #000;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0) rotate(-180deg);
+    }
+
+    .pick-check.show {
+      animation: checkSpin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes checkSpin {
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* Scene 3: Money Flow - REDESIGNED */
+    .flow-container {
+      text-align: center;
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    .flow-header {
+      background: #000;
+      color: #ffd700;
+      font-size: 44px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      padding: 25px 50px;
+      border-radius: 20px;
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(-30px);
+      display: inline-block;
+      border: 4px solid #ffd700;
+    }
+
+    .flow-header.show {
+      animation: fadeDown 0.5s ease forwards;
+    }
+
+    @keyframes fadeDown {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .flow-cards {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .flow-card {
+      background: #000;
+      border-radius: 30px;
+      padding: 50px 60px;
+      text-align: center;
+      opacity: 0;
+      width: 420px;
+    }
+
+    .flow-card.public {
+      border: 6px solid #ff4444;
+    }
+
+    .flow-card.money {
+      border: 6px solid #00ff88;
+    }
+
+    .flow-card.show-left {
+      animation: slideFromLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .flow-card.show-right {
+      animation: slideFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slideFromLeft {
+      from { opacity: 0; transform: translateX(-80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+      from { opacity: 0; transform: translateX(80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .flow-icon {
+      font-size: 100px;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .flow-label {
+      font-size: 38px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .flow-label.public-text { color: #ff4444; }
+    .flow-label.money-text { color: #00ff88; }
+
+    .flow-team {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 15px;
+    }
+
+    .flow-result {
+      font-size: 48px;
+      font-weight: 900;
+    }
+
+    .flow-result.lose { color: #ff4444; }
+    .flow-result.win { color: #00ff88; }
+
+    .winner-badge {
+      background: #00ff88;
+      color: #000;
+      font-size: 36px;
+      font-weight: 900;
+      padding: 25px 60px;
+      border-radius: 50px;
+      margin-top: 60px;
+      opacity: 0;
+      transform: scale(0);
+      display: inline-block;
+    }
+
+    .winner-badge.show {
+      animation: badgePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes badgePop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Scene 4: 85% Over */
+    .over-container {
+      text-align: center;
+    }
+
+    .over-stat {
+      font-size: 300px;
+      font-weight: 900;
+      color: #ff4444;
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .over-stat.show {
+      animation: numberPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes numberPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .over-label {
+      background: #000;
+      color: #ff4444;
+      font-size: 52px;
+      font-weight: 900;
+      padding: 20px 50px;
+      border-radius: 20px;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      display: inline-block;
+      border: 4px solid #ff4444;
+    }
+
+    .over-label.show {
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .system-box {
+      background: #000;
+      border-radius: 30px;
+      padding: 45px 80px;
+      border: 6px solid #00ff88;
+      margin-top: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      display: inline-block;
+    }
+
+    .system-box.show {
+      animation: boxSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes boxSlideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .system-text {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .system-text .algo {
+      color: #ffd700;
+    }
+
+    .system-text .under {
+      color: #00ff88;
+    }
+
+    /* Scene 5: Profit */
+    .profit-container {
+      text-align: center;
+    }
+
+    .profit-row {
+      display: flex;
+      gap: 100px;
+      margin-bottom: 80px;
+    }
+
+    .profit-item {
+      background: #000;
+      border-radius: 25px;
+      padding: 40px 60px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      border: 4px solid #fff;
+    }
+
+    .profit-item.show {
+      animation: profitFade 0.5s ease forwards;
+    }
+
+    .profit-item.show-delay {
+      animation: profitFade 0.5s ease 0.15s forwards;
+    }
+
+    @keyframes profitFade {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profit-label {
+      color: #888;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .profit-value {
+      color: #fff;
+      font-size: 80px;
+      font-weight: 700;
+    }
+
+    .profit-big {
+      color: #00ff88;
+      font-size: 220px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .profit-big.show {
+      animation: profitPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes profitPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .profit-caption {
+      background: #000;
+      color: #ffd700;
+      font-size: 40px;
+      margin-top: 40px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-weight: 900;
+      opacity: 0;
+      padding: 20px 50px;
+      border-radius: 20px;
+      display: inline-block;
+      border: 4px solid #ffd700;
+    }
+
+    .profit-caption.show {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="tap-text">Tap to Start</div>
+  </div>
+
+  <!-- Scene 1: MNF + Teams -->
+  <div class="scene" id="scene1">
+    <div class="badge" id="badge">MONDAY NIGHT</div>
+    <div class="matchup">
+      <div class="team-logo" id="team1">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Chargers">
+      </div>
+      <div class="vs" id="vs">@</div>
+      <div class="team-logo" id="team2">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Eagles">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 2: Picks -->
+  <div class="scene" id="scene2">
+    <div class="picks-container">
+      <div class="pick-big" id="pick1">
+        <span class="pick-text">CHARGERS +2.5</span>
+        <span class="pick-check" id="check1">✓</span>
+      </div>
+      <div class="pick-big" id="pick2">
+        <span class="pick-text">UNDER 41.5</span>
+        <span class="pick-check" id="check2">✓</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 3: Money Flow - REDESIGNED -->
+  <div class="scene" id="scene3">
+    <div class="flow-container">
+      <div class="flow-header" id="flowHeader">🚨 ALGORITHM FLAGGED</div>
+      <div class="flow-cards">
+        <div class="flow-card public" id="flowLeft">
+          <span class="flow-icon">👥</span>
+          <div class="flow-label public-text">PUBLIC</div>
+          <div class="flow-team">Eagles</div>
+          <div class="flow-result lose">LOST ❌</div>
+        </div>
+        <div class="flow-card money" id="flowRight">
+          <span class="flow-icon">💰</span>
+          <div class="flow-label money-text">BIG MONEY</div>
+          <div class="flow-team">Chargers</div>
+          <div class="flow-result win">WON ✓</div>
+        </div>
+      </div>
+      <div class="winner-badge" id="winnerBadge">WE FOLLOWED THE MONEY</div>
+    </div>
+  </div>
+
+  <!-- Scene 4: 85% Over -->
+  <div class="scene" id="scene4">
+    <div class="over-container">
+      <div class="over-stat" id="overStat">85%</div>
+      <div class="over-label" id="overLabel">WANTED THE OVER</div>
+      <div class="system-box" id="systemBox">
+        <div class="system-text"><span class="algo">SYSTEM</span> SAID <span class="under">UNDER</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 5: Profit -->
+  <div class="scene" id="scene5">
+    <div class="profit-container">
+      <div class="profit-row">
+        <div class="profit-item" id="profitIn">
+          <div class="profit-label">Wagered</div>
+          <div class="profit-value">$300</div>
+        </div>
+        <div class="profit-item" id="profitOut">
+          <div class="profit-label">Returned</div>
+          <div class="profit-value">$595</div>
+        </div>
+      </div>
+      <div class="profit-big" id="profitBig">+$295</div>
+      <div class="profit-caption" id="profitCaption">MNF PROFIT</div>
+    </div>
+  </div>
+
+  <audio id="whoosh" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3"></audio>
+  <audio id="pop" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+  <audio id="pop2" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3"></audio>
+  <audio id="success" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3"></audio>
+  <audio id="cash" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+  <audio id="alert" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2869/2869-preview.mp3"></audio>
+  <audio id="ding" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+  <script>
+    function playSound(id, vol = 0.5) {
+      try {
+        const s = document.getElementById(id);
+        if (s) { s.volume = vol; s.currentTime = 0; s.play().catch(() => {}); }
+      } catch(e) {}
+    }
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    function showEl(id, className = 'show') {
+      document.getElementById(id).classList.add(className);
+    }
+
+    function showScene(id) {
+      document.getElementById(id).style.opacity = '1';
+    }
+
+    function hideScene(id) {
+      const scene = document.getElementById(id);
+      scene.classList.add('exit-zoom');
+      return sleep(400).then(() => {
+        scene.style.opacity = '0';
+        scene.classList.remove('exit-zoom');
+      });
+    }
+
+    async function runAnimation() {
+      // Scene 1: MNF + Teams (0-3s)
+      showScene('scene1');
+      playSound('whoosh', 0.5);
+      showEl('badge');
+      await sleep(400);
+      playSound('pop', 0.6);
+      showEl('team1', 'show-left');
+      await sleep(200);
+      playSound('pop2', 0.5);
+      showEl('vs');
+      await sleep(200);
+      playSound('pop', 0.6);
+      showEl('team2', 'show-right');
+      await sleep(2000);
+      await hideScene('scene1');
+
+      // Scene 2: Picks (3-6s)
+      showScene('scene2');
+      playSound('whoosh', 0.4);
+      showEl('pick1');
+      await sleep(300);
+      playSound('success', 0.5);
+      showEl('check1');
+      await sleep(400);
+      playSound('whoosh', 0.4);
+      showEl('pick2', 'show-delay');
+      await sleep(500);
+      playSound('success', 0.5);
+      showEl('check2');
+      await sleep(1500);
+      await hideScene('scene2');
+
+      // Scene 3: Money Flow (6-9s)
+      showScene('scene3');
+      playSound('alert', 0.4);
+      showEl('flowHeader');
+      await sleep(600);
+      playSound('whoosh', 0.4);
+      showEl('flowLeft', 'show-left');
+      await sleep(400);
+      playSound('whoosh', 0.4);
+      showEl('flowRight', 'show-right');
+      await sleep(600);
+      playSound('ding', 0.5);
+      showEl('winnerBadge');
+      await sleep(1500);
+      await hideScene('scene3');
+
+      // Scene 4: 85% Over (9-12s)
+      showScene('scene4');
+      playSound('pop', 0.6);
+      showEl('overStat');
+      await sleep(400);
+      showEl('overLabel');
+      await sleep(500);
+      playSound('success', 0.5);
+      showEl('systemBox');
+      await sleep(1800);
+      await hideScene('scene4');
+
+      // Scene 5: Profit (12-15s)
+      showScene('scene5');
+      playSound('whoosh', 0.4);
+      showEl('profitIn');
+      await sleep(200);
+      showEl('profitOut', 'show-delay');
+      await sleep(600);
+      playSound('cash', 0.7);
+      showEl('profitBig');
+      await sleep(400);
+      showEl('profitCaption');
+    }
+
+    document.getElementById('startOverlay').addEventListener('click', async () => {
+      // Prime audio
+      for (const id of ['whoosh','pop','pop2','success','cash','alert','ding']) {
+        const s = document.getElementById(id);
+        if (s) { s.volume = 0.01; try { await s.play(); s.pause(); s.currentTime = 0; } catch(e) {} }
+      }
+      document.getElementById('startOverlay').classList.add('hidden');
+      await sleep(500);
+      runAnimation();
+    });
+  </script>
+</body>
+</html>

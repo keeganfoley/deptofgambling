@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>NFL Outro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF00FF;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: #FF00FF;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    .start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #FF00FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .start-overlay .tap-text {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 900;
+      text-transform: uppercase;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .start-overlay.hidden { display: none; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scene.exit-zoom {
+      animation: zoomOut 0.4s ease-in forwards;
+    }
+
+    @keyframes zoomOut {
+      to { opacity: 0; transform: scale(1.2); }
+    }
+
+    /* Scene 1: 6-0 with days */
+    .record-container {
+      text-align: center;
+    }
+
+    .nfl-badge {
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      font-size: 48px;
+      font-weight: 900;
+      padding: 25px 70px;
+      border-radius: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 50px;
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    .nfl-badge.show {
+      animation: dropIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes dropIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .record-huge {
+      font-size: 320px;
+      font-weight: 900;
+      color: #00ff88;
+      line-height: 0.9;
+      opacity: 0;
+      transform: scale(0.5);
+      margin-bottom: 50px;
+    }
+
+    .record-huge.show {
+      animation: numberPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes numberPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .days-row {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .day-chip {
+      background: #000;
+      border-radius: 20px;
+      padding: 20px 35px;
+      border: 4px solid #00ff88;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .day-chip.show {
+      animation: chipUp 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes chipUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .day-text {
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .day-text .green { color: #00ff88; }
+
+    /* Scene 2: Money breakdown */
+    .money-container {
+      text-align: center;
+    }
+
+    .money-flow {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+
+    .money-item {
+      background: #000;
+      border-radius: 30px;
+      padding: 50px 60px;
+      text-align: center;
+      opacity: 0;
+      border: 4px solid #fff;
+    }
+
+    .money-item.show-left {
+      animation: slideFromLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .money-item.show-right {
+      animation: slideFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slideFromLeft {
+      from { opacity: 0; transform: translateX(-80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+      from { opacity: 0; transform: translateX(80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .money-label {
+      color: #888;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .money-value {
+      color: #fff;
+      font-size: 72px;
+      font-weight: 900;
+    }
+
+    .money-arrow {
+      font-size: 80px;
+      color: #00ff88;
+      opacity: 0;
+    }
+
+    .money-arrow.show {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .profit-mega {
+      color: #00ff88;
+      font-size: 260px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .profit-mega.show {
+      animation: profitPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes profitPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .profit-label {
+      background: #000;
+      color: #ffd700;
+      font-size: 44px;
+      font-weight: 900;
+      padding: 20px 60px;
+      border-radius: 20px;
+      border: 4px solid #ffd700;
+      margin-top: 30px;
+      opacity: 0;
+      display: inline-block;
+    }
+
+    .profit-label.show {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    /* Scene 3: Algorithm */
+    .algo-container {
+      text-align: center;
+    }
+
+    .algo-box {
+      background: #000;
+      border-radius: 40px;
+      padding: 60px 80px;
+      border: 8px solid #00ff88;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .algo-box.show {
+      animation: boxPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes boxPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .algo-text {
+      font-size: 56px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .algo-text .gold { color: #ffd700; }
+
+    .algo-record {
+      font-size: 120px;
+      font-weight: 900;
+      color: #00ff88;
+    }
+
+    /* Scene 4: CTA */
+    .cta-container {
+      text-align: center;
+      width: 100%;
+      padding: 0 60px;
+    }
+
+    .cta-main {
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: scale(0.8);
+    }
+
+    .cta-main.show {
+      animation: ctaPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes ctaPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .cta-title {
+      color: #00ff88;
+      font-size: 72px;
+      font-weight: 900;
+      margin-bottom: 25px;
+      letter-spacing: 4px;
+    }
+
+    .cta-sub {
+      background: #000;
+      color: #fff;
+      font-size: 36px;
+      font-weight: 700;
+      padding: 20px 50px;
+      border-radius: 20px;
+      border: 4px solid #fff;
+      display: inline-block;
+    }
+
+    .cta-points {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 70px;
+    }
+
+    .cta-point {
+      background: #000;
+      border-radius: 25px;
+      padding: 35px 50px;
+      opacity: 0;
+      transform: translateX(-80px);
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .cta-point.p1 {
+      border: 5px solid #00ff88;
+    }
+
+    .cta-point.p2 {
+      border: 5px solid #ffd700;
+    }
+
+    .cta-point.p3 {
+      border: 5px solid #fff;
+    }
+
+    .cta-point.show {
+      animation: pointSlide 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes pointSlide {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .cta-check {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 36px;
+      color: #000;
+      font-weight: 900;
+      flex-shrink: 0;
+    }
+
+    .cta-check.green-bg { background: #00ff88; }
+    .cta-check.gold-bg { background: #ffd700; }
+    .cta-check.white-bg { background: #fff; }
+
+    .cta-point-text {
+      color: #fff;
+      font-size: 34px;
+      font-weight: 700;
+      text-align: left;
+    }
+
+    .cta-point-text .green { color: #00ff88; }
+    .cta-point-text .gold { color: #ffd700; }
+
+    .cta-follow {
+      background: linear-gradient(135deg, #00ff88, #00cc6a);
+      color: #000;
+      font-size: 44px;
+      font-weight: 900;
+      padding: 35px 80px;
+      border-radius: 60px;
+      opacity: 0;
+      transform: scale(0);
+      display: inline-block;
+    }
+
+    .cta-follow.show {
+      animation: followPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes followPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="tap-text">Tap to Start</div>
+  </div>
+
+  <!-- Scene 1: 6-0 with days -->
+  <div class="scene" id="scene1">
+    <div class="record-container">
+      <div class="nfl-badge" id="nflBadge">NFL WEEK</div>
+      <div class="record-huge" id="recordHuge">6-0</div>
+      <div class="days-row">
+        <div class="day-chip" id="day1">
+          <div class="day-text">MNF <span class="green">2-0</span></div>
+        </div>
+        <div class="day-chip" id="day2">
+          <div class="day-text">TNF <span class="green">1-0</span></div>
+        </div>
+        <div class="day-chip" id="day3">
+          <div class="day-text">SUN <span class="green">3-0</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 2: Money breakdown -->
+  <div class="scene" id="scene2">
+    <div class="money-container">
+      <div class="money-flow">
+        <div class="money-item" id="moneyIn">
+          <div class="money-label">Wagered</div>
+          <div class="money-value">$850</div>
+        </div>
+        <div class="money-arrow" id="moneyArrow">→</div>
+        <div class="money-item" id="moneyOut">
+          <div class="money-label">Returned</div>
+          <div class="money-value">$1,860</div>
+        </div>
+      </div>
+      <div class="profit-mega" id="profitMega">+$1,010</div>
+      <div class="profit-label" id="profitLabel">NFL PROFIT</div>
+    </div>
+  </div>
+
+  <!-- Scene 3: Algorithm -->
+  <div class="scene" id="scene3">
+    <div class="algo-container">
+      <div class="algo-box" id="algoBox">
+        <div class="algo-text"><span class="gold">ALGORITHM</span> WENT</div>
+        <div class="algo-record">6-0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 4: CTA -->
+  <div class="scene" id="scene4">
+    <div class="cta-container">
+      <div class="cta-main" id="ctaMain">
+        <div class="cta-title">FULL TRANSPARENCY</div>
+        <div class="cta-sub">We post every single pick</div>
+      </div>
+      <div class="cta-points">
+        <div class="cta-point p1" id="point1">
+          <div class="cta-check green-bg">✓</div>
+          <div class="cta-point-text">Every pick posted <span class="green">BEFORE</span> kickoff</div>
+        </div>
+        <div class="cta-point p2" id="point2">
+          <div class="cta-check gold-bg">✓</div>
+          <div class="cta-point-text">We show <span class="gold">wins AND losses</span></div>
+        </div>
+        <div class="cta-point p3" id="point3">
+          <div class="cta-check white-bg">✓</div>
+          <div class="cta-point-text">Real money, real results</div>
+        </div>
+      </div>
+      <div class="cta-follow" id="ctaFollow">FOLLOW FOR PICKS</div>
+    </div>
+  </div>
+
+  <audio id="whoosh" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3"></audio>
+  <audio id="pop" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+  <audio id="pop2" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3"></audio>
+  <audio id="success" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3"></audio>
+  <audio id="cash" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+  <audio id="ding" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+  <script>
+    function playSound(id, vol = 0.5) {
+      try {
+        const s = document.getElementById(id);
+        if (s) { s.volume = vol; s.currentTime = 0; s.play().catch(() => {}); }
+      } catch(e) {}
+    }
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    function showEl(id, className = 'show') {
+      document.getElementById(id).classList.add(className);
+    }
+
+    function showScene(id) {
+      document.getElementById(id).style.opacity = '1';
+    }
+
+    function hideScene(id) {
+      const scene = document.getElementById(id);
+      scene.classList.add('exit-zoom');
+      return sleep(400).then(() => {
+        scene.style.opacity = '0';
+        scene.classList.remove('exit-zoom');
+      });
+    }
+
+    async function runAnimation() {
+      // Scene 1: 6-0 with days
+      showScene('scene1');
+      playSound('whoosh', 0.5);
+      showEl('nflBadge');
+      await sleep(400);
+      playSound('success', 0.6);
+      showEl('recordHuge');
+      await sleep(500);
+      playSound('pop', 0.4);
+      showEl('day1');
+      await sleep(150);
+      playSound('pop', 0.4);
+      showEl('day2');
+      await sleep(150);
+      playSound('pop', 0.4);
+      showEl('day3');
+      await sleep(1800);
+      await hideScene('scene1');
+
+      // Scene 2: Money breakdown
+      showScene('scene2');
+      playSound('whoosh', 0.4);
+      showEl('moneyIn', 'show-left');
+      await sleep(300);
+      showEl('moneyArrow');
+      await sleep(300);
+      playSound('whoosh', 0.4);
+      showEl('moneyOut', 'show-right');
+      await sleep(600);
+      playSound('cash', 0.7);
+      showEl('profitMega');
+      await sleep(400);
+      showEl('profitLabel');
+      await sleep(1800);
+      await hideScene('scene2');
+
+      // Scene 3: Algorithm
+      showScene('scene3');
+      playSound('ding', 0.5);
+      showEl('algoBox');
+      await sleep(2000);
+      await hideScene('scene3');
+
+      // Scene 4: CTA
+      showScene('scene4');
+      playSound('whoosh', 0.4);
+      showEl('ctaMain');
+      await sleep(1000);
+      playSound('pop', 0.4);
+      showEl('point1');
+      await sleep(600);
+      playSound('pop', 0.4);
+      showEl('point2');
+      await sleep(600);
+      playSound('pop', 0.4);
+      showEl('point3');
+      await sleep(800);
+      playSound('success', 0.6);
+      showEl('ctaFollow');
+    }
+
+    document.getElementById('startOverlay').addEventListener('click', async () => {
+      for (const id of ['whoosh','pop','pop2','success','cash','ding']) {
+        const s = document.getElementById(id);
+        if (s) { s.volume = 0.01; try { await s.play(); s.pause(); s.currentTime = 0; } catch(e) {} }
+      }
+      document.getElementById('startOverlay').classList.add('hidden');
+      await sleep(500);
+      runAnimation();
+    });
+  </script>
+</body>
+</html>

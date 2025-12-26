@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>Chargers vs Eagles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF00FF;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      margin: 0;
+      padding: 60px 50px;
+      background: #FF00FF;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    .start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #FF00FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .start-overlay .tap-text {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 900;
+      text-transform: uppercase;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .start-overlay.hidden { opacity: 0; pointer-events: none; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      opacity: 0;
+    }
+    .header.show { animation: fadeIn 0.5s ease forwards; }
+
+    .badge {
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      font-size: 30px;
+      font-weight: 900;
+      padding: 14px 40px;
+      border-radius: 50px;
+      display: inline-block;
+      letter-spacing: 4px;
+    }
+
+    .matchup {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 35px;
+    }
+
+    .team-logo {
+      width: 130px;
+      height: 130px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 4px solid #333;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+    }
+
+    .team-logo img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+    }
+
+    .vs {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    .game-info {
+      color: #fff;
+      font-size: 26px;
+      margin-top: 20px;
+      opacity: 0.9;
+    }
+
+    /* Pick Cards */
+    .pick-card {
+      background: linear-gradient(145deg, #1a1a2e, #0f0f1a);
+      border-radius: 30px;
+      padding: 35px 40px;
+      margin-bottom: 25px;
+      border: 4px solid #00ff88;
+      box-shadow: 0 0 50px rgba(0, 255, 136, 0.3);
+      opacity: 0;
+      transform: translateY(30px);
+      position: relative;
+    }
+
+    .pick-card.show {
+      animation: slideUp 0.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pick-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .pick-name {
+      color: #00ff88;
+      font-size: 48px;
+      font-weight: 900;
+      text-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+    }
+
+    .pick-status {
+      background: #00ff88;
+      color: #000;
+      font-size: 24px;
+      font-weight: 900;
+      padding: 10px 25px;
+      border-radius: 10px;
+    }
+
+    .pick-thesis {
+      color: #aaa;
+      font-size: 22px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+      font-weight: 500;
+    }
+
+    .pick-thesis .highlight {
+      color: #ffd700;
+      font-weight: 700;
+    }
+
+    .pick-numbers {
+      display: flex;
+      justify-content: space-between;
+      border-top: 2px solid #333;
+      padding-top: 20px;
+    }
+
+    .pick-stat {
+      text-align: center;
+    }
+
+    .pick-stat-label {
+      color: #666;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+    }
+
+    .pick-stat-value {
+      color: #fff;
+      font-size: 36px;
+      font-weight: 700;
+    }
+
+    .pick-stat-value.profit {
+      color: #00ff88;
+      text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+    }
+
+    /* Total */
+    .total-section {
+      background: linear-gradient(145deg, #0f0f1a, #1a1a2e);
+      border-radius: 30px;
+      padding: 40px;
+      text-align: center;
+      border: 4px solid #ffd700;
+      box-shadow: 0 0 60px rgba(255, 215, 0, 0.3);
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .total-section.show {
+      animation: popIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+    }
+
+    @keyframes popIn {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .total-label {
+      color: #ffd700;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      margin-bottom: 15px;
+    }
+
+    .total-row {
+      display: flex;
+      justify-content: center;
+      gap: 80px;
+      margin-bottom: 25px;
+    }
+
+    .total-item {
+      text-align: center;
+    }
+
+    .total-item-label {
+      color: #888;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .total-item-value {
+      color: #fff;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    .total-profit {
+      color: #00ff88;
+      font-size: 90px;
+      font-weight: 900;
+      text-shadow:
+        0 0 30px rgba(0, 255, 136, 0.8),
+        0 0 60px rgba(0, 255, 136, 0.5);
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="tap-text">Tap to Start</div>
+  </div>
+
+  <div class="header" id="header">
+    <div class="badge">MONDAY NIGHT FOOTBALL</div>
+    <div class="matchup">
+      <div class="team-logo">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/lac.png" alt="Chargers">
+      </div>
+      <div class="vs">@</div>
+      <div class="team-logo">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/phi.png" alt="Eagles">
+      </div>
+    </div>
+    <div class="game-info">December 8, 2025 • Final: Chargers 22-19 (OT)</div>
+  </div>
+
+  <div class="pick-card" id="pick1">
+    <div class="pick-header">
+      <div class="pick-name">CHARGERS +2.5</div>
+      <div class="pick-status">✓ WIN</div>
+    </div>
+    <div class="pick-thesis">
+      <span class="highlight">Sharp money divergence</span> + <span class="highlight">reverse line movement</span> against public
+    </div>
+    <div class="pick-numbers">
+      <div class="pick-stat">
+        <div class="pick-stat-label">Wagered</div>
+        <div class="pick-stat-value">$200</div>
+      </div>
+      <div class="pick-stat">
+        <div class="pick-stat-label">Returned</div>
+        <div class="pick-stat-value">$400</div>
+      </div>
+      <div class="pick-stat">
+        <div class="pick-stat-label">Profit</div>
+        <div class="pick-stat-value profit">+$200</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pick-card" id="pick2">
+    <div class="pick-header">
+      <div class="pick-name">UNDER 41.5</div>
+      <div class="pick-status">✓ WIN</div>
+    </div>
+    <div class="pick-thesis">
+      <span class="highlight">Fading 85% public</span> • Sharp + expert consensus on Under
+    </div>
+    <div class="pick-numbers">
+      <div class="pick-stat">
+        <div class="pick-stat-label">Wagered</div>
+        <div class="pick-stat-value">$100</div>
+      </div>
+      <div class="pick-stat">
+        <div class="pick-stat-label">Returned</div>
+        <div class="pick-stat-value">$195</div>
+      </div>
+      <div class="pick-stat">
+        <div class="pick-stat-label">Profit</div>
+        <div class="pick-stat-value profit">+$95</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="total-section" id="total">
+    <div class="total-label">MNF Total</div>
+    <div class="total-row">
+      <div class="total-item">
+        <div class="total-item-label">Wagered</div>
+        <div class="total-item-value">$300</div>
+      </div>
+      <div class="total-item">
+        <div class="total-item-label">Returned</div>
+        <div class="total-item-value">$595</div>
+      </div>
+    </div>
+    <div class="total-profit">+$295</div>
+  </div>
+
+  <audio id="whoosh" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3"></audio>
+  <audio id="pop" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+  <audio id="cash" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+
+  <script>
+    function playSound(id, vol = 0.5) {
+      try {
+        const s = document.getElementById(id);
+        if (s) { s.volume = vol; s.currentTime = 0; s.play().catch(() => {}); }
+      } catch(e) {}
+    }
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    async function runAnimation() {
+      playSound('whoosh', 0.4);
+      document.getElementById('header').classList.add('show');
+      await sleep(500);
+
+      playSound('pop', 0.5);
+      document.getElementById('pick1').classList.add('show');
+      await sleep(450);
+
+      playSound('pop', 0.5);
+      document.getElementById('pick2').classList.add('show');
+      await sleep(450);
+
+      playSound('cash', 0.7);
+      document.getElementById('total').classList.add('show');
+    }
+
+    document.getElementById('startOverlay').addEventListener('click', async () => {
+      for (const id of ['whoosh','pop','cash']) {
+        const s = document.getElementById(id);
+        if (s) { s.volume = 0.01; try { await s.play(); s.pause(); s.currentTime = 0; } catch(e) {} }
+      }
+      document.getElementById('startOverlay').classList.add('hidden');
+      setTimeout(runAnimation, 1000);
+    });
+  </script>
+</body>
+</html>

@@ -12,7 +12,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push' | 'pending';
+  result: 'win' | 'loss' | 'push' | 'pending' | 'no_action';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -34,6 +34,11 @@ interface DailyData {
 type FilterType = 'all' | '30' | '7';
 
 const STARTING_BALANCE = 40000;
+
+// Check if a day is a no-action day
+const isNoActionDay = (bets: Bet[]): boolean => {
+  return bets.length === 1 && bets[0].result === 'no_action';
+};
 
 export default function DailyHistoryPage() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
@@ -239,15 +244,21 @@ export default function DailyHistoryPage() {
                   </div>
                   <div className="flex items-center gap-4 sm:gap-6">
                     <span className="text-gray-400 text-sm hidden sm:inline">
-                      {formatDailyRecord(day.record.wins, day.record.losses, day.record.pushes)}
+                      {isNoActionDay(day.bets) ? '—' : formatDailyRecord(day.record.wins, day.record.losses, day.record.pushes)}
                     </span>
                     <span className="text-white font-bold text-sm hidden sm:inline">
                       ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </span>
-                    <span className={`font-bold text-sm sm:text-base ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                      {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                      <span className="ml-1">{day.dailyPL >= 0 ? '▲' : '▼'}</span>
-                    </span>
+                    {isNoActionDay(day.bets) ? (
+                      <span className="font-bold text-sm sm:text-base text-gray-500">
+                        NO ACTION ⊘
+                      </span>
+                    ) : (
+                      <span className={`font-bold text-sm sm:text-base ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                        {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                        <span className="ml-1">{day.dailyPL >= 0 ? '▲' : '▼'}</span>
+                      </span>
+                    )}
                   </div>
                 </div>
               </button>
@@ -272,6 +283,33 @@ export default function DailyHistoryPage() {
                   </div>
 
                   {day.bets.map((bet) => {
+                    // Handle no_action days specially
+                    if (bet.result === 'no_action') {
+                      return (
+                        <div
+                          key={bet.id}
+                          className="block border-2 border-gray-600 bg-gray-800/30 p-4 sm:p-6 rounded-lg"
+                        >
+                          <div className="flex items-start gap-2 sm:gap-3">
+                            <span className="text-xl sm:text-2xl font-bold text-gray-500">⊘</span>
+                            <div className="flex-1">
+                              <p className="text-gray-300 font-bold text-base sm:text-xl mb-2">
+                                {bet.description}
+                              </p>
+                              {bet.thesis && (
+                                <p className="text-gray-400 text-xs sm:text-sm italic border-l-2 border-gray-600 pl-3">
+                                  {bet.thesis}
+                                </p>
+                              )}
+                              <p className="text-gray-500 font-mono text-sm mt-3">
+                                NO ACTION · $0.00
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    }
+
                     const getBetStyles = () => {
                       if (bet.result === 'win') return 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10';
                       if (bet.result === 'push') return 'border-gray-500 bg-gray-500/5 hover:bg-gray-500/10';

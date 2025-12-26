@@ -1,0 +1,392 @@
+<!--
+  Picks Results - December 23, 2025
+  Record: 3-3 | P/L: -$120 | ROI: -17%
+  Generated from master template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Picks Results - DECEMBER 23</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 40px 45px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 15px; }
+    .side-bars.right { right: 15px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #2d8a4e; }
+    .side-bar.red { background: #c0392b; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 110px;
+    }
+
+    /* HEADER */
+    .header { text-align: center; margin-bottom: 8px; }
+    .header-label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .date {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-thickness: 3px;
+    }
+
+    /* HERO STATS */
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 12px;
+    }
+    .side-stat {
+      text-align: center;
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 12px;
+      padding: 12px 20px;
+      border: 2px solid rgba(251,191,36,0.5);
+      min-width: 110px;
+    }
+    .side-stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 4px;
+    }
+    .side-stat-value {
+      font-size: 44px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+    }
+    .big-profit-box {
+      background: rgba(15, 30, 50, 0.95);
+      border-radius: 18px;
+      padding: 14px 50px 18px;
+      border: 4px solid #fbbf24;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+    .big-profit-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-align: center;
+      margin-bottom: 2px;
+    }
+    .big-profit {
+      font-size: 100px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+      line-height: 1;
+    }
+    .big-profit.negative { color: #ef4444; }
+
+    /* RESULTS LIST - Flex fills space */
+    .results-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    /* RESULT ROW - Each row fills proportionally */
+    .result-row {
+      display: flex;
+      align-items: center;
+      background: rgba(30, 41, 59, 0.7);
+      border-radius: 14px;
+      padding: 0 18px;
+      border: 3px solid;
+      flex: 1;
+      gap: 16px;
+    }
+    .result-row.win { border-color: #22c55e; }
+    .result-row.loss { border-color: #c0392b; }
+
+    /* TEAM LOGO */
+    .team-logo {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+    }
+    .team-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* TEAM INFO - Horizontal layout: Name + Line side by side */
+    .team-info {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .team-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+    }
+    .team-line {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* FUND BADGE */
+    .fund-badge {
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: white;
+    }
+    .fund-badge.sharp { background: rgba(34, 197, 94, 0.3); border: 2px solid #22c55e; }
+    .fund-badge.vector { background: rgba(156, 163, 175, 0.3); border: 2px solid #9ca3af; }
+    .fund-badge.catalyst { background: rgba(192, 132, 252, 0.3); border: 2px solid #c084fc; }
+    .fund-badge.contra { background: rgba(251, 146, 60, 0.3); border: 2px solid #fb923c; }
+
+    /* PROFIT AMOUNT */
+    .profit-amount {
+      font-size: 32px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      text-align: center;
+      min-width: 110px;
+    }
+    .profit-amount.profit-positive { color: #22c55e; }
+    .profit-amount.profit-negative { color: #ef4444; }
+
+    /* SPORT DIVIDER */
+    .sport-divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 4px 0;
+      margin: 2px 0;
+    }
+    .sport-divider::before,
+    .sport-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.15);
+    }
+    .sport-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.5);
+      padding: 2px 12px;
+      background: rgba(30, 41, 59, 0.5);
+      border-radius: 4px;
+    }
+
+    /* RESULT ICON */
+    .result-icon {
+      width: 55px;
+      height: 55px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .result-icon.win {
+      background: linear-gradient(135deg, #2d8a4e 0%, #22c55e 100%);
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    }
+    .result-icon.loss {
+      background: linear-gradient(135deg, #c0392b 0%, #ef4444 100%);
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    }
+
+    /* FOOTER */
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 65px; height: 65px; margin: 0 auto 12px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 15px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">PICKS RESULTS</div>
+        <div class="date">DECEMBER 23</div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="side-stat">
+          <div class="side-stat-label">ROI</div>
+          <div class="side-stat-value">-17%</div>
+        </div>
+        <div class="big-profit-box">
+          <div class="big-profit-label">P/L</div>
+          <div class="big-profit negative">-$120</div>
+        </div>
+        <div class="side-stat">
+          <div class="side-stat-label">RECORD</div>
+          <div class="side-stat-value">3-3</div>
+        </div>
+      </div>
+
+      <div class="results-list">
+        <!-- NCAAF -->
+        <div class="sport-divider"><span class="sport-label">NCAAF</span></div>
+
+        <!-- WKU WIN -->
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/98.png" alt="WKU"></div>
+          <div class="team-info">
+            <div class="team-name">Western Kentucky</div>
+            <div class="team-line">+2.5 (-112)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$89</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- Ohio WIN -->
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/ncaa/500/195.png" alt="Ohio"></div>
+          <div class="team-info">
+            <div class="team-name">Ohio</div>
+            <div class="team-line">+6.5 (-105)</div>
+          </div>
+          <div class="fund-badge vector">VECTOR</div>
+          <div class="profit-amount profit-positive">+$95</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- NHL -->
+        <div class="sport-divider"><span class="sport-label">NHL</span></div>
+
+        <!-- Devils LOSS -->
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/njd.png" alt="Devils"></div>
+          <div class="team-info">
+            <div class="team-name">Devils</div>
+            <div class="team-line">ML (-125)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <!-- Sharks LOSS -->
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nhl/500/sj.png" alt="Sharks"></div>
+          <div class="team-info">
+            <div class="team-name">Sharks</div>
+            <div class="team-line">ML (+195)</div>
+          </div>
+          <div class="fund-badge catalyst">CATALYST</div>
+          <div class="profit-amount profit-negative">-$100</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+
+        <!-- NBA -->
+        <div class="sport-divider"><span class="sport-label">NBA</span></div>
+
+        <!-- Raptors WIN -->
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/tor.png" alt="Raptors"></div>
+          <div class="team-info">
+            <div class="team-name">Raptors</div>
+            <div class="team-line">+5.5 (-105)</div>
+          </div>
+          <div class="fund-badge catalyst">CATALYST</div>
+          <div class="profit-amount profit-positive">+$95</div>
+          <div class="result-icon win">✓</div>
+        </div>
+
+        <!-- Pelicans LOSS -->
+        <div class="result-row loss">
+          <div class="team-logo"><img src="https://a.espncdn.com/i/teamlogos/nba/500/no.png" alt="Pelicans"></div>
+          <div class="team-info">
+            <div class="team-name">Pelicans</div>
+            <div class="team-line">+8.5 (-102)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$150</div>
+          <div class="result-icon loss">✗</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="../../public/logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

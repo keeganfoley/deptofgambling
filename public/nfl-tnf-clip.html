@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1080, height=1920">
+  <title>TNF Breakdown</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #FF00FF;
+    }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      background: #FF00FF;
+      font-family: 'Montserrat', sans-serif;
+      position: relative;
+    }
+
+    .start-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      background: #FF00FF;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      cursor: pointer;
+    }
+
+    .start-overlay .tap-text {
+      color: #fff;
+      font-size: 70px;
+      font-weight: 900;
+      text-transform: uppercase;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+
+    .start-overlay.hidden { display: none; }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); opacity: 0.7; }
+    }
+
+    .scene {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .scene.exit-zoom {
+      animation: zoomOut 0.4s ease-in forwards;
+    }
+
+    @keyframes zoomOut {
+      to { opacity: 0; transform: scale(1.2); }
+    }
+
+    /* Scene 1: TNF + Teams */
+    .badge {
+      background: linear-gradient(135deg, #ffd700, #ff8c00);
+      color: #000;
+      font-size: 42px;
+      font-weight: 900;
+      padding: 25px 60px;
+      border-radius: 60px;
+      letter-spacing: 6px;
+      margin-bottom: 80px;
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+
+    .badge.show {
+      animation: dropIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes dropIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .matchup {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .team-logo {
+      width: 280px;
+      height: 280px;
+      background: #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 8px solid #333;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .team-logo.show-left {
+      animation: popLeft 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .team-logo.show-right {
+      animation: popRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes popLeft {
+      from { opacity: 0; transform: scale(0) translateX(-100px); }
+      to { opacity: 1; transform: scale(1) translateX(0); }
+    }
+
+    @keyframes popRight {
+      from { opacity: 0; transform: scale(0) translateX(100px); }
+      to { opacity: 1; transform: scale(1) translateX(0); }
+    }
+
+    .team-logo img {
+      width: 200px;
+      height: 200px;
+      object-fit: contain;
+    }
+
+    .vs {
+      color: #fff;
+      font-size: 90px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .vs.show {
+      animation: vsPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes vsPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Scene 2: Pick */
+    .pick-big {
+      background: #000;
+      border-radius: 35px;
+      padding: 55px 80px;
+      border: 8px solid #00ff88;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .pick-big.show {
+      animation: slideUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .pick-text {
+      color: #00ff88;
+      font-size: 72px;
+      font-weight: 900;
+    }
+
+    .pick-odds {
+      color: #ffd700;
+      font-size: 72px;
+      font-weight: 900;
+    }
+
+    .pick-check {
+      width: 100px;
+      height: 100px;
+      background: #00ff88;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 60px;
+      color: #000;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0) rotate(-180deg);
+    }
+
+    .pick-check.show {
+      animation: checkSpin 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes checkSpin {
+      to { opacity: 1; transform: scale(1) rotate(0deg); }
+    }
+
+    /* Scene 3: Value */
+    .value-container {
+      text-align: center;
+    }
+
+    .value-header {
+      background: #000;
+      color: #ffd700;
+      font-size: 40px;
+      font-weight: 900;
+      padding: 20px 50px;
+      border-radius: 20px;
+      margin-bottom: 60px;
+      display: inline-block;
+      border: 4px solid #ffd700;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .value-header.show {
+      animation: fadeDown 0.5s ease forwards;
+    }
+
+    @keyframes fadeDown {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .value-compare {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .value-box {
+      background: #000;
+      border-radius: 30px;
+      padding: 50px 60px;
+      text-align: center;
+      opacity: 0;
+    }
+
+    .value-box.system {
+      border: 6px solid #888;
+    }
+
+    .value-box.got {
+      border: 6px solid #00ff88;
+    }
+
+    .value-box.show-left {
+      animation: slideFromLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    .value-box.show-right {
+      animation: slideFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes slideFromLeft {
+      from { opacity: 0; transform: translateX(-80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes slideFromRight {
+      from { opacity: 0; transform: translateX(80px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .value-label {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 3px;
+    }
+
+    .value-label.system-text { color: #888; }
+    .value-label.got-text { color: #00ff88; }
+
+    .value-number {
+      font-size: 80px;
+      font-weight: 900;
+    }
+
+    .value-number.system-num { color: #888; }
+    .value-number.got-num { color: #00ff88; }
+
+    .value-arrow {
+      font-size: 80px;
+      color: #00ff88;
+      opacity: 0;
+    }
+
+    .value-arrow.show {
+      animation: arrowFade 0.4s ease forwards;
+    }
+
+    @keyframes arrowFade {
+      to { opacity: 1; }
+    }
+
+    .extra-value {
+      background: #00ff88;
+      color: #000;
+      font-size: 36px;
+      font-weight: 900;
+      padding: 25px 60px;
+      border-radius: 50px;
+      margin-top: 50px;
+      opacity: 0;
+      transform: scale(0);
+      display: inline-block;
+    }
+
+    .extra-value.show {
+      animation: badgePop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes badgePop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Scene 4: Tampa Record */
+    .record-container {
+      text-align: center;
+    }
+
+    .record-header {
+      background: #000;
+      color: #ff4444;
+      font-size: 40px;
+      font-weight: 900;
+      padding: 20px 50px;
+      border-radius: 20px;
+      margin-bottom: 60px;
+      display: inline-block;
+      border: 4px solid #ff4444;
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+
+    .record-header.show {
+      animation: fadeDown 0.5s ease forwards;
+    }
+
+    .record-games {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .record-game {
+      background: #000;
+      width: 140px;
+      height: 140px;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 70px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0);
+    }
+
+    .record-game.loss {
+      border: 6px solid #ff4444;
+      color: #ff4444;
+    }
+
+    .record-game.win {
+      border: 6px solid #00ff88;
+      color: #00ff88;
+    }
+
+    .record-game.show {
+      animation: gamePop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes gamePop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .record-summary {
+      color: #fff;
+      font-size: 48px;
+      font-weight: 700;
+      opacity: 0;
+    }
+
+    .record-summary.show {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    .record-summary .red { color: #ff4444; }
+
+    /* Scene 5: 88% */
+    .percent-container {
+      text-align: center;
+    }
+
+    .percent-stat {
+      font-size: 300px;
+      font-weight: 900;
+      color: #ff4444;
+      line-height: 1;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .percent-stat.show {
+      animation: numberPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes numberPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .percent-label {
+      background: #000;
+      color: #ff4444;
+      font-size: 48px;
+      font-weight: 900;
+      padding: 20px 50px;
+      border-radius: 20px;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(20px);
+      display: inline-block;
+      border: 4px solid #ff4444;
+    }
+
+    .percent-label.show {
+      animation: fadeUp 0.4s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .we-took {
+      background: #000;
+      border-radius: 30px;
+      padding: 40px 70px;
+      border: 6px solid #00ff88;
+      margin-top: 50px;
+      opacity: 0;
+      transform: translateY(50px);
+      display: inline-block;
+    }
+
+    .we-took.show {
+      animation: boxSlideUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes boxSlideUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .we-took-text {
+      font-size: 52px;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .we-took-text .green { color: #00ff88; }
+
+    /* Scene 6: Profit */
+    .profit-container {
+      text-align: center;
+    }
+
+    .profit-row {
+      display: flex;
+      gap: 100px;
+      margin-bottom: 80px;
+    }
+
+    .profit-item {
+      background: #000;
+      border-radius: 25px;
+      padding: 40px 60px;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(30px);
+      border: 4px solid #fff;
+    }
+
+    .profit-item.show {
+      animation: profitFade 0.5s ease forwards;
+    }
+
+    .profit-item.show-delay {
+      animation: profitFade 0.5s ease 0.15s forwards;
+    }
+
+    @keyframes profitFade {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .profit-label {
+      color: #888;
+      font-size: 28px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .profit-value {
+      color: #fff;
+      font-size: 80px;
+      font-weight: 700;
+    }
+
+    .profit-big {
+      color: #00ff88;
+      font-size: 220px;
+      font-weight: 900;
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    .profit-big.show {
+      animation: profitPop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+    }
+
+    @keyframes profitPop {
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .profit-caption {
+      background: #000;
+      color: #ffd700;
+      font-size: 40px;
+      margin-top: 40px;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-weight: 900;
+      opacity: 0;
+      padding: 20px 50px;
+      border-radius: 20px;
+      display: inline-block;
+      border: 4px solid #ffd700;
+    }
+
+    .profit-caption.show {
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="start-overlay" id="startOverlay">
+    <div class="tap-text">Tap to Start</div>
+  </div>
+
+  <!-- Scene 1: TNF + Teams -->
+  <div class="scene" id="scene1">
+    <div class="badge" id="badge">THURSDAY NIGHT</div>
+    <div class="matchup">
+      <div class="team-logo" id="team1">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Falcons">
+      </div>
+      <div class="vs" id="vs">@</div>
+      <div class="team-logo" id="team2">
+        <img src="https://a.espncdn.com/i/teamlogos/nfl/500/tb.png" alt="Buccaneers">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 2: Pick -->
+  <div class="scene" id="scene2">
+    <div class="pick-big" id="pick1">
+      <span class="pick-text">FALCONS ML</span>
+      <span class="pick-odds">+230</span>
+      <span class="pick-check" id="check1">✓</span>
+    </div>
+  </div>
+
+  <!-- Scene 3: Value -->
+  <div class="scene" id="scene3">
+    <div class="value-container">
+      <div class="value-header" id="valueHeader">🎯 SYSTEM FOUND VALUE</div>
+      <div class="value-compare">
+        <div class="value-box system" id="valueSystem">
+          <div class="value-label system-text">FAIR LINE</div>
+          <div class="value-number system-num">+186</div>
+        </div>
+        <div class="value-arrow" id="valueArrow">→</div>
+        <div class="value-box got" id="valueGot">
+          <div class="value-label got-text">WE GOT</div>
+          <div class="value-number got-num">+230</div>
+        </div>
+      </div>
+      <div class="extra-value" id="extraValue">EXTRA VALUE ✓</div>
+    </div>
+  </div>
+
+  <!-- Scene 4: Tampa Record -->
+  <div class="scene" id="scene4">
+    <div class="record-container">
+      <div class="record-header" id="recordHeader">TAMPA COMING IN</div>
+      <div class="record-games">
+        <div class="record-game loss" id="game1">L</div>
+        <div class="record-game loss" id="game2">L</div>
+        <div class="record-game loss" id="game3">L</div>
+        <div class="record-game loss" id="game4">L</div>
+        <div class="record-game win" id="game5">W</div>
+      </div>
+      <div class="record-summary" id="recordSummary">Lost <span class="red">4 of 5</span> games</div>
+    </div>
+  </div>
+
+  <!-- Scene 5: 88% -->
+  <div class="scene" id="scene5">
+    <div class="percent-container">
+      <div class="percent-stat" id="percentStat">88%</div>
+      <div class="percent-label" id="percentLabel">STILL BET TAMPA</div>
+      <div class="we-took" id="weTook">
+        <div class="we-took-text">WE TOOK <span class="green">FALCONS</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scene 6: Profit -->
+  <div class="scene" id="scene6">
+    <div class="profit-container">
+      <div class="profit-row">
+        <div class="profit-item" id="profitIn">
+          <div class="profit-label">Wagered</div>
+          <div class="profit-value">$150</div>
+        </div>
+        <div class="profit-item" id="profitOut">
+          <div class="profit-label">Returned</div>
+          <div class="profit-value">$495</div>
+        </div>
+      </div>
+      <div class="profit-big" id="profitBig">+$345</div>
+      <div class="profit-caption" id="profitCaption">TNF PROFIT</div>
+    </div>
+  </div>
+
+  <audio id="whoosh" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2572/2572-preview.mp3"></audio>
+  <audio id="pop" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3"></audio>
+  <audio id="pop2" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2570/2570-preview.mp3"></audio>
+  <audio id="success" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2018/2018-preview.mp3"></audio>
+  <audio id="cash" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/888/888-preview.mp3"></audio>
+  <audio id="ding" preload="auto" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+  <script>
+    function playSound(id, vol = 0.5) {
+      try {
+        const s = document.getElementById(id);
+        if (s) { s.volume = vol; s.currentTime = 0; s.play().catch(() => {}); }
+      } catch(e) {}
+    }
+
+    function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+    function showEl(id, className = 'show') {
+      document.getElementById(id).classList.add(className);
+    }
+
+    function showScene(id) {
+      document.getElementById(id).style.opacity = '1';
+    }
+
+    function hideScene(id) {
+      const scene = document.getElementById(id);
+      scene.classList.add('exit-zoom');
+      return sleep(400).then(() => {
+        scene.style.opacity = '0';
+        scene.classList.remove('exit-zoom');
+      });
+    }
+
+    async function runAnimation() {
+      // Scene 1: TNF + Teams
+      showScene('scene1');
+      playSound('whoosh', 0.5);
+      showEl('badge');
+      await sleep(400);
+      playSound('pop', 0.6);
+      showEl('team1', 'show-left');
+      await sleep(200);
+      playSound('pop2', 0.5);
+      showEl('vs');
+      await sleep(200);
+      playSound('pop', 0.6);
+      showEl('team2', 'show-right');
+      await sleep(1800);
+      await hideScene('scene1');
+
+      // Scene 2: Pick
+      showScene('scene2');
+      playSound('whoosh', 0.4);
+      showEl('pick1');
+      await sleep(400);
+      playSound('success', 0.5);
+      showEl('check1');
+      await sleep(1400);
+      await hideScene('scene2');
+
+      // Scene 3: Value
+      showScene('scene3');
+      playSound('ding', 0.4);
+      showEl('valueHeader');
+      await sleep(500);
+      playSound('pop', 0.5);
+      showEl('valueSystem', 'show-left');
+      await sleep(300);
+      showEl('valueArrow');
+      await sleep(300);
+      playSound('pop', 0.5);
+      showEl('valueGot', 'show-right');
+      await sleep(500);
+      playSound('success', 0.5);
+      showEl('extraValue');
+      await sleep(1200);
+      await hideScene('scene3');
+
+      // Scene 4: Tampa Record
+      showScene('scene4');
+      playSound('whoosh', 0.4);
+      showEl('recordHeader');
+      await sleep(400);
+      playSound('pop', 0.4);
+      showEl('game1');
+      await sleep(150);
+      playSound('pop', 0.4);
+      showEl('game2');
+      await sleep(150);
+      playSound('pop', 0.4);
+      showEl('game3');
+      await sleep(150);
+      playSound('pop', 0.4);
+      showEl('game4');
+      await sleep(150);
+      playSound('pop2', 0.5);
+      showEl('game5');
+      await sleep(400);
+      showEl('recordSummary');
+      await sleep(1200);
+      await hideScene('scene4');
+
+      // Scene 5: 88%
+      showScene('scene5');
+      playSound('pop', 0.6);
+      showEl('percentStat');
+      await sleep(400);
+      showEl('percentLabel');
+      await sleep(500);
+      playSound('success', 0.5);
+      showEl('weTook');
+      await sleep(1400);
+      await hideScene('scene5');
+
+      // Scene 6: Profit
+      showScene('scene6');
+      playSound('whoosh', 0.4);
+      showEl('profitIn');
+      await sleep(200);
+      showEl('profitOut', 'show-delay');
+      await sleep(600);
+      playSound('cash', 0.7);
+      showEl('profitBig');
+      await sleep(400);
+      showEl('profitCaption');
+    }
+
+    document.getElementById('startOverlay').addEventListener('click', async () => {
+      for (const id of ['whoosh','pop','pop2','success','cash','ding']) {
+        const s = document.getElementById(id);
+        if (s) { s.volume = 0.01; try { await s.play(); s.pause(); s.currentTime = 0; } catch(e) {} }
+      }
+      document.getElementById('startOverlay').classList.add('hidden');
+      await sleep(500);
+      runAnimation();
+    });
+  </script>
+</body>
+</html>

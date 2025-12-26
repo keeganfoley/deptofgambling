@@ -12,7 +12,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push' | 'pending';
+  result: 'win' | 'loss' | 'push' | 'pending' | 'no_action';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -41,6 +41,11 @@ const formatRecord = (wins: number, losses: number, pushes: number): string => {
   return `${wins}-${losses}`;
 };
 
+// Check if a day is a no-action day
+const isNoActionDay = (bets: Bet[]): boolean => {
+  return bets.length === 1 && bets[0].result === 'no_action';
+};
+
 export default function DailyPerformanceHistory() {
   const [expandedDay, setExpandedDay] = useState<string | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
@@ -49,7 +54,7 @@ export default function DailyPerformanceHistory() {
   const getDailyData = (): DailyData[] => {
     const grouped = new Map<string, Bet[]>();
 
-    // USE ALL REAL BETS (exclude pending bets from display)
+    // USE ALL REAL BETS (exclude pending bets from display, include no_action days)
     const realBets = (betsData as Bet[]).filter(bet => bet.result !== 'pending');
 
     // Group bets by date (extract just the date part)
@@ -206,7 +211,7 @@ export default function DailyPerformanceHistory() {
                     <div className="flex flex-col items-end">
                       <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Record</span>
                       <span className="text-gray-400 font-bold text-sm tracking-tight">
-                        {formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
+                        {isNoActionDay(day.bets) ? '—' : formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
                       </span>
                     </div>
                   </div>
@@ -215,13 +220,21 @@ export default function DailyPerformanceHistory() {
                   <div className="flex items-baseline justify-between">
                     <div className="flex flex-col flex-1">
                       <span className="text-gray-500 text-[10px] uppercase tracking-wider mb-0.5">Daily P/L</span>
-                      <span className={`font-bold text-base tracking-tight ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                        {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
-                      </span>
+                      {isNoActionDay(day.bets) ? (
+                        <span className="font-bold text-base tracking-tight text-gray-500">NO ACTION</span>
+                      ) : (
+                        <span className={`font-bold text-base tracking-tight ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                          {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                        </span>
+                      )}
                     </div>
-                    <span className={`text-2xl ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                      {day.dailyPL >= 0 ? '▲' : '▼'}
-                    </span>
+                    {isNoActionDay(day.bets) ? (
+                      <span className="text-2xl text-gray-500">⊘</span>
+                    ) : (
+                      <span className={`text-2xl ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                        {day.dailyPL >= 0 ? '▲' : '▼'}
+                      </span>
+                    )}
                   </div>
                 </div>
 
@@ -232,11 +245,15 @@ export default function DailyPerformanceHistory() {
                   <span className="text-white font-bold">
                     ${day.endingBalance.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </span>
-                  <span className={`font-bold ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
-                    {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {day.dailyPL >= 0 ? '▲' : '▼'}
-                  </span>
+                  {isNoActionDay(day.bets) ? (
+                    <span className="font-bold text-gray-500">NO ACTION ⊘</span>
+                  ) : (
+                    <span className={`font-bold ${day.dailyPL >= 0 ? 'text-[#22c55e]' : 'text-[#ef4444]'}`}>
+                      {day.dailyPL >= 0 ? '+' : ''}${day.dailyPL.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} {day.dailyPL >= 0 ? '▲' : '▼'}
+                    </span>
+                  )}
                   <span className="text-gray-400">
-                    {formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
+                    {isNoActionDay(day.bets) ? '—' : formatRecord(day.record.wins, day.record.losses, day.record.pushes)}
                   </span>
                   <span className="ml-auto text-gray-500 text-sm">
                     {expandedDay === day.date ? '[Collapse ▲]' : '[Expand ▼]'}
@@ -248,49 +265,75 @@ export default function DailyPerformanceHistory() {
               {expandedDay === day.date && (
                 <div className="bg-[#0a1624] p-4 sm:p-6 space-y-3 sm:space-y-4 border-t-2 border-gray-700">
                   {day.bets.map((bet) => (
-                    <a
-                      key={bet.id}
-                      href={`/bets/${bet.slug}`}
-                      className={`block border-2 ${
-                        bet.result === 'win'
-                          ? 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10'
-                          : bet.result === 'push'
-                          ? 'border-[#c5a572] bg-[#c5a572]/5 hover:bg-[#c5a572]/10'
-                          : 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10'
-                      } p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
-                    >
-                      <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
-                        <div className="flex items-start gap-2 sm:gap-3 flex-1">
-                          <span className={`text-xl sm:text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'}`}>
-                            {bet.result === 'win' ? '✓' : bet.result === 'push' ? '⟳' : '✗'}
-                          </span>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-white font-bold text-base sm:text-xl break-words">
-                              {bet.description} ({bet.odds > 0 ? '+' : ''}{bet.odds})
+                    bet.result === 'no_action' ? (
+                      // No Action Day - special display
+                      <div
+                        key={bet.id}
+                        className="block border-2 border-gray-600 bg-gray-800/30 p-4 sm:p-6 rounded-lg"
+                      >
+                        <div className="flex items-start gap-2 sm:gap-3">
+                          <span className="text-xl sm:text-2xl font-bold text-gray-500">⊘</span>
+                          <div className="flex-1">
+                            <p className="text-gray-300 font-bold text-base sm:text-xl mb-2">
+                              {bet.description}
+                            </p>
+                            {bet.thesis && (
+                              <p className="text-gray-400 text-xs sm:text-sm italic border-l-2 border-gray-600 pl-3">
+                                {bet.thesis}
+                              </p>
+                            )}
+                            <p className="text-gray-500 font-mono text-sm mt-3">
+                              NO ACTION · $0.00
                             </p>
                           </div>
                         </div>
-                        <div className="text-right flex-shrink-0">
-                          <span className="text-gray-400 font-mono font-semibold text-sm sm:text-base">{bet.stake}u</span>
+                      </div>
+                    ) : (
+                      // Regular bet display
+                      <a
+                        key={bet.id}
+                        href={`/bets/${bet.slug}`}
+                        className={`block border-2 ${
+                          bet.result === 'win'
+                            ? 'border-[#22c55e] bg-[#22c55e]/5 hover:bg-[#22c55e]/10'
+                            : bet.result === 'push'
+                            ? 'border-[#c5a572] bg-[#c5a572]/5 hover:bg-[#c5a572]/10'
+                            : 'border-[#ef4444] bg-[#ef4444]/5 hover:bg-[#ef4444]/10'
+                        } p-4 sm:p-6 rounded-lg transition-all duration-200 cursor-pointer hover:scale-[1.01]`}
+                      >
+                        <div className="flex items-start justify-between gap-3 sm:gap-4 mb-3 sm:mb-4">
+                          <div className="flex items-start gap-2 sm:gap-3 flex-1">
+                            <span className={`text-xl sm:text-2xl font-bold ${bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'}`}>
+                              {bet.result === 'win' ? '✓' : bet.result === 'push' ? '⟳' : '✗'}
+                            </span>
+                            <div className="flex-1 min-w-0">
+                              <p className="text-white font-bold text-base sm:text-xl break-words">
+                                {bet.description} ({bet.odds > 0 ? '+' : ''}{bet.odds})
+                              </p>
+                            </div>
+                          </div>
+                          <div className="text-right flex-shrink-0">
+                            <span className="text-gray-400 font-mono font-semibold text-sm sm:text-base">{bet.stake}u</span>
+                          </div>
                         </div>
-                      </div>
 
-                      <div className="ml-7 sm:ml-11 space-y-2">
-                        <p className="text-gray-300 text-xs sm:text-base font-mono break-words">
-                          Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
-                        </p>
-                        {bet.thesis && (
-                          <p className="text-gray-400 text-xs sm:text-sm italic break-words mt-2 border-l-2 border-[#c5a572]/50 pl-3">
-                            {bet.thesis}
+                        <div className="ml-7 sm:ml-11 space-y-2">
+                          <p className="text-gray-300 text-xs sm:text-base font-mono break-words">
+                            Final: {bet.finalStat} · +{bet.edge}% edge · +{bet.expectedValue}% EV
                           </p>
-                        )}
-                        <p className={`font-bold text-xl sm:text-3xl font-mono ${
-                          bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'
-                        }`}>
-                          {bet.result === 'push' ? 'PUSH $0.00' : `${bet.profit >= 0 ? '+' : ''}$${bet.profit.toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
-                        </p>
-                      </div>
-                    </a>
+                          {bet.thesis && (
+                            <p className="text-gray-400 text-xs sm:text-sm italic break-words mt-2 border-l-2 border-[#c5a572]/50 pl-3">
+                              {bet.thesis}
+                            </p>
+                          )}
+                          <p className={`font-bold text-xl sm:text-3xl font-mono ${
+                            bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'
+                          }`}>
+                            {bet.result === 'push' ? 'PUSH $0.00' : `${bet.profit >= 0 ? '+' : ''}$${bet.profit.toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
+                          </p>
+                        </div>
+                      </a>
+                    )
                   ))}
                 </div>
               )}

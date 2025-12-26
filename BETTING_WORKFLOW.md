@@ -171,6 +171,15 @@ Jokic O11.5 reb: Edge 18%, Grade B+
 | **"placed"** | After saving bets → Output #all-picks messages + #consensus-plays (if any) |
 | **"update results"** | After settling bets → Output #daily-performance message |
 
+**⚠️ MANDATORY RESEARCH BEFORE DISCORD OUTPUT:**
+
+| Trigger | BEFORE generating Discord output |
+|---------|----------------------------------|
+| **"placed"** | Web search EVERY game for last 48 hours of news. Filter for relevance. Only include fresh info not already priced in. |
+| **"update results"** | Just settle the bets and output results. No descriptions needed. |
+
+**This is NON-NEGOTIABLE for picks. Results are simple - just W/L and units.**
+
 **MANUAL - Use these to re-generate Discord output:**
 
 | User Says | What I Output |
@@ -374,9 +383,51 @@ User says "update results" or "what hit?" or "check bets"
 
 **CRITICAL: Claude ALWAYS outputs Discord messages automatically after these triggers.**
 
-Discord messages are generated automatically as part of the workflow. See `DISCORD.md` for full format specs.
+Discord messages are generated automatically as part of the workflow. See `DISCORD_FORMATS.md` for full format specs.
+
+**⚠️ MANDATORY RESEARCH - SEE `DISCORD_FORMATS.md` FOR FULL REQUIREMENTS:**
+- **PICKS RESEARCH REQUIREMENTS** - What to include/exclude, relevance test
 
 ### After "placed" - AUTOMATICALLY Output These:
+
+### ⚠️ MANDATORY WEB SEARCH FOR THESIS CONTENT (LOCKED)
+
+**Before generating any Discord #all-picks messages, you MUST do a web search for EACH game to gather real, factual information.**
+
+**For each pick, search:** `"[Team A] vs [Team B] [Date] preview injuries"`
+
+**Gather and include in the 💡 thesis:**
+1. **INJURIES** - Who's OUT, questionable, day-to-day (with specific injury type)
+2. **RECENT RESULTS** - H2H record, win/loss streaks, home/away records
+3. **LINE MOVEMENT** - Where the line opened vs where it is now
+4. **RELEVANT STATS** - Defensive rankings, scoring averages, ATS records
+5. **CONTEXT** - Weather (for outdoor games), motivation factors, playoff implications
+
+**THESIS RULES:**
+- Every fact must be from web search, not made up
+- Include specific names, numbers, and stats
+- Explain WHY the signals matter in plain English
+- Make it sound like explaining to a friend, not a robot
+
+**CRITICAL: ONLY INCLUDE INFO THAT SUPPORTS THE PICK**
+- Every piece of information in the thesis MUST support WHY we're betting this pick
+- Do NOT include random facts that don't connect to the thesis
+- Do NOT include stats that argue AGAINST the pick
+- If an injury hurts our pick (not helps it), don't mention it
+- Every sentence should answer: "Why should I bet this?"
+- Tie everything back to the core reason we're on this side
+
+**Example of what NOT to do:**
+❌ "The Lakers are 5-3 in their last 8 games. LeBron had 30 points last game. The Jazz are from Utah."
+(Random facts, not tied to thesis)
+
+**Example of what TO do:**
+✅ "The Lakers have already beaten Utah twice this season. The Jazz are missing Walker Kessler for the season after shoulder surgery. This line opened at -6.5 and has moved to -9.5 - that's 3 points of sharp money pushing the number. The sharps see a blowout."
+(Every fact supports WHY we're betting Lakers -9.5)
+
+**NEVER generate Discord pick messages without doing web searches first. This is non-negotiable.**
+
+---
 
 **#all-picks** - One message per bet with track records:
 ```

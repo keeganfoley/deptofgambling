@@ -1,6 +1,6 @@
 # Discord Message Formats - LOCKED
 
-**Last Updated:** Dec 18, 2025
+**Last Updated:** Dec 26, 2025
 **Status:** LOCKED - Do not change without approval
 
 ---
@@ -187,6 +187,37 @@ Last 5: ✅ ✅ ❌ ✅ ❌
 
 ---
 
+## PICKS RESEARCH REQUIREMENTS (MANDATORY)
+
+Before generating ANY pick for Discord, Claude MUST web search and verify:
+
+### WHAT TO INCLUDE (Relevant):
+- Line movement in the last 24-48 hours and WHY
+- Injuries announced TODAY or YESTERDAY that aren't priced in yet
+- Back-to-back situations, travel (arrived at 3am, etc.)
+- Recent head-to-head results (last 2-3 meetings)
+- Hot/cold streaks in last 5-10 games
+- Specific matchup advantages (pace, defense vs position, etc.)
+- Weather for outdoor games (if significant)
+
+### WHAT TO EXCLUDE (Irrelevant - DO NOT MENTION):
+- Injuries from weeks/months ago (already priced in)
+- Trades from more than 2 weeks ago (already priced in)
+- "Star player out for season" if they've been out for weeks
+- Generic team descriptions ("they're a good defensive team")
+- Anything that doesn't DIRECTLY support THIS specific pick
+- Old news dressed up as current ("Luka has been dealing with..." if it's been ongoing)
+
+### RELEVANCE TEST:
+Before including ANY fact, ask: "Would a sharp bettor already know this and would it already be reflected in the line?" If YES → don't include it.
+
+Only include information that:
+1. Is from the last 48 hours OR
+2. Is a specific matchup stat that supports the thesis OR
+3. Is situational (rest, travel, revenge) that's verifiable
+
+---
+
 ## #daily-performance (LOCKED)
 
 **One message:**
@@ -196,24 +227,15 @@ Last 5: ✅ ✅ ❌ ✅ ❌
 RESULTS
 ━━━━━━━━━━━━━━━━━━━━
 [WINS FIRST - sorted by unit size, biggest first]
-✅ 🏀 Grizzlies +8.5 → W (+1.82u)
-   ↳ ⚫ Vector
+✅ 🏀 Spurs ML (+320) → W (+3.20u)
+   ↳ 🟢 Sharp
 
 ✅ 🏀 Bulls +5.5 → W (+1.36u)
-   ↳ 🟢 Sharp
-
-✅ 🏀 Bulls +5.5 → W (+0.91u)
-   ↳ 🟣 Catalyst
-
-✅ 🏈 Delaware +1 → W (+0.43u)
-   ↳ 🟢 Sharp
+   ↳ ⚫ Vector
 
 [LOSSES AFTER - sorted by unit size, biggest first]
-❌ 🏒 Jets ML → L (-1.00u)
-   ↳ 🟢 Sharp
-
-❌ 🏒 Jets ML → L (-0.50u)
-   ↳ 🟣 Catalyst
+❌ 🏀 Lakers -4.5 → L (-1.00u)
+   ↳ ⚫ Vector
 
 Today: [W]-[L] | +[X]u | +$[XXX]
 
@@ -225,16 +247,17 @@ PORTFOLIO
 🎯 Record: XXX-XXX-X (XX.X%)
 ```
 
-**RULES:**
+### RULES:
 - Wins ALWAYS listed first, losses after
-- Line 1: Checkmark + Sport emoji + Pick + Result + Units
-- Line 2: Indented arrow (↳) + Fund emoji + Fund name (Sharp, Vector, Contra, Catalyst)
+- Line 1: Result emoji + Sport emoji + Pick + Odds + Result + Units
+- Line 2: Indented arrow (↳) + Fund emoji + Fund name
 - Blank line between each pick for readability
 - Fund emojis: 🟢 Sharp, ⚫ Vector, 🟠 Contra, 🟣 Catalyst
 - Sport emojis: 🏀 NBA/NCAAB, 🏈 NFL/NCAAF, 🏒 NHL
 - Sort wins by unit size (biggest win first)
 - Sort losses by unit size (biggest loss first)
 - Triggered by "update results"
+- **NO descriptions/explanations - just the results**
 
 ---
 
