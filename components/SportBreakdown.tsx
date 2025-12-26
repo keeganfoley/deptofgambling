@@ -260,7 +260,10 @@ export default function SportBreakdown() {
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
 
-  const sports = metricsData.sportBreakdown;
+  // Filter out Soccer from main page display (only 1 bet)
+  const sports = Object.fromEntries(
+    Object.entries(metricsData.sportBreakdown).filter(([key]) => key !== 'Soccer')
+  );
 
   useEffect(() => {
     gsap.fromTo(
