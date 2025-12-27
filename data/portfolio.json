@@ -1,51 +1,51 @@
 {
-  "asOfDate": "2025-12-26",
+  "asOfDate": "2025-12-27",
   "combined": {
-    "balance": 46108.74,
+    "balance": 45793.51,
     "startingBalance": 40000,
-    "netPL": 6108.74,
-    "roi": 15.27,
+    "netPL": 5793.51,
+    "roi": 14.48,
     "record": {
-      "wins": 209,
-      "losses": 150,
+      "wins": 211,
+      "losses": 154,
       "pushes": 2
     },
-    "winRate": 58.22,
-    "unitsWon": 61.09,
-    "sharpe": 5.24
+    "winRate": 57.81,
+    "unitsWon": 57.94,
+    "sharpe": 5.29
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 10048.97,
+      "balance": 9998.97,
       "startingBalance": 10000,
-      "netPL": 48.97,
-      "roi": 0.49,
+      "netPL": -1.03,
+      "roi": -0.01,
       "record": {
         "wins": 93,
-        "losses": 85,
+        "losses": 86,
         "pushes": 1
       },
-      "winRate": 52.25,
-      "unitsWon": 0.49,
+      "winRate": 51.96,
+      "unitsWon": -0.01,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 14197.869999999999,
+      "balance": 13932.64,
       "startingBalance": 10000,
-      "netPL": 4197.87,
-      "roi": 27.81,
+      "netPL": 3932.64,
+      "roi": 39.33,
       "record": {
-        "wins": 79,
-        "losses": 41,
+        "wins": 81,
+        "losses": 44,
         "pushes": 0
       },
-      "winRate": 65.83,
-      "unitsWon": 41.98,
+      "winRate": 64.8,
+      "unitsWon": 39.33,
       "color": "#22c55e",
       "status": "active"
     },
@@ -55,7 +55,7 @@
       "balance": 10818.72,
       "startingBalance": 10000,
       "netPL": 818.72,
-      "roi": 24.08,
+      "roi": 8.19,
       "record": {
         "wins": 17,
         "losses": 11,
@@ -72,7 +72,7 @@
       "balance": 11043.18,
       "startingBalance": 10000,
       "netPL": 1043.18,
-      "roi": 29.18,
+      "roi": 10.43,
       "record": {
         "wins": 20,
         "losses": 13,

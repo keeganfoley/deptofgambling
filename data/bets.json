@@ -7658,14 +7658,16 @@
     "opponent": "Northwestern",
     "odds": -110,
     "stake": 1.0,
-    "result": "pending",
+    "result": "loss",
     "fund": "SharpFund",
     "edge": 4.0,
     "expectedValue": 3.5,
     "conviction": 48,
     "gameTime": "1:00 PM ET",
     "thesis": "Sharp Action lit on CMU in what projects as a defensive grind. Both teams rank top-35 in scoring defense. Northwestern has a lengthy injury list including Cam Porter OUT and multiple questionable. Line moved from -12.5 toward CMU. Big Ten bowl record has been mixed - don't lay double digits with a team that was 6-6 in a bad Big Ten year.",
-    "slug": "cmu-spread-sharp-dec26-2025"
+    "slug": "cmu-spread-sharp-dec26-2025",
+    "profit": -100.0,
+    "finalStat": "Final: Northwestern 34, CMU 7 (Lost by 27, did not cover +12.5)"
   },
   {
     "id": 372,
@@ -7678,14 +7680,16 @@
     "opponent": "Minnesota",
     "odds": -105,
     "stake": 2.0,
-    "result": "pending",
+    "result": "loss",
     "fund": "SharpFund",
     "edge": 8.0,
     "expectedValue": 7.5,
     "conviction": 82,
     "gameTime": "4:30 PM ET",
     "thesis": "Minnesota is a fraud. The Gophers were outside the Top 90 in EPA per play on BOTH sides of the ball. They went 0-5 on the road, losing by an average of 24.4 points away from Minneapolis. New Mexico (9-3) enters on a 6-game win streak, fully healthy with no opt-outs. First bowl game since 2016. Line moved 2 full points from -3.5 to -1.5 toward the Lobos. Sharp Action, Big Money on ML, and Top Experts all aligned on New Mexico.",
-    "slug": "new-mexico-spread-sharp-dec26-2025"
+    "slug": "new-mexico-spread-sharp-dec26-2025",
+    "profit": -200.0,
+    "finalStat": "Final: Minnesota 20, New Mexico 17 OT (Lost by 3, did not cover +1.5)"
   },
   {
     "id": 373,
@@ -7698,14 +7702,16 @@
     "opponent": "Toronto Raptors",
     "odds": -114,
     "stake": 0.5,
-    "result": "pending",
+    "result": "win",
     "fund": "SharpFund",
     "edge": 3.0,
     "expectedValue": 2.5,
     "conviction": 42,
     "gameTime": "7:00 PM ET",
     "thesis": "Washington is bad (5-24), but Toronto isn't much better (8-23). Sharp Action active on Wizards spread. 57% of public bets on Raptors but line hasn't moved - actually came down from -7.5 at open. Low conviction play sized accordingly.",
-    "slug": "wizards-spread-sharp-dec26-2025"
+    "slug": "wizards-spread-sharp-dec26-2025",
+    "profit": 43.86,
+    "finalStat": "Final: Wizards 138, Raptors 117 (Won outright, covered +7.5)"
   },
   {
     "id": 374,
@@ -7718,14 +7724,16 @@
     "opponent": "Memphis Grizzlies",
     "odds": -106,
     "stake": 1.0,
-    "result": "pending",
+    "result": "loss",
     "fund": "SharpFund",
     "edge": 6.6,
     "expectedValue": 5.5,
     "conviction": 76,
     "gameTime": "8:00 PM ET",
     "thesis": "Giannis is OUT (calf strain, week 4 of rehab) but sharps are BUYING the Bucks at +5.5. Big Money lit on ML too. Grizzlies dealing with their own issues: Ja Morant questionable (ankle), plus Zach Edey, Brandon Clarke, Vince Williams Jr. all OUT. Model projects a 3-point game. Sharp Action and model both aligned.",
-    "slug": "bucks-spread-sharp-dec26-2025"
+    "slug": "bucks-spread-sharp-dec26-2025",
+    "profit": -100.0,
+    "finalStat": "Final: Grizzlies 125, Bucks 104 (Lost by 21, did not cover +5.5)"
   },
   {
     "id": 375,
@@ -7738,14 +7746,16 @@
     "opponent": "Memphis Grizzlies",
     "odds": -106,
     "stake": 0.5,
-    "result": "pending",
+    "result": "loss",
     "fund": "VectorFund",
     "edge": 6.6,
     "expectedValue": 5.5,
     "conviction": 76,
     "gameTime": "8:00 PM ET",
     "thesis": "Model projects +3.0 spread, getting 5.5 means 2.5 points of embedded value. Grade B+ with 6.6% edge. Consensus play with SharpFund - both sharp money and model projection aligned on Bucks despite Giannis being out.",
-    "slug": "bucks-spread-vector-dec26-2025"
+    "slug": "bucks-spread-vector-dec26-2025",
+    "profit": -50.0,
+    "finalStat": "Final: Grizzlies 125, Bucks 104 (Lost by 21, did not cover +5.5)"
   },
   {
     "id": 376,
@@ -7758,13 +7768,15 @@
     "opponent": "UTSA",
     "odds": -110,
     "stake": 1.0,
-    "result": "pending",
+    "result": "win",
     "fund": "SharpFund",
     "edge": 4.0,
     "expectedValue": 3.5,
     "conviction": 55,
     "gameTime": "8:00 PM ET",
     "thesis": "Over is 6-1 in UTSA's last 7 games - averaging 37 PPG in that stretch. FIU has gone Over in 3 of last 4, scoring 34+ in all three. Both teams' defensive depth depleted: UTSA down 16 players, FIU decimated in secondary. Sharp Action and Top Experts aligned on Over despite total moving UP from 57.5 to 61.",
-    "slug": "fiu-utsa-over-sharp-dec26-2025"
+    "slug": "fiu-utsa-over-sharp-dec26-2025",
+    "profit": 90.91,
+    "finalStat": "Final: UTSA 57, FIU 20 (Total: 77, Over 60.5 hit)"
   }
 ]
