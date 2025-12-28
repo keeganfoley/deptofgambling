@@ -11,7 +11,8 @@
       "wins": 215,
       "losses": 162,
       "pushes": 2
-    }
+    },
+    "sharpe": 4.88
   },
   "funds": {
     "VectorFund": {

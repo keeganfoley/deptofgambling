@@ -306,30 +306,30 @@ export default function SportBreakdown() {
 
         {/* Mobile: Accordion Style */}
         <div className="md:hidden space-y-3">
-          {Object.values(sports).map((sport) => (
+          {Object.entries(sports).map(([sportName, sport]) => (
             <MobileSportAccordion
-              key={sport.sport}
-              sport={sport.sport}
-              record={sport.record}
+              key={sportName}
+              sport={sportName}
+              record={{ ...sport.record, total: sport.record.wins + sport.record.losses }}
               roi={sport.roi}
               netPL={sport.pnl}
-              unitsWon={sport.unitsWon}
+              unitsWon={sport.pnl / 100}
             />
           ))}
         </div>
 
         {/* Desktop: Sport Cards Grid */}
         <div className="hidden md:grid grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {Object.values(sports).map((sport, index) => (
+          {Object.entries(sports).map(([sportName, sport], index) => (
             <SportCard
-              key={sport.sport}
-              sport={sport.sport}
-              record={sport.record as any}
+              key={sportName}
+              sport={sportName}
+              record={{ ...sport.record, total: sport.record.wins + sport.record.losses }}
               roi={sport.roi}
               netPL={sport.pnl}
-              unitsWon={sport.unitsWon}
-              gamesAnalyzed={sport.record.total}
-              totalGames={sport.record.total}
+              unitsWon={sport.pnl / 100}
+              gamesAnalyzed={sport.totalBets || (sport.record.wins + sport.record.losses)}
+              totalGames={sport.totalBets || (sport.record.wins + sport.record.losses)}
               index={index}
             />
           ))}

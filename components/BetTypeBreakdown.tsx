@@ -218,10 +218,10 @@ export default function BetTypeBreakdown() {
 
         {/* Mobile: Accordion Style */}
         <div className="md:hidden space-y-3">
-          {Object.values(betTypes).map((betType) => (
+          {Object.entries(betTypes).map(([typeName, betType]) => (
             <MobileBetTypeAccordion
-              key={betType.type}
-              type={betType.type}
+              key={typeName}
+              type={typeName}
               record={betType.record}
               winRate={betType.winRate}
               netPL={betType.pnl}
@@ -232,10 +232,10 @@ export default function BetTypeBreakdown() {
 
         {/* Desktop: Bet Type Cards Grid */}
         <div className="hidden md:grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 max-w-6xl mx-auto">
-          {Object.values(betTypes).map((betType, index) => (
+          {Object.entries(betTypes).map(([typeName, betType], index) => (
             <BetTypeCard
-              key={betType.type}
-              type={betType.type}
+              key={typeName}
+              type={typeName}
               record={betType.record}
               winRate={betType.winRate}
               netPL={betType.pnl}
