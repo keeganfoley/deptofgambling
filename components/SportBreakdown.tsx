@@ -328,8 +328,8 @@ export default function SportBreakdown() {
               roi={sport.roi}
               netPL={sport.pnl}
               unitsWon={sport.pnl / 100}
-              gamesAnalyzed={sport.totalBets || (sport.record.wins + sport.record.losses)}
-              totalGames={sport.totalBets || (sport.record.wins + sport.record.losses)}
+              gamesAnalyzed={sport.record.wins + sport.record.losses}
+              totalGames={sport.record.wins + sport.record.losses}
               index={index}
             />
           ))}
