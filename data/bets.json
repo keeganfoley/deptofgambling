@@ -9011,7 +9011,16 @@
     "description": "Rangers ML +155",
     "wager": 50,
     "datePlaced": "2025-12-29",
-    "profit": -50
+    "profit": -50,
+    "slug": "rangers-ml-dec29-2025",
+    "opponent": "Carolina Hurricanes",
+    "gameTime": "7:00 PM ET",
+    "thesis": "Rangers as road underdogs offer value against Hurricanes. New York has shown strong road performance and Shesterkin provides elite goaltending. Plus-money on a quality team in a divisional matchup.",
+    "analysis": "Rangers as road underdogs offer value against Hurricanes. New York has shown strong road performance and Shesterkin provides elite goaltending. Plus-money on a quality team in a divisional matchup.",
+    "edge": 4.2,
+    "expectedValue": 6.5,
+    "ev": 6.5,
+    "finalStat": "Lost 2-3 OT - Blake PP goal in OT"
   },
   {
     "id": 401,
@@ -9030,7 +9039,16 @@
     "description": "Oakland +3.5",
     "wager": 200,
     "datePlaced": "2025-12-29",
-    "profit": -200
+    "profit": -200,
+    "slug": "oakland-spread-dec29-2025",
+    "opponent": "Wright State",
+    "gameTime": "7:00 PM ET",
+    "thesis": "Oakland getting 3.5 points on the road in Horizon League play. Golden Grizzlies have covered in recent conference matchups and Wright State has been inconsistent at home.",
+    "analysis": "Oakland getting 3.5 points on the road in Horizon League play. Golden Grizzlies have covered in recent conference matchups and Wright State has been inconsistent at home.",
+    "edge": 3.8,
+    "expectedValue": 7.2,
+    "ev": 7.2,
+    "finalStat": "Lost 73-88 (-15)"
   },
   {
     "id": 402,
@@ -9049,7 +9067,16 @@
     "description": "Hawks +17",
     "wager": 150,
     "datePlaced": "2025-12-29",
-    "profit": 142.86
+    "profit": 142.86,
+    "slug": "hawks-spread-dec29-2025",
+    "opponent": "Oklahoma City Thunder",
+    "gameTime": "7:00 PM ET",
+    "thesis": "Hawks +17 against the league-best Thunder. Large spreads in NBA are historically profitable to fade. Atlanta has offensive firepower to keep games competitive even against elite teams.",
+    "analysis": "Hawks +17 against the league-best Thunder. Large spreads in NBA are historically profitable to fade. Atlanta has offensive firepower to keep games competitive even against elite teams.",
+    "edge": 5.1,
+    "expectedValue": 8.0,
+    "ev": 8.0,
+    "finalStat": "Lost 129-140 (-11) - Covered by 6"
   },
   {
     "id": 403,
@@ -9068,7 +9095,16 @@
     "description": "Tarleton St +2.5",
     "wager": 50,
     "datePlaced": "2025-12-29",
-    "profit": 47.17
+    "profit": 47.17,
+    "slug": "tarleton-spread-dec29-2025",
+    "opponent": "UT Arlington",
+    "gameTime": "8:00 PM ET",
+    "thesis": "Tarleton State +2.5 in WAC opener at UT Arlington. Texans have won 5 of their WAC openers since joining the conference. Road dog value in conference play.",
+    "analysis": "Tarleton State +2.5 in WAC opener at UT Arlington. Texans have won 5 of their WAC openers since joining the conference. Road dog value in conference play.",
+    "edge": 4.5,
+    "expectedValue": 4.8,
+    "ev": 4.8,
+    "finalStat": "Won 69-63 outright (+6)"
   },
   {
     "id": 404,
@@ -9087,7 +9123,16 @@
     "description": "IPFW +2.5",
     "wager": 100,
     "datePlaced": "2025-12-29",
-    "profit": -100
+    "profit": -100,
+    "slug": "pfw-spread-dec29-2025",
+    "opponent": "Milwaukee",
+    "gameTime": "8:00 PM ET",
+    "thesis": "Purdue Fort Wayne +2.5 at Milwaukee in Horizon League action. Mastodons coming off impressive win over Notre Dame, riding 4-game win streak with momentum.",
+    "analysis": "Purdue Fort Wayne +2.5 at Milwaukee in Horizon League action. Mastodons coming off impressive win over Notre Dame, riding 4-game win streak with momentum.",
+    "edge": 3.5,
+    "expectedValue": 3.6,
+    "ev": 3.6,
+    "finalStat": "Lost 55-77 (-22)"
   },
   {
     "id": 405,
@@ -9106,7 +9151,16 @@
     "description": "Valparaiso +10.5",
     "wager": 200,
     "datePlaced": "2025-12-29",
-    "profit": 190.48
+    "profit": 190.48,
+    "slug": "valpo-spread-dec29-2025",
+    "opponent": "Northern Iowa",
+    "gameTime": "7:00 PM ET",
+    "thesis": "Valparaiso +10.5 at Northern Iowa in MVC play. Double-digit spreads in conference games offer value. Beacons capable of keeping it competitive on the road.",
+    "analysis": "Valparaiso +10.5 at Northern Iowa in MVC play. Double-digit spreads in conference games offer value. Beacons capable of keeping it competitive on the road.",
+    "edge": 4.8,
+    "expectedValue": 10.2,
+    "ev": 10.2,
+    "finalStat": "Lost 48-58 (-10) - Covered by 0.5"
   },
   {
     "id": 406,
@@ -9129,7 +9183,16 @@
     "description": "Falcons +7",
     "wager": 200,
     "datePlaced": "2025-12-29",
-    "profit": 196.08
+    "profit": 196.08,
+    "slug": "falcons-spread-dec29-2025",
+    "opponent": "Los Angeles Rams",
+    "gameTime": "8:15 PM ET",
+    "thesis": "Falcons +7 at home vs Rams on MNF. Atlanta coming off back-to-back wins, playing with nothing to lose. Bijan Robinson dominant, and home dogs historically profitable in primetime.",
+    "analysis": "Falcons +7 at home vs Rams on MNF. Atlanta coming off back-to-back wins, playing with nothing to lose. Bijan Robinson dominant, and home dogs historically profitable in primetime.",
+    "edge": 6.2,
+    "expectedValue": 12.5,
+    "ev": 12.5,
+    "finalStat": "Won 27-24 outright - Bijan 195 rush yds"
   },
   {
     "id": 407,
@@ -9148,7 +9211,16 @@
     "description": "Nicholls St +5.5",
     "wager": 150,
     "datePlaced": "2025-12-29",
-    "profit": 136.36
+    "profit": 136.36,
+    "slug": "nicholls-spread-dec29-2025",
+    "opponent": "Texas A&M-Corpus Christi",
+    "gameTime": "7:30 PM ET",
+    "thesis": "Nicholls State +5.5 at TAMUCC in Southland Conference play. Colonels have momentum in conference and matchup well against Islanders' defensive scheme.",
+    "analysis": "Nicholls State +5.5 at TAMUCC in Southland Conference play. Colonels have momentum in conference and matchup well against Islanders' defensive scheme.",
+    "edge": 5.0,
+    "expectedValue": 8.3,
+    "ev": 8.3,
+    "finalStat": "Won 76-71 outright (+5)"
   },
   {
     "id": 408,
@@ -9167,6 +9239,15 @@
     "description": "Wild ML",
     "wager": 100,
     "datePlaced": "2025-12-29",
-    "profit": 96.15
+    "profit": 96.15,
+    "slug": "wild-ml-dec29-2025",
+    "opponent": "Vegas Golden Knights",
+    "gameTime": "10:00 PM ET",
+    "thesis": "Minnesota Wild ML at Vegas. Wild have been one of the hottest teams in hockey, riding a winning streak. Golden Knights struggling at 1-3-2 in last 6. Value on the road favorite.",
+    "analysis": "Minnesota Wild ML at Vegas. Wild have been one of the hottest teams in hockey, riding a winning streak. Golden Knights struggling at 1-3-2 in last 6. Value on the road favorite.",
+    "edge": 5.5,
+    "expectedValue": 5.8,
+    "ev": 5.8,
+    "finalStat": "Won 5-2 - Hart pulled after 5 goals"
   }
 ]

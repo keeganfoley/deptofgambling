@@ -72,24 +72,24 @@
     "lowEdge": {
       "min": 0,
       "max": 5,
-      "wins": 67,
-      "losses": 38,
+      "wins": 69,
+      "losses": 41,
       "pushes": 1,
-      "pnl": 2972.03,
-      "roi": 27.91,
-      "bets": 106,
-      "winRate": 63.81
+      "pnl": 2859.68,
+      "roi": 4.05,
+      "bets": 111,
+      "winRate": 62.73
     },
     "midEdge": {
       "min": 5,
       "max": 8,
-      "wins": 66,
+      "wins": 70,
       "losses": 48,
       "pushes": 0,
-      "pnl": 2240.75,
-      "roi": 15.61,
-      "bets": 114,
-      "winRate": 57.89
+      "pnl": 2812.2,
+      "roi": 3.78,
+      "bets": 118,
+      "winRate": 59.32
     },
     "highEdge": {
       "min": 8,
@@ -103,15 +103,15 @@
       "winRate": 52.66
     },
     "isCorrelated": true,
-    "totalBetsWithEdge": 390
+    "totalBetsWithEdge": 399
   },
   "evAnalysis": {
-    "totalExpectedValue": 4506.9,
-    "actualPL": 5576.29,
-    "variance": 1069.39,
+    "totalExpectedValue": 4573.8,
+    "actualPL": 6035.39,
+    "variance": 1461.59,
     "runningHot": true,
     "runningCold": false,
-    "betsTracked": 390
+    "betsTracked": 399
   },
   "sportBreakdown": {
     "NBA": {
@@ -3467,5 +3467,5 @@
       "result": "win"
     }
   ],
-  "lastUpdated": "2025-12-30T15:01:09.583Z"
+  "lastUpdated": "2025-12-30T15:20:11.806Z"
 }
