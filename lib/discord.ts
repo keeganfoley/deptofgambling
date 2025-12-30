@@ -29,7 +29,7 @@
  * This is non-negotiable. See BETTING_WORKFLOW.md and DISCORD_FORMATS.md.
  */
 
-import { readFileSync } from 'fs';
+import { readFileSync, writeFileSync } from 'fs';
 import path from 'path';
 
 // Types
@@ -784,7 +784,7 @@ export function formatDailyPerformanceMessage(date: string, allBets?: Bet[]): st
   const recordStr = pushes > 0 ? `${wins}-${losses}-${pushes}` : `${wins}-${losses}`;
   const dayDollars = Math.round(dayPL);
 
-  message += `\nToday: ${recordStr} | ${dayUnits >= 0 ? '+' : ''}${dayUnits.toFixed(2)}u | ${dayDollars >= 0 ? '+' : ''}$${Math.abs(dayDollars)}\n\n`;
+  message += `\nToday: ${recordStr} | ${dayUnits >= 0 ? '+' : ''}${dayUnits.toFixed(2)}u | ${dayDollars >= 0 ? '+' : '-'}$${Math.abs(dayDollars)}\n\n`;
 
   message += `PORTFOLIO\n`;
   message += `━━━━━━━━━━━━━━━━━━━━\n`;
@@ -946,13 +946,15 @@ const NUMBER_EMOJIS = ['1️⃣', '2️⃣', '3️⃣', '4️⃣', '5️⃣', '6
  * - header: The @picks header message
  * - allPicks: Array of SEPARATE pick messages (one per pick)
  * - consensus: Array of consensus messages for #consensus-plays
+ * - featured: Array of featured pick messages for #featured-picks
  *
  * EACH PICK IS A SEPARATE MESSAGE - DO NOT COMBINE!
  */
-export function generatePlacedMessages(newBets: Bet[]): { header: string; allPicks: string[]; consensus: string[] } {
+export function generatePlacedMessages(newBets: Bet[]): { header: string; allPicks: string[]; consensus: string[]; featured: string[] } {
   const allBets = loadBets();
   const allPicks: string[] = [];
   const consensus: string[] = [];
+  const featured: string[] = [];
 
   // Detect consensus plays
   const consensusPicks = detectConsensusPicks(newBets);
@@ -973,7 +975,36 @@ export function generatePlacedMessages(newBets: Bet[]): { header: string; allPic
     consensusMsgs.forEach(msg => consensus.push(msg));
   }
 
-  return { header, allPicks, consensus };
+  // Get featured picks for today
+  if (newBets.length > 0) {
+    const targetDate = newBets[0].date.split('T')[0];
+    const { picks: featuredPicks, featuredResult } = getFeaturedPicksForDate(targetDate, allBets);
+
+    if (featuredPicks.length > 0 && featuredResult.featuredSource) {
+      // Generate featured pick header
+      const comboReadable = formatComboName(featuredResult.featuredSource);
+      const featuredRecord = getFeaturedPickRecord();
+      const totalTracked = featuredRecord.record.wins + featuredRecord.record.losses;
+
+      let headerMsg = `⭐⭐⭐ FEATURED PICK${featuredPicks.length > 1 ? 'S' : ''} ⭐⭐⭐\n`;
+      headerMsg += `━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n`;
+      headerMsg += `🔥 Our hottest system: ${comboReadable}\n`;
+      headerMsg += `📈 Rolling 30-Day: ${featuredResult.sourceRecord} (${featuredResult.sourceWinPct.toFixed(1)}%)\n`;
+      if (totalTracked > 0) {
+        headerMsg += `🏆 Featured Pick Record: ${featuredRecord.record.wins}-${featuredRecord.record.losses} (${featuredRecord.winRate.toFixed(1)}%)\n`;
+      }
+      headerMsg += `\n${featuredPicks.length} pick${featuredPicks.length > 1 ? 's' : ''} from this system today!\n`;
+      featured.push(headerMsg);
+
+      // Add each featured pick
+      featuredPicks.forEach((bet, i) => {
+        const msg = formatFeaturedPickMessage(bet, featuredResult, i + 1, featuredPicks.length, allBets);
+        featured.push(msg);
+      });
+    }
+  }
+
+  return { header, allPicks, consensus, featured };
 }
 
 /**
@@ -1099,7 +1130,7 @@ export function outputVerificationChecklist(bets: Bet[]): boolean {
 /**
  * Output Discord messages to terminal
  */
-export function outputDiscordMessages(messages: { header?: string; allPicks: string[]; consensus: string[] }, date: string): void {
+export function outputDiscordMessages(messages: { header?: string; allPicks: string[]; consensus: string[]; featured?: string[] }, date: string): void {
   const year = new Date(date).getFullYear();
 
   console.log('\n═══════════════════════════════════════');
@@ -1125,7 +1156,7 @@ export function outputDiscordMessages(messages: { header?: string; allPicks: str
 
   if (messages.consensus.length > 0) {
     console.log('\n═══════════════════════════════════════');
-    console.log('🎯 #consensus-plays (' + messages.consensus.length + ' play' + (messages.consensus.length > 1 ? 's' : '') + ')');
+    console.log('🎯 #consensus-plays (' + messages.consensus.length + ' message' + (messages.consensus.length > 1 ? 's' : '') + ')');
     console.log('━━━━━━━━━━━━━━━━━━━━\n');
 
     messages.consensus.forEach((msg, i) => {
@@ -1133,6 +1164,23 @@ export function outputDiscordMessages(messages: { header?: string; allPicks: str
       if (i < messages.consensus.length - 1) {
         console.log('\n━━━━━━━━━━━━━━━━━━━━\n');
       }
+    });
+  }
+
+  // Output featured picks if any
+  if (messages.featured && messages.featured.length > 0) {
+    console.log('\n═══════════════════════════════════════');
+    console.log('⭐ #featured-picks (' + (messages.featured.length - 1) + ' pick' + (messages.featured.length - 1 > 1 ? 's' : '') + ')');
+    console.log('━━━━━━━━━━━━━━━━━━━━\n');
+
+    messages.featured.forEach((msg, i) => {
+      if (i === 0) {
+        console.log('--- HEADER MESSAGE ---');
+      } else {
+        console.log(`--- FEATURED PICK ${i} ---`);
+      }
+      console.log(msg);
+      console.log('');
     });
   }
 
@@ -1718,5 +1766,570 @@ export function generatePicksTable(date: string, allBets?: Bet[]): string {
   return table;
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// FEATURED PICK SYSTEM
+// ═══════════════════════════════════════════════════════════════════════════
+//
+// The Featured Pick System identifies our "hottest" Fund+Sport+BetType combo
+// and features whatever picks come from it that day.
+//
+// QUALIFICATION RULES:
+// - Look back exactly 30 days from today
+// - Combo must have 8+ picks in that window
+// - Combo must have 60%+ win rate
+// - Rank qualifiers by win% (highest = #1)
+// - #1 combo's picks today = Featured Picks
+//
+// See FEATURED_PICK_SYSTEM.md for full documentation.
+// ═══════════════════════════════════════════════════════════════════════════
+
+interface FeaturedPickResult {
+  featuredSource: string | null;
+  sourceRecord: string;
+  sourceWins: number;
+  sourceLosses: number;
+  sourceWinPct: number;
+  allQualifiers: Array<{
+    combo: string;
+    wins: number;
+    losses: number;
+    winPct: number;
+    total: number;
+  }>;
+  status: 'featured' | 'no_slate' | 'no_qualifier';
+}
+
+interface FeaturedPick {
+  id: number;
+  team: string;
+  description: string;
+  odds: number;
+  stake: number;
+  result: string;
+  fund: string;
+  sport: string;
+  betType: string;
+  profit?: number;
+}
+
+interface FeaturedPickHistory {
+  date: string;
+  featuredSource: string;
+  sourceRecord: string;
+  sourceWinPct: number;
+  picks: FeaturedPick[];
+  dayResult: string;
+  dayWins: number;
+  dayLosses: number;
+}
+
+interface FeaturedPicksData {
+  record: { wins: number; losses: number };
+  winRate: number;
+  lastUpdated: string;
+  currentStreak: number;
+  longestWinStreak: number;
+  longestLossStreak: number;
+  totalProfit: number;
+  history: FeaturedPickHistory[];
+}
+
+/**
+ * Load featured picks data from featured_picks.json
+ */
+export function loadFeaturedPicks(): FeaturedPicksData {
+  try {
+    const featuredPath = path.join(process.cwd(), 'data', 'featured_picks.json');
+    return JSON.parse(readFileSync(featuredPath, 'utf-8'));
+  } catch {
+    return {
+      record: { wins: 0, losses: 0 },
+      winRate: 0,
+      lastUpdated: new Date().toISOString().split('T')[0],
+      currentStreak: 0,
+      longestWinStreak: 0,
+      longestLossStreak: 0,
+      totalProfit: 0,
+      history: []
+    };
+  }
+}
+
+/**
+ * Save featured picks data to featured_picks.json
+ */
+export function saveFeaturedPicks(data: FeaturedPicksData): void {
+  const featuredPath = path.join(process.cwd(), 'data', 'featured_picks.json');
+  writeFileSync(featuredPath, JSON.stringify(data, null, 2));
+}
+
+/**
+ * Update featured_picks.json when results are settled
+ * Call this after settling bets for a date
+ *
+ * @param settledDate - The date that was just settled (YYYY-MM-DD)
+ * @param allBets - All bets including the newly settled ones
+ */
+export function updateFeaturedPicksResults(settledDate: string, allBets?: Bet[]): {
+  updated: boolean;
+  message: string;
+  dayRecord?: string;
+  profit?: number;
+} {
+  const bets = allBets || loadBets();
+  const data = loadFeaturedPicks();
+  const normalizedDate = settledDate.split('T')[0];
+
+  // Check if we already have this date in history
+  const existingEntry = data.history.find(h => h.date === normalizedDate);
+  if (existingEntry && existingEntry.dayResult !== 'pending') {
+    return { updated: false, message: `Featured picks for ${normalizedDate} already updated` };
+  }
+
+  // Calculate what the featured source was for this date (using data from before that date)
+  const { picks: featuredPicks, featuredResult } = getFeaturedPicksForDate(normalizedDate, bets);
+
+  if (featuredPicks.length === 0 || !featuredResult.featuredSource) {
+    return { updated: false, message: `No featured picks for ${normalizedDate}` };
+  }
+
+  // Get results for the featured picks
+  const settledFeaturedPicks = featuredPicks.filter(b => b.result === 'win' || b.result === 'loss');
+
+  if (settledFeaturedPicks.length === 0) {
+    return { updated: false, message: `Featured picks for ${normalizedDate} not yet settled` };
+  }
+
+  const dayWins = settledFeaturedPicks.filter(b => b.result === 'win').length;
+  const dayLosses = settledFeaturedPicks.filter(b => b.result === 'loss').length;
+  const dayProfit = settledFeaturedPicks.reduce((sum, b) => sum + (b.profit || 0), 0);
+
+  // Determine day result
+  let dayResult: string;
+  if (dayWins > dayLosses) {
+    dayResult = 'win';
+  } else if (dayLosses > dayWins) {
+    dayResult = 'loss';
+  } else {
+    dayResult = dayProfit >= 0 ? 'win' : 'loss'; // Tiebreaker by profit
+  }
+
+  // Update or add history entry
+  const historyEntry: FeaturedPickHistory = {
+    date: normalizedDate,
+    featuredSource: featuredResult.featuredSource,
+    sourceRecord: featuredResult.sourceRecord,
+    sourceWinPct: featuredResult.sourceWinPct,
+    picks: settledFeaturedPicks.map(b => ({
+      id: b.id,
+      team: b.team || '',
+      description: b.description,
+      odds: b.odds,
+      stake: b.stake,
+      profit: b.profit || 0,
+      result: b.result,
+      fund: b.fund,
+      sport: b.sport,
+      betType: b.betType
+    })),
+    dayResult,
+    dayWins,
+    dayLosses
+  };
+
+  // Remove existing entry if any
+  data.history = data.history.filter(h => h.date !== normalizedDate);
+  data.history.push(historyEntry);
+  data.history.sort((a, b) => a.date.localeCompare(b.date));
+
+  // Update cumulative record
+  data.record.wins = data.history.filter(h => h.dayResult === 'win').length;
+  data.record.losses = data.history.filter(h => h.dayResult === 'loss').length;
+  const total = data.record.wins + data.record.losses;
+  data.winRate = total > 0 ? (data.record.wins / total) * 100 : 0;
+  data.totalProfit = data.history.reduce((sum, h) =>
+    sum + h.picks.reduce((pSum, p) => pSum + (p.profit || 0), 0), 0);
+  data.lastUpdated = new Date().toISOString().split('T')[0];
+
+  // Calculate streaks
+  let currentStreak = 0;
+  let longestWinStreak = 0;
+  let longestLossStreak = 0;
+  let currentWinStreak = 0;
+  let currentLossStreak = 0;
+
+  data.history.forEach(h => {
+    if (h.dayResult === 'win') {
+      currentWinStreak++;
+      currentLossStreak = 0;
+      if (currentWinStreak > longestWinStreak) longestWinStreak = currentWinStreak;
+    } else {
+      currentLossStreak++;
+      currentWinStreak = 0;
+      if (currentLossStreak > longestLossStreak) longestLossStreak = currentLossStreak;
+    }
+  });
+
+  // Current streak (positive = wins, negative = losses)
+  const lastEntry = data.history[data.history.length - 1];
+  if (lastEntry) {
+    currentStreak = lastEntry.dayResult === 'win' ? currentWinStreak : -currentLossStreak;
+  }
+
+  data.currentStreak = currentStreak;
+  data.longestWinStreak = longestWinStreak;
+  data.longestLossStreak = longestLossStreak;
+
+  // Save updated data
+  saveFeaturedPicks(data);
+
+  return {
+    updated: true,
+    message: `Featured picks for ${normalizedDate} updated: ${dayWins}-${dayLosses}`,
+    dayRecord: `${dayWins}-${dayLosses}`,
+    profit: dayProfit
+  };
+}
+
+/**
+ * Get combo key from a bet (Fund_Sport_BetType)
+ */
+function getComboKey(bet: Bet): string {
+  const fund = bet.fund.replace('Fund', '');
+  return `${fund}_${bet.sport}_${bet.betType}`;
+}
+
+/**
+ * Calculate the featured pick source for a given date
+ * Uses only data from BEFORE the given date (no look-ahead bias)
+ *
+ * @param targetDate - The date to calculate featured pick for (YYYY-MM-DD)
+ * @param allBets - Optional array of all bets (loads from file if not provided)
+ * @returns FeaturedPickResult with source combo and all qualifiers
+ */
+export function calculateFeaturedPick(targetDate: string, allBets?: Bet[]): FeaturedPickResult {
+  const bets = allBets || loadBets();
+  const normalizedDate = targetDate.split('T')[0];
+
+  // Get settled bets BEFORE the target date
+  const settledBets = bets.filter(b =>
+    (b.result === 'win' || b.result === 'loss') &&
+    b.date.split('T')[0] < normalizedDate
+  );
+
+  // Calculate 30-day rolling window
+  const targetDateObj = new Date(normalizedDate + 'T12:00:00');
+  const cutoffDate = new Date(targetDateObj);
+  cutoffDate.setDate(cutoffDate.getDate() - 30);
+  const cutoffStr = cutoffDate.toISOString().split('T')[0];
+
+  // Filter to 30-day window
+  const rollingBets = settledBets.filter(b => b.date.split('T')[0] >= cutoffStr);
+
+  // Calculate stats per combo
+  const comboStats: Record<string, { wins: number; losses: number }> = {};
+  rollingBets.forEach(bet => {
+    const combo = getComboKey(bet);
+    if (!comboStats[combo]) comboStats[combo] = { wins: 0, losses: 0 };
+    if (bet.result === 'win') comboStats[combo].wins++;
+    else comboStats[combo].losses++;
+  });
+
+  // Find qualifying combos (8+ picks, 60%+ win rate)
+  const qualifiers: Array<{
+    combo: string;
+    wins: number;
+    losses: number;
+    winPct: number;
+    total: number;
+  }> = [];
+
+  Object.entries(comboStats).forEach(([combo, stats]) => {
+    const total = stats.wins + stats.losses;
+    if (total >= 8) {
+      const winPct = (stats.wins / total) * 100;
+      if (winPct >= 60) {
+        qualifiers.push({
+          combo,
+          wins: stats.wins,
+          losses: stats.losses,
+          winPct,
+          total
+        });
+      }
+    }
+  });
+
+  // Sort by win% (highest first), then by total picks (more is better for ties)
+  qualifiers.sort((a, b) => {
+    if (b.winPct !== a.winPct) return b.winPct - a.winPct;
+    return b.total - a.total;
+  });
+
+  if (qualifiers.length === 0) {
+    return {
+      featuredSource: null,
+      sourceRecord: '',
+      sourceWins: 0,
+      sourceLosses: 0,
+      sourceWinPct: 0,
+      allQualifiers: [],
+      status: 'no_qualifier'
+    };
+  }
+
+  const winner = qualifiers[0];
+  return {
+    featuredSource: winner.combo,
+    sourceRecord: `${winner.wins}-${winner.losses}`,
+    sourceWins: winner.wins,
+    sourceLosses: winner.losses,
+    sourceWinPct: winner.winPct,
+    allQualifiers: qualifiers,
+    status: 'featured' // Will be updated by getFeaturedPicksForDate if no picks today
+  };
+}
+
+/**
+ * Get featured picks for a specific date
+ * Returns the picks from the #1 qualifying combo that are scheduled for that date
+ *
+ * @param targetDate - The date to get featured picks for (YYYY-MM-DD)
+ * @param allBets - Optional array of all bets
+ * @returns Object with featured picks array and source info
+ */
+export function getFeaturedPicksForDate(targetDate: string, allBets?: Bet[]): {
+  picks: Bet[];
+  featuredResult: FeaturedPickResult;
+} {
+  const bets = allBets || loadBets();
+  const normalizedDate = targetDate.split('T')[0];
+
+  // Calculate the featured source
+  const featuredResult = calculateFeaturedPick(normalizedDate, bets);
+
+  if (!featuredResult.featuredSource) {
+    return {
+      picks: [],
+      featuredResult: { ...featuredResult, status: 'no_qualifier' }
+    };
+  }
+
+  // Get today's bets from the featured combo
+  const todayBets = bets.filter(b => b.date.split('T')[0] === normalizedDate);
+  const featuredPicks = todayBets.filter(b => getComboKey(b) === featuredResult.featuredSource);
+
+  if (featuredPicks.length === 0) {
+    return {
+      picks: [],
+      featuredResult: { ...featuredResult, status: 'no_slate' }
+    };
+  }
+
+  return {
+    picks: featuredPicks,
+    featuredResult: { ...featuredResult, status: 'featured' }
+  };
+}
+
+/**
+ * Format a readable combo name
+ * "Sharp_NFL_spread" → "Sharp NFL spreads"
+ */
+function formatComboName(combo: string): string {
+  const [fund, sport, betType] = combo.split('_');
+  return `${fund} ${sport} ${betType}s`;
+}
+
+/**
+ * Format featured pick message for Discord
+ *
+ * FORMAT:
+ * ⭐ FEATURED PICK ⭐
+ * Our hottest system right now: [Source Combo readable]
+ * Rolling 30-Day Record: [X-X] ([XX%])
+ *
+ * [Standard pick format]
+ */
+export function formatFeaturedPickMessage(
+  bet: Bet,
+  featuredResult: FeaturedPickResult,
+  pickNumber: number,
+  totalFeatured: number,
+  allBets?: Bet[]
+): string {
+  const bets = allBets || loadBets();
+  const sportEmoji = SPORT_EMOJIS[bet.sport] || '🎯';
+  const fundEmoji = FUND_EMOJIS[bet.fund] || '•';
+  const fundName = bet.fund.replace('Fund', '');
+  const trackRecords = getTrackRecords(bet.fund, bet.sport, bet.betType, bet.date, bets);
+
+  // Build matchup line with shortened team names
+  const team = shortenTeamName(bet.team || bet.description?.split(' ')[0] || '');
+  const opponent = shortenTeamName(bet.opponent || '');
+  const matchupLine = opponent ? `${team} vs ${opponent}` : team;
+
+  // The pick line - ALL CAPS with 🎯 on both sides
+  const pickLine = `${bet.description.toUpperCase()} @ ${formatOdds(bet.odds)}`;
+
+  // Format the combo name nicely
+  const comboReadable = formatComboName(featuredResult.featuredSource || '');
+
+  let msg = `━━━━━━━━━━━━━━━━━━━━\n`;
+  msg += `⭐ FEATURED PICK${totalFeatured > 1 ? ` ${pickNumber}/${totalFeatured}` : ''} ⭐\n`;
+  msg += `━━━━━━━━━━━━━━━━━━━━\n\n`;
+
+  msg += `🔥 Our hottest system: ${comboReadable}\n`;
+  msg += `📈 Rolling 30-Day: ${featuredResult.sourceRecord} (${featuredResult.sourceWinPct.toFixed(1)}%)\n\n`;
+
+  msg += `${sportEmoji} ${matchupLine}\n\n`;
+  msg += `🎯 ${pickLine} 🎯\n\n`;
+  msg += `${fundEmoji} ${fundName} | ${bet.sport} | ${bet.stake}u\n`;
+
+  if (bet.gameTime) {
+    msg += `⏰ ${bet.gameTime}\n`;
+  }
+  msg += `\n`;
+
+  msg += `📊 Track Record:\n`;
+
+  const fundSportDisplay = trackRecords.fundSport.total > 0
+    ? `${trackRecords.fundSport.wins}-${trackRecords.fundSport.losses} (${trackRecords.fundSport.winRate}%)`
+    : '0-0 (N/A)';
+  msg += `• ${fundName} ${bet.sport}: ${fundSportDisplay}\n`;
+
+  const sportTypeDisplay = trackRecords.sportType.total > 0
+    ? `${trackRecords.sportType.wins}-${trackRecords.sportType.losses} (${trackRecords.sportType.winRate}%)`
+    : '0-0 (N/A)';
+  msg += `• ${bet.sport} ${bet.betType}s: ${sportTypeDisplay}\n`;
+
+  const fundOverallDisplay = trackRecords.fundOverall.total > 0
+    ? `${trackRecords.fundOverall.wins}-${trackRecords.fundOverall.losses} (${trackRecords.fundOverall.winRate}%)`
+    : '0-0 (N/A)';
+  msg += `• ${fundName} Overall: ${fundOverallDisplay}\n`;
+
+  if (bet.thesis) {
+    const cleanedThesis = cleanThesis(bet.thesis);
+    msg += `\n💡 ${cleanedThesis}`;
+  }
+
+  return msg;
+}
+
+/**
+ * Generate video script for featured picks
+ */
+export function generateFeaturedPickVideoScript(
+  picks: Bet[],
+  featuredResult: FeaturedPickResult
+): string {
+  if (picks.length === 0 || !featuredResult.featuredSource) {
+    return '';
+  }
+
+  const comboReadable = formatComboName(featuredResult.featuredSource);
+  const pickDescriptions = picks.map(p => {
+    const team = shortenTeamName(p.team || '');
+    const line = p.description.replace(p.team || '', '').trim().split('@')[0].trim();
+    return `${team} ${line}`;
+  }).join(' and ');
+
+  return `📝 VIDEO SCRIPT:
+
+"Our ${comboReadable} system is ${featuredResult.sourceRecord} over the last 30 days.
+Today it likes ${pickDescriptions}.
+Full card's free in Discord, link in bio."`;
+}
+
+/**
+ * Get featured pick cumulative record
+ */
+export function getFeaturedPickRecord(): {
+  record: { wins: number; losses: number };
+  winRate: number;
+  profit: number;
+  recentHistory: FeaturedPickHistory[];
+} {
+  const data = loadFeaturedPicks();
+  const total = data.record.wins + data.record.losses;
+  const winRate = total > 0 ? (data.record.wins / total) * 100 : 0;
+
+  return {
+    record: data.record,
+    winRate,
+    profit: data.totalProfit,
+    recentHistory: data.history.slice(-10) // Last 10 entries
+  };
+}
+
+/**
+ * Format featured pick analysis output
+ * Used when user says "featured pick" or "what's the featured pick today"
+ */
+export function formatFeaturedPickAnalysis(targetDate: string, allBets?: Bet[]): string {
+  const bets = allBets || loadBets();
+  const { picks, featuredResult } = getFeaturedPicksForDate(targetDate, bets);
+  const featuredRecord = getFeaturedPickRecord();
+
+  let output = `\n═══════════════════════════════════════════════════════════════\n`;
+  output += `FEATURED PICK ANALYSIS - ${formatDate(targetDate)}\n`;
+  output += `═══════════════════════════════════════════════════════════════\n\n`;
+
+  // Status indicator
+  if (featuredResult.status === 'no_qualifier') {
+    output += `🔴 NO FEATURED PICK TODAY\n`;
+    output += `   Reason: No combo has 8+ picks at 60%+ in last 30 days\n\n`;
+  } else if (featuredResult.status === 'no_slate') {
+    output += `🟡 NO FEATURED PICK TODAY\n`;
+    output += `   Reason: ${formatComboName(featuredResult.featuredSource || '')} qualified but has no picks today\n\n`;
+  } else {
+    output += `🟢 FEATURED PICK(S) AVAILABLE\n\n`;
+  }
+
+  // Show qualifying combos
+  output += `QUALIFYING COMBOS (8+ picks, 60%+ in 30 days):\n`;
+  output += `─────────────────────────────────────────────\n`;
+
+  if (featuredResult.allQualifiers.length === 0) {
+    output += `   None qualified today\n`;
+  } else {
+    featuredResult.allQualifiers.forEach((q, i) => {
+      const marker = i === 0 ? '← #1 FEATURED SOURCE' : '';
+      output += `   #${i + 1} ${formatComboName(q.combo)}: ${q.wins}-${q.losses} (${q.winPct.toFixed(1)}%) ${marker}\n`;
+    });
+  }
+  output += `\n`;
+
+  // Show featured picks if any
+  if (picks.length > 0) {
+    output += `TODAY'S FEATURED PICKS:\n`;
+    output += `─────────────────────────────────────────────\n`;
+    picks.forEach((pick, i) => {
+      const team = shortenTeamName(pick.team || '');
+      output += `   ⭐ ${team} ${pick.description} @ ${formatOdds(pick.odds)} (${pick.stake}u)\n`;
+    });
+    output += `\n`;
+
+    // Video script
+    output += generateFeaturedPickVideoScript(picks, featuredResult);
+    output += `\n\n`;
+  }
+
+  // Cumulative record
+  output += `FEATURED PICK CUMULATIVE RECORD:\n`;
+  output += `─────────────────────────────────────────────\n`;
+  const totalPicks = featuredRecord.record.wins + featuredRecord.record.losses;
+  if (totalPicks > 0) {
+    output += `   Record: ${featuredRecord.record.wins}-${featuredRecord.record.losses} (${featuredRecord.winRate.toFixed(1)}%)\n`;
+    output += `   Profit: $${featuredRecord.profit.toFixed(0)}\n`;
+  } else {
+    output += `   No featured picks tracked yet (system just started)\n`;
+  }
+
+  output += `\n═══════════════════════════════════════════════════════════════\n`;
+
+  return output;
+}
+
 // Export for direct testing
-export { loadBets, formatDate, getMostRecentCompleteWeek };
+export { loadBets, formatDate, getMostRecentCompleteWeek, getComboKey, formatComboName };
