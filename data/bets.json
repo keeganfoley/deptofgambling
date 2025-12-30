@@ -9005,13 +9005,13 @@
     "odds": 155,
     "units": 0.5,
     "stake": 50,
-    "result": "win",
-    "payout": 127.5,
+    "result": "loss",
+    "payout": 0,
     "fund": "SharpFund",
     "description": "Rangers ML +155",
     "wager": 50,
     "datePlaced": "2025-12-29",
-    "profit": 77.5
+    "profit": -50
   },
   {
     "id": 401,
@@ -9024,13 +9024,13 @@
     "odds": -118,
     "units": 2.0,
     "stake": 200,
-    "result": "win",
-    "payout": 369.49,
+    "result": "loss",
+    "payout": 0,
     "fund": "SharpFund",
     "description": "Oakland +3.5",
     "wager": 200,
     "datePlaced": "2025-12-29",
-    "profit": 169.49
+    "profit": -200
   },
   {
     "id": 402,
@@ -9062,13 +9062,13 @@
     "odds": -106,
     "units": 0.5,
     "stake": 50,
-    "result": "loss",
-    "payout": 0,
+    "result": "win",
+    "payout": 97.17,
     "fund": "SharpFund",
     "description": "Tarleton St +2.5",
     "wager": 50,
     "datePlaced": "2025-12-29",
-    "profit": -50
+    "profit": 47.17
   },
   {
     "id": 404,
@@ -9119,8 +9119,8 @@
     "odds": -102,
     "units": 2.0,
     "stake": 200,
-    "result": "loss",
-    "payout": 0,
+    "result": "win",
+    "payout": 396.08,
     "fund": "SharpFund",
     "featured": true,
     "featuredSource": "SharpFund_NFL_spread",
@@ -9129,7 +9129,7 @@
     "description": "Falcons +7",
     "wager": 200,
     "datePlaced": "2025-12-29",
-    "profit": -200
+    "profit": 196.08
   },
   {
     "id": 407,

@@ -1,18 +1,18 @@
 {
   "asOfDate": "2025-12-30",
   "combined": {
-    "balance": 46039.13,
+    "balance": 46035.39,
     "startingBalance": 40000,
-    "netPL": 6039.13,
-    "roi": 15.1,
+    "netPL": 6035.39,
+    "roi": 15.09,
     "record": {
       "wins": 228,
       "losses": 169,
       "pushes": 2
     },
     "winRate": 57.43,
-    "unitsWon": 60.39,
-    "sharpe": 5.26
+    "unitsWon": 60.35,
+    "sharpe": 5.25
   },
   "funds": {
     "VectorFund": {
@@ -35,17 +35,17 @@
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 13926.54,
+      "balance": 13922.8,
       "startingBalance": 10000,
-      "netPL": 3926.54,
-      "roi": 39.27,
+      "netPL": 3922.8,
+      "roi": 39.23,
       "record": {
         "wins": 90,
         "losses": 55,
         "pushes": 0
       },
       "winRate": 62.07,
-      "unitsWon": 39.27,
+      "unitsWon": 39.23,
       "color": "#22c55e",
       "status": "active"
     },
