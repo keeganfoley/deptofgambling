@@ -4,7 +4,7 @@
     "balance": 45964.66,
     "startingBalance": 40000,
     "netPL": 5964.66,
-    "roi": 11.42,
+    "roi": 14.91,
     "record": {
       "wins": 231,
       "losses": 173,
@@ -21,7 +21,7 @@
       "balance": 10189.32,
       "startingBalance": 10000,
       "netPL": 189.32,
-      "roi": 0.72,
+      "roi": 1.89,
       "record": {
         "wins": 99,
         "losses": 89,
@@ -38,7 +38,7 @@
       "balance": 13763.71,
       "startingBalance": 10000,
       "netPL": 3763.71,
-      "roi": 20.57,
+      "roi": 37.64,
       "record": {
         "wins": 91,
         "losses": 58,
@@ -55,7 +55,7 @@
       "balance": 10759.63,
       "startingBalance": 10000,
       "netPL": 759.63,
-      "roi": 20.81,
+      "roi": 7.6,
       "record": {
         "wins": 18,
         "losses": 12,
@@ -72,7 +72,7 @@
       "balance": 11252.0,
       "startingBalance": 10000,
       "netPL": 1252.0,
-      "roi": 31.3,
+      "roi": 12.52,
       "record": {
         "wins": 23,
         "losses": 14,
