@@ -49,11 +49,18 @@ This document defines the FINAL picks.png visual template. Do NOT modify unless 
 - Team name: 36px
 - Bet line: 32px
 
-### 9-12 picks
-- Smaller cards, tighter spacing
-- Card padding: 14px 20px
-- Team name: 30px
-- Bet line: 26px
+### 9-12 picks (LOCKED - USER APPROVED DEC 28, 2024)
+- **Team logos: 70px** (key - makes logos very readable)
+- **Team names: 32px** (bold, prominent)
+- **Bet lines: 26px**
+- **Units badge: 28px**
+- **Opponent text: 14px**
+- Card padding: 8px 18px
+- Card gap: 3px
+- Logo-text gap: 16px
+- Container padding: 25px 40px 20px
+- Header date: 52px
+- Sport section flex = number of picks (e.g., 6 NFL picks = flex: 6)
 
 ### 13+ picks
 - Smallest cards, minimal spacing

@@ -5,8 +5,8 @@
 // Bet result types
 export type BetResult = 'win' | 'loss' | 'push' | 'pending';
 
-// Bet type categories
-export type BetType = 'spreads' | 'totals' | 'moneyline' | 'props';
+// Bet type categories (singular form - matches actual data)
+export type BetType = 'spread' | 'total' | 'moneyline' | 'props';
 
 // Fund identifiers
 export type FundKey = 'VectorFund' | 'SharpFund' | 'ContraFund' | 'CatalystFund';

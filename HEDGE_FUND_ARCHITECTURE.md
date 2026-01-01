@@ -408,6 +408,97 @@ Step 5: Cap Check
 - Size down (0.5-1u max per pick)
 - Or pass entirely and wait for tomorrow
 
+## 0.11 DYNAMIC UNIT SIZING (Performance-Based Adjustments)
+
+> **Updated Dec 29, 2024 based on 390-bet analysis**
+
+The matrices above provide BASE unit sizing. Apply these MULTIPLIERS based on historical fund/sport/betType performance:
+
+### TIER 1: MAX SIZING (2.0x multiplier, cap at 2u)
+**These combinations have proven 45%+ ROI:**
+| Combination | Historical | Win Rate | Apply When |
+|-------------|------------|----------|------------|
+| **SharpFund + NFL** | +45.8% ROI | 75.0% | Any SharpFund NFL bet |
+| **SharpFund + NCAAB** | +45.2% ROI | 76.9% | Any SharpFund NCAAB bet |
+
+```
+Example: SharpFund NFL spread, base 1u → 2u MAX
+Example: SharpFund NCAAB moneyline, base 1u → 2u MAX
+```
+
+### TIER 2: ELEVATED SIZING (1.5x multiplier, cap at 1.5u)
+**These combinations have proven 27-49% ROI:**
+| Combination | Historical | Win Rate | Apply When |
+|-------------|------------|----------|------------|
+| **SharpFund + spread** (any sport) | +32.7% ROI | 70.5% | SharpFund spread bets |
+| **CatalystFund + spread** | +49.2% ROI | 68.4% | CatalystFund spread bets |
+
+```
+Example: SharpFund NBA spread, base 1u → 1.5u
+Example: CatalystFund NHL spread, base 1u → 1.5u
+```
+
+### TIER 3: STANDARD SIZING (1.0x - no adjustment)
+Everything not in Tier 1, 2, or 4 stays at matrix base sizing.
+
+### TIER 4: REDUCED SIZING (0.5x multiplier, cap at 0.5u)
+**These combinations have NEGATIVE historical ROI - reduce exposure:**
+| Combination | Historical | Win Rate | Apply When |
+|-------------|------------|----------|------------|
+| **VectorFund + totals** | -39.8% ROI | 30.0% | ⚠️ REDUCE or SKIP |
+| **VectorFund + props** | -17.9% ROI | 45.8% | ⚠️ REDUCE or SKIP |
+| **VectorFund + NCAAF** | -13.8% ROI | 35.7% | ⚠️ REDUCE or SKIP |
+| **Any fund + totals** | -20.7% ROI | 42.1% | ⚠️ REDUCE sizing |
+
+```
+Example: VectorFund NBA total, base 1u → 0.5u MAX
+Example: VectorFund props, base 1u → 0.5u MAX or SKIP
+```
+
+### ⚠️ EDGE CALIBRATION WARNING
+
+**Historical analysis shows stated edge is NOT well-calibrated:**
+
+| Stated Edge | Actual Win Rate | Calibration |
+|-------------|-----------------|-------------|
+| 5-10% | 60.7% | ✅ Over-performs |
+| 10-15% | 43.1% | ❌ Under-performs |
+| 15-20% | 62.2% | ✅ OK |
+| 20-25% | 54.5% | ❌ Under-performs |
+| 25-30% | 37.5% | ❌ TERRIBLE |
+| 30%+ | 0.0% | ❌ DISASTER |
+
+**RULE: If stated edge > 20%, treat with skepticism.**
+- Do NOT size up based on high stated edge
+- High edge spots historically lose money
+- Trust fund/sport/betType tiers over stated edge
+
+### DYNAMIC SIZING QUICK REFERENCE
+
+```
+BEFORE placing any bet, check:
+
+1. Is this SharpFund + NFL/NCAAB? → 2u MAX (Tier 1)
+2. Is this SharpFund/CatalystFund + spread? → 1.5u (Tier 2)
+3. Is this VectorFund + totals/props/NCAAF? → 0.5u MAX (Tier 4)
+4. Is stated edge > 20%? → Do NOT size up, treat skeptically
+5. Otherwise → Use matrix base sizing (Tier 3)
+```
+
+### CLI Tool for Sizing
+
+Run before placing bets:
+```bash
+npx tsx scripts/check-sizing.ts [Fund] [Sport] [BetType]
+
+# Examples:
+npx tsx scripts/check-sizing.ts SharpFund NFL spread
+# → 🔥 2u MAX (Tier 1)
+
+npx tsx scripts/check-sizing.ts VectorFund NBA props
+# → ⚠️ 0.5u REDUCED (Tier 4)
+```
+
 ---
 
 # SECTION 1: UNIVERSAL FOUNDATIONS

@@ -1,8 +1,8 @@
 <!--
   Portfolio Performance - December 25, 2025 (Christmas Edition)
   Balance: $46,101 | Net P/L: +$6,101 | ROI: +15.25%
-  7-day chart: Dec 18-25 (Dec 24 skipped - no bets)
   Fixed Y-axis range: $45.0k to $46.5k
+  CSS-based Christmas decorations
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,24 +19,11 @@
       height: 1350px;
       padding: 40px 60px;
       position: relative;
-      background: linear-gradient(180deg, #1a3a5c 0%, #0f2744 50%, #091a2e 100%);
+      background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #051020 100%);
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
-
-    /* Snowflake decorations */
-    .snowflake {
-      position: absolute;
-      opacity: 0.15;
-      pointer-events: none;
-    }
-    .snowflake-1 { top: 50px; left: 80px; width: 80px; }
-    .snowflake-2 { top: 120px; right: 100px; width: 60px; }
-    .snowflake-3 { bottom: 200px; left: 60px; width: 50px; }
-    .snowflake-4 { bottom: 300px; right: 80px; width: 70px; }
-    .snowflake-5 { top: 400px; left: 40px; width: 45px; }
-    .snowflake-6 { top: 500px; right: 50px; width: 55px; }
 
     /* Christmas lights at top */
     .christmas-lights {
@@ -44,22 +31,70 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 60px;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
       z-index: 20;
+      padding: 0 20px;
     }
-    .christmas-lights img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
+    .light-bulb {
+      width: 18px;
+      height: 26px;
+      border-radius: 50% 50% 50% 50%;
+      position: relative;
+      top: 8px;
+      box-shadow: 0 0 20px 8px currentColor;
     }
+    .light-bulb::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .light-red { background: #ff3333; color: rgba(255, 51, 51, 0.6); }
+    .light-green { background: #33ff33; color: rgba(51, 255, 51, 0.6); }
+    .light-blue { background: #3399ff; color: rgba(51, 153, 255, 0.6); }
+    .light-yellow { background: #ffff33; color: rgba(255, 255, 51, 0.6); }
+    .light-wire {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: linear-gradient(90deg,
+        transparent 0%, #1a1a1a 2%, #1a1a1a 98%, transparent 100%);
+      z-index: 19;
+    }
+
+    /* CSS Snowflakes */
+    .snowflake {
+      position: absolute;
+      color: white;
+      font-size: 24px;
+      opacity: 0.15;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+    .sf1 { top: 80px; left: 60px; font-size: 40px; opacity: 0.12; }
+    .sf2 { top: 200px; right: 80px; font-size: 32px; opacity: 0.1; }
+    .sf3 { top: 350px; left: 40px; font-size: 28px; opacity: 0.08; }
+    .sf4 { top: 500px; right: 50px; font-size: 36px; opacity: 0.1; }
+    .sf5 { bottom: 300px; left: 70px; font-size: 30px; opacity: 0.09; }
+    .sf6 { bottom: 200px; right: 90px; font-size: 26px; opacity: 0.11; }
+    .sf7 { top: 650px; left: 50px; font-size: 22px; opacity: 0.08; }
+    .sf8 { top: 750px; right: 60px; font-size: 34px; opacity: 0.1; }
 
     .grid-bg {
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
       background-image:
-        linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
       background-size: 45px 45px;
     }
 
@@ -74,8 +109,8 @@
     .side-bars.left { left: 20px; }
     .side-bars.right { right: 20px; }
     .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
-    .side-bar.green { background: #2d8a4e; }
-    .side-bar.red { background: #c0392b; }
+    .side-bar.green { background: #228b22; }
+    .side-bar.red { background: #c41e3a; }
 
     .content {
       position: relative;
@@ -84,7 +119,7 @@
       display: flex;
       flex-direction: column;
       padding-bottom: 120px;
-      padding-top: 20px;
+      padding-top: 30px;
     }
 
     .header { text-align: center; margin-bottom: 20px; }
@@ -105,16 +140,23 @@
       text-decoration-thickness: 4px;
       text-decoration-color: #228b22;
     }
+    .header-date::before {
+      content: '🎄 ';
+    }
+    .header-date::after {
+      content: ' 🎄';
+    }
 
     .stats-box {
       width: 95%;
       margin: 0 auto 25px;
-      background: rgba(30, 41, 59, 0.6);
+      background: rgba(20, 30, 50, 0.8);
       backdrop-filter: blur(10px);
-      border: 2px solid rgba(196, 30, 58, 0.5);
-      border-radius: 16px;
+      border: 3px solid;
+      border-image: linear-gradient(90deg, #c41e3a, #228b22, #c41e3a) 1;
+      border-radius: 0;
       padding: 25px 30px;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.4);
     }
 
     .stats-row {
@@ -166,7 +208,7 @@
       font-size: 26px;
       font-weight: 800;
       letter-spacing: 3px;
-      color: #c41e3a;
+      color: #fbbf24;
     }
 
     .chart-container {
@@ -176,9 +218,9 @@
 
     .chart-area {
       position: relative;
-      background: #0d1117;
+      background: #0a0f18;
       border-radius: 12px;
-      border: 2px solid rgba(196, 30, 58, 0.3);
+      border: 2px solid rgba(255,255,255,0.1);
       overflow: visible;
       height: 680px;
       margin-bottom: 40px;
@@ -299,6 +341,11 @@
       text-align: center;
       z-index: 10;
     }
+    .footer-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
     .logo { width: 70px; height: 70px; margin: 0 auto 15px; }
     .logo img { width: 100%; height: 100%; object-fit: contain; }
     .website { font-size: 16px; font-weight: 700; letter-spacing: 5px; color: white; }
@@ -306,18 +353,40 @@
 </head>
 <body>
   <div class="container">
-    <!-- Christmas lights at top -->
+    <!-- Christmas lights wire -->
+    <div class="light-wire"></div>
+
+    <!-- Christmas lights -->
     <div class="christmas-lights">
-      <img src="christmas-lights.png" alt="">
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
     </div>
 
-    <!-- Snowflake decorations -->
-    <img class="snowflake snowflake-1" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-2" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-3" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-4" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-5" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-6" src="snowflake-single.png" alt="">
+    <!-- CSS Snowflakes -->
+    <div class="snowflake sf1">❄</div>
+    <div class="snowflake sf2">❅</div>
+    <div class="snowflake sf3">❆</div>
+    <div class="snowflake sf4">❄</div>
+    <div class="snowflake sf5">❅</div>
+    <div class="snowflake sf6">❆</div>
+    <div class="snowflake sf7">❄</div>
+    <div class="snowflake sf8">❅</div>
 
     <div class="grid-bg"></div>
 
@@ -376,7 +445,7 @@
 
       <div class="chart-container">
         <div class="chart-area">
-          <!-- Y-AXIS LABELS - range $45.0k to $46.5k (1500 range, 0.453px/$) -->
+          <!-- Y-AXIS LABELS -->
           <div class="y-axis-label" style="bottom: 32px;">$45.0k</div>
           <div class="h-grid-line" style="bottom: 32px;"></div>
           <div class="y-axis-label" style="bottom: 168px;">$45.3k</div>
@@ -404,7 +473,7 @@
           </div>
 
           <div class="candlesticks">
-            <!-- Dec 18: RED -$442 (open 46153 → 522px, close 45710 → 322px) -->
+            <!-- Dec 18: RED -$442 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body red" style="bottom: 322px; height: 200px;"></div>
@@ -412,7 +481,7 @@
               </div>
               <div class="candle-date">12/18</div>
             </div>
-            <!-- Dec 19: RED -$249 (open 45710 → 322px, close 45462 → 209px) -->
+            <!-- Dec 19: RED -$249 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body red" style="bottom: 209px; height: 113px;"></div>
@@ -420,7 +489,7 @@
               </div>
               <div class="candle-date">12/19</div>
             </div>
-            <!-- Dec 20: GREEN +$49 (open 45462 → 209px, close 45510 → 231px) -->
+            <!-- Dec 20: GREEN +$49 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body green" style="bottom: 209px; height: 22px;"></div>
@@ -428,7 +497,7 @@
               </div>
               <div class="candle-date">12/20</div>
             </div>
-            <!-- Dec 21: GREEN +$285 (open 45510 → 231px, close 45796 → 360px) -->
+            <!-- Dec 21: GREEN +$285 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body green" style="bottom: 231px; height: 129px;"></div>
@@ -436,7 +505,7 @@
               </div>
               <div class="candle-date">12/21</div>
             </div>
-            <!-- Dec 22: RED -$180 (open 45796 → 360px, close 45615 → 279px) -->
+            <!-- Dec 22: RED -$180 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body red" style="bottom: 279px; height: 81px;"></div>
@@ -444,7 +513,7 @@
               </div>
               <div class="candle-date">12/22</div>
             </div>
-            <!-- Dec 23: RED -$120 (open 45615 → 279px, close 45495 → 224px) -->
+            <!-- Dec 23: RED -$120 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body red" style="bottom: 224px; height: 55px;"></div>
@@ -452,7 +521,7 @@
               </div>
               <div class="candle-date">12/23</div>
             </div>
-            <!-- Dec 25: GREEN +$606 (open 45495 → 224px, close 46101 → 499px) -->
+            <!-- Dec 25: GREEN +$606 -->
             <div class="candle-wrapper">
               <div class="candle">
                 <div class="body green" style="bottom: 224px; height: 275px;"></div>

@@ -1,0 +1,115 @@
+{
+  "record": {
+    "wins": 1,
+    "losses": 0
+  },
+  "winRate": 100,
+  "lastUpdated": "2025-12-29",
+  "currentStreak": 1,
+  "longestWinStreak": 1,
+  "longestLossStreak": 0,
+  "totalProfit": 224.84,
+  "history": [
+    {
+      "date": "2025-12-28",
+      "featuredSource": "Sharp_NFL_spread",
+      "sourceRecord": "11-3",
+      "sourceWinPct": 78.57142857142857,
+      "picks": [
+        {
+          "id": 390,
+          "team": "Cleveland Browns",
+          "description": "Browns +4.5",
+          "odds": -112,
+          "stake": 1.5,
+          "profit": 133.93,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        },
+        {
+          "id": 393,
+          "team": "Miami Dolphins",
+          "description": "Dolphins +5.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": 90.91,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 2,
+      "dayLosses": 0
+    },
+    {
+      "date": "2025-12-29",
+      "featuredSource": "SharpFund_NFL_spread",
+      "sourceRecord": "13-3",
+      "sourceWinPct": 81.2,
+      "picks": [
+        {
+          "id": 406,
+          "team": "Atlanta Falcons",
+          "description": "Falcons +7",
+          "result": "pending"
+        }
+      ],
+      "dayResult": "pending"
+    },
+    {
+      "date": "2025-12-30",
+      "featuredSource": "SharpFund_NCAAF_spread",
+      "sourceRecord": "6-4",
+      "sourceWinPct": 60.0,
+      "picks": [
+        {
+          "id": 409,
+          "team": "Illinois",
+          "description": "Illinois +3",
+          "odds": -110,
+          "stake": 1,
+          "fund": "SharpFund",
+          "sport": "NCAAF",
+          "betType": "spread",
+          "result": "pending"
+        },
+        {
+          "id": 415,
+          "team": "USC",
+          "description": "USC -4",
+          "odds": -110,
+          "stake": 1.5,
+          "fund": "SharpFund",
+          "sport": "NCAAF",
+          "betType": "spread",
+          "result": "pending"
+        }
+      ],
+      "dayResult": "pending"
+    },
+    {
+      "date": "2025-12-31",
+      "featuredSource": "SharpFund_NCAAB_spread",
+      "sourceRecord": "18-7",
+      "sourceWinPct": 72.0,
+      "picks": [
+        {
+          "id": 423,
+          "team": "Georgetown Hoyas",
+          "description": "Georgetown +9.5",
+          "odds": -112,
+          "stake": 1.5,
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread",
+          "result": "pending"
+        }
+      ],
+      "dayResult": "pending"
+    }
+  ]
+}

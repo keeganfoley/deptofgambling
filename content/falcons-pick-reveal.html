@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Falcons +7 Pick</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #00FF00;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      position: relative;
+    }
+
+    /* Glow ring behind logo */
+    .glow-ring {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(167,25,48,0.4) 0%, transparent 70%);
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.8s ease-out;
+      top: -30px;
+    }
+
+    .glow-ring.show {
+      opacity: 1;
+      transform: scale(1);
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.15); opacity: 1; }
+    }
+
+    .logo-container {
+      position: relative;
+      z-index: 10;
+      opacity: 0;
+      transform: scale(0) rotate(-180deg);
+      transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .logo-container.show {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    .team-logo {
+      width: 220px;
+      height: 220px;
+      object-fit: contain;
+      filter: drop-shadow(0 15px 40px rgba(0,0,0,0.5));
+    }
+
+    .pick-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .team-label {
+      font-size: 32px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease-out;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    }
+
+    .team-label.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .spread {
+      font-size: 160px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      opacity: 0;
+      transform: scale(3);
+      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-shadow:
+        -5px -5px 0 #000,
+        5px -5px 0 #000,
+        -5px 5px 0 #000,
+        5px 5px 0 #000,
+        -5px 0 0 #000,
+        5px 0 0 #000,
+        0 -5px 0 #000,
+        0 5px 0 #000,
+        -4px -4px 0 #000,
+        4px -4px 0 #000,
+        -4px 4px 0 #000,
+        4px 4px 0 #000,
+        0 8px 30px rgba(0,0,0,0.5);
+    }
+
+    .spread.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .spread.pulse {
+      animation: spreadPulse 1.5s ease-in-out infinite;
+    }
+
+    @keyframes spreadPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .badge {
+      background: linear-gradient(145deg, #A71930, #8B1528);
+      padding: 15px 40px;
+      border-radius: 50px;
+      opacity: 0;
+      transform: translateY(20px) scale(0.8);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      box-shadow: 0 10px 40px rgba(167,25,48,0.5);
+    }
+
+    .badge.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .badge-text {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+
+    /* Particles */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: visible;
+    }
+
+    .particle {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #A71930;
+      border-radius: 50%;
+      opacity: 0;
+    }
+
+    .particle.show {
+      animation: particleBurst 1s ease-out forwards;
+    }
+
+    @keyframes particleBurst {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0);
+      }
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .control-btn.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <button class="start-btn" id="startBtn">TAP TO START</button>
+
+  <div class="container">
+    <div class="particles" id="particles"></div>
+    <div class="glow-ring" id="glowRing"></div>
+
+    <div class="logo-container" id="logoContainer">
+      <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Falcons">
+    </div>
+
+    <div class="pick-container">
+      <div class="team-label" id="teamLabel">ATLANTA</div>
+      <div class="spread" id="spread">+7</div>
+      <div class="badge" id="badge">
+        <span class="badge-text">Featured Pick</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playWhoosh() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(600, audioContext.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(80, audioContext.currentTime + 0.3);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.3);
+    }
+
+    function playImpact() {
+      // Low thump
+      const osc1 = audioContext.createOscillator();
+      const gain1 = audioContext.createGain();
+      osc1.connect(gain1);
+      gain1.connect(audioContext.destination);
+      osc1.type = 'sine';
+      osc1.frequency.setValueAtTime(80, audioContext.currentTime);
+      osc1.frequency.exponentialRampToValueAtTime(40, audioContext.currentTime + 0.2);
+      gain1.gain.setValueAtTime(0.6, audioContext.currentTime);
+      gain1.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+      osc1.start();
+      osc1.stop(audioContext.currentTime + 0.3);
+
+      // High click
+      const osc2 = audioContext.createOscillator();
+      const gain2 = audioContext.createGain();
+      osc2.connect(gain2);
+      gain2.connect(audioContext.destination);
+      osc2.frequency.setValueAtTime(1200, audioContext.currentTime);
+      osc2.frequency.exponentialRampToValueAtTime(400, audioContext.currentTime + 0.1);
+      gain2.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain2.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.15);
+      osc2.start();
+      osc2.stop(audioContext.currentTime + 0.15);
+    }
+
+    function playSuccess() {
+      const notes = [523, 659, 784, 1047];
+      notes.forEach((freq, i) => {
+        setTimeout(() => {
+          const osc = audioContext.createOscillator();
+          const gain = audioContext.createGain();
+          osc.connect(gain);
+          gain.connect(audioContext.destination);
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, audioContext.currentTime);
+          gain.gain.setValueAtTime(0.2, audioContext.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+          osc.start();
+          osc.stop(audioContext.currentTime + 0.3);
+        }, i * 80);
+      });
+    }
+
+    function playRise() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(200, audioContext.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(800, audioContext.currentTime + 0.4);
+      gain.gain.setValueAtTime(0.2, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.4);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.4);
+    }
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      container.innerHTML = '';
+
+      for (let i = 0; i < 20; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const angle = (i / 20) * Math.PI * 2;
+        const distance = 150 + Math.random() * 100;
+        particle.style.setProperty('--tx', `${Math.cos(angle) * distance}px`);
+        particle.style.setProperty('--ty', `${Math.sin(angle) * distance}px`);
+        particle.style.left = '50%';
+        particle.style.top = '120px';
+        particle.style.background = i % 2 === 0 ? '#A71930' : '#000';
+        container.appendChild(particle);
+      }
+    }
+
+    function showParticles() {
+      document.querySelectorAll('.particle').forEach((p, i) => {
+        setTimeout(() => p.classList.add('show'), i * 20);
+      });
+    }
+
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const glowRing = document.getElementById('glowRing');
+    const logoContainer = document.getElementById('logoContainer');
+    const teamLabel = document.getElementById('teamLabel');
+    const spread = document.getElementById('spread');
+    const badge = document.getElementById('badge');
+
+    function resetAll() {
+      glowRing.classList.remove('show');
+      logoContainer.classList.remove('show');
+      teamLabel.classList.remove('show');
+      spread.classList.remove('show', 'pulse');
+      badge.classList.remove('show');
+      document.querySelectorAll('.particle').forEach(p => p.classList.remove('show'));
+    }
+
+    function runAnimation() {
+      resetAll();
+      createParticles();
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+
+      // Glow ring appears
+      setTimeout(() => {
+        glowRing.classList.add('show');
+        playRise();
+      }, 300);
+
+      // Logo spins in
+      setTimeout(() => {
+        logoContainer.classList.add('show');
+        playWhoosh();
+      }, 600);
+
+      // Team label
+      setTimeout(() => {
+        teamLabel.classList.add('show');
+      }, 1300);
+
+      // Spread SLAMS in
+      setTimeout(() => {
+        spread.classList.add('show');
+        playImpact();
+        showParticles();
+      }, 1700);
+
+      // Badge slides up
+      setTimeout(() => {
+        badge.classList.add('show');
+        playSuccess();
+      }, 2300);
+
+      // Start pulse
+      setTimeout(() => {
+        spread.classList.add('pulse');
+      }, 2800);
+
+      // Show controls
+      setTimeout(() => {
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 3200);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioContext.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      resetAll();
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioContext.resume();
+        resetAll();
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

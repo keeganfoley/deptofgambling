@@ -23,32 +23,66 @@
       overflow: hidden;
     }
 
-    /* Snowflake decorations */
-    .snowflake {
-      position: absolute;
-      opacity: 0.12;
-      pointer-events: none;
-    }
-    .snowflake-1 { top: 70px; left: 50px; width: 60px; }
-    .snowflake-2 { top: 140px; right: 70px; width: 50px; }
-    .snowflake-3 { bottom: 200px; left: 45px; width: 40px; }
-    .snowflake-4 { bottom: 300px; right: 55px; width: 55px; }
-
     /* Christmas lights at top */
     .christmas-lights {
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
-      height: 55px;
+      height: 50px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-start;
       z-index: 20;
+      padding: 0 20px;
     }
-    .christmas-lights img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
+    .light-bulb {
+      width: 18px;
+      height: 26px;
+      border-radius: 50% 50% 50% 50%;
+      position: relative;
+      top: 8px;
+      box-shadow: 0 0 20px 8px currentColor;
     }
+    .light-bulb::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 8px;
+      height: 8px;
+      background: #333;
+      border-radius: 2px;
+    }
+    .light-red { background: #ff3333; color: rgba(255, 51, 51, 0.6); }
+    .light-green { background: #33ff33; color: rgba(51, 255, 51, 0.6); }
+    .light-blue { background: #3399ff; color: rgba(51, 153, 255, 0.6); }
+    .light-yellow { background: #ffff33; color: rgba(255, 255, 51, 0.6); }
+    .light-wire {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 12px;
+      background: linear-gradient(90deg,
+        transparent 0%, #1a1a1a 2%, #1a1a1a 98%, transparent 100%);
+      z-index: 19;
+    }
+
+    /* CSS Snowflakes */
+    .snowflake {
+      position: absolute;
+      color: white;
+      font-size: 24px;
+      opacity: 0.12;
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+      pointer-events: none;
+    }
+    .sf1 { top: 70px; left: 50px; font-size: 38px; opacity: 0.12; }
+    .sf2 { top: 160px; right: 70px; font-size: 30px; opacity: 0.1; }
+    .sf3 { bottom: 200px; left: 45px; font-size: 26px; opacity: 0.08; }
+    .sf4 { bottom: 300px; right: 55px; font-size: 34px; opacity: 0.1; }
 
     .grid-bg {
       position: absolute;
@@ -101,6 +135,12 @@
       text-underline-offset: 8px;
       text-decoration-thickness: 3px;
       text-decoration-color: #228b22;
+    }
+    .date::before {
+      content: '🎄 ';
+    }
+    .date::after {
+      content: ' 🎄';
     }
 
     /* HERO STATS */
@@ -290,6 +330,11 @@
       text-align: center;
       z-index: 10;
     }
+    .footer-text {
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 8px;
+    }
     .logo { width: 65px; height: 65px; margin: 0 auto 12px; }
     .logo img { width: 100%; height: 100%; object-fit: contain; }
     .website { font-size: 15px; font-weight: 700; letter-spacing: 5px; color: white; }
@@ -297,16 +342,36 @@
 </head>
 <body>
   <div class="container">
-    <!-- Christmas lights at top -->
+    <!-- Christmas lights wire -->
+    <div class="light-wire"></div>
+
+    <!-- Christmas lights -->
     <div class="christmas-lights">
-      <img src="christmas-lights.png" alt="">
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
+      <div class="light-bulb light-blue"></div>
+      <div class="light-bulb light-yellow"></div>
+      <div class="light-bulb light-red"></div>
+      <div class="light-bulb light-green"></div>
     </div>
 
-    <!-- Snowflake decorations -->
-    <img class="snowflake snowflake-1" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-2" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-3" src="snowflake-single.png" alt="">
-    <img class="snowflake snowflake-4" src="snowflake-single.png" alt="">
+    <!-- CSS Snowflakes -->
+    <div class="snowflake sf1">❄</div>
+    <div class="snowflake sf2">❅</div>
+    <div class="snowflake sf3">❆</div>
+    <div class="snowflake sf4">❄</div>
 
     <div class="grid-bg"></div>
 

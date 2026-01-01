@@ -1,7 +1,8 @@
-# ANALYSIS TEMPLATE v4.0 - STRICT OUTPUT FORMAT
+# ANALYSIS TEMPLATE v4.1 - STRICT OUTPUT FORMAT
 
 > **Claude: Use this EXACT format for every analysis output. No exceptions.**
 > **Daily Target: 10-15u | Per Fund: 3-4u target, 6u max**
+> **🔥 DYNAMIC SIZING: Apply tier adjustments per 0.11 in HEDGE_FUND_ARCHITECTURE.md**
 
 ---
 
@@ -79,13 +80,14 @@ SLOW DAY CHECK: Highest conviction XX [✓/>60 proceed | ✗/<60 consider pass]
 
 ---
 
-## PROPS (VectorFund - 15%+ Edge Required, 1u Max Each)
+## PROPS (VectorFund - 15%+ Edge Required, ⚠️ 0.5u MAX Each)
 
 | Pick | Line | Odds | Book | Conv. | Units | Edge | WHY |
 |------|------|------|------|-------|-------|------|-----|
-| [Player] [O/U] [Stat] | [X.X] | [+/-XXX] | [Book] | [XX] | [X.X]u | [XX]% | [1 sentence] |
+| [Player] [O/U] [Stat] | [X.X] | [+/-XXX] | [Book] | [XX] | 0.5u | [XX]% | [1 sentence] |
 
-**Props Total: X.Xu** (included in VectorFund total)
+**⚠️ WARNING: VectorFund props have -17.9% historical ROI. Consider skipping.**
+**Props Total: X.Xu** (included in VectorFund total, max 0.5u each)
 
 ---
 
@@ -242,18 +244,29 @@ SLOW DAY CHECK: Highest conviction 92 ✓ (>60, proceed)
 
 ---
 
-## RULES (v4.0)
+## RULES (v4.1)
 
 1. **Daily Target: 10-15u** (soft max 20u, hard max 24u)
 2. **Per Fund: 3-4u target, 6u max** (not 8u)
 3. **Conviction 40+ required** to make card
 4. **Kelly calculation required** for 2u+ bets
 5. **3u bets: Max 2 per WEEK**, requires 80+ conviction
-6. **Props: 15%+ edge, 1u max each**
+6. **Props: 15%+ edge, 0.5u max each** (historically -17.9% ROI)
 7. **CUTS section required** - show what didn't make it
 8. **Filtering log required** - show the funnel
 9. **Slow day check required** - if highest < 60, consider pass
 10. **Empty fund = "No qualifying plays"**
+
+### 🔥 DYNAMIC SIZING TIERS (v4.1 - Apply to ALL picks)
+
+| Tier | When | Sizing |
+|------|------|--------|
+| **🔥 TIER 1** | SharpFund + NFL/NCAAB | **2u MAX** |
+| **📈 TIER 2** | SharpFund/CatalystFund + spread | **1.5u** |
+| **➡️ TIER 3** | Everything else | Base matrix |
+| **⚠️ TIER 4** | VectorFund + totals/props/NCAAF | **0.5u MAX** |
+
+**⚠️ EDGE SKEPTICISM:** If stated edge > 20%, DO NOT size up. Historically loses.
 
 ```
 ### CONTRAFUND (Target 3-4u, Max 6u)
@@ -265,5 +278,5 @@ SLOW DAY CHECK: Highest conviction 92 ✓ (>60, proceed)
 
 ---
 
-*Version 4.0 - Conviction Score System + Formulaic Unit Sizing*
-*Updated: November 29, 2025*
+*Version 4.1 - Dynamic Tier Sizing based on 390-bet analysis*
+*Updated: December 29, 2024*

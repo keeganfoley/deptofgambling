@@ -108,6 +108,95 @@ Last 5: ✅ ✅ ❌ ✅ ❌
 
 ---
 
+## #featured-picks (LOCKED)
+
+**IMPORTANT: Featured picks are SEPARATE messages posted in the #featured-picks channel!**
+
+The Featured Pick System identifies our "hottest" Fund+Sport+BetType combo using 30-day rolling window analysis.
+
+**Qualification Rules:**
+- Minimum 8 picks in the 30-day window
+- Minimum 60% win rate in that window
+- Rank by win percentage (highest wins)
+- #1 combo's picks today = Featured Picks
+
+**Message 1 (Header):**
+```
+⭐⭐⭐ FEATURED PICK ⭐⭐⭐
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 Our hottest system: Sharp NFL spreads
+📈 Rolling 30-Day: 12-3 (80.0%)
+🏆 Featured Pick Record: 15-5 (75.0%)
+
+1 pick from this system today!
+```
+
+**Message 2+ (Each featured pick):**
+```
+━━━━━━━━━━━━━━━━━━━━
+⭐ FEATURED PICK ⭐
+━━━━━━━━━━━━━━━━━━━━
+
+🔥 Our hottest system: Sharp NFL spreads
+📈 Rolling 30-Day: 12-3 (80.0%)
+
+🏈 Browns vs Dolphins
+
+🎯 BROWNS +4.5 @ -110 🎯
+
+🟢 Sharp | NFL | 1u
+⏰ 1:00 PM ET
+
+📊 Track Record:
+• Sharp NFL: 23-13 (63.9%)
+• NFL spreads: 25-11 (69.4%)
+• Sharp Overall: 56-27 (67.5%)
+
+💡 This combo has been our best performer over the last month. When Sharp NFL spreads speaks, we listen.
+```
+
+**If multiple featured picks from same combo:**
+```
+⭐⭐⭐ FEATURED PICKS ⭐⭐⭐
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔥 Our hottest system: Sharp NFL spreads
+📈 Rolling 30-Day: 12-3 (80.0%)
+🏆 Featured Pick Record: 15-5 (75.0%)
+
+2 picks from this system today!
+```
+
+Then each pick as a separate message with standard format.
+
+**#featured-picks RULES:**
+1. **SEPARATE MESSAGES** - Header then each pick as separate message
+2. **NO ping** - Featured pick messages do not have @picks
+3. **Star emoji header** - "⭐ FEATURED PICK ⭐" with ━━━ dividers
+4. **Source combo readable** - "Sharp NFL spreads" not "Sharp_NFL_spread"
+5. **30-Day record** - Show rolling record and win%
+6. **Cumulative record** - "Featured Pick Record: X-X (XX.X%)"
+7. **Standard pick format** - Same as #all-picks with full track records
+8. **Plural for multiple** - "FEATURED PICKS" if more than one
+
+**When to post featured pick:**
+- A combo qualifies (8+ picks at 60%+ in last 30 days)
+- That combo has picks scheduled for today
+- Post in #featured-picks channel
+
+**When NOT to post featured pick:**
+- No combo meets 60%/8 threshold
+- Qualifying combo has no picks today
+- Just proceed with normal picks without featured section
+
+**Tracking:**
+- `data/featured_picks.json` tracks cumulative record
+- Updated automatically when settling results
+- Use `updateFeaturedPicksResults(date)` after settling bets
+
+---
+
 ## Thesis Writing Rules (LOCKED)
 
 ### 1. Complete Sentences Only
@@ -372,9 +461,15 @@ npx tsx scripts/discord-post.ts table [date]
 |---------|----------|------|
 | #all-picks | Header = 1, Each pick = separate | @picks on header only |
 | #consensus-plays | Header = 1, Each consensus = separate | @picks on header only |
+| #featured-picks | Header = 1, Each featured pick = separate | None |
 | #daily-performance | Everything = 1 | None |
 | #weekly-performance | Everything = 1 | None |
 | #all-time | Everything = 1 | None |
+
+**Posting Order:**
+1. #all-picks: Header message (with @picks ping) then individual picks
+2. #consensus-plays: If consensus exists, header then individual consensus picks
+3. #featured-picks: If featured picks exist, header then individual featured picks
 
 **Character Limit:** Discord max is 2000 chars. Split logically if exceeded.
 
@@ -396,6 +491,15 @@ npx tsx scripts/discord-post.ts picks [date] --post
 # Test webhook
 npx tsx scripts/discord-post.ts test <channel>
 ```
+
+### Featured Pick Commands (Claude)
+
+| Command | Action |
+|---------|--------|
+| "featured pick" | Show today's featured pick analysis |
+| "what's the featured pick today" | Same as above |
+| "featured pick record" | Show cumulative W-L from featured_picks.json |
+| "update results" | Also updates featured_picks.json when settling bets |
 
 ---
 

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rams vs Falcons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #00FF00;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .start-btn {
+      position: absolute;
+      padding: 20px 50px;
+      font-size: 24px;
+      font-weight: 700;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .start-btn.hidden {
+      display: none;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: all 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .team.left {
+      transform: translateX(-100px) scale(0.5);
+    }
+
+    .team.right {
+      transform: translateX(100px) scale(0.5);
+    }
+
+    .team.show {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+    }
+
+    .team-logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+    }
+
+    .team-name {
+      font-size: 42px;
+      font-weight: 900;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow:
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000,
+        -3px 0 0 #000,
+        3px 0 0 #000,
+        0 -3px 0 #000,
+        0 3px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+    }
+
+    .team-record {
+      font-size: 36px;
+      font-weight: 800;
+      color: #fff;
+      text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000,
+        -2px 0 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        0 2px 0 #000;
+    }
+
+    .vs {
+      font-size: 80px;
+      font-weight: 900;
+      color: #fff;
+      text-shadow:
+        -4px -4px 0 #000,
+        4px -4px 0 #000,
+        -4px 4px 0 #000,
+        4px 4px 0 #000,
+        -4px 0 0 #000,
+        4px 0 0 #000,
+        0 -4px 0 #000,
+        0 4px 0 #000,
+        -3px -3px 0 #000,
+        3px -3px 0 #000,
+        -3px 3px 0 #000,
+        3px 3px 0 #000;
+      opacity: 0;
+      transform: scale(0) rotate(-20deg);
+      transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .vs.show {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .team.show.float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .team.left.show.float {
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .team.right.show.float {
+      animation: float 3s ease-in-out infinite 0.5s;
+    }
+
+    .vs.show.pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    .controls {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .control-btn {
+      padding: 12px 30px;
+      font-size: 16px;
+      font-weight: 600;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .control-btn.hidden { display: none; }
+  </style>
+</head>
+<body>
+  <button class="start-btn" id="startBtn">TAP TO START</button>
+
+  <div class="container">
+    <div class="team left" id="teamLeft">
+      <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/lar.png" alt="Rams">
+      <div class="team-name">Rams</div>
+      <div class="team-record">(10-5)</div>
+    </div>
+
+    <div class="vs" id="vs">VS</div>
+
+    <div class="team right" id="teamRight">
+      <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Falcons">
+      <div class="team-name">Falcons</div>
+      <div class="team-record">(6-9)</div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="control-btn hidden" id="replayBtn">REPLAY</button>
+    <button class="control-btn hidden" id="hideBtn">HIDE UI</button>
+  </div>
+
+  <script>
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    function playWhoosh() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(500, audioContext.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(100, audioContext.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.3, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.2);
+    }
+
+    function playImpact() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(150, audioContext.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(50, audioContext.currentTime + 0.15);
+      gain.gain.setValueAtTime(0.4, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.2);
+    }
+
+    function playVs() {
+      const osc = audioContext.createOscillator();
+      const gain = audioContext.createGain();
+      osc.connect(gain);
+      gain.connect(audioContext.destination);
+      osc.frequency.setValueAtTime(300, audioContext.currentTime);
+      osc.frequency.setValueAtTime(600, audioContext.currentTime + 0.1);
+      osc.frequency.setValueAtTime(400, audioContext.currentTime + 0.2);
+      gain.gain.setValueAtTime(0.35, audioContext.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+      osc.start();
+      osc.stop(audioContext.currentTime + 0.3);
+    }
+
+    const startBtn = document.getElementById('startBtn');
+    const replayBtn = document.getElementById('replayBtn');
+    const hideBtn = document.getElementById('hideBtn');
+    const teamLeft = document.getElementById('teamLeft');
+    const teamRight = document.getElementById('teamRight');
+    const vs = document.getElementById('vs');
+
+    function resetAll() {
+      teamLeft.classList.remove('show', 'float');
+      teamRight.classList.remove('show', 'float');
+      vs.classList.remove('show', 'pulse');
+    }
+
+    function runAnimation() {
+      resetAll();
+      startBtn.classList.add('hidden');
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+
+      // Rams slides in
+      setTimeout(() => {
+        teamLeft.classList.add('show');
+        playWhoosh();
+      }, 500);
+
+      // Falcons slides in
+      setTimeout(() => {
+        teamRight.classList.add('show');
+        playWhoosh();
+      }, 1000);
+
+      // VS pops in
+      setTimeout(() => {
+        vs.classList.add('show');
+        playImpact();
+      }, 1600);
+
+      // Start floating
+      setTimeout(() => {
+        teamLeft.classList.add('float');
+        teamRight.classList.add('float');
+        vs.classList.add('pulse');
+      }, 2200);
+
+      // Show controls
+      setTimeout(() => {
+        replayBtn.classList.remove('hidden');
+        hideBtn.classList.remove('hidden');
+      }, 2800);
+    }
+
+    startBtn.addEventListener('click', () => {
+      audioContext.resume();
+      runAnimation();
+    });
+
+    replayBtn.addEventListener('click', () => {
+      resetAll();
+      runAnimation();
+    });
+
+    hideBtn.addEventListener('click', () => {
+      replayBtn.classList.add('hidden');
+      hideBtn.classList.add('hidden');
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.code === 'Space') {
+        e.preventDefault();
+        audioContext.resume();
+        resetAll();
+        runAnimation();
+      }
+      if (e.code === 'KeyH') {
+        replayBtn.classList.toggle('hidden');
+        hideBtn.classList.toggle('hidden');
+      }
+    });
+  </script>
+</body>
+</html>

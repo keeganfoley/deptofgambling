@@ -34,6 +34,47 @@
 
 ---
 
+## 🔥 DYNAMIC UNIT SIZING (v4.1 - Dec 2024)
+
+> **CRITICAL: Apply these AFTER calculating base units from fund matrices below**
+
+Based on 390-bet historical analysis, apply these tier adjustments:
+
+### TIER 1: SIZE UP TO 2u (45%+ ROI historically)
+| Combination | ROI | Win Rate |
+|-------------|-----|----------|
+| **SharpFund + NFL** | +45.8% | 75.0% |
+| **SharpFund + NCAAB** | +45.2% | 76.9% |
+
+### TIER 2: SIZE UP TO 1.5u (27-49% ROI)
+| Combination | ROI | Win Rate |
+|-------------|-----|----------|
+| **SharpFund + spread** (any sport) | +32.7% | 70.5% |
+| **CatalystFund + spread** | +49.2% | 68.4% |
+
+### TIER 4: SIZE DOWN TO 0.5u MAX (Negative ROI)
+| Combination | ROI | Win Rate | Action |
+|-------------|-----|----------|--------|
+| **VectorFund + totals** | -39.8% | 30.0% | ⚠️ 0.5u MAX or SKIP |
+| **VectorFund + props** | -17.9% | 45.8% | ⚠️ 0.5u MAX or SKIP |
+| **VectorFund + NCAAF** | -13.8% | 35.7% | ⚠️ 0.5u MAX or SKIP |
+| **Any totals bet** | -20.7% | 42.1% | ⚠️ Reduce sizing |
+
+### ⚠️ EDGE SKEPTICISM RULE
+**If stated edge > 20%, DO NOT size up.** Historical data shows:
+- 5-10% edge → 61% WR (good)
+- 20-30% edge → 37-55% WR (bad)
+- 30%+ edge → 0% WR (disaster)
+
+**Trust tiers over stated edge. High edge ≠ high win rate.**
+
+### Quick Check Before Every Bet:
+```bash
+npx tsx scripts/check-sizing.ts [Fund] [Sport] [BetType]
+```
+
+---
+
 ## FUND CRITERIA (Must Meet These)
 
 ### ⚫️ VECTORFUND (Model Edge)
@@ -116,15 +157,16 @@ TIER 3 (×0.5 multiplier):
 
 **Pass if:** Situational Score < 1.5
 
-### PROPS (VectorFund)
+### PROPS (VectorFund) ⚠️ HISTORICALLY NEGATIVE ROI
 | Edge % | Units |
 |--------|-------|
 | < 15% | PASS |
 | 15-25% | 0.5u |
-| 25-35% | 0.75u |
-| 35%+ | 1.0u (max) |
+| 25-35% | 0.5u |
+| 35%+ | 0.5u (max) |
 
-**Props max 1u each, go to VectorFund**
+**⚠️ WARNING: VectorFund props have -17.9% historical ROI (45.8% WR)**
+**Props max 0.5u each. Consider skipping entirely.**
 
 ---
 
@@ -399,22 +441,32 @@ SLOW DAY CHECK: Highest conviction 92 ✓ (>60, proceed normally)
 
 ---
 
-## QUICK REFERENCE - v4.0 THRESHOLDS
+## QUICK REFERENCE - v4.1 THRESHOLDS
 
-| Fund | Key Threshold | Max Units |
-|------|---------------|-----------|
-| Vector | Grade ≥ B, Edge ≥ 3.5% | 2.5u (3u rare) |
-| Sharp | Sharp Score ≥ 3 | 2.5u |
-| Contra | NFL 65%, NBA 70%, NCAAB/NHL 75% | 2.0u |
-| Catalyst | Situational Score ≥ 1.5 | 2.5u |
-| Props | Edge ≥ 15% | 1.0u |
+| Fund | Key Threshold | Base Max | Dynamic Tier |
+|------|---------------|----------|--------------|
+| Sharp + NFL/NCAAB | Sharp Score ≥ 3 | 2.5u | **🔥 TIER 1 → 2u** |
+| Sharp + spread | Sharp Score ≥ 3 | 2.5u | **📈 TIER 2 → 1.5u** |
+| Catalyst + spread | Sit. Score ≥ 1.5 | 2.5u | **📈 TIER 2 → 1.5u** |
+| Vector (spreads) | Grade ≥ B, Edge ≥ 3.5% | 2.5u | Standard |
+| Contra | NFL 65%, NBA 70%, NCAAB/NHL 75% | 2.0u | Standard |
+| **Vector + totals** | - | - | **⚠️ TIER 4 → 0.5u MAX** |
+| **Vector + props** | Edge ≥ 15% | - | **⚠️ TIER 4 → 0.5u MAX** |
+| **Vector + NCAAF** | - | - | **⚠️ TIER 4 → 0.5u MAX** |
 
 | Conviction | Meaning |
 |------------|---------|
 | 40+ | Include in card |
 | 60+ | Strong play |
-| 80+ | Top-tier (2.5-3u eligible) |
+| 80+ | Top-tier (apply tier multiplier) |
+
+### ⚠️ EDGE SKEPTICISM
+| Stated Edge | Trust Level |
+|-------------|-------------|
+| 5-15% | ✅ Trust it |
+| 15-20% | ⚠️ Verify |
+| 20%+ | ❌ DO NOT size up |
 
 ---
 
-*Version 4.0 - Always follow this prompt. No exceptions.*
+*Version 4.1 (Dec 2024) - Dynamic sizing based on 390-bet analysis*

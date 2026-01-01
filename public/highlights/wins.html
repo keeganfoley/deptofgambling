@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wins Highlight</title>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1080px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 40%, #1a2d4a 100%);
+      position: relative;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .icon {
+      position: relative;
+      z-index: 1;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 400px;
+      font-weight: 800;
+      color: #fbbf24;
+      text-shadow: 0 0 60px rgba(251, 191, 36, 0.4);
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="icon">$</div>
+</body>
+</html>

@@ -1,5 +1,24 @@
 # Department of Gambling - Betting Workflow
 
+---
+
+## 🔥 DYNAMIC UNIT SIZING QUICK REFERENCE (v4.1)
+
+> **Updated Dec 29, 2024 based on 390-bet historical analysis**
+
+| Tier | When | Sizing | Historical ROI |
+|------|------|--------|----------------|
+| **🔥 TIER 1** | SharpFund + NFL/NCAAB | **2u MAX** | +45% ROI |
+| **📈 TIER 2** | SharpFund/CatalystFund + spread | **1.5u** | +32-49% ROI |
+| **➡️ TIER 3** | Everything else | Base matrix | Standard |
+| **⚠️ TIER 4** | VectorFund + totals/props/NCAAF | **0.5u MAX** | Negative ROI |
+
+**⚠️ EDGE SKEPTICISM:** If stated edge > 20%, DO NOT size up. Historically under-performs.
+
+**CLI Check:** `npx tsx scripts/check-sizing.ts [Fund] [Sport] [BetType]`
+
+---
+
 ## WEEKLY BETTING SCHEDULE
 
 ### ADVANCE BETTING (NFL/NCAAF)

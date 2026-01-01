@@ -1,0 +1,473 @@
+<!--
+  ============================================================
+  PICKS TEMPLATE - 9 PICKS FORMAT (LOCKED SIZING)
+  ============================================================
+  USE THIS FORMAT FOR: 9-12 picks
+  Last updated: December 29, 2024
+
+  KEY SIZING (DO NOT CHANGE - USER APPROVED):
+  - Team logos: 70px
+  - Team names: 32px
+  - Bet lines: 26px
+  - Units badge: 28px
+  - Opponent text: 14px
+  - Card padding: 8px 18px
+  - Card gap: 3px
+  - Logo-text gap: 16px
+
+  CONTAINER:
+  - Padding: 25px 40px 20px
+  - Header date: 52px
+
+  STATS BAR:
+  - Values: 34px (gold: 40px)
+  - Labels: 11px
+
+  SPORT SECTION FLEX RATIOS:
+  - NCAAB (5 picks): flex: 5
+  - NHL (2 picks): flex: 2
+  - NFL (1 pick): flex: 1
+  - NBA (1 pick): flex: 1
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Picks - DEC 29</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 25px 40px 20px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 80px; bottom: 80px;
+      width: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .side-bars.left { left: 10px; }
+    .side-bars.right { right: 10px; }
+    .side-bar { width: 100%; height: 32px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #22c55e; }
+    .side-bar.red { background: #dc2626; }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    .header { text-align: center; margin-bottom: 6px; }
+    .header-label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0px;
+    }
+    .date {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-thickness: 4px;
+    }
+
+    .picks-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 6px;
+    }
+
+    .sport-section {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .sport-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 3px;
+    }
+    .sport-header::before, .sport-header::after {
+      content: '';
+      height: 2px;
+      flex: 1;
+      max-width: 160px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5));
+    }
+    .sport-header::after {
+      background: linear-gradient(90deg, rgba(251,191,36,0.5), transparent);
+    }
+    .sport-title {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .sport-picks {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      flex: 1;
+    }
+
+    .pick-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 8px 18px;
+      border: 3px solid;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      min-height: 0;
+    }
+    .pick-card.sharp { border-color: #22c55e; }
+    .pick-card.vector { border-color: #9ca3af; }
+    .pick-card.catalyst { border-color: #c084fc; }
+    .pick-card.contra { border-color: #fb923c; }
+
+    .pick-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex: 1;
+    }
+
+    .team-logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 10px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.1);
+      padding: 5px;
+      flex-shrink: 0;
+    }
+
+    .team-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .team-row {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+    }
+    .team-name {
+      font-size: 32px;
+      font-weight: 800;
+      color: white;
+      line-height: 1.1;
+    }
+    .bet-line {
+      font-size: 26px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+    }
+    .bet-odds {
+      color: #fbbf24;
+    }
+    .opponent {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .units {
+      font-size: 28px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 18px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    .stats-bar {
+      display: flex;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border: 3px solid #fbbf24;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .stat-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 10px;
+    }
+    .stat-col:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat-value {
+      font-size: 34px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      line-height: 1;
+    }
+    .stat-value.gold {
+      font-size: 40px;
+      color: #fbbf24;
+    }
+    .stat-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+    }
+    .stat-label.gold {
+      color: #fbbf24;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+    .logo { width: 42px; height: 42px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 15px; font-weight: 700; letter-spacing: 4px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">TODAY'S PICKS</div>
+        <div class="date">DEC 29</div>
+      </div>
+
+      <div class="picks-container">
+
+        <!-- NCAAB SECTION - 5 picks -->
+        <div class="sport-section" style="flex: 5;">
+          <div class="sport-header">
+            <span class="sport-title">NCAAB</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2473.png" alt="Oakland">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Oakland</div>
+                    <div class="bet-line">+3.5 <span class="bet-odds">(-118)</span></div>
+                  </div>
+                  <div class="opponent">@ Wright State</div>
+                </div>
+              </div>
+              <div class="units">2u</div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2674.png" alt="Valparaiso">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Valparaiso</div>
+                    <div class="bet-line">+10.5 <span class="bet-odds">(-105)</span></div>
+                  </div>
+                  <div class="opponent">@ Northern Iowa</div>
+                </div>
+              </div>
+              <div class="units">2u</div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2447.png" alt="Nicholls">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Nicholls St</div>
+                    <div class="bet-line">+5.5 <span class="bet-odds">(-110)</span></div>
+                  </div>
+                  <div class="opponent">@ Texas A&M-CC</div>
+                </div>
+              </div>
+              <div class="units">1.5u</div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png" alt="IPFW">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">IPFW</div>
+                    <div class="bet-line">+2.5 <span class="bet-odds">(-108)</span></div>
+                  </div>
+                  <div class="opponent">@ Milwaukee</div>
+                </div>
+              </div>
+              <div class="units">1u</div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2627.png" alt="Tarleton">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Tarleton St</div>
+                    <div class="bet-line">+2.5 <span class="bet-odds">(-106)</span></div>
+                  </div>
+                  <div class="opponent">@ UT Arlington</div>
+                </div>
+              </div>
+              <div class="units">0.5u</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NHL SECTION - 2 picks -->
+        <div class="sport-section" style="flex: 2;">
+          <div class="sport-header">
+            <span class="sport-title">NHL</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nhl/500/min.png" alt="Wild">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Wild</div>
+                    <div class="bet-line">ML <span class="bet-odds">(-104)</span></div>
+                  </div>
+                  <div class="opponent">@ Golden Knights</div>
+                </div>
+              </div>
+              <div class="units">1u</div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nhl/500/nyr.png" alt="Rangers">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Rangers</div>
+                    <div class="bet-line">ML <span class="bet-odds">(+155)</span></div>
+                  </div>
+                  <div class="opponent">@ Hurricanes</div>
+                </div>
+              </div>
+              <div class="units">0.5u</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NFL SECTION - 1 pick -->
+        <div class="sport-section" style="flex: 1;">
+          <div class="sport-header">
+            <span class="sport-title">NFL</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/atl.png" alt="Falcons">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Falcons</div>
+                    <div class="bet-line">+7 <span class="bet-odds">(-102)</span></div>
+                  </div>
+                  <div class="opponent">vs Rams</div>
+                </div>
+              </div>
+              <div class="units">2u</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NBA SECTION - 1 pick -->
+        <div class="sport-section" style="flex: 1;">
+          <div class="sport-header">
+            <span class="sport-title">NBA</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nba/500/atl.png" alt="Hawks">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Hawks</div>
+                    <div class="bet-line">+17 <span class="bet-odds">(-105)</span></div>
+                  </div>
+                  <div class="opponent">@ Thunder</div>
+                </div>
+              </div>
+              <div class="units">1.5u</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-col">
+          <div class="stat-value">9</div>
+          <div class="stat-label">PICKS</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-value gold">$1,200</div>
+          <div class="stat-label gold">EXPOSURE</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-value">12.0u</div>
+          <div class="stat-label">UNITS</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
