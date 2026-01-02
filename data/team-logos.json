@@ -633,7 +633,11 @@
     "IPFW": "https://a.espncdn.com/i/teamlogos/ncaa/500/2870.png",
     "Northern Iowa Panthers": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
     "Northern Iowa": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
-    "UNI": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png"
+    "UNI": "https://a.espncdn.com/i/teamlogos/ncaa/500/2460.png",
+    "Bradley Braves": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
+    "Bradley": "https://a.espncdn.com/i/teamlogos/ncaa/500/71.png",
+    "UIC Flames": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png",
+    "UIC": "https://a.espncdn.com/i/teamlogos/ncaa/500/82.png"
   },
   "fallback": "https://a.espncdn.com/i/teamlogos/default-team-logo-500.png"
 }

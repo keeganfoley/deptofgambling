@@ -1,0 +1,71 @@
+{
+  "record": {
+    "wins": 24,
+    "losses": 18
+  },
+  "winRate": 57.1,
+  "lastUpdated": "2026-01-02",
+  "description": "Bets where 2+ funds bet on the same side",
+  "recentPicks": [
+    {
+      "date": "2025-12-20",
+      "team": "Los Angeles Clippers",
+      "funds": ["SharpFund", "ContraFund"],
+      "result": "win"
+    },
+    {
+      "date": "2025-12-21",
+      "team": "Montreal Canadiens",
+      "funds": ["SharpFund", "CatalystFund"],
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-22",
+      "team": "New Orleans Pelicans",
+      "funds": ["SharpFund", "CatalystFund"],
+      "result": "win"
+    },
+    {
+      "date": "2025-12-25",
+      "team": "San Antonio Spurs",
+      "funds": ["VectorFund", "SharpFund"],
+      "result": "win"
+    },
+    {
+      "date": "2025-12-25",
+      "team": "Dallas Mavericks",
+      "funds": ["VectorFund", "SharpFund"],
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-26",
+      "team": "Milwaukee Bucks",
+      "funds": ["SharpFund", "VectorFund"],
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-27",
+      "team": "Utah Jazz",
+      "funds": ["VectorFund", "VectorFund"],
+      "result": "win"
+    },
+    {
+      "date": "2025-12-27",
+      "team": "Anaheim Ducks",
+      "funds": ["SharpFund", "SharpFund"],
+      "result": "loss"
+    },
+    {
+      "date": "2025-12-30",
+      "team": "Utah Jazz",
+      "funds": ["VectorFund", "SharpFund"],
+      "result": "loss"
+    },
+    {
+      "date": "2026-01-01",
+      "team": "Alabama",
+      "funds": ["SharpFund", "VectorFund"],
+      "result": "loss"
+    }
+  ]
+}

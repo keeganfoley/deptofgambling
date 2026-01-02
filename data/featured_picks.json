@@ -1,13 +1,13 @@
 {
   "record": {
-    "wins": 1,
-    "losses": 0
+    "wins": 20,
+    "losses": 9
   },
-  "winRate": 100,
-  "lastUpdated": "2025-12-29",
+  "winRate": 69.0,
+  "lastUpdated": "2026-01-02",
   "currentStreak": 1,
-  "longestWinStreak": 1,
-  "longestLossStreak": 0,
+  "longestWinStreak": 5,
+  "longestLossStreak": 2,
   "totalProfit": 224.84,
   "history": [
     {
@@ -55,10 +55,18 @@
           "id": 406,
           "team": "Atlanta Falcons",
           "description": "Falcons +7",
-          "result": "pending"
+          "odds": -110,
+          "stake": 2,
+          "profit": 181.82,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
         }
       ],
-      "dayResult": "pending"
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
     },
     {
       "date": "2025-12-30",
@@ -72,10 +80,11 @@
           "description": "Illinois +3",
           "odds": -110,
           "stake": 1,
+          "profit": 90.91,
+          "result": "win",
           "fund": "SharpFund",
           "sport": "NCAAF",
-          "betType": "spread",
-          "result": "pending"
+          "betType": "spread"
         },
         {
           "id": 415,
@@ -83,13 +92,16 @@
           "description": "USC -4",
           "odds": -110,
           "stake": 1.5,
+          "profit": -150,
+          "result": "loss",
           "fund": "SharpFund",
           "sport": "NCAAF",
-          "betType": "spread",
-          "result": "pending"
+          "betType": "spread"
         }
       ],
-      "dayResult": "pending"
+      "dayResult": "split",
+      "dayWins": 1,
+      "dayLosses": 1
     },
     {
       "date": "2025-12-31",
@@ -103,13 +115,75 @@
           "description": "Georgetown +9.5",
           "odds": -112,
           "stake": 1.5,
+          "profit": -150,
+          "result": "loss",
           "fund": "SharpFund",
           "sport": "NCAAB",
-          "betType": "spread",
-          "result": "pending"
+          "betType": "spread"
         }
       ],
-      "dayResult": "pending"
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 1
+    },
+    {
+      "date": "2026-01-01",
+      "featuredSource": "SharpFund_NCAAB_spread",
+      "sourceRecord": "18-8",
+      "sourceWinPct": 69.2,
+      "picks": [
+        {
+          "id": 426,
+          "team": "Indiana State",
+          "description": "Indiana St +10.5",
+          "odds": -110,
+          "stake": 2,
+          "profit": 181.82,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 427,
+          "team": "Northern Colorado",
+          "description": "N. Colorado +2.5",
+          "odds": -105,
+          "stake": 1.5,
+          "profit": -150,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 425,
+          "team": "Bradley",
+          "description": "Bradley +4.5",
+          "odds": -108,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 428,
+          "team": "UIC",
+          "description": "UIC +6.5",
+          "odds": -115,
+          "stake": 1,
+          "profit": 86.96,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "split",
+      "dayWins": 2,
+      "dayLosses": 2
     }
   ]
 }
