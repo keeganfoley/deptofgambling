@@ -1,17 +1,17 @@
 {
-  "asOfDate": "2026-01-02",
+  "asOfDate": "2026-01-03",
   "combined": {
-    "balance": 45514.78,
+    "balance": 45438.83,
     "startingBalance": 40000,
-    "netPL": 5514.78,
-    "roi": 13.79,
+    "netPL": 5438.83,
+    "roi": 13.6,
     "record": {
-      "wins": 237,
-      "losses": 183,
+      "wins": 243,
+      "losses": 188,
       "pushes": 2
     },
     "winRate": 56.4,
-    "unitsWon": 55.15,
+    "unitsWon": 54.39,
     "sharpe": null
   },
   "funds": {
@@ -21,7 +21,7 @@
       "balance": 10019.75,
       "startingBalance": 10000,
       "netPL": 19.75,
-      "roi": 0.20,
+      "roi": 0.2,
       "record": {
         "wins": 100,
         "losses": 92,
@@ -35,17 +35,17 @@
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 13392.49,
+      "balance": 13316.54,
       "startingBalance": 10000,
-      "netPL": 3392.49,
-      "roi": 33.92,
+      "netPL": 3316.54,
+      "roi": 33.17,
       "record": {
-        "wins": 95,
-        "losses": 65,
+        "wins": 100,
+        "losses": 69,
         "pushes": 0
       },
-      "winRate": 59.4,
-      "unitsWon": 33.92,
+      "winRate": 59.2,
+      "unitsWon": 33.17,
       "color": "#22c55e",
       "status": "active"
     },
@@ -55,13 +55,13 @@
       "balance": 10759.63,
       "startingBalance": 10000,
       "netPL": 759.63,
-      "roi": 7.60,
+      "roi": 7.6,
       "record": {
-        "wins": 18,
-        "losses": 12,
+        "wins": 19,
+        "losses": 13,
         "pushes": 0
       },
-      "winRate": 60,
+      "winRate": 59.4,
       "unitsWon": 7.6,
       "color": "#f97316",
       "status": "active"
