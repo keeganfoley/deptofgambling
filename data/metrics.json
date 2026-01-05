@@ -1,18 +1,18 @@
 {
-  "totalBets": 434,
-  "wins": 243,
-  "losses": 188,
+  "totalBets": 440,
+  "wins": 247,
+  "losses": 190,
   "pushes": 2,
-  "winRate": 56.38,
-  "totalWinnings": 29453.83,
-  "totalLossesAmount": 24015.0,
+  "winRate": 56.52,
+  "totalWinnings": 29922.0,
+  "totalLossesAmount": 24365.0,
   "avgWin": 121.21,
   "avgLoss": -127.74,
-  "avgProfitPerBet": 12.53,
+  "avgProfitPerBet": 12.63,
   "medianProfit": 62,
   "largestWin": 345,
   "largestLoss": -250,
-  "profitFactor": 1.226,
+  "profitFactor": 1.228,
   "maxWinStreak": 9,
   "maxLossStreak": 8,
   "currentStreak": 1,
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 46317.85,
   "maxDrawdownTroughBalance": 38421.95,
   "currentDrawdown": {
-    "amount": -879.02,
-    "percentage": -1.9,
-    "daysSincePeak": 16,
+    "amount": -700.08,
+    "percentage": -1.5,
+    "daysSincePeak": 17,
     "peakBalance": 46317.85,
     "peakDate": "2025-12-18",
-    "currentBalance": 45438.83
+    "currentBalance": 45617.77
   },
   "sharpeRatio": null,
   "sharpeRatioNote": "Calculated",
@@ -40,27 +40,27 @@
   "clvTrackingStartDate": "2025-11-27",
   "rollingPerformance": {
     "last7Days": {
-      "wins": 26,
-      "losses": 29,
+      "wins": 30,
+      "losses": 31,
       "pushes": 0,
-      "pnl": -278.73,
+      "pnl": -160.56,
       "roi": -0.09183855024711698,
-      "bets": 55
+      "bets": 61
     },
     "last30Days": {
-      "wins": 129,
-      "losses": 107,
+      "wins": 133,
+      "losses": 109,
       "pushes": 0,
-      "pnl": 2235.531925465835,
+      "pnl": 2353.701925465835,
       "roi": 0.686746617146405,
-      "bets": 237
+      "bets": 243
     },
     "last10Bets": {
-      "wins": 4,
-      "losses": 6,
+      "wins": 6,
+      "losses": 4,
       "pushes": 0,
-      "pnl": -171.22000000000003,
-      "roi": -0.5541100323624596,
+      "pnl": -53.05,
+      "roi": -0.053,
       "bets": 10
     }
   },
