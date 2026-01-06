@@ -1,51 +1,51 @@
 {
-  "asOfDate": "2026-01-05",
+  "asOfDate": "2026-01-06",
   "combined": {
-    "balance": 45617.77,
+    "balance": 45474.11,
     "startingBalance": 40000,
-    "netPL": 5617.77,
-    "roi": 14.04,
+    "netPL": 5474.11,
+    "roi": 13.69,
     "record": {
-      "wins": 250,
-      "losses": 192,
+      "wins": 254,
+      "losses": 197,
       "pushes": 2
     },
-    "winRate": 56.6,
-    "unitsWon": 56.18,
+    "winRate": 56.1,
+    "unitsWon": 54.74,
     "sharpe": 4.4
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 10435.34,
+      "balance": 10471.7,
       "startingBalance": 10000,
-      "netPL": 435.34,
-      "roi": 4.35,
+      "netPL": 471.7,
+      "roi": 4.72,
       "record": {
-        "wins": 103,
-        "losses": 92,
+        "wins": 104,
+        "losses": 93,
         "pushes": 1
       },
-      "winRate": 52.8,
-      "unitsWon": 4.35,
+      "winRate": 52.5,
+      "unitsWon": 4.72,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 12987.3,
+      "balance": 12759.66,
       "startingBalance": 10000,
-      "netPL": 2987.3,
-      "roi": 29.87,
+      "netPL": 2759.66,
+      "roi": 27.6,
       "record": {
-        "wins": 103,
-        "losses": 73,
+        "wins": 105,
+        "losses": 77,
         "pushes": 0
       },
-      "winRate": 58.5,
-      "unitsWon": 29.87,
+      "winRate": 57.7,
+      "unitsWon": 27.6,
       "color": "#22c55e",
       "status": "active"
     },
@@ -69,17 +69,17 @@
     "CatalystFund": {
       "name": "Catalyst Fund",
       "tagline": "Situational opportunities",
-      "balance": 11435.5,
+      "balance": 11483.12,
       "startingBalance": 10000,
-      "netPL": 1435.5,
-      "roi": 14.36,
+      "netPL": 1483.12,
+      "roi": 14.83,
       "record": {
-        "wins": 25,
+        "wins": 26,
         "losses": 14,
         "pushes": 1
       },
-      "winRate": 64.1,
-      "unitsWon": 14.36,
+      "winRate": 63.4,
+      "unitsWon": 14.83,
       "color": "#8b5cf6",
       "status": "active"
     }

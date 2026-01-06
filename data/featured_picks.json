@@ -1,14 +1,14 @@
 {
   "record": {
-    "wins": 20,
-    "losses": 9
+    "wins": 24,
+    "losses": 11
   },
-  "winRate": 69.0,
-  "lastUpdated": "2026-01-02",
-  "currentStreak": 1,
+  "winRate": 68.6,
+  "lastUpdated": "2026-01-06",
+  "currentStreak": 3,
   "longestWinStreak": 5,
   "longestLossStreak": 2,
-  "totalProfit": 224.84,
+  "totalProfit": 364.23,
   "history": [
     {
       "date": "2025-12-28",
@@ -184,6 +184,111 @@
       "dayResult": "split",
       "dayWins": 2,
       "dayLosses": 2
+    },
+    {
+      "date": "2026-01-03",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "16-8",
+      "sourceWinPct": 66.7,
+      "picks": [
+        {
+          "id": 446,
+          "team": "Dallas Mavericks",
+          "description": "Mavericks +8",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": 136.36,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
+    },
+    {
+      "date": "2026-01-04",
+      "featuredSource": "SharpFund_NFL_spread",
+      "sourceRecord": "16-4",
+      "sourceWinPct": 80.0,
+      "picks": [
+        {
+          "id": 449,
+          "team": "New Orleans Saints",
+          "description": "Saints +4.5",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": 136.36,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        },
+        {
+          "id": 450,
+          "team": "New York Giants",
+          "description": "Giants +3",
+          "odds": -102,
+          "stake": 1.0,
+          "profit": 98.04,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        },
+        {
+          "id": 452,
+          "team": "New York Jets",
+          "description": "Jets +12",
+          "odds": -110,
+          "stake": 2.0,
+          "profit": -200.0,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        },
+        {
+          "id": 453,
+          "team": "Arizona Cardinals",
+          "description": "Cardinals +14",
+          "odds": -105,
+          "stake": 1.5,
+          "profit": -150.0,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NFL",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "split",
+      "dayWins": 2,
+      "dayLosses": 2
+    },
+    {
+      "date": "2026-01-05",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "16-7",
+      "sourceWinPct": 69.6,
+      "picks": [
+        {
+          "id": 462,
+          "team": "Los Angeles Clippers",
+          "description": "Clippers +3.5",
+          "odds": -118,
+          "stake": 1.5,
+          "profit": 127.12,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
     }
   ]
 }
