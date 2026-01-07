@@ -111,32 +111,32 @@
       "sport": "NBA",
       "emoji": "\ud83c\udfc0",
       "record": {
-        "wins": 82,
-        "losses": 54,
+        "wins": 85,
+        "losses": 55,
         "pushes": 0,
-        "total": 137
+        "total": 140
       },
-      "wins": 82,
-      "losses": 54,
-      "winRate": 59.85,
+      "wins": 85,
+      "losses": 55,
+      "winRate": 60.71,
       "roi": 2.3898938511960086,
-      "pnl": 2476.33,
+      "pnl": 2702.92,
       "unitsWon": 24.428300000000004
     },
     "NCAAB": {
       "sport": "NCAAB",
       "emoji": "\ud83c\udf93",
       "record": {
-        "wins": 55,
-        "losses": 38,
+        "wins": 56,
+        "losses": 39,
         "pushes": 0,
-        "total": 93
+        "total": 95
       },
-      "wins": 55,
-      "losses": 38,
-      "winRate": 59.14,
+      "wins": 56,
+      "losses": 39,
+      "winRate": 58.95,
       "roi": 1.1127008854270695,
-      "pnl": 1206.45,
+      "pnl": 1155.47,
       "unitsWon": 13.928233333333342
     },
     "NFL": {
@@ -175,14 +175,14 @@
       "sport": "NHL",
       "emoji": "\ud83c\udfd2",
       "record": {
-        "wins": 43,
-        "losses": 37,
+        "wins": 44,
+        "losses": 39,
         "pushes": 1,
-        "total": 81
+        "total": 84
       },
-      "wins": 43,
-      "losses": 37,
-      "winRate": 53.09,
+      "wins": 44,
+      "losses": 39,
+      "winRate": 52.38,
       "roi": 1.6432492997198875,
       "pnl": 956.88,
       "unitsWon": 8.799599999999996
@@ -202,6 +202,22 @@
       "roi": -100,
       "pnl": -150,
       "unitsWon": -1.5
+    },
+    "NCAAW": {
+      "sport": "NCAAW",
+      "emoji": "\ud83c\udfc0",
+      "record": {
+        "wins": 1,
+        "losses": 0,
+        "pushes": 0,
+        "total": 1
+      },
+      "wins": 1,
+      "losses": 0,
+      "winRate": 100.0,
+      "roi": 95.24,
+      "pnl": 47.62,
+      "unitsWon": 0.48
     }
   },
   "betTypeBreakdown": {
@@ -230,35 +246,24 @@
     "Spread": {
       "type": "Spread",
       "record": {
-        "wins": 168,
-        "losses": 107,
+        "wins": 172,
+        "losses": 109,
         "pushes": 1
       },
-      "winRate": 61.09,
-      "pnl": 6770.92,
+      "winRate": 60.99,
+      "pnl": 6946.53,
       "roi": 2.4674537913432966
     },
     "Moneyline": {
       "type": "Moneyline",
       "record": {
-        "wins": 37,
-        "losses": 33,
+        "wins": 38,
+        "losses": 35,
         "pushes": 0
       },
-      "winRate": 52.86,
+      "winRate": 52.05,
       "pnl": 844.33,
       "roi": 1.3543569131832789
-    },
-    "Skip": {
-      "type": "Skip",
-      "record": {
-        "wins": 0,
-        "losses": 0,
-        "pushes": 0
-      },
-      "winRate": 0,
-      "pnl": 0,
-      "roi": 0
     }
   },
   "stakeBreakdown": {
