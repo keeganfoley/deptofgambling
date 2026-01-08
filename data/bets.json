@@ -4444,7 +4444,9 @@
     "finalScore": "Jets 4, Sabres 1",
     "payout": 240,
     "profit": 240,
-    "analysis": "Only 45% of bets but 82% of money on Jets -1.5 = +37% DIFF. Textbook sharp action. Winnipeg is rolling and Buffalo inconsistent. Puck line at +192 offers strong value."
+    "analysis": "Only 45% of bets but 82% of money on Jets -1.5 = +37% DIFF. Textbook sharp action. Winnipeg is rolling and Buffalo inconsistent. Puck line at +192 offers strong value.",
+    "score": "Jets 4, Sabres 1",
+    "finalStat": "Jets 4, Sabres 1"
   },
   {
     "id": 203,
@@ -4468,7 +4470,9 @@
     "finalScore": "Magic 106, Heat 105",
     "payout": 86.96,
     "profit": 86.96,
-    "analysis": "Sharp Action and Big Money indicators both lit on Heat. 71% of bets with matching money flow. Orlando missing Banchero. Heat getting 6.5 with sharp confirmation."
+    "analysis": "Sharp Action and Big Money indicators both lit on Heat. 71% of bets with matching money flow. Orlando missing Banchero. Heat getting 6.5 with sharp confirmation.",
+    "score": "Magic 106, Heat 105",
+    "finalStat": "Magic 106, Heat 105"
   },
   {
     "id": 204,
@@ -4492,7 +4496,9 @@
     "finalScore": "Celtics 126, Lakers 105",
     "payout": -150,
     "profit": -150,
-    "analysis": "82% of MONEY on Lakers with only 36% of tickets = +46% DIFF. Institutional money betting LA. Second night of B2B for BOTH teams. Rivalry game - Lakers won't get blown out at TD Garden."
+    "analysis": "82% of MONEY on Lakers with only 36% of tickets = +46% DIFF. Institutional money betting LA. Second night of B2B for BOTH teams. Rivalry game - Lakers won't get blown out at TD Garden.",
+    "score": "Celtics 126, Lakers 105",
+    "finalStat": "Celtics 126, Lakers 105"
   },
   {
     "id": 205,
@@ -4516,7 +4522,9 @@
     "finalScore": "Gonzaga 94, Kentucky 59",
     "payout": -100,
     "profit": -100,
-    "analysis": "Model +2.8 line vs market +5.5 = 6.7% edge (A- grade). Line moved FOR us from +2.5 to +5.5. Gonzaga coming off 40-point loss to Michigan - letdown spot. Getting 5.5 on a top-20 team is value."
+    "analysis": "Model +2.8 line vs market +5.5 = 6.7% edge (A- grade). Line moved FOR us from +2.5 to +5.5. Gonzaga coming off 40-point loss to Michigan - letdown spot. Getting 5.5 on a top-20 team is value.",
+    "score": "Gonzaga 94, Kentucky 59",
+    "finalStat": "Gonzaga 94, Kentucky 59"
   },
   {
     "id": 206,
@@ -4540,7 +4548,9 @@
     "finalScore": "James Madison 31, Troy 14",
     "payout": 116.82,
     "profit": 116.82,
-    "analysis": "Sharpest signal of the day: 27% of bets but 85% of money on Troy +24.5 = +58% DIFF. Smart money thinks JMU's dominant season meets resistance in Sun Belt Championship."
+    "analysis": "Sharpest signal of the day: 27% of bets but 85% of money on Troy +24.5 = +58% DIFF. Smart money thinks JMU's dominant season meets resistance in Sun Belt Championship.",
+    "score": "James Madison 31, Troy 14",
+    "finalStat": "James Madison 31, Troy 14"
   },
   {
     "id": 207,
@@ -4564,7 +4574,9 @@
     "finalScore": "Knicks 146, Jazz 112",
     "payout": -200,
     "profit": -200,
-    "analysis": "Model +6.8 vs market +15.5 = 11.3% edge (A+ grade). Utah is 3-1 in last 4, just beat Brooklyn by 13. Markkanen scored 30 last night. Line moved from +11.5 to +15.5 - market overcorrected."
+    "analysis": "Model +6.8 vs market +15.5 = 11.3% edge (A+ grade). Utah is 3-1 in last 4, just beat Brooklyn by 13. Markkanen scored 30 last night. Line moved from +11.5 to +15.5 - market overcorrected.",
+    "score": "Knicks 146, Jazz 112",
+    "finalStat": "Knicks 146, Jazz 112"
   },
   {
     "id": 208,
@@ -4588,7 +4600,9 @@
     "finalScore": "Hornets 111, Raptors 86",
     "payout": 109.65,
     "profit": 109.65,
-    "analysis": "Sharp Action on Hornets spread. 39% bets, 52% money = +13% DIFF. Public on Raptors (61% bets) but Toronto is 4-18. Line of 7.5 is too many points for a Raptors team that can't stop anyone."
+    "analysis": "Sharp Action on Hornets spread. 39% bets, 52% money = +13% DIFF. Public on Raptors (61% bets) but Toronto is 4-18. Line of 7.5 is too many points for a Raptors team that can't stop anyone.",
+    "score": "Hornets 111, Raptors 86",
+    "finalStat": "Hornets 111, Raptors 86"
   },
   {
     "id": 209,
@@ -4612,7 +4626,9 @@
     "finalScore": "Utah Mammoth 4, Canucks 1",
     "payout": -75,
     "profit": -75,
-    "analysis": "56% bets, 66% money on Canucks +1.5 = +10% DIFF. Utah HC favored but sharps backing Vancouver to keep it close despite 9 injuries. Puck line value on home dog."
+    "analysis": "56% bets, 66% money on Canucks +1.5 = +10% DIFF. Utah HC favored but sharps backing Vancouver to keep it close despite 9 injuries. Puck line value on home dog.",
+    "score": "Utah Mammoth 4, Canucks 1",
+    "finalStat": "Utah Mammoth 4, Canucks 1"
   },
   {
     "id": 210,
@@ -4636,7 +4652,9 @@
     "finalScore": "Thunder 132, Mavericks 111",
     "payout": -150,
     "profit": -150,
-    "analysis": "Model -0.1 (essentially even) vs market +15.5 = 10.5% edge (A+ grade). Kyrie/Lively/Exum out but OKC also has injury concerns. Playoff preview - Dallas won't roll over."
+    "analysis": "Model -0.1 (essentially even) vs market +15.5 = 10.5% edge (A+ grade). Kyrie/Lively/Exum out but OKC also has injury concerns. Playoff preview - Dallas won't roll over.",
+    "score": "Thunder 132, Mavericks 111",
+    "finalStat": "Thunder 132, Mavericks 111"
   },
   {
     "date": "2025-12-06T18:00:00Z",
@@ -8732,7 +8750,8 @@
     "analysis": "Both teams playing conservative football. Panthers offense has struggled all season with Bryce Young. Seahawks already clinched playoffs and have nothing to prove. Panthers missing two defensive starters (Wallace, Wharton). Low-scoring division-style matchup expected.",
     "score": "SEA 27, CAR 10",
     "payout": 190.91,
-    "ev": 3
+    "ev": 3,
+    "finalStat": "SEA 27, CAR 10"
   },
   {
     "id": 390,
@@ -8758,7 +8777,8 @@
     "analysis": "T.J. Watt is OUT with a lung injury - Pittsburgh's best defensive player. DK Metcalf is SUSPENDED after a fan altercation - Steelers missing their top receiver too. Division rivalry game in Cleveland. Browns have Myles Garrett one sack from the all-time record. Two key Steelers out is huge.",
     "score": "CLE 13, PIT 6",
     "payout": 283.93,
-    "ev": 1.65
+    "ev": 1.65,
+    "finalStat": "CLE 13, PIT 6"
   },
   {
     "id": 391,
@@ -8784,7 +8804,8 @@
     "analysis": "AFC North rivalry games are always ugly and low-scoring. T.J. Watt out for Steelers. Both teams have major injuries across the board. Weather in Cleveland late December adds another factor. These divisional matchups rarely see fireworks.",
     "score": "PIT 6, CLE 13",
     "payout": 190.91,
-    "ev": 2
+    "ev": 2,
+    "finalStat": "PIT 6, CLE 13"
   },
   {
     "id": 392,
@@ -8810,7 +8831,8 @@
     "analysis": "Patriots are missing 7 players including Harold Landry III, Robert Spillane, and Mack Hollins. Division games between these teams are typically closer than the line suggests. Patriots haven't covered 12.5+ points often this season. Brady Cook gives Jets a chance to keep it respectable.",
     "score": "NE 42, NYJ 10",
     "payout": 0,
-    "ev": 0.6
+    "ev": 0.6,
+    "finalStat": "NE 42, NYJ 10"
   },
   {
     "id": 393,
@@ -8836,7 +8858,8 @@
     "analysis": "Dolphins were eliminated from playoffs but playing with nothing to lose at home. Tampa Bay is missing Pro Bowl left tackle Tristan Wirfs. Buccaneers have lost 6 of their last 7 games. Sometimes teams with nothing to lose play their best football.",
     "score": "MIA 20, TB 17",
     "payout": 190.91,
-    "ev": 3
+    "ev": 3,
+    "finalStat": "MIA 20, TB 17"
   },
   {
     "id": 394,
@@ -8862,7 +8885,8 @@
     "analysis": "Warriors are 6-11 on the road this season. Raptors playing at home where they're 8-7. Toronto is coming off a tough loss and looking to bounce back. 4.5 points is a lot to give a road team that struggles away from home.",
     "score": "TOR 141, GSW 127 (OT)",
     "payout": 190.91,
-    "ev": 3.3
+    "ev": 3.3,
+    "finalStat": "TOR 141, GSW 127 (OT)"
   },
   {
     "id": 395,
@@ -8888,7 +8912,8 @@
     "analysis": "Both teams are 2-13 with identical nine-game losing streaks. Giants have shut down four players including star left tackle Andrew Thomas. Raiders also decimated but Ashton Jeanty just had his best game of the season (128 rushing yards). Model sees this as essentially a coin-flip, so getting +3 is value.",
     "score": "NYG 34, LV 10",
     "payout": 0,
-    "ev": 16.2
+    "ev": 16.2,
+    "finalStat": "NYG 34, LV 10"
   },
   {
     "id": 396,
@@ -8914,7 +8939,8 @@
     "analysis": "Canadiens are red hot - they've earned points in 7 of their last 8 games (5-1-2). They just traded for Phillip Danault to bolster their center depth. Both teams tied at 45 points in the Atlantic. Getting plus money on a team playing this well is value.",
     "score": "TB 5, MTL 4 (SO)",
     "payout": 0,
-    "ev": 4
+    "ev": 4,
+    "finalStat": "TB 5, MTL 4 (SO)"
   },
   {
     "id": 397,
@@ -8940,7 +8966,8 @@
     "analysis": "Jayson Tatum is OUT recovering from Achilles surgery - Boston's best player is sidelined. The Celtics are still playing well without him (18-11), but 7.5 points on the road without your MVP is a big number to cover. Blazers have Deni Avdija scoring 25.6 per game to keep it close.",
     "score": "POR 114, BOS 108",
     "payout": 186.95999999999998,
-    "ev": 4.8
+    "ev": 4.8,
+    "finalStat": "POR 114, BOS 108"
   },
   {
     "id": 398,
@@ -8966,7 +8993,8 @@
     "analysis": "Wizards just beat these same Grizzlies 130-122 last week, erasing a 20-point deficit. They followed that up with 138 points vs Toronto on Friday. Grizzlies have one of the longest injury lists in the NBA - Zach Edey, Ty Jerome, Brandon Clarke, Scotty Pippen Jr. all out. Ja Morant is back but on minutes restriction.",
     "score": "WAS 116, MEM 112",
     "payout": 291.51,
-    "ev": 11.85
+    "ev": 11.85,
+    "finalStat": "WAS 116, MEM 112"
   },
   {
     "id": 399,
@@ -8992,7 +9020,8 @@
     "analysis": "Toronto just scored 7 goals against Ottawa in a wild shootout win. William Nylander left with a lower-body injury but traveled with the team and coach Berube isn't concerned. Despite Detroit winning twice against Toronto this season, getting plus money on a Leafs team that just put up 7 goals has value.",
     "score": "DET 3, TOR 2 (OT)",
     "payout": 0,
-    "ev": 12
+    "ev": 12,
+    "finalStat": "DET 3, TOR 2 (OT)"
   },
   {
     "id": 400,
@@ -10575,7 +10604,8 @@
     "actualScore": "CLE 120-116 IND",
     "finalScore": "Cavaliers 120, Pacers 116",
     "profit": 142.86,
-    "finalStat": "Cavaliers 120, Pacers 116 (covered +6.5)"
+    "finalStat": "Cavaliers 120, Pacers 116 (covered +6.5)",
+    "score": "Cavaliers 120, Pacers 116"
   },
   {
     "id": 465,
@@ -10600,7 +10630,8 @@
     "actualScore": "NYI 9-0 NJD",
     "finalScore": "Islanders 9, Devils 0",
     "profit": -100.0,
-    "finalStat": "Islanders 9, Devils 0"
+    "finalStat": "Islanders 9, Devils 0",
+    "score": "Islanders 9, Devils 0"
   },
   {
     "id": 466,
@@ -10625,7 +10656,8 @@
     "actualScore": "TOR 4-1 FLA",
     "finalScore": "Maple Leafs 4, Panthers 1",
     "profit": 150.0,
-    "finalStat": "Maple Leafs 4, Panthers 1"
+    "finalStat": "Maple Leafs 4, Panthers 1",
+    "score": "Maple Leafs 4, Panthers 1"
   },
   {
     "id": 467,
@@ -10650,7 +10682,8 @@
     "actualScore": "MIN 122-94 MIA",
     "finalScore": "Timberwolves 122, Heat 94",
     "profit": -100.0,
-    "finalStat": "Timberwolves 122, Heat 94 (lost by 28)"
+    "finalStat": "Timberwolves 122, Heat 94 (lost by 28)",
+    "score": "Timberwolves 122, Heat 94"
   },
   {
     "id": 468,
@@ -10675,7 +10708,8 @@
     "actualScore": "MEM 106-105 SAS",
     "finalScore": "Grizzlies 106, Spurs 105",
     "profit": 95.24,
-    "finalStat": "Grizzlies 106, Spurs 105 (won outright)"
+    "finalStat": "Grizzlies 106, Spurs 105 (won outright)",
+    "score": "Grizzlies 106, Spurs 105"
   },
   {
     "id": 469,
@@ -10700,7 +10734,8 @@
     "actualScore": "EDM 6-2 NSH",
     "finalScore": "Oilers 6, Predators 2",
     "profit": -50.0,
-    "finalStat": "Oilers 6, Predators 2"
+    "finalStat": "Oilers 6, Predators 2",
+    "score": "Oilers 6, Predators 2"
   },
   {
     "id": 470,
@@ -10725,7 +10760,8 @@
     "actualScore": "WIS 80-72 UCLA",
     "finalScore": "Wisconsin 80, UCLA 72",
     "profit": -100.0,
-    "finalStat": "Wisconsin 80, UCLA 72 (lost by 8)"
+    "finalStat": "Wisconsin 80, UCLA 72 (lost by 8)",
+    "score": "Wisconsin 80, UCLA 72"
   },
   {
     "id": 471,
@@ -10750,7 +10786,8 @@
     "actualScore": "KU 104-100 TCU (OT)",
     "finalScore": "Kansas 104, TCU 100 (OT)",
     "profit": 49.02,
-    "finalStat": "Kansas 104, TCU 100 OT (covered +7.5)"
+    "finalStat": "Kansas 104, TCU 100 OT (covered +7.5)",
+    "score": "Kansas 104, TCU 100 (OT)"
   },
   {
     "id": 472,
@@ -10775,6 +10812,232 @@
     "actualScore": "DAL 100-98 SAC",
     "finalScore": "Mavericks 100, Kings 98",
     "profit": 88.49,
-    "finalStat": "Mavericks 100, Kings 98 (covered +5.5)"
+    "finalStat": "Mavericks 100, Kings 98 (covered +5.5)",
+    "score": "Mavericks 100, Kings 98"
+  },
+  {
+    "id": 473,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "SharpFund",
+    "description": "Stars ML",
+    "team": "Dallas Stars",
+    "opponent": "Washington Capitals",
+    "odds": -104,
+    "stake": 1.5,
+    "result": "win",
+    "gameTime": "7:00 PM ET",
+    "edge": 7.2,
+    "expectedValue": 3.6,
+    "conviction": 85,
+    "thesis": "Classic sharp divergence - only 27% of tickets but 49% of money on Dallas. Sharp Action, Big Money, and Top Experts all aligned on the Stars. When you see tickets vs money diverge by +22%, follow the dollars. Road favorite at pick 'em price getting smart money love.",
+    "slug": "stars-ml-sharp-jan7-2026",
+    "finalScore": "Stars 4-1 Capitals",
+    "payout": 294.23,
+    "profit": 144.23,
+    "score": "Stars 4-1 Capitals",
+    "finalStat": "Stars 4-1 Capitals"
+  },
+  {
+    "id": 474,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Celtics -9",
+    "team": "Boston Celtics",
+    "opponent": "Denver Nuggets",
+    "odds": -108,
+    "stake": 1.5,
+    "result": "loss",
+    "gameTime": "7:00 PM ET",
+    "edge": 9.0,
+    "expectedValue": 4.5,
+    "conviction": 82,
+    "thesis": "Nikola Jokic is OUT with a left knee bone bruise - the three-time MVP averaging 29.6/12.2/11.0 won't play. Aaron Gordon, Jamal Murray, and Christian Braun are all questionable. Yes, Tatum is out for Boston, but Jaylen Brown has elevated to 29.6 PPG and the Celtics have the #2 defense in the NBA (110.5 PPG allowed). The loss of Jokic is catastrophic for Denver. Sharp Action, Model Projection, and Top Experts all aligned.",
+    "slug": "celtics-spread-vector-jan7-2026",
+    "finalScore": "Nuggets 114-110 Celtics",
+    "payout": 0,
+    "profit": -150.0,
+    "score": "Nuggets 114-110 Celtics",
+    "finalStat": "Nuggets 114-110 Celtics"
+  },
+  {
+    "id": 475,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Xavier +4.5",
+    "team": "Xavier Musketeers",
+    "opponent": "Marquette Golden Eagles",
+    "odds": -110,
+    "stake": 0.5,
+    "result": "win",
+    "gameTime": "7:00 PM ET",
+    "edge": 5.2,
+    "expectedValue": 2.6,
+    "conviction": 52,
+    "thesis": "Big Money, Model Projection, and Top Experts all aligned on Xavier getting 4.5 at Marquette. 71% of bets on Xavier with 68% money. The Musketeers are live in this Big East road matchup. Small play given the public alignment but sharp indicators support.",
+    "slug": "xavier-spread-vector-jan7-2026",
+    "finalScore": "Marquette 66-65 Xavier",
+    "payout": 95.45,
+    "profit": 45.45,
+    "score": "Marquette 66-65 Xavier",
+    "finalStat": "Marquette 66-65 Xavier"
+  },
+  {
+    "id": 476,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "CatalystFund",
+    "description": "Grizzlies +7",
+    "team": "Memphis Grizzlies",
+    "opponent": "Phoenix Suns",
+    "odds": -110,
+    "stake": 1.5,
+    "result": "loss",
+    "gameTime": "8:00 PM ET",
+    "edge": 6.5,
+    "expectedValue": 3.3,
+    "conviction": 70,
+    "thesis": "Phoenix on the road leg of a B2B after playing yesterday. The Suns are on their 2nd of 3 games in 4 nights. Line opened at -4.5 and ballooned to -6.5/-7 despite 47/53 public split - suspicious movement. Memphis at home with Ja Morant in a bounce-back spot against a tired Suns team. Classic rest-advantage situational play. Got +7 which is even better than the +6.5 I targeted.",
+    "slug": "grizzlies-spread-catalyst-jan7-2026",
+    "finalScore": "Suns 117-98 Grizzlies",
+    "payout": 0,
+    "profit": -150.0,
+    "score": "Suns 117-98 Grizzlies",
+    "finalStat": "Suns 117-98 Grizzlies"
+  },
+  {
+    "id": 477,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Iowa State -4.5",
+    "team": "Iowa State Cyclones",
+    "opponent": "Baylor Bears",
+    "odds": -105,
+    "stake": 1.0,
+    "result": "win",
+    "gameTime": "8:00 PM ET",
+    "edge": 8.5,
+    "expectedValue": 4.3,
+    "conviction": 72,
+    "thesis": "Iowa State is 14-0 and tied for their best start in school history. They shoot 53.1% from the floor (3rd nationally) and 41.9% from three (4th nationally). Baylor's defense is atrocious - allowing 81 PPG (#325 nationally) with 46.4% opponent FG% (#310). Line moved from -6.5 to -4.5 in our favor. Model Projection, Top Experts, and PRO Systems all triggered. The Cyclones are 5-1 in their last 6 against Baylor.",
+    "slug": "iowa-state-spread-vector-jan7-2026",
+    "finalScore": "Iowa State 70-60 Baylor",
+    "payout": 195.24,
+    "profit": 95.24,
+    "score": "Iowa State 70-60 Baylor",
+    "finalStat": "Iowa State 70-60 Baylor"
+  },
+  {
+    "id": 478,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "CatalystFund",
+    "description": "Arkansas -3.5",
+    "team": "Arkansas Razorbacks",
+    "opponent": "Ole Miss Rebels",
+    "odds": -110,
+    "stake": 1.0,
+    "result": "win",
+    "gameTime": "9:00 PM ET",
+    "edge": 6.0,
+    "expectedValue": 3.0,
+    "conviction": 68,
+    "thesis": "Arkansas has strong money support with +13% divergence (59% bets, 72% money). Big Money, Model Projection, and Top Experts all aligned on the Razorbacks. SEC home game with revenge motivation after Ole Miss won the last meeting. The money flow suggests sharps like Arkansas laying a short number at home.",
+    "slug": "arkansas-spread-catalyst-jan7-2026",
+    "finalScore": "Arkansas 95-87 Ole Miss",
+    "payout": 190.91,
+    "profit": 90.91,
+    "score": "Arkansas 95-87 Ole Miss",
+    "finalStat": "Arkansas 95-87 Ole Miss"
+  },
+  {
+    "id": 479,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "SharpFund",
+    "description": "Senators ML",
+    "team": "Ottawa Senators",
+    "opponent": "Utah Hockey Club",
+    "odds": 108,
+    "stake": 1.5,
+    "result": "loss",
+    "gameTime": "8:30 PM ET",
+    "edge": 7.0,
+    "expectedValue": 3.5,
+    "conviction": 78,
+    "thesis": "Plus-money road dog getting sharp love. Sharp Action and Big Money both lit. Only 31% of bets but 57% of money on Ottawa (+26% DIFF). The Senators beat Utah earlier this season 4-2 and lead the season series 1-0. Claude Giroux has been hot with 10 points in 9 games. The money differential screams sharp money loading up on the underdog at plus money.",
+    "slug": "senators-ml-sharp-jan7-2026",
+    "finalScore": "Utah 3-1 Senators",
+    "payout": 0,
+    "profit": -150.0,
+    "score": "Utah 3-1 Senators",
+    "finalStat": "Utah 3-1 Senators"
+  },
+  {
+    "id": 480,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "SharpFund",
+    "description": "Spurs -8",
+    "team": "San Antonio Spurs",
+    "opponent": "Los Angeles Lakers",
+    "odds": -105,
+    "stake": 2.0,
+    "result": "win",
+    "gameTime": "9:30 PM ET",
+    "edge": 9.5,
+    "expectedValue": 4.8,
+    "conviction": 95,
+    "thesis": "Sharpest NBA play of the night. LeBron James is QUESTIONABLE with sciatica + foot arthritis on a B2B, and Austin Reaves is OUT for a month with a calf strain. The Lakers have 4 injured players. Line moved 2 full points AGAINST the heavily-backed Lakers (78% bets). Sharp Action, Model Projection, and Top Experts all on Spurs. +44% ML money differential. Victor Wembanyama expected to play vs a depleted Lakers squad. Sharps see a blowout.",
+    "slug": "spurs-spread-sharp-jan7-2026",
+    "finalScore": "Spurs 107-91 Lakers",
+    "payout": 390.48,
+    "profit": 190.48,
+    "score": "Spurs 107-91 Lakers",
+    "finalStat": "Spurs 107-91 Lakers"
+  },
+  {
+    "id": 481,
+    "date": "2026-01-07",
+    "datePlaced": "2026-01-07",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "ContraFund",
+    "description": "Trail Blazers +7.5",
+    "team": "Portland Trail Blazers",
+    "opponent": "Houston Rockets",
+    "odds": -110,
+    "stake": 1.0,
+    "result": "win",
+    "gameTime": "10:00 PM ET",
+    "edge": 5.5,
+    "expectedValue": 2.8,
+    "conviction": 55,
+    "thesis": "Houston has been inconsistent and Portland at home with 7.5 points is generous. Model Projection supports the Trail Blazers. Line moved from +6.5 to +7.5 giving us an extra full point. 61% bets and 63% money on Portland - public aligns with the dog here but the model edge confirms the value. Got +7.5 instead of +7 which is even better.",
+    "slug": "trailblazers-spread-contra-jan7-2026",
+    "finalScore": "Trail Blazers 103-102 Rockets",
+    "payout": 190.91,
+    "profit": 90.91,
+    "score": "Trail Blazers 103-102 Rockets",
+    "finalStat": "Trail Blazers 103-102 Rockets"
   }
 ]
