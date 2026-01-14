@@ -1,51 +1,51 @@
 {
-  "asOfDate": "2026-01-11",
+  "asOfDate": "2026-01-14",
   "combined": {
-    "balance": 45894.57,
+    "balance": 45329.8,
     "startingBalance": 40000,
-    "netPL": 5894.57,
-    "roi": 14.736425,
+    "netPL": 5329.8,
+    "roi": 13.32,
     "record": {
-      "wins": 281,
-      "losses": 220,
+      "wins": 285,
+      "losses": 228,
       "pushes": 2
     },
-    "winRate": 56.0878243512974,
-    "unitsWon": 58.95,
-    "sharpe": 4.37
+    "winRate": 55.56,
+    "unitsWon": 53.3,
+    "sharpe": 3.87
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 10328.15,
+      "balance": 10506.02,
       "startingBalance": 10000,
-      "netPL": 328.15,
-      "roi": 3.2815,
+      "netPL": 506.02,
+      "roi": 5.06,
       "record": {
-        "wins": 109,
+        "wins": 111,
         "losses": 99,
         "pushes": 1
       },
-      "winRate": 52.40384615384615,
-      "unitsWon": 3.28,
+      "winRate": 52.86,
+      "unitsWon": 5.06,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 13469.61,
+      "balance": 12726.97,
       "startingBalance": 10000,
-      "netPL": 3469.61,
-      "roi": 34.6961,
+      "netPL": 2726.97,
+      "roi": 27.27,
       "record": {
-        "wins": 121,
-        "losses": 87,
+        "wins": 123,
+        "losses": 95,
         "pushes": 0
       },
-      "winRate": 58.17307692307692,
-      "unitsWon": 34.70,
+      "winRate": 56.42,
+      "unitsWon": 27.27,
       "color": "#22c55e",
       "status": "active"
     },
@@ -55,13 +55,13 @@
       "balance": 10750.54,
       "startingBalance": 10000,
       "netPL": 750.54,
-      "roi": 7.5054,
+      "roi": 7.51,
       "record": {
         "wins": 20,
         "losses": 14,
         "pushes": 0
       },
-      "winRate": 58.82352941176471,
+      "winRate": 58.82,
       "unitsWon": 7.51,
       "color": "#f97316",
       "status": "active"
@@ -72,13 +72,13 @@
       "balance": 11346.27,
       "startingBalance": 10000,
       "netPL": 1346.27,
-      "roi": 13.4627,
+      "roi": 13.46,
       "record": {
         "wins": 31,
         "losses": 20,
         "pushes": 1
       },
-      "winRate": 60.78431372549019,
+      "winRate": 60.78,
       "unitsWon": 13.46,
       "color": "#8b5cf6",
       "status": "active"
