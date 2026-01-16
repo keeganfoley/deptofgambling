@@ -31,6 +31,47 @@ If you can't explain WHY → PASS (even if signals are lit)
 - ✅ "Model edge exists because market underweighting Heat's home rest advantage"
 - ❌ "Signals are lit but I can't explain why the market would be wrong here" → PASS
 
+## 0.1.1 QUANTITATIVE STANDARD (Updated Jan 2026)
+
+> **We are an institutional fund. Every claim requires statistical evidence.**
+
+### Language Requirements
+
+| AMATEUR (Never) | INSTITUTIONAL (Always) |
+|-----------------|------------------------|
+| "Team struggling" | "3-7 ATS L10, failing to cover by avg 4.2 pts" |
+| "Good matchup" | "Opp allows 47% 3PT to PGs (28th), exploitable" |
+| "Playing well" | "+6.2 PPG above season avg over last 5 games" |
+| "Sharp money likes it" | "Line moved -3→-5 against 68% public = 2pt RLM" |
+
+### Every Pick Must Include
+
+1. **Signal Data** - Sharp Score, Edge%, DIFF, Line Movement (with numbers)
+2. **Statistical Case** - ATS record, situational stats, matchup data (with numbers)
+3. **Line Shopping** - Best available vs consensus (with numbers)
+4. **Thesis** - WHY this wins, backed by the math
+5. **Risk** - What could go wrong (honest assessment)
+
+### The Override Principle
+
+**Signals are inputs, not commands.** If the math doesn't support the signal:
+
+```
+Signal says BET but:
+- Team is 2-8 ATS L10
+- No catalyst for change
+- Line hasn't moved (market disagrees)
+→ OVERRIDE: Pass on the pick
+
+Signal says PASS but:
+- Team is 8-2 ATS L10
+- Clear situational edge
+- Line moving our way
+→ OVERRIDE: Consider the pick anyway
+```
+
+**We trust quantitative analysis over mechanical signal-following.**
+
 ## 0.2 FUND INDEPENDENCE (No Combining)
 
 **CRITICAL: Each fund operates 100% independently.**
@@ -139,13 +180,57 @@ Multiple red flags = PASS regardless of signals
 
 **The rule: Sharp signals have priority. If Sharp likes Team A, Contra does NOT fade Team A.**
 
-**PLAYER PROPS PROCESS:**
-1. First, analyze all Action Network prop projections provided
-2. Research each prop - player averages, matchup, minutes, situation
-3. Calculate edge and determine value
-4. THEN access Odds API for additional props or line verification
-5. Props must meet 15%+ edge threshold (higher variance)
-6. Props max 1u each, go to VectorFund
+---
+
+## 0.5.1 SPREADS-ONLY FOCUS (Updated Jan 2026)
+
+> **Based on 509-bet analysis: Spreads are our edge. Props and totals are bleeding money.**
+
+### THE DATA (All-Time Performance by Bet Type)
+
+| Bet Type | Record | Win % | Profit | Verdict |
+|----------|--------|-------|--------|---------|
+| **Spreads** | 198-131 | 60.2% | +$6,938 | **FOCUS HERE** |
+| **Moneylines** | 44-43 | 50.6% | +$877 | Keep (secondary) |
+| **Props** | 22-26 | 45.8% | -$1,179 | **BLOCKED** |
+| **Totals** | 20-24 | 45.5% | -$928 | **BLOCKED** |
+
+### NEW RULES (Effective Jan 14, 2026)
+
+```
+SPREADS: Full analysis, normal sizing (this is where we win)
+MONEYLINES: Allowed as secondary plays, standard sizing
+PROPS: BLOCKED - Do not bet (0 units)
+TOTALS: BLOCKED - Do not bet (0 units)
+```
+
+### WHY THIS WORKS
+
+1. **Spreads have real edge** - 60.2% over 329 bets is not luck
+2. **SharpFund + spreads = money printer** - 70.5% win rate, +32.7% ROI
+3. **Props were always high variance** - we were gambling, not investing
+4. **Totals model was broken** - consistently underperformed
+
+### SIMPLIFIED DAILY SCAN
+
+```
+Morning scan (10 min):
+1. PRO Projections → Only SPREAD lines with Grade B+ or Edge 5%+
+2. PRO Report → Sharp Action lit on any SPREAD?
+3. Public Betting → Spreads with 65%+ public + DIFF divergence?
+
+SKIP: Props tab entirely
+SKIP: Totals projections
+SKIP: Any non-spread bet types
+```
+
+### IF USER ASKS FOR PROPS/TOTALS
+
+Response: "Props and totals are currently blocked based on historical performance (-$2,107 combined). Our edge is in spreads (60.2% win rate, +$6,938). Recommend focusing there."
+
+---
+
+**~~PLAYER PROPS PROCESS:~~** *DEPRECATED - Props now blocked*
 
 **WORKFLOW ORDER:**
 1. Read all screenshots/data
@@ -171,15 +256,27 @@ Games with ZERO flags = SKIP entirely
 
 **TIER 2 FILTER (Deep Research - Flagged Games Only):**
 For games that passed Tier 1, web search:
-- Injuries (last 24 hours)
-- Rest/travel situation
-- Recent form (last 3-5 games)
-- Head-to-head history if relevant
-- Any news that affects the line
+- Injuries (last 24-48 hours ONLY)
+- Rest/travel situation (tonight's context)
+- Schedule factors (B2B, 3-in-4, travel)
+- Any RECENT news that affects the line
+
+**⚠️ RELEVANCE FILTER - Only report if:**
+```
+1. It's NEW (changed in last 24-48 hours)
+2. It's NOT already priced into the line
+3. It's ACTIONABLE (affects how we bet)
+
+✅ "Player upgraded to probable 3 hours ago" - RELEVANT
+❌ "Player has been out all season" - ALREADY PRICED, useless
+
+Ask: "Did something CHANGE recently that the market might not have fully priced?"
+If no recent change = don't mention it
+```
 
 Ask: "Does this research CONFIRM or KILL the edge?"
-- Confirms = stays in consideration
-- Kills = remove from picks
+- Confirms with RELEVANT info = stays in consideration
+- Kills or only has STALE info = remove from picks
 
 **TIER 3 FILTER (Final Conviction - Top Candidates Only):**
 For remaining games after Tier 2:
@@ -191,17 +288,25 @@ For remaining games after Tier 2:
 
 **THE KEY QUESTION:**
 Before any bet is finalized, answer:
-"Why is the market wrong, and what do I know that the line doesn't reflect?"
+"Why is the market wrong, and what RECENT information do I have that isn't fully priced?"
 
 If you can't answer clearly = NO BET
 
-**PROPS ANALYSIS:**
-For Action Network props provided:
-1. Quick scan for edges 15%+
-2. Web search player's recent games, minutes, usage
-3. Check matchup defense rankings
-4. Odds API to verify/find best line
-5. Only bet props where research confirms edge
+**INFORMATION QUALITY STANDARD:**
+
+| Information Type | Example | Action |
+|-----------------|---------|--------|
+| **FRESH (0-24 hrs)** | "Upgraded to probable 2 hrs ago" | ✅ Report, may not be priced |
+| **RECENT (24-48 hrs)** | "Ruled out yesterday afternoon" | ✅ Report, might explain signal |
+| **STALE (48+ hrs)** | "Has been out all season" | ❌ Don't mention, already priced |
+| **VAGUE** | "Team has been struggling" | ❌ Don't mention, not actionable |
+| **SITUATIONAL** | "3rd game in 4 nights tonight" | ✅ Report, current context |
+| **HISTORICAL** | "Team is 5-10 on road this year" | ❌ Don't mention, already in line |
+
+**The rule:** If it's been true for more than 48 hours, the market knows. Only mention what CHANGED.
+
+**~~PROPS ANALYSIS:~~** *DEPRECATED - Props blocked as of Jan 2026*
+Props historically -$1,179 (45.8% WR). Do not analyze or bet props.
 
 ## 0.7 FUND-BY-FUND UNIT SIZING MATRICES
 
@@ -221,8 +326,9 @@ For Action Network props provided:
 
 ### 🟢 SHARPFUND MATRIX (Follow Smart Money)
 
-**Sharp Score Calculation:**
+**Sharp Score Calculation (Updated Jan 2026):**
 ```
+CORE SIGNALS (from Action Network):
 Sharp Action lit = 3 pts
 Big Money lit = 2 pts
 DIFF 10-20% = 1 pt
@@ -230,6 +336,22 @@ DIFF 20-30% = 2 pts
 DIFF 30%+ = 3 pts
 RLM detected (1+ pt move opposite public) = 2 pts
 PRO Systems lit = 1 pt
+
+NEW INDICATORS (from Odds API + Analysis):
+Line moved 2+ pts from open = 2 pts
+Line moved 3+ pts from open = 3 pts (replaces 2 pts)
+Book discrepancy 1+ pt (best vs consensus) = 1 pt
+Book discrepancy 1.5+ pts = 2 pts (replaces 1 pt)
+
+NEGATIVE SIGNALS (deduct points):
+Line Freeze (75%+ public, <0.5 pt move) = -2 pts
+```
+
+**CLI Tools for Indicators:**
+```bash
+npx tsx scripts/find-line-value.ts nba    # Find book discrepancies
+npx tsx scripts/enhance-picks.ts "Team"   # Find best line for a pick
+npx tsx scripts/check-indicators.ts       # Full indicator scoring
 ```
 
 | Sharp Score | Signals Present | Conviction | Units |
@@ -272,6 +394,13 @@ PRO Systems lit = 1 pt
 - Sharp Action lit on public side → PASS
 - Big Money lit on public side → PASS
 - Line moving toward public → Reduce to 0.5u max
+
+**LINE FREEZE WARNING (New Jan 2026):**
+When 75%+ public on one side BUT line hasn't moved (<0.5 pts):
+- This is a potential TRAP - books want that public money
+- Do NOT automatically fade - investigate WHY line isn't moving
+- If Sharp/Big Money on public side = books agree with public
+- If no sharp signals = possible fade opportunity, but cautious (0.5u max)
 
 **3u Contra Bet Requires:** 85%+ public AND negative DIFF AND no sharp signals on public side AND primetime/popular team bias
 

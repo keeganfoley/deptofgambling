@@ -1,17 +1,393 @@
-# ANALYSIS PROMPT v4.0 - ALWAYS USE THIS FOR SCREENSHOT ANALYSIS
+# ANALYSIS PROMPT v5.0 - SPREADS FOCUS + AUTO ENHANCEMENT
 
 > **Claude: Read this file FIRST before analyzing any betting screenshots.**
-> **Then read HEDGE_FUND_ARCHITECTURE.md (v4.0) for full rules.**
+> **Updated Jan 2026: Props/Totals BLOCKED. Spreads only. Auto-enhancement enabled.**
 
 ---
 
 ## PRE-ANALYSIS CHECKLIST
 
-- [ ] Read HEDGE_FUND_ARCHITECTURE.md (v4.0)
-- [ ] Resize screenshots if needed (max 1800px width)
+- [ ] Read HEDGE_FUND_ARCHITECTURE.md for full rules
 - [ ] Identify what sports are included
 - [ ] Note current time - filter for games AFTER cutoff time only
-- [ ] **ASK USER: "Do you have props data/screenshots to include?"**
+- [ ] **SKIP props/totals** - these bet types are BLOCKED
+- [ ] **Read THESIS_LANGUAGE.md** - Never mention source names in thesis
+
+---
+
+## 📝 THESIS LANGUAGE RULES (Critical - Read THESIS_LANGUAGE.md)
+
+> **Frontend thesis must NEVER mention specific data source names.**
+> **Backend stores all raw indicator data for analysis.**
+
+### FORBIDDEN in Thesis Text
+
+| NEVER USE | USE INSTEAD |
+|-----------|-------------|
+| "Action Network" | "Our model" / "Model analysis" |
+| "Sharp Action lit" | "Professional money is backing..." |
+| "Big Money lit" | "Significant money moving to..." |
+| "PRO projections" | "Our model projects..." |
+| "DIFF calculation" | "Money diverging from public..." |
+| "Sharp Score 8" | "Multiple sharp indicators aligned" |
+| "PRO Systems triggered" | "Historical patterns favor..." |
+| "Conviction Score" | (Don't mention - internal only) |
+
+### Thesis Structure
+
+Every thesis should explain:
+1. **WHY** - Why does this edge exist?
+2. **DATA** - Numbers without source attribution
+3. **LOGIC** - Why would we win?
+4. **RISK** - What could go wrong?
+
+**See THESIS_LANGUAGE.md for full translation table and examples.**
+
+---
+
+## 🔍 EXTERNAL SOURCES CHECKLIST (New Jan 2026)
+
+> **For every pick, gather data from multiple sources to validate signals.**
+
+### NCAAB Games (Required)
+```
+□ KenPom ratings for both teams (kenpom.com)
+  - Search: "[Team] KenPom efficiency rating"
+  - Get: Adjusted efficiency, tempo, national rank
+  - Compare: KenPom projected spread vs our projection
+
+□ Sagarin ratings (sagarin.com)
+  - Search: "[Team] Sagarin rating college basketball"
+  - Get: Power rating for comparison
+```
+
+### NFL/NCAAF Games (Required)
+```
+□ ESPN FPI/SP+ ratings
+  - Search: "[Team] ESPN FPI ranking"
+  - Get: Power index, projected point differential
+
+□ Sagarin ratings (sagarin.com)
+  - Search: "[Team] Sagarin rating football"
+```
+
+### NBA Games (Required)
+```
+□ ESPN BPI ratings
+  - Search: "[Team] ESPN BPI NBA"
+  - Get: Basketball Power Index rating
+
+□ Rest/schedule check
+  - Search: "[Team] schedule"
+  - Check: B2B? Days rest? Travel?
+```
+
+### ALL Games (Required)
+```
+□ Covers consensus
+  - Search: "[Team A] vs [Team B] Covers picks"
+  - Get: Expert consensus percentage
+
+□ ATS trends
+  - Search: "[Team] ATS record last 10 games"
+  - Get: Recent covering performance
+
+□ Injury news (LAST 48 HOURS ONLY)
+  - Search: "[Team] injury report today"
+  - Get: Only NEW updates, not old injuries
+```
+
+### What To Do With This Data
+
+1. **Store in `research` field** - Save KenPom rating, Covers consensus, etc.
+2. **Compare projections** - Does KenPom agree with our model?
+3. **Validate signals** - If sharps like it AND KenPom agrees = stronger play
+4. **Use in thesis** - Reference the data without naming sources
+
+---
+
+## 🔄 AUTOMATED ENHANCEMENT (New Jan 2026)
+
+**For every game that passes initial screening, Claude AUTOMATICALLY:**
+
+### Step 1: Line Shopping (Odds API)
+```
+For each potential pick:
+- Pull current lines from Odds API
+- Find best available spread across all books
+- Note any book discrepancies (1+ point = value)
+- Report: "Best line: [Team] [Spread] @ [Book]"
+```
+
+### Step 2: Context Research (Web Search)
+```
+For each potential pick, search for:
+- Injuries (last 24-48 hours ONLY) - "[Team] injury news"
+- Rest situation - Is either team on B2B? Travel?
+- Recent news - Anything that explains WHY the signal exists?
+```
+
+### ⚠️ RELEVANCE FILTER (Critical)
+
+**Only report information that is:**
+1. NEW (last 24-48 hours) - status CHANGED recently
+2. NOT already priced into the line
+3. ACTIONABLE - affects how we should bet
+
+**RELEVANT (report this):**
+```
+✅ "Tatum upgraded from questionable to probable today"
+✅ "Brown missed shootaround, now questionable (was probable)"
+✅ "Starting PG announced out 30 mins ago, line hasn't moved"
+✅ "Team on 3rd game in 4 nights after cross-country travel"
+✅ "Key rotation player returning tonight after 2-week absence"
+```
+
+**IRRELEVANT (do NOT report):**
+```
+❌ "Tatum has been out all season" - ALREADY PRICED IN
+❌ "Team has struggled recently" - VAGUE, already in line
+❌ "Player averages 22 PPG" - NOT ACTIONABLE
+❌ "Team is 5-10 on the road" - ALREADY PRICED IN
+❌ "Injury from 2 weeks ago" - ALREADY PRICED IN
+```
+
+**The Test:** Ask "Did something CHANGE in the last 24-48 hours?"
+- If YES → report it, it might not be priced
+- If NO → don't mention it, market already knows
+
+### Step 3: WHY Analysis (Required)
+```
+Before ANY pick is approved, answer:
+1. WHY would sharps/model be right here?
+2. WHAT information edge exists?
+3. WHY hasn't the market already priced this?
+
+If you can't answer all 3 = PASS on the pick
+```
+
+**This happens automatically. User just pastes data, Claude does the rest.**
+
+---
+
+## 🧠 INTELLECTUAL WHY FRAMEWORK (Critical)
+
+> **Signals are INPUTS, not ANSWERS. Every pick requires understanding CONTEXT.**
+
+### The Three Questions (Must Answer All)
+
+**Q1: WHY would this edge exist?**
+```
+Good answers:
+- "Injury news broke 2 hours ago, line hasn't fully adjusted"
+- "Public overreacting to last week's blowout loss"
+- "Market underweighting 3 days rest vs back-to-back"
+- "Sharps pounding this because line opened too high"
+
+Bad answers:
+- "Sharp Action is lit" (that's a signal, not a reason)
+- "Model says 8% edge" (that's data, not understanding)
+```
+
+**Q2: WHAT information asymmetry exists?**
+```
+Consider:
+- Do we know something the market hasn't FULLY priced?
+- Is there RECENT news (24-48 hrs) that explains the signal?
+- Is there a situational factor (rest, travel, schedule)?
+- Is there a market bias we're exploiting (public overreaction)?
+
+KEY: The information must be CURRENT and ACTIONABLE.
+"Tatum out all year" = useless (already priced)
+"Tatum upgraded to probable 2 hours ago" = valuable (may not be priced)
+```
+
+**Q3: WHY hasn't the market already corrected this?**
+```
+Possible reasons:
+- News is recent (< 24 hours)
+- Casual bettors haven't noticed yet
+- Public bias is strong (popular team, primetime game)
+- Situational factors are hard to quantify
+```
+
+### Signal Without Context = No Bet
+
+| Scenario | Action |
+|----------|--------|
+| Sharp Action lit + can explain WHY | ✅ Proceed |
+| Sharp Action lit + can't explain WHY | ⚠️ Investigate more or PASS |
+| Multiple signals + clear context | ✅ High conviction |
+| Multiple signals + no clear context | ⚠️ Something we're missing - PASS |
+
+### Red Flags (Signals That Don't Make Sense)
+
+- **Sharp Action on obviously weak team** - Why would sharps like them? Investigate.
+- **Huge model edge (20%+) on major game** - Market is efficient. Be skeptical.
+- **All signals aligned but line hasn't moved** - Why not? Trap?
+- **Public heavy but no contra signals** - Maybe public is right this time.
+
+### The Intellectual Standard
+
+```
+Before betting: "I understand WHY this bet should win."
+Not: "The signals say bet this."
+
+We are not signal followers.
+We are signal interpreters.
+```
+
+---
+
+## 📊 QUANTITATIVE ANALYSIS STANDARD (Required)
+
+> **We are a quantitative fund. Every claim must have numbers behind it.**
+
+### Language Standard
+
+**AMATEUR (Don't do this):**
+```
+❌ "Team has been struggling lately"
+❌ "They're playing well"
+❌ "Good matchup"
+❌ "Sharp money likes this"
+```
+
+**INSTITUTIONAL (Do this):**
+```
+✅ "Team is 3-7 ATS in last 10, failing to cover by avg of 4.2 points"
+✅ "Averaging 118.3 PPG over last 5 (vs 112.1 season avg), +6.2 above baseline"
+✅ "Opponent allows 47.3% from 3PT to PGs (28th in NBA), exploitable by their backcourt"
+✅ "Sharp money moved line from -3 to -5 against 68% public action = 2pt RLM"
+```
+
+### Required Statistics (Include When Relevant)
+
+**ATS Performance:**
+```
+- Last 10 ATS record and cover margin
+- Home/Away ATS splits
+- As favorite/underdog ATS splits
+- ATS vs specific opponent types (ranked teams, division, etc.)
+```
+
+**Situational Stats:**
+```
+- Record on rest vs no rest
+- Record on B2B (both teams)
+- Record after loss / after win
+- Record in 2nd game of road trip
+```
+
+**Matchup Stats:**
+```
+- Pace differential (possessions per game)
+- Offensive/Defensive efficiency ratings
+- Position-specific matchup advantages
+- Rebounding differential, turnover rates
+```
+
+**Line Movement Data:**
+```
+- Opening line vs current line (exact movement)
+- Public betting % vs money %
+- DIFF calculation (Money% - Bet%)
+- Reverse line movement magnitude
+```
+
+### The Math Must Add Up
+
+Before finalizing any pick, verify:
+
+```
+1. SIGNAL CHECK: What do the indicators say?
+   - Sharp Score: X pts
+   - Model Edge: X%
+   - Public/Money split: X%/X% (DIFF: X%)
+
+2. STATISTICAL CHECK: Do the numbers support it?
+   - Relevant ATS trend: X-X (X%)
+   - Situational factor: Team is X-X in this spot
+   - Matchup edge: Quantified advantage
+
+3. CONTEXT CHECK: Does the narrative make sense?
+   - WHY would this edge exist?
+   - WHAT information isn't priced?
+   - Is there a logical explanation?
+
+4. OVERRIDE CHECK: Should we fade the signal?
+   - Do signals conflict with statistics?
+   - Is there a reason to be skeptical?
+   - Does the math NOT add up?
+```
+
+### When to Override Signals
+
+**OVERRIDE (fade the signal) when:**
+```
+- Sharp Action lit BUT team is 2-8 ATS last 10 with no clear catalyst for change
+- High model edge BUT line hasn't moved (market disagrees)
+- Multiple signals BUT situational stats historically negative
+- Everything looks good BUT can't explain WHY market would be wrong
+```
+
+**TRUST (follow the signal) when:**
+```
+- Signals + Statistics + Context all align
+- Clear, quantifiable edge exists
+- Recent information supports the play
+- Math adds up across all dimensions
+```
+
+### Analysis Output Format
+
+Every pick analysis must include:
+
+```
+## [TEAM] [LINE] - [FUND] - [UNITS]u
+
+**Signal Summary:**
+- Sharp Score: X/10 | Model Edge: X% | Grade: X
+- Line Movement: Opened X, now X (+/- X pts)
+- Public: X% bets / X% money (DIFF: X%)
+
+**Statistical Case:**
+- ATS Last 10: X-X (X%), avg margin: +/- X pts
+- Situational: X-X in [relevant situation]
+- Matchup Edge: [Quantified advantage with numbers]
+
+**Context:**
+- [Recent news/change if any - with timestamp]
+- [Why this edge exists - logical explanation]
+- [Why market hasn't fully priced it]
+
+**Risk Factors:**
+- [What could go wrong - be honest]
+
+**Line Shopping:**
+- Best Available: [Line] @ [Book]
+- Consensus: [Line]
+- Edge vs Consensus: [X pts]
+
+**Verdict:** [1-2 sentences on why we're betting this, math-based]
+```
+
+### The Fund Manager Mindset
+
+```
+You are not a bettor. You are a fund manager.
+
+Every decision affects the portfolio.
+Every analysis must be defensible.
+Every claim must have evidence.
+
+If someone asked "Why did you bet this?" you must be able to say:
+"The Sharp Score was 8, team is 7-3 ATS last 10 covering by 3.2 avg,
+they're on 3 days rest vs opponent on B2B, and we got the best line
+at -5.5 vs -6.5 consensus. The math supported 1.5u allocation."
+
+Not: "The signals looked good."
+```
 
 ---
 
@@ -55,10 +431,15 @@ Based on 390-bet historical analysis, apply these tier adjustments:
 ### TIER 4: SIZE DOWN TO 0.5u MAX (Negative ROI)
 | Combination | ROI | Win Rate | Action |
 |-------------|-----|----------|--------|
-| **VectorFund + totals** | -39.8% | 30.0% | ⚠️ 0.5u MAX or SKIP |
-| **VectorFund + props** | -17.9% | 45.8% | ⚠️ 0.5u MAX or SKIP |
 | **VectorFund + NCAAF** | -13.8% | 35.7% | ⚠️ 0.5u MAX or SKIP |
-| **Any totals bet** | -20.7% | 42.1% | ⚠️ Reduce sizing |
+
+### 🚫 BLOCKED BET TYPES (Do Not Bet - Jan 2026)
+| Bet Type | All-Time Record | Profit | Action |
+|----------|-----------------|--------|--------|
+| **ALL PROPS** | 22-26 (45.8%) | -$1,179 | 🚫 DO NOT BET |
+| **ALL TOTALS** | 20-24 (45.5%) | -$928 | 🚫 DO NOT BET |
+
+**If user asks for props/totals:** "These bet types are currently blocked based on historical performance. Our edge is in spreads (60.2% WR, +$6,938). Focusing there."
 
 ### ⚠️ EDGE SKEPTICISM RULE
 **If stated edge > 20%, DO NOT size up.** Historical data shows:
@@ -157,16 +538,9 @@ TIER 3 (×0.5 multiplier):
 
 **Pass if:** Situational Score < 1.5
 
-### PROPS (VectorFund) ⚠️ HISTORICALLY NEGATIVE ROI
-| Edge % | Units |
-|--------|-------|
-| < 15% | PASS |
-| 15-25% | 0.5u |
-| 25-35% | 0.5u |
-| 35%+ | 0.5u (max) |
-
-**⚠️ WARNING: VectorFund props have -17.9% historical ROI (45.8% WR)**
-**Props max 0.5u each. Consider skipping entirely.**
+### ~~PROPS~~ 🚫 BLOCKED
+**Props are no longer bet. Historical: 22-26 (45.8% WR), -$1,179 loss.**
+**Skip any props analysis entirely.**
 
 ---
 
@@ -240,15 +614,30 @@ For any bet sized 2u or higher, MUST calculate:
 ## [FUND NAME] (X.Xu total)
 
 ### Pick 1: [TEAM] [LINE] @ [ODDS] - [X.X]u
-**Book:** [Sportsbook name]
-**Conviction:** [XX] pts
-**Kelly:** [X.X]u (if 2u+ bet)
 
-**Criteria Met:**
-- [Criterion 1]: [Value]
-- [Criterion 2]: [Value]
+**Signal Data:**
+| Metric | Value |
+|--------|-------|
+| Sharp Score | X/10 |
+| Model Edge | X% |
+| Grade | X |
+| Line Move | X → X (Δ X) |
+| Public/Money | X% / X% |
+| DIFF | X% |
 
-**WHY:** [1-2 sentence explanation of why market is wrong]
+**Statistical Case:**
+- ATS L10: X-X (X%), avg cover margin: ±X pts
+- Situation: X-X [in relevant spot]
+- Matchup: [Quantified edge with numbers]
+
+**Line Shopping:**
+- Best: [Line] @ [Book] ← USE THIS
+- Consensus: [Line]
+- Edge: X pts better than market
+
+**Thesis:** [2-3 sentences explaining WHY this bet wins, with math/stats backing every claim. Must answer: What edge exists and why isn't it fully priced?]
+
+**Risk:** [What could make this lose - be honest]
 
 ---
 ```

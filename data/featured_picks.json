@@ -1,9 +1,9 @@
 {
   "record": {
-    "wins": 25,
-    "losses": 11
+    "wins": 27,
+    "losses": 14
   },
-  "winRate": 69.4,
+  "winRate": 65.9,
   "lastUpdated": "2026-01-07",
   "currentStreak": 4,
   "longestWinStreak": 5,

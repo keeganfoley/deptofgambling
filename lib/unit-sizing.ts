@@ -12,7 +12,8 @@ import { FundKey, Sport } from './types';
 export type ActualBetType = 'spread' | 'total' | 'moneyline' | 'props';
 
 // Unit sizing tiers based on historical ROI analysis
-export type SizingTier = 'max' | 'elevated' | 'standard' | 'reduced';
+// BLOCKED = do not bet (props/totals historically negative ROI)
+export type SizingTier = 'max' | 'elevated' | 'standard' | 'reduced' | 'blocked';
 
 export interface SizingRule {
   tier: SizingTier;
@@ -73,28 +74,6 @@ export const SIZING_RULES: SizingRule[] = [
   {
     tier: 'reduced',
     units: 0.5,
-    description: 'VectorFund totals - historically negative ROI',
-    conditions: {
-      funds: ['VectorFund'],
-      betTypes: ['total'],
-    },
-    historicalROI: -39.8,
-    historicalWinRate: 30.0,
-  },
-  {
-    tier: 'reduced',
-    units: 0.5,
-    description: 'VectorFund props - historically negative ROI',
-    conditions: {
-      funds: ['VectorFund'],
-      betTypes: ['props'],
-    },
-    historicalROI: -17.9,
-    historicalWinRate: 45.8,
-  },
-  {
-    tier: 'reduced',
-    units: 0.5,
     description: 'VectorFund NCAAF - historically negative ROI',
     conditions: {
       funds: ['VectorFund'],
@@ -103,15 +82,28 @@ export const SIZING_RULES: SizingRule[] = [
     historicalROI: -13.8,
     historicalWinRate: 35.7,
   },
+
+  // BLOCKED (0u) - DO NOT BET - Negative ROI bet types
+  // Updated Jan 2026: 509 bets analyzed, props -$1,179, totals -$928
   {
-    tier: 'reduced',
-    units: 0.5,
-    description: 'Any totals bet - historically underperforming',
+    tier: 'blocked',
+    units: 0,
+    description: 'ALL PROPS BLOCKED - 45.8% WR, -$1,179 all-time',
+    conditions: {
+      betTypes: ['props'],
+    },
+    historicalROI: -24.5,
+    historicalWinRate: 45.8,
+  },
+  {
+    tier: 'blocked',
+    units: 0,
+    description: 'ALL TOTALS BLOCKED - 45.5% WR, -$928 all-time',
     conditions: {
       betTypes: ['total'],
     },
-    historicalROI: -20.7,
-    historicalWinRate: 42.1,
+    historicalROI: -21.1,
+    historicalWinRate: 45.5,
   },
 ];
 
@@ -192,6 +184,7 @@ export function getSizingRecommendation(
     elevated: '📈',
     standard: '➡️',
     reduced: '⚠️',
+    blocked: '🚫',
   };
 
   return {
@@ -249,16 +242,23 @@ export const QUICK_SIZING: Record<string, number> = {
   'CatalystFund-NCAAF-spread': 1.5,
 
   // Reduced (0.5u)
-  'VectorFund-any-total': 0.5,
-  'VectorFund-any-props': 0.5,
   'VectorFund-NCAAF-spread': 0.5,
   'VectorFund-NCAAF-moneyline': 0.5,
+
+  // BLOCKED (0u) - DO NOT BET
+  'any-any-total': 0,
+  'any-any-props': 0,
 };
 
 /**
  * Fast lookup using quick table
  */
 export function getQuickUnits(fund: FundKey, sport: Sport, betType: ActualBetType): number {
+  // BLOCKED BET TYPES - check first (props and totals are blocked)
+  if (betType === 'props' || betType === 'total') {
+    return 0; // BLOCKED - do not bet
+  }
+
   // Try exact match first
   const exactKey = `${fund}-${sport}-${betType}`;
   if (QUICK_SIZING[exactKey] !== undefined) {

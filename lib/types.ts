@@ -24,6 +24,86 @@ export interface ResultDetails {
 }
 
 /**
+ * Action Network Signals - BACKEND ONLY (never display raw to frontend)
+ * These are stored for analysis/learning purposes
+ */
+export interface BetIndicators {
+  // Sharp money signals
+  sharpAction: boolean;      // Sharp Action indicator lit
+  bigMoney: boolean;         // Big Money indicator lit
+  sharpScore: number;        // 0-10+ calculated sharp score
+  proSystems: boolean;       // PRO Systems triggered
+
+  // Model signals
+  grade: string;             // A+, A, A-, B+, B, B-, C+, etc.
+  statedEdge: number;        // Action Network's stated edge %
+
+  // Public betting data
+  publicPct: number;         // % of bets on this side
+  moneyPct: number;          // % of money on this side
+  diff: number;              // Money% - Bet% (positive = sharp money)
+
+  // Line movement
+  lineOpen: number;          // Opening line
+  lineCurrent: number;       // Line when we bet
+  lineMovement: number;      // Current - Open (positive = moved our way for favorites)
+  rlm: boolean;              // Reverse line movement detected
+}
+
+/**
+ * External Research Data - gathered from web searches
+ * Used to compare projections and validate signals
+ */
+export interface BetResearch {
+  // College Basketball (NCAAB)
+  kenpomRating?: number;     // KenPom adjusted efficiency rating
+  kenpomRank?: number;       // KenPom national rank
+  kenpomProjection?: number; // KenPom projected spread
+
+  // Power Ratings (all sports)
+  sagarinRating?: number;    // Sagarin power rating
+  espnBpi?: number;          // ESPN BPI (NBA) or FPI (NFL)
+
+  // Consensus/Market
+  coversConsensus?: string;  // Covers expert consensus (e.g., "65% on Team A")
+
+  // ATS Performance
+  atsLast10?: string;        // e.g., "7-3"
+  atsSituation?: string;     // e.g., "5-1 as home underdog"
+  atsMargin?: number;        // Average cover margin in recent games
+
+  // Situational
+  restAdvantage?: string;    // e.g., "2 days rest vs B2B"
+  travelSituation?: string;  // e.g., "3rd road game in 4 nights"
+
+  // Injuries (last 48 hours only)
+  injuries?: string[];       // Array of recent injury updates
+
+  // Timestamp
+  researchedAt?: string;     // ISO timestamp when research was done
+}
+
+/**
+ * Decision Quality Metrics - for learning what works
+ * Tracks the quality of our decision-making process
+ */
+export interface DecisionMetrics {
+  // Conviction/sizing
+  convictionScore: number;   // 40-100 calculated conviction
+  kellyRecommended?: number; // What Kelly criterion suggested
+  actualUnits: number;       // What we actually bet
+
+  // Line shopping
+  bestLineAvailable: number; // Best line we found
+  lineWeGot: number;         // Line we actually got
+  lineEdge: number;          // Points better than consensus
+  bookUsed?: string;         // Which book we used
+
+  // Fund assignment rationale
+  fundReason?: string;       // Why this fund (e.g., "Sharp Score 8+")
+}
+
+/**
  * Complete bet object structure
  */
 export interface Bet {
@@ -65,9 +145,25 @@ export interface Bet {
 
   // Analysis
   analysis?: string;         // Full analysis text
+  thesis?: string;           // Frontend-safe thesis (no source names)
 
   // Fund assignment
   fund: FundKey;
+
+  // NEW: Learning System Fields (Jan 2026)
+  // These capture detailed data for analysis of what actually works
+
+  // Action Network signals - BACKEND ONLY (never show raw on frontend)
+  indicators?: BetIndicators;
+
+  // External research data (KenPom, Sagarin, Covers, etc.)
+  research?: BetResearch;
+
+  // Decision quality metrics (for learning)
+  decisionMetrics?: DecisionMetrics;
+
+  // Date tracking
+  datePlaced?: string;       // When bet was placed (may differ from game date)
 }
 
 /**

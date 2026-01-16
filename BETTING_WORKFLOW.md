@@ -2,16 +2,26 @@
 
 ---
 
-## 🔥 DYNAMIC UNIT SIZING QUICK REFERENCE (v4.1)
+## 🔥 DYNAMIC UNIT SIZING QUICK REFERENCE (v5.0 - SPREADS FOCUS)
 
-> **Updated Dec 29, 2024 based on 390-bet historical analysis**
+> **Updated Jan 14, 2026 based on 509-bet historical analysis**
+> **MAJOR CHANGE: Props and totals now BLOCKED due to negative ROI**
 
 | Tier | When | Sizing | Historical ROI |
 |------|------|--------|----------------|
-| **🔥 TIER 1** | SharpFund + NFL/NCAAB | **2u MAX** | +45% ROI |
+| **🔥 TIER 1** | SharpFund + NFL/NCAAB spreads | **2u MAX** | +45% ROI |
 | **📈 TIER 2** | SharpFund/CatalystFund + spread | **1.5u** | +32-49% ROI |
-| **➡️ TIER 3** | Everything else | Base matrix | Standard |
-| **⚠️ TIER 4** | VectorFund + totals/props/NCAAF | **0.5u MAX** | Negative ROI |
+| **➡️ TIER 3** | Other spreads/moneylines | Base matrix | Standard |
+| **⚠️ TIER 4** | VectorFund + NCAAF | **0.5u MAX** | -13.8% ROI |
+| **🚫 BLOCKED** | ALL props, ALL totals | **0u - DO NOT BET** | -21% to -25% ROI |
+
+### BET TYPE RULES (Jan 2026)
+| Bet Type | Status | Reason |
+|----------|--------|--------|
+| **Spreads** | ✅ ALLOWED | 60.2% WR, +$6,938 profit |
+| **Moneylines** | ✅ ALLOWED | 50.6% WR, +$877 profit |
+| **Props** | 🚫 BLOCKED | 45.8% WR, -$1,179 loss |
+| **Totals** | 🚫 BLOCKED | 45.5% WR, -$928 loss |
 
 **⚠️ EDGE SKEPTICISM:** If stated edge > 20%, DO NOT size up. Historically under-performs.
 
@@ -111,26 +121,26 @@ PROPS (if shown):
 
 **Only paste paywalled Action Network data. Claude Code web searches for injuries, rest, weather.**
 
+> **Jan 2026 UPDATE: Skip totals and props sections - we only bet spreads/moneylines now**
+
 ```
 [SPORT] - [DATE]
 
 SPREADS:
 [Team] [Line] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
 
-TOTALS:
-[Game] O/U [X] | Open [X] | PRO [X] | Grade [X] | Edge [X]% | Bet [X]% | Money [X]%
-
 SHARP SIGNALS:
 [Team]: Sharp ✓, BigMoney ✓, PRO Systems ✓
 
 LOPSIDED (70%+):
 [Team] | Bet [X]% | Money [X]% | Diff [X]%
-
-PROPS (optional):
-[Player] O/U [X] [stat]: Edge [X]%, Grade [X]
 ```
 
-**Example:**
+**SKIP THESE (blocked bet types):**
+- ~~TOTALS~~ - blocked, -$928 all-time
+- ~~PROPS~~ - blocked, -$1,179 all-time
+
+**Example (Spreads-Only Focus):**
 ```
 NBA - Nov 30
 
@@ -139,19 +149,12 @@ Thunder -5 | Open -5 | PRO -7.2 | Grade B+ | Edge 5.3% | Bet 45% | Money 52%
 Celtics -8 | Open -8 | PRO -9.1 | Grade B | Edge 3.8% | Bet 62% | Money 58%
 Heat +8 | Open +8 | PRO +9.1 | Grade B | Edge 3.8% | Bet 38% | Money 42%
 
-TOTALS:
-Lakers/Suns O225 | Open 223 | PRO 228.5 | Grade A- | Edge 8.2% | Bet 55% | Money 60%
-
 SHARP SIGNALS:
 Thunder: Sharp ✓, BigMoney ✓
 Nets: Sharp ✓
 
 LOPSIDED (70%+):
 Knicks | Bet 71% | Money 68% | Diff -3%
-
-PROPS:
-Tatum O24.5 pts: Edge 22%, Grade A
-Jokic O11.5 reb: Edge 18%, Grade B+
 ```
 
 ---
@@ -248,12 +251,14 @@ npx tsx scripts/test-discord.ts all [date]     # Everything
 **Before saving ANY bet, validate all fields match these exact values.**
 
 ### betType (ONLY these 4 values)
-| Value | Use For |
-|-------|---------|
-| `"spread"` | Point spreads (NOT "spreads") |
-| `"total"` | Over/unders (NOT "totals") |
-| `"moneyline"` | Straight up wins |
-| `"props"` | Player props |
+| Value | Use For | Status |
+|-------|---------|--------|
+| `"spread"` | Point spreads (NOT "spreads") | ✅ ACTIVE |
+| `"moneyline"` | Straight up wins | ✅ ACTIVE |
+| `"total"` | Over/unders (NOT "totals") | 🚫 BLOCKED |
+| `"props"` | Player props | 🚫 BLOCKED |
+
+> **Jan 2026:** Props and totals are blocked due to negative historical ROI. Do not place these bet types.
 
 ### sport (ONLY these values)
 | Value | League |
@@ -318,9 +323,59 @@ result          - From list above
 edge            - Edge % (e.g., 8.5)
 expectedValue   - EV % (e.g., 4.2)
 conviction      - Score 40-100
-thesis          - Full analysis text
+thesis          - Full analysis text (NO SOURCE NAMES - see THESIS_LANGUAGE.md)
 slug            - Auto-generated URL slug
 ```
+
+### LEARNING SYSTEM FIELDS (New Jan 2026 - Optional but Recommended)
+
+> **Capture all indicator data for analysis. Backend only - never display raw.**
+
+```
+indicators: {
+  sharpAction     - Boolean: Sharp Action lit?
+  bigMoney        - Boolean: Big Money lit?
+  sharpScore      - Number: 0-10+ calculated score
+  proSystems      - Boolean: PRO Systems triggered?
+  grade           - String: A+, A, A-, B+, etc.
+  statedEdge      - Number: Action Network stated edge %
+  publicPct       - Number: % of bets on this side
+  moneyPct        - Number: % of money on this side
+  diff            - Number: Money% - Bet%
+  lineOpen        - Number: Opening line
+  lineCurrent     - Number: Line when we bet
+  lineMovement    - Number: Current - Open
+  rlm             - Boolean: Reverse line movement?
+}
+
+research: {
+  kenpomRating    - Number: KenPom efficiency (NCAAB)
+  kenpomRank      - Number: KenPom rank
+  sagarinRating   - Number: Sagarin power rating
+  espnBpi         - Number: ESPN BPI/FPI
+  coversConsensus - String: Covers expert consensus
+  atsLast10       - String: "7-3" format
+  atsSituation    - String: Situational ATS record
+  restAdvantage   - String: Rest situation
+  injuries        - Array: Recent injury updates
+}
+
+decisionMetrics: {
+  convictionScore   - Number: 40-100 calculated
+  kellyRecommended  - Number: What Kelly said
+  actualUnits       - Number: What we bet
+  bestLineAvailable - Number: Best line found
+  lineWeGot         - Number: Line we actually got
+  lineEdge          - Number: Points better than consensus
+  bookUsed          - String: Which book
+  fundReason        - String: Why this fund
+}
+```
+
+**Why capture this?**
+- Analyze which indicator combos actually predict wins
+- Learn which signals to trust vs ignore
+- Build our own model based on OUR results
 
 ### VALIDATION CHECKLIST (before saving)
 - [ ] betType is exactly "spread", "total", "moneyline", or "props"
@@ -331,9 +386,12 @@ slug            - Auto-generated URL slug
 - [ ] team AND opponent are both filled in
 - [ ] edge, expectedValue, conviction are numbers
 - [ ] thesis is full analysis (not just one sentence)
+- [ ] **thesis has NO source names** (no "Action Network", "Sharp Action lit", etc.)
 - [ ] slug is unique
+- [ ] **indicators object populated** (when Action Network data available)
 
 **NEVER use plural forms: "spreads", "totals", "moneylines", "props" is OK**
+**NEVER mention source names in thesis - see THESIS_LANGUAGE.md**
 
 ---
 
