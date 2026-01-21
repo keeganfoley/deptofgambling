@@ -1,14 +1,14 @@
 {
   "record": {
-    "wins": 27,
-    "losses": 14
+    "wins": 29,
+    "losses": 19
   },
-  "winRate": 65.9,
-  "lastUpdated": "2026-01-07",
-  "currentStreak": 4,
+  "winRate": 60.4,
+  "lastUpdated": "2026-01-15",
+  "currentStreak": -1,
   "longestWinStreak": 5,
-  "longestLossStreak": 2,
-  "totalProfit": 507.09,
+  "longestLossStreak": 4,
+  "totalProfit": 183.93,
   "history": [
     {
       "date": "2025-12-28",
@@ -293,8 +293,8 @@
     {
       "date": "2026-01-06",
       "featuredSource": "SharpFund_NBA_spread",
-      "sourceRecord": "16-7",
-      "sourceWinPct": 69.6,
+      "sourceRecord": "17-7",
+      "sourceWinPct": 70.8,
       "picks": [
         {
           "id": 464,
@@ -302,16 +302,166 @@
           "description": "Pacers +6.5",
           "odds": -105,
           "stake": 1.5,
+          "profit": 142.86,
           "result": "win",
           "fund": "SharpFund",
           "sport": "NBA",
-          "betType": "spread",
-          "profit": 142.86
+          "betType": "spread"
         }
       ],
       "dayResult": "win",
       "dayWins": 1,
       "dayLosses": 0
+    },
+    {
+      "date": "2026-01-07",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "18-7",
+      "sourceWinPct": 72.0,
+      "picks": [
+        {
+          "id": 480,
+          "team": "San Antonio Spurs",
+          "description": "Spurs -8",
+          "odds": -105,
+          "stake": 2,
+          "profit": 190.48,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
+    },
+    {
+      "date": "2026-01-11",
+      "featuredSource": "VectorFund_NCAAB_spread",
+      "sourceRecord": "9-2",
+      "sourceWinPct": 81.8,
+      "picks": [
+        {
+          "id": 513,
+          "team": "UCF Knights",
+          "description": "UCF -2.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "VectorFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 514,
+          "team": "Northwestern Wildcats",
+          "description": "Northwestern -4.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "VectorFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 2
+    },
+    {
+      "date": "2026-01-12",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "20-6",
+      "sourceWinPct": 76.9,
+      "picks": [
+        {
+          "id": 521,
+          "team": "Brooklyn Nets",
+          "description": "Nets +4",
+          "odds": -110,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 1
+    },
+    {
+      "date": "2026-01-13",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "20-7",
+      "sourceWinPct": 74.1,
+      "picks": [
+        {
+          "id": 524,
+          "team": "San Antonio Spurs",
+          "description": "Spurs +8.5",
+          "odds": -105,
+          "stake": 2,
+          "profit": -200,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 1
+    },
+    {
+      "date": "2026-01-14",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "18-8",
+      "sourceWinPct": 69.2,
+      "picks": [
+        {
+          "id": 529,
+          "team": "New Orleans Pelicans",
+          "description": "Pelicans -1",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": 136.36,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
+    },
+    {
+      "date": "2026-01-15",
+      "featuredSource": "SharpFund_NBA_spread",
+      "sourceRecord": "18-8",
+      "sourceWinPct": 69.2,
+      "picks": [
+        {
+          "id": 533,
+          "team": "Houston Rockets",
+          "description": "Rockets +4.5",
+          "odds": -105,
+          "stake": 1.5,
+          "profit": -150,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 1
     }
   ]
 }

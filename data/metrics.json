@@ -1,9 +1,9 @@
 {
-  "totalBets": 520,
-  "wins": 287,
-  "losses": 231,
+  "totalBets": 532,
+  "wins": 292,
+  "losses": 238,
   "pushes": 2,
-  "winRate": "55.41",
+  "winRate": "55.09",
   "totalWinnings": 34772.07,
   "totalLossesAmount": 29665,
   "avgWin": 121.16,
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 46691.55,
   "maxDrawdownTroughBalance": 38421.95,
   "currentDrawdown": {
-    "amount": -1584.48,
-    "percentage": -3.39,
-    "daysSincePeak": 5,
+    "amount": -1954.95,
+    "percentage": -4.19,
+    "daysSincePeak": 6,
     "peakBalance": 46691.55,
     "peakDate": "2026-01-10",
-    "currentBalance": 45107.07
+    "currentBalance": 44736.60
   },
   "sharpeRatio": 3.67,
   "sharpeRatioNote": "70-day sample",
