@@ -1,85 +1,85 @@
 {
-  "asOfDate": "2026-01-22",
+  "asOfDate": "2026-01-23",
   "combined": {
-    "balance": 44647.88,
+    "balance": 45202.62,
     "startingBalance": 40000,
-    "netPL": 4647.88,
-    "roi": 11.62,
+    "netPL": 5202.62,
+    "roi": 13.01,
     "record": {
-      "wins": 300,
-      "losses": 246,
+      "wins": 308,
+      "losses": 249,
       "pushes": 2
     },
-    "winRate": 54.74,
-    "unitsWon": 46.48,
+    "winRate": 55.10,
+    "unitsWon": 52.03,
     "sharpe": 3.41
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 10067.22,
+      "balance": 10156.51,
       "startingBalance": 10000,
-      "netPL": 67.22,
-      "roi": 0.67,
+      "netPL": 156.51,
+      "roi": 1.57,
       "record": {
-        "wins": 114,
+        "wins": 115,
         "losses": 104,
         "pushes": 1
       },
-      "winRate": 52.05,
-      "unitsWon": 0.67,
+      "winRate": 52.27,
+      "unitsWon": 1.57,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 12308.60,
+      "balance": 12760.12,
       "startingBalance": 10000,
-      "netPL": 2308.60,
-      "roi": 23.09,
+      "netPL": 2760.12,
+      "roi": 27.60,
       "record": {
-        "wins": 130,
-        "losses": 105,
+        "wins": 135,
+        "losses": 106,
         "pushes": 0
       },
-      "winRate": 55.32,
-      "unitsWon": 23.09,
+      "winRate": 56.02,
+      "unitsWon": 27.60,
       "color": "#22c55e",
       "status": "active"
     },
     "ContraFund": {
       "name": "Contra Fund",
       "tagline": "Fading the public",
-      "balance": 10750.54,
+      "balance": 10964.47,
       "startingBalance": 10000,
-      "netPL": 750.54,
-      "roi": 7.51,
+      "netPL": 964.47,
+      "roi": 9.64,
       "record": {
-        "wins": 23,
+        "wins": 25,
         "losses": 16,
         "pushes": 0
       },
-      "winRate": 58.97,
-      "unitsWon": 7.51,
+      "winRate": 60.98,
+      "unitsWon": 9.64,
       "color": "#f97316",
       "status": "active"
     },
     "CatalystFund": {
       "name": "Catalyst Fund",
       "tagline": "Situational opportunities",
-      "balance": 11521.52,
+      "balance": 11321.52,
       "startingBalance": 10000,
-      "netPL": 1521.52,
-      "roi": 15.22,
+      "netPL": 1321.52,
+      "roi": 13.22,
       "record": {
         "wins": 33,
-        "losses": 21,
+        "losses": 23,
         "pushes": 1
       },
-      "winRate": 61.11,
-      "unitsWon": 15.22,
+      "winRate": 57.89,
+      "unitsWon": 13.22,
       "color": "#8b5cf6",
       "status": "active"
     }
