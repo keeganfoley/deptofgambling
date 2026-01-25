@@ -1,14 +1,14 @@
 {
   "record": {
-    "wins": 29,
-    "losses": 19
+    "wins": 31,
+    "losses": 20
   },
-  "winRate": 60.4,
-  "lastUpdated": "2026-01-15",
-  "currentStreak": -1,
+  "winRate": 60.8,
+  "lastUpdated": "2026-01-24",
+  "currentStreak": 1,
   "longestWinStreak": 5,
   "longestLossStreak": 4,
-  "totalProfit": 183.93,
+  "totalProfit": 311.2,
   "history": [
     {
       "date": "2025-12-28",
@@ -461,6 +461,53 @@
       ],
       "dayResult": "loss",
       "dayWins": 0,
+      "dayLosses": 1
+    },
+    {
+      "date": "2026-01-24",
+      "featuredSource": "SharpFund_NCAAB_spread",
+      "sourceRecord": "9-3",
+      "sourceWinPct": 75.0,
+      "picks": [
+        {
+          "id": 571,
+          "team": "North Dakota",
+          "description": "North Dakota +5.5",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": 136.36,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 572,
+          "team": "Murray State",
+          "description": "Murray State -1.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        },
+        {
+          "id": 573,
+          "team": "San Diego State",
+          "description": "San Diego State -3.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": 90.91,
+          "result": "win",
+          "fund": "SharpFund",
+          "sport": "NCAAB",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 2,
       "dayLosses": 1
     }
   ]
