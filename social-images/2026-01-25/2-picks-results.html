@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Picks Results - JANUARY 16</title>
+  <title>Picks Results - JANUARY 25</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -79,7 +79,7 @@
       background: rgba(30, 41, 59, 0.8);
       border-radius: 12px;
       padding: 10px 24px;
-      border: 2px solid rgba(251,191,36,0.6);
+      border: 2px solid rgba(34,197,94,0.6);
       min-width: 110px;
     }
     .side-stat-label {
@@ -93,20 +93,20 @@
       font-size: 36px;
       font-weight: 800;
       font-family: 'JetBrains Mono', monospace;
-      color: #fbbf24;
+      color: #22c55e;
     }
     .big-profit-box {
       background: rgba(15, 30, 50, 0.95);
       border-radius: 16px;
       padding: 12px 45px 16px;
-      border: 4px solid #fbbf24;
+      border: 4px solid #22c55e;
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
     }
     .big-profit-label {
       font-size: 14px;
       font-weight: 800;
       letter-spacing: 5px;
-      color: #fbbf24;
+      color: #22c55e;
       text-align: center;
       margin-bottom: 2px;
     }
@@ -122,7 +122,7 @@
     .results-list {
       display: flex;
       flex-direction: column;
-      gap: 9px;
+      gap: 8px;
       flex: 1;
       padding-bottom: 0;
       margin-top: 14px;
@@ -133,23 +133,23 @@
       align-items: center;
       background: rgba(30, 41, 59, 0.85);
       backdrop-filter: blur(10px);
-      border-radius: 18px;
-      padding: 16px 24px;
-      border: 4px solid;
-      gap: 18px;
-      height: 122px;
+      border-radius: 16px;
+      padding: 12px 20px;
+      border: 3px solid;
+      gap: 16px;
+      height: 100px;
       flex-shrink: 0;
     }
-    .result-row.win { border-color: #22c55e; box-shadow: 0 6px 30px rgba(34, 197, 94, 0.35); }
-    .result-row.loss { border-color: #ef4444; box-shadow: 0 6px 30px rgba(239, 68, 68, 0.35); }
+    .result-row.win { border-color: #22c55e; box-shadow: 0 4px 20px rgba(34, 197, 94, 0.3); }
+    .result-row.loss { border-color: #ef4444; box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3); }
 
     .team-logo {
-      width: 90px;
-      height: 90px;
+      width: 75px;
+      height: 75px;
       flex-shrink: 0;
       background: rgba(255,255,255,0.1);
-      border-radius: 16px;
-      padding: 10px;
+      border-radius: 14px;
+      padding: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -165,41 +165,41 @@
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 2px;
     }
     .team-name {
-      font-size: 38px;
+      font-size: 32px;
       font-weight: 900;
       color: white;
       line-height: 1;
       letter-spacing: 2px;
     }
     .team-line {
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 700;
       font-family: 'JetBrains Mono', monospace;
       color: rgba(255,255,255,0.7);
     }
 
     .fund-badge {
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-size: 16px;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 14px;
       font-weight: 800;
-      letter-spacing: 3px;
+      letter-spacing: 2px;
       color: white;
     }
-    .fund-badge.sharp { background: rgba(34, 197, 94, 0.35); border: 3px solid #22c55e; }
-    .fund-badge.vector { background: rgba(156, 163, 175, 0.35); border: 3px solid #9ca3af; }
-    .fund-badge.catalyst { background: rgba(192, 132, 252, 0.35); border: 3px solid #c084fc; }
-    .fund-badge.contra { background: rgba(251, 146, 60, 0.35); border: 3px solid #fb923c; }
+    .fund-badge.sharp { background: rgba(34, 197, 94, 0.35); border: 2px solid #22c55e; }
+    .fund-badge.vector { background: rgba(156, 163, 175, 0.35); border: 2px solid #9ca3af; }
+    .fund-badge.catalyst { background: rgba(192, 132, 252, 0.35); border: 2px solid #c084fc; }
+    .fund-badge.contra { background: rgba(251, 146, 60, 0.35); border: 2px solid #fb923c; }
 
     .profit-amount {
-      font-size: 36px;
+      font-size: 30px;
       font-weight: 900;
       font-family: 'JetBrains Mono', monospace;
       text-align: center;
-      min-width: 130px;
+      min-width: 110px;
     }
     .profit-amount.profit-positive { color: #22c55e; }
     .profit-amount.profit-negative { color: #ef4444; }
@@ -208,9 +208,9 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 5px 0;
+      padding: 4px 0;
       flex-shrink: 0;
-      height: 36px;
+      height: 32px;
     }
     .sport-divider::before,
     .sport-divider::after {
@@ -220,35 +220,35 @@
       background: linear-gradient(90deg, transparent, rgba(251,191,36,0.4), transparent);
     }
     .sport-label {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 800;
-      letter-spacing: 6px;
+      letter-spacing: 5px;
       color: #fbbf24;
-      padding: 8px 20px;
+      padding: 6px 16px;
       background: rgba(251, 191, 36, 0.15);
       border: 2px solid rgba(251,191,36,0.4);
-      border-radius: 10px;
+      border-radius: 8px;
     }
 
     .result-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 16px;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 28px;
+      font-size: 22px;
       font-weight: 900;
       color: white;
       flex-shrink: 0;
     }
     .result-icon.win {
       background: linear-gradient(135deg, #2d8a4e 0%, #22c55e 100%);
-      box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.5);
     }
     .result-icon.loss {
       background: linear-gradient(135deg, #c0392b 0%, #ef4444 100%);
-      box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+      box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
     }
 
     .footer {
@@ -268,109 +268,131 @@
   <div class="container">
     <div class="grid-bg"></div>
 
-    <!-- 3 wins, 3 losses -->
+    <!-- 5 wins, 3 losses -->
     <div class="side-bars left">
-      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div><div class="side-bar red"></div>
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div><div class="side-bar red"></div>
     </div>
     <div class="side-bars right">
-      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div><div class="side-bar red"></div>
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div><div class="side-bar red"></div>
     </div>
 
     <div class="content">
       <div class="header">
         <div class="header-label">PICKS RESULTS</div>
-        <div class="date">JANUARY 16</div>
+        <div class="date">JANUARY 25</div>
       </div>
 
       <div class="hero-stats">
         <div class="side-stat">
           <div class="side-stat-label">ROI</div>
-          <div class="side-stat-value">-4%</div>
+          <div class="side-stat-value">+15%</div>
         </div>
         <div class="big-profit-box">
           <div class="big-profit-label">P/L</div>
-          <div class="big-profit negative">-$37</div>
+          <div class="big-profit">+$138</div>
         </div>
         <div class="side-stat">
           <div class="side-stat-label">RECORD</div>
-          <div class="side-stat-value">3-3</div>
+          <div class="side-stat-value">5-3</div>
         </div>
       </div>
 
       <div class="results-list">
-        <!-- NHL - 3 bets (1W-2L) -->
-        <div class="sport-divider"><span class="sport-label">NHL</span></div>
+        <!-- NFL - 2 bets (1W-1L) -->
+        <div class="sport-divider"><span class="sport-label">NFL</span></div>
 
         <div class="result-row win">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/ana.png&w=100&h=100" alt="Ducks"></div>
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/den.png&w=100&h=100" alt="Broncos"></div>
           <div class="team-info">
-            <div class="team-name">Ducks</div>
-            <div class="team-line">ML (+125)</div>
+            <div class="team-name">Broncos</div>
+            <div class="team-line">+4 (-113)</div>
           </div>
           <div class="fund-badge sharp">SHARP</div>
-          <div class="profit-amount profit-positive">+$188</div>
+          <div class="profit-amount profit-positive">+$89</div>
           <div class="result-icon win">&#10003;</div>
         </div>
 
         <div class="result-row loss">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/fla.png&w=100&h=100" alt="Panthers"></div>
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/lar.png&w=100&h=100" alt="Rams"></div>
           <div class="team-info">
-            <div class="team-name">Panthers</div>
-            <div class="team-line">ML (+150)</div>
+            <div class="team-name">Rams</div>
+            <div class="team-line">+2.5 (-110)</div>
           </div>
           <div class="fund-badge sharp">SHARP</div>
           <div class="profit-amount profit-negative">-$150</div>
           <div class="result-icon loss">&#10007;</div>
         </div>
 
+        <!-- NHL - 3 bets (2W-1L) -->
+        <div class="sport-divider"><span class="sport-label">NHL</span></div>
+
         <div class="result-row loss">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/sj.png&w=100&h=100" alt="Sharks"></div>
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/vgk.png&w=100&h=100" alt="Golden Knights"></div>
           <div class="team-info">
-            <div class="team-name">Sharks</div>
-            <div class="team-line">ML (+150)</div>
+            <div class="team-name">Golden Knights</div>
+            <div class="team-line">ML (-135)</div>
           </div>
           <div class="fund-badge sharp">SHARP</div>
-          <div class="profit-amount profit-negative">-$100</div>
+          <div class="profit-amount profit-negative">-$50</div>
           <div class="result-icon loss">&#10007;</div>
         </div>
 
-        <!-- NBA - 2 bets (1W-1L) -->
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/pit.png&w=100&h=100" alt="Penguins"></div>
+          <div class="team-info">
+            <div class="team-name">Penguins</div>
+            <div class="team-line">ML (-145)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$69</div>
+          <div class="result-icon win">&#10003;</div>
+        </div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/ana.png&w=100&h=100" alt="Ducks"></div>
+          <div class="team-info">
+            <div class="team-name">Ducks</div>
+            <div class="team-line">ML (-103)</div>
+          </div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$97</div>
+          <div class="result-icon win">&#10003;</div>
+        </div>
+
+        <!-- NBA - 3 bets (2W-1L) -->
         <div class="sport-divider"><span class="sport-label">NBA</span></div>
 
         <div class="result-row win">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/lac.png&w=100&h=100" alt="Clippers"></div>
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/no.png&w=100&h=100" alt="Pelicans"></div>
           <div class="team-info">
-            <div class="team-name">Clippers</div>
-            <div class="team-line">+2.5 (-115)</div>
+            <div class="team-name">Pelicans</div>
+            <div class="team-line">+11.5 (-105)</div>
           </div>
-          <div class="fund-badge vector">VECTOR</div>
-          <div class="profit-amount profit-positive">+$87</div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-positive">+$143</div>
+          <div class="result-icon win">&#10003;</div>
+        </div>
+
+        <div class="result-row win">
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/mia.png&w=100&h=100" alt="Heat"></div>
+          <div class="team-info">
+            <div class="team-name">Heat</div>
+            <div class="team-line">+4.5 (-110)</div>
+          </div>
+          <div class="fund-badge contra">CONTRA</div>
+          <div class="profit-amount profit-positive">+$91</div>
           <div class="result-icon win">&#10003;</div>
         </div>
 
         <div class="result-row loss">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/no.png&w=100&h=100" alt="Pelicans"></div>
+          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bkn.png&w=100&h=100" alt="Nets"></div>
           <div class="team-info">
-            <div class="team-name">Pelicans</div>
-            <div class="team-line">+5.5 (-118)</div>
+            <div class="team-name">Nets</div>
+            <div class="team-line">+8.5 (-108)</div>
           </div>
-          <div class="fund-badge vector">VECTOR</div>
-          <div class="profit-amount profit-negative">-$200</div>
+          <div class="fund-badge sharp">SHARP</div>
+          <div class="profit-amount profit-negative">-$150</div>
           <div class="result-icon loss">&#10007;</div>
-        </div>
-
-        <!-- NCAAB - 1 bet (1W-0L) -->
-        <div class="sport-divider"><span class="sport-label">NCAAB</span></div>
-
-        <div class="result-row win">
-          <div class="team-logo"><img src="https://a.espncdn.com/combiner/i?img=/i/teamlogos/ncaa/500/2305.png&w=100&h=100" alt="Kansas"></div>
-          <div class="team-info">
-            <div class="team-name">Kansas</div>
-            <div class="team-line">-7.5 (-108)</div>
-          </div>
-          <div class="fund-badge catalyst">CATALYST</div>
-          <div class="profit-amount profit-positive">+$139</div>
-          <div class="result-icon win">&#10003;</div>
         </div>
 
       </div>

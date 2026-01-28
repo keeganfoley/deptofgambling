@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Week 12 - Fund Performance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 30px 40px 35px;
+      position: relative;
+      background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #061224 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(251,191,36,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(251,191,36,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .corner-accent {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 3px solid rgba(251,191,36,0.3);
+    }
+    .corner-accent.tl { top: 15px; left: 15px; border-right: none; border-bottom: none; }
+    .corner-accent.tr { top: 15px; right: 15px; border-left: none; border-bottom: none; }
+    .corner-accent.bl { bottom: 15px; left: 15px; border-right: none; border-top: none; }
+    .corner-accent.br { bottom: 15px; right: 15px; border-left: none; border-top: none; }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    /* HEADER */
+    .header-section {
+      text-align: center;
+      padding: 8px 0 18px;
+      border-bottom: 2px solid rgba(251,191,36,0.2);
+      margin-bottom: 20px;
+    }
+    .dept-name {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .report-title {
+      font-size: 46px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fbbf24;
+      margin-bottom: 8px;
+    }
+    .report-period {
+      display: inline-block;
+      background: rgba(251,191,36,0.15);
+      border: 1px solid rgba(251,191,36,0.3);
+      padding: 8px 28px;
+      border-radius: 4px;
+    }
+    .report-period span {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: #fbbf24;
+    }
+
+    /* FUND CARDS GRID */
+    .funds-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .fund-card {
+      background: rgba(20, 35, 60, 0.7);
+      border: 2px solid rgba(251,191,36,0.25);
+      border-radius: 12px;
+      padding: 8px 14px 6px;
+      position: relative;
+    }
+    .fund-card.top-performer {
+      border-color: rgba(34,197,94,0.6);
+      background: linear-gradient(135deg, rgba(34,197,94,0.12) 0%, rgba(20,35,60,0.8) 100%);
+    }
+    .fund-card.underperformer {
+      border-color: rgba(239,68,68,0.4);
+      background: linear-gradient(135deg, rgba(239,68,68,0.08) 0%, rgba(20,35,60,0.8) 100%);
+    }
+
+    .fund-header {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 2px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid rgba(251,191,36,0.15);
+      position: relative;
+    }
+    .fund-name {
+      font-size: 26px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #fbbf24;
+      text-align: center;
+      width: 100%;
+      padding: 8px 0;
+    }
+
+    .fund-hero {
+      text-align: center;
+      padding: 6px 0 8px;
+    }
+    .fund-pl {
+      font-size: 52px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .fund-pl.positive { color: #22c55e; }
+    .fund-pl.negative { color: #ef4444; }
+
+    .fund-units {
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      margin-top: 2px;
+    }
+    .fund-units.positive { color: rgba(34,197,94,0.8); }
+    .fund-units.negative { color: rgba(239,68,68,0.8); }
+
+    .fund-stats {
+      display: flex;
+      justify-content: space-around;
+      padding: 8px 6px;
+      background: rgba(0,0,0,0.25);
+      border-radius: 8px;
+      margin: 6px 0;
+    }
+    .fund-stat {
+      text-align: center;
+      flex: 1;
+    }
+    .fund-stat-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 2px;
+    }
+    .fund-stat-value {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+    }
+    .fund-stat-value.good { color: #22c55e; }
+    .fund-stat-value.bad { color: #ef4444; }
+
+    .fund-pf {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      padding-top: 4px;
+    }
+    .fund-pf-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.5);
+    }
+    .fund-pf-value {
+      font-size: 24px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .fund-pf-value.good { color: #22c55e; }
+    .fund-pf-value.bad { color: #ef4444; }
+
+    /* CHART SECTION */
+    .chart-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: rgba(20, 35, 60, 0.5);
+      border: 2px solid rgba(251,191,36,0.2);
+      border-radius: 16px;
+      padding: 18px 20px 14px;
+    }
+
+    .chart-title {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      margin-bottom: 12px;
+    }
+
+    .chart-legend {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      margin-bottom: 12px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .legend-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+    }
+    .legend-dot.sharp { background: #22c55e; }
+    .legend-dot.contra { background: #f97316; }
+    .legend-dot.catalyst { background: #a855f7; }
+    .legend-dot.vector { background: #ffffff; }
+    .legend-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 1px;
+    }
+
+    .chart-wrapper {
+      flex: 1;
+      display: flex;
+      gap: 8px;
+    }
+
+    .y-axis {
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 5px 0;
+    }
+    .y-label {
+      font-size: 12px;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.5);
+      text-align: right;
+      padding-right: 8px;
+    }
+
+    .chart-area {
+      flex: 1;
+      position: relative;
+    }
+    .chart-svg {
+      width: 100%;
+      height: 100%;
+    }
+    .chart-line {
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .chart-line.sharp { stroke: #22c55e; filter: drop-shadow(0 0 3px rgba(34,197,94,0.4)); }
+    .chart-line.contra { stroke: #f97316; filter: drop-shadow(0 0 3px rgba(249,115,22,0.4)); }
+    .chart-line.catalyst { stroke: #a855f7; filter: drop-shadow(0 0 3px rgba(168,85,247,0.4)); }
+    .chart-line.vector { stroke: #ffffff; filter: drop-shadow(0 0 3px rgba(255,255,255,0.3)); }
+
+    .chart-dot { stroke-width: 2; }
+    .chart-dot.sharp { fill: #22c55e; stroke: #15803d; }
+    .chart-dot.contra { fill: #f97316; stroke: #c2410c; }
+    .chart-dot.catalyst { fill: #a855f7; stroke: #7c3aed; }
+    .chart-dot.vector { fill: #ffffff; stroke: #6b7280; }
+
+    .chart-grid-line {
+      stroke: rgba(255,255,255,0.08);
+      stroke-width: 1;
+    }
+    .chart-zero-line {
+      stroke: rgba(255,255,255,0.25);
+      stroke-width: 2;
+      stroke-dasharray: 8,6;
+    }
+
+    .x-axis {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0 0;
+      margin-left: 68px;
+    }
+    .x-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 1px;
+    }
+
+    /* FOOTER */
+    .footer {
+      padding-top: 14px;
+      border-top: 1px solid rgba(251,191,36,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 14px;
+    }
+    .footer-left, .footer-right {
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 3px;
+    }
+    .footer-center {
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="corner-accent tl"></div>
+    <div class="corner-accent tr"></div>
+    <div class="corner-accent bl"></div>
+    <div class="corner-accent br"></div>
+
+    <div class="content">
+      <!-- HEADER -->
+      <div class="header-section">
+        <div class="dept-name">DEPARTMENT OF GAMBLING</div>
+        <div class="report-title">FUND PERFORMANCE</div>
+        <div class="report-period">
+          <span>WEEK 12 · JAN 20-26, 2026</span>
+        </div>
+      </div>
+
+      <!-- FUND CARDS -->
+      <div class="funds-grid">
+        <!-- SHARPFUND -->
+        <div class="fund-card top-performer">
+          <div class="fund-header">
+            <div class="fund-name">SHARPFUND</div>
+          </div>
+          <div class="fund-hero">
+            <div class="fund-pl positive">+$413</div>
+            <div class="fund-units positive">+4.13 units</div>
+          </div>
+          <div class="fund-stats">
+            <div class="fund-stat">
+              <div class="fund-stat-label">RECORD</div>
+              <div class="fund-stat-value">16-11</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">WIN %</div>
+              <div class="fund-stat-value good">59%</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">ROI</div>
+              <div class="fund-stat-value good">+12%</div>
+            </div>
+          </div>
+          <div class="fund-pf">
+            <span class="fund-pf-label">PROFIT FACTOR</span>
+            <span class="fund-pf-value good">1.27</span>
+          </div>
+        </div>
+
+        <!-- CONTRAFUND -->
+        <div class="fund-card top-performer">
+          <div class="fund-header">
+            <div class="fund-name">CONTRAFUND</div>
+          </div>
+          <div class="fund-hero">
+            <div class="fund-pl positive">+$246</div>
+            <div class="fund-units positive">+2.46 units</div>
+          </div>
+          <div class="fund-stats">
+            <div class="fund-stat">
+              <div class="fund-stat-label">RECORD</div>
+              <div class="fund-stat-value">4-1</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">WIN %</div>
+              <div class="fund-stat-value good">80%</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">ROI</div>
+              <div class="fund-stat-value good">+41%</div>
+            </div>
+          </div>
+          <div class="fund-pf">
+            <span class="fund-pf-label">PROFIT FACTOR</span>
+            <span class="fund-pf-value good">2.64</span>
+          </div>
+        </div>
+
+        <!-- VECTORFUND -->
+        <div class="fund-card top-performer">
+          <div class="fund-header">
+            <div class="fund-name">VECTORFUND</div>
+          </div>
+          <div class="fund-hero">
+            <div class="fund-pl positive">+$224</div>
+            <div class="fund-units positive">+2.24 units</div>
+          </div>
+          <div class="fund-stats">
+            <div class="fund-stat">
+              <div class="fund-stat-label">RECORD</div>
+              <div class="fund-stat-value">5-3</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">WIN %</div>
+              <div class="fund-stat-value good">63%</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">ROI</div>
+              <div class="fund-stat-value good">+25%</div>
+            </div>
+          </div>
+          <div class="fund-pf">
+            <span class="fund-pf-label">PROFIT FACTOR</span>
+            <span class="fund-pf-value good">1.75</span>
+          </div>
+        </div>
+
+        <!-- CATALYSTFUND -->
+        <div class="fund-card underperformer">
+          <div class="fund-header">
+            <div class="fund-name">CATALYSTFUND</div>
+          </div>
+          <div class="fund-hero">
+            <div class="fund-pl negative">-$79</div>
+            <div class="fund-units negative">-0.79 units</div>
+          </div>
+          <div class="fund-stats">
+            <div class="fund-stat">
+              <div class="fund-stat-label">RECORD</div>
+              <div class="fund-stat-value">2-3</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">WIN %</div>
+              <div class="fund-stat-value bad">40%</div>
+            </div>
+            <div class="fund-stat">
+              <div class="fund-stat-label">ROI</div>
+              <div class="fund-stat-value bad">-14%</div>
+            </div>
+          </div>
+          <div class="fund-pf">
+            <span class="fund-pf-label">PROFIT FACTOR</span>
+            <span class="fund-pf-value bad">0.74</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EQUITY CURVE -->
+      <div class="chart-section">
+        <div class="chart-title">5-DAY EQUITY CURVE</div>
+        <div class="chart-legend">
+          <div class="legend-item">
+            <div class="legend-dot sharp"></div>
+            <span class="legend-label">SHARP</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot contra"></div>
+            <span class="legend-label">CONTRA</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot catalyst"></div>
+            <span class="legend-label">CATALYST</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot vector"></div>
+            <span class="legend-label">VECTOR</span>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <div class="y-axis">
+            <div class="y-label">+$500</div>
+            <div class="y-label">+$400</div>
+            <div class="y-label">+$300</div>
+            <div class="y-label">+$200</div>
+            <div class="y-label">+$100</div>
+            <div class="y-label">$0</div>
+            <div class="y-label">-$100</div>
+          </div>
+          <div class="chart-area">
+            <svg class="chart-svg" viewBox="0 0 850 220" preserveAspectRatio="none">
+              <!-- Grid lines -->
+              <line class="chart-grid-line" x1="0" y1="37" x2="850" y2="37"/>
+              <line class="chart-grid-line" x1="0" y1="74" x2="850" y2="74"/>
+              <line class="chart-grid-line" x1="0" y1="110" x2="850" y2="110"/>
+              <line class="chart-grid-line" x1="0" y1="147" x2="850" y2="147"/>
+              <line class="chart-zero-line" x1="0" y1="183" x2="850" y2="183"/>
+
+              <!-- SharpFund: 0 -> +157 -> -93 -> +184 -> +313 -> +413 -->
+              <polyline class="chart-line sharp" points="0,183 170,125 340,217 510,115 680,68 850,30"/>
+
+              <!-- ContraFund: 0 -> 0 -> -150 -> +80 -> +161 -> +246 -->
+              <polyline class="chart-line contra" points="0,183 170,183 340,238 510,153 680,123 850,93"/>
+
+              <!-- CatalystFund: 0 -> +136 -> +136 -> +37 -> +6 -> -79 -->
+              <polyline class="chart-line catalyst" points="0,183 170,133 340,133 510,169 680,181 850,212"/>
+
+              <!-- VectorFund: 0 -> -5 -> +86 -> +175 -> +264 -> +224 -->
+              <polyline class="chart-line vector" points="0,183 170,185 340,151 510,118 680,86 850,100"/>
+
+              <!-- Data points -->
+              <circle class="chart-dot sharp" cx="850" cy="30" r="6"/>
+              <circle class="chart-dot contra" cx="850" cy="93" r="6"/>
+              <circle class="chart-dot catalyst" cx="850" cy="212" r="6"/>
+              <circle class="chart-dot vector" cx="850" cy="100" r="6"/>
+            </svg>
+          </div>
+        </div>
+        <div class="x-axis">
+          <span class="x-label">1/21</span>
+          <span class="x-label">1/22</span>
+          <span class="x-label">1/23</span>
+          <span class="x-label">1/24</span>
+          <span class="x-label">1/25</span>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-left">WEEK 12 REPORT</div>
+        <div class="footer-center">DEPTOFGAMBLING.COM</div>
+        <div class="footer-right">SLIDE 3 OF 4</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
