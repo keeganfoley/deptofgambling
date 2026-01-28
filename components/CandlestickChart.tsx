@@ -90,7 +90,7 @@ export default function CandlestickChart() {
       },
       grid: {
         vertLines: { color: '#21262d' },
-        horzLines: { color: '#21262d' },
+        horzLines: { visible: false },
       },
       width: containerWidth,
       height: chartHeight,
@@ -136,6 +136,8 @@ export default function CandlestickChart() {
       borderVisible: false,
       wickUpColor: '#3fb950',
       wickDownColor: '#f85149',
+      lastValueVisible: false,
+      priceLineVisible: false,
     });
 
     // Generate candlestick data from daily values
@@ -246,6 +248,8 @@ export default function CandlestickChart() {
         type: 'volume',
       },
       priceScaleId: '',
+      lastValueVisible: false,
+      priceLineVisible: false,
     });
 
     volumeSeries.priceScale().applyOptions({

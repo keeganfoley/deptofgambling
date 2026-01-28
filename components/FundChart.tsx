@@ -79,7 +79,7 @@ export default function FundChart({ fundKey, fundColor }: FundChartProps) {
         },
         grid: {
           vertLines: { color: '#21262d' },
-          horzLines: { color: '#21262d' },
+          horzLines: { visible: false },
         },
         width: container.clientWidth,
         height: 350,
@@ -212,6 +212,8 @@ export default function FundChart({ fundKey, fundColor }: FundChartProps) {
         borderVisible: false,
         wickUpColor: '#3fb950',
         wickDownColor: '#f85149',
+        lastValueVisible: false,
+        priceLineVisible: false,
       });
 
       const candleData: CandlestickData[] = [];
@@ -299,6 +301,8 @@ export default function FundChart({ fundKey, fundColor }: FundChartProps) {
       const volumeSeries = chart.addSeries(HistogramSeries, {
         priceFormat: { type: 'volume' },
         priceScaleId: '',
+        lastValueVisible: false,
+        priceLineVisible: false,
       });
 
       volumeSeries.priceScale().applyOptions({
