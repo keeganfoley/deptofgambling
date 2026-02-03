@@ -732,7 +732,7 @@ export function formatDailyPerformanceMessage(date: string, allBets?: Bet[]): st
   const normalizedDate = date.split('T')[0];
 
   // Get bets for this date
-  const dayBets = bets.filter(b => b.date.split('T')[0] === normalizedDate && b.result !== 'pending');
+  const dayBets = bets.filter(b => b.date.split('T')[0] === normalizedDate && b.result !== 'pending' && b.result !== 'no_action');
 
   // Calculate day number (days since Nov 4, 2025)
   const startDate = new Date('2025-11-04');
@@ -1942,13 +1942,12 @@ export function updateFeaturedPicksResults(settledDate: string, allBets?: Bet[])
   data.history.push(historyEntry);
   data.history.sort((a, b) => a.date.localeCompare(b.date));
 
-  // Update cumulative record
-  data.record.wins = data.history.filter(h => h.dayResult === 'win').length;
-  data.record.losses = data.history.filter(h => h.dayResult === 'loss').length;
+  // Update cumulative record (add this day's individual pick results)
+  data.record.wins += dayWins;
+  data.record.losses += dayLosses;
   const total = data.record.wins + data.record.losses;
   data.winRate = total > 0 ? (data.record.wins / total) * 100 : 0;
-  data.totalProfit = data.history.reduce((sum, h) =>
-    sum + h.picks.reduce((pSum, p) => pSum + (p.profit || 0), 0), 0);
+  data.totalProfit += dayProfit;
   data.lastUpdated = new Date().toISOString().split('T')[0];
 
   // Calculate streaks

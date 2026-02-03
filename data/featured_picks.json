@@ -1,14 +1,14 @@
 {
   "record": {
-    "wins": 31,
-    "losses": 20
+    "wins": 32,
+    "losses": 23
   },
-  "winRate": 60.8,
-  "lastUpdated": "2026-01-24",
+  "winRate": 58.18,
+  "lastUpdated": "2026-01-30",
   "currentStreak": 1,
   "longestWinStreak": 5,
   "longestLossStreak": 4,
-  "totalProfit": 311.2,
+  "totalProfit": -91.18,
   "history": [
     {
       "date": "2025-12-28",
@@ -72,7 +72,7 @@
       "date": "2025-12-30",
       "featuredSource": "SharpFund_NCAAF_spread",
       "sourceRecord": "6-4",
-      "sourceWinPct": 60.0,
+      "sourceWinPct": 60,
       "picks": [
         {
           "id": 409,
@@ -107,7 +107,7 @@
       "date": "2025-12-31",
       "featuredSource": "SharpFund_NCAAB_spread",
       "sourceRecord": "18-7",
-      "sourceWinPct": 72.0,
+      "sourceWinPct": 72,
       "picks": [
         {
           "id": 423,
@@ -212,7 +212,7 @@
       "date": "2026-01-04",
       "featuredSource": "SharpFund_NFL_spread",
       "sourceRecord": "16-4",
-      "sourceWinPct": 80.0,
+      "sourceWinPct": 80,
       "picks": [
         {
           "id": 449,
@@ -231,7 +231,7 @@
           "team": "New York Giants",
           "description": "Giants +3",
           "odds": -102,
-          "stake": 1.0,
+          "stake": 1,
           "profit": 98.04,
           "result": "win",
           "fund": "SharpFund",
@@ -243,8 +243,8 @@
           "team": "New York Jets",
           "description": "Jets +12",
           "odds": -110,
-          "stake": 2.0,
-          "profit": -200.0,
+          "stake": 2,
+          "profit": -200,
           "result": "loss",
           "fund": "SharpFund",
           "sport": "NFL",
@@ -256,7 +256,7 @@
           "description": "Cardinals +14",
           "odds": -105,
           "stake": 1.5,
-          "profit": -150.0,
+          "profit": -150,
           "result": "loss",
           "fund": "SharpFund",
           "sport": "NFL",
@@ -317,7 +317,7 @@
       "date": "2026-01-07",
       "featuredSource": "SharpFund_NBA_spread",
       "sourceRecord": "18-7",
-      "sourceWinPct": 72.0,
+      "sourceWinPct": 72,
       "picks": [
         {
           "id": 480,
@@ -464,10 +464,33 @@
       "dayLosses": 1
     },
     {
+      "date": "2026-01-21",
+      "featuredSource": "CatalystFund_NBA_spread",
+      "sourceRecord": "10-3",
+      "sourceWinPct": 76.9,
+      "picks": [
+        {
+          "id": 549,
+          "team": "Atlanta Hawks",
+          "description": "Hawks +1.5",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": 136.36,
+          "result": "win",
+          "fund": "CatalystFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
+    },
+    {
       "date": "2026-01-24",
       "featuredSource": "SharpFund_NCAAB_spread",
       "sourceRecord": "9-3",
-      "sourceWinPct": 75.0,
+      "sourceWinPct": 75,
       "picks": [
         {
           "id": 571,
@@ -509,6 +532,76 @@
       "dayResult": "win",
       "dayWins": 2,
       "dayLosses": 1
+    },
+    {
+      "date": "2026-01-28",
+      "featuredSource": "Sharp_NBA_spread",
+      "sourceRecord": "15-9",
+      "sourceWinPct": 62.5,
+      "picks": [
+        {
+          "id": 605,
+          "team": "Memphis Grizzlies",
+          "description": "Grizzlies +2.5",
+          "odds": -110,
+          "stake": 1,
+          "profit": -100,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        },
+        {
+          "id": 607,
+          "team": "Dallas Mavericks",
+          "description": "Mavericks +9.5",
+          "odds": -110,
+          "stake": 1.5,
+          "profit": -150,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        },
+        {
+          "id": 608,
+          "team": "Utah Jazz",
+          "description": "Jazz +8.5",
+          "odds": -110,
+          "stake": 2,
+          "profit": -200,
+          "result": "loss",
+          "fund": "SharpFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "loss",
+      "dayWins": 0,
+      "dayLosses": 3
+    },
+    {
+      "date": "2026-01-30",
+      "featuredSource": "Catalyst_NBA_spread",
+      "sourceRecord": "5-3",
+      "sourceWinPct": 62.5,
+      "picks": [
+        {
+          "id": 614,
+          "team": "Phoenix Suns",
+          "description": "Suns +3.5",
+          "odds": -105,
+          "stake": 0.5,
+          "profit": 47.62,
+          "result": "win",
+          "fund": "CatalystFund",
+          "sport": "NBA",
+          "betType": "spread"
+        }
+      ],
+      "dayResult": "win",
+      "dayWins": 1,
+      "dayLosses": 0
     }
   ]
 }

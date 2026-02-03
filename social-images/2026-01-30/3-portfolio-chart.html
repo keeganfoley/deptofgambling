@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Portfolio Performance - JANUARY 27</title>
+  <title>Portfolio Performance - JANUARY 30</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -220,6 +220,10 @@
       background: linear-gradient(180deg, #f85149 0%, #c0392b 100%);
       box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
     }
+    .body.flat {
+      background: rgba(255,255,255,0.2);
+      height: 4px !important;
+    }
 
     .pl-label {
       position: absolute;
@@ -240,6 +244,10 @@
     .pl-label.negative {
       color: #ef4444;
       background: rgba(239, 68, 68, 0.2);
+    }
+    .pl-label.neutral {
+      color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.05);
     }
 
     .candle-date {
@@ -270,75 +278,73 @@
   <div class="container">
     <div class="grid-bg"></div>
 
-    <!-- 5 green, 1 red -->
+    <!-- 4 green, 1 red, 1 flat -->
     <div class="side-bars left">
-      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div>
     </div>
     <div class="side-bars right">
-      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div>
     </div>
 
     <div class="content">
       <div class="header">
         <div class="header-label">PORTFOLIO PERFORMANCE</div>
-        <div class="header-date">JANUARY 27</div>
+        <div class="header-date">JANUARY 30</div>
       </div>
 
       <div class="stats-box">
         <div class="stats-row">
           <div class="stat-item">
             <div class="stat-label">BALANCE</div>
-            <div class="stat-value white">$46,173</div>
+            <div class="stat-value white">$46,082</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <div class="stat-label">NET P/L</div>
-            <div class="stat-value green">+$6,173</div>
+            <div class="stat-value green">+$6,082</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <div class="stat-label">ROI</div>
-            <div class="stat-value green">+15.43%</div>
+            <div class="stat-value green">+15.21%</div>
           </div>
         </div>
         <div class="stats-row">
           <div class="stat-item">
             <div class="stat-label">RECORD</div>
-            <div class="stat-value white">329-261</div>
+            <div class="stat-value white">336-267</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <div class="stat-label">WIN RATE</div>
-            <div class="stat-value green">55.8%</div>
+            <div class="stat-value green">55.7%</div>
           </div>
           <div class="stat-divider"></div>
           <div class="stat-item">
             <div class="stat-label">UNITS PROFITED</div>
-            <div class="stat-value green">+61.73U</div>
+            <div class="stat-value green">+60.82U</div>
           </div>
         </div>
       </div>
 
       <div class="chart-header">
         <div class="chart-label">6 DAY PERFORMANCE</div>
-        <div class="chart-date-range">JAN 22 - JAN 27</div>
+        <div class="chart-date-range">JAN 25 - JAN 30</div>
       </div>
 
       <div class="chart-container">
         <div class="chart-area">
-          <!-- Y-Axis Labels - Range $44.5k to $46.2k -->
-          <div class="y-axis-label" style="bottom: 25px;">$44.5k</div>
-          <div class="h-grid-line" style="bottom: 30px;"></div>
-          <div class="y-axis-label" style="bottom: 135px;">$45.0k</div>
-          <div class="h-grid-line" style="bottom: 140px;"></div>
-          <div class="y-axis-label" style="bottom: 245px;">$45.5k</div>
-          <div class="h-grid-line" style="bottom: 250px;"></div>
-          <div class="y-axis-label" style="bottom: 355px;">$46.0k</div>
-          <div class="h-grid-line" style="bottom: 360px;"></div>
-          <div class="y-axis-label" style="bottom: 465px;">$46.5k</div>
-          <div class="h-grid-line" style="bottom: 470px;"></div>
+          <!-- Y-Axis Labels - Range $45.0k to $46.5k -->
+          <div class="y-axis-label" style="bottom: 30px;">$45.0k</div>
+          <div class="h-grid-line" style="bottom: 35px;"></div>
+          <div class="y-axis-label" style="bottom: 170px;">$45.5k</div>
+          <div class="h-grid-line" style="bottom: 175px;"></div>
+          <div class="y-axis-label" style="bottom: 310px;">$46.0k</div>
+          <div class="h-grid-line" style="bottom: 315px;"></div>
+          <div class="y-axis-label" style="bottom: 450px;">$46.5k</div>
+          <div class="h-grid-line" style="bottom: 455px;"></div>
 
-          <!-- Upward trend line -->
+          <!-- Trend line connecting closing prices -->
           <div class="trend-line">
             <svg viewBox="0 0 845 540" preserveAspectRatio="none">
               <defs>
@@ -347,65 +353,65 @@
                   <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0.02" />
                 </linearGradient>
               </defs>
-              <!-- Points: Jan22 low, Jan23 up, Jan24 up, Jan25 up, Jan26 up, Jan27 highest -->
-              <polygon fill="url(#areaGrad)" points="70,450 211,280 352,220 493,180 634,130 775,40 775,540 70,540" />
-              <polyline fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="70,450 211,280 352,220 493,180 634,130 775,40" />
+              <!-- Closes: Jan25 $45,540  Jan26 $45,790  Jan27 $46,173  Jan28 $45,623  Jan29 $45,623  Jan30 $46,082 -->
+              <polygon fill="url(#areaGrad)" points="70,346 211,256 352,118 493,316 634,316 775,151 775,540 70,540" />
+              <polyline fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="70,346 211,256 352,118 493,316 634,316 775,151" />
             </svg>
           </div>
 
           <div class="candlesticks">
-            <!-- Jan 22: RED (-$377) - Started $45,025, ended $44,648 -->
+            <!-- Jan 25: GREEN (+$138) open $45,402 -->
             <div class="candle-wrapper">
               <div class="candle">
-                <div class="body red" style="bottom: 30px; height: 95px;"></div>
-                <div class="pl-label negative" style="bottom: 140px;">-$377</div>
-              </div>
-              <div class="candle-date">1/22</div>
-            </div>
-
-            <!-- Jan 23: GREEN (+$555) - Started $44,648, ended $45,203 -->
-            <div class="candle-wrapper">
-              <div class="candle">
-                <div class="body green" style="bottom: 30px; height: 140px;"></div>
-                <div class="pl-label positive" style="bottom: 185px;">+$555</div>
-              </div>
-              <div class="candle-date">1/23</div>
-            </div>
-
-            <!-- Jan 24: GREEN (+$199) - Started $45,203, ended $45,402 -->
-            <div class="candle-wrapper">
-              <div class="candle">
-                <div class="body green" style="bottom: 170px; height: 55px;"></div>
-                <div class="pl-label positive" style="bottom: 240px;">+$199</div>
-              </div>
-              <div class="candle-date">1/24</div>
-            </div>
-
-            <!-- Jan 25: GREEN (+$138) - Started $45,402, ended $45,540 -->
-            <div class="candle-wrapper">
-              <div class="candle">
-                <div class="body green" style="bottom: 225px; height: 40px;"></div>
-                <div class="pl-label positive" style="bottom: 280px;">+$138</div>
+                <div class="body green" style="bottom: 113px; height: 39px;"></div>
+                <div class="pl-label positive" style="bottom: 165px;">+$138</div>
               </div>
               <div class="candle-date">1/25</div>
             </div>
 
-            <!-- Jan 26: GREEN (+$249) - Started $45,540, ended $45,790 -->
+            <!-- Jan 26: GREEN (+$249) open $45,540 -->
             <div class="candle-wrapper">
               <div class="candle">
-                <div class="body green" style="bottom: 265px; height: 65px;"></div>
-                <div class="pl-label positive" style="bottom: 345px;">+$249</div>
+                <div class="body green" style="bottom: 151px; height: 70px;"></div>
+                <div class="pl-label positive" style="bottom: 235px;">+$249</div>
               </div>
               <div class="candle-date">1/26</div>
             </div>
 
-            <!-- Jan 27: GREEN (+$384) - Started $45,790, ended $46,173 - HIGHEST -->
+            <!-- Jan 27: GREEN (+$384) open $45,790 - PEAK -->
             <div class="candle-wrapper">
               <div class="candle">
-                <div class="body green" style="bottom: 330px; height: 100px;"></div>
-                <div class="pl-label positive" style="bottom: 445px;">+$384</div>
+                <div class="body green" style="bottom: 221px; height: 108px;"></div>
+                <div class="pl-label positive" style="bottom: 342px;">+$384</div>
               </div>
               <div class="candle-date">1/27</div>
+            </div>
+
+            <!-- Jan 28: RED (-$550) close $45,623 - BIG DROP -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 174px; height: 154px;"></div>
+                <div class="pl-label negative" style="bottom: 342px;">-$550</div>
+              </div>
+              <div class="candle-date">1/28</div>
+            </div>
+
+            <!-- Jan 29: FLAT ($0) - NO ACTION -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body flat" style="bottom: 174px;"></div>
+                <div class="pl-label neutral" style="bottom: 195px;">$0</div>
+              </div>
+              <div class="candle-date">1/29</div>
+            </div>
+
+            <!-- Jan 30: GREEN (+$459) open $45,623 - RECOVERY -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 174px; height: 129px;"></div>
+                <div class="pl-label positive" style="bottom: 318px;">+$459</div>
+              </div>
+              <div class="candle-date">1/30</div>
             </div>
           </div>
         </div>

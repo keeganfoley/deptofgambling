@@ -92,7 +92,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push' | 'pending';
+  result: 'win' | 'loss' | 'push' | 'pending' | 'no_action' | 'void';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -256,10 +256,10 @@ export default function FundPage() {
 
   // Filter bets for this fund
   const allFundBets = (betsData as Bet[]).filter((bet) => bet.fund === fundKey);
-  const settledFundBets = allFundBets.filter((bet) => bet.result !== 'pending') as CalcBet[];
+  const settledFundBets = allFundBets.filter((bet) => bet.result !== 'pending' && bet.result !== 'no_action') as CalcBet[];
 
   const fundBets = [...allFundBets]
-    .filter((bet) => bet.result !== 'pending')
+    .filter((bet) => bet.result !== 'pending' && bet.result !== 'no_action')
     .sort((a, b) => {
       const dateCompare = b.date.localeCompare(a.date);
       return dateCompare !== 0 ? dateCompare : b.id - a.id;

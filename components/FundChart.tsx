@@ -50,7 +50,7 @@ export default function FundChart({ fundKey, fundColor }: FundChartProps) {
 
   // Filter bets for this fund (exclude pending bets)
   const fundBets = (betsData as Bet[])
-    .filter(bet => bet.fund === fundKey && bet.result !== 'pending')
+    .filter(bet => bet.fund === fundKey && bet.result !== 'pending' && bet.result !== 'no_action')
     .sort((a, b) => a.date.localeCompare(b.date));
 
   const hasBets = fundBets.length > 0;

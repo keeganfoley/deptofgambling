@@ -1,23 +1,23 @@
 {
-  "totalBets": 605,
-  "wins": 336,
-  "losses": 267,
+  "totalBets": 615,
+  "wins": 343,
+  "losses": 270,
   "pushes": 2,
-  "winRate": "55.54",
-  "totalWinnings": 40447.13,
-  "totalLossesAmount": 34365,
-  "avgWin": 120.38,
-  "avgLoss": -128.71,
-  "avgProfitPerBet": 10.05,
+  "winRate": "55.77",
+  "totalWinnings": 41341.11,
+  "totalLossesAmount": 34765,
+  "avgWin": 120.53,
+  "avgLoss": -128.72,
+  "avgProfitPerBet": 10.69,
   "medianProfit": 0,
   "largestWin": 345,
   "largestLoss": -250,
-  "profitFactor": 1.177,
+  "profitFactor": 1.189,
   "maxWinStreak": 9,
   "maxLossStreak": 8,
-  "currentStreak": 5,
-  "totalCapitalRisked": 374172.25,
-  "unitsRisked": 3741.72,
+  "currentStreak": 3,
+  "totalCapitalRisked": 375472.25,
+  "unitsRisked": 3754.72,
   "maxDrawdown": -2368.3,
   "maxDrawdownPercent": -5.07,
   "maxDrawdownPeak": "2026-01-10",
@@ -25,93 +25,93 @@
   "maxDrawdownPeakBalance": 46691.55,
   "maxDrawdownTroughBalance": 44323.25,
   "currentDrawdown": {
-    "amount": -609.42,
-    "percentage": -1.30,
-    "daysSincePeak": 20,
+    "amount": -115.44,
+    "percentage": -0.25,
+    "daysSincePeak": 23,
     "peakBalance": 46691.55,
     "peakDate": "2026-01-10",
-    "currentBalance": 46082.13
+    "currentBalance": 46576.11
   },
   "sharpeRatio": 3.95,
-  "sharpeRatioNote": "87-day sample",
+  "sharpeRatioNote": "90-day sample",
   "closingLineValue": null,
   "closingLineValueNote": "CLV tracking started Nov 27, 2025",
   "clvBetsTracked": 0,
   "clvTrackingStartDate": "2025-11-27",
   "rollingPerformance": {
     "last7Days": {
-      "wins": 39,
-      "losses": 26,
+      "wins": 46,
+      "losses": 29,
       "pushes": 0,
-      "pnl": 1056.98,
-      "roi": 13.64,
-      "bets": 65
+      "pnl": 1550.97,
+      "roi": 16.17,
+      "bets": 75
     },
     "last30Days": {
-      "wins": 108,
-      "losses": 98,
+      "wins": 115,
+      "losses": 101,
       "pushes": 0,
-      "pnl": 46.74,
-      "roi": 0.23,
-      "bets": 206
+      "pnl": 540.72,
+      "roi": 2.50,
+      "bets": 216
     },
     "last3Days": {
-      "wins": 7,
-      "losses": 6,
+      "wins": 14,
+      "losses": 8,
       "pushes": 0,
-      "pnl": -91.06,
-      "roi": -6.75,
-      "bets": 13
+      "pnl": 402.92,
+      "roi": 17.52,
+      "bets": 22
     }
   },
   "daysGreenStreak": {
-    "current": 1,
+    "current": 2,
     "best": 6
   },
   "edgeValidation": {
     "lowEdge": {
       "min": 0,
       "max": 5,
-      "wins": 87,
+      "wins": 88,
       "losses": 63,
       "pushes": 1,
-      "pnl": 2542.45,
-      "roi": 1.68,
-      "bets": 151,
-      "winRate": 58.0
+      "pnl": 2584.82,
+      "roi": 1.70,
+      "bets": 152,
+      "winRate": 58.28
     },
     "midEdge": {
       "min": 5,
       "max": 8,
-      "wins": 117,
-      "losses": 85,
+      "wins": 123,
+      "losses": 87,
       "pushes": 0,
-      "pnl": 3176.56,
-      "roi": 1.57,
-      "bets": 202,
-      "winRate": 57.92
+      "pnl": 3828.17,
+      "roi": 1.82,
+      "bets": 210,
+      "winRate": 58.57
     },
     "highEdge": {
       "min": 8,
       "max": 100,
       "wins": 111,
-      "losses": 107,
+      "losses": 108,
       "pushes": 1,
-      "pnl": -607.45,
-      "roi": -1.39,
-      "bets": 219,
-      "winRate": 50.92
+      "pnl": -807.45,
+      "roi": -1.54,
+      "bets": 220,
+      "winRate": 50.23
     },
     "isCorrelated": false,
-    "totalBetsWithEdge": 572
+    "totalBetsWithEdge": 582
   },
   "evAnalysis": {
-    "totalExpectedValue": 5281.6,
-    "actualPL": 5111.56,
-    "variance": -170.04,
-    "runningHot": false,
-    "runningCold": true,
-    "betsTracked": 572
+    "totalExpectedValue": 5345.6,
+    "actualPL": 5605.54,
+    "variance": 259.94,
+    "runningHot": true,
+    "runningCold": false,
+    "betsTracked": 582
   },
   "sportBreakdown": {
     "NBA": {
@@ -134,17 +134,17 @@
       "sport": "NCAAB",
       "emoji": "🎓",
       "record": {
-        "wins": 82,
-        "losses": 62,
+        "wins": 87,
+        "losses": 64,
         "pushes": 0,
-        "total": 144
+        "total": 151
       },
-      "wins": 82,
-      "losses": 62,
-      "winRate": 56.94,
-      "roi": 0.69,
-      "pnl": 1000.11,
-      "unitsWon": 10.0
+      "wins": 87,
+      "losses": 64,
+      "winRate": 57.62,
+      "roi": 1.07,
+      "pnl": 1559.60,
+      "unitsWon": 15.60
     },
     "NFL": {
       "sport": "NFL",
@@ -182,17 +182,17 @@
       "sport": "NHL",
       "emoji": "🏒",
       "record": {
-        "wins": 60,
-        "losses": 60,
+        "wins": 62,
+        "losses": 61,
         "pushes": 1,
-        "total": 121
+        "total": 124
       },
-      "wins": 60,
-      "losses": 60,
-      "winRate": 50,
-      "roi": 0.8880752780153971,
-      "pnl": 519.0799999999996,
-      "unitsWon": 5.190799999999996
+      "wins": 62,
+      "losses": 61,
+      "winRate": 50.41,
+      "roi": 1.11,
+      "pnl": 653.57,
+      "unitsWon": 6.54
     },
     "Soccer": {
       "sport": "Soccer",
@@ -253,24 +253,24 @@
     "Spreads": {
       "type": "Spreads",
       "record": {
-        "wins": 238,
-        "losses": 161,
+        "wins": 243,
+        "losses": 163,
         "pushes": 1
       },
-      "winRate": 59.65,
-      "pnl": 7145.66,
-      "roi": 2.29
+      "winRate": 59.85,
+      "pnl": 7505.15,
+      "roi": 2.38
     },
     "Moneyline": {
       "type": "Moneyline",
       "record": {
-        "wins": 56,
-        "losses": 55,
+        "wins": 58,
+        "losses": 56,
         "pushes": 0
       },
-      "winRate": 50.45045045045045,
-      "pnl": 1143.0299999999997,
-      "roi": 1.6965194805194803
+      "winRate": 50.88,
+      "pnl": 1277.52,
+      "roi": 1.85
     },
     "puckline": {
       "type": "puckline",
@@ -290,131 +290,146 @@
       "label": "Low Conviction",
       "range": "< 1u",
       "record": {
-        "wins": 34,
-        "losses": 29,
+        "wins": 35,
+        "losses": 30,
         "pushes": 1,
-        "total": 64
+        "total": 66
       },
-      "winRate": 53.97,
-      "pnl": 216.30,
-      "roi": 5.84
+      "winRate": 53.85,
+      "pnl": 208.67,
+      "roi": 5.59
     },
     "Standard": {
       "tier": "standard",
       "label": "Standard",
       "range": "1-1.5u",
       "record": {
-        "wins": 243,
-        "losses": 179,
+        "wins": 247,
+        "losses": 180,
         "pushes": 1,
-        "total": 423
+        "total": 428
       },
-      "winRate": 57.58,
-      "pnl": 6272.56,
-      "roi": 12.24
+      "winRate": 57.83,
+      "pnl": 6616.00,
+      "roi": 12.76
     },
     "High Conviction": {
       "tier": "high_conviction",
       "label": "High Conviction",
       "range": "2u+",
       "record": {
-        "wins": 59,
-        "losses": 59,
+        "wins": 61,
+        "losses": 60,
         "pushes": 0,
-        "total": 118
+        "total": 121
       },
-      "winRate": 50.0,
-      "pnl": -406.73,
-      "roi": -1.73
+      "winRate": 50.41,
+      "pnl": -248.56,
+      "roi": -1.03
     }
   },
   "fundMetrics": {
     "VectorFund": {
-      "wins": 123,
-      "losses": 108,
+      "wins": 125,
+      "losses": 110,
       "pushes": 1,
-      "pnl": 716.17,
-      "roi": 7.16,
-      "winRate": "53.25",
-      "totalStaked": 115640,
+      "pnl": 703.10,
+      "roi": 7.03,
+      "winRate": "53.19",
+      "totalStaked": 116040,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 123,
-        "losses": 108,
+        "wins": 125,
+        "losses": 110,
         "pushes": 1,
-        "pnl": 716.17,
-        "roi": 0.62,
-        "bets": 232
+        "pnl": 703.10,
+        "roi": 0.61,
+        "bets": 236
       }
     },
     "SharpFund": {
-      "wins": 151,
-      "losses": 118,
+      "wins": 153,
+      "losses": 119,
       "pushes": 0,
-      "pnl": 2965.78,
-      "roi": 29.66,
-      "winRate": "56.13",
-      "totalStaked": 232050,
+      "pnl": 3123.95,
+      "roi": 31.24,
+      "winRate": "56.25",
+      "totalStaked": 232650,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 151,
-        "losses": 118,
+        "wins": 153,
+        "losses": 119,
         "pushes": 0,
-        "pnl": 2965.78,
-        "roi": 1.28,
-        "bets": 269
+        "pnl": 3123.95,
+        "roi": 1.34,
+        "bets": 272
       }
     },
     "ContraFund": {
-      "wins": 26,
+      "wins": 28,
       "losses": 16,
       "pushes": 0,
-      "pnl": 1055.38,
-      "roi": 10.55,
-      "winRate": "61.90",
-      "totalStaked": 4875,
+      "pnl": 1262.75,
+      "roi": 12.63,
+      "winRate": "63.64",
+      "totalStaked": 5025,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 26,
+        "wins": 28,
         "losses": 16,
         "pushes": 0,
-        "pnl": 1055.38,
-        "roi": 21.65,
-        "bets": 42
+        "pnl": 1262.75,
+        "roi": 25.13,
+        "bets": 44
       }
     },
     "CatalystFund": {
-      "wins": 36,
+      "wins": 37,
       "losses": 25,
       "pushes": 1,
-      "pnl": 1344.80,
-      "roi": 13.45,
-      "winRate": "59.02",
-      "totalStaked": 26502.50,
+      "pnl": 1486.31,
+      "roi": 14.86,
+      "winRate": "59.68",
+      "totalStaked": 26652.50,
       "maxDrawdown": null,
       "currentDrawdown": null,
       "rollingPerformance": {
-        "wins": 36,
+        "wins": 37,
         "losses": 25,
         "pushes": 1,
-        "pnl": 1344.80,
-        "roi": 5.07,
-        "bets": 62
+        "pnl": 1486.31,
+        "roi": 5.58,
+        "bets": 63
       }
     }
   },
   "multiFundConsensus": {
-    "totalPicks": 29,
-    "wins": 17,
+    "totalPicks": 30,
+    "wins": 18,
     "losses": 12,
-    "winRate": "58.6",
-    "pnl": 1759.54,
-    "roi": 6.4,
-    "totalStaked": 27525,
+    "winRate": "60.0",
+    "pnl": 2184.07,
+    "roi": 7.8,
+    "totalStaked": 27975,
     "picks": [
+      {
+        "date": "2026-02-02",
+        "description": "Kansas +4.5",
+        "sport": "NCAAB",
+        "result": "win",
+        "funds": [
+          "Sharp",
+          "Vector",
+          "Catalyst"
+        ],
+        "fundCount": 3,
+        "totalProfit": 424.53,
+        "totalStake": 450,
+        "odds": -106
+      },
       {
         "date": "2026-01-30",
         "description": "Nets +3.5",

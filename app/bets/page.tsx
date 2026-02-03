@@ -30,7 +30,7 @@ interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push' | 'pending';
+  result: 'win' | 'loss' | 'push' | 'pending' | 'no_action' | 'void';
   finalStat: string;
   edge: number;
   expectedValue: number;
@@ -184,7 +184,7 @@ function BetsContent() {
   // Filter out pending bets - only show settled bets on public site
   // Sort by date (newest first), then by ID (highest first)
   const allBets = (betsData as Bet[])
-    .filter(bet => bet.result !== 'pending')
+    .filter(bet => bet.result !== 'pending' && bet.result !== 'no_action')
     .sort((a, b) => {
       const dateCompare = new Date(b.date).getTime() - new Date(a.date).getTime();
       if (dateCompare !== 0) return dateCompare;
@@ -342,7 +342,7 @@ function BetsContent() {
                     const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                     router.replace(url, { scroll: false });
                   }}
-                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer"
+                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-2.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer min-h-[44px] sm:min-h-0"
                 >
                   {sports.map((sport) => (
                     <option key={sport} value={sport}>{sport}</option>
@@ -364,7 +364,7 @@ function BetsContent() {
                     const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                     router.replace(url, { scroll: false });
                   }}
-                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-1.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer"
+                  className="flex-1 sm:flex-initial px-2 sm:px-3 py-2.5 sm:py-2 border border-gray-300 rounded text-xs sm:text-sm font-semibold bg-white focus:border-primary focus:ring-1 focus:ring-primary outline-none cursor-pointer min-h-[44px] sm:min-h-0"
                 >
                   {betTypes.map((type) => (
                     <option key={type} value={type}>{type}</option>
@@ -386,7 +386,7 @@ function BetsContent() {
                     const url = params.toString() ? `/bets?${params.toString()}` : '/bets';
                     router.replace(url, { scroll: false });
                   }}
-                  className={`px-2 py-1 text-[10px] sm:text-xs font-bold rounded transition-all ${
+                  className={`px-3 py-1.5 text-[10px] sm:text-xs font-bold rounded transition-all ${
                     currentFundFilter === 'All'
                       ? 'bg-gray-800 text-white'
                       : 'bg-gray-200 text-gray-600 hover:bg-gray-300'
@@ -405,7 +405,7 @@ function BetsContent() {
                       params.set('fund', key);
                       router.replace(`/bets?${params.toString()}`, { scroll: false });
                     }}
-                    className={`px-1.5 sm:px-2 py-1 text-[10px] sm:text-xs font-bold rounded transition-all ${
+                    className={`px-2.5 sm:px-3 py-1.5 text-[10px] sm:text-xs font-bold rounded transition-all ${
                       currentFundFilter === key
                         ? 'text-white ring-2 ring-offset-1'
                         : 'text-white opacity-50 hover:opacity-80'

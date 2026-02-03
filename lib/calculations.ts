@@ -21,7 +21,7 @@ export interface Bet {
   description: string;
   odds: number;
   stake: number;
-  result: 'win' | 'loss' | 'push' | 'pending';
+  result: 'win' | 'loss' | 'push' | 'pending' | 'no_action' | 'void';
   profit: number;
   betType: string;
   edge: number;
