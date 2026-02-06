@@ -353,7 +353,7 @@
     "id": 24,
     "date": "2025-11-07T12:00:00.000Z",
     "sport": "NBA",
-    "description": "Jokić U12.5 rebounds",
+    "description": "Joki\u0107 U12.5 rebounds",
     "odds": -105,
     "stake": 1.5,
     "result": "loss",
@@ -362,15 +362,15 @@
     "expectedValue": 27.3,
     "profit": -150,
     "betType": "props",
-    "player": "Nikola Jokić",
+    "player": "Nikola Joki\u0107",
     "team": "Denver Nuggets",
     "opponent": "Golden State Warriors",
     "slug": "jokic-rebounds-nov7-2025",
     "fund": "VectorFund",
     "datePlaced": "2025-11-07T12:00:00.000Z",
-    "thesis": "Model projects +14% edge on this line. Nikola Jokić has been consistently attacking the glass. Recent usage patterns and matchup dynamics favor hitting this number. Expected value of +27.3% makes this a positive EV play.",
+    "thesis": "Model projects +14% edge on this line. Nikola Joki\u0107 has been consistently attacking the glass. Recent usage patterns and matchup dynamics favor hitting this number. Expected value of +27.3% makes this a positive EV play.",
     "ev": 27.3,
-    "analysis": "Model projects +14% edge on this line. Nikola Jokić has been consistently attacking the glass. Recent usage patterns and matchup dynamics favor hitting this number. Expected value of +27.3% makes this a positive EV play."
+    "analysis": "Model projects +14% edge on this line. Nikola Joki\u0107 has been consistently attacking the glass. Recent usage patterns and matchup dynamics favor hitting this number. Expected value of +27.3% makes this a positive EV play."
   },
   {
     "id": 25,
@@ -1049,7 +1049,7 @@
     "profit": 223.21428571428572,
     "betType": "total",
     "slug": "jets-patriots-under-nov13-2025",
-    "analysis": "Under 43.5 Total Points. THESIS: Low-scoring Thursday Night Football matchup between two struggling offenses. Patriots' defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both teams run-heavy, clock-controlling game scripts. Weather in Foxborough: 40°F with 15mph winds (reduces passing efficiency by ~12%). RESULT: Hit comfortably at 41 points. Patriots dominated time of possession (34:18 to 25:42), ran 71 plays vs Jets' 52. Exactly as modeled.",
+    "analysis": "Under 43.5 Total Points. THESIS: Low-scoring Thursday Night Football matchup between two struggling offenses. Patriots' defense ranks 3rd in points allowed (17.2 PPG), Jets rank 5th (18.1 PPG). Both teams run-heavy, clock-controlling game scripts. Weather in Foxborough: 40\u00b0F with 15mph winds (reduces passing efficiency by ~12%). RESULT: Hit comfortably at 41 points. Patriots dominated time of possession (34:18 to 25:42), ran 71 plays vs Jets' 52. Exactly as modeled.",
     "fund": "VectorFund",
     "team": "New York Jets",
     "opponent": "New England Patriots",
@@ -11057,7 +11057,7 @@
     "edge": 12,
     "expectedValue": 6,
     "conviction": 85,
-    "thesis": "Despite a rough road record (5-10-2), the money is pouring in on Toronto. This line flipped from Flyers -111 to Maple Leafs plus money as bettors loaded up on the road team. Auston Matthews is scorching hot with 7 goals in his last 5 games. Philly is dealing with their own injury issues tonight—Bobby Brink, Jamie Drysdale, and Tyson Foerster are all OUT. When the line moves this dramatically against where the public is betting, there's usually a reason.",
+    "thesis": "Despite a rough road record (5-10-2), the money is pouring in on Toronto. This line flipped from Flyers -111 to Maple Leafs plus money as bettors loaded up on the road team. Auston Matthews is scorching hot with 7 goals in his last 5 games. Philly is dealing with their own injury issues tonight\u2014Bobby Brink, Jamie Drysdale, and Tyson Foerster are all OUT. When the line moves this dramatically against where the public is betting, there's usually a reason.",
     "slug": "mapleleafs-ml-sharp-jan8-2026",
     "payout": 412,
     "profit": 212,
@@ -11080,7 +11080,7 @@
     "edge": 5.5,
     "expectedValue": 2.8,
     "conviction": 65,
-    "thesis": "CFP Semifinal in a dome with perfect conditions. Ole Miss is averaging 496 yards per game (2nd in the nation) and has scored 30+ points in 8 straight games. Trinidad Chambliss threw for 362 yards against Georgia and set a Sugar Bowl record with 13 straight completions. Miami's defense has been dominant in the playoffs, but Ole Miss presents a different challenge with their explosive pace. The line opened at 53.5 elsewhere—we got the better number at 52.5.",
+    "thesis": "CFP Semifinal in a dome with perfect conditions. Ole Miss is averaging 496 yards per game (2nd in the nation) and has scored 30+ points in 8 straight games. Trinidad Chambliss threw for 362 yards against Georgia and set a Sugar Bowl record with 13 straight completions. Miami's defense has been dominant in the playoffs, but Ole Miss presents a different challenge with their explosive pace. The line opened at 53.5 elsewhere\u2014we got the better number at 52.5.",
     "slug": "miami-olemiss-over-vector-jan8-2026",
     "payout": 190.91,
     "profit": 90.91,
@@ -11103,7 +11103,7 @@
     "edge": 6.5,
     "expectedValue": 3.3,
     "conviction": 65,
-    "thesis": "The Islanders just crushed the Devils 9-0 on Tuesday—their highest-scoring game since 2010-11 and tied for the largest margin of victory in franchise history. Nashville is limping after getting blown out 6-2 by Edmonton. The Predators are missing key pieces: Roman Josi (star defenseman) is on IR, and Jonathan Marchessault has missed 9 straight games. Plus-money on a hot team against a depleted opponent.",
+    "thesis": "The Islanders just crushed the Devils 9-0 on Tuesday\u2014their highest-scoring game since 2010-11 and tied for the largest margin of victory in franchise history. Nashville is limping after getting blown out 6-2 by Edmonton. The Predators are missing key pieces: Roman Josi (star defenseman) is on IR, and Jonathan Marchessault has missed 9 straight games. Plus-money on a hot team against a depleted opponent.",
     "slug": "islanders-ml-catalyst-jan8-2026",
     "payout": 0,
     "profit": -100,
@@ -11126,7 +11126,7 @@
     "edge": 8,
     "expectedValue": 4,
     "conviction": 70,
-    "thesis": "Multiple indicators aligned on the Bulls despite their recent struggles. The bet split is roughly 50/50, but the money is favoring Chicago. This line opened at -6 and got pushed to -7.5—whenever lines move against the betting percentages, it signals that bigger, more informed bettors are on the other side. Chicago's on a 3-game skid but still has Nikola Vucevic anchoring the offense at home.",
+    "thesis": "Multiple indicators aligned on the Bulls despite their recent struggles. The bet split is roughly 50/50, but the money is favoring Chicago. This line opened at -6 and got pushed to -7.5\u2014whenever lines move against the betting percentages, it signals that bigger, more informed bettors are on the other side. Chicago's on a 3-game skid but still has Nikola Vucevic anchoring the offense at home.",
     "slug": "bulls-spread-vector-jan8-2026",
     "payout": 150,
     "profit": 0,
@@ -11149,7 +11149,7 @@
     "edge": 5,
     "expectedValue": 2.5,
     "conviction": 60,
-    "thesis": "Cleveland has won 6 of their last 9 games and Darius Garland just dropped 29 points in their last win. Anthony Edwards is listed as questionable with a foot issue—if he sits, Minnesota has gone just 7-5 without him this season. Even if he plays, getting the 7th-seed Cavs at +2.5 against a team that beat them by just 3 in their last meeting offers solid value.",
+    "thesis": "Cleveland has won 6 of their last 9 games and Darius Garland just dropped 29 points in their last win. Anthony Edwards is listed as questionable with a foot issue\u2014if he sits, Minnesota has gone just 7-5 without him this season. Even if he plays, getting the 7th-seed Cavs at +2.5 against a team that beat them by just 3 in their last meeting offers solid value.",
     "slug": "cavaliers-spread-catalyst-jan8-2026",
     "payout": 0,
     "profit": -100,
@@ -11172,7 +11172,7 @@
     "edge": 8,
     "expectedValue": 4,
     "conviction": 70,
-    "thesis": "Colorado has the best record in hockey (31-4-7) but just lost two straight games in regulation. The Avs are now missing captain Gabe Landeskog and top defenseman Devon Toews to upper-body injuries. Ottawa has Brady Tkachuk, Thomas Chabot, and Shane Pinto all healthy and back in the lineup. Getting a plus-money puck line on a road underdog against a banged-up team—even a great one—is value. We just need Ottawa to keep it within 1 goal.",
+    "thesis": "Colorado has the best record in hockey (31-4-7) but just lost two straight games in regulation. The Avs are now missing captain Gabe Landeskog and top defenseman Devon Toews to upper-body injuries. Ottawa has Brady Tkachuk, Thomas Chabot, and Shane Pinto all healthy and back in the lineup. Getting a plus-money puck line on a road underdog against a banged-up team\u2014even a great one\u2014is value. We just need Ottawa to keep it within 1 goal.",
     "slug": "senators-puckline-sharp-jan8-2026",
     "payout": 0,
     "profit": -100,
@@ -11218,7 +11218,7 @@
     "edge": 15,
     "expectedValue": 7.5,
     "conviction": 80,
-    "thesis": "The biggest money divergence of the entire slate. Only 30% of bets are on Ohio State, but 88% of the money is backing the Buckeyes. Oregon (8-7) just lost at Rutgers in OT and had to fly cross-country for a quick turnaround. More importantly, star guard Jackson Shelstad is OUT with a hand injury—he's missed the last two games and was the catalyst for Oregon's offense. Ohio State is 10-4 and looking to bounce back after a Nebraska loss. When this much money backs a plus-money road dog, smart bettors see something.",
+    "thesis": "The biggest money divergence of the entire slate. Only 30% of bets are on Ohio State, but 88% of the money is backing the Buckeyes. Oregon (8-7) just lost at Rutgers in OT and had to fly cross-country for a quick turnaround. More importantly, star guard Jackson Shelstad is OUT with a hand injury\u2014he's missed the last two games and was the catalyst for Oregon's offense. Ohio State is 10-4 and looking to bounce back after a Nebraska loss. When this much money backs a plus-money road dog, smart bettors see something.",
     "slug": "ohiostate-ml-sharp-jan8-2026",
     "payout": 339,
     "profit": 189,
@@ -11473,7 +11473,7 @@
     "edge": 11,
     "expectedValue": 5.5,
     "conviction": 65,
-    "thesis": "Hofstra is 12-4 and riding a 7-game win streak with impressive road wins at Syracuse and Pitt. Cruz Davis is scoring in double figures in all 12 games — he just dropped 32 on Towson. The Pride are 8-1 ATS lately and 3-0 at home this season. So why are we fading them?\n\nBecause 78% of the money is on Monmouth despite only 67% of tickets — that's an 11% gap telling you where the professionals are. Monmouth is 8-8 but just won two straight including an 81-70 home win over William & Mary. Jason Rivera-Torres has scored in double figures in 10 consecutive games, averaging 15.3 PPG and 8.1 RPG. The Hawks lead the all-time series 9-8. \n\nMonmouth is 6-3 ATS this season through defensive intensity and turnover creation. Getting 7.5 points in a CAA conference game where the sharps are loading on the road dog is the play.",
+    "thesis": "Hofstra is 12-4 and riding a 7-game win streak with impressive road wins at Syracuse and Pitt. Cruz Davis is scoring in double figures in all 12 games \u2014 he just dropped 32 on Towson. The Pride are 8-1 ATS lately and 3-0 at home this season. So why are we fading them?\n\nBecause 78% of the money is on Monmouth despite only 67% of tickets \u2014 that's an 11% gap telling you where the professionals are. Monmouth is 8-8 but just won two straight including an 81-70 home win over William & Mary. Jason Rivera-Torres has scored in double figures in 10 consecutive games, averaging 15.3 PPG and 8.1 RPG. The Hawks lead the all-time series 9-8. \n\nMonmouth is 6-3 ATS this season through defensive intensity and turnover creation. Getting 7.5 points in a CAA conference game where the sharps are loading on the road dog is the play.",
     "slug": "monmouth-spread-sharp-jan10-2026"
   },
   {
@@ -11495,7 +11495,7 @@
     "edge": 16,
     "expectedValue": 8,
     "conviction": 70,
-    "thesis": "Big East Tournament Final rematch. St. Johns (10-5, 3-1 Big East) came into the year as preseason #5 but fell out of the rankings after a rough nonconference slate. They've bounced back in league play — 3 wins in their first 4 Big East games including an 84-70 road win at Butler.\n\nHere's the concern: St. Johns hasn't won in Omaha in 7 years. Their last two trips to Creighton were both 1-point losses. Creighton is 4-1 in conference play and won 13 straight Saturday home games in Big East play.\n\nBut here's why we're on St. Johns: 79% of the money is backing the Red Storm despite only 63% of tickets — a 16% gap screaming sharp action. KenPom has this as a coin flip (50% St. Johns win probability). Creighton lost Ryan Kalkbrenner (4x Big East Defensive POY) to the NBA and his replacement Owen Freeman hasn't panned out. St. Johns is elite on the offensive glass — they turn misses into layups and free throws. Rick Pitino knows how to prepare for big road games. Getting 1.5 points with the sharps is value.",
+    "thesis": "Big East Tournament Final rematch. St. Johns (10-5, 3-1 Big East) came into the year as preseason #5 but fell out of the rankings after a rough nonconference slate. They've bounced back in league play \u2014 3 wins in their first 4 Big East games including an 84-70 road win at Butler.\n\nHere's the concern: St. Johns hasn't won in Omaha in 7 years. Their last two trips to Creighton were both 1-point losses. Creighton is 4-1 in conference play and won 13 straight Saturday home games in Big East play.\n\nBut here's why we're on St. Johns: 79% of the money is backing the Red Storm despite only 63% of tickets \u2014 a 16% gap screaming sharp action. KenPom has this as a coin flip (50% St. Johns win probability). Creighton lost Ryan Kalkbrenner (4x Big East Defensive POY) to the NBA and his replacement Owen Freeman hasn't panned out. St. Johns is elite on the offensive glass \u2014 they turn misses into layups and free throws. Rick Pitino knows how to prepare for big road games. Getting 1.5 points with the sharps is value.",
     "slug": "stjohns-spread-sharp-jan10-2026"
   },
   {
@@ -11517,7 +11517,7 @@
     "edge": 8,
     "expectedValue": 4,
     "conviction": 82,
-    "thesis": "Yes, Carolina beat LA 31-28 in Week 13. Bryce Young had a career game — 15-of-20, 206 yards, 3 TDs, 147.1 passer rating. Stafford threw 2 INTs including a pick-six. The Panthers snapped the Rams' 6-game win streak. So why are we laying 10?\n\nBecause that Panthers team doesn't exist anymore. After that upset, Carolina went 2-4 down the stretch. Their offense completely cratered — just 16 PPG over their final 4 games. Young threw for only 54 yards against Seattle in Week 17. They backed into the playoffs at 8-9 needing Atlanta to beat New Orleans on a tiebreaker. Their offense actually regressed from 2024 — PPG dropped from 20.1 to 18.3.\n\nMeanwhile, the Rams (12-5) led the NFL in scoring with 518 points — nobody else was close. Stafford threw for 4,707 yards and 46 TDs with only 8 picks. Puka Nacua had 1,715 receiving yards. Davante Adams is back from his hamstring injury and off the injury report. \n\nThis is the largest road favorite in a playoff game since 1970 because Vegas knows Week 13 was a fluke. Stafford is coming in angry with revenge on his mind. LA is 4-1 ATS in their last 5 and 7-0 ATS in January games. The Rams defense is 4th in DVOA and they finished as the only team that was top-10 in both offense and defense in EPA per play.",
+    "thesis": "Yes, Carolina beat LA 31-28 in Week 13. Bryce Young had a career game \u2014 15-of-20, 206 yards, 3 TDs, 147.1 passer rating. Stafford threw 2 INTs including a pick-six. The Panthers snapped the Rams' 6-game win streak. So why are we laying 10?\n\nBecause that Panthers team doesn't exist anymore. After that upset, Carolina went 2-4 down the stretch. Their offense completely cratered \u2014 just 16 PPG over their final 4 games. Young threw for only 54 yards against Seattle in Week 17. They backed into the playoffs at 8-9 needing Atlanta to beat New Orleans on a tiebreaker. Their offense actually regressed from 2024 \u2014 PPG dropped from 20.1 to 18.3.\n\nMeanwhile, the Rams (12-5) led the NFL in scoring with 518 points \u2014 nobody else was close. Stafford threw for 4,707 yards and 46 TDs with only 8 picks. Puka Nacua had 1,715 receiving yards. Davante Adams is back from his hamstring injury and off the injury report. \n\nThis is the largest road favorite in a playoff game since 1970 because Vegas knows Week 13 was a fluke. Stafford is coming in angry with revenge on his mind. LA is 4-1 ATS in their last 5 and 7-0 ATS in January games. The Rams defense is 4th in DVOA and they finished as the only team that was top-10 in both offense and defense in EPA per play.",
     "slug": "rams-spread-sharp-jan10-2026"
   },
   {
@@ -11539,7 +11539,7 @@
     "edge": 8,
     "expectedValue": 4,
     "conviction": 70,
-    "thesis": "This total opened at 46.5 and has been bet down to 45 — that's 1.5 points of movement toward the under. The sharps are sending a clear signal.\n\nHistorical trends back the under heavily in Wild Card games: Of the last 43 Wild Card games with totals of 44 or higher, the under is 32-15-1 (68.1%). Last year's Wild Card Weekend had 5 unders and just 1 over. When road teams win outright in the playoffs, the under is 24-8-2 (75%) over the last 14 years with home teams scoring just 16.4 PPG in those road wins.\n\nCarolina's offense has completely stalled. They scored just 16 PPG over their final 4 games and their passing attack went from bad to worse — 179.3 yards per game (26th in NFL). Bryce Young threw for only 54 yards against Seattle in Week 17. Yes, the Rams scored 518 points this season, but playoff football tightens up. Carolina's defense held opposing QBs to an 82.8 passer rating over their final 7 games and generated 2 sacks per game. \n\nThe Rams defense is 4th in DVOA. If LA jumps out to a big lead (likely as 10-point favorites), they'll run the ball and kill clock rather than air it out.",
+    "thesis": "This total opened at 46.5 and has been bet down to 45 \u2014 that's 1.5 points of movement toward the under. The sharps are sending a clear signal.\n\nHistorical trends back the under heavily in Wild Card games: Of the last 43 Wild Card games with totals of 44 or higher, the under is 32-15-1 (68.1%). Last year's Wild Card Weekend had 5 unders and just 1 over. When road teams win outright in the playoffs, the under is 24-8-2 (75%) over the last 14 years with home teams scoring just 16.4 PPG in those road wins.\n\nCarolina's offense has completely stalled. They scored just 16 PPG over their final 4 games and their passing attack went from bad to worse \u2014 179.3 yards per game (26th in NFL). Bryce Young threw for only 54 yards against Seattle in Week 17. Yes, the Rams scored 518 points this season, but playoff football tightens up. Carolina's defense held opposing QBs to an 82.8 passer rating over their final 7 games and generated 2 sacks per game. \n\nThe Rams defense is 4th in DVOA. If LA jumps out to a big lead (likely as 10-point favorites), they'll run the ball and kill clock rather than air it out.",
     "slug": "rams-panthers-under-catalyst-jan10-2026"
   },
   {
@@ -11561,7 +11561,7 @@
     "edge": 6,
     "expectedValue": 3,
     "conviction": 68,
-    "thesis": "Tampa already shut out Philadelphia 3-0 on November 24th. Andrei Vasilevskiy made 20 saves for his 41st career shutout — his 6th career shutout against the Flyers specifically. The Lightning have dominated this matchup.\n\nSince then, Tampa has gotten even hotter. They've won 8 straight including a win over the league-leading Avalanche. Nikita Kucherov is on an 8-game point streak with 19 points (7 goals, 12 assists) during the run — he was named NHL First Star two weeks in a row. He has 61 points in 38 games this season. Brandon Hagel started slow (0 goals in first 8 games) but has exploded for 27 points (15 goals, 11 assists) in his last 17 games. The Lightning are 8-2-0 in their last 10, averaging 4.2 goals per game.\n\nPhiladelphia is banged up. Travis Konecny left Thursday's game with an upper-body injury and will NOT play tonight — coach Tocchet confirmed it. Bobby Brink is also day-to-day. Jamie Drysdale is on IR. The Flyers' power play has cratered to 31st in the NHL at just 15% — they're 1-for-19 over their last 6 games. On Thursday they had 52 seconds of 5-on-3 against Toronto and couldn't convert, then gave up a shorthanded goal.\n\n94% of the money is on Tampa Bay. When you've already shut out a team, you're on an 8-game heater, and they're missing their best player, you lay the juice.",
+    "thesis": "Tampa already shut out Philadelphia 3-0 on November 24th. Andrei Vasilevskiy made 20 saves for his 41st career shutout \u2014 his 6th career shutout against the Flyers specifically. The Lightning have dominated this matchup.\n\nSince then, Tampa has gotten even hotter. They've won 8 straight including a win over the league-leading Avalanche. Nikita Kucherov is on an 8-game point streak with 19 points (7 goals, 12 assists) during the run \u2014 he was named NHL First Star two weeks in a row. He has 61 points in 38 games this season. Brandon Hagel started slow (0 goals in first 8 games) but has exploded for 27 points (15 goals, 11 assists) in his last 17 games. The Lightning are 8-2-0 in their last 10, averaging 4.2 goals per game.\n\nPhiladelphia is banged up. Travis Konecny left Thursday's game with an upper-body injury and will NOT play tonight \u2014 coach Tocchet confirmed it. Bobby Brink is also day-to-day. Jamie Drysdale is on IR. The Flyers' power play has cratered to 31st in the NHL at just 15% \u2014 they're 1-for-19 over their last 6 games. On Thursday they had 52 seconds of 5-on-3 against Toronto and couldn't convert, then gave up a shorthanded goal.\n\n94% of the money is on Tampa Bay. When you've already shut out a team, you're on an 8-game heater, and they're missing their best player, you lay the juice.",
     "slug": "lightning-ml-sharp-jan10-2026"
   },
   {
@@ -11583,7 +11583,7 @@
     "edge": 5,
     "expectedValue": 2.5,
     "conviction": 70,
-    "thesis": "Two weeks ago, Kawhi Leonard dropped a career-high 55 points on Detroit — the first player in NBA history with 55+ points, 11+ rebounds, 5+ steals, and 3+ blocks in a single game. The Clippers won 112-99 and have won 12 of the last 13 meetings against the Pistons.\n\nBut tonight's different. The Clippers are on a back-to-back, finishing a 3-game road trip. Kawhi is questionable with a right ankle sprain — he rolled it against the Knicks on Wednesday. Last night against Brooklyn, he started slow but finished with 26 points. James Harden had 31 points and shot 10-for-13. The Clippers are 8-2 in their last 10 games despite their 14-23 record.\n\nHere's the key: Detroit's injuries level the playing field. Jalen Duren is OUT (ankle) — he had 18 points and 14 rebounds when these teams played two weeks ago. Tobias Harris is OUT (hip). Cade Cunningham is questionable with a wrist injury. Duren is their rim protector and allows Isaiah Stewart to roam as a secondary defender. Without him, opponents get easier looks at the basket.\n\nThis line opened at +3.5 and has moved to +5 — that's 1.5 points of value moving our way as the market adjusts to Detroit's injuries. 66% of money on the Clippers. Stewart stepped up for 31 points against the Bulls, but the defensive versatility suffers without Duren.",
+    "thesis": "Two weeks ago, Kawhi Leonard dropped a career-high 55 points on Detroit \u2014 the first player in NBA history with 55+ points, 11+ rebounds, 5+ steals, and 3+ blocks in a single game. The Clippers won 112-99 and have won 12 of the last 13 meetings against the Pistons.\n\nBut tonight's different. The Clippers are on a back-to-back, finishing a 3-game road trip. Kawhi is questionable with a right ankle sprain \u2014 he rolled it against the Knicks on Wednesday. Last night against Brooklyn, he started slow but finished with 26 points. James Harden had 31 points and shot 10-for-13. The Clippers are 8-2 in their last 10 games despite their 14-23 record.\n\nHere's the key: Detroit's injuries level the playing field. Jalen Duren is OUT (ankle) \u2014 he had 18 points and 14 rebounds when these teams played two weeks ago. Tobias Harris is OUT (hip). Cade Cunningham is questionable with a wrist injury. Duren is their rim protector and allows Isaiah Stewart to roam as a secondary defender. Without him, opponents get easier looks at the basket.\n\nThis line opened at +3.5 and has moved to +5 \u2014 that's 1.5 points of value moving our way as the market adjusts to Detroit's injuries. 66% of money on the Clippers. Stewart stepped up for 31 points against the Bulls, but the defensive versatility suffers without Duren.",
     "slug": "clippers-spread-sharp-jan10-2026"
   },
   {
@@ -11605,7 +11605,7 @@
     "edge": 9,
     "expectedValue": 4.5,
     "conviction": 88,
-    "thesis": "Yes, the Bears just beat the Packers 22-16 in OT three weeks ago. Chicago mounted an all-time comeback — they trailed 16-6 with under 2 minutes left and their win probability dropped to 0.5%. They recovered an onside kick when Romeo Doubs bobbled it, scored a TD with 24 seconds left, then won in OT when Malik Willis fumbled a snap on 4th-and-1. It was the 5th most improbable win in NFL history since 2016.\n\nBut that game doesn't count against a healthy Jordan Love. He left in the 2nd quarter with a concussion from a helmet-to-helmet hit. The Packers led 16-6 before Willis took over and choked it away. Love hasn't played since — he's been fully cleared and rested for 3 weeks.\n\nWith Love healthy, here's what you need to know: He threw for 3,381 yards, 23 TDs, and only 6 INTs this season (career low). His 101+ QB rating ranked 6th in the NFL. The Packers won the first meeting 28-21 in Week 14 when Love played. They're 12-2 straight up and 11-3 ATS in their last 14 games against Chicago.\n\nThe Bears (11-6) have Caleb Williams making his first playoff start. He set a franchise record with 3,942 passing yards and has 6 comeback wins this season (most in the NFL). Their defense led the league in INTs (23) and takeaways (33). This is a real team.\n\nBut the public is all over the Bears for their first home playoff game since 2020 — 72% of tickets on Chicago. Yet the line hasn't moved. That's textbook reverse line movement. The books know the sharps are on Green Bay. WR Dontayvion Wicks is OUT for the Packers, but the Bears are missing DB C.J. Gardner-Johnson (concussion) — their new defensive playmaker with a forced fumble and 2 sacks in just 2 games.",
+    "thesis": "Yes, the Bears just beat the Packers 22-16 in OT three weeks ago. Chicago mounted an all-time comeback \u2014 they trailed 16-6 with under 2 minutes left and their win probability dropped to 0.5%. They recovered an onside kick when Romeo Doubs bobbled it, scored a TD with 24 seconds left, then won in OT when Malik Willis fumbled a snap on 4th-and-1. It was the 5th most improbable win in NFL history since 2016.\n\nBut that game doesn't count against a healthy Jordan Love. He left in the 2nd quarter with a concussion from a helmet-to-helmet hit. The Packers led 16-6 before Willis took over and choked it away. Love hasn't played since \u2014 he's been fully cleared and rested for 3 weeks.\n\nWith Love healthy, here's what you need to know: He threw for 3,381 yards, 23 TDs, and only 6 INTs this season (career low). His 101+ QB rating ranked 6th in the NFL. The Packers won the first meeting 28-21 in Week 14 when Love played. They're 12-2 straight up and 11-3 ATS in their last 14 games against Chicago.\n\nThe Bears (11-6) have Caleb Williams making his first playoff start. He set a franchise record with 3,942 passing yards and has 6 comeback wins this season (most in the NFL). Their defense led the league in INTs (23) and takeaways (33). This is a real team.\n\nBut the public is all over the Bears for their first home playoff game since 2020 \u2014 72% of tickets on Chicago. Yet the line hasn't moved. That's textbook reverse line movement. The books know the sharps are on Green Bay. WR Dontayvion Wicks is OUT for the Packers, but the Bears are missing DB C.J. Gardner-Johnson (concussion) \u2014 their new defensive playmaker with a forced fumble and 2 sacks in just 2 games.",
     "slug": "packers-spread-sharp-jan10-2026"
   },
   {
@@ -11627,7 +11627,7 @@
     "edge": 25,
     "expectedValue": 12.5,
     "conviction": 72,
-    "thesis": "Biggest money vs. tickets gap on the NCAAB board today. 73% of bets are on Kentucky, but only 48% of the money — a massive 25% divergence pointing to sharp action on Mississippi State.\n\nThe Bulldogs (10-5, 2-0 SEC) have won 6 straight games including road wins at Texas (101-98 OT) and Oklahoma (72-53). They've overcome second-half deficits to win 7 times this season. Josh Hubbard is the SEC's leading scorer at 23 PPG — he just had back-to-back 30+ point games (38 vs Texas, 30 vs Oklahoma) and won SEC Player of the Week. He's scored in double figures in 32 of his last 33 games. State is 5-1 ATS during this 6-game win streak after failing to cover their first 7 games.\n\nKentucky (9-6, 0-2 SEC) is in crisis. This is their worst SEC start in 20 years. They've been blown out by Gonzaga (94-59), lost at home to Missouri after blowing an 8-point lead with 5 minutes left, and lost to Alabama 89-74. Coach Mark Pope is 10-10 in his first 20 SEC games with 6 double-digit losses and 4 home losses. They have the highest-paid roster in college basketball and are borderline bubble at this point.\n\nJayden Quaintance is OUT for Kentucky. State has won their last 2 true road games this season. Getting nearly 11 points in Rupp Arena against a struggling Kentucky team with this much professional money backing you is value.",
+    "thesis": "Biggest money vs. tickets gap on the NCAAB board today. 73% of bets are on Kentucky, but only 48% of the money \u2014 a massive 25% divergence pointing to sharp action on Mississippi State.\n\nThe Bulldogs (10-5, 2-0 SEC) have won 6 straight games including road wins at Texas (101-98 OT) and Oklahoma (72-53). They've overcome second-half deficits to win 7 times this season. Josh Hubbard is the SEC's leading scorer at 23 PPG \u2014 he just had back-to-back 30+ point games (38 vs Texas, 30 vs Oklahoma) and won SEC Player of the Week. He's scored in double figures in 32 of his last 33 games. State is 5-1 ATS during this 6-game win streak after failing to cover their first 7 games.\n\nKentucky (9-6, 0-2 SEC) is in crisis. This is their worst SEC start in 20 years. They've been blown out by Gonzaga (94-59), lost at home to Missouri after blowing an 8-point lead with 5 minutes left, and lost to Alabama 89-74. Coach Mark Pope is 10-10 in his first 20 SEC games with 6 double-digit losses and 4 home losses. They have the highest-paid roster in college basketball and are borderline bubble at this point.\n\nJayden Quaintance is OUT for Kentucky. State has won their last 2 true road games this season. Getting nearly 11 points in Rupp Arena against a struggling Kentucky team with this much professional money backing you is value.",
     "slug": "missstate-spread-sharp-jan10-2026"
   },
   {
@@ -11649,7 +11649,7 @@
     "edge": 6.3,
     "expectedValue": 3.2,
     "conviction": 95,
-    "thesis": "NFC Wild Card. Only 35% of bets are on the 49ers, but 54% of the money is — that 19% gap means professionals are loading up on San Francisco. The line opened at Eagles -3 and has climbed to -5.5, but our model projects this closer to a 3-point game. That's 2.5 points of value we're getting. Brock Purdy threw 10 touchdowns in his last two games before Week 18 and was named NFC Offensive Player of the Week after a 5-TD performance against the Colts. The 49ers are 6-1 straight up and against the spread in their last 7 games. Trent Williams got positive injury news this week. Getting nearly a touchdown with a hot quarterback against a Philly team that went just 5-3 at home.",
+    "thesis": "NFC Wild Card. Only 35% of bets are on the 49ers, but 54% of the money is \u2014 that 19% gap means professionals are loading up on San Francisco. The line opened at Eagles -3 and has climbed to -5.5, but our model projects this closer to a 3-point game. That's 2.5 points of value we're getting. Brock Purdy threw 10 touchdowns in his last two games before Week 18 and was named NFC Offensive Player of the Week after a 5-TD performance against the Colts. The 49ers are 6-1 straight up and against the spread in their last 7 games. Trent Williams got positive injury news this week. Getting nearly a touchdown with a hot quarterback against a Philly team that went just 5-3 at home.",
     "slug": "49ers-spread-sharp-jan11-2026"
   },
   {
@@ -11671,7 +11671,7 @@
     "edge": 2.3,
     "expectedValue": 1.2,
     "conviction": 85,
-    "thesis": "AFC Wild Card. The line opened at Patriots -4 and has moved down to -3.5, meaning money came in on LA despite 78% of bets backing New England. Only 43% of bets but 51% of money is on the Chargers spread — and on the moneyline, just 16% of tickets but 29% of money backs LA. That gap is the smart money. Justin Herbert is 14-6 against the spread as a road underdog in his career. The Chargers went 4-0 straight up as underdogs this season with Herbert. He rested Week 18 to let his hand fully heal and said it feels the strongest it has since before the injury. Jim Harbaugh knows how to coach as an underdog — he's 13-13 straight up in those spots in his NFL career. LA is battle-tested at 5-3 on the road.",
+    "thesis": "AFC Wild Card. The line opened at Patriots -4 and has moved down to -3.5, meaning money came in on LA despite 78% of bets backing New England. Only 43% of bets but 51% of money is on the Chargers spread \u2014 and on the moneyline, just 16% of tickets but 29% of money backs LA. That gap is the smart money. Justin Herbert is 14-6 against the spread as a road underdog in his career. The Chargers went 4-0 straight up as underdogs this season with Herbert. He rested Week 18 to let his hand fully heal and said it feels the strongest it has since before the injury. Jim Harbaugh knows how to coach as an underdog \u2014 he's 13-13 straight up in those spots in his NFL career. LA is battle-tested at 5-3 on the road.",
     "slug": "chargers-spread-sharp-jan11-2026"
   },
   {
@@ -11693,7 +11693,7 @@
     "edge": 5,
     "expectedValue": 6.3,
     "conviction": 75,
-    "thesis": "Vegas is in a goalie crisis. Carter Hart went down with a lower-body injury on Thursday and is now week-to-week. Adin Hill has been out since October. The Golden Knights are down to their third-string options — Akira Schmid or Carl Lindbom (1-4-2, 3.14 GAA, .870 save percentage). Only 32% of bets are on the Sharks, but 63% of the money is — that's a massive 31% gap showing where professionals are betting. San Jose has won 5 straight games and Macklin Celebrini is on a 12-game point streak. Vegas is also playing their second game in two nights (back-to-back fatigue). Getting plus money on a hot team against compromised goaltending.",
+    "thesis": "Vegas is in a goalie crisis. Carter Hart went down with a lower-body injury on Thursday and is now week-to-week. Adin Hill has been out since October. The Golden Knights are down to their third-string options \u2014 Akira Schmid or Carl Lindbom (1-4-2, 3.14 GAA, .870 save percentage). Only 32% of bets are on the Sharks, but 63% of the money is \u2014 that's a massive 31% gap showing where professionals are betting. San Jose has won 5 straight games and Macklin Celebrini is on a 12-game point streak. Vegas is also playing their second game in two nights (back-to-back fatigue). Getting plus money on a hot team against compromised goaltending.",
     "slug": "sharks-ml-sharp-jan11-2026"
   },
   {
@@ -11715,7 +11715,7 @@
     "edge": 10.4,
     "expectedValue": 5.2,
     "conviction": 134,
-    "thesis": "Our model projects this game at Heat +7.7, but we're getting +14.5 — that's nearly 7 points of free cushion. Only 10% of bets are on the Heat moneyline but 33% of the money, showing where the professionals are. Miami has won 4 of their last 5 games and their defense ranks 3rd in the NBA. In the NBA, even bad teams usually stay within 15 points because of garbage time. The Heat are 20-18, a competitive .500 team, not a pushover. OKC is elite at 32-7 but 14.5 points is pricing in a near-blowout. That's a lot of cushion for a team with Bam Adebayo and one of the best defenses in the league.",
+    "thesis": "Our model projects this game at Heat +7.7, but we're getting +14.5 \u2014 that's nearly 7 points of free cushion. Only 10% of bets are on the Heat moneyline but 33% of the money, showing where the professionals are. Miami has won 4 of their last 5 games and their defense ranks 3rd in the NBA. In the NBA, even bad teams usually stay within 15 points because of garbage time. The Heat are 20-18, a competitive .500 team, not a pushover. OKC is elite at 32-7 but 14.5 points is pricing in a near-blowout. That's a lot of cushion for a team with Bam Adebayo and one of the best defenses in the league.",
     "slug": "heat-spread-vector-jan11-2026"
   },
   {
@@ -11737,7 +11737,7 @@
     "edge": 11.2,
     "expectedValue": 5.6,
     "conviction": 112,
-    "thesis": "Our model projects this game at Wizards +8.7, but we're getting +14.5 — nearly 6 points of value. Only 8% of bets are on the Wizards moneyline but 26% of the money. BetMGM's model predicts the Suns win with 80% confidence but the Wizards COVER with 61% confidence — that's the exact 'win but don't cover' situation we target. The Suns are 10-1 against the spread in their last 11 games, yet sharps are still betting against them here because the number is too big. Washington has Alex Sarr putting up 17.3 points and 7.5 rebounds per game. Even bad teams stay within 15 most nights. Sized at 1 unit because the Wizards are still the Wizards.",
+    "thesis": "Our model projects this game at Wizards +8.7, but we're getting +14.5 \u2014 nearly 6 points of value. Only 8% of bets are on the Wizards moneyline but 26% of the money. BetMGM's model predicts the Suns win with 80% confidence but the Wizards COVER with 61% confidence \u2014 that's the exact 'win but don't cover' situation we target. The Suns are 10-1 against the spread in their last 11 games, yet sharps are still betting against them here because the number is too big. Washington has Alex Sarr putting up 17.3 points and 7.5 rebounds per game. Even bad teams stay within 15 most nights. Sized at 1 unit because the Wizards are still the Wizards.",
     "slug": "wizards-spread-vector-jan11-2026"
   },
   {
@@ -11759,7 +11759,7 @@
     "edge": 4.9,
     "expectedValue": 2.5,
     "conviction": 69,
-    "thesis": "Our model projects UCF -4.9, but we're only laying -2.5 — that's 2.4 points of value. UCF (12-2) is ranked #25 and has been dominant at home, going 9-1 at Addition Financial Arena. They upset #17 Kansas 81-75 in their Big 12 opener with Riley Kugel hitting a clutch 3-point play in the final 10 seconds. Cincinnati is 0-3 on the road this season and 0-2 in Big 12 play. The Bearcats are on a 4-game road losing streak and just got destroyed at Illinois 81-55, scoring only 16 first-half points. UCF is 9-0 as a favorite this season. Cincinnati is 0-6 as an underdog.",
+    "thesis": "Our model projects UCF -4.9, but we're only laying -2.5 \u2014 that's 2.4 points of value. UCF (12-2) is ranked #25 and has been dominant at home, going 9-1 at Addition Financial Arena. They upset #17 Kansas 81-75 in their Big 12 opener with Riley Kugel hitting a clutch 3-point play in the final 10 seconds. Cincinnati is 0-3 on the road this season and 0-2 in Big 12 play. The Bearcats are on a 4-game road losing streak and just got destroyed at Illinois 81-55, scoring only 16 first-half points. UCF is 9-0 as a favorite this season. Cincinnati is 0-6 as an underdog.",
     "slug": "ucf-spread-vector-jan11-2026"
   },
   {
@@ -11781,7 +11781,7 @@
     "edge": 4.7,
     "expectedValue": 2.4,
     "conviction": 57,
-    "thesis": "Our model projects Northwestern -6.6, but we're only laying -4.5 — that's 2.1 points of value. Nick Martinelli has scored 25+ points in 5 straight games and leads the Big Ten at 23.4 PPG. He's shooting 59.1% from the field — the most efficient 20+ point scorer in the country. Rutgers just got destroyed at Illinois 81-55 on Wednesday, scoring only 16 first-half points and shooting 27% from three. The Scarlet Knights are 1-4 in the Big Ten and 8-8 overall. Martinelli is having the highest-scoring 8-game stretch by a Northwestern player since 1996-97. When your best player is that hot against a team coming off a 26-point blowout loss, you ride it.",
+    "thesis": "Our model projects Northwestern -6.6, but we're only laying -4.5 \u2014 that's 2.1 points of value. Nick Martinelli has scored 25+ points in 5 straight games and leads the Big Ten at 23.4 PPG. He's shooting 59.1% from the field \u2014 the most efficient 20+ point scorer in the country. Rutgers just got destroyed at Illinois 81-55 on Wednesday, scoring only 16 first-half points and shooting 27% from three. The Scarlet Knights are 1-4 in the Big Ten and 8-8 overall. Martinelli is having the highest-scoring 8-game stretch by a Northwestern player since 1996-97. When your best player is that hot against a team coming off a 26-point blowout loss, you ride it.",
     "slug": "northwestern-spread-vector-jan11-2026"
   },
   {
@@ -11913,7 +11913,7 @@
     "edge": 4.5,
     "expectedValue": 2.3,
     "conviction": 75,
-    "thesis": "This is the lowest total on the Wild Card slate by 6 full points, and it's still dropping - opened at 39.5, now at 38. It's 32°F at Acrisure Stadium with wind gusts up to 21 mph. C.J. Stroud has struggled outdoors this year, averaging just 199 passing yards in cold weather compared to 259 at home. Pittsburgh's defense is playoff-tested. This is classic January football where points will be hard to come by.",
+    "thesis": "This is the lowest total on the Wild Card slate by 6 full points, and it's still dropping - opened at 39.5, now at 38. It's 32\u00b0F at Acrisure Stadium with wind gusts up to 21 mph. C.J. Stroud has struggled outdoors this year, averaging just 199 passing yards in cold weather compared to 259 at home. Pittsburgh's defense is playoff-tested. This is classic January football where points will be hard to come by.",
     "slug": "texans-steelers-under-sharp-jan12-2026"
   },
   {
@@ -12177,7 +12177,7 @@
     "edge": 4.8,
     "expectedValue": 2.4,
     "conviction": 75,
-    "thesis": "Northeastern is limping into this game at 5-11 after losing three straight. The Huskies have been gutted by injuries this season, losing three rotation players to season-ending injuries and severely limiting their depth. Elon comes in 11-6 with wins in two straight, averaging 85.4 points per game. Professional money has aligned on Elon, and for good reason — this is a team with offensive firepower facing a depleted opponent at home.",
+    "thesis": "Northeastern is limping into this game at 5-11 after losing three straight. The Huskies have been gutted by injuries this season, losing three rotation players to season-ending injuries and severely limiting their depth. Elon comes in 11-6 with wins in two straight, averaging 85.4 points per game. Professional money has aligned on Elon, and for good reason \u2014 this is a team with offensive firepower facing a depleted opponent at home.",
     "slug": "elon-spread-sharp-jan15-2026"
   },
   {
@@ -12199,7 +12199,7 @@
     "edge": 5.5,
     "expectedValue": 2.8,
     "conviction": 70,
-    "thesis": "Houston is on a 7-game home win streak and getting points against the Thunder. OKC center Isaiah Hartenstein is nursing a calf injury and may sit — that's their main defensive answer for Alperen Sengun. The last time these teams met, it went to overtime and ended 125-124. A one-point margin suggests these teams are much closer than 4.5 points. The line opened at -5 and has moved toward Houston. The Rockets grab 49.1 rebounds per game (first in the league) and will punish any lineup without Hartenstein.",
+    "thesis": "Houston is on a 7-game home win streak and getting points against the Thunder. OKC center Isaiah Hartenstein is nursing a calf injury and may sit \u2014 that's their main defensive answer for Alperen Sengun. The last time these teams met, it went to overtime and ended 125-124. A one-point margin suggests these teams are much closer than 4.5 points. The line opened at -5 and has moved toward Houston. The Rockets grab 49.1 rebounds per game (first in the league) and will punish any lineup without Hartenstein.",
     "slug": "rockets-spread-sharp-jan15-2026"
   },
   {
@@ -12221,7 +12221,7 @@
     "edge": 3.5,
     "expectedValue": 1.8,
     "conviction": 50,
-    "thesis": "Only 11% of bets are on Seattle, but 19% of the money is. That gap tells us something. The Kraken beat these same Bruins 7-4 just nine days ago on January 6th — Berkly Catton had two goals in that win. Tonight's game features Zdeno Chara's jersey retirement ceremony, which could be a distraction for Boston. Seattle was on a 10-game point streak (8-0-2) before cooling off. At +150, we're getting plus-money on a team that already beat this opponent this month.",
+    "thesis": "Only 11% of bets are on Seattle, but 19% of the money is. That gap tells us something. The Kraken beat these same Bruins 7-4 just nine days ago on January 6th \u2014 Berkly Catton had two goals in that win. Tonight's game features Zdeno Chara's jersey retirement ceremony, which could be a distraction for Boston. Seattle was on a 10-game point streak (8-0-2) before cooling off. At +150, we're getting plus-money on a team that already beat this opponent this month.",
     "slug": "kraken-ml-contra-jan15-2026"
   },
   {
@@ -12265,7 +12265,7 @@
     "edge": 4.5,
     "expectedValue": 2.3,
     "conviction": 60,
-    "thesis": "The public is pounding Edmonton at 89%, but the money tells a different story — 31% of dollars are on the Islanders. That's a +20% gap between tickets and cash, a classic sign of professional interest. New York beat Edmonton 4-2 in their first meeting this season back in October. The Islanders have the third-best goals against in the league at just 2.7 per game. At +148, we're getting plus-money on a team that's attracting disproportionate professional dollars.",
+    "thesis": "The public is pounding Edmonton at 89%, but the money tells a different story \u2014 31% of dollars are on the Islanders. That's a +20% gap between tickets and cash, a classic sign of professional interest. New York beat Edmonton 4-2 in their first meeting this season back in October. The Islanders have the third-best goals against in the league at just 2.7 per game. At +148, we're getting plus-money on a team that's attracting disproportionate professional dollars.",
     "slug": "islanders-ml-sharp-jan15-2026"
   },
   {
@@ -12287,7 +12287,7 @@
     "edge": 3,
     "expectedValue": 1.5,
     "conviction": 45,
-    "thesis": "The Lakers are without Austin Reaves, who is out approximately four weeks with a calf strain. That's a significant absence — Reaves is a key playmaker and defender. 72% of tickets are on LA, but only 66% of the money, suggesting professionals aren't as confident. Charlotte is 3-4 in 2026, but two of those losses were by just one point. LaMelo Ball is averaging over 20 points and 7.7 assists per game. Getting 3.5 points against a Lakers team missing a key piece has value.",
+    "thesis": "The Lakers are without Austin Reaves, who is out approximately four weeks with a calf strain. That's a significant absence \u2014 Reaves is a key playmaker and defender. 72% of tickets are on LA, but only 66% of the money, suggesting professionals aren't as confident. Charlotte is 3-4 in 2026, but two of those losses were by just one point. LaMelo Ball is averaging over 20 points and 7.7 assists per game. Getting 3.5 points against a Lakers team missing a key piece has value.",
     "slug": "hornets-spread-contra-jan15-2026"
   },
   {
@@ -12624,7 +12624,7 @@
     "expectedValue": 3.4,
     "conviction": 70,
     "gameTime": "7:00 PM ET",
-    "thesis": "Texas beat Kentucky 82-78 in Austin last season, proving they can hang with the Wildcats. Kentucky is without Jayden Quaintance for the fourth straight game due to knee swelling. The Longhorns lead the nation in free throw attempts at 28.6 per game — they'll get to the line and keep this close. Texas just upset Alabama on the road earlier this season. Getting 7.5 points with a team that knows how to compete in hostile SEC environments.",
+    "thesis": "Texas beat Kentucky 82-78 in Austin last season, proving they can hang with the Wildcats. Kentucky is without Jayden Quaintance for the fourth straight game due to knee swelling. The Longhorns lead the nation in free throw attempts at 28.6 per game \u2014 they'll get to the line and keep this close. Texas just upset Alabama on the road earlier this season. Getting 7.5 points with a team that knows how to compete in hostile SEC environments.",
     "slug": "texas-spread-sharp-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12656,7 +12656,7 @@
     "expectedValue": 2.8,
     "conviction": 62,
     "gameTime": "7:00 PM ET",
-    "thesis": "Darius Garland is out with a Grade 1 toe sprain — Cleveland's best playmaker and engine of their offense. He's averaging 18 points and 7 assists this year. The Cavs are also missing Max Strus and Sam Merrill. Charlotte catches Cleveland at the perfect time with a depleted backcourt. The line opened higher and has been bet down, suggesting the market agrees the Cavs are vulnerable without Garland.",
+    "thesis": "Darius Garland is out with a Grade 1 toe sprain \u2014 Cleveland's best playmaker and engine of their offense. He's averaging 18 points and 7 assists this year. The Cavs are also missing Max Strus and Sam Merrill. Charlotte catches Cleveland at the perfect time with a depleted backcourt. The line opened higher and has been bet down, suggesting the market agrees the Cavs are vulnerable without Garland.",
     "slug": "hornets-spread-vector-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12689,7 +12689,7 @@
     "expectedValue": 2.4,
     "conviction": 52,
     "gameTime": "7:00 PM ET",
-    "thesis": "91% of the public is on Boston College after they beat Syracuse for their first ACC win. Classic overreaction. Both teams are 8-10 and 1-4 in conference — essentially identical. Pitt holds the all-time series lead 39-22 and crushed BC 93-67 in their last meeting. BC's win over Syracuse was against one of the worst teams in the league. The Eagles are 7-5 at home, but Pitt matches up well. Fading the public here.",
+    "thesis": "91% of the public is on Boston College after they beat Syracuse for their first ACC win. Classic overreaction. Both teams are 8-10 and 1-4 in conference \u2014 essentially identical. Pitt holds the all-time series lead 39-22 and crushed BC 93-67 in their last meeting. BC's win over Syracuse was against one of the worst teams in the league. The Eagles are 7-5 at home, but Pitt matches up well. Fading the public here.",
     "slug": "pitt-spread-contra-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12720,7 +12720,7 @@
     "expectedValue": 2.2,
     "conviction": 55,
     "gameTime": "7:00 PM ET",
-    "thesis": "Richmond just got blown out 88-63 by Saint Louis — an embarrassing loss that screams letdown spot. Rhode Island snapped a 6-game losing streak to Richmond last season with a 67-64 road win, proving they can win at the Robins Center. The Rams rank 33rd nationally in points allowed at 66.9 per game. URI is 8-0 when leading at halftime. Getting 3.5 points against a team coming off a demoralizing loss.",
+    "thesis": "Richmond just got blown out 88-63 by Saint Louis \u2014 an embarrassing loss that screams letdown spot. Rhode Island snapped a 6-game losing streak to Richmond last season with a 67-64 road win, proving they can win at the Robins Center. The Rams rank 33rd nationally in points allowed at 66.9 per game. URI is 8-0 when leading at halftime. Getting 3.5 points against a team coming off a demoralizing loss.",
     "slug": "rhodeisland-spread-vector-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12752,7 +12752,7 @@
     "expectedValue": 2.6,
     "conviction": 60,
     "gameTime": "8:00 PM ET",
-    "thesis": "Memphis just played in London against Orlando on Sunday. That's a cross-Atlantic flight back to the States, and jet lag is real. Ja Morant just returned from injury and played only 28 minutes in London — he's likely still on a minutes restriction. The Grizzlies are also missing Zach Edey for at least another six weeks with an ankle injury. Atlanta catches Memphis at the worst possible time. The line moved from +3 to +1.5, showing the market agrees.",
+    "thesis": "Memphis just played in London against Orlando on Sunday. That's a cross-Atlantic flight back to the States, and jet lag is real. Ja Morant just returned from injury and played only 28 minutes in London \u2014 he's likely still on a minutes restriction. The Grizzlies are also missing Zach Edey for at least another six weeks with an ankle injury. Atlanta catches Memphis at the worst possible time. The line moved from +3 to +1.5, showing the market agrees.",
     "slug": "hawks-spread-catalyst-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12784,7 +12784,7 @@
     "expectedValue": 4.8,
     "conviction": 58,
     "gameTime": "9:00 PM ET",
-    "thesis": "Colorado is decimated. Gabriel Landeskog left the January 4th game after a scary fall and hasn't played since — teammates hinted at possible bone fractures. Devon Toews is out with an upper-body injury after crashing into the boards. Starting goalie Mackenzie Blackwood is also out. The Avs are turning to backup Scott Wedgewood. At +275, we're getting nearly 3-to-1 odds against a team missing their captain, best defenseman, and starting goalie. Pure value.",
+    "thesis": "Colorado is decimated. Gabriel Landeskog left the January 4th game after a scary fall and hasn't played since \u2014 teammates hinted at possible bone fractures. Devon Toews is out with an upper-body injury after crashing into the boards. Starting goalie Mackenzie Blackwood is also out. The Avs are turning to backup Scott Wedgewood. At +275, we're getting nearly 3-to-1 odds against a team missing their captain, best defenseman, and starting goalie. Pure value.",
     "slug": "ducks-ml-sharp-jan21-2026",
     "indicators": {
       "sharpAction": true,
@@ -12814,7 +12814,7 @@
     "expectedValue": 5.2,
     "conviction": 85,
     "gameTime": "9:30 PM ET",
-    "thesis": "Oklahoma City is missing THREE key players. Jalen Williams is out with a hamstring strain — he's an All-Star averaging big numbers. Isaiah Hartenstein is out with a soleus strain. Alex Caruso is out with an adductor injury. Combined, that's elite playmaking, rim protection, and perimeter defense all gone. The Thunder have never played this season without all three. OKC has gone 12-7 over their last 19 games after starting 24-1. This line should be closer to -5 without these guys. Getting double digits against a depleted squad.",
+    "thesis": "Oklahoma City is missing THREE key players. Jalen Williams is out with a hamstring strain \u2014 he's an All-Star averaging big numbers. Isaiah Hartenstein is out with a soleus strain. Alex Caruso is out with an adductor injury. Combined, that's elite playmaking, rim protection, and perimeter defense all gone. The Thunder have never played this season without all three. OKC has gone 12-7 over their last 19 games after starting 24-1. This line should be closer to -5 without these guys. Getting double digits against a depleted squad.",
     "slug": "bucks-spread-sharp-jan21-2026",
     "indicators": {
       "sharpAction": false,
@@ -12877,7 +12877,7 @@
     "expectedValue": 4.5,
     "conviction": 78,
     "gameTime": "7:00 PM ET",
-    "thesis": "Only 27% of tickets are on Charlotte, but 39% of the money is — a 12% divergence that indicates smart money on the Hornets. The line opened at +7 and has moved to +6.5 against Charlotte despite the public being heavily on Orlando. LaMelo Ball is healthy and playing at an All-Star level. Orlando is dealing with Paolo Banchero and Franz Wagner injuries. Getting 6.5 points with a fully healthy Charlotte squad against a depleted Magic team.",
+    "thesis": "Only 27% of tickets are on Charlotte, but 39% of the money is \u2014 a 12% divergence that indicates smart money on the Hornets. The line opened at +7 and has moved to +6.5 against Charlotte despite the public being heavily on Orlando. LaMelo Ball is healthy and playing at an All-Star level. Orlando is dealing with Paolo Banchero and Franz Wagner injuries. Getting 6.5 points with a fully healthy Charlotte squad against a depleted Magic team.",
     "slug": "hornets-spread-sharp-jan22-2026",
     "indicators": {
       "sharpAction": true,
@@ -12909,7 +12909,7 @@
     "expectedValue": 3.9,
     "conviction": 75,
     "gameTime": "7:00 PM ET",
-    "thesis": "Only 31% of bets but 45% of money on Philly — a 14% divergence showing sharp interest. Joel Embiid is listed as probable and has been playing well when healthy. Houston just lost Fred VanVleet for the season to a knee injury — a massive blow to their playmaking and defense. The Rockets are the better team record-wise but losing VanVleet changes the calculus. Getting 2.5 points with the best player on the floor.",
+    "thesis": "Only 31% of bets but 45% of money on Philly \u2014 a 14% divergence showing sharp interest. Joel Embiid is listed as probable and has been playing well when healthy. Houston just lost Fred VanVleet for the season to a knee injury \u2014 a massive blow to their playmaking and defense. The Rockets are the better team record-wise but losing VanVleet changes the calculus. Getting 2.5 points with the best player on the floor.",
     "slug": "76ers-spread-sharp-jan22-2026",
     "indicators": {
       "sharpAction": true,
@@ -12972,7 +12972,7 @@
     "expectedValue": 2.1,
     "conviction": 52,
     "gameTime": "8:00 PM ET",
-    "thesis": "Model projects a 6-point game, so 9.5 offers value. Chicago is decimated with Josh Giddey and Patrick Williams out, which is concerning. However, Minnesota is coming off a back-to-back situation. Anthony Edwards scored 55 points last night — fatigue could be a factor. The public is heavily on Minnesota at 76%, but the money isn't following proportionally. Low conviction due to Chicago's injury situation but the number is inflated.",
+    "thesis": "Model projects a 6-point game, so 9.5 offers value. Chicago is decimated with Josh Giddey and Patrick Williams out, which is concerning. However, Minnesota is coming off a back-to-back situation. Anthony Edwards scored 55 points last night \u2014 fatigue could be a factor. The public is heavily on Minnesota at 76%, but the money isn't following proportionally. Low conviction due to Chicago's injury situation but the number is inflated.",
     "slug": "bulls-spread-vector-jan22-2026",
     "indicators": {
       "sharpAction": false,
@@ -13005,7 +13005,7 @@
     "expectedValue": 3.2,
     "conviction": 70,
     "gameTime": "8:30 PM ET",
-    "thesis": "86% of bets on Eastern Illinois but only 86% of money — no divergence, which means this is pure public money. Eastern Illinois has been hot lately, but Southern Indiana is the better team at home. The public is overreacting to EIU's recent form. Classic fade-the-public spot in a small conference game where casual bettors chase recent results.",
+    "thesis": "86% of bets on Eastern Illinois but only 86% of money \u2014 no divergence, which means this is pure public money. Eastern Illinois has been hot lately, but Southern Indiana is the better team at home. The public is overreacting to EIU's recent form. Classic fade-the-public spot in a small conference game where casual bettors chase recent results.",
     "slug": "southernindiana-spread-contra-jan22-2026",
     "indicators": {
       "sharpAction": false,
@@ -13035,7 +13035,7 @@
     "expectedValue": 5.8,
     "conviction": 82,
     "gameTime": "9:00 PM ET",
-    "thesis": "Sharp money is heavily on Edmonton at +145 puckline. Only 40% of tickets on the Oilers but 52% of money — a 12% divergence indicating professional interest. Leon Draisaitl is out, but the Oilers are 3-0 without him this season. Connor McDavid elevates his game when Draisaitl is absent. Pittsburgh is struggling mightily this season. At plus money on the puckline against a struggling Penguins team, this is excellent value.",
+    "thesis": "Sharp money is heavily on Edmonton at +145 puckline. Only 40% of tickets on the Oilers but 52% of money \u2014 a 12% divergence indicating professional interest. Leon Draisaitl is out, but the Oilers are 3-0 without him this season. Connor McDavid elevates his game when Draisaitl is absent. Pittsburgh is struggling mightily this season. At plus money on the puckline against a struggling Penguins team, this is excellent value.",
     "slug": "oilers-puckline-sharp-jan22-2026",
     "indicators": {
       "sharpAction": true,
@@ -13065,7 +13065,7 @@
     "expectedValue": 5.2,
     "conviction": 76,
     "gameTime": "9:30 PM ET",
-    "thesis": "Minnesota is absolutely decimated by injuries. Kirill Kaprizov, Joel Eriksson Ek, Jonas Brodin, Jared Spurgeon, and Marcus Johansson are all out. That's their top scorer, top center, and multiple key defensemen. The Wild are a shell of themselves right now. Sharp money agrees — only 25% of tickets on Detroit but 31% of money. At +135, we're getting great value on a healthy team against a MASH unit.",
+    "thesis": "Minnesota is absolutely decimated by injuries. Kirill Kaprizov, Joel Eriksson Ek, Jonas Brodin, Jared Spurgeon, and Marcus Johansson are all out. That's their top scorer, top center, and multiple key defensemen. The Wild are a shell of themselves right now. Sharp money agrees \u2014 only 25% of tickets on Detroit but 31% of money. At +135, we're getting great value on a healthy team against a MASH unit.",
     "slug": "redwings-ml-sharp-jan22-2026",
     "indicators": {
       "sharpAction": true,
@@ -13095,7 +13095,7 @@
     "expectedValue": 4.2,
     "conviction": 65,
     "gameTime": "7:00 PM ET",
-    "thesis": "This line flipped from +100 to -118 — a massive swing indicating sharp action. When the money moves a team from underdog to favorite against public sentiment, follow the dollars. Professional bettors see value in Vegas on the road against Toronto.",
+    "thesis": "This line flipped from +100 to -118 \u2014 a massive swing indicating sharp action. When the money moves a team from underdog to favorite against public sentiment, follow the dollars. Professional bettors see value in Vegas on the road against Toronto.",
     "slug": "golden-knights-ml-sharp-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13125,7 +13125,7 @@
     "expectedValue": 3.9,
     "conviction": 58,
     "gameTime": "7:00 PM ET",
-    "thesis": "Line opened at +3 and has been steamed to +4.5 — we are getting 1.5 extra points. Sharp action confirmed on Houston. Even split on public and money suggests market uncertainty, which typically favors taking the points.",
+    "thesis": "Line opened at +3 and has been steamed to +4.5 \u2014 we are getting 1.5 extra points. Sharp action confirmed on Houston. Even split on public and money suggests market uncertainty, which typically favors taking the points.",
     "slug": "rockets-spread-vector-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13185,7 +13185,7 @@
     "expectedValue": 5.2,
     "conviction": 78,
     "gameTime": "7:30 PM ET",
-    "thesis": "78% of public hammering Celtics but line moved DOWN from -8.5 to -7.5. Classic reverse line movement — books are begging for more Celtics money. Professional money backing Brooklyn at home getting 8.5 points. Model projection also favors the Nets in this spot.",
+    "thesis": "78% of public hammering Celtics but line moved DOWN from -8.5 to -7.5. Classic reverse line movement \u2014 books are begging for more Celtics money. Professional money backing Brooklyn at home getting 8.5 points. Model projection also favors the Nets in this spot.",
     "slug": "nets-spread-sharp-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13217,7 +13217,7 @@
     "expectedValue": 4.3,
     "conviction": 65,
     "gameTime": "7:30 PM ET",
-    "thesis": "78% of public loading up on Celtics at home — classic popular team, primetime, big spread trap. The fact that sharp action is also on Nets confirms this is not blind fading. We are aligned with professional money against recreational bettors.",
+    "thesis": "78% of public loading up on Celtics at home \u2014 classic popular team, primetime, big spread trap. The fact that sharp action is also on Nets confirms this is not blind fading. We are aligned with professional money against recreational bettors.",
     "slug": "nets-spread-contra-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13247,7 +13247,7 @@
     "expectedValue": 4.8,
     "conviction": 60,
     "gameTime": "8:00 PM ET",
-    "thesis": "Only 10% of tickets on Blues but 17% of money — a meaningful divergence. When Sharp Action AND Big Money both light up on a +140 road dog, it is a strong situational play. The Stars are public favorites but the professionals are taking the value.",
+    "thesis": "Only 10% of tickets on Blues but 17% of money \u2014 a meaningful divergence. When Sharp Action AND Big Money both light up on a +140 road dog, it is a strong situational play. The Stars are public favorites but the professionals are taking the value.",
     "slug": "blues-ml-catalyst-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13277,7 +13277,7 @@
     "expectedValue": 5.8,
     "conviction": 85,
     "gameTime": "8:00 PM ET",
-    "thesis": "Professional money has steamed this line from +3.5 to +6 — that is 2.5 points of value added. When the line moves this aggressively opposite to where public sentiment is trending (60% on Grizzlies), it signals significant sharp interest. Model projection also supports the Pelicans in this spot.",
+    "thesis": "Professional money has steamed this line from +3.5 to +6 \u2014 that is 2.5 points of value added. When the line moves this aggressively opposite to where public sentiment is trending (60% on Grizzlies), it signals significant sharp interest. Model projection also supports the Pelicans in this spot.",
     "slug": "pelicans-spread-sharp-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13312,7 +13312,7 @@
     "expectedValue": 4.9,
     "conviction": 72,
     "gameTime": "8:00 PM ET",
-    "thesis": "Sharps and model agree on Pacers catching 15.5 points. Thunder are dominant but this is a large spread. Only 58% of bets on Thunder despite them being at home — public hesitancy at this number suggests it is inflated. Model projection confirms value on Indiana.",
+    "thesis": "Sharps and model agree on Pacers catching 15.5 points. Thunder are dominant but this is a large spread. Only 58% of bets on Thunder despite them being at home \u2014 public hesitancy at this number suggests it is inflated. Model projection confirms value on Indiana.",
     "slug": "pacers-spread-sharp-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13375,7 +13375,7 @@
     "expectedValue": 3.8,
     "conviction": 55,
     "gameTime": "10:00 PM ET",
-    "thesis": "Rangers are the underdog against one of the worst teams in the league — this screams trap line. Sharp action confirmed, and we are getting plus money against San Jose. When the line makes no obvious sense, there is often hidden value.",
+    "thesis": "Rangers are the underdog against one of the worst teams in the league \u2014 this screams trap line. Sharp action confirmed, and we are getting plus money against San Jose. When the line makes no obvious sense, there is often hidden value.",
     "slug": "rangers-ml-catalyst-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13406,7 +13406,7 @@
     "expectedValue": 5,
     "conviction": 75,
     "gameTime": "10:00 PM ET",
-    "thesis": "Triple confirmation — sharp action, top experts, AND model projection all favor Portland. Line has moved from +2.5 to +4.5, giving us 2 extra points. Public slightly favoring Blazers but the money allocation does not match the ticket percentage — sharps are loading up.",
+    "thesis": "Triple confirmation \u2014 sharp action, top experts, AND model projection all favor Portland. Line has moved from +2.5 to +4.5, giving us 2 extra points. Public slightly favoring Blazers but the money allocation does not match the ticket percentage \u2014 sharps are loading up.",
     "slug": "trailblazers-spread-sharp-jan23-2026",
     "indicators": {
       "sharpAction": true,
@@ -13439,7 +13439,7 @@
     "profit": 136.36,
     "conviction": 68,
     "gameTime": "4:00 PM ET",
-    "thesis": "Massive 29% money divergence — only 17% of tickets but 46% of dollars on North Dakota. Classic sharp underdog play with line moving in our favor from +4.5 to +5.5.",
+    "thesis": "Massive 29% money divergence \u2014 only 17% of tickets but 46% of dollars on North Dakota. Classic sharp underdog play with line moving in our favor from +4.5 to +5.5.",
     "slug": "north-dakota-spread-sharp-jan24-2026",
     "indicators": {
       "sharpAction": true,
@@ -13520,7 +13520,7 @@
     "profit": 76.92,
     "conviction": 58,
     "gameTime": "7:00 PM ET",
-    "thesis": "PRO Systems triggered on Carolina. 80% bets with 91% money — 11% divergence shows large bettors pounding this line. Elite home team.",
+    "thesis": "PRO Systems triggered on Carolina. 80% bets with 91% money \u2014 11% divergence shows large bettors pounding this line. Elite home team.",
     "slug": "hurricanes-ml-sharp-jan24-2026",
     "indicators": {
       "sharpAction": false,
@@ -13547,7 +13547,7 @@
     "profit": 169.49,
     "conviction": 92,
     "gameTime": "8:00 PM ET",
-    "thesis": "Grade A with 9.2% model edge. K-State decimated — missing Bashir (leading scorer), McGriff, Rapieque, Ikegwuruka. Only 10 available players. Kansas ranked #19, won 3 straight.",
+    "thesis": "Grade A with 9.2% model edge. K-State decimated \u2014 missing Bashir (leading scorer), McGriff, Rapieque, Ikegwuruka. Only 10 available players. Kansas ranked #19, won 3 straight.",
     "slug": "kansas-spread-vector-jan24-2026",
     "indicators": {
       "grade": "A",
@@ -13572,7 +13572,7 @@
     "profit": 84.75,
     "conviction": 85,
     "gameTime": "8:00 PM ET",
-    "thesis": "Catalyst angle on same game — 4+ key injuries to K-State including their leading scorer Bashir. Situational score 9+ with massive injury advantage.",
+    "thesis": "Catalyst angle on same game \u2014 4+ key injuries to K-State including their leading scorer Bashir. Situational score 9+ with massive injury advantage.",
     "slug": "kansas-spread-catalyst-jan24-2026",
     "indicators": {
       "situationalScore": 9,
@@ -13671,7 +13671,7 @@
     "profit": -150,
     "conviction": 72,
     "gameTime": "10:00 PM ET",
-    "thesis": "Sharp Action confirmed. Only 20% public but 38% money — 18% DIFF. Tom Wilson activated from IR. Draisaitl returning from family leave may not be 100%. Plus money on sharp divergence.",
+    "thesis": "Sharp Action confirmed. Only 20% public but 38% money \u2014 18% DIFF. Tom Wilson activated from IR. Draisaitl returning from family leave may not be 100%. Plus money on sharp divergence.",
     "slug": "capitals-ml-sharp-jan24-2026",
     "indicators": {
       "sharpAction": true,
@@ -13697,7 +13697,7 @@
     "profit": 88.5,
     "conviction": 58,
     "gameTime": "3:00 PM ET",
-    "thesis": "Bo Nix is OUT for the season with a fractured ankle — Jarrett Stidham will start his first playoff game in two years. But the market overcorrected. The line swung 6-7 points on the Nix news, opening Patriots -5.5 and now sitting at -4. Only 34% of tickets are on Denver but 41% of the money. Denver's defense led the league with 68 sacks this season and got to Josh Allen three times last week. The Broncos are 4-1 against New England in the playoffs, winning all four games in Denver including two AFC Championships. Drake Maye fumbled FOUR times against Houston and has 14 fumbles this postseason — Denver's pass rush against Maye's ball security issues is the matchup to watch.",
+    "thesis": "Bo Nix is OUT for the season with a fractured ankle \u2014 Jarrett Stidham will start his first playoff game in two years. But the market overcorrected. The line swung 6-7 points on the Nix news, opening Patriots -5.5 and now sitting at -4. Only 34% of tickets are on Denver but 41% of the money. Denver's defense led the league with 68 sacks this season and got to Josh Allen three times last week. The Broncos are 4-1 against New England in the playoffs, winning all four games in Denver including two AFC Championships. Drake Maye fumbled FOUR times against Houston and has 14 fumbles this postseason \u2014 Denver's pass rush against Maye's ball security issues is the matchup to watch.",
     "slug": "broncos-spread-sharp-jan25-2026",
     "indicators": {
       "sharpAction": true,
@@ -13723,7 +13723,7 @@
     "profit": 0,
     "conviction": 68,
     "gameTime": "4:00 PM ET",
-    "thesis": "Southern Illinois (8-12) has lost four straight, but three of those losses came by 5 points or fewer — they're battling. Evansville (5-15, 1-8 MVC) just got blown out 76-49 at UIC and is 3-9 at home. Their best player, center Connor Turnbull (MVC Defensive Player of the Year), hasn't suited up since January 4th — they're 1-5 without him. The Salukis have five players averaging between 8 and 14 points, and that balanced attack should carve up Evansville's depleted frontcourt. 71% of tickets AND 84% of money on SIU.",
+    "thesis": "Southern Illinois (8-12) has lost four straight, but three of those losses came by 5 points or fewer \u2014 they're battling. Evansville (5-15, 1-8 MVC) just got blown out 76-49 at UIC and is 3-9 at home. Their best player, center Connor Turnbull (MVC Defensive Player of the Year), hasn't suited up since January 4th \u2014 they're 1-5 without him. The Salukis have five players averaging between 8 and 14 points, and that balanced attack should carve up Evansville's depleted frontcourt. 71% of tickets AND 84% of money on SIU.",
     "slug": "siu-spread-vector-jan25-2026",
     "indicators": {
       "grade": "A-",
@@ -13769,7 +13769,7 @@
     "profit": 68.97,
     "conviction": 62,
     "gameTime": "6:00 PM ET",
-    "thesis": "Pittsburgh (25-14-11) has won six of their last seven on the road and is looking to cap off a perfect Western Canada sweep. Vancouver (17-29-5) has just ONE win in their last 12 games — they've been in freefall since trading Quinn Hughes to Minnesota. Stuart Skinner has been lights out since Christmas, going 6-1-0 between the pipes. The Canucks have lost four straight at Rogers Arena. Pittsburgh is 12-5-2 in their last 18 against Vancouver. 87% of tickets AND 95% of money on the Pens.",
+    "thesis": "Pittsburgh (25-14-11) has won six of their last seven on the road and is looking to cap off a perfect Western Canada sweep. Vancouver (17-29-5) has just ONE win in their last 12 games \u2014 they've been in freefall since trading Quinn Hughes to Minnesota. Stuart Skinner has been lights out since Christmas, going 6-1-0 between the pipes. The Canucks have lost four straight at Rogers Arena. Pittsburgh is 12-5-2 in their last 18 against Vancouver. 87% of tickets AND 95% of money on the Pens.",
     "slug": "penguins-ml-sharp-jan25-2026",
     "indicators": {
       "sharpAction": true,
@@ -13794,7 +13794,7 @@
     "profit": -150,
     "conviction": 72,
     "gameTime": "6:30 PM ET",
-    "thesis": "The Rams are 12-4 ATS in their last 16 meetings with Seattle and 6-1 ATS in Seattle. The underdog has covered 7 of 8 in this rivalry. In two games this season, Puka Nacua caught 19 passes for 300 yards and two touchdowns against the Seahawks — he torched them for 225 yards and two TDs in Week 16 alone. Stafford has 4,707 passing yards (league leader) with 46 TDs (first in NFL). Seattle is missing Zach Charbonnet (torn ACL), limiting their backfield depth. Getting 2.5 with an MVP finalist and the league's best receiver in an NFC Championship Game.",
+    "thesis": "The Rams are 12-4 ATS in their last 16 meetings with Seattle and 6-1 ATS in Seattle. The underdog has covered 7 of 8 in this rivalry. In two games this season, Puka Nacua caught 19 passes for 300 yards and two touchdowns against the Seahawks \u2014 he torched them for 225 yards and two TDs in Week 16 alone. Stafford has 4,707 passing yards (league leader) with 46 TDs (first in NFL). Seattle is missing Zach Charbonnet (torn ACL), limiting their backfield depth. Getting 2.5 with an MVP finalist and the league's best receiver in an NFC Championship Game.",
     "slug": "rams-spread-sharp-jan25-2026",
     "indicators": {
       "h2hATS": "12-4",
@@ -13818,7 +13818,7 @@
     "profit": 142.86,
     "conviction": 70,
     "gameTime": "7:00 PM ET",
-    "thesis": "The Pelicans (11-36) have made things difficult for San Antonio in all three meetings this season, including pushing the Spurs to overtime early in the year. This line opened at +12.5 and moved TO the Pelicans at +11.5 despite 60% of tickets on New Orleans — sharps are grabbing the points. Zion Williamson is playing (22 PPG) and Trey Murphy III is rolling (22.3 PPG, 22nd in NBA). Yes, Wembanyama is a defensive monster, but double-digit home dogs get margin. The Spurs want a sweep, but 11.5 is a lot to lay.",
+    "thesis": "The Pelicans (11-36) have made things difficult for San Antonio in all three meetings this season, including pushing the Spurs to overtime early in the year. This line opened at +12.5 and moved TO the Pelicans at +11.5 despite 60% of tickets on New Orleans \u2014 sharps are grabbing the points. Zion Williamson is playing (22 PPG) and Trey Murphy III is rolling (22.3 PPG, 22nd in NBA). Yes, Wembanyama is a defensive monster, but double-digit home dogs get margin. The Spurs want a sweep, but 11.5 is a lot to lay.",
     "slug": "pelicans-spread-sharp-jan25-2026",
     "indicators": {
       "sharpAction": true,
@@ -13844,7 +13844,7 @@
     "profit": 97.09,
     "conviction": 60,
     "gameTime": "8:00 PM ET",
-    "thesis": "Anaheim (27-21-3) has won five straight and is playing their best hockey of the season. Calgary (21-25-5) is on a three-game skid and has scored just five goals in their last four games — held to ONE goal in three straight. The Flames are 3-6-1 in their last 10, averaging just 1.8 goals per game while allowing 2.8. Cutter Gauthier (23 goals) leads a Ducks attack clicking on all cylinders. At essentially a pick-em (-103), taking the hot team against the cold one.",
+    "thesis": "Anaheim (27-21-3) has won five straight and is playing their best hockey of the season. Calgary (21-25-5) is on a three-game skid and has scored just five goals in their last four games \u2014 held to ONE goal in three straight. The Flames are 3-6-1 in their last 10, averaging just 1.8 goals per game while allowing 2.8. Cutter Gauthier (23 goals) leads a Ducks attack clicking on all cylinders. At essentially a pick-em (-103), taking the hot team against the cold one.",
     "slug": "ducks-ml-sharp-jan25-2026",
     "indicators": {
       "sharpAction": true,
@@ -13867,7 +13867,7 @@
     "profit": 90.91,
     "conviction": 58,
     "gameTime": "8:00 PM ET",
-    "thesis": "Devin Booker is OUT with a right ankle sprain — he left Friday's game on crutches after going down in the third quarter. The Suns are 1-3 without Booker this season. Jalen Green is questionable (hamstring) after only returning from a 33-game absence. Meanwhile, 72% of tickets are still on Phoenix but only 64% of the money. Miami has won 13 of their last 17 games against the Suns on the road and beat Phoenix 127-121 just two weeks ago. Getting 4.5 against a team missing their best player.",
+    "thesis": "Devin Booker is OUT with a right ankle sprain \u2014 he left Friday's game on crutches after going down in the third quarter. The Suns are 1-3 without Booker this season. Jalen Green is questionable (hamstring) after only returning from a 33-game absence. Meanwhile, 72% of tickets are still on Phoenix but only 64% of the money. Miami has won 13 of their last 17 games against the Suns on the road and beat Phoenix 127-121 just two weeks ago. Getting 4.5 against a team missing their best player.",
     "slug": "heat-spread-contra-jan25-2026",
     "indicators": {
       "publicPct": 72,
@@ -13891,7 +13891,7 @@
     "profit": -150,
     "conviction": 75,
     "gameTime": "9:00 PM ET",
-    "thesis": "Only 38% of tickets on Brooklyn — and the line moved FROM +10.5 to +8.5 in the Nets' favor. That's textbook reverse line movement. The Nets just pushed Boston to double OT on Friday, with Michael Porter Jr. dropping 30 points (2nd in NBA in 3PM per game). The Clippers are without Bradley Beal (season, hip) and Derrick Jones Jr. (knee). Brooklyn competes — they're scrappy even at 12-31. LA allows 113.5 points per game and has been outscored by 1.2 PPG this season. 8.5 is a lot of points for a team that just went toe-to-toe with the Celtics.",
+    "thesis": "Only 38% of tickets on Brooklyn \u2014 and the line moved FROM +10.5 to +8.5 in the Nets' favor. That's textbook reverse line movement. The Nets just pushed Boston to double OT on Friday, with Michael Porter Jr. dropping 30 points (2nd in NBA in 3PM per game). The Clippers are without Bradley Beal (season, hip) and Derrick Jones Jr. (knee). Brooklyn competes \u2014 they're scrappy even at 12-31. LA allows 113.5 points per game and has been outscored by 1.2 PPG this season. 8.5 is a lot of points for a team that just went toe-to-toe with the Celtics.",
     "slug": "nets-spread-sharp-jan25-2026",
     "indicators": {
       "sharpAction": true,
@@ -14303,7 +14303,7 @@
     "expectedValue": 3.5,
     "conviction": 40,
     "gameTime": "8:00 PM ET",
-    "thesis": "The market overreacted to Ja Morant's UCL sprain. Here's the thing — Memphis is actually 10-9 without Morant this season vs just 6-12 when he plays. The line opened at +1.5 and jumped to +2.5, but professionals are loading up on the Grizzlies side. Cam Spencer steps in at point guard, and this roster knows how to grind without their star. Charlotte at 19-28 isn't significantly better than Memphis at 18-26. Getting 2.5 points at home against a fellow sub-.500 team with money flowing this direction.",
+    "thesis": "The market overreacted to Ja Morant's UCL sprain. Here's the thing \u2014 Memphis is actually 10-9 without Morant this season vs just 6-12 when he plays. The line opened at +1.5 and jumped to +2.5, but professionals are loading up on the Grizzlies side. Cam Spencer steps in at point guard, and this roster knows how to grind without their star. Charlotte at 19-28 isn't significantly better than Memphis at 18-26. Getting 2.5 points at home against a fellow sub-.500 team with money flowing this direction.",
     "slug": "grizzlies-spread-sharp-jan28-2026",
     "finalStat": "Hornets 115, Grizzlies 103",
     "indicators": {
@@ -14334,7 +14334,7 @@
     "expectedValue": 4.2,
     "conviction": 50,
     "gameTime": "8:00 PM ET",
-    "thesis": "The Mean Green already beat Tulsa 72-67 on January 4th when Je'Shawn Stevenson went off for 21 points. North Texas forces 15.7 turnovers per game — best in the American Conference — and averages 9.6 steals per game (14th nationally). They've forced 5 of their last 9 opponents into season-high turnovers. The line opened at +10.5 and has come down to +9, meaning money is coming in on North Texas. Tulsa's strong (17-3), but the team that already won the first meeting is getting 9 points on the road? We'll take that.",
+    "thesis": "The Mean Green already beat Tulsa 72-67 on January 4th when Je'Shawn Stevenson went off for 21 points. North Texas forces 15.7 turnovers per game \u2014 best in the American Conference \u2014 and averages 9.6 steals per game (14th nationally). They've forced 5 of their last 9 opponents into season-high turnovers. The line opened at +10.5 and has come down to +9, meaning money is coming in on North Texas. Tulsa's strong (17-3), but the team that already won the first meeting is getting 9 points on the road? We'll take that.",
     "slug": "northtexas-spread-sharp-jan28-2026",
     "finalStat": "Tulsa 76, North Texas 60",
     "indicators": {
@@ -14364,7 +14364,7 @@
     "expectedValue": 8,
     "conviction": 80,
     "gameTime": "8:30 PM ET",
-    "thesis": "This line screams value. It opened at +7 and has ballooned to +9.5 — that's 2.5 points of reverse movement AGAINST the public, meaning professionals are betting Dallas despite all the bad news. Yes, Kyrie Irving is out recovering from ACL surgery. Yes, Lively, Gafford, and Exum are also sidelined. But the market already knows all of this. Rookie Cooper Flagg (18.8 PPG, 6.4 RPG, 4.2 APG) just made the Rising Stars game and has been clutch — 9th in NBA in clutch points. When smart money piles onto an undermanned squad getting nearly double digits, they're telling you the market overcorrected. 9.5 is too many points.",
+    "thesis": "This line screams value. It opened at +7 and has ballooned to +9.5 \u2014 that's 2.5 points of reverse movement AGAINST the public, meaning professionals are betting Dallas despite all the bad news. Yes, Kyrie Irving is out recovering from ACL surgery. Yes, Lively, Gafford, and Exum are also sidelined. But the market already knows all of this. Rookie Cooper Flagg (18.8 PPG, 6.4 RPG, 4.2 APG) just made the Rising Stars game and has been clutch \u2014 9th in NBA in clutch points. When smart money piles onto an undermanned squad getting nearly double digits, they're telling you the market overcorrected. 9.5 is too many points.",
     "slug": "mavericks-spread-sharp-jan28-2026",
     "finalStat": "Timberwolves 121, Mavericks 101",
     "indicators": {
@@ -14398,7 +14398,7 @@
     "expectedValue": 6,
     "conviction": 110,
     "gameTime": "9:00 PM ET",
-    "thesis": "On the moneyline, Utah is getting 51% of the money on just 12% of the tickets. That's a massive divergence — whales and professionals are loading up on the Jazz while the public backs Golden State. Both teams are sub-.500 (Warriors 15-31, Jazz 15-32), so why is Golden State favored by 8.5? Steph Curry and Draymond Green are probable to return after missing Monday's game — a 83-108 blowout loss to Minnesota — but Jimmy Butler is done for the season with a torn ACL and the Warriors are a mess. Utah is at home. 8.5 points between two equally bad teams with the money flowing heavily to the dog? We're riding with the professionals.",
+    "thesis": "On the moneyline, Utah is getting 51% of the money on just 12% of the tickets. That's a massive divergence \u2014 whales and professionals are loading up on the Jazz while the public backs Golden State. Both teams are sub-.500 (Warriors 15-31, Jazz 15-32), so why is Golden State favored by 8.5? Steph Curry and Draymond Green are probable to return after missing Monday's game \u2014 a 83-108 blowout loss to Minnesota \u2014 but Jimmy Butler is done for the season with a torn ACL and the Warriors are a mess. Utah is at home. 8.5 points between two equally bad teams with the money flowing heavily to the dog? We're riding with the professionals.",
     "slug": "jazz-spread-sharp-jan28-2026",
     "finalStat": "Warriors 122, Jazz 109",
     "indicators": {
@@ -14456,7 +14456,7 @@
     "expectedValue": 5,
     "conviction": 60,
     "gameTime": "7:00 PM ET",
-    "thesis": "Professional money and significant capital backing the home dog. This line opened at Marist -11.5 and has tightened to -9.5 — that's 2 points of movement toward Canisius as money came in on the Griffins. 58% of bets and 56% of money are on Canisius. In the MAAC, double-digit spreads rarely hold — these are conference games between evenly-matched mid-major programs where home court matters. Canisius is 6-3 at home this season and has lost 3 of their last 5 by 6 or fewer points — they consistently keep it close. When smart money and big money align on the home dog getting 10.5 points in a conference game, we follow.",
+    "thesis": "Professional money and significant capital backing the home dog. This line opened at Marist -11.5 and has tightened to -9.5 \u2014 that's 2 points of movement toward Canisius as money came in on the Griffins. 58% of bets and 56% of money are on Canisius. In the MAAC, double-digit spreads rarely hold \u2014 these are conference games between evenly-matched mid-major programs where home court matters. Canisius is 6-3 at home this season and has lost 3 of their last 5 by 6 or fewer points \u2014 they consistently keep it close. When smart money and big money align on the home dog getting 10.5 points in a conference game, we follow.",
     "slug": "canisius-spread-sharp-jan30-2026",
     "finalStat": "Marist 88, Canisius 86",
     "indicators": {
@@ -14485,7 +14485,7 @@
     "expectedValue": 3.5,
     "conviction": 55,
     "gameTime": "7:00 PM ET",
-    "thesis": "Three indicators aligned: sharp money, big money, and model projection all on Washington. Our model projects the Lakers as only 6.8-point favorites — we're getting 10.5, that's nearly a 4-point gap of value. Luka Doncic is questionable tonight with ankle soreness from Wednesday's blowout loss at Cleveland. Austin Reaves is also questionable — he's missed 17 straight games with a calf strain. If either sits, this number collapses. Washington is riding momentum — they've won 2 straight including a 109-99 win over Milwaukee where they held the Bucks to 34.6% shooting in the first half. Alex Sarr just went 29/12/6 blocks against Portland. Double digits is too many points when the favorites might be without their 2 best players.",
+    "thesis": "Three indicators aligned: sharp money, big money, and model projection all on Washington. Our model projects the Lakers as only 6.8-point favorites \u2014 we're getting 10.5, that's nearly a 4-point gap of value. Luka Doncic is questionable tonight with ankle soreness from Wednesday's blowout loss at Cleveland. Austin Reaves is also questionable \u2014 he's missed 17 straight games with a calf strain. If either sits, this number collapses. Washington is riding momentum \u2014 they've won 2 straight including a 109-99 win over Milwaukee where they held the Bucks to 34.6% shooting in the first half. Alex Sarr just went 29/12/6 blocks against Portland. Double digits is too many points when the favorites might be without their 2 best players.",
     "slug": "wizards-spread-vector-jan30-2026",
     "finalStat": "Lakers 142, Wizards 111",
     "indicators": {
@@ -14515,7 +14515,7 @@
     "expectedValue": 7,
     "conviction": 94,
     "gameTime": "7:00 PM ET",
-    "thesis": "Our model projects a significant edge here — and 95% of bets and 96% of money agree. Northern Kentucky is 4-14 against the spread this season, the worst cover rate in the nation. Detroit is 12-8 ATS. NKU drops nearly 14 points per game on the road compared to at home (89.9 PPG vs 76.0) — that's a massive road split. When these teams met two weeks ago at NKU's gym, Northern Kentucky was favored by 10.5. The rematch line at 5.5 tells you the market respects Detroit at Calihan Hall considerably more. Our model projects NKU as only 3.2-point favorites — we're getting 6.5. Near-unanimous money on the home dog with the worst ATS team in the country on the road.",
+    "thesis": "Our model projects a significant edge here \u2014 and 95% of bets and 96% of money agree. Northern Kentucky is 4-14 against the spread this season, the worst cover rate in the nation. Detroit is 12-8 ATS. NKU drops nearly 14 points per game on the road compared to at home (89.9 PPG vs 76.0) \u2014 that's a massive road split. When these teams met two weeks ago at NKU's gym, Northern Kentucky was favored by 10.5. The rematch line at 5.5 tells you the market respects Detroit at Calihan Hall considerably more. Our model projects NKU as only 3.2-point favorites \u2014 we're getting 6.5. Near-unanimous money on the home dog with the worst ATS team in the country on the road.",
     "slug": "detroit-spread-vector-jan30-2026",
     "finalStat": "Northern Kentucky 77, Detroit 90",
     "indicators": {
@@ -14543,7 +14543,7 @@
     "expectedValue": 5,
     "conviction": 65,
     "gameTime": "7:30 PM ET",
-    "thesis": "This line screams overreaction. Memphis opened as 1.5-point favorites and has ballooned to +3.5 — that's a massive 5-point swing. Professional money stayed on the Grizzlies despite the move, which tells you sharps think the market overcorrected. New Orleans is 12-37 and equally dysfunctional. Memphis has won 5 straight games in New Orleans and is 7-3 against the spread in recent matchups with the Pelicans. When you're getting 3.5 points in a game between two of the worst teams in the NBA, and the line has already moved 5 points against you but smart money won't leave, that's value. The sharps are telling you this adjustment went too far.",
+    "thesis": "This line screams overreaction. Memphis opened as 1.5-point favorites and has ballooned to +3.5 \u2014 that's a massive 5-point swing. Professional money stayed on the Grizzlies despite the move, which tells you sharps think the market overcorrected. New Orleans is 12-37 and equally dysfunctional. Memphis has won 5 straight games in New Orleans and is 7-3 against the spread in recent matchups with the Pelicans. When you're getting 3.5 points in a game between two of the worst teams in the NBA, and the line has already moved 5 points against you but smart money won't leave, that's value. The sharps are telling you this adjustment went too far.",
     "slug": "grizzlies-spread-sharp-jan30-2026",
     "finalStat": "Pelicans 114, Grizzlies 106",
     "indicators": {
@@ -14575,7 +14575,7 @@
     "expectedValue": 4,
     "conviction": 50,
     "gameTime": "8:00 PM ET",
-    "thesis": "Professional money is loading up on the Wolverines. Only 43% of bets are on Michigan, but 52% of the money — that 9% divergence tells you whales and professionals are on this side. #3 Michigan (19-1) just gutted out a 75-72 win over #5 Nebraska, trailing for 36 minutes before holding Nebraska scoreless over the final 3:20. That's championship composure. Meanwhile, Michigan State needed overtime to survive Rutgers — Tom Izzo admitted they were outcoached and outplayed 90% of that game and the Spartans committed 15 turnovers. Our model projects Michigan by nearly 3 points and we only need 1.5. This is the highest combined AP ranking in rivalry history. Smart money says the Wolverines get it done.",
+    "thesis": "Professional money is loading up on the Wolverines. Only 43% of bets are on Michigan, but 52% of the money \u2014 that 9% divergence tells you whales and professionals are on this side. #3 Michigan (19-1) just gutted out a 75-72 win over #5 Nebraska, trailing for 36 minutes before holding Nebraska scoreless over the final 3:20. That's championship composure. Meanwhile, Michigan State needed overtime to survive Rutgers \u2014 Tom Izzo admitted they were outcoached and outplayed 90% of that game and the Spartans committed 15 turnovers. Our model projects Michigan by nearly 3 points and we only need 1.5. This is the highest combined AP ranking in rivalry history. Smart money says the Wolverines get it done.",
     "slug": "michigan-spread-sharp-jan30-2026",
     "finalStat": "Michigan 83, Michigan State 71",
     "indicators": {
@@ -14607,7 +14607,7 @@
     "expectedValue": 3,
     "conviction": 40,
     "gameTime": "9:00 PM ET",
-    "thesis": "Cleveland is starting a 5-game Western road trip — flying cross-country from Ohio to Phoenix, 3 timezone change. The Cavaliers are missing Evan Mobley (calf, reigning DPOY) and Darius Garland (toe), that's 2 of their top 3 players gone. Meanwhile, Jalen Green returns for Phoenix tonight after missing 3 games — a real scoring boost. Dillon Brooks just dropped a career-high 40 last night in a dominant 114-96 win over Detroit. The Suns are 32-16 against the spread this season and 15-6 at home. Cleveland is 19-30 ATS, one of the worst cover teams in the NBA. The travel, injuries, and situational factors all favor Phoenix at home.",
+    "thesis": "Cleveland is starting a 5-game Western road trip \u2014 flying cross-country from Ohio to Phoenix, 3 timezone change. The Cavaliers are missing Evan Mobley (calf, reigning DPOY) and Darius Garland (toe), that's 2 of their top 3 players gone. Meanwhile, Jalen Green returns for Phoenix tonight after missing 3 games \u2014 a real scoring boost. Dillon Brooks just dropped a career-high 40 last night in a dominant 114-96 win over Detroit. The Suns are 32-16 against the spread this season and 15-6 at home. Cleveland is 19-30 ATS, one of the worst cover teams in the NBA. The travel, injuries, and situational factors all favor Phoenix at home.",
     "slug": "suns-spread-catalyst-jan30-2026",
     "finalStat": "Cavaliers 113, Suns 126",
     "indicators": {
@@ -14636,7 +14636,7 @@
     "expectedValue": 4,
     "conviction": 65,
     "gameTime": "9:00 PM ET",
-    "thesis": "Professional money and big money both backing Phoenix. Reverse line movement confirms smart money on the Suns — money diverging from public toward Phoenix. Cleveland traveling cross-country from Ohio to Phoenix on a 3-timezone change to start a 5-game road trip. Cavaliers missing Mobley (DPOY, calf) and Garland (toe) — 2 of their top 3 players. Jalen Green returns for Phoenix tonight after missing 3 games. Dillon Brooks scored career-high 40 last night showing this team competes. Phoenix already beat Cleveland 129-113 on New Year's Eve. The Suns are 32-16 ATS and 15-6 at home while Cleveland is 19-30 ATS. Sharp money says the Suns cover.",
+    "thesis": "Professional money and big money both backing Phoenix. Reverse line movement confirms smart money on the Suns \u2014 money diverging from public toward Phoenix. Cleveland traveling cross-country from Ohio to Phoenix on a 3-timezone change to start a 5-game road trip. Cavaliers missing Mobley (DPOY, calf) and Garland (toe) \u2014 2 of their top 3 players. Jalen Green returns for Phoenix tonight after missing 3 games. Dillon Brooks scored career-high 40 last night showing this team competes. Phoenix already beat Cleveland 129-113 on New Year's Eve. The Suns are 32-16 ATS and 15-6 at home while Cleveland is 19-30 ATS. Sharp money says the Suns cover.",
     "slug": "suns-spread-sharp-jan30-2026",
     "finalStat": "Cavaliers 113, Suns 126",
     "indicators": {
@@ -14667,7 +14667,7 @@
     "expectedValue": 4,
     "conviction": 70,
     "gameTime": "9:30 PM ET",
-    "thesis": "Professional money and significant capital on Brooklyn. Utah is resting Lauri Markkanen (his 14th absence this season) while Walker Kessler is already done for the year. Now illness is sweeping through the Jazz locker room — Jusuf Nurkic, Cody Williams, and Kevin Love are all day-to-day. If multiple sit, Utah fields a skeleton crew. The line moved from +2.5 to +3.5 as sharp money pushed the number. Only 30% of tickets are on Brooklyn but smart money and big money are both on the Nets. Both teams are in full tank mode — Brooklyn is 12-34, Utah is 15-33. Getting 3.5 points between two equally bad teams when the home side might be missing half its roster is too much. Three indicators aligned: sharp action, big money, and model projection.",
+    "thesis": "Professional money and significant capital on Brooklyn. Utah is resting Lauri Markkanen (his 14th absence this season) while Walker Kessler is already done for the year. Now illness is sweeping through the Jazz locker room \u2014 Jusuf Nurkic, Cody Williams, and Kevin Love are all day-to-day. If multiple sit, Utah fields a skeleton crew. The line moved from +2.5 to +3.5 as sharp money pushed the number. Only 30% of tickets are on Brooklyn but smart money and big money are both on the Nets. Both teams are in full tank mode \u2014 Brooklyn is 12-34, Utah is 15-33. Getting 3.5 points between two equally bad teams when the home side might be missing half its roster is too much. Three indicators aligned: sharp action, big money, and model projection.",
     "slug": "nets-spread-sharp-jan30-2026",
     "finalStat": "Nets 109, Jazz 99",
     "indicators": {
@@ -14697,7 +14697,7 @@
     "expectedValue": 3,
     "conviction": 65,
     "gameTime": "9:30 PM ET",
-    "thesis": "Our model projects a 4.5% edge on Brooklyn getting 3.5 in Utah. Jazz resting Markkanen (his 14th absence) with Kessler already out for the season removes their two most impactful bigs. Illness sweeping through Utah's roster — Nurkic, Cody Williams, and Kevin Love all day-to-day — could further thin the rotation. The line moved from +2.5 to +3.5 as sharp money pushed this number. Both teams are tanking — Brooklyn 12-34, Utah 15-33. Getting 3.5 points between two bad teams when the home side is this depleted is too much. Multi-fund agreement with sharp indicators confirms the value.",
+    "thesis": "Our model projects a 4.5% edge on Brooklyn getting 3.5 in Utah. Jazz resting Markkanen (his 14th absence) with Kessler already out for the season removes their two most impactful bigs. Illness sweeping through Utah's roster \u2014 Nurkic, Cody Williams, and Kevin Love all day-to-day \u2014 could further thin the rotation. The line moved from +2.5 to +3.5 as sharp money pushed this number. Both teams are tanking \u2014 Brooklyn 12-34, Utah 15-33. Getting 3.5 points between two bad teams when the home side is this depleted is too much. Multi-fund agreement with sharp indicators confirms the value.",
     "slug": "nets-spread-vector-jan30-2026",
     "finalStat": "Nets 109, Jazz 99",
     "indicators": {
@@ -14772,7 +14772,7 @@
     "expectedValue": 5,
     "conviction": 72,
     "gameTime": "7:00 PM ET",
-    "thesis": "Professional money backing Ottawa at home against Washington. The Capitals are operating without their top two goaltenders — Thompson on injured reserve and Lindgren also on IR. Washington is starting Clay Stevenson in just his second career NHL start. When smart money identifies a massive goaltending mismatch like this, the edge is clear. Ottawa has won 4 of 5 at home and the market hasn't fully adjusted to the severity of Washington's netminding crisis.",
+    "thesis": "Professional money backing Ottawa at home against Washington. The Capitals are operating without their top two goaltenders \u2014 Thompson on injured reserve and Lindgren also on IR. Washington is starting Clay Stevenson in just his second career NHL start. When smart money identifies a massive goaltending mismatch like this, the edge is clear. Ottawa has won 4 of 5 at home and the market hasn't fully adjusted to the severity of Washington's netminding crisis.",
     "slug": "senators-ml-sharp-feb02-2026",
     "finalStat": "Senators 3, Capitals 2",
     "indicators": {
@@ -14802,7 +14802,7 @@
     "expectedValue": 6,
     "conviction": 75,
     "gameTime": "7:00 PM ET",
-    "thesis": "Professional money and significant capital both aligned on the Islanders. Washington's goaltending crisis is the story — Thompson and Lindgren both on IR forces Clay Stevenson into his second career NHL start. Smart money indicators confirm this is a clear spot to exploit. The Islanders need points in a tight Metropolitan Division race and plus-money on the road against a team starting a backup's backup is rare value. Multiple sharp indicators aligned on this side.",
+    "thesis": "Professional money and significant capital both aligned on the Islanders. Washington's goaltending crisis is the story \u2014 Thompson and Lindgren both on IR forces Clay Stevenson into his second career NHL start. Smart money indicators confirm this is a clear spot to exploit. The Islanders need points in a tight Metropolitan Division race and plus-money on the road against a team starting a backup's backup is rare value. Multiple sharp indicators aligned on this side.",
     "slug": "islanders-ml-sharp-feb02-2026",
     "finalStat": "Capitals 4, Islanders 1",
     "indicators": {
@@ -14858,7 +14858,7 @@
     "expectedValue": 5,
     "conviction": 65,
     "gameTime": "7:30 PM ET",
-    "thesis": "Our model projects Stephen F. Austin within 1.5 points of McNeese in this Southland Conference showdown. SFA is 11-0 at home this season and 19-3 overall — one of the best home court advantages in mid-major basketball. Getting 2.5 points at home against a conference rival is too generous for a team that rarely loses on its own floor. The efficiency differential and pace mismatch support the model's projection. Note: line moved from +3.5 to +2.5, still within model range.",
+    "thesis": "Our model projects Stephen F. Austin within 1.5 points of McNeese in this Southland Conference showdown. SFA is 11-0 at home this season and 19-3 overall \u2014 one of the best home court advantages in mid-major basketball. Getting 2.5 points at home against a conference rival is too generous for a team that rarely loses on its own floor. The efficiency differential and pace mismatch support the model's projection. Note: line moved from +3.5 to +2.5, still within model range.",
     "slug": "sfa-spread-vector-feb02-2026",
     "finalStat": "SFA 67, McNeese 60",
     "indicators": {
@@ -14888,7 +14888,7 @@
     "expectedValue": 3,
     "conviction": 42,
     "gameTime": "8:00 PM ET",
-    "thesis": "79% of bets are on the opponent but the money is nearly split — that divergence between tickets and dollars is exactly what we look for. When the public pounds one side but professionals don't follow, we fade. Bethune-Cookman at home laying just 1.5 in a SWAC matchup where the line says it should be close.",
+    "thesis": "79% of bets are on the opponent but the money is nearly split \u2014 that divergence between tickets and dollars is exactly what we look for. When the public pounds one side but professionals don't follow, we fade. Bethune-Cookman at home laying just 1.5 in a SWAC matchup where the line says it should be close.",
     "slug": "bcookman-spread-contra-feb02-2026",
     "finalStat": "Bethune-Cookman 80, Alabama A&M 62",
     "indicators": {
@@ -14915,7 +14915,7 @@
     "expectedValue": 4,
     "conviction": 50,
     "gameTime": "9:00 PM ET",
-    "thesis": "67% of public bets on St. Louis but money diverging from tickets suggests sharp resistance on the Blues. Detroit at +165 offers value when the public is overvaluing the home side. The money-ticket split says this line is off — professionals see a closer game than the public expects. Plus-money on a team the sharps aren't fading is a classic contrarian spot.",
+    "thesis": "67% of public bets on St. Louis but money diverging from tickets suggests sharp resistance on the Blues. Detroit at +165 offers value when the public is overvaluing the home side. The money-ticket split says this line is off \u2014 professionals see a closer game than the public expects. Plus-money on a team the sharps aren't fading is a classic contrarian spot.",
     "slug": "redwings-ml-contra-feb02-2026",
     "finalStat": "Red Wings 2, Blues 0",
     "indicators": {
@@ -14942,7 +14942,7 @@
     "expectedValue": 6,
     "conviction": 70,
     "gameTime": "9:00 PM ET",
-    "thesis": "Our model projects a 7-point edge in this Southland Conference game. TAMUCC at home laying 4.5 against Lamar — the model sees a significant efficiency differential that the market hasn't fully priced in. That gives us a comfortable cushion between our projection and the spread. Home court in the Southland matters, and TAMUCC's recent form supports the model's read on this matchup.",
+    "thesis": "Our model projects a 7-point edge in this Southland Conference game. TAMUCC at home laying 4.5 against Lamar \u2014 the model sees a significant efficiency differential that the market hasn't fully priced in. That gives us a comfortable cushion between our projection and the spread. Home court in the Southland matters, and TAMUCC's recent form supports the model's read on this matchup.",
     "slug": "tamucc-spread-vector-feb02-2026",
     "finalStat": "Lamar 71, TAMUCC 69",
     "indicators": {
@@ -14968,7 +14968,7 @@
     "expectedValue": 5,
     "conviction": 78,
     "gameTime": "9:00 PM ET",
-    "thesis": "Professional money backing Kansas in Lubbock. Despite 60% of tickets on Texas Tech, the money is moving toward Kansas — that divergence signals professional interest. The line has held at 4.5 despite public pressure, classic sign that sharps are propping up the Jayhawks' side. Bill Self teams getting points in Big 12 road games have historically been undervalued by the market. Multiple sharp indicators aligned on Kansas with the line favoring our side.",
+    "thesis": "Professional money backing Kansas in Lubbock. Despite 60% of tickets on Texas Tech, the money is moving toward Kansas \u2014 that divergence signals professional interest. The line has held at 4.5 despite public pressure, classic sign that sharps are propping up the Jayhawks' side. Bill Self teams getting points in Big 12 road games have historically been undervalued by the market. Multiple sharp indicators aligned on Kansas with the line favoring our side.",
     "slug": "kansas-spread-sharp-feb02-2026",
     "finalStat": "Kansas 64, Texas Tech 61",
     "indicators": {
@@ -15024,7 +15024,7 @@
     "expectedValue": 4,
     "conviction": 60,
     "gameTime": "9:00 PM ET",
-    "thesis": "Historical situational patterns favor Kansas in this spot. Bill Self road dogs getting points in conference play have covered at a strong clip historically. The coaching advantage is real — Self adjusts better than most in hostile environments. Texas Tech at home is tough but the 4.5-point cushion accounts for the home court edge and then some. Situational factors and multi-fund agreement make this a high-conviction catalyst play.",
+    "thesis": "Historical situational patterns favor Kansas in this spot. Bill Self road dogs getting points in conference play have covered at a strong clip historically. The coaching advantage is real \u2014 Self adjusts better than most in hostile environments. Texas Tech at home is tough but the 4.5-point cushion accounts for the home court edge and then some. Situational factors and multi-fund agreement make this a high-conviction catalyst play.",
     "slug": "kansas-spread-catalyst-feb02-2026",
     "finalStat": "Kansas 64, Texas Tech 61",
     "indicators": {
@@ -15051,7 +15051,7 @@
     "expectedValue": 8,
     "conviction": 72,
     "gameTime": "7:00 PM ET",
-    "thesis": "Professional money backing Ottawa on the road despite Carolina being a heavy public favorite. The money-ticket divergence is significant — the majority of tickets are on the Hurricanes but sharp money is flowing the other direction. Brady Tkachuk returns to the lineup tonight, a major upgrade the market hasn't fully priced in. The line has softened from -175 to -165 on Carolina as sharp action continues to come in on Ottawa. Multiple sharp indicators aligned on the Senators in a spot where the public is overvaluing the home team.",
+    "thesis": "Professional money backing Ottawa on the road despite Carolina being a heavy public favorite. The money-ticket divergence is significant \u2014 the majority of tickets are on the Hurricanes but sharp money is flowing the other direction. Brady Tkachuk returns to the lineup tonight, a major upgrade the market hasn't fully priced in. The line has softened from -175 to -165 on Carolina as sharp action continues to come in on Ottawa. Multiple sharp indicators aligned on the Senators in a spot where the public is overvaluing the home team.",
     "slug": "senators-ml-sharp-feb03-2026",
     "indicators": {
       "sharpAction": true,
@@ -15080,7 +15080,7 @@
     "expectedValue": 6,
     "conviction": 65,
     "gameTime": "7:00 PM ET",
-    "thesis": "Over 70% of tickets are on Carolina at home, but the money split tells a different story — professional bettors aren't backing the Hurricanes at this price. Carolina is a classic public home favorite, and when sharp money diverges from public sentiment this strongly, fading the public has been profitable. The return of Brady Tkachuk isn't fully priced in by the casual market. The public overvalues home favorites in the regular season, creating value on the visitor.",
+    "thesis": "Over 70% of tickets are on Carolina at home, but the money split tells a different story \u2014 professional bettors aren't backing the Hurricanes at this price. Carolina is a classic public home favorite, and when sharp money diverges from public sentiment this strongly, fading the public has been profitable. The return of Brady Tkachuk isn't fully priced in by the casual market. The public overvalues home favorites in the regular season, creating value on the visitor.",
     "slug": "senators-ml-contra-feb03-2026",
     "indicators": {
       "publicPct": 72,
@@ -15108,7 +15108,7 @@
     "expectedValue": 5,
     "conviction": 55,
     "gameTime": "7:00 PM ET",
-    "thesis": "Brady Tkachuk returns tonight for Ottawa, a massive lineup upgrade that the market hasn't fully adjusted for. This is a classic catalyst situation — key player return creates mispriced value. The Senators have been competitive on the road and now get their best player back in a spot where the line was set assuming his absence. Multi-fund agreement with sharp and contrarian signals confirms the value in this situational play.",
+    "thesis": "Brady Tkachuk returns tonight for Ottawa, a massive lineup upgrade that the market hasn't fully adjusted for. This is a classic catalyst situation \u2014 key player return creates mispriced value. The Senators have been competitive on the road and now get their best player back in a spot where the line was set assuming his absence. Multi-fund agreement with sharp and contrarian signals confirms the value in this situational play.",
     "slug": "senators-ml-catalyst-feb03-2026",
     "indicators": {
       "situation": "Key player return - Brady Tkachuk",
@@ -15162,7 +15162,7 @@
     "expectedValue": 5,
     "conviction": 65,
     "gameTime": "7:00 PM ET",
-    "thesis": "Professional money backing St. Bonaventure getting 7.5 at Dayton. Despite the majority of tickets on the Flyers, the money is moving toward the Bonnies — that divergence signals sharp interest. The line has held at 7.5 despite public pressure on Dayton, and sharp indicators are aligned on St. Bonaventure in an A-10 conference road game where 7.5 points provides significant cushion. The Bonnies have been competitive in conference play and getting a full week's worth of points here.",
+    "thesis": "Professional money backing St. Bonaventure getting 7.5 at Dayton. Despite the majority of tickets on the Flyers, the money is moving toward the Bonnies \u2014 that divergence signals sharp interest. The line has held at 7.5 despite public pressure on Dayton, and sharp indicators are aligned on St. Bonaventure in an A-10 conference road game where 7.5 points provides significant cushion. The Bonnies have been competitive in conference play and getting a full week's worth of points here.",
     "slug": "stbonaventure-spread-sharp-feb03-2026",
     "indicators": {
       "sharpAction": true,
@@ -15218,7 +15218,7 @@
     "expectedValue": 4,
     "conviction": 55,
     "gameTime": "7:40 PM ET",
-    "thesis": "Situational factors heavily favor the Nets as a home dog here. The Lakers are on the 8th game of their annual Grammy road trip — historically one of the most profitable spots to fade in the NBA. Extended road trips create fatigue, chemistry disruptions, and focus issues. Brooklyn at home with 7.5 points takes advantage of a well-documented situational edge. Multi-fund agreement with contrarian signals confirms this situational play.",
+    "thesis": "Situational factors heavily favor the Nets as a home dog here. The Lakers are on the 8th game of their annual Grammy road trip \u2014 historically one of the most profitable spots to fade in the NBA. Extended road trips create fatigue, chemistry disruptions, and focus issues. Brooklyn at home with 7.5 points takes advantage of a well-documented situational edge. Multi-fund agreement with contrarian signals confirms this situational play.",
     "slug": "nets-spread-catalyst-feb03-2026",
     "indicators": {
       "situation": "Lakers Grammy road trip game 8 of 8",
@@ -15301,7 +15301,7 @@
     "expectedValue": 6,
     "conviction": 72,
     "gameTime": "8:00 PM ET",
-    "thesis": "Professional money has backed La Salle despite modest public interest. Loyola Chicago has lost 9 consecutive games, yet the market is only laying 3 points — sharp bettors recognize that even with home court, Loyola's form doesn't warrant favoritism. The money-ticket divergence signals professional interest on La Salle, and the line movement supports our side. Loyola ranks near the bottom of KenPom and the sharps see this as a mispriced home favorite propped up by nothing but venue.",
+    "thesis": "Professional money has backed La Salle despite modest public interest. Loyola Chicago has lost 9 consecutive games, yet the market is only laying 3 points \u2014 sharp bettors recognize that even with home court, Loyola's form doesn't warrant favoritism. The money-ticket divergence signals professional interest on La Salle, and the line movement supports our side. Loyola ranks near the bottom of KenPom and the sharps see this as a mispriced home favorite propped up by nothing but venue.",
     "slug": "lasalle-spread-sharp-feb03-2026",
     "indicators": {
       "sharpAction": true,
@@ -15358,7 +15358,7 @@
     "expectedValue": 6,
     "conviction": 62,
     "gameTime": "8:30 PM ET",
-    "thesis": "The public loves backing the Oilers at home, but with Draisaitl on personal leave, this is a mispriced favorite. Over 65% of tickets are still on Edmonton despite missing their second-best player. When the public overvalues a team's reputation and ignores a key absence, the contrarian play has consistent value. Toronto getting plus money against a Draisaitl-less Oilers is a textbook public fade — the market is slow to adjust to absences of star players.",
+    "thesis": "The public loves backing the Oilers at home, but with Draisaitl on personal leave, this is a mispriced favorite. Over 65% of tickets are still on Edmonton despite missing their second-best player. When the public overvalues a team's reputation and ignores a key absence, the contrarian play has consistent value. Toronto getting plus money against a Draisaitl-less Oilers is a textbook public fade \u2014 the market is slow to adjust to absences of star players.",
     "slug": "mapleleafs-ml-contra-feb03-2026",
     "indicators": {
       "publicPct": 67,
@@ -15414,7 +15414,7 @@
     "expectedValue": 6,
     "conviction": 65,
     "gameTime": "8:00 PM ET",
-    "thesis": "Textbook situational mismatch. Boston is on a road back-to-back after playing in Dallas, with Jaylen Brown doubtful, Tatum still sidelined with the Achilles, and the roster in flux following the Simons-for-Vučević trade deadline swap. Houston at home with full rest and Kevin Durant probable should dominate the energy and chemistry battle against a patchwork Celtics rotation. The fatigue plus depletion combination is worth the big spread.",
+    "thesis": "Textbook situational mismatch. Boston is on a road back-to-back after playing in Dallas, with Jaylen Brown doubtful, Tatum still sidelined with the Achilles, and the roster in flux following the Simons-for-Vu\u010devi\u0107 trade deadline swap. Houston at home with full rest and Kevin Durant probable should dominate the energy and chemistry battle against a patchwork Celtics rotation. The fatigue plus depletion combination is worth the big spread.",
     "slug": "rockets-spread-catalyst-feb04-2026",
     "indicators": {
       "situationScore": 5.5,
@@ -15444,7 +15444,7 @@
     "expectedValue": 3,
     "conviction": 42,
     "gameTime": "8:00 PM ET",
-    "thesis": "Milwaukee is depleted and distracted the night before the trade deadline. Giannis is OUT for his 4th straight game with a calf strain, with Portis, Prince, and Harris also sidelined. The larger edge here is the trade deadline chaos — Giannis is reportedly ready for a new home and the Bucks are finally open to offers. Every player in that locker room knows the roster could look completely different in 18 hours. That focus and motivation vacuum benefits a nearly fully healthy Pelicans squad laying less than 5 points.",
+    "thesis": "Milwaukee is depleted and distracted the night before the trade deadline. Giannis is OUT for his 4th straight game with a calf strain, with Portis, Prince, and Harris also sidelined. The larger edge here is the trade deadline chaos \u2014 Giannis is reportedly ready for a new home and the Bucks are finally open to offers. Every player in that locker room knows the roster could look completely different in 18 hours. That focus and motivation vacuum benefits a nearly fully healthy Pelicans squad laying less than 5 points.",
     "slug": "pelicans-spread-catalyst-feb04-2026",
     "indicators": {
       "situationScore": 3.0,
@@ -15473,7 +15473,7 @@
     "expectedValue": 5,
     "conviction": 45,
     "gameTime": "9:00 PM ET",
-    "thesis": "Money is flowing to Detroit at nearly double the rate of public tickets — 32% of bets but 54% of the handle. That concentration of larger wagers makes sense when you look at the goaltending mismatch. Gibson has been the hottest goalie in the NHL since December — 18-4-1 with a .925 save percentage and 4 shutouts, including a shutout of first-place Colorado two days ago. Utah is missing Cooley indefinitely, Brodin for 6-8 weeks, Buium with a facial fracture, and Levi in concussion protocol. Detroit is the better team on the road with an elite goaltender at plus money.",
+    "thesis": "Money is flowing to Detroit at nearly double the rate of public tickets \u2014 32% of bets but 54% of the handle. That concentration of larger wagers makes sense when you look at the goaltending mismatch. Gibson has been the hottest goalie in the NHL since December \u2014 18-4-1 with a .925 save percentage and 4 shutouts, including a shutout of first-place Colorado two days ago. Utah is missing Cooley indefinitely, Brodin for 6-8 weeks, Buium with a facial fracture, and Levi in concussion protocol. Detroit is the better team on the road with an elite goaltender at plus money.",
     "slug": "redwings-ml-sharp-feb04-2026",
     "indicators": {
       "sharpScore": 2,
@@ -15502,7 +15502,7 @@
     "expectedValue": 4,
     "conviction": 53,
     "gameTime": "10:00 PM ET",
-    "thesis": "Edmonton is on a back-to-back after a demoralizing 5-2 loss to the Maple Leafs, likely turning to Jarry who has been brutal — .833 save percentage over his last 5 starts with a 4.77 GAA. Calgary is rested at home and holds a 2-1 season series edge against the Oilers. When a fatigued team deploys a struggling goaltender in a rivalry game, the home underdog offers value. The Battle of Alberta intensity ensures Calgary competes regardless of their recent form.",
+    "thesis": "Edmonton is on a back-to-back after a demoralizing 5-2 loss to the Maple Leafs, likely turning to Jarry who has been brutal \u2014 .833 save percentage over his last 5 starts with a 4.77 GAA. Calgary is rested at home and holds a 2-1 season series edge against the Oilers. When a fatigued team deploys a struggling goaltender in a rivalry game, the home underdog offers value. The Battle of Alberta intensity ensures Calgary competes regardless of their recent form.",
     "slug": "flames-ml-catalyst-feb04-2026",
     "indicators": {
       "situationScore": 5.25,
@@ -15532,7 +15532,7 @@
     "expectedValue": 3,
     "conviction": 40,
     "gameTime": "10:00 PM ET",
-    "thesis": "Money is flowing to Seattle at nearly 3x the rate of public tickets — only 18% of bettors but 49% of the handle. That concentration of larger, more informed wagers at plus money suggests professional interest. Seattle has won both meetings against the Kings this season with Daccord confirmed between the pipes. Kuemper's .888 save percentage for the Kings is subpar. At +160, plus-money on a team with a dominant head-to-head record and significant money concentration is worth the risk on a back-to-back with minimal West Coast travel.",
+    "thesis": "Money is flowing to Seattle at nearly 3x the rate of public tickets \u2014 only 18% of bettors but 49% of the handle. That concentration of larger, more informed wagers at plus money suggests professional interest. Seattle has won both meetings against the Kings this season with Daccord confirmed between the pipes. Kuemper's .888 save percentage for the Kings is subpar. At +160, plus-money on a team with a dominant head-to-head record and significant money concentration is worth the risk on a back-to-back with minimal West Coast travel.",
     "slug": "kraken-ml-sharp-feb04-2026",
     "indicators": {
       "sharpScore": 3,
@@ -15544,5 +15544,398 @@
     "payout": 130,
     "netProfit": 80,
     "finalStat": "Final: SEA 4, LAK 2"
+  },
+  {
+    "id": 8060,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "SharpFund",
+    "description": "Mavericks +8.5",
+    "team": "Dallas Mavericks",
+    "opponent": "San Antonio Spurs",
+    "odds": -110,
+    "stake": 1.5,
+    "result": "loss",
+    "edge": 14,
+    "expectedValue": 27,
+    "conviction": 80,
+    "gameTime": "8:30 PM ET",
+    "thesis": "Projection model has this game at Spurs -3.5, a full 5 points tighter than the current market line of -8. Professional money and systematic indicators both favor Dallas. Crucially, the Spurs are on the second night of a back-to-back after beating OKC 116-106 last night. Dallas is gutted by trades \u2014 no Kyrie (ACL), AD traded to Washington, Lively out for season, PJ Washington concussed \u2014 but Cooper Flagg has been otherworldly, averaging 31.2 PPG over his last 5 including a 49-point game. The B2B for San Antonio plus Flagg factor at home should keep this closer than 8.5 points. The 14.1% edge is the largest on tonight's NBA board.",
+    "slug": "mavs-spread-sharp-feb05-2026",
+    "indicators": {
+      "sharpScore": 85,
+      "diff": -1,
+      "moneyPct": 30,
+      "betPct": 29,
+      "bigMoney": true,
+      "proSystems": true
+    },
+    "analysis": "Projection model has this game at Spurs -3.5, a full 5 points tighter than the current market line of -8. Professional money and systematic indicators both favor Dallas. Crucially, the Spurs are on the second night of a back-to-back after beating OKC 116-106 last night. Dallas is gutted by trades \u2014 no Kyrie (ACL), AD traded to Washington, Lively out for season, PJ Washington concussed \u2014 but Cooper Flagg has been otherworldly, averaging 31.2 PPG over his last 5 including a 49-point game. The B2B for San Antonio plus Flagg factor at home should keep this closer than 8.5 points. The 14.1% edge is the largest on tonight's NBA board.",
+    "payout": 0,
+    "netProfit": -150,
+    "finalStat": "Final: SAS 135, DAL 123"
+  },
+  {
+    "id": 8061,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "SharpFund",
+    "description": "Jazz +9.5",
+    "team": "Utah Jazz",
+    "opponent": "Atlanta Hawks",
+    "odds": -110,
+    "stake": 1.0,
+    "result": "win",
+    "edge": 7,
+    "expectedValue": 13,
+    "conviction": 65,
+    "gameTime": "7:30 PM ET",
+    "thesis": "Professional bettor activity and systematic indicators align on Utah getting 9.5 points. Projection model has this at Hawks -6.6, nearly 3 points tighter than the market. Both teams just went through massive trade deadline overhauls \u2014 Jazz acquired Jaren Jackson Jr. and Lonzo Ball (availability uncertain), Hawks traded Porzingis and added Kuminga and Hield. With rosters still gelling and new pieces not yet integrated, the chaos factor favors the points. The 59% money on Utah despite even bet split confirms sharp-public divergence.",
+    "slug": "jazz-spread-sharp-feb05-2026",
+    "indicators": {
+      "sharpScore": 78,
+      "diff": 8,
+      "moneyPct": 59,
+      "betPct": 51,
+      "sharpAction": true,
+      "proSystems": true
+    },
+    "analysis": "Professional bettor activity and systematic indicators align on Utah getting 9.5 points. Projection model has this at Hawks -6.6, nearly 3 points tighter than the market. Both teams just went through massive trade deadline overhauls \u2014 Jazz acquired Jaren Jackson Jr. and Lonzo Ball (availability uncertain), Hawks traded Porzingis and added Kuminga and Hield. With rosters still gelling and new pieces not yet integrated, the chaos factor favors the points. The 59% money on Utah despite even bet split confirms sharp-public divergence.",
+    "payout": 190.91,
+    "netProfit": 90.91,
+    "finalStat": "Final: ATL 121, UTA 119"
+  },
+  {
+    "id": 8062,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "SharpFund",
+    "description": "Philadelphia +4",
+    "team": "Philadelphia 76ers",
+    "opponent": "Los Angeles Lakers",
+    "odds": -110,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 5,
+    "expectedValue": 10,
+    "conviction": 50,
+    "gameTime": "10:00 PM ET",
+    "thesis": "Professional money and sharp indicators are both flowing to Philadelphia. While only 47% of bets are on the 76ers, 57% of the money is \u2014 a meaningful 10% divergence. Key context: Embiid is questionable but likely to play since this is NOT a back-to-back (he has only sat B2B games since January). Paul George is out for 25 games on suspension. Lakers have Luka averaging 33.4 PPG and Reaves just returned from a calf injury. If Embiid plays, getting 4 points in what projects as a competitive game is solid value. The sharp money says Philly keeps this close.",
+    "slug": "sixers-spread-sharp-feb05-2026",
+    "indicators": {
+      "sharpScore": 72,
+      "diff": 10,
+      "moneyPct": 57,
+      "betPct": 47,
+      "sharpAction": true,
+      "bigMoney": true
+    },
+    "analysis": "Professional money and sharp indicators are both flowing to Philadelphia. While only 47% of bets are on the 76ers, 57% of the money is \u2014 a meaningful 10% divergence. Key context: Embiid is questionable but likely to play since this is NOT a back-to-back (he has only sat B2B games since January). Paul George is out for 25 games on suspension. Lakers have Luka averaging 33.4 PPG and Reaves just returned from a calf injury. If Embiid plays, getting 4 points in what projects as a competitive game is solid value. The sharp money says Philly keeps this close.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: LAL 119, PHI 115"
+  },
+  {
+    "id": 8063,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NBA",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Bulls +7.5",
+    "team": "Chicago Bulls",
+    "opponent": "Toronto Raptors",
+    "odds": -110,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 4,
+    "expectedValue": 8,
+    "conviction": 45,
+    "gameTime": "7:30 PM ET",
+    "thesis": "Projection model has this at Raptors -5.6, nearly 2 points tighter than the market's 7.5. The Bulls are in full teardown mode after the deadline \u2014 traded Vucevic, Coby White, Dosunmu, and Huerter. Eleven players on the injury report and most new acquisitions have pending trade paperwork. However, the line has already moved from -9.5 to -7.5 to account for this, and the model still sees 4.4% edge at the current number. Toronto is without Poeltl (back) and Chris Paul (traded). Tank-mode teams with young guys fighting for roster spots can play hard.",
+    "slug": "bulls-spread-vector-feb05-2026",
+    "indicators": {
+      "modelEdge": 4.4,
+      "grade": "B-",
+      "proLine": 5.6
+    },
+    "analysis": "Projection model has this at Raptors -5.6, nearly 2 points tighter than the market's 7.5. The Bulls are in full teardown mode after the deadline \u2014 traded Vucevic, Coby White, Dosunmu, and Huerter. Eleven players on the injury report and most new acquisitions have pending trade paperwork. However, the line has already moved from -9.5 to -7.5 to account for this, and the model still sees 4.4% edge at the current number. Toronto is without Poeltl (back) and Chris Paul (traded). Tank-mode teams with young guys fighting for roster spots can play hard.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: TOR 123, CHI 107"
+  },
+  {
+    "id": 8064,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "SharpFund",
+    "description": "Senators ML (-135)",
+    "team": "Ottawa Senators",
+    "opponent": "Philadelphia Flyers",
+    "odds": -135,
+    "stake": 1.0,
+    "result": "win",
+    "edge": 8,
+    "expectedValue": 14,
+    "conviction": 75,
+    "gameTime": "7:00 PM ET",
+    "thesis": "Triple convergence of professional bettor activity, significant money flow, and top expert alignment on Ottawa. The Senators are 4-1 in their last 5, on a 4-game win streak, and 2-0 against Philly this season. Linus Ullmark has been lights-out since returning from personal leave \u2014 two straight wins with a .962 SV% in his comeback start. Ottawa ranks 4th in Corsi For % and 1st in expected goals % at 5v5, elite underlying metrics. The Flyers are 1-3-1 in their last 5. A regulation win puts Ottawa's playoff odds at 42.1% \u2014 maximum motivation heading into the Olympic break.",
+    "slug": "senators-ml-sharp-feb05-2026",
+    "indicators": {
+      "sharpScore": 92,
+      "diff": 10,
+      "moneyPct": 91,
+      "betPct": 81,
+      "sharpAction": true,
+      "bigMoney": true,
+      "topExperts": true
+    },
+    "analysis": "Triple convergence of professional bettor activity, significant money flow, and top expert alignment on Ottawa. The Senators are 4-1 in their last 5, on a 4-game win streak, and 2-0 against Philly this season. Linus Ullmark has been lights-out since returning from personal leave \u2014 two straight wins with a .962 SV% in his comeback start. Ottawa ranks 4th in Corsi For % and 1st in expected goals % at 5v5, elite underlying metrics. The Flyers are 1-3-1 in their last 5. A regulation win puts Ottawa's playoff odds at 42.1% \u2014 maximum motivation heading into the Olympic break.",
+    "payout": 174.07,
+    "netProfit": 74.07,
+    "finalStat": "Final: OTT 2, PHI 1 (OT)"
+  },
+  {
+    "id": 8065,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "CatalystFund",
+    "description": "Kings ML (+114)",
+    "team": "Los Angeles Kings",
+    "opponent": "Vegas Golden Knights",
+    "odds": 114,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 7,
+    "expectedValue": 15,
+    "conviction": 55,
+    "gameTime": "10:00 PM ET",
+    "thesis": "Professional bettors and top experts both favor LA on the road in Vegas. Only 18% of bets but 38% of the money \u2014 a 20% divergence, the largest on tonight's NHL board. Caveat: the Kings are goal-starved at just 2.4 GPG over their last 10, and newly-acquired Artemi Panarin will NOT play tonight (learning systems before Olympic break). Kuemper's .880 SV% vs Schmid's .894 is a slight goalie disadvantage. But at +114, the risk-reward is right for a Pacific Division rival that has split the season series 1-1.",
+    "slug": "kings-ml-catalyst-feb05-2026",
+    "indicators": {
+      "situationScore": 70,
+      "edge": 7,
+      "sharpAction": true,
+      "topExperts": true,
+      "moneyDiff": 20
+    },
+    "analysis": "Professional bettors and top experts both favor LA on the road in Vegas. Only 18% of bets but 38% of the money \u2014 a 20% divergence, the largest on tonight's NHL board. Caveat: the Kings are goal-starved at just 2.4 GPG over their last 10, and newly-acquired Artemi Panarin will NOT play tonight (learning systems before Olympic break). Kuemper's .880 SV% vs Schmid's .894 is a slight goalie disadvantage. But at +114, the risk-reward is right for a Pacific Division rival that has split the season series 1-1.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: VGK 4, LAK 1"
+  },
+  {
+    "id": 8066,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "ContraFund",
+    "description": "Predators ML (+140)",
+    "team": "Nashville Predators",
+    "opponent": "Washington Capitals",
+    "odds": 140,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 6,
+    "expectedValue": 14,
+    "conviction": 50,
+    "gameTime": "7:00 PM ET",
+    "thesis": "Sharp indicator activity on Nashville at +140 in Washington. Only 8% of bets but 20% of the money \u2014 a 12% divergence. Important context: the Predators are on the second night of a back-to-back after a wild 6-5 OT loss to Minnesota last night, and backup Justus Annunen will be in net. Washington has two days rest and may get Logan Thompson back (.930 SV% this season). Pierre-Luc Dubois also returns for the Caps after a 47-game absence. This is a higher-risk play given the B2B and goalie mismatch, but +140 prices in some of that risk. Classic sharp fade of a rested home favorite the public is overvaluing.",
+    "slug": "predators-ml-contra-feb05-2026",
+    "indicators": {
+      "publicPct": 92,
+      "moneyDiff": 12,
+      "sharpAction": true
+    },
+    "analysis": "Sharp indicator activity on Nashville at +140 in Washington. Only 8% of bets but 20% of the money \u2014 a 12% divergence. Important context: the Predators are on the second night of a back-to-back after a wild 6-5 OT loss to Minnesota last night, and backup Justus Annunen will be in net. Washington has two days rest and may get Logan Thompson back (.930 SV% this season). Pierre-Luc Dubois also returns for the Caps after a 47-game absence. This is a higher-risk play given the B2B and goalie mismatch, but +140 prices in some of that risk. Classic sharp fade of a rested home favorite the public is overvaluing.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: WSH 4, NSH 2"
+  },
+  {
+    "id": 8067,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NHL",
+    "betType": "moneyline",
+    "fund": "ContraFund",
+    "description": "Panthers ML (+160)",
+    "team": "Florida Panthers",
+    "opponent": "Tampa Bay Lightning",
+    "odds": 160,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 6,
+    "expectedValue": 16,
+    "conviction": 50,
+    "gameTime": "7:30 PM ET",
+    "thesis": "Professional bettor activity supports Florida at +160 in Tampa Bay despite 94% of the public backing the Lightning. Classic sharp divergence pattern. However, the Panthers are on a back-to-back after beating Boston in a shootout last night, and they are decimated by injuries \u2014 Barkov (knee, IR), Seth Jones (upper body, IR), and Bobrovsky has been in freefall (3.83 GAA, .829 SV% over his last 11 starts). Tampa has Vasilevskiy, the NHL's 2nd Star of the Week (.930 SV%). This is a high-risk, high-reward spot \u2014 the sharps see value at +160 that the box score doesn't show, possibly banking on a rivalry game where Florida digs deep.",
+    "slug": "panthers-ml-contra-feb05-2026",
+    "indicators": {
+      "publicPct": 94,
+      "moneyDiff": 10,
+      "sharpAction": true
+    },
+    "analysis": "Professional bettor activity supports Florida at +160 in Tampa Bay despite 94% of the public backing the Lightning. Classic sharp divergence pattern. However, the Panthers are on a back-to-back after beating Boston in a shootout last night, and they are decimated by injuries \u2014 Barkov (knee, IR), Seth Jones (upper body, IR), and Bobrovsky has been in freefall (3.83 GAA, .829 SV% over his last 11 starts). Tampa has Vasilevskiy, the NHL's 2nd Star of the Week (.930 SV%). This is a high-risk, high-reward spot \u2014 the sharps see value at +160 that the box score doesn't show, possibly banking on a rivalry game where Florida digs deep.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: TBL 6, FLA 1"
+  },
+  {
+    "id": 8068,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Merrimack -1.5",
+    "team": "Merrimack",
+    "opponent": "St. Marys",
+    "odds": -100,
+    "stake": 0.5,
+    "result": "win",
+    "edge": 8,
+    "expectedValue": 16,
+    "conviction": 65,
+    "gameTime": "7:00 PM ET",
+    "thesis": "Projection model has Merrimack as a 4.7-point favorite, significantly wider than the market line of just 1.5. At 7.8% edge with an A- grade, this is the highest-graded NCAAB spread tonight. Merrimack is 14-9 overall and 10-2 in MAAC play, sitting in first place. Kevair Kennedy leads the team at 17.1 PPG/4.7 RPG/3.9 APG. They won the first meeting 75-58 and have improved turnover discipline (just 5 TOs in recent wins). The opponent (Mount St. Mary's, 10-14) is 6-7 in conference. Road game is the risk factor but the model says the talent gap is too wide for a 1.5-point line.",
+    "slug": "merrimack-spread-vector-feb05-2026",
+    "indicators": {
+      "modelEdge": 7.8,
+      "grade": "A-",
+      "proLine": -4.7
+    },
+    "analysis": "Projection model has Merrimack as a 4.7-point favorite, significantly wider than the market line of just 1.5. At 7.8% edge with an A- grade, this is the highest-graded NCAAB spread tonight. Merrimack is 14-9 overall and 10-2 in MAAC play, sitting in first place. Kevair Kennedy leads the team at 17.1 PPG/4.7 RPG/3.9 APG. They won the first meeting 75-58 and have improved turnover discipline (just 5 TOs in recent wins). The opponent (Mount St. Mary's, 10-14) is 6-7 in conference. Road game is the risk factor but the model says the talent gap is too wide for a 1.5-point line.",
+    "payout": 100,
+    "netProfit": 50,
+    "finalStat": "Final: MER 87, MSM 70"
+  },
+  {
+    "id": 8069,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "North Florida +6.5",
+    "team": "North Florida",
+    "opponent": "West Georgia",
+    "odds": -105,
+    "stake": 0.5,
+    "result": "win",
+    "edge": 8,
+    "expectedValue": 16,
+    "conviction": 60,
+    "gameTime": "7:00 PM ET",
+    "thesis": "Projection model has this at 4.4 points, over 2 points tighter than the market's 6.5. A- grade with 7.6% edge. North Florida (5-18) is struggling with a 1-12 road record, which explains the big number. But the model sees this as closer than 6.5, likely because West Georgia (10-12) has also been inconsistent, losing to Austin Peay and Bellarmine recently. North Florida does score \u2014 82.1 PPG with Kamrin Oriol capable of 35-point explosions. West Georgia's home record (7-4) is the main concern, but 6.5 points feels like too many in a game between two lower-tier ASUN teams.",
+    "slug": "northflorida-spread-vector-feb05-2026",
+    "indicators": {
+      "modelEdge": 7.6,
+      "grade": "A-",
+      "proLine": 4.4
+    },
+    "analysis": "Projection model has this at 4.4 points, over 2 points tighter than the market's 6.5. A- grade with 7.6% edge. North Florida (5-18) is struggling with a 1-12 road record, which explains the big number. But the model sees this as closer than 6.5, likely because West Georgia (10-12) has also been inconsistent, losing to Austin Peay and Bellarmine recently. North Florida does score \u2014 82.1 PPG with Kamrin Oriol capable of 35-point explosions. West Georgia's home record (7-4) is the main concern, but 6.5 points feels like too many in a game between two lower-tier ASUN teams.",
+    "payout": 97.62,
+    "netProfit": 47.62,
+    "finalStat": "Final: UNF 81, WGA 73"
+  },
+  {
+    "id": 8070,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "VectorFund",
+    "description": "Drexel +4.5",
+    "team": "Drexel",
+    "opponent": "Campbell",
+    "odds": -105,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 7,
+    "expectedValue": 14,
+    "conviction": 58,
+    "gameTime": "7:00 PM ET",
+    "thesis": "Model projection strongly favors Drexel's value here, projecting a 2.4-point game versus the market's 4.5-point spread. B+ grade with 6.8% edge. The key matchup: Drexel's elite defense (65.7 PPG allowed, 22nd in Division I) vs Campbell's high-powered offense (80.9 PPG). Campbell's DJ Smith just dropped a career-high 39 in a road win and averages 21.1 PPG. But Drexel is 12-11 with a strong 6-4 CAA record. The 2-8 road record is the risk, but Campbell's 7-2 home mark may be inflated by weak opponents. The model trusts Drexel's defensive identity to keep this tight.",
+    "slug": "drexel-spread-vector-feb05-2026",
+    "indicators": {
+      "modelEdge": 6.8,
+      "grade": "B+",
+      "proLine": 2.4
+    },
+    "analysis": "Model projection strongly favors Drexel's value here, projecting a 2.4-point game versus the market's 4.5-point spread. B+ grade with 6.8% edge. The key matchup: Drexel's elite defense (65.7 PPG allowed, 22nd in Division I) vs Campbell's high-powered offense (80.9 PPG). Campbell's DJ Smith just dropped a career-high 39 in a road win and averages 21.1 PPG. But Drexel is 12-11 with a strong 6-4 CAA record. The 2-8 road record is the risk, but Campbell's 7-2 home mark may be inflated by weak opponents. The model trusts Drexel's defensive identity to keep this tight.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: CAM 81, DRE 60"
+  },
+  {
+    "id": 8071,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "CatalystFund",
+    "description": "Morehead State +8.5",
+    "team": "Morehead State",
+    "opponent": "Southeast Missouri",
+    "odds": -110,
+    "stake": 0.5,
+    "result": "loss",
+    "edge": 5,
+    "expectedValue": 10,
+    "conviction": 50,
+    "gameTime": "8:30 PM ET",
+    "thesis": "Systematic indicators favor Morehead State getting 8.5 on the road. Model projects a 6.4-point game, 2 full points tighter than the market. Both teams are 8-4 in the OVC, tied for 2nd \u2014 this is a massive conference game. Morehead has won 5 straight at Southeast Missouri's gym and 8 of the last 9 in Cape Girardeau. They won the first meeting 71-69 at home. Morehead's bench production (31.0 PPG, 2nd in OVC) gives them depth. The 3-9 road record overall is concerning, but the head-to-head dominance in this specific building suggests 8.5 is too many.",
+    "slug": "moreheadst-spread-catalyst-feb05-2026",
+    "indicators": {
+      "situationScore": 60,
+      "edge": 5.4,
+      "proSystems": true
+    },
+    "analysis": "Systematic indicators favor Morehead State getting 8.5 on the road. Model projects a 6.4-point game, 2 full points tighter than the market. Both teams are 8-4 in the OVC, tied for 2nd \u2014 this is a massive conference game. Morehead has won 5 straight at Southeast Missouri's gym and 8 of the last 9 in Cape Girardeau. They won the first meeting 71-69 at home. Morehead's bench production (31.0 PPG, 2nd in OVC) gives them depth. The 3-9 road record overall is concerning, but the head-to-head dominance in this specific building suggests 8.5 is too many.",
+    "payout": 0,
+    "netProfit": -50,
+    "finalStat": "Final: SEMO 82, MOR 70"
+  },
+  {
+    "id": 8072,
+    "date": "2026-02-05",
+    "datePlaced": "2026-02-05",
+    "sport": "NCAAB",
+    "betType": "spread",
+    "fund": "CatalystFund",
+    "description": "Eastern Illinois +9.5",
+    "team": "Eastern Illinois",
+    "opponent": "Tennessee State",
+    "odds": -110,
+    "stake": 0.5,
+    "result": "win",
+    "edge": 5,
+    "expectedValue": 10,
+    "conviction": 55,
+    "gameTime": "8:30 PM ET",
+    "thesis": "Professional bettor activity and systematic indicators both align on Eastern Illinois getting 9.5 points. Model projects a 7.6-point game, creating 5.4% edge. EIU is 9-14 overall and just 1-10 on the road, which is ugly. But they beat Tennessee State 74-70 in the first meeting on January 10, proving they can compete. Tennessee State (14-8) is strong at home (8-2) but just lost to Tennessee Tech 90-85 and shot 6-24 from three in that game. Travis Harper (17.7 PPG) leads the OVC in scoring for TSU. The first-meeting result and EIU's defensive identity (70.2 PPG allowed, 82nd nationally) suggest 9.5 is a generous cushion.",
+    "slug": "easternil-spread-catalyst-feb05-2026",
+    "indicators": {
+      "situationScore": 65,
+      "edge": 5.4,
+      "sharpAction": true,
+      "proSystems": true
+    },
+    "analysis": "Professional bettor activity and systematic indicators both align on Eastern Illinois getting 9.5 points. Model projects a 7.6-point game, creating 5.4% edge. EIU is 9-14 overall and just 1-10 on the road, which is ugly. But they beat Tennessee State 74-70 in the first meeting on January 10, proving they can compete. Tennessee State (14-8) is strong at home (8-2) but just lost to Tennessee Tech 90-85 and shot 6-24 from three in that game. Travis Harper (17.7 PPG) leads the OVC in scoring for TSU. The first-meeting result and EIU's defensive identity (70.2 PPG allowed, 82nd nationally) suggest 9.5 is a generous cushion.",
+    "payout": 95.45,
+    "netProfit": 45.45,
+    "finalStat": "Final: TSU 77, EIU 68"
   }
 ]
