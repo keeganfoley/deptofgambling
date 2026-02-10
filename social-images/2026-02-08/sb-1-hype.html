@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Bowl LX - Hype</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: linear-gradient(170deg, #050a12 0%, #0a1225 30%, #0f1a32 50%, #0a1225 70%, #050a12 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Background textures */
+    .grid-bg {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 54px 54px;
+    }
+    .diag-texture {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(251,191,36,0.02) 60px, rgba(251,191,36,0.02) 61px);
+    }
+    .center-glow {
+      position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%);
+      width: 1100px; height: 900px;
+      background: radial-gradient(ellipse, rgba(251,191,36,0.08) 0%, rgba(251,191,36,0.02) 35%, transparent 60%);
+    }
+    .glow-left {
+      position: absolute; top: 28%; left: -10%;
+      width: 750px; height: 750px;
+      background: radial-gradient(circle, rgba(105,190,40,0.1) 0%, transparent 50%);
+      border-radius: 50%;
+    }
+    .glow-right {
+      position: absolute; top: 28%; right: -10%;
+      width: 750px; height: 750px;
+      background: radial-gradient(circle, rgba(0,34,68,0.15) 0%, transparent 50%);
+      border-radius: 50%;
+    }
+    .top-vignette {
+      position: absolute; top: 0; left: 0; right: 0; height: 200px;
+      background: linear-gradient(to bottom, rgba(5,10,18,0.5) 0%, transparent 100%);
+    }
+    .bottom-vignette {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 400px;
+      background: linear-gradient(to top, rgba(5,10,18,0.9) 0%, transparent 100%);
+    }
+
+    /* Gold frame */
+    .frame {
+      position: absolute; top: 18px; left: 18px; right: 18px; bottom: 18px;
+      border: 2px solid rgba(251,191,36,0.15); border-radius: 4px; pointer-events: none;
+    }
+    .frame-inner {
+      position: absolute; top: 26px; left: 26px; right: 26px; bottom: 26px;
+      border: 1px solid rgba(251,191,36,0.08); pointer-events: none;
+    }
+    .corner {
+      position: absolute; width: 48px; height: 48px;
+      border-color: rgba(251,191,36,0.4); border-style: solid;
+    }
+    .corner.tl { top: 15px; left: 15px; border-width: 3px 0 0 3px; }
+    .corner.tr { top: 15px; right: 15px; border-width: 3px 3px 0 0; }
+    .corner.bl { bottom: 15px; left: 15px; border-width: 0 0 3px 3px; }
+    .corner.br { bottom: 15px; right: 15px; border-width: 0 3px 3px 0; }
+
+    .side-strip {
+      position: absolute; width: 6px; top: 80px; bottom: 80px;
+    }
+    .side-strip.left { left: 36px; }
+    .side-strip.right { right: 36px; }
+    .side-strip-inner {
+      width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px;
+    }
+    .strip-seg { flex: 1; border-radius: 3px; }
+    .strip-seg.gold { background: rgba(251,191,36,0.2); }
+    .strip-seg.dim { background: rgba(255,255,255,0.03); }
+
+    /* Content */
+    .content {
+      position: relative; z-index: 1; flex: 1;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 36px 68px 50px;
+      justify-content: space-evenly;
+    }
+
+    /* === TOP ZONE === */
+    .top-zone {
+      display: flex; flex-direction: column; align-items: center; width: 100%;
+    }
+    .top-bar {
+      display: flex; align-items: center; justify-content: center;
+      gap: 22px; width: 100%; margin-bottom: 22px;
+    }
+    .top-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(251,191,36,0.3)); }
+    .top-line.right { background: linear-gradient(90deg, rgba(251,191,36,0.3), transparent); }
+    .top-bar-text {
+      font-size: 18px; font-weight: 800; letter-spacing: 11px;
+      color: rgba(255,255,255,0.4); white-space: nowrap; text-indent: 11px;
+    }
+
+    /* SB Logo */
+    .logo-area {
+      display: flex; align-items: center; justify-content: center;
+      gap: 28px; margin-bottom: 16px;
+    }
+    .logo-side-accent {
+      width: 110px; height: 3px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.3));
+      border-radius: 2px;
+    }
+    .logo-side-accent.right {
+      background: linear-gradient(90deg, rgba(251,191,36,0.3), transparent);
+    }
+    .sb-logo {
+      width: 250px; height: auto; object-fit: contain;
+      filter: drop-shadow(0 6px 40px rgba(251,191,36,0.3)) drop-shadow(0 3px 15px rgba(0,0,0,0.5));
+    }
+
+    /* Event details */
+    .event-date {
+      font-size: 28px; font-weight: 900; letter-spacing: 8px;
+      color: rgba(255,255,255,0.6); margin-bottom: 8px; text-indent: 8px;
+    }
+    .event-venue {
+      font-size: 20px; font-weight: 700; letter-spacing: 7px;
+      color: rgba(251,191,36,0.5); text-indent: 7px; margin-bottom: 14px;
+    }
+
+    /* Game Day */
+    .gameday {
+      display: flex; align-items: center; gap: 24px;
+    }
+    .gd-line {
+      width: 100px; height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.4));
+      border-radius: 1px;
+    }
+    .gd-line.right {
+      background: linear-gradient(90deg, rgba(251,191,36,0.4), transparent);
+    }
+    .gd-text {
+      font-size: 30px; font-weight: 900; letter-spacing: 16px;
+      color: #fbbf24; text-indent: 16px;
+      text-shadow: 0 0 50px rgba(251,191,36,0.35);
+    }
+
+    /* === MATCHUP ZONE === */
+    .matchup {
+      display: flex; align-items: center; justify-content: center;
+      width: 100%; gap: 0;
+    }
+    .team {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 10px; flex: 1;
+    }
+    .team-logo-wrap {
+      position: relative;
+      width: 260px; height: 260px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .team-logo-ring {
+      position: absolute; inset: -4px;
+      border: 2px solid rgba(251,191,36,0.12);
+      border-radius: 50%;
+    }
+    .team-logo-ring-inner {
+      position: absolute; inset: 4px;
+      border: 1px solid rgba(251,191,36,0.06);
+      border-radius: 50%;
+    }
+    .team-logo-big {
+      width: 230px; height: 230px; object-fit: contain;
+      filter: drop-shadow(0 10px 50px rgba(0,0,0,0.7));
+    }
+    .team-name-big {
+      font-size: 58px; font-weight: 900; color: white;
+      letter-spacing: 5px; text-transform: uppercase;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    }
+    .team-record {
+      font-size: 42px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.5); letter-spacing: 3px;
+    }
+    .team-conf {
+      display: flex; align-items: center; gap: 10px;
+      margin-top: 2px;
+    }
+    .conf-logo {
+      width: 34px; height: 34px; object-fit: contain;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+    }
+    .conf-text {
+      font-size: 18px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(251,191,36,0.6); text-indent: 5px;
+    }
+
+    .vs-container {
+      display: flex; flex-direction: column; align-items: center;
+      flex-shrink: 0; margin: 0 4px; gap: 10px;
+    }
+    .vs-diamond {
+      width: 7px; height: 7px; background: rgba(251,191,36,0.4);
+      transform: rotate(45deg);
+    }
+    .vs {
+      font-size: 52px; font-weight: 900; color: #fbbf24;
+      text-shadow: 0 0 60px rgba(251,191,36,0.5), 0 0 30px rgba(251,191,36,0.25);
+      line-height: 1;
+    }
+
+    /* === BOTTOM ZONE === */
+    .bottom-zone {
+      width: 100%; display: flex; flex-direction: column; align-items: center; gap: 14px;
+    }
+
+    .kickoff {
+      display: flex; align-items: center; justify-content: center; gap: 22px;
+    }
+    .kickoff-label {
+      font-size: 15px; font-weight: 800; letter-spacing: 6px;
+      color: rgba(251,191,36,0.4); text-indent: 6px;
+    }
+    .kickoff-val {
+      font-size: 26px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(255,255,255,0.55); text-indent: 5px;
+    }
+    .kickoff-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: rgba(251,191,36,0.5);
+    }
+
+    /* Odds card */
+    .odds-card {
+      width: 100%;
+      background: rgba(251,191,36,0.04);
+      border: 1px solid rgba(251,191,36,0.18);
+      border-radius: 16px;
+      padding: 26px 20px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0;
+    }
+    .odds-block {
+      flex: 1; text-align: center;
+    }
+    .odds-block:not(:last-child) {
+      border-right: 1px solid rgba(251,191,36,0.12);
+    }
+    .odds-val {
+      font-size: 36px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.92);
+    }
+    .odds-key {
+      font-size: 14px; font-weight: 800; letter-spacing: 4px;
+      color: rgba(255,255,255,0.3); margin-top: 6px; text-indent: 4px;
+    }
+
+    /* Footer */
+    .footer {
+      display: flex; align-items: center; justify-content: center;
+      gap: 18px;
+    }
+    .footer-logo { width: 56px; height: 56px; }
+    .footer-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .footer-text { display: flex; flex-direction: column; }
+    .footer-brand {
+      font-size: 24px; font-weight: 800; letter-spacing: 5px; color: white;
+    }
+    .footer-cta {
+      font-size: 16px; font-weight: 700; letter-spacing: 5px;
+      color: #fbbf24; margin-top: 3px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="diag-texture"></div>
+    <div class="center-glow"></div>
+    <div class="glow-left"></div>
+    <div class="glow-right"></div>
+    <div class="top-vignette"></div>
+    <div class="bottom-vignette"></div>
+
+    <div class="frame"></div>
+    <div class="frame-inner"></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="side-strip left"><div class="side-strip-inner">
+      <div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div>
+    </div></div>
+    <div class="side-strip right"><div class="side-strip-inner">
+      <div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div><div class="strip-seg dim"></div><div class="strip-seg gold"></div>
+    </div></div>
+
+    <div class="content">
+
+      <!-- TOP ZONE -->
+      <div class="top-zone">
+        <div class="top-bar">
+          <div class="top-line"></div>
+          <span class="top-bar-text">DEPARTMENT OF GAMBLING</span>
+          <div class="top-line right"></div>
+        </div>
+
+        <div class="logo-area">
+          <div class="logo-side-accent"></div>
+          <img class="sb-logo" src="https://bootflare.com/wp-content/uploads/2025/08/Super-Bowl-LX-Logo.png" alt="Super Bowl LX">
+          <div class="logo-side-accent right"></div>
+        </div>
+
+        <div class="event-date">FEBRUARY 8, 2026</div>
+        <div class="event-venue">LEVI'S STADIUM · SANTA CLARA</div>
+
+        <div class="gameday">
+          <div class="gd-line"></div>
+          <div class="gd-text">GAME DAY</div>
+          <div class="gd-line right"></div>
+        </div>
+      </div>
+
+      <!-- MATCHUP -->
+      <div class="matchup">
+        <div class="team">
+          <div class="team-logo-wrap">
+            <div class="team-logo-ring"></div>
+            <div class="team-logo-ring-inner"></div>
+            <img class="team-logo-big" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+          </div>
+          <div class="team-name-big">Seahawks</div>
+          <div class="team-record">14 – 3</div>
+          <div class="team-conf">
+            <img class="conf-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/nfc.png" alt="NFC">
+            <span class="conf-text">NFC CHAMPIONS</span>
+          </div>
+        </div>
+
+        <div class="vs-container">
+          <div class="vs-diamond"></div>
+          <div class="vs">VS</div>
+          <div class="vs-diamond"></div>
+        </div>
+
+        <div class="team">
+          <div class="team-logo-wrap">
+            <div class="team-logo-ring"></div>
+            <div class="team-logo-ring-inner"></div>
+            <img class="team-logo-big" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="NE">
+          </div>
+          <div class="team-name-big">Patriots</div>
+          <div class="team-record">14 – 3</div>
+          <div class="team-conf">
+            <img class="conf-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/afc.png" alt="AFC">
+            <span class="conf-text">AFC CHAMPIONS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM ZONE -->
+      <div class="bottom-zone">
+        <div class="kickoff">
+          <span class="kickoff-label">KICKOFF</span>
+          <span class="kickoff-val">6:30 PM ET</span>
+          <div class="kickoff-dot"></div>
+          <span class="kickoff-val">NBC</span>
+        </div>
+
+        <div class="odds-card">
+          <div class="odds-block">
+            <div class="odds-val">SEA -4.5</div>
+            <div class="odds-key">SPREAD</div>
+          </div>
+          <div class="odds-block">
+            <div class="odds-val">O/U 45.5</div>
+            <div class="odds-key">TOTAL</div>
+          </div>
+          <div class="odds-block">
+            <div class="odds-val">SEA -235</div>
+            <div class="odds-key">MONEYLINE</div>
+          </div>
+        </div>
+
+        <div class="footer">
+          <div class="footer-logo"><img src="https://deptofgambling.com/logo.png" alt="DoG"></div>
+          <div class="footer-text">
+            <div class="footer-brand">DEPTOFGAMBLING.COM</div>
+            <div class="footer-cta">SWIPE FOR OUR POSITIONS →</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

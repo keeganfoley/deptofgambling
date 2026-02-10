@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Bowl LX - Both Cashed</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: linear-gradient(165deg, #0c2e1c 0%, #0a1f14 25%, #06120d 50%, #0a0e1a 75%, #0d0a18 100%);
+      overflow: hidden;
+    }
+
+    .glow-top {
+      position: absolute; top: 15%; left: 50%;
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(34,197,94,0.1) 0%, transparent 50%);
+      transform: translate(-50%, -50%);
+    }
+    .glow-mid {
+      position: absolute; top: 55%; left: 50%;
+      width: 900px; height: 600px;
+      background: radial-gradient(ellipse, rgba(34,197,94,0.06) 0%, transparent 50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .content {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      padding: 45px 55px 40px;
+    }
+
+    /* === HEADER === */
+    .header {
+      text-align: center; margin-bottom: 24px;
+    }
+    .header-top {
+      font-size: 14px; font-weight: 800; letter-spacing: 10px;
+      color: rgba(255,255,255,0.2); text-indent: 10px; margin-bottom: 10px;
+    }
+    .header-title {
+      font-size: 76px; font-weight: 900; letter-spacing: 4px;
+      color: #22c55e; line-height: 1;
+      text-shadow: 0 0 50px rgba(34,197,94,0.2);
+    }
+    .header-sub {
+      font-size: 20px; font-weight: 800; letter-spacing: 8px;
+      color: rgba(251,191,36,0.45); text-indent: 8px; margin-top: 10px;
+    }
+
+    /* === HERO PROFIT === */
+    .hero {
+      display: flex; align-items: center; justify-content: center;
+      gap: 40px;
+      background: rgba(34,197,94,0.05);
+      border: 2px solid rgba(34,197,94,0.25);
+      border-radius: 24px;
+      padding: 30px 40px;
+      margin-bottom: 28px;
+    }
+    .hero-main {
+      text-align: center;
+    }
+    .hero-label {
+      font-size: 14px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(34,197,94,0.5); margin-bottom: 4px;
+    }
+    .hero-amount {
+      font-size: 100px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e; line-height: 1;
+      text-shadow: 0 0 50px rgba(34,197,94,0.2);
+    }
+    .hero-side {
+      text-align: center; min-width: 100px;
+    }
+    .hero-side-val {
+      font-size: 44px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: white; line-height: 1;
+    }
+    .hero-side-val.gold { color: #fbbf24; }
+    .hero-side-key {
+      font-size: 11px; font-weight: 800; letter-spacing: 3px;
+      color: rgba(255,255,255,0.2); margin-top: 6px;
+    }
+    .hero-divider {
+      width: 1px; height: 70px;
+      background: rgba(34,197,94,0.2);
+    }
+
+    /* === SEPARATOR === */
+    .sep {
+      display: flex; align-items: center; gap: 14px;
+      margin: 0 auto 24px; width: 40%;
+    }
+    .sep-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, rgba(34,197,94,0.2)); }
+    .sep-line.r { background: linear-gradient(90deg, rgba(34,197,94,0.2), transparent); }
+    .sep-dot {
+      width: 6px; height: 6px; background: rgba(34,197,94,0.4);
+      border-radius: 50%; flex-shrink: 0;
+    }
+
+    /* === PICK ROWS === */
+    .picks { display: flex; flex-direction: column; gap: 18px; flex: 1; }
+
+    .pick-row {
+      flex: 1;
+      display: flex; align-items: center;
+      background: rgba(10, 20, 14, 0.6);
+      border: 1px solid rgba(34,197,94,0.18);
+      border-radius: 22px;
+      padding: 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Left green edge glow */
+    .pick-edge {
+      width: 6px; align-self: stretch;
+      background: linear-gradient(180deg, #22c55e, rgba(34,197,94,0.2));
+      flex-shrink: 0;
+    }
+
+    .pick-content {
+      flex: 1; padding: 24px 28px;
+      display: flex; flex-direction: column;
+      justify-content: center; gap: 14px;
+    }
+
+    /* Top row: logo + team/line + cashed badge */
+    .pick-header {
+      display: flex; align-items: center; gap: 18px;
+    }
+    .pick-logo {
+      width: 80px; height: 80px; object-fit: contain;
+      filter: drop-shadow(0 4px 15px rgba(0,0,0,0.4));
+      flex-shrink: 0;
+    }
+    .dual-logos { display: flex; align-items: center; gap: 2px; flex-shrink: 0; }
+    .dual-logos .pick-logo { width: 58px; height: 58px; }
+    .dual-logos .x { font-size: 14px; font-weight: 800; color: rgba(255,255,255,0.1); }
+
+    .pick-text { flex: 1; }
+    .pick-team {
+      font-size: 36px; font-weight: 900; color: white; line-height: 1;
+      letter-spacing: 2px;
+    }
+    .pick-line {
+      font-size: 28px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24; line-height: 1.2;
+    }
+
+    .pick-profit-col {
+      display: flex; flex-direction: column; align-items: flex-end;
+      flex-shrink: 0;
+    }
+    .pick-pnl {
+      font-size: 48px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e; line-height: 1;
+    }
+    .pick-unit {
+      font-size: 16px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(34,197,94,0.45);
+    }
+
+    /* Bottom detail chips */
+    .pick-details {
+      display: flex; gap: 8px;
+    }
+    .chip {
+      flex: 1; text-align: center;
+      padding: 10px 6px;
+      background: rgba(34,197,94,0.04);
+      border: 1px solid rgba(34,197,94,0.1);
+      border-radius: 10px;
+    }
+    .chip-val {
+      font-size: 20px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.7); line-height: 1;
+    }
+    .chip-val.green { color: #22c55e; }
+    .chip-val.gold { color: #fbbf24; }
+    .chip-key {
+      font-size: 9px; font-weight: 700; letter-spacing: 2px;
+      color: rgba(255,255,255,0.18); margin-top: 4px;
+    }
+
+    /* Cashed indicator on the right side of card */
+    .pick-cashed {
+      width: 70px; align-self: stretch;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: rgba(34,197,94,0.08);
+      border-left: 1px solid rgba(34,197,94,0.15);
+      flex-shrink: 0; gap: 6px;
+    }
+    .cashed-icon {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: linear-gradient(135deg, #1a7a3a, #22c55e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: white; font-weight: 900;
+      box-shadow: 0 4px 16px rgba(34,197,94,0.4);
+    }
+    .cashed-label {
+      font-size: 9px; font-weight: 900; letter-spacing: 2px;
+      color: #22c55e; writing-mode: vertical-lr;
+      transform: rotate(180deg);
+    }
+
+    /* === TOTALS === */
+    .totals {
+      display: flex;
+      background: rgba(34,197,94,0.04);
+      border: 1px solid rgba(34,197,94,0.2);
+      border-radius: 16px;
+      overflow: hidden; margin-bottom: 22px;
+    }
+    .total-cell {
+      flex: 1; text-align: center; padding: 22px 10px;
+    }
+    .total-cell:not(:last-child) {
+      border-right: 1px solid rgba(34,197,94,0.1);
+    }
+    .total-val {
+      font-size: 36px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .total-val.green { color: #22c55e; }
+    .total-val.gold { color: #fbbf24; }
+    .total-val.white { color: rgba(255,255,255,0.85); }
+    .total-key {
+      font-size: 10px; font-weight: 800; letter-spacing: 3px;
+      color: rgba(255,255,255,0.2); margin-top: 6px;
+    }
+
+    /* === FOOTER === */
+    .footer {
+      display: flex; align-items: center; justify-content: center; gap: 16px;
+    }
+    .footer-logo { width: 48px; height: 48px; }
+    .footer-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .footer-brand {
+      font-size: 20px; font-weight: 800; letter-spacing: 5px; color: white;
+    }
+    .footer-sep { width: 1px; height: 26px; background: rgba(255,255,255,0.1); }
+    .footer-tag {
+      font-size: 12px; font-weight: 700; letter-spacing: 4px; color: #22c55e;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="glow-top"></div>
+    <div class="glow-mid"></div>
+    <div class="grid"></div>
+
+    <div class="content">
+
+      <!-- HEADER -->
+      <div class="header">
+        <div class="header-top">SUPER BOWL LX</div>
+        <div class="header-title">BOTH CASHED</div>
+        <div class="header-sub">SEAHAWKS 29 &#8212; PATRIOTS 13</div>
+      </div>
+
+      <!-- HERO PROFIT -->
+      <div class="hero">
+        <div class="hero-side">
+          <div class="hero-side-val">2-0</div>
+          <div class="hero-side-key">RECORD</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-main">
+          <div class="hero-label">TOTAL PROFIT</div>
+          <div class="hero-amount">+$277</div>
+        </div>
+        <div class="hero-divider"></div>
+        <div class="hero-side">
+          <div class="hero-side-val gold">92%</div>
+          <div class="hero-side-key">ROI</div>
+        </div>
+      </div>
+
+      <!-- SEP -->
+      <div class="sep">
+        <div class="sep-line"></div>
+        <div class="sep-dot"></div>
+        <div class="sep-line r"></div>
+      </div>
+
+      <!-- PICKS -->
+      <div class="picks">
+
+        <!-- Pick 1: Seahawks -4.5 -->
+        <div class="pick-row">
+          <div class="pick-edge"></div>
+          <div class="pick-content">
+            <div class="pick-header">
+              <img class="pick-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+              <div class="pick-text">
+                <div class="pick-team">SEAHAWKS</div>
+                <div class="pick-line">-4.5 (-105)</div>
+              </div>
+              <div class="pick-profit-col">
+                <div class="pick-pnl">+$95</div>
+                <div class="pick-unit">+0.95u</div>
+              </div>
+            </div>
+            <div class="pick-details">
+              <div class="chip">
+                <div class="chip-val green">29-13</div>
+                <div class="chip-key">FINAL SCORE</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val green">WON BY 16</div>
+                <div class="chip-key">MARGIN</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val gold">1U / $100</div>
+                <div class="chip-key">RISKED</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val">SHARP</div>
+                <div class="chip-key">FUND</div>
+              </div>
+            </div>
+          </div>
+          <div class="pick-cashed">
+            <div class="cashed-icon">&#10003;</div>
+            <div class="cashed-label">CASHED</div>
+          </div>
+        </div>
+
+        <!-- Pick 2: Under 45.5 -->
+        <div class="pick-row">
+          <div class="pick-edge"></div>
+          <div class="pick-content">
+            <div class="pick-header">
+              <div class="dual-logos">
+                <img class="pick-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+                <span class="x">x</span>
+                <img class="pick-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="NE">
+              </div>
+              <div class="pick-text">
+                <div class="pick-team">UNDER</div>
+                <div class="pick-line">45.5 (-110)</div>
+              </div>
+              <div class="pick-profit-col">
+                <div class="pick-pnl">+$182</div>
+                <div class="pick-unit">+1.82u</div>
+              </div>
+            </div>
+            <div class="pick-details">
+              <div class="chip">
+                <div class="chip-val green">42 PTS</div>
+                <div class="chip-key">TOTAL SCORED</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val green">3.5 UNDER</div>
+                <div class="chip-key">MARGIN</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val gold">2U / $200</div>
+                <div class="chip-key">RISKED</div>
+              </div>
+              <div class="chip">
+                <div class="chip-val">SHARP</div>
+                <div class="chip-key">FUND</div>
+              </div>
+            </div>
+          </div>
+          <div class="pick-cashed">
+            <div class="cashed-icon">&#10003;</div>
+            <div class="cashed-label">CASHED</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TOTALS -->
+      <div class="totals">
+        <div class="total-cell">
+          <div class="total-val green">2-0</div>
+          <div class="total-key">RECORD</div>
+        </div>
+        <div class="total-cell">
+          <div class="total-val green">+$277</div>
+          <div class="total-key">PROFIT</div>
+        </div>
+        <div class="total-cell">
+          <div class="total-val gold">+2.77U</div>
+          <div class="total-key">UNITS WON</div>
+        </div>
+        <div class="total-cell">
+          <div class="total-val white">92%</div>
+          <div class="total-key">ROI</div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="footer-logo"><img src="logo.png" alt="DoG"></div>
+        <div class="footer-brand">DEPTOFGAMBLING.COM</div>
+        <div class="footer-sep"></div>
+        <div class="footer-tag">NFL SEASON FINALE</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

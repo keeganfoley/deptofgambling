@@ -16,7 +16,8 @@ interface Bet {
   finalStat: string;
   edge: number;
   expectedValue: number;
-  profit: number;
+  profit?: number;
+  netProfit?: number;
   betType: string;
   slug: string;
   thesis?: string;
@@ -80,7 +81,7 @@ export default function DailyPerformanceHistory() {
 
     chronologicalDates.forEach((date) => {
       const bets = grouped.get(date)!;
-      const dailyPL = bets.reduce((sum, bet) => sum + bet.profit, 0);
+      const dailyPL = bets.reduce((sum, bet) => sum + (bet.netProfit ?? bet.profit ?? 0), 0);
       runningBalance += dailyPL;
 
       const wins = bets.filter(b => b.result === 'win').length;
@@ -329,7 +330,7 @@ export default function DailyPerformanceHistory() {
                           <p className={`font-bold text-xl sm:text-3xl font-mono ${
                             bet.result === 'win' ? 'text-[#22c55e]' : bet.result === 'push' ? 'text-[#c5a572]' : 'text-[#ef4444]'
                           }`}>
-                            {bet.result === 'push' ? 'PUSH $0.00' : `${bet.profit >= 0 ? '+' : ''}$${bet.profit.toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
+                            {bet.result === 'push' ? 'PUSH $0.00' : `${(bet.netProfit ?? bet.profit ?? 0) >= 0 ? '+' : ''}$${(bet.netProfit ?? bet.profit ?? 0).toFixed(2)} ${bet.result === 'win' ? '↑' : '↓'}`}
                           </p>
                         </div>
                       </a>

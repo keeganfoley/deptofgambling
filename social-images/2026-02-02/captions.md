@@ -64,3 +64,59 @@ Loaded card. Kansas is the play. Let's work.
 | Exposure | $1,300 |
 | Sports | NHL, NCAAB |
 | Day 91 | FEB 2, 2026 |
+
+---
+
+# FEB 2, 2026 - RESULTS CAPTIONS
+
+---
+
+## TWITTER RESULTS POST
+
+```
+FEB 2 RESULTS 📊
+
+7-3 | +4.94u | +$494
+
+✅ Senators ML
+✅ Red Wings ML
+✅ Kansas +4.5 x3
+✅ SFA +2.5
+✅ B-Cookman -1.5
+❌ Islanders ML
+❌ TAMUCC -4.5
+❌ FAMU +3.5
+
+Day 91 | $46,576 | +16.44% ROI
+
+#GamblingTwitter #SportsBetting #FreePicks
+```
+
+---
+
+## INSTAGRAM RESULTS CAPTION
+
+```
+FEBRUARY 2 | Day 91 | 7-3 (+$494) | Kansas carries the card. 3-fund consensus cashes. #sportsbetting #deptofgambling #freepicks
+```
+
+---
+
+## INSTAGRAM STORY / CUMULATIVE POST
+
+```
+DAY 91 📊
+
+Record: 343-270-2
+Balance: $46,576
+Net P/L: +$6,576
+ROI: +16.44%
+
+Today: 7-3 (+$494)
+Win Rate: 55.9%
+
+Kansas +4.5 was the anchor 🏀
+3 funds. 4.5 units. All cash.
+
+deptofgambling.com
+```

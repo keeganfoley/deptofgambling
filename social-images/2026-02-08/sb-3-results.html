@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Bowl LX - 2-0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: #060d08;
+      overflow: hidden;
+    }
+
+    /* Stadium light burst from top center */
+    .light-burst {
+      position: absolute;
+      top: -200px; left: 50%; transform: translateX(-50%);
+      width: 1200px; height: 900px;
+      background: radial-gradient(ellipse at 50% 0%, rgba(34,197,94,0.18) 0%, rgba(34,197,94,0.06) 30%, transparent 60%);
+    }
+
+    /* Side stadium lights */
+    .light-l {
+      position: absolute; top: 0; left: -100px;
+      width: 500px; height: 700px;
+      background: radial-gradient(ellipse at 0% 0%, rgba(34,197,94,0.08) 0%, transparent 50%);
+    }
+    .light-r {
+      position: absolute; top: 0; right: -100px;
+      width: 500px; height: 700px;
+      background: radial-gradient(ellipse at 100% 0%, rgba(34,197,94,0.08) 0%, transparent 50%);
+    }
+
+    /* Bottom warm glow */
+    .warm-glow {
+      position: absolute; bottom: -50px; left: 50%; transform: translateX(-50%);
+      width: 800px; height: 500px;
+      background: radial-gradient(ellipse, rgba(251,191,36,0.06) 0%, transparent 50%);
+    }
+
+    /* Noise/grain texture via repeating gradient */
+    .texture {
+      position: absolute; inset: 0;
+      background:
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.003) 2px, rgba(255,255,255,0.003) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.003) 2px, rgba(255,255,255,0.003) 4px);
+    }
+
+    .content {
+      position: relative; z-index: 1;
+      width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 50px 60px 45px;
+    }
+
+    /* ===== TOP LABEL ===== */
+    .top-label {
+      font-size: 52px; font-weight: 900; letter-spacing: 18px;
+      color: #fbbf24; text-indent: 18px;
+      text-shadow: 0 0 40px rgba(251,191,36,0.3), 0 0 80px rgba(251,191,36,0.1);
+    }
+
+    /* ===== HERO: 2-0 ===== */
+    .hero-record {
+      font-size: 280px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e;
+      line-height: 0.82;
+      text-shadow: 0 0 120px rgba(34,197,94,0.35), 0 0 250px rgba(34,197,94,0.12);
+    }
+
+    .hero-subtitle {
+      font-size: 36px; font-weight: 900; letter-spacing: 20px;
+      color: #fbbf24; text-indent: 20px;
+      text-shadow: 0 0 40px rgba(251,191,36,0.25);
+    }
+
+    /* ===== SCOREBOARD ===== */
+    .score-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 36px; width: 100%;
+    }
+    .score-team {
+      display: flex; align-items: center; gap: 20px;
+    }
+    .score-logo {
+      width: 110px; height: 110px; object-fit: contain;
+      filter: drop-shadow(0 6px 25px rgba(0,0,0,0.5));
+    }
+    .score-logo.dim {
+      filter: drop-shadow(0 6px 25px rgba(0,0,0,0.5)) brightness(0.35) saturate(0.2);
+    }
+    .score-info {}
+    .score-name {
+      font-size: 28px; font-weight: 900; letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+    .score-name.w { color: white; }
+    .score-name.l { color: rgba(255,255,255,0.15); }
+    .score-pts {
+      font-size: 64px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .score-pts.w { color: #22c55e; }
+    .score-pts.l { color: rgba(255,255,255,0.08); }
+
+    .score-vs {
+      font-size: 20px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(251,191,36,0.35);
+      flex-shrink: 0;
+    }
+
+    /* ===== DIVIDER ===== */
+    .line-div {
+      width: 85%; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(34,197,94,0.25), transparent);
+    }
+
+    /* ===== PICKS ===== */
+    .picks {
+      width: 100%; display: flex; flex-direction: column;
+      gap: 18px;
+    }
+    .pick {
+      display: flex; align-items: center;
+      padding: 30px 36px;
+      background: linear-gradient(135deg, rgba(34,197,94,0.06), rgba(34,197,94,0.02));
+      border: 1.5px solid rgba(34,197,94,0.2);
+      border-radius: 20px;
+      gap: 24px;
+    }
+
+    .pick-check {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: linear-gradient(135deg, #16803c, #22c55e);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; color: white; font-weight: 900;
+      box-shadow: 0 6px 30px rgba(34,197,94,0.35);
+      flex-shrink: 0;
+    }
+
+    .pick-info { flex: 1; }
+    .pick-bet {
+      font-size: 34px; font-weight: 900; color: white;
+      letter-spacing: 1px;
+    }
+    .pick-sub {
+      font-size: 20px; font-weight: 700;
+      color: rgba(255,255,255,0.3); margin-top: 4px;
+    }
+    .pick-sub span { color: #fbbf24; font-weight: 800; }
+
+    .pick-pnl {
+      font-size: 52px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e; flex-shrink: 0;
+    }
+
+    /* ===== PROFIT BAR ===== */
+    .profit-bar {
+      width: 100%;
+      background: rgba(34,197,94,0.05);
+      border: 2px solid rgba(34,197,94,0.3);
+      border-radius: 24px;
+      padding: 40px 30px;
+      display: flex; align-items: center; justify-content: center;
+      gap: 50px;
+    }
+    .pb-main { text-align: center; }
+    .pb-label {
+      font-size: 14px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(34,197,94,0.5); margin-bottom: 6px;
+    }
+    .pb-val {
+      font-size: 84px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: #22c55e; line-height: 1;
+      text-shadow: 0 0 50px rgba(34,197,94,0.2);
+    }
+    .pb-side { text-align: center; }
+    .pb-side-val {
+      font-size: 46px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      line-height: 1;
+    }
+    .pb-side-val.gold { color: #fbbf24; }
+    .pb-side-val.white { color: white; }
+    .pb-side-key {
+      font-size: 12px; font-weight: 800; letter-spacing: 3px;
+      color: rgba(255,255,255,0.22); margin-top: 8px;
+    }
+    .pb-sep {
+      width: 1px; height: 65px;
+      background: rgba(34,197,94,0.18);
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      display: flex; align-items: center; justify-content: center; gap: 18px;
+    }
+    .f-logo { width: 58px; height: 58px; }
+    .f-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .f-brand {
+      font-size: 24px; font-weight: 800; letter-spacing: 6px; color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="light-burst"></div>
+    <div class="light-l"></div>
+    <div class="light-r"></div>
+    <div class="warm-glow"></div>
+    <div class="texture"></div>
+
+    <div class="content">
+
+      <div class="top-label">SUPER BOWL LX</div>
+
+      <div class="hero-record">2-0</div>
+      <div class="hero-subtitle">NFL SWEEP</div>
+
+      <!-- Score -->
+      <div class="score-row">
+        <div class="score-team">
+          <img class="score-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+          <div class="score-info">
+            <div class="score-name w">Seahawks</div>
+            <div class="score-pts w">29</div>
+          </div>
+        </div>
+        <div class="score-vs">FINAL</div>
+        <div class="score-team">
+          <div class="score-info" style="text-align:right;">
+            <div class="score-name l">Patriots</div>
+            <div class="score-pts l">13</div>
+          </div>
+          <img class="score-logo dim" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="NE">
+        </div>
+      </div>
+
+      <div class="line-div"></div>
+
+      <!-- Picks -->
+      <div class="picks">
+        <div class="pick">
+          <div class="pick-check">&#10003;</div>
+          <div class="pick-info">
+            <div class="pick-bet">Seahawks -4.5</div>
+            <div class="pick-sub">Won by 16 &middot; <span>1U</span></div>
+          </div>
+          <div class="pick-pnl">+$95</div>
+        </div>
+        <div class="pick">
+          <div class="pick-check">&#10003;</div>
+          <div class="pick-info">
+            <div class="pick-bet">Under 45.5</div>
+            <div class="pick-sub">42 total points &middot; <span>2U</span></div>
+          </div>
+          <div class="pick-pnl">+$182</div>
+        </div>
+      </div>
+
+      <!-- Profit -->
+      <div class="profit-bar">
+        <div class="pb-side">
+          <div class="pb-side-val gold">+2.77U</div>
+          <div class="pb-side-key">UNITS WON</div>
+        </div>
+        <div class="pb-sep"></div>
+        <div class="pb-main">
+          <div class="pb-label">TOTAL PROFIT</div>
+          <div class="pb-val">+$277</div>
+        </div>
+        <div class="pb-sep"></div>
+        <div class="pb-side">
+          <div class="pb-side-val white">92%</div>
+          <div class="pb-side-key">ROI</div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="f-logo"><img src="logo.png" alt="DoG"></div>
+        <div class="f-brand">DEPTOFGAMBLING.COM</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Performance - FEBRUARY 8</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 50px 60px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 100px; bottom: 100px;
+      width: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .side-bars.left { left: 20px; }
+    .side-bars.right { right: 20px; }
+    .side-bar { width: 100%; height: 40px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #2d8a4e; }
+    .side-bar.red { background: #c0392b; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 120px;
+    }
+
+    .header { text-align: center; margin-bottom: 20px; }
+    .header-label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 6px;
+    }
+    .header-date {
+      font-size: 52px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      text-decoration-thickness: 4px;
+    }
+
+    .stats-box {
+      width: 95%;
+      margin: 0 auto 25px;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(251, 191, 36, 0.4);
+      border-radius: 16px;
+      padding: 25px 30px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+    }
+    .stats-row + .stats-row {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .stat-item { text-align: center; min-width: 180px; }
+    .stat-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 6px;
+    }
+    .stat-value {
+      font-size: 38px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .stat-value.white { color: white; }
+    .stat-value.green { color: #22c55e; }
+
+    .stat-divider {
+      width: 1px;
+      height: 45px;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .chart-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    .chart-label {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 5px;
+    }
+    .chart-date-range {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #fbbf24;
+    }
+
+    .chart-container {
+      margin: 0 10px;
+      height: 680px;
+    }
+
+    .chart-area {
+      position: relative;
+      background: #0d1117;
+      border-radius: 12px;
+      border: 2px solid rgba(255,255,255,0.15);
+      overflow: visible;
+      height: 620px;
+      margin-bottom: 40px;
+    }
+
+    .y-axis-label {
+      position: absolute;
+      left: 12px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.8);
+      transform: translateY(50%);
+    }
+
+    .h-grid-line {
+      position: absolute;
+      left: 70px;
+      right: 15px;
+      height: 1px;
+      background: rgba(255,255,255,0.1);
+    }
+
+    .trend-line {
+      position: absolute;
+      left: 75px;
+      right: 20px;
+      bottom: 40px;
+      top: 40px;
+      z-index: 1;
+    }
+    .trend-line svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    .candlesticks {
+      position: absolute;
+      left: 75px;
+      right: 20px;
+      bottom: 40px;
+      top: 40px;
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      z-index: 5;
+    }
+
+    .candle-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100px;
+      position: relative;
+      height: 100%;
+    }
+
+    .candle {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .body {
+      width: 55px;
+      border-radius: 4px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      min-height: 10px;
+    }
+    .body.green {
+      background: linear-gradient(180deg, #3fb950 0%, #2d8a4e 100%);
+      box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+    }
+    .body.red {
+      background: linear-gradient(180deg, #f85149 0%, #c0392b 100%);
+      box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+    }
+    .body.flat {
+      background: rgba(255,255,255,0.2);
+      height: 4px !important;
+    }
+
+    .pl-label {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 15px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      white-space: nowrap;
+      z-index: 10;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .pl-label.positive {
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.2);
+    }
+    .pl-label.negative {
+      color: #ef4444;
+      background: rgba(239, 68, 68, 0.2);
+    }
+    .pl-label.neutral {
+      color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .candle-date {
+      position: absolute;
+      bottom: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 25px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+    }
+    .logo { width: 70px; height: 70px; margin: 0 auto 15px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 16px; font-weight: 700; letter-spacing: 5px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <!-- 2 green (Feb2, Feb8), 2 red (Feb3, Feb5) -->
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar green"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar red"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">PORTFOLIO PERFORMANCE</div>
+        <div class="header-date">FEBRUARY 8</div>
+      </div>
+
+      <div class="stats-box">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-label">BALANCE</div>
+            <div class="stat-value white">$45,997</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">NET P/L</div>
+            <div class="stat-value green">+$5,997</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">ROI</div>
+            <div class="stat-value green">+14.99%</div>
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-label">RECORD</div>
+            <div class="stat-value white">358-293</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">WIN RATE</div>
+            <div class="stat-value green">55.0%</div>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <div class="stat-label">UNITS PROFITED</div>
+            <div class="stat-value green">+59.97U</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-header">
+        <div class="chart-label">7 DAY PERFORMANCE</div>
+        <div class="chart-date-range">FEB 2 - FEB 8</div>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-area">
+          <!-- Y-Axis Labels - Range $45.5k to $47.0k -->
+          <div class="y-axis-label" style="bottom: 30px;">$45.5k</div>
+          <div class="h-grid-line" style="bottom: 35px;"></div>
+          <div class="y-axis-label" style="bottom: 170px;">$46.0k</div>
+          <div class="h-grid-line" style="bottom: 175px;"></div>
+          <div class="y-axis-label" style="bottom: 310px;">$46.5k</div>
+          <div class="h-grid-line" style="bottom: 315px;"></div>
+          <div class="y-axis-label" style="bottom: 450px;">$47.0k</div>
+          <div class="h-grid-line" style="bottom: 455px;"></div>
+
+          <!-- Trend line connecting closing prices -->
+          <!-- Scale: 540px for $1500 range ($45.5k-$47k), 0.36px per dollar -->
+          <!-- Feb 2: close $46,576 -> 387px -> y=153 -->
+          <!-- Feb 3: close $46,034 -> 192px -> y=348 -->
+          <!-- Feb 4: close $46,034 -> 192px -> y=348 -->
+          <!-- Feb 5: close $45,842 -> 123px -> y=417 -->
+          <!-- Feb 6: close $45,842 -> 123px -> y=417 -->
+          <!-- Feb 7: close $45,842 -> 123px -> y=417 -->
+          <!-- Feb 8: close $45,997 -> 179px -> y=361 -->
+          <div class="trend-line">
+            <svg viewBox="0 0 845 540" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.25" />
+                  <stop offset="100%" style="stop-color:#22c55e;stop-opacity:0.02" />
+                </linearGradient>
+              </defs>
+              <polygon fill="url(#areaGrad)" points="60,153 181,348 302,348 423,417 544,417 665,417 786,361 786,540 60,540" />
+              <polyline fill="none" stroke="#22c55e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" points="60,153 181,348 302,348 423,417 544,417 665,417 786,361" />
+            </svg>
+          </div>
+
+          <div class="candlesticks">
+            <!-- Feb 2: GREEN (+$494) open $46,082 close $46,576 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 209px; height: 178px;"></div>
+                <div class="pl-label positive" style="bottom: 401px;">+$494</div>
+              </div>
+              <div class="candle-date">2/2</div>
+            </div>
+
+            <!-- Feb 3: RED (-$542) open $46,576 close $46,034 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 192px; height: 195px;"></div>
+                <div class="pl-label negative" style="bottom: 401px;">-$542</div>
+              </div>
+              <div class="candle-date">2/3</div>
+            </div>
+
+            <!-- Feb 4: FLAT ($0) -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body flat" style="bottom: 192px;"></div>
+                <div class="pl-label neutral" style="bottom: 213px;">$0</div>
+              </div>
+              <div class="candle-date">2/4</div>
+            </div>
+
+            <!-- Feb 5: RED (-$192) open $46,034 close $45,842 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body red" style="bottom: 123px; height: 69px;"></div>
+                <div class="pl-label negative" style="bottom: 206px;">-$192</div>
+              </div>
+              <div class="candle-date">2/5</div>
+            </div>
+
+            <!-- Feb 6: FLAT ($0) - NO ACTION -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body flat" style="bottom: 123px;"></div>
+                <div class="pl-label neutral" style="bottom: 144px;">$0</div>
+              </div>
+              <div class="candle-date">2/6</div>
+            </div>
+
+            <!-- Feb 7: FLAT ($0) - NO ACTION -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body flat" style="bottom: 123px;"></div>
+                <div class="pl-label neutral" style="bottom: 144px;">$0</div>
+              </div>
+              <div class="candle-date">2/7</div>
+            </div>
+
+            <!-- Feb 8: GREEN (+$155) open $45,842 close $45,997 -->
+            <div class="candle-wrapper">
+              <div class="candle">
+                <div class="body green" style="bottom: 123px; height: 56px;"></div>
+                <div class="pl-label positive" style="bottom: 193px;">+$155</div>
+              </div>
+              <div class="candle-date">2/8</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="logo"><img src="logo.png" alt="DoG"></div>
+      <div class="website">DEPTOFGAMBLING.COM</div>
+    </div>
+  </div>
+</body>
+</html>

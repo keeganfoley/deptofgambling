@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Bowl LX - Our Positions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: linear-gradient(170deg, #050a12 0%, #0a1225 30%, #0f1a32 50%, #0a1225 70%, #050a12 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .grid-bg {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 54px 54px;
+    }
+
+    .diag-texture {
+      position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        -45deg, transparent, transparent 60px,
+        rgba(251,191,36,0.02) 60px, rgba(251,191,36,0.02) 61px
+      );
+    }
+
+    .candles-bg {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 600px;
+      opacity: 0.06; display: flex; align-items: flex-end;
+      justify-content: center; gap: 8px; padding: 0 20px 20px;
+    }
+    .candle { display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 2px; border-radius: 2px; }
+    .cbody { width: 10px; border-radius: 2px; }
+    .candle.green .wick, .candle.green .cbody { background: #22c55e; }
+    .candle.red .wick, .candle.red .cbody { background: #dc2626; }
+
+    .chart-lines {
+      position: absolute; top: 200px; left: 50px; right: 50px; bottom: 120px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .chart-line { height: 1px; background: rgba(255,255,255,0.02); }
+
+    .price-labels {
+      position: absolute; right: 16px; top: 220px; bottom: 140px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .price-label {
+      font-size: 9px; font-family: 'JetBrains Mono', monospace;
+      font-weight: 600; color: rgba(255,255,255,0.06); text-align: right;
+    }
+
+    .bottom-vignette {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 300px;
+      background: linear-gradient(to top, rgba(5,10,18,0.95) 0%, transparent 100%);
+    }
+
+    .frame {
+      position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px;
+      border: 2px solid rgba(251,191,36,0.12); border-radius: 4px; pointer-events: none;
+    }
+    .frame-inner {
+      position: absolute; top: 28px; left: 28px; right: 28px; bottom: 28px;
+      border: 1px solid rgba(251,191,36,0.06); pointer-events: none;
+    }
+    .corner {
+      position: absolute; width: 40px; height: 40px;
+      border-color: rgba(251,191,36,0.3); border-style: solid;
+    }
+    .corner.tl { top: 18px; left: 18px; border-width: 3px 0 0 3px; }
+    .corner.tr { top: 18px; right: 18px; border-width: 3px 3px 0 0; }
+    .corner.bl { bottom: 18px; left: 18px; border-width: 0 0 3px 3px; }
+    .corner.br { bottom: 18px; right: 18px; border-width: 0 3px 3px 0; }
+
+    .side-strip {
+      position: absolute; width: 6px; top: 80px; bottom: 80px;
+    }
+    .side-strip.left { left: 38px; }
+    .side-strip-inner {
+      width: 100%; height: 100%; display: flex; flex-direction: column; gap: 6px;
+    }
+    .strip-seg { flex: 1; border-radius: 3px; }
+    .strip-seg.green { background: rgba(34,197,94,0.25); }
+    .strip-seg.dim { background: rgba(255,255,255,0.03); }
+
+    .content {
+      position: relative; z-index: 1; flex: 1;
+      display: flex; flex-direction: column;
+      padding: 42px 58px 32px;
+    }
+
+    .header { text-align: center; margin-bottom: 10px; }
+    .header-row {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; margin-bottom: 4px;
+    }
+    .header-line {
+      flex: 1; max-width: 220px; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.25));
+    }
+    .header-line.right {
+      background: linear-gradient(90deg, rgba(251,191,36,0.25), transparent);
+    }
+    .header-label {
+      font-size: 15px; font-weight: 800; letter-spacing: 10px;
+      color: rgba(255,255,255,0.35);
+    }
+    .header-title {
+      font-size: 72px; font-weight: 900; letter-spacing: 5px;
+      color: #fbbf24; text-shadow: 0 0 80px rgba(251,191,36,0.25); line-height: 1;
+    }
+    .header-sub {
+      font-size: 20px; font-weight: 700; letter-spacing: 10px;
+      color: rgba(255,255,255,0.3); margin-top: 10px;
+    }
+
+    .divider {
+      display: flex; align-items: center; gap: 14px;
+      width: 60%; margin: 0 auto 18px;
+    }
+    .div-line {
+      flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.25));
+    }
+    .div-line.right {
+      background: linear-gradient(90deg, rgba(251,191,36,0.25), transparent);
+    }
+    .diamond {
+      width: 8px; height: 8px; background: #fbbf24;
+      transform: rotate(45deg); flex-shrink: 0;
+      box-shadow: 0 0 15px rgba(251,191,36,0.3);
+    }
+
+    /* ========== CARDS ========== */
+    .positions {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+
+    .position-card {
+      flex: 1;
+      background: rgba(12, 22, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border: 2px solid rgba(34,197,94,0.5);
+      border-radius: 22px;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-accent {
+      width: 8px;
+      background: linear-gradient(180deg, #22c55e 0%, rgba(34,197,94,0.3) 100%);
+      flex-shrink: 0;
+      border-radius: 22px 0 0 22px;
+    }
+
+    .card-body {
+      flex: 1;
+      padding: 32px 36px 28px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .position-card::before {
+      content: '';
+      position: absolute; top: -30%; right: -10%;
+      width: 350px; height: 350px;
+      background: radial-gradient(circle, rgba(34,197,94,0.06) 0%, transparent 55%);
+      border-radius: 50%;
+    }
+    .position-card::after {
+      content: '';
+      position: absolute; bottom: -25%; left: 10%;
+      width: 250px; height: 250px;
+      background: radial-gradient(circle, rgba(251,191,36,0.04) 0%, transparent 55%);
+      border-radius: 50%;
+    }
+
+    .card-top-row {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px; position: relative; z-index: 1;
+    }
+
+    .position-label {
+      font-size: 13px; font-weight: 800; letter-spacing: 5px;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .fund-badge {
+      font-size: 16px; font-weight: 800; letter-spacing: 4px;
+      padding: 10px 24px; border-radius: 12px;
+      background: rgba(34,197,94,0.15); color: #22c55e;
+      border: 2px solid rgba(34,197,94,0.35);
+    }
+
+    .card-main {
+      display: flex; align-items: center; justify-content: space-between;
+      position: relative; z-index: 1; flex: 1;
+    }
+
+    .card-left {
+      display: flex; align-items: center; gap: 24px;
+    }
+
+    .card-logo {
+      width: 140px; height: 140px;
+      object-fit: contain;
+      filter: drop-shadow(0 8px 30px rgba(0,0,0,0.5));
+    }
+
+    .dual-logo {
+      display: flex; align-items: center; gap: 6px;
+    }
+    .dual-logo .card-logo {
+      width: 105px; height: 105px;
+    }
+    .dual-logo .vs-x {
+      font-size: 20px; font-weight: 800; color: rgba(255,255,255,0.15);
+    }
+
+    .card-info { display: flex; flex-direction: column; gap: 4px; }
+
+    .card-team {
+      font-size: 66px; font-weight: 900; color: white;
+      line-height: 1; text-shadow: 0 2px 14px rgba(0,0,0,0.4);
+    }
+
+    .card-bet {
+      font-size: 58px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24;
+      text-shadow: 0 0 40px rgba(251,191,36,0.2);
+      line-height: 1.1;
+    }
+
+    .card-meta {
+      font-size: 18px; font-weight: 600;
+      color: rgba(255,255,255,0.3); margin-top: 4px; letter-spacing: 1px;
+    }
+
+    .card-right {
+      display: flex; flex-direction: column; align-items: flex-end; gap: 6px;
+    }
+
+    .unit-display {
+      font-size: 96px; font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: white; line-height: 1;
+    }
+
+    .unit-dollar {
+      font-size: 28px; font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* Stats row */
+    .stats-row {
+      display: flex; gap: 12px;
+      position: relative; z-index: 1; margin-top: 16px;
+    }
+    .stat-box {
+      flex: 1;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+    .stat-value {
+      font-size: 28px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24; line-height: 1;
+    }
+    .stat-value.green { color: #4ade80; }
+    .stat-key {
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      color: rgba(255,255,255,0.35); margin-top: 6px;
+    }
+
+    /* Exposure bar */
+    .exposure-bar {
+      display: flex;
+      background: rgba(12, 22, 42, 0.8);
+      border: 2px solid rgba(251,191,36,0.25);
+      border-radius: 16px; overflow: hidden; margin-bottom: 16px;
+    }
+    .exp-col {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; padding: 20px 10px;
+    }
+    .exp-col:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.08);
+    }
+    .exp-value {
+      font-size: 38px; font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fbbf24; line-height: 1;
+    }
+    .exp-value.white { color: white; }
+    .exp-label {
+      font-size: 12px; font-weight: 800; letter-spacing: 3px;
+      color: rgba(255,255,255,0.35); margin-top: 5px;
+    }
+
+    .footer {
+      display: flex; align-items: center; justify-content: center; gap: 18px;
+    }
+    .footer-logo { width: 55px; height: 55px; }
+    .footer-logo img { width: 100%; height: 100%; object-fit: contain; }
+    .footer-text { display: flex; flex-direction: column; }
+    .footer-brand {
+      font-size: 22px; font-weight: 800; letter-spacing: 5px; color: white;
+    }
+    .footer-cta {
+      font-size: 12px; font-weight: 700; letter-spacing: 4px;
+      color: rgba(251,191,36,0.7); margin-top: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="diag-texture"></div>
+
+    <div class="chart-lines">
+      <div class="chart-line"></div><div class="chart-line"></div><div class="chart-line"></div>
+      <div class="chart-line"></div><div class="chart-line"></div><div class="chart-line"></div>
+      <div class="chart-line"></div><div class="chart-line"></div>
+    </div>
+    <div class="price-labels">
+      <span class="price-label">46,692</span>
+      <span class="price-label">46,200</span>
+      <span class="price-label">45,842</span>
+      <span class="price-label">45,400</span>
+      <span class="price-label">44,900</span>
+    </div>
+
+    <div class="candles-bg">
+      <div class="candle green"><div class="wick" style="height:160px"></div><div class="cbody" style="height:80px"></div></div>
+      <div class="candle red"><div class="wick" style="height:100px"></div><div class="cbody" style="height:50px"></div></div>
+      <div class="candle green"><div class="wick" style="height:180px"></div><div class="cbody" style="height:95px"></div></div>
+      <div class="candle red"><div class="wick" style="height:90px"></div><div class="cbody" style="height:45px"></div></div>
+      <div class="candle green"><div class="wick" style="height:140px"></div><div class="cbody" style="height:70px"></div></div>
+      <div class="candle green"><div class="wick" style="height:170px"></div><div class="cbody" style="height:88px"></div></div>
+      <div class="candle red"><div class="wick" style="height:110px"></div><div class="cbody" style="height:55px"></div></div>
+      <div class="candle green"><div class="wick" style="height:190px"></div><div class="cbody" style="height:100px"></div></div>
+      <div class="candle red"><div class="wick" style="height:95px"></div><div class="cbody" style="height:48px"></div></div>
+      <div class="candle green"><div class="wick" style="height:155px"></div><div class="cbody" style="height:82px"></div></div>
+      <div class="candle green"><div class="wick" style="height:175px"></div><div class="cbody" style="height:90px"></div></div>
+      <div class="candle red"><div class="wick" style="height:105px"></div><div class="cbody" style="height:52px"></div></div>
+      <div class="candle green"><div class="wick" style="height:145px"></div><div class="cbody" style="height:75px"></div></div>
+      <div class="candle green"><div class="wick" style="height:185px"></div><div class="cbody" style="height:96px"></div></div>
+      <div class="candle red"><div class="wick" style="height:88px"></div><div class="cbody" style="height:44px"></div></div>
+      <div class="candle green"><div class="wick" style="height:160px"></div><div class="cbody" style="height:84px"></div></div>
+      <div class="candle red"><div class="wick" style="height:82px"></div><div class="cbody" style="height:40px"></div></div>
+      <div class="candle green"><div class="wick" style="height:170px"></div><div class="cbody" style="height:88px"></div></div>
+      <div class="candle green"><div class="wick" style="height:200px"></div><div class="cbody" style="height:105px"></div></div>
+      <div class="candle red"><div class="wick" style="height:98px"></div><div class="cbody" style="height:50px"></div></div>
+      <div class="candle green"><div class="wick" style="height:180px"></div><div class="cbody" style="height:92px"></div></div>
+      <div class="candle green"><div class="wick" style="height:165px"></div><div class="cbody" style="height:86px"></div></div>
+      <div class="candle red"><div class="wick" style="height:92px"></div><div class="cbody" style="height:46px"></div></div>
+      <div class="candle green"><div class="wick" style="height:188px"></div><div class="cbody" style="height:98px"></div></div>
+      <div class="candle green"><div class="wick" style="height:150px"></div><div class="cbody" style="height:78px"></div></div>
+      <div class="candle red"><div class="wick" style="height:85px"></div><div class="cbody" style="height:42px"></div></div>
+      <div class="candle green"><div class="wick" style="height:175px"></div><div class="cbody" style="height:92px"></div></div>
+    </div>
+
+    <div class="bottom-vignette"></div>
+    <div class="frame"></div>
+    <div class="frame-inner"></div>
+    <div class="corner tl"></div>
+    <div class="corner tr"></div>
+    <div class="corner bl"></div>
+    <div class="corner br"></div>
+
+    <div class="side-strip left"><div class="side-strip-inner">
+      <div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div><div class="strip-seg green"></div><div class="strip-seg dim"></div>
+    </div></div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-row">
+          <div class="header-line"></div>
+          <span class="header-label">SUPER BOWL LX</span>
+          <div class="header-line right"></div>
+        </div>
+        <div class="header-title">OUR POSITIONS</div>
+        <div class="header-sub">SEAHAWKS VS PATRIOTS</div>
+      </div>
+
+      <div class="divider">
+        <div class="div-line"></div>
+        <div class="diamond"></div>
+        <div class="div-line right"></div>
+      </div>
+
+      <div class="positions">
+
+        <!-- POSITION 1: Seahawks Spread -->
+        <div class="position-card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div class="card-top-row">
+              <div class="position-label">POSITION 1 OF 2</div>
+              <div class="fund-badge">SHARP</div>
+            </div>
+            <div class="card-main">
+              <div class="card-left">
+                <img class="card-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+                <div class="card-info">
+                  <div class="card-team">Seahawks</div>
+                  <div class="card-bet">-4.5 (-105)</div>
+                  <div class="card-meta">Spread · 6:30 PM ET</div>
+                </div>
+              </div>
+              <div class="card-right">
+                <div class="unit-display">1u</div>
+                <div class="unit-dollar">$100</div>
+              </div>
+            </div>
+            <div class="stats-row">
+              <div class="stat-box">
+                <div class="stat-value green">17.2</div>
+                <div class="stat-key">PPG ALLOWED</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value green">14-5</div>
+                <div class="stat-key">ATS RECORD</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">18.0</div>
+                <div class="stat-key">NE PLAYOFF PPG</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value green">9-0</div>
+                <div class="stat-key">WIN STREAK</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- POSITION 2: Super Bowl Under -->
+        <div class="position-card">
+          <div class="card-accent"></div>
+          <div class="card-body">
+            <div class="card-top-row">
+              <div class="position-label">POSITION 2 OF 2</div>
+              <div class="fund-badge">SHARP</div>
+            </div>
+            <div class="card-main">
+              <div class="card-left">
+                <div class="dual-logo">
+                  <img class="card-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/sea.png" alt="SEA">
+                  <span class="vs-x">x</span>
+                  <img class="card-logo" src="https://a.espncdn.com/i/teamlogos/nfl/500/ne.png" alt="NE">
+                </div>
+                <div class="card-info">
+                  <div class="card-team">Under</div>
+                  <div class="card-bet">45.5 (-110)</div>
+                  <div class="card-meta">Total · 6:30 PM ET</div>
+                </div>
+              </div>
+              <div class="card-right">
+                <div class="unit-display">2u</div>
+                <div class="unit-dollar">$200</div>
+              </div>
+            </div>
+            <div class="stats-row">
+              <div class="stat-box">
+                <div class="stat-value green">4/5</div>
+                <div class="stat-key">SIGNALS</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value green">+10%</div>
+                <div class="stat-key">$ DIVERGENCE</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">42%</div>
+                <div class="stat-key">MONEY ON U</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">32%</div>
+                <div class="stat-key">BETS ON U</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="exposure-bar">
+        <div class="exp-col">
+          <div class="exp-value white">2</div>
+          <div class="exp-label">POSITIONS</div>
+        </div>
+        <div class="exp-col">
+          <div class="exp-value">$300</div>
+          <div class="exp-label">EXPOSURE</div>
+        </div>
+        <div class="exp-col">
+          <div class="exp-value white">3u</div>
+          <div class="exp-label">RISKED</div>
+        </div>
+        <div class="exp-col">
+          <div class="exp-value" style="font-size:26px; color:#22c55e;">SHARP</div>
+          <div class="exp-label">FUND</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-logo"><img src="https://deptofgambling.com/logo.png" alt="DoG"></div>
+        <div class="footer-text">
+          <div class="footer-brand">DEPTOFGAMBLING.COM</div>
+          <div class="footer-cta">SUPER BOWL LX</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

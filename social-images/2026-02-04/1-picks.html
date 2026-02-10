@@ -1,0 +1,439 @@
+<!--
+  ============================================================
+  PICKS TEMPLATE - 6 INDIVIDUAL PICKS (one per fund position)
+  ============================================================
+  Last updated: February 4, 2026
+  ============================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Today's Picks - FEB 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      padding: 18px 35px 10px;
+      position: relative;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 50%, #1a2d4a 100%);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.10) 1px, transparent 1px);
+      background-size: 45px 45px;
+    }
+
+    .side-bars {
+      position: absolute;
+      top: 80px; bottom: 80px;
+      width: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .side-bars.left { left: 12px; }
+    .side-bars.right { right: 12px; }
+    .side-bar { width: 100%; height: 32px; border-radius: 4px; opacity: 0.5; }
+    .side-bar.green { background: #22c55e; }
+    .side-bar.red { background: #dc2626; }
+
+    .content { position: relative; z-index: 1; flex: 1; display: flex; flex-direction: column; }
+
+    .header { text-align: center; margin-bottom: 2px; }
+    .header-label {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 10px;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 0;
+    }
+    .date {
+      font-size: 48px;
+      font-weight: 900;
+      letter-spacing: 6px;
+      color: #fbbf24;
+      text-decoration: underline;
+      text-underline-offset: 8px;
+      text-decoration-thickness: 4px;
+    }
+
+    .picks-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 5px;
+    }
+
+    .sport-section {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .sport-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 3px;
+    }
+    .sport-header::before, .sport-header::after {
+      content: '';
+      height: 2px;
+      flex: 1;
+      max-width: 180px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5));
+    }
+    .sport-header::after {
+      background: linear-gradient(90deg, rgba(251,191,36,0.5), transparent);
+    }
+    .sport-title {
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: 8px;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .sport-picks {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .pick-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 12px;
+      padding: 6px 16px;
+      border: 4px solid;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      min-height: 0;
+    }
+    .pick-card.sharp { border-color: #22c55e; }
+    .pick-card.vector { border-color: #9ca3af; }
+    .pick-card.catalyst { border-color: #c084fc; }
+    .pick-card.contra { border-color: #fb923c; }
+
+    .pick-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex: 1;
+    }
+
+    .team-logo {
+      width: 95px;
+      height: 95px;
+      border-radius: 12px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.1);
+      padding: 6px;
+      flex-shrink: 0;
+    }
+
+    .team-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .team-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+    }
+
+    .team-name {
+      font-size: 54px;
+      font-weight: 800;
+      color: white;
+      line-height: 1;
+    }
+
+    .bet-line {
+      font-size: 40px;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      color: #fbbf24;
+      line-height: 1;
+    }
+
+    .opponent {
+      font-size: 22px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.55);
+      margin-top: 3px;
+    }
+
+    .pick-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .fund-badge {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      padding: 5px 10px;
+      border-radius: 7px;
+      color: white;
+    }
+    .fund-badge.sharp { background: rgba(34,197,94,0.35); color: #22c55e; }
+    .fund-badge.vector { background: rgba(156,163,175,0.35); color: #9ca3af; }
+    .fund-badge.catalyst { background: rgba(192,132,252,0.35); color: #c084fc; }
+    .fund-badge.contra { background: rgba(251,146,22,0.35); color: #fb923c; }
+
+    .units {
+      font-size: 48px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      background: rgba(255,255,255,0.15);
+      padding: 10px 18px;
+      border-radius: 12px;
+      flex-shrink: 0;
+    }
+
+    .stats-bar {
+      display: flex;
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border: 4px solid #fbbf24;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 6px;
+    }
+    .stat-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 8px;
+    }
+    .stat-col:not(:last-child) {
+      border-right: 1px solid rgba(255,255,255,0.15);
+    }
+    .stat-value {
+      font-size: 26px;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: white;
+      line-height: 1;
+    }
+    .stat-value.gold {
+      font-size: 30px;
+      color: #fbbf24;
+    }
+    .stat-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+    }
+    .stat-label.gold {
+      color: #fbbf24;
+    }
+
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+    .logo { width: 70px; height: 70px; }
+    .logo img { width: 100%; height: 100%; object-fit: contain; }
+    .website { font-size: 17px; font-weight: 700; letter-spacing: 6px; color: white; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+
+    <div class="side-bars left">
+      <div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div>
+    </div>
+    <div class="side-bars right">
+      <div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div><div class="side-bar red"></div><div class="side-bar green"></div>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <div class="header-label">TODAY'S PICKS</div>
+        <div class="date">FEB 4</div>
+      </div>
+
+      <div class="picks-container">
+
+        <!-- NHL SECTION - 3 picks -->
+        <div class="sport-section" style="flex: 3;">
+          <div class="sport-header">
+            <span class="sport-title">NHL</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nhl/500/det.png" alt="DET">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Red Wings</div>
+                    <div class="bet-line">ML (+118)</div>
+                  </div>
+                  <div class="opponent">@ Utah HC</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge sharp">SHARP</div>
+                <div class="units">0.5u</div>
+              </div>
+            </div>
+
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nhl/500/cgy.png" alt="CGY">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Flames</div>
+                    <div class="bet-line">ML (+120)</div>
+                  </div>
+                  <div class="opponent">vs Oilers</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge catalyst">CATALYST</div>
+                <div class="units">1u</div>
+              </div>
+            </div>
+
+            <div class="pick-card sharp">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nhl/500/sea.png" alt="SEA">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Kraken</div>
+                    <div class="bet-line">ML (+160)</div>
+                  </div>
+                  <div class="opponent">@ Kings</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge sharp">SHARP</div>
+                <div class="units">0.5u</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NBA SECTION - 2 picks -->
+        <div class="sport-section" style="flex: 2;">
+          <div class="sport-header">
+            <span class="sport-title">NBA</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nba/500/hou.png" alt="HOU">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Rockets</div>
+                    <div class="bet-line">-7.5 (-105)</div>
+                  </div>
+                  <div class="opponent">vs Celtics</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge catalyst">CATALYST</div>
+                <div class="units">1.5u</div>
+              </div>
+            </div>
+
+            <div class="pick-card catalyst">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/nba/500/no.png" alt="NOP">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Pelicans</div>
+                    <div class="bet-line">-4.5 (-115)</div>
+                  </div>
+                  <div class="opponent">vs Bucks</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge catalyst">CATALYST</div>
+                <div class="units">1u</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- NCAAB SECTION - 1 pick -->
+        <div class="sport-section" style="flex: 1;">
+          <div class="sport-header">
+            <span class="sport-title">NCAAB</span>
+          </div>
+          <div class="sport-picks">
+            <div class="pick-card vector">
+              <div class="pick-left">
+                <img class="team-logo" src="https://a.espncdn.com/i/teamlogos/ncaa/500/2174.png" alt="UDM">
+                <div class="team-info">
+                  <div class="team-row">
+                    <div class="team-name">Det. Mercy</div>
+                    <div class="bet-line">+6.5 (-110)</div>
+                  </div>
+                  <div class="opponent">@ Milwaukee</div>
+                </div>
+              </div>
+              <div class="pick-right">
+                <div class="fund-badge vector">VECTOR</div>
+                <div class="units">2u</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-col">
+          <div class="stat-value">6</div>
+          <div class="stat-label">PICKS</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-value gold">$650</div>
+          <div class="stat-label gold">EXPOSURE</div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-value">6.5u</div>
+          <div class="stat-label">UNITS</div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="logo"><img src="https://deptofgambling.com/logo.png" alt="DoG"></div>
+        <div class="website">DEPTOFGAMBLING.COM</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
