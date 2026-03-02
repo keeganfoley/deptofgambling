@@ -1,0 +1,5691 @@
+{
+  "capturedAt": "2026-02-11T23:33:03.084Z",
+  "isClosing": false,
+  "sport": "basketball_nba",
+  "games": [
+    {
+      "gameId": "786e38c6d2a209bb12801b30f17e9ef2",
+      "sport": "basketball_nba",
+      "homeTeam": "Orlando Magic",
+      "awayTeam": "Milwaukee Bucks",
+      "commenceTime": "2026-02-12T00:00:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Milwaukee Bucks": [
+            {
+              "line": 10.5,
+              "odds": -106
+            },
+            {
+              "line": 10.5,
+              "odds": 100
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 11,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -104
+            },
+            {
+              "line": 10.5,
+              "odds": -107
+            },
+            {
+              "line": 10.5,
+              "odds": -109
+            },
+            {
+              "line": 10.5,
+              "odds": -107
+            },
+            {
+              "line": 10.5,
+              "odds": -109
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 8.5,
+              "odds": 134
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -106
+            },
+            {
+              "line": 10.5,
+              "odds": -102
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -101
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 11,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            }
+          ],
+          "Orlando Magic": [
+            {
+              "line": -10.5,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -109
+            },
+            {
+              "line": -10.5,
+              "odds": -118
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -11,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -117
+            },
+            {
+              "line": -10.5,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -133
+            },
+            {
+              "line": -8.5,
+              "odds": -145
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -109
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -11,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 220.5,
+              "odds": -108
+            },
+            {
+              "line": 220.5,
+              "odds": -104
+            },
+            {
+              "line": 220.5,
+              "odds": -111
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -120
+            },
+            {
+              "line": 220.5,
+              "odds": -120
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -105
+            },
+            {
+              "line": 220,
+              "odds": -109
+            },
+            {
+              "line": 220,
+              "odds": -112
+            },
+            {
+              "line": 220,
+              "odds": -114
+            },
+            {
+              "line": 220,
+              "odds": -112
+            },
+            {
+              "line": 220,
+              "odds": -110
+            },
+            {
+              "line": 221.5,
+              "odds": -118
+            },
+            {
+              "line": 219,
+              "odds": -119
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -107
+            },
+            {
+              "line": 220.5,
+              "odds": -105
+            },
+            {
+              "line": 219.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -107
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 219.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 220.5,
+              "odds": -104
+            },
+            {
+              "line": 220.5,
+              "odds": -119
+            },
+            {
+              "line": 220.5,
+              "odds": -118
+            },
+            {
+              "line": 220.5,
+              "odds": -108
+            },
+            {
+              "line": 220.5,
+              "odds": -108
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -115
+            },
+            {
+              "line": 220,
+              "odds": -109
+            },
+            {
+              "line": 220,
+              "odds": -109
+            },
+            {
+              "line": 220,
+              "odds": -112
+            },
+            {
+              "line": 220,
+              "odds": -109
+            },
+            {
+              "line": 220,
+              "odds": -110
+            },
+            {
+              "line": 221.5,
+              "odds": -118
+            },
+            {
+              "line": 219,
+              "odds": 110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -107
+            },
+            {
+              "line": 220.5,
+              "odds": -115
+            },
+            {
+              "line": 219.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -105
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 219.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Milwaukee Bucks": 10.5,
+          "Orlando Magic": -10.5
+        },
+        "totals": 220.5
+      }
+    },
+    {
+      "gameId": "7c66ba90233d458cdf37f776c8a9f406",
+      "sport": "basketball_nba",
+      "homeTeam": "Charlotte Hornets",
+      "awayTeam": "Atlanta Hawks",
+      "commenceTime": "2026-02-12T00:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Atlanta Hawks": [
+            {
+              "line": 2.5,
+              "odds": -114
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -114
+            },
+            {
+              "line": 4,
+              "odds": -135
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -108
+            },
+            {
+              "line": 2.5,
+              "odds": -108
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -103
+            },
+            {
+              "line": 2,
+              "odds": -107
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": 100
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -110
+            }
+          ],
+          "Charlotte Hornets": [
+            {
+              "line": -2.5,
+              "odds": -106
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -108
+            },
+            {
+              "line": -2.5,
+              "odds": -108
+            },
+            {
+              "line": -2.5,
+              "odds": -118
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": 101
+            },
+            {
+              "line": -2.5,
+              "odds": -104
+            },
+            {
+              "line": -4,
+              "odds": 126
+            },
+            {
+              "line": -2.5,
+              "odds": -115
+            },
+            {
+              "line": -2.5,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": -115
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -109
+            },
+            {
+              "line": -2,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -116
+            },
+            {
+              "line": 237.5,
+              "odds": 100
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -108
+            },
+            {
+              "line": 235.5,
+              "odds": -109
+            },
+            {
+              "line": 230.5,
+              "odds": -175
+            },
+            {
+              "line": 235.5,
+              "odds": -112
+            },
+            {
+              "line": 235.5,
+              "odds": -112
+            },
+            {
+              "line": 235.5,
+              "odds": -112
+            },
+            {
+              "line": 235.5,
+              "odds": -113
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -107
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": 103
+            },
+            {
+              "line": 236,
+              "odds": -110
+            },
+            {
+              "line": 236,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -114
+            },
+            {
+              "line": 237.5,
+              "odds": -139
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -118
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -101
+            },
+            {
+              "line": 235.5,
+              "odds": -109
+            },
+            {
+              "line": 230.5,
+              "odds": 146
+            },
+            {
+              "line": 235.5,
+              "odds": -109
+            },
+            {
+              "line": 235.5,
+              "odds": -109
+            },
+            {
+              "line": 235.5,
+              "odds": -109
+            },
+            {
+              "line": 235.5,
+              "odds": -112
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -107
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -116
+            },
+            {
+              "line": 236,
+              "odds": -110
+            },
+            {
+              "line": 236,
+              "odds": -110
+            },
+            {
+              "line": 235.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Atlanta Hawks": 2.5,
+          "Charlotte Hornets": -2.5
+        },
+        "totals": 235.5
+      }
+    },
+    {
+      "gameId": "1e29ea38e9c7789166418c9a3544bff9",
+      "sport": "basketball_nba",
+      "homeTeam": "Cleveland Cavaliers",
+      "awayTeam": "Washington Wizards",
+      "commenceTime": "2026-02-12T00:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Cleveland Cavaliers": [
+            {
+              "line": -17.5,
+              "odds": -110
+            },
+            {
+              "line": -17.5,
+              "odds": -118
+            },
+            {
+              "line": -17.5,
+              "odds": -110
+            },
+            {
+              "line": -17.5,
+              "odds": -109
+            },
+            {
+              "line": -17.5,
+              "odds": -112
+            },
+            {
+              "line": -17.5,
+              "odds": -115
+            },
+            {
+              "line": -17.5,
+              "odds": -109
+            },
+            {
+              "line": -16.5,
+              "odds": -143
+            },
+            {
+              "line": -17.5,
+              "odds": -114
+            },
+            {
+              "line": -17.5,
+              "odds": -114
+            },
+            {
+              "line": -17.5,
+              "odds": -112
+            },
+            {
+              "line": -17.5,
+              "odds": -112
+            },
+            {
+              "line": -18,
+              "odds": -110
+            },
+            {
+              "line": -18,
+              "odds": -108
+            },
+            {
+              "line": -18,
+              "odds": -104
+            },
+            {
+              "line": -17.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -182
+            },
+            {
+              "line": -18,
+              "odds": -110
+            },
+            {
+              "line": -17.5,
+              "odds": -110
+            },
+            {
+              "line": -17.5,
+              "odds": -115
+            },
+            {
+              "line": -17.5,
+              "odds": -110
+            },
+            {
+              "line": -18,
+              "odds": -110
+            }
+          ],
+          "Washington Wizards": [
+            {
+              "line": 17.5,
+              "odds": -110
+            },
+            {
+              "line": 17.5,
+              "odds": -110
+            },
+            {
+              "line": 17.5,
+              "odds": -110
+            },
+            {
+              "line": 17.5,
+              "odds": 100
+            },
+            {
+              "line": 17.5,
+              "odds": -108
+            },
+            {
+              "line": 17.5,
+              "odds": -105
+            },
+            {
+              "line": 17.5,
+              "odds": -109
+            },
+            {
+              "line": 16.5,
+              "odds": 105
+            },
+            {
+              "line": 17.5,
+              "odds": -112
+            },
+            {
+              "line": 17.5,
+              "odds": -112
+            },
+            {
+              "line": 17.5,
+              "odds": -109
+            },
+            {
+              "line": 17.5,
+              "odds": -109
+            },
+            {
+              "line": 18,
+              "odds": -110
+            },
+            {
+              "line": 18,
+              "odds": -112
+            },
+            {
+              "line": 18,
+              "odds": -108
+            },
+            {
+              "line": 17.5,
+              "odds": -105
+            },
+            {
+              "line": 13.5,
+              "odds": 158
+            },
+            {
+              "line": 18,
+              "odds": -110
+            },
+            {
+              "line": 17.5,
+              "odds": 100
+            },
+            {
+              "line": 17.5,
+              "odds": -105
+            },
+            {
+              "line": 17.5,
+              "odds": -110
+            },
+            {
+              "line": 18,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -116
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -116
+            },
+            {
+              "line": 238.5,
+              "odds": -116
+            },
+            {
+              "line": 238.5,
+              "odds": -104
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -105
+            },
+            {
+              "line": 238.5,
+              "odds": -113
+            },
+            {
+              "line": 238.5,
+              "odds": -114
+            },
+            {
+              "line": 238.5,
+              "odds": -113
+            },
+            {
+              "line": 238.5,
+              "odds": -113
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -107
+            },
+            {
+              "line": 239.5,
+              "odds": -105
+            },
+            {
+              "line": 233,
+              "odds": -179
+            },
+            {
+              "line": 239,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": 101
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -118
+            },
+            {
+              "line": 238.5,
+              "odds": -114
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -111
+            },
+            {
+              "line": 238.5,
+              "odds": -111
+            },
+            {
+              "line": 238.5,
+              "odds": -104
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -133
+            },
+            {
+              "line": 238.5,
+              "odds": -108
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -108
+            },
+            {
+              "line": 238.5,
+              "odds": -108
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -107
+            },
+            {
+              "line": 239.5,
+              "odds": -115
+            },
+            {
+              "line": 233,
+              "odds": 146
+            },
+            {
+              "line": 239,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": -114
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 238.5,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Cleveland Cavaliers": -17.5,
+          "Washington Wizards": 17.5
+        },
+        "totals": 238.5
+      }
+    },
+    {
+      "gameId": "c09c552bcc0d68d3e96c860980ae1563",
+      "sport": "basketball_nba",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "Detroit Pistons",
+      "commenceTime": "2026-02-12T00:30:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Detroit Pistons": [
+            {
+              "line": 1,
+              "odds": -112
+            },
+            {
+              "line": 1.5,
+              "odds": -117
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -118
+            },
+            {
+              "line": 1.5,
+              "odds": -118
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -109
+            },
+            {
+              "line": -1,
+              "odds": -108
+            },
+            {
+              "line": 1,
+              "odds": -115
+            },
+            {
+              "line": 1,
+              "odds": -118
+            },
+            {
+              "line": 1,
+              "odds": -115
+            },
+            {
+              "line": -1.5,
+              "odds": -108
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": 104
+            },
+            {
+              "line": 1,
+              "odds": -108
+            },
+            {
+              "line": 1.5,
+              "odds": -118
+            },
+            {
+              "line": 1,
+              "odds": -112
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -106
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -110
+            }
+          ],
+          "Toronto Raptors": [
+            {
+              "line": -1,
+              "odds": -108
+            },
+            {
+              "line": -1.5,
+              "odds": 108
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -102
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": -109
+            },
+            {
+              "line": 1,
+              "odds": -118
+            },
+            {
+              "line": -1,
+              "odds": -105
+            },
+            {
+              "line": -1,
+              "odds": -108
+            },
+            {
+              "line": -1,
+              "odds": -105
+            },
+            {
+              "line": 1.5,
+              "odds": -130
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -111
+            },
+            {
+              "line": -1,
+              "odds": -104
+            },
+            {
+              "line": -1.5,
+              "odds": -102
+            },
+            {
+              "line": -1,
+              "odds": -108
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": -104
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 222.5,
+              "odds": -114
+            },
+            {
+              "line": 223.5,
+              "odds": 104
+            },
+            {
+              "line": 223.5,
+              "odds": -111
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 222.5,
+              "odds": -118
+            },
+            {
+              "line": 222.5,
+              "odds": -116
+            },
+            {
+              "line": 222.5,
+              "odds": -116
+            },
+            {
+              "line": 223.5,
+              "odds": -105
+            },
+            {
+              "line": 223,
+              "odds": -105
+            },
+            {
+              "line": 223,
+              "odds": -109
+            },
+            {
+              "line": 223,
+              "odds": -113
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -111
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 222,
+              "odds": -116
+            },
+            {
+              "line": 223,
+              "odds": -109
+            },
+            {
+              "line": 222.5,
+              "odds": -115
+            },
+            {
+              "line": 223,
+              "odds": -112
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -107
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 222.5,
+              "odds": -106
+            },
+            {
+              "line": 223.5,
+              "odds": -113
+            },
+            {
+              "line": 223.5,
+              "odds": -119
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 222.5,
+              "odds": -110
+            },
+            {
+              "line": 222.5,
+              "odds": -111
+            },
+            {
+              "line": 222.5,
+              "odds": -111
+            },
+            {
+              "line": 223.5,
+              "odds": -115
+            },
+            {
+              "line": 223,
+              "odds": -115
+            },
+            {
+              "line": 223,
+              "odds": -109
+            },
+            {
+              "line": 223,
+              "odds": -113
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -125
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 222,
+              "odds": 106
+            },
+            {
+              "line": 223,
+              "odds": -105
+            },
+            {
+              "line": 222.5,
+              "odds": -105
+            },
+            {
+              "line": 223,
+              "odds": -108
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -105
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            },
+            {
+              "line": 223,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Detroit Pistons": 1,
+          "Toronto Raptors": -1
+        },
+        "totals": 223
+      }
+    },
+    {
+      "gameId": "fa53065fb88985857fe9cfe5372477dc",
+      "sport": "basketball_nba",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "New York Knicks",
+      "commenceTime": "2026-02-12T00:30:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "New York Knicks": [
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -1.5,
+              "odds": -118
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": 101
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -109
+            },
+            {
+              "line": -2.5,
+              "odds": -114
+            },
+            {
+              "line": -2.5,
+              "odds": -114
+            },
+            {
+              "line": -2.5,
+              "odds": -112
+            },
+            {
+              "line": -2.5,
+              "odds": -112
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": -125
+            },
+            {
+              "line": -2,
+              "odds": -106
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -107
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -110
+            }
+          ],
+          "Philadelphia 76ers": [
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -109
+            },
+            {
+              "line": 2.5,
+              "odds": -112
+            },
+            {
+              "line": 2.5,
+              "odds": -112
+            },
+            {
+              "line": 2.5,
+              "odds": -109
+            },
+            {
+              "line": 2.5,
+              "odds": -109
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": 116
+            },
+            {
+              "line": 2,
+              "odds": -106
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -105
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 223.5,
+              "odds": -115
+            },
+            {
+              "line": 224.5,
+              "odds": -118
+            },
+            {
+              "line": 225.5,
+              "odds": -112
+            },
+            {
+              "line": 225.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -105
+            },
+            {
+              "line": 224.5,
+              "odds": -116
+            },
+            {
+              "line": 224.5,
+              "odds": -116
+            },
+            {
+              "line": 224.5,
+              "odds": -108
+            },
+            {
+              "line": 224,
+              "odds": -115
+            },
+            {
+              "line": 224.5,
+              "odds": -109
+            },
+            {
+              "line": 224.5,
+              "odds": -113
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 225.5,
+              "odds": -115
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 222.5,
+              "odds": -127
+            },
+            {
+              "line": 224,
+              "odds": -107
+            },
+            {
+              "line": 224.5,
+              "odds": -115
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 223.5,
+              "odds": -105
+            },
+            {
+              "line": 225.5,
+              "odds": -105
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 225,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 223.5,
+              "odds": -105
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 225.5,
+              "odds": -118
+            },
+            {
+              "line": 225.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -103
+            },
+            {
+              "line": 224.5,
+              "odds": -111
+            },
+            {
+              "line": 224.5,
+              "odds": -111
+            },
+            {
+              "line": 224.5,
+              "odds": -112
+            },
+            {
+              "line": 224,
+              "odds": -105
+            },
+            {
+              "line": 224.5,
+              "odds": -109
+            },
+            {
+              "line": 224.5,
+              "odds": -113
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 225.5,
+              "odds": -120
+            },
+            {
+              "line": 224.5,
+              "odds": -110
+            },
+            {
+              "line": 222.5,
+              "odds": 118
+            },
+            {
+              "line": 224,
+              "odds": -107
+            },
+            {
+              "line": 224.5,
+              "odds": -105
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 223.5,
+              "odds": -115
+            },
+            {
+              "line": 225.5,
+              "odds": -109
+            },
+            {
+              "line": 224,
+              "odds": -110
+            },
+            {
+              "line": 225,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "New York Knicks": -2.25,
+          "Philadelphia 76ers": 2.25
+        },
+        "totals": 224.5
+      }
+    },
+    {
+      "gameId": "fe5025ebf8e01fd991276b32c2720ea7",
+      "sport": "basketball_nba",
+      "homeTeam": "Boston Celtics",
+      "awayTeam": "Chicago Bulls",
+      "commenceTime": "2026-02-12T00:40:00Z",
+      "capturedAt": "2026-02-11T23:33:03.083Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Boston Celtics": [
+            {
+              "line": -13.5,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -113
+            },
+            {
+              "line": -13.5,
+              "odds": -112
+            },
+            {
+              "line": -13.5,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -109
+            },
+            {
+              "line": -13.5,
+              "odds": -133
+            },
+            {
+              "line": -13.5,
+              "odds": -113
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -113
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -111
+            },
+            {
+              "line": -13.5,
+              "odds": -111
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -108
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -110
+            },
+            {
+              "line": -13.5,
+              "odds": -110
+            }
+          ],
+          "Chicago Bulls": [
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": 104
+            },
+            {
+              "line": 13.5,
+              "odds": -108
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -109
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 13.5,
+              "odds": -108
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -108
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": 106
+            },
+            {
+              "line": 13.5,
+              "odds": -101
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -103
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            },
+            {
+              "line": 13.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -116
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -114
+            },
+            {
+              "line": 226.5,
+              "odds": -114
+            },
+            {
+              "line": 226.5,
+              "odds": -104
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -115
+            },
+            {
+              "line": 226.5,
+              "odds": -109
+            },
+            {
+              "line": 227.5,
+              "odds": -111
+            },
+            {
+              "line": 227,
+              "odds": -109
+            },
+            {
+              "line": 227,
+              "odds": -109
+            },
+            {
+              "line": 227,
+              "odds": -112
+            },
+            {
+              "line": 227,
+              "odds": -109
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 225,
+              "odds": -127
+            },
+            {
+              "line": 226.5,
+              "odds": -107
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -105
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -114
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -114
+            },
+            {
+              "line": 226.5,
+              "odds": -114
+            },
+            {
+              "line": 226.5,
+              "odds": -104
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -105
+            },
+            {
+              "line": 226.5,
+              "odds": -109
+            },
+            {
+              "line": 227.5,
+              "odds": -125
+            },
+            {
+              "line": 227,
+              "odds": -112
+            },
+            {
+              "line": 227,
+              "odds": -112
+            },
+            {
+              "line": 227,
+              "odds": -114
+            },
+            {
+              "line": 227,
+              "odds": -112
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 225,
+              "odds": 108
+            },
+            {
+              "line": 226.5,
+              "odds": -107
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -107
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            },
+            {
+              "line": 226.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Boston Celtics": -13.5,
+          "Chicago Bulls": 13.5
+        },
+        "totals": 226.5
+      }
+    },
+    {
+      "gameId": "8cdd1f682ca6ed36e908ecf3b00f01bc",
+      "sport": "basketball_nba",
+      "homeTeam": "Brooklyn Nets",
+      "awayTeam": "Indiana Pacers",
+      "commenceTime": "2026-02-12T00:40:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Brooklyn Nets": [
+            {
+              "line": -6.5,
+              "odds": -106
+            },
+            {
+              "line": -6.5,
+              "odds": -104
+            },
+            {
+              "line": -6.5,
+              "odds": -118
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -111
+            },
+            {
+              "line": -6.5,
+              "odds": -114
+            },
+            {
+              "line": -6.5,
+              "odds": -114
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -112
+            },
+            {
+              "line": -2.5,
+              "odds": -172
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -109
+            },
+            {
+              "line": -6,
+              "odds": -117
+            },
+            {
+              "line": -6,
+              "odds": -114
+            },
+            {
+              "line": -6,
+              "odds": -117
+            },
+            {
+              "line": -6,
+              "odds": -114
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -111
+            },
+            {
+              "line": -6.5,
+              "odds": -115
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -103
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            }
+          ],
+          "Indiana Pacers": [
+            {
+              "line": 6.5,
+              "odds": -114
+            },
+            {
+              "line": 6.5,
+              "odds": -104
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -125
+            },
+            {
+              "line": 6.5,
+              "odds": -114
+            },
+            {
+              "line": 6.5,
+              "odds": -114
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -108
+            },
+            {
+              "line": 2.5,
+              "odds": 150
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -109
+            },
+            {
+              "line": 6,
+              "odds": -109
+            },
+            {
+              "line": 6,
+              "odds": -107
+            },
+            {
+              "line": 6,
+              "odds": -109
+            },
+            {
+              "line": 6,
+              "odds": -107
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -101
+            },
+            {
+              "line": 6.5,
+              "odds": -105
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -107
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 214.5,
+              "odds": -114
+            },
+            {
+              "line": 215.5,
+              "odds": 104
+            },
+            {
+              "line": 215.5,
+              "odds": -111
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215,
+              "odds": -110
+            },
+            {
+              "line": 216.5,
+              "odds": -111
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -154
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -109
+            },
+            {
+              "line": 215,
+              "odds": -109
+            },
+            {
+              "line": 215,
+              "odds": -109
+            },
+            {
+              "line": 215,
+              "odds": -112
+            },
+            {
+              "line": 215,
+              "odds": -109
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215,
+              "odds": -107
+            },
+            {
+              "line": 215,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -104
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 214.5,
+              "odds": -106
+            },
+            {
+              "line": 215.5,
+              "odds": -113
+            },
+            {
+              "line": 215.5,
+              "odds": -119
+            },
+            {
+              "line": 215.5,
+              "odds": -118
+            },
+            {
+              "line": 215,
+              "odds": -110
+            },
+            {
+              "line": 216.5,
+              "odds": -125
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": 132
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -109
+            },
+            {
+              "line": 215,
+              "odds": -112
+            },
+            {
+              "line": 215,
+              "odds": -112
+            },
+            {
+              "line": 215,
+              "odds": -114
+            },
+            {
+              "line": 215,
+              "odds": -112
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215,
+              "odds": -107
+            },
+            {
+              "line": 215,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -108
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            },
+            {
+              "line": 215.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Brooklyn Nets": -6.5,
+          "Indiana Pacers": 6.5
+        },
+        "totals": 215.5
+      }
+    },
+    {
+      "gameId": "eb36e00b7d03160ba917374db994fae4",
+      "sport": "basketball_nba",
+      "homeTeam": "Houston Rockets",
+      "awayTeam": "Los Angeles Clippers",
+      "commenceTime": "2026-02-12T01:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Houston Rockets": [
+            {
+              "line": -8.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": -105
+            },
+            {
+              "line": -8.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": -118
+            },
+            {
+              "line": -7.5,
+              "odds": -122
+            },
+            {
+              "line": -8.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": -118
+            },
+            {
+              "line": -8.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": -115
+            },
+            {
+              "line": -8.5,
+              "odds": -115
+            },
+            {
+              "line": -8.5,
+              "odds": -109
+            },
+            {
+              "line": -9,
+              "odds": -112
+            },
+            {
+              "line": -9,
+              "odds": -109
+            },
+            {
+              "line": -9,
+              "odds": -112
+            },
+            {
+              "line": -9,
+              "odds": -109
+            },
+            {
+              "line": -9,
+              "odds": -110
+            },
+            {
+              "line": -9,
+              "odds": -106
+            },
+            {
+              "line": -8.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": -115
+            },
+            {
+              "line": -8.5,
+              "odds": -115
+            },
+            {
+              "line": -8.5,
+              "odds": -109
+            },
+            {
+              "line": -9,
+              "odds": -110
+            }
+          ],
+          "Los Angeles Clippers": [
+            {
+              "line": 8.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -103
+            },
+            {
+              "line": 8.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -105
+            },
+            {
+              "line": 7.5,
+              "odds": 114
+            },
+            {
+              "line": 8.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -102
+            },
+            {
+              "line": 8.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -105
+            },
+            {
+              "line": 8.5,
+              "odds": -120
+            },
+            {
+              "line": 8.5,
+              "odds": -109
+            },
+            {
+              "line": 9,
+              "odds": -114
+            },
+            {
+              "line": 9,
+              "odds": -112
+            },
+            {
+              "line": 9,
+              "odds": -114
+            },
+            {
+              "line": 9,
+              "odds": -112
+            },
+            {
+              "line": 9,
+              "odds": -110
+            },
+            {
+              "line": 9,
+              "odds": -106
+            },
+            {
+              "line": 8.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -105
+            },
+            {
+              "line": 8.5,
+              "odds": -105
+            },
+            {
+              "line": 8.5,
+              "odds": -102
+            },
+            {
+              "line": 9,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -104
+            },
+            {
+              "line": 211.5,
+              "odds": -111
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 209,
+              "odds": -133
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -120
+            },
+            {
+              "line": 211.5,
+              "odds": -120
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -130
+            },
+            {
+              "line": 211.5,
+              "odds": -109
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211,
+              "odds": -113
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -112
+            },
+            {
+              "line": 211.5,
+              "odds": -109
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 212,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -108
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -104
+            },
+            {
+              "line": 211.5,
+              "odds": -120
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -118
+            },
+            {
+              "line": 209,
+              "odds": 118
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -108
+            },
+            {
+              "line": 211.5,
+              "odds": -108
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -108
+            },
+            {
+              "line": 211.5,
+              "odds": -109
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211,
+              "odds": -113
+            },
+            {
+              "line": 211,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -108
+            },
+            {
+              "line": 211.5,
+              "odds": -105
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            },
+            {
+              "line": 212,
+              "odds": -110
+            },
+            {
+              "line": 211.5,
+              "odds": -104
+            },
+            {
+              "line": 211.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Houston Rockets": -8.5,
+          "Los Angeles Clippers": 8.5
+        },
+        "totals": 211.5
+      }
+    },
+    {
+      "gameId": "3313a32e931557302ee2526858b86060",
+      "sport": "basketball_nba",
+      "homeTeam": "New Orleans Pelicans",
+      "awayTeam": "Miami Heat",
+      "commenceTime": "2026-02-12T01:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Miami Heat": [
+            {
+              "line": 1.5,
+              "odds": -112
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -118
+            },
+            {
+              "line": 1.5,
+              "odds": -122
+            },
+            {
+              "line": 1.5,
+              "odds": -130
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -109
+            },
+            {
+              "line": 1.5,
+              "odds": -112
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -112
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": -1,
+              "odds": 114
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -106
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -106
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            }
+          ],
+          "New Orleans Pelicans": [
+            {
+              "line": -1.5,
+              "odds": -108
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": 112
+            },
+            {
+              "line": -1.5,
+              "odds": -108
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -109
+            },
+            {
+              "line": -1.5,
+              "odds": -113
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -113
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": 1,
+              "odds": -120
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -106
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -104
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 232.5,
+              "odds": -110
+            },
+            {
+              "line": 232.5,
+              "odds": -119
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 232.5,
+              "odds": -118
+            },
+            {
+              "line": 231.5,
+              "odds": -104
+            },
+            {
+              "line": 232.5,
+              "odds": -133
+            },
+            {
+              "line": 232.5,
+              "odds": -115
+            },
+            {
+              "line": 232.5,
+              "odds": -105
+            },
+            {
+              "line": 233,
+              "odds": -109
+            },
+            {
+              "line": 233.5,
+              "odds": -111
+            },
+            {
+              "line": 233.5,
+              "odds": -111
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -113
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 231,
+              "odds": -128
+            },
+            {
+              "line": 233.5,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -107
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -108
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 232.5,
+              "odds": -110
+            },
+            {
+              "line": 232.5,
+              "odds": -111
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 232.5,
+              "odds": -110
+            },
+            {
+              "line": 231.5,
+              "odds": -104
+            },
+            {
+              "line": 232.5,
+              "odds": -105
+            },
+            {
+              "line": 232.5,
+              "odds": -105
+            },
+            {
+              "line": 232.5,
+              "odds": -115
+            },
+            {
+              "line": 233,
+              "odds": -109
+            },
+            {
+              "line": 233.5,
+              "odds": -116
+            },
+            {
+              "line": 233.5,
+              "odds": -116
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -113
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 231,
+              "odds": 116
+            },
+            {
+              "line": 233.5,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -107
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -104
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            },
+            {
+              "line": 233,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Miami Heat": 1.5,
+          "New Orleans Pelicans": -1.5
+        },
+        "totals": 233
+      }
+    },
+    {
+      "gameId": "3acad36c997423e34f7d485f9598a106",
+      "sport": "basketball_nba",
+      "homeTeam": "Minnesota Timberwolves",
+      "awayTeam": "Portland Trail Blazers",
+      "commenceTime": "2026-02-12T01:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Minnesota Timberwolves": [
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -118
+            },
+            {
+              "line": -6.5,
+              "odds": -108
+            },
+            {
+              "line": -5.5,
+              "odds": -125
+            },
+            {
+              "line": -6.5,
+              "odds": -115
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -109
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -108
+            },
+            {
+              "line": -7,
+              "odds": -108
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -105
+            },
+            {
+              "line": -6.5,
+              "odds": -115
+            },
+            {
+              "line": -7,
+              "odds": -101
+            },
+            {
+              "line": -7,
+              "odds": -105
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -103
+            },
+            {
+              "line": -7,
+              "odds": -105
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -110
+            }
+          ],
+          "Portland Trail Blazers": [
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -101
+            },
+            {
+              "line": 5.5,
+              "odds": -111
+            },
+            {
+              "line": 6.5,
+              "odds": -105
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -109
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 7,
+              "odds": -113
+            },
+            {
+              "line": 7,
+              "odds": -113
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -102
+            },
+            {
+              "line": 6.5,
+              "odds": -105
+            },
+            {
+              "line": 7,
+              "odds": -111
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -109
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 236.5,
+              "odds": -106
+            },
+            {
+              "line": 236.5,
+              "odds": -116
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -106
+            },
+            {
+              "line": 235.5,
+              "odds": -139
+            },
+            {
+              "line": 236.5,
+              "odds": -112
+            },
+            {
+              "line": 236.5,
+              "odds": -116
+            },
+            {
+              "line": 236.5,
+              "odds": -116
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -109
+            },
+            {
+              "line": 236.5,
+              "odds": -113
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 235,
+              "odds": -128
+            },
+            {
+              "line": 237.5,
+              "odds": -105
+            },
+            {
+              "line": 237,
+              "odds": -107
+            },
+            {
+              "line": 237,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236,
+              "odds": -114
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 237,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 236.5,
+              "odds": -114
+            },
+            {
+              "line": 236.5,
+              "odds": -114
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -118
+            },
+            {
+              "line": 236.5,
+              "odds": -102
+            },
+            {
+              "line": 235.5,
+              "odds": 100
+            },
+            {
+              "line": 236.5,
+              "odds": -108
+            },
+            {
+              "line": 236.5,
+              "odds": -111
+            },
+            {
+              "line": 236.5,
+              "odds": -111
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -109
+            },
+            {
+              "line": 236.5,
+              "odds": -113
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 235,
+              "odds": 108
+            },
+            {
+              "line": 237.5,
+              "odds": -115
+            },
+            {
+              "line": 237,
+              "odds": -107
+            },
+            {
+              "line": 237,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236,
+              "odds": -101
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 236.5,
+              "odds": -110
+            },
+            {
+              "line": 237,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Minnesota Timberwolves": -7,
+          "Portland Trail Blazers": 7
+        },
+        "totals": 236.5
+      }
+    },
+    {
+      "gameId": "a8954b4710b0fae858e10da04cd1b866",
+      "sport": "basketball_nba",
+      "homeTeam": "Phoenix Suns",
+      "awayTeam": "Oklahoma City Thunder",
+      "commenceTime": "2026-02-12T02:00:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Oklahoma City Thunder": [
+            {
+              "line": -7.5,
+              "odds": -112
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -118
+            },
+            {
+              "line": -7.5,
+              "odds": -109
+            },
+            {
+              "line": -7.5,
+              "odds": -112
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -109
+            },
+            {
+              "line": -8,
+              "odds": -112
+            },
+            {
+              "line": -8,
+              "odds": -109
+            },
+            {
+              "line": -8,
+              "odds": -109
+            },
+            {
+              "line": -8,
+              "odds": -112
+            },
+            {
+              "line": -8.5,
+              "odds": -105
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -106
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -147
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -115
+            },
+            {
+              "line": -7.5,
+              "odds": -109
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            }
+          ],
+          "Phoenix Suns": [
+            {
+              "line": 7.5,
+              "odds": -108
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": 100
+            },
+            {
+              "line": 7.5,
+              "odds": -108
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -109
+            },
+            {
+              "line": 8,
+              "odds": -114
+            },
+            {
+              "line": 8,
+              "odds": -112
+            },
+            {
+              "line": 8,
+              "odds": -112
+            },
+            {
+              "line": 8,
+              "odds": -114
+            },
+            {
+              "line": 8.5,
+              "odds": -133
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -106
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": 136
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -105
+            },
+            {
+              "line": 7.5,
+              "odds": -101
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 214.5,
+              "odds": -105
+            },
+            {
+              "line": 214.5,
+              "odds": -112
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -104
+            },
+            {
+              "line": 214.5,
+              "odds": -111
+            },
+            {
+              "line": 214.5,
+              "odds": -111
+            },
+            {
+              "line": 214.5,
+              "odds": -105
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -109
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -113
+            },
+            {
+              "line": 214.5,
+              "odds": -120
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -107
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 216,
+              "odds": 114
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -101
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 214.5,
+              "odds": -115
+            },
+            {
+              "line": 214.5,
+              "odds": -118
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -118
+            },
+            {
+              "line": 214.5,
+              "odds": -104
+            },
+            {
+              "line": 214.5,
+              "odds": -116
+            },
+            {
+              "line": 214.5,
+              "odds": -116
+            },
+            {
+              "line": 214.5,
+              "odds": -115
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -109
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -113
+            },
+            {
+              "line": 214.5,
+              "odds": -115
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -107
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 216,
+              "odds": -128
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -111
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            },
+            {
+              "line": 214.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Oklahoma City Thunder": -7.5,
+          "Phoenix Suns": 7.5
+        },
+        "totals": 214.5
+      }
+    },
+    {
+      "gameId": "72e90971d6ffe7bcc9ce0c5c15a12ece",
+      "sport": "basketball_nba",
+      "homeTeam": "Denver Nuggets",
+      "awayTeam": "Memphis Grizzlies",
+      "commenceTime": "2026-02-12T02:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Denver Nuggets": [
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -13.5,
+              "odds": -115
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14.5,
+              "odds": -105
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -109
+            },
+            {
+              "line": -13.5,
+              "odds": -109
+            },
+            {
+              "line": -13.5,
+              "odds": -133
+            },
+            {
+              "line": -14,
+              "odds": -113
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -113
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -104
+            },
+            {
+              "line": -14.5,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -108
+            },
+            {
+              "line": -15,
+              "odds": 116
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -102
+            },
+            {
+              "line": -14,
+              "odds": -105
+            },
+            {
+              "line": -14,
+              "odds": -110
+            },
+            {
+              "line": -14,
+              "odds": -110
+            }
+          ],
+          "Memphis Grizzlies": [
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14.5,
+              "odds": -118
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -109
+            },
+            {
+              "line": 13.5,
+              "odds": 100
+            },
+            {
+              "line": 13.5,
+              "odds": -105
+            },
+            {
+              "line": 14,
+              "odds": -113
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -113
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -108
+            },
+            {
+              "line": 14.5,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -112
+            },
+            {
+              "line": 15,
+              "odds": -125
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -108
+            },
+            {
+              "line": 14,
+              "odds": -115
+            },
+            {
+              "line": 14,
+              "odds": -110
+            },
+            {
+              "line": 14,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 239.5,
+              "odds": -108
+            },
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -114
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -105
+            },
+            {
+              "line": 239.5,
+              "odds": -111
+            },
+            {
+              "line": 240.5,
+              "odds": -114
+            },
+            {
+              "line": 240.5,
+              "odds": -114
+            },
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -107
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -110
+            },
+            {
+              "line": 234,
+              "odds": -189
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": -115
+            },
+            {
+              "line": 240,
+              "odds": -105
+            },
+            {
+              "line": 240,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -108
+            },
+            {
+              "line": 239.5,
+              "odds": -116
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -118
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239.5,
+              "odds": -109
+            },
+            {
+              "line": 239.5,
+              "odds": -103
+            },
+            {
+              "line": 239.5,
+              "odds": -125
+            },
+            {
+              "line": 240.5,
+              "odds": -114
+            },
+            {
+              "line": 240.5,
+              "odds": -114
+            },
+            {
+              "line": 239.5,
+              "odds": -114
+            },
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -112
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -107
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -110
+            },
+            {
+              "line": 234,
+              "odds": 154
+            },
+            {
+              "line": 239.5,
+              "odds": -110
+            },
+            {
+              "line": 239,
+              "odds": 102
+            },
+            {
+              "line": 240,
+              "odds": -115
+            },
+            {
+              "line": 240,
+              "odds": -110
+            },
+            {
+              "line": 240,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Denver Nuggets": -14,
+          "Memphis Grizzlies": 14
+        },
+        "totals": 239.5
+      }
+    },
+    {
+      "gameId": "1ad953fef0955a0aa7ed634326688a91",
+      "sport": "basketball_nba",
+      "homeTeam": "Utah Jazz",
+      "awayTeam": "Sacramento Kings",
+      "commenceTime": "2026-02-12T02:10:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Sacramento Kings": [
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -106
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -104
+            },
+            {
+              "line": 5.5,
+              "odds": -108
+            },
+            {
+              "line": 5.5,
+              "odds": -105
+            },
+            {
+              "line": 5.5,
+              "odds": -109
+            },
+            {
+              "line": 6.5,
+              "odds": -125
+            },
+            {
+              "line": 4.5,
+              "odds": 114
+            },
+            {
+              "line": 5.5,
+              "odds": -114
+            },
+            {
+              "line": 5.5,
+              "odds": -117
+            },
+            {
+              "line": 5.5,
+              "odds": -114
+            },
+            {
+              "line": 5.5,
+              "odds": -117
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 6,
+              "odds": -111
+            },
+            {
+              "line": 5.5,
+              "odds": -105
+            },
+            {
+              "line": 5.5,
+              "odds": -105
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            }
+          ],
+          "Utah Jazz": [
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -118
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -106
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -104
+            },
+            {
+              "line": -5.5,
+              "odds": -112
+            },
+            {
+              "line": -5.5,
+              "odds": -115
+            },
+            {
+              "line": -5.5,
+              "odds": -109
+            },
+            {
+              "line": -6.5,
+              "odds": -111
+            },
+            {
+              "line": -4.5,
+              "odds": -122
+            },
+            {
+              "line": -5.5,
+              "odds": -107
+            },
+            {
+              "line": -5.5,
+              "odds": -109
+            },
+            {
+              "line": -5.5,
+              "odds": -107
+            },
+            {
+              "line": -5.5,
+              "odds": -109
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -6,
+              "odds": 101
+            },
+            {
+              "line": -5.5,
+              "odds": -115
+            },
+            {
+              "line": -5.5,
+              "odds": -115
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 230.5,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -111
+            },
+            {
+              "line": 229.5,
+              "odds": -118
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -107
+            },
+            {
+              "line": 229.5,
+              "odds": -115
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -102
+            },
+            {
+              "line": 230.5,
+              "odds": -105
+            },
+            {
+              "line": 230,
+              "odds": -105
+            },
+            {
+              "line": 230,
+              "odds": -109
+            },
+            {
+              "line": 230.5,
+              "odds": -120
+            },
+            {
+              "line": 230.5,
+              "odds": -114
+            },
+            {
+              "line": 230.5,
+              "odds": -114
+            },
+            {
+              "line": 234.5,
+              "odds": 132
+            },
+            {
+              "line": 230.5,
+              "odds": -113
+            },
+            {
+              "line": 230.5,
+              "odds": -113
+            },
+            {
+              "line": 230.5,
+              "odds": -113
+            },
+            {
+              "line": 231,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 229.5,
+              "odds": -114
+            },
+            {
+              "line": 230,
+              "odds": -115
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 230.5,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -119
+            },
+            {
+              "line": 229.5,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -107
+            },
+            {
+              "line": 229.5,
+              "odds": -105
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -106
+            },
+            {
+              "line": 230.5,
+              "odds": -115
+            },
+            {
+              "line": 230,
+              "odds": -115
+            },
+            {
+              "line": 230,
+              "odds": -109
+            },
+            {
+              "line": 230.5,
+              "odds": -115
+            },
+            {
+              "line": 230.5,
+              "odds": -114
+            },
+            {
+              "line": 230.5,
+              "odds": -114
+            },
+            {
+              "line": 234.5,
+              "odds": -161
+            },
+            {
+              "line": 230.5,
+              "odds": -108
+            },
+            {
+              "line": 230.5,
+              "odds": -108
+            },
+            {
+              "line": 230.5,
+              "odds": -108
+            },
+            {
+              "line": 231,
+              "odds": -115
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 229.5,
+              "odds": 101
+            },
+            {
+              "line": 230,
+              "odds": -105
+            },
+            {
+              "line": 230,
+              "odds": -110
+            },
+            {
+              "line": 230.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Sacramento Kings": 5.5,
+          "Utah Jazz": -5.5
+        },
+        "totals": 230.5
+      }
+    },
+    {
+      "gameId": "69338c4d8b76e2c7c832dc2ec56f291f",
+      "sport": "basketball_nba",
+      "homeTeam": "Golden State Warriors",
+      "awayTeam": "San Antonio Spurs",
+      "commenceTime": "2026-02-12T03:00:00Z",
+      "capturedAt": "2026-02-11T23:33:03.084Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Golden State Warriors": [
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -103
+            },
+            {
+              "line": 6.5,
+              "odds": -105
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 7,
+              "odds": -114
+            },
+            {
+              "line": 7,
+              "odds": -114
+            },
+            {
+              "line": 7,
+              "odds": -114
+            },
+            {
+              "line": 7,
+              "odds": -112
+            },
+            {
+              "line": 7,
+              "odds": -112
+            },
+            {
+              "line": 7.5,
+              "odds": -125
+            },
+            {
+              "line": 6.5,
+              "odds": -110
+            },
+            {
+              "line": 6.5,
+              "odds": -105
+            },
+            {
+              "line": 7,
+              "odds": -111
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 4.5,
+              "odds": 134
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -115
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -110
+            },
+            {
+              "line": 7,
+              "odds": -110
+            }
+          ],
+          "San Antonio Spurs": [
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -118
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -105
+            },
+            {
+              "line": -6.5,
+              "odds": -115
+            },
+            {
+              "line": -7,
+              "odds": -105
+            },
+            {
+              "line": -7,
+              "odds": -104
+            },
+            {
+              "line": -7,
+              "odds": -112
+            },
+            {
+              "line": -7,
+              "odds": -112
+            },
+            {
+              "line": -7,
+              "odds": -109
+            },
+            {
+              "line": -7,
+              "odds": -109
+            },
+            {
+              "line": -7.5,
+              "odds": -111
+            },
+            {
+              "line": -6.5,
+              "odds": -110
+            },
+            {
+              "line": -6.5,
+              "odds": -115
+            },
+            {
+              "line": -7,
+              "odds": -101
+            },
+            {
+              "line": -7,
+              "odds": -105
+            },
+            {
+              "line": -4.5,
+              "odds": -141
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -105
+            },
+            {
+              "line": -7,
+              "odds": -101
+            },
+            {
+              "line": -7,
+              "odds": -110
+            },
+            {
+              "line": -7,
+              "odds": -110
+            }
+          ]
+        },
+        "totals": {
+          "Over": [
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -118
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -102
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -108
+            },
+            {
+              "line": 220.5,
+              "odds": -105
+            },
+            {
+              "line": 220.5,
+              "odds": -109
+            },
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 220.5,
+              "odds": -109
+            },
+            {
+              "line": 220.5,
+              "odds": -109
+            },
+            {
+              "line": 220.5,
+              "odds": -109
+            },
+            {
+              "line": 222.5,
+              "odds": 100
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -107
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 216,
+              "odds": -167
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -104
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            }
+          ],
+          "Under": [
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -116
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -106
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 220.5,
+              "odds": -115
+            },
+            {
+              "line": 220.5,
+              "odds": -109
+            },
+            {
+              "line": 220.5,
+              "odds": -114
+            },
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 220.5,
+              "odds": -112
+            },
+            {
+              "line": 222.5,
+              "odds": -139
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -107
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 216,
+              "odds": 140
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -108
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            },
+            {
+              "line": 220.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Golden State Warriors": 7,
+          "San Antonio Spurs": -7
+        },
+        "totals": 220.5
+      }
+    }
+  ]
+}

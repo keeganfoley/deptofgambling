@@ -1,19 +1,22 @@
+import dynamic from 'next/dynamic';
 import Hero from '@/components/Hero';
-import SystemIntro from '@/components/SystemIntro';
 import PortfolioStatus from '@/components/PortfolioStatus';
 import FundGrid from '@/components/FundGrid';
-import DailyPerformanceHistory from '@/components/DailyPerformanceHistory';
-import SportBreakdown from '@/components/SportBreakdown';
-import BetTypeBreakdown from '@/components/BetTypeBreakdown';
-import RecentBets from '@/components/RecentBets';
-import MethodologyTeaser from '@/components/MethodologyTeaser';
-import QuantitativeMetrics from '@/components/QuantitativeMetrics';
-import CandlestickChart from '@/components/CandlestickChart';
-import TwitterCTA from '@/components/TwitterCTA';
-import Disclaimer from '@/components/Disclaimer';
-import EmailSignup from '@/components/EmailSignup';
-import Footer from '@/components/Footer';
 import StickyNav from '@/components/StickyNav';
+
+// Lazy load below-fold components so they don't block initial render
+const CandlestickChart = dynamic(() => import('@/components/CandlestickChart'), { ssr: false });
+const RecentBets = dynamic(() => import('@/components/RecentBets'), { ssr: false });
+const DailyPerformanceHistory = dynamic(() => import('@/components/DailyPerformanceHistory'), { ssr: false });
+const SportBreakdown = dynamic(() => import('@/components/SportBreakdown'), { ssr: false });
+const BetTypeBreakdown = dynamic(() => import('@/components/BetTypeBreakdown'), { ssr: false });
+const MethodologyTeaser = dynamic(() => import('@/components/MethodologyTeaser'), { ssr: false });
+const QuantitativeMetrics = dynamic(() => import('@/components/QuantitativeMetrics'), { ssr: false });
+const SystemIntro = dynamic(() => import('@/components/SystemIntro'), { ssr: false });
+const TwitterCTA = dynamic(() => import('@/components/TwitterCTA'), { ssr: false });
+const EmailSignup = dynamic(() => import('@/components/EmailSignup'), { ssr: false });
+const Disclaimer = dynamic(() => import('@/components/Disclaimer'), { ssr: false });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: false });
 
 export default function Home() {
   return (

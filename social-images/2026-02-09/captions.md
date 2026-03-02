@@ -95,3 +95,88 @@ deptofgambling.com
 ```
 FEBRUARY 9 | MONDAY | $1,075 exposure across 9 picks and 3 funds. Vector leading with $600, Sharp at $425. Lakers stacked across 3 funds. #sportsbetting #deptofgambling #freepicks #nba #ncaab
 ```
+
+---
+
+# FEB 9, 2026 - RESULTS CAPTIONS
+
+---
+
+## TWITTER RESULTS POST
+
+```
+FEB 9 RESULTS
+
+3-6 | -4.49u | -$449
+
+✅ Navy -6.5 (76-60)
+✅ S. Illinois -1.5 (80-65)
+✅ Grizzlies +9.5 (lost by 1)
+❌ Hawks +8.5 (lost by 22)
+❌ Belmont -1.5 (lost in OT 84-95)
+❌ Belmont -1.5
+❌ Lakers +7 (lost by 9)
+❌ Lakers ML
+❌ Lakers +7
+
+Rough night. Day 98 | $45,548 | +13.87% ROI
+
+#GamblingTwitter #SportsBetting #FreePicks
+```
+
+---
+
+## INSTAGRAM RESULTS CAPTION
+
+```
+FEBRUARY 9 | Day 98 | 3-6 (-$449) | NCAAB sharps went 2-0 but Belmont choked in OT. Lakers got cooked by 9 and we had three different bets on that game. Grizzlies +9.5 the lone NBA bright spot. Tough day but still up $5,548 all-time. #sportsbetting #deptofgambling #freepicks
+```
+
+---
+
+## INSTAGRAM STORY / CUMULATIVE POST
+
+```
+DAY 98
+
+Record: 361-299-2
+Balance: $45,548
+Net P/L: +$5,548
+ROI: +13.87%
+
+Today: 3-6 (-$449)
+Win Rate: 54.7%
+
+Lakers exposure hurt
+NCAAB sharps 2-0
+Still up 13.87% all-time
+
+deptofgambling.com
+```
+
+---
+
+## RESULTS BREAKDOWN
+
+| Pick | Fund | Result | P/L |
+|------|------|--------|-----|
+| Navy -6.5 | Sharp | WIN | +$91 |
+| S. Illinois -1.5 | Sharp | WIN | +$119 |
+| Belmont -1.5 | Vector | LOSS | -$150 |
+| Belmont -1.5 | Sharp | LOSS | -$100 |
+| Hawks +8.5 | Vector | LOSS | -$200 |
+| Grizzlies +9.5 | Vector | WIN | +$91 |
+| Lakers +7 | Vector | LOSS | -$150 |
+| Lakers ML | Sharp | LOSS | -$100 |
+| Lakers +7 | Catalyst | LOSS | -$50 |
+
+---
+
+## FUND PERFORMANCE
+
+| Fund | Record | P/L |
+|------|--------|-----|
+| Sharp | 2-2 | +$10 |
+| Vector | 1-3 | -$409 |
+| Catalyst | 0-1 | -$50 |
+| Contra | — | $0 |

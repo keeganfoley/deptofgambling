@@ -1,0 +1,2295 @@
+{
+  "capturedAt": "2026-02-13T21:28:37.093Z",
+  "isClosing": false,
+  "sport": "basketball_ncaab",
+  "games": [
+    {
+      "gameId": "dfb5c7b121980cb90f2c583d3a5d35d2",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Niagara Purple Eagles",
+      "awayTeam": "Manhattan Jaspers",
+      "commenceTime": "2026-02-13T23:30:00Z",
+      "capturedAt": "2026-02-13T21:28:37.092Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Manhattan Jaspers": [
+            {
+              "line": -1,
+              "odds": -104
+            },
+            {
+              "line": -1,
+              "odds": 100
+            },
+            {
+              "line": 1,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -122
+            },
+            {
+              "line": 1.5,
+              "odds": -125
+            },
+            {
+              "line": 1,
+              "odds": -114
+            },
+            {
+              "line": -1,
+              "odds": -105
+            },
+            {
+              "line": 0.5,
+              "odds": -113
+            },
+            {
+              "line": -0.5,
+              "odds": -113
+            },
+            {
+              "line": 1.5,
+              "odds": -137
+            },
+            {
+              "line": -1,
+              "odds": -105
+            },
+            {
+              "line": 1,
+              "odds": -112
+            },
+            {
+              "line": 0,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -120
+            },
+            {
+              "line": 1.5,
+              "odds": -132
+            }
+          ],
+          "Niagara Purple Eagles": [
+            {
+              "line": 1,
+              "odds": -116
+            },
+            {
+              "line": 1,
+              "odds": -112
+            },
+            {
+              "line": -1,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": 100
+            },
+            {
+              "line": -1.5,
+              "odds": -118
+            },
+            {
+              "line": -1,
+              "odds": -104
+            },
+            {
+              "line": 1,
+              "odds": -115
+            },
+            {
+              "line": -0.5,
+              "odds": -110
+            },
+            {
+              "line": 0.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": 100
+            },
+            {
+              "line": 1,
+              "odds": -115
+            },
+            {
+              "line": -1,
+              "odds": -105
+            },
+            {
+              "line": 0,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": 100
+            },
+            {
+              "line": -1.5,
+              "odds": -105
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Manhattan Jaspers": 1,
+          "Niagara Purple Eagles": -1
+        }
+      }
+    },
+    {
+      "gameId": "539b5f59c0c2eeaf8a5602681f257792",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Harvard Crimson",
+      "awayTeam": "Brown Bears",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Brown Bears": [
+            {
+              "line": 8,
+              "odds": -116
+            },
+            {
+              "line": 8,
+              "odds": -112
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -109
+            },
+            {
+              "line": 7.5,
+              "odds": -120
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -112
+            },
+            {
+              "line": 7.5,
+              "odds": -108
+            },
+            {
+              "line": 7.5,
+              "odds": -108
+            },
+            {
+              "line": 7.5,
+              "odds": -120
+            },
+            {
+              "line": 7.5,
+              "odds": -109
+            },
+            {
+              "line": 8,
+              "odds": -115
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 7.5,
+              "odds": -110
+            },
+            {
+              "line": 8.5,
+              "odds": -139
+            }
+          ],
+          "Harvard Crimson": [
+            {
+              "line": -8,
+              "odds": -104
+            },
+            {
+              "line": -8,
+              "odds": 100
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -109
+            },
+            {
+              "line": -7.5,
+              "odds": -120
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -108
+            },
+            {
+              "line": -7.5,
+              "odds": -115
+            },
+            {
+              "line": -7.5,
+              "odds": -115
+            },
+            {
+              "line": -7.5,
+              "odds": -120
+            },
+            {
+              "line": -7.5,
+              "odds": -107
+            },
+            {
+              "line": -8,
+              "odds": -105
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -7.5,
+              "odds": -110
+            },
+            {
+              "line": -8.5,
+              "odds": 100
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Brown Bears": 7.5,
+          "Harvard Crimson": -7.5
+        }
+      }
+    },
+    {
+      "gameId": "c55f3f8e3bf3ecf359385de915f828af",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Canisius Golden Griffins",
+      "awayTeam": "Iona Gaels",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Canisius Golden Griffins": [
+            {
+              "line": 5,
+              "odds": -113
+            },
+            {
+              "line": 5,
+              "odds": -109
+            },
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -133
+            },
+            {
+              "line": 5,
+              "odds": -109
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -112
+            },
+            {
+              "line": 5.5,
+              "odds": -112
+            },
+            {
+              "line": 5.5,
+              "odds": -112
+            },
+            {
+              "line": 5.5,
+              "odds": -120
+            },
+            {
+              "line": 5,
+              "odds": -104
+            },
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -110
+            },
+            {
+              "line": 4.5,
+              "odds": -102
+            },
+            {
+              "line": 5.5,
+              "odds": -122
+            }
+          ],
+          "Iona Gaels": [
+            {
+              "line": -5,
+              "odds": -107
+            },
+            {
+              "line": -5,
+              "odds": -103
+            },
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5,
+              "odds": -109
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -108
+            },
+            {
+              "line": -5.5,
+              "odds": -114
+            },
+            {
+              "line": -5.5,
+              "odds": -114
+            },
+            {
+              "line": -5.5,
+              "odds": -120
+            },
+            {
+              "line": -5,
+              "odds": -112
+            },
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -4.5,
+              "odds": -118
+            },
+            {
+              "line": -5.5,
+              "odds": -114
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Canisius Golden Griffins": 5.5,
+          "Iona Gaels": -5.5
+        }
+      }
+    },
+    {
+      "gameId": "5171153f1e742b310d4883bf97a95483",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Pennsylvania Quakers",
+      "awayTeam": "Columbia Lions",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Columbia Lions": [
+            {
+              "line": 2,
+              "odds": -107
+            },
+            {
+              "line": 2,
+              "odds": -103
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -109
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -137
+            },
+            {
+              "line": 2,
+              "odds": -109
+            },
+            {
+              "line": 2,
+              "odds": -105
+            },
+            {
+              "line": 2,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 3.5,
+              "odds": -132
+            }
+          ],
+          "Pennsylvania Quakers": [
+            {
+              "line": -2,
+              "odds": -113
+            },
+            {
+              "line": -2,
+              "odds": -109
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -109
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -102
+            },
+            {
+              "line": -2.5,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": 100
+            },
+            {
+              "line": -2,
+              "odds": -107
+            },
+            {
+              "line": -2,
+              "odds": -115
+            },
+            {
+              "line": -2,
+              "odds": -105
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            },
+            {
+              "line": -3.5,
+              "odds": -105
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Columbia Lions": 2.5,
+          "Pennsylvania Quakers": -2.5
+        }
+      }
+    },
+    {
+      "gameId": "6bf083b72100e79363dc4e96a5fc06c2",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Princeton Tigers",
+      "awayTeam": "Cornell Big Red",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Cornell Big Red": [
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -106
+            },
+            {
+              "line": -3,
+              "odds": -109
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -118
+            },
+            {
+              "line": -3.5,
+              "odds": -102
+            },
+            {
+              "line": -3.5,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": 100
+            },
+            {
+              "line": -3.5,
+              "odds": -101
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -105
+            },
+            {
+              "line": -2.5,
+              "odds": -132
+            }
+          ],
+          "Princeton Tigers": [
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -106
+            },
+            {
+              "line": 3,
+              "odds": -109
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3.5,
+              "odds": -125
+            },
+            {
+              "line": 3.5,
+              "odds": -120
+            },
+            {
+              "line": 3.5,
+              "odds": -113
+            },
+            {
+              "line": 3.5,
+              "odds": -113
+            },
+            {
+              "line": 3.5,
+              "odds": -137
+            },
+            {
+              "line": 3.5,
+              "odds": -115
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3.5,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -105
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Cornell Big Red": -3,
+          "Princeton Tigers": 3
+        }
+      }
+    },
+    {
+      "gameId": "0fd17916b8c86722b274e6cb2a835884",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Dartmouth Big Green",
+      "awayTeam": "Yale Bulldogs",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Dartmouth Big Green": [
+            {
+              "line": 9.5,
+              "odds": -105
+            },
+            {
+              "line": 9.5,
+              "odds": -101
+            },
+            {
+              "line": 10,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -102
+            },
+            {
+              "line": 9.5,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -104
+            },
+            {
+              "line": 9.5,
+              "odds": -105
+            },
+            {
+              "line": 10,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -117
+            },
+            {
+              "line": 10.5,
+              "odds": -117
+            },
+            {
+              "line": 9.5,
+              "odds": -110
+            },
+            {
+              "line": 10,
+              "odds": -105
+            },
+            {
+              "line": 9.5,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -105
+            },
+            {
+              "line": 9.5,
+              "odds": -105
+            }
+          ],
+          "Yale Bulldogs": [
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -9.5,
+              "odds": -111
+            },
+            {
+              "line": -10,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -118
+            },
+            {
+              "line": -9.5,
+              "odds": -133
+            },
+            {
+              "line": -9.5,
+              "odds": -114
+            },
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -10,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -107
+            },
+            {
+              "line": -10.5,
+              "odds": -107
+            },
+            {
+              "line": -9.5,
+              "odds": -125
+            },
+            {
+              "line": -10,
+              "odds": -111
+            },
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -9.5,
+              "odds": -132
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Dartmouth Big Green": 9.5,
+          "Yale Bulldogs": -9.5
+        }
+      }
+    },
+    {
+      "gameId": "45e5f27bb453941e60c4e05d3196e42f",
+      "sport": "basketball_ncaab",
+      "homeTeam": "GW Revolutionaries",
+      "awayTeam": "George Mason Patriots",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "George Mason Patriots": [
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -106
+            },
+            {
+              "line": 2.5,
+              "odds": -108
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 3,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 3,
+              "odds": -112
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -105
+            },
+            {
+              "line": 2.5,
+              "odds": -114
+            }
+          ],
+          "GW Revolutionaries": [
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -106
+            },
+            {
+              "line": -2.5,
+              "odds": -112
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -3,
+              "odds": -105
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -113
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -3,
+              "odds": -105
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -105
+            },
+            {
+              "line": -2.5,
+              "odds": -115
+            },
+            {
+              "line": -2.5,
+              "odds": -122
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "George Mason Patriots": 2.5,
+          "GW Revolutionaries": -2.5
+        }
+      }
+    },
+    {
+      "gameId": "a5f21ba252e472b5e065ec86a15a59ec",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Rider Broncs",
+      "awayTeam": "Mt. St. Mary's Mountaineers",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Mt. St. Mary's Mountaineers": [
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -5,
+              "odds": -106
+            },
+            {
+              "line": -5.5,
+              "odds": -108
+            },
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -5.5,
+              "odds": -118
+            },
+            {
+              "line": -5.5,
+              "odds": -105
+            },
+            {
+              "line": -5.5,
+              "odds": -107
+            },
+            {
+              "line": -5.5,
+              "odds": -107
+            },
+            {
+              "line": -5.5,
+              "odds": -110
+            },
+            {
+              "line": -5,
+              "odds": -110
+            },
+            {
+              "line": -4.5,
+              "odds": -118
+            },
+            {
+              "line": -5.5,
+              "odds": -114
+            },
+            {
+              "line": -5,
+              "odds": -109
+            },
+            {
+              "line": -5,
+              "odds": -115
+            }
+          ],
+          "Rider Broncs": [
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 5,
+              "odds": -106
+            },
+            {
+              "line": 5.5,
+              "odds": -112
+            },
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 5.5,
+              "odds": -125
+            },
+            {
+              "line": 5.5,
+              "odds": -115
+            },
+            {
+              "line": 5.5,
+              "odds": -115
+            },
+            {
+              "line": 5.5,
+              "odds": -115
+            },
+            {
+              "line": 5.5,
+              "odds": -125
+            },
+            {
+              "line": 5,
+              "odds": -110
+            },
+            {
+              "line": 4.5,
+              "odds": -102
+            },
+            {
+              "line": 5.5,
+              "odds": -122
+            },
+            {
+              "line": 5,
+              "odds": -107
+            },
+            {
+              "line": 5,
+              "odds": -105
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Mt. St. Mary's Mountaineers": -5,
+          "Rider Broncs": 5
+        }
+      }
+    },
+    {
+      "gameId": "073941696f38ec95e3095cbb3b033369",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Siena Saints",
+      "awayTeam": "Quinnipiac Bobcats",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Quinnipiac Bobcats": [
+            {
+              "line": 3.5,
+              "odds": -108
+            },
+            {
+              "line": 3.5,
+              "odds": -104
+            },
+            {
+              "line": 3.5,
+              "odds": -109
+            },
+            {
+              "line": 3.5,
+              "odds": -118
+            },
+            {
+              "line": 3.5,
+              "odds": -110
+            },
+            {
+              "line": 4,
+              "odds": -110
+            },
+            {
+              "line": 3.5,
+              "odds": -104
+            },
+            {
+              "line": 3.5,
+              "odds": -107
+            },
+            {
+              "line": 3.5,
+              "odds": -107
+            },
+            {
+              "line": 4.5,
+              "odds": -134
+            },
+            {
+              "line": 4,
+              "odds": -108
+            },
+            {
+              "line": 3.5,
+              "odds": -110
+            },
+            {
+              "line": 4,
+              "odds": -110
+            },
+            {
+              "line": 3.5,
+              "odds": -110
+            },
+            {
+              "line": 3.5,
+              "odds": -111
+            }
+          ],
+          "Siena Saints": [
+            {
+              "line": -3.5,
+              "odds": -112
+            },
+            {
+              "line": -3.5,
+              "odds": -108
+            },
+            {
+              "line": -3.5,
+              "odds": -109
+            },
+            {
+              "line": -3.5,
+              "odds": -125
+            },
+            {
+              "line": -3.5,
+              "odds": -110
+            },
+            {
+              "line": -4,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -118
+            },
+            {
+              "line": -3.5,
+              "odds": -120
+            },
+            {
+              "line": -3.5,
+              "odds": -120
+            },
+            {
+              "line": -4.5,
+              "odds": -119
+            },
+            {
+              "line": -4,
+              "odds": -108
+            },
+            {
+              "line": -3.5,
+              "odds": -110
+            },
+            {
+              "line": -4,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -110
+            },
+            {
+              "line": -3.5,
+              "odds": -125
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Quinnipiac Bobcats": 3.5,
+          "Siena Saints": -3.5
+        }
+      }
+    },
+    {
+      "gameId": "b8b6387ac85f510db00d4d73d034deb5",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Sacred Heart Pioneers",
+      "awayTeam": "Saint Peter's Peacocks",
+      "commenceTime": "2026-02-14T00:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Sacred Heart Pioneers": [
+            {
+              "line": 1.5,
+              "odds": -115
+            },
+            {
+              "line": 1.5,
+              "odds": -111
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -109
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -113
+            },
+            {
+              "line": 1.5,
+              "odds": -113
+            },
+            {
+              "line": 1.5,
+              "odds": -106
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -114
+            }
+          ],
+          "Saint Peter's Peacocks": [
+            {
+              "line": -1.5,
+              "odds": -105
+            },
+            {
+              "line": -1.5,
+              "odds": -101
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -109
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -122
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Sacred Heart Pioneers": 1.5,
+          "Saint Peter's Peacocks": -1.5
+        }
+      }
+    },
+    {
+      "gameId": "f84bef145e05b0803ad0126bd84accf2",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Wisconsin Badgers",
+      "awayTeam": "Michigan St Spartans",
+      "commenceTime": "2026-02-14T01:00:01Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Michigan St Spartans": [
+            {
+              "line": -2.5,
+              "odds": -102
+            },
+            {
+              "line": -1.5,
+              "odds": -118
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -115
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -115
+            },
+            {
+              "line": -2,
+              "odds": -111
+            },
+            {
+              "line": -2,
+              "odds": -109
+            },
+            {
+              "line": -2.5,
+              "odds": -107
+            },
+            {
+              "line": -2.5,
+              "odds": -107
+            },
+            {
+              "line": -2.5,
+              "odds": 100
+            },
+            {
+              "line": -2,
+              "odds": -110
+            },
+            {
+              "line": -1.5,
+              "odds": -110
+            },
+            {
+              "line": -2,
+              "odds": -105
+            },
+            {
+              "line": -2,
+              "odds": -115
+            },
+            {
+              "line": -2.5,
+              "odds": -105
+            }
+          ],
+          "Wisconsin Badgers": [
+            {
+              "line": 2.5,
+              "odds": -120
+            },
+            {
+              "line": 1.5,
+              "odds": -125
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -105
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -105
+            },
+            {
+              "line": 2,
+              "odds": -101
+            },
+            {
+              "line": 2,
+              "odds": -109
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -115
+            },
+            {
+              "line": 2.5,
+              "odds": -137
+            },
+            {
+              "line": 2,
+              "odds": -110
+            },
+            {
+              "line": 1.5,
+              "odds": -110
+            },
+            {
+              "line": 2,
+              "odds": -111
+            },
+            {
+              "line": 2,
+              "odds": -105
+            },
+            {
+              "line": 2.5,
+              "odds": -132
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Michigan St Spartans": -2,
+          "Wisconsin Badgers": 2
+        }
+      }
+    },
+    {
+      "gameId": "4288e6790e8c3fd9c12cb256049a793e",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Loyola (Chi) Ramblers",
+      "awayTeam": "Saint Louis Billikens",
+      "commenceTime": "2026-02-14T01:30:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Loyola (Chi) Ramblers": [
+            {
+              "line": 18.5,
+              "odds": -105
+            },
+            {
+              "line": 18.5,
+              "odds": -101
+            },
+            {
+              "line": 18.5,
+              "odds": -108
+            },
+            {
+              "line": 18.5,
+              "odds": -109
+            },
+            {
+              "line": 18.5,
+              "odds": -120
+            },
+            {
+              "line": 18.5,
+              "odds": -110
+            },
+            {
+              "line": 18.5,
+              "odds": -114
+            },
+            {
+              "line": 18.5,
+              "odds": -107
+            },
+            {
+              "line": 18.5,
+              "odds": -107
+            },
+            {
+              "line": 18.5,
+              "odds": -125
+            },
+            {
+              "line": 18.5,
+              "odds": -110
+            },
+            {
+              "line": 18.5,
+              "odds": -110
+            },
+            {
+              "line": 19,
+              "odds": -119
+            },
+            {
+              "line": 18.5,
+              "odds": -110
+            }
+          ],
+          "Saint Louis Billikens": [
+            {
+              "line": -18.5,
+              "odds": -115
+            },
+            {
+              "line": -18.5,
+              "odds": -111
+            },
+            {
+              "line": -18.5,
+              "odds": -112
+            },
+            {
+              "line": -18.5,
+              "odds": -109
+            },
+            {
+              "line": -18.5,
+              "odds": -120
+            },
+            {
+              "line": -18.5,
+              "odds": -110
+            },
+            {
+              "line": -18.5,
+              "odds": -106
+            },
+            {
+              "line": -18.5,
+              "odds": -117
+            },
+            {
+              "line": -18.5,
+              "odds": -117
+            },
+            {
+              "line": -18.5,
+              "odds": -110
+            },
+            {
+              "line": -18.5,
+              "odds": -110
+            },
+            {
+              "line": -18.5,
+              "odds": -110
+            },
+            {
+              "line": -19,
+              "odds": 102
+            },
+            {
+              "line": -18.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Loyola (Chi) Ramblers": 18.5,
+          "Saint Louis Billikens": -18.5
+        }
+      }
+    },
+    {
+      "gameId": "00d8cab3603e5266f75ff6e8b23719b4",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Akron Zips",
+      "awayTeam": "Massachusetts Minutemen",
+      "commenceTime": "2026-02-14T02:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Akron Zips": [
+            {
+              "line": -12.5,
+              "odds": -115
+            },
+            {
+              "line": -12.5,
+              "odds": -111
+            },
+            {
+              "line": -12.5,
+              "odds": -118
+            },
+            {
+              "line": -13,
+              "odds": -104
+            },
+            {
+              "line": -13,
+              "odds": -110
+            },
+            {
+              "line": -13,
+              "odds": -110
+            },
+            {
+              "line": -12.5,
+              "odds": -120
+            },
+            {
+              "line": -13.5,
+              "odds": -109
+            },
+            {
+              "line": -13.5,
+              "odds": -109
+            },
+            {
+              "line": -12.5,
+              "odds": -137
+            },
+            {
+              "line": -13,
+              "odds": -110
+            },
+            {
+              "line": -12.5,
+              "odds": -118
+            },
+            {
+              "line": -13.5,
+              "odds": -111
+            },
+            {
+              "line": -12.5,
+              "odds": -113
+            },
+            {
+              "line": -12.5,
+              "odds": -115
+            }
+          ],
+          "Massachusetts Minutemen": [
+            {
+              "line": 12.5,
+              "odds": -105
+            },
+            {
+              "line": 12.5,
+              "odds": -101
+            },
+            {
+              "line": 12.5,
+              "odds": -102
+            },
+            {
+              "line": 13,
+              "odds": -114
+            },
+            {
+              "line": 13,
+              "odds": -110
+            },
+            {
+              "line": 13,
+              "odds": -110
+            },
+            {
+              "line": 12.5,
+              "odds": -102
+            },
+            {
+              "line": 13.5,
+              "odds": -114
+            },
+            {
+              "line": 13.5,
+              "odds": -114
+            },
+            {
+              "line": 12.5,
+              "odds": 100
+            },
+            {
+              "line": 13,
+              "odds": -110
+            },
+            {
+              "line": 12.5,
+              "odds": -102
+            },
+            {
+              "line": 13.5,
+              "odds": -125
+            },
+            {
+              "line": 12.5,
+              "odds": -103
+            },
+            {
+              "line": 12.5,
+              "odds": -105
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Akron Zips": -12.5,
+          "Massachusetts Minutemen": 12.5
+        }
+      }
+    },
+    {
+      "gameId": "4cb3f6e6065cafae55154f237483d8b6",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Miami (OH) RedHawks",
+      "awayTeam": "Ohio Bobcats",
+      "commenceTime": "2026-02-14T02:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Miami (OH) RedHawks": [
+            {
+              "line": -9,
+              "odds": -113
+            },
+            {
+              "line": -9,
+              "odds": -109
+            },
+            {
+              "line": -9.5,
+              "odds": -105
+            },
+            {
+              "line": -9.5,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -9.5,
+              "odds": -115
+            },
+            {
+              "line": -9.5,
+              "odds": -120
+            },
+            {
+              "line": -9,
+              "odds": -110
+            },
+            {
+              "line": -9.5,
+              "odds": -105
+            },
+            {
+              "line": -9.5,
+              "odds": -105
+            }
+          ],
+          "Ohio Bobcats": [
+            {
+              "line": 9,
+              "odds": -107
+            },
+            {
+              "line": 9,
+              "odds": -103
+            },
+            {
+              "line": 9.5,
+              "odds": -115
+            },
+            {
+              "line": 9.5,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -108
+            },
+            {
+              "line": 9.5,
+              "odds": -108
+            },
+            {
+              "line": 9.5,
+              "odds": -120
+            },
+            {
+              "line": 9,
+              "odds": -110
+            },
+            {
+              "line": 9.5,
+              "odds": -112
+            },
+            {
+              "line": 9.5,
+              "odds": -115
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Miami (OH) RedHawks": -9.5,
+          "Ohio Bobcats": 9.5
+        }
+      }
+    },
+    {
+      "gameId": "748c1bbe127e06c99373cfdd21fc7f87",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Boise State Broncos",
+      "awayTeam": "UNLV Rebels",
+      "commenceTime": "2026-02-14T03:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Boise State Broncos": [
+            {
+              "line": -10,
+              "odds": -118
+            },
+            {
+              "line": -10,
+              "odds": -114
+            },
+            {
+              "line": -10.5,
+              "odds": -112
+            },
+            {
+              "line": -10.5,
+              "odds": -125
+            },
+            {
+              "line": -10.5,
+              "odds": -109
+            },
+            {
+              "line": -11,
+              "odds": -105
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -120
+            },
+            {
+              "line": -10.5,
+              "odds": -110
+            },
+            {
+              "line": -10.5,
+              "odds": -115
+            },
+            {
+              "line": -10.5,
+              "odds": -122
+            },
+            {
+              "line": -10.5,
+              "odds": -116
+            },
+            {
+              "line": -11,
+              "odds": -105
+            }
+          ],
+          "UNLV Rebels": [
+            {
+              "line": 10,
+              "odds": -102
+            },
+            {
+              "line": 10,
+              "odds": 102
+            },
+            {
+              "line": 10.5,
+              "odds": -108
+            },
+            {
+              "line": 10.5,
+              "odds": -118
+            },
+            {
+              "line": 10.5,
+              "odds": -109
+            },
+            {
+              "line": 11,
+              "odds": -115
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -113
+            },
+            {
+              "line": 10.5,
+              "odds": -113
+            },
+            {
+              "line": 10.5,
+              "odds": -120
+            },
+            {
+              "line": 10.5,
+              "odds": -110
+            },
+            {
+              "line": 10.5,
+              "odds": -105
+            },
+            {
+              "line": 10.5,
+              "odds": -114
+            },
+            {
+              "line": 10.5,
+              "odds": -101
+            },
+            {
+              "line": 11,
+              "odds": -115
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Boise State Broncos": -10.5,
+          "UNLV Rebels": 10.5
+        }
+      }
+    },
+    {
+      "gameId": "4af903c24764cae6775cd4bcece121ea",
+      "sport": "basketball_ncaab",
+      "homeTeam": "Hampton Pirates",
+      "awayTeam": "North Carolina A&T Aggies",
+      "commenceTime": "2026-02-14T04:00:00Z",
+      "capturedAt": "2026-02-13T21:28:37.093Z",
+      "isClosing": false,
+      "markets": {
+        "spreads": {
+          "Hampton Pirates": [
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -106
+            },
+            {
+              "line": -2.5,
+              "odds": -115
+            },
+            {
+              "line": -3,
+              "odds": -109
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -125
+            },
+            {
+              "line": -2.5,
+              "odds": -120
+            },
+            {
+              "line": -3.5,
+              "odds": -104
+            },
+            {
+              "line": -3.5,
+              "odds": -104
+            },
+            {
+              "line": -2.5,
+              "odds": -137
+            },
+            {
+              "line": -3,
+              "odds": -110
+            },
+            {
+              "line": -2.5,
+              "odds": -115
+            },
+            {
+              "line": -2.5,
+              "odds": -125
+            },
+            {
+              "line": -2.5,
+              "odds": -111
+            },
+            {
+              "line": -2.5,
+              "odds": -110
+            }
+          ],
+          "North Carolina A&T Aggies": [
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -106
+            },
+            {
+              "line": 2.5,
+              "odds": -105
+            },
+            {
+              "line": 3,
+              "odds": -109
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -118
+            },
+            {
+              "line": 2.5,
+              "odds": -102
+            },
+            {
+              "line": 3.5,
+              "odds": -121
+            },
+            {
+              "line": 3.5,
+              "odds": -121
+            },
+            {
+              "line": 2.5,
+              "odds": 100
+            },
+            {
+              "line": 3,
+              "odds": -110
+            },
+            {
+              "line": 2.5,
+              "odds": -105
+            },
+            {
+              "line": 2.5,
+              "odds": -111
+            },
+            {
+              "line": 2.5,
+              "odds": -105
+            },
+            {
+              "line": 2.5,
+              "odds": -110
+            }
+          ]
+        }
+      },
+      "consensus": {
+        "spreads": {
+          "Hampton Pirates": -2.75,
+          "North Carolina A&T Aggies": 2.75
+        }
+      }
+    }
+  ]
+}

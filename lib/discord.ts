@@ -1726,7 +1726,13 @@ export function generatePicksTable(date: string, allBets?: Bet[]): string {
   let totalUnits = 0;
   dayBets.forEach((bet, i) => {
     const team = shortenTeamName(bet.team || bet.description?.split(' ')[0] || '');
-    const line = bet.description.replace(team, '').replace(/^\s+/, '').split('@')[0].trim() || 'ML';
+    let line: string;
+    if ((bet as any).betLine != null) {
+      const bl = (bet as any).betLine;
+      line = bl > 0 ? `+${bl}` : `${bl}`;
+    } else {
+      line = bet.description.replace(team, '').replace(/^\s+/, '').split('@')[0].trim() || 'ML';
+    }
     const odds = formatOdds(bet.odds);
     const fund = bet.fund.replace('Fund', '');
     const units = `${bet.stake.toFixed(1)}u`;

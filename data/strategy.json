@@ -1,0 +1,112 @@
+{
+  "version": "2.0",
+  "updated": "2026-02-11",
+  "philosophy": "Only bet when we have a measurably better line than the sharp market consensus. Validate everything with CLV.",
+
+  "activeSports": {
+    "basketball_nba": {
+      "key": "basketball_nba",
+      "label": "NBA",
+      "allowedBetTypes": ["spreads", "totals"],
+      "active": true,
+      "notes": "58.8% on spreads historically. Core sport."
+    },
+    "basketball_ncaab": {
+      "key": "basketball_ncaab",
+      "label": "NCAAB",
+      "allowedBetTypes": ["spreads"],
+      "active": true,
+      "notes": "59.1% on spreads. NO totals (23.1% historical)."
+    },
+    "icehockey_nhl": {
+      "key": "icehockey_nhl",
+      "label": "NHL",
+      "allowedBetTypes": ["spreads", "moneyline"],
+      "active": true,
+      "notes": "Moneyline-heavy sport. Spreads thin but ok."
+    },
+    "americanfootball_nfl": {
+      "key": "americanfootball_nfl",
+      "label": "NFL",
+      "allowedBetTypes": ["spreads", "totals"],
+      "active": true,
+      "notes": "Seasonal. 57.7% on spreads."
+    }
+  },
+
+  "edgeThresholds": {
+    "minimumLineEdge": 1.0,
+    "strongEdge": 2.0,
+    "eliteEdge": 3.0,
+    "notes": "Edge = points better than sharp consensus. 1+ point = bet. 2+ = strong. 3+ = rare, verify it's real."
+  },
+
+  "sharpBooks": [
+    "pinnacle",
+    "lowvig",
+    "betonlineag",
+    "betanysports"
+  ],
+
+  "bettableBooks": [
+    "draftkings",
+    "fanduel",
+    "betmgm",
+    "williamhill_us",
+    "betrivers",
+    "espnbet",
+    "fanatics",
+    "hardrockbet",
+    "bovada",
+    "betonlineag",
+    "mybookieag",
+    "betparx",
+    "ballybet",
+    "betus",
+    "lowvig"
+  ],
+
+  "maxJuice": -145,
+  "maxJuiceNote": "Don't take any line with juice worse than -145. Edge gets eaten.",
+
+  "stakingRules": {
+    "defaultStake": 1.0,
+    "maxStake": 1.5,
+    "notes": "Flat 1u on everything. No conviction scaling until CLV proves we have edge. Max 1.5u for 3+ point edges only."
+  },
+
+  "volumeRules": {
+    "maxBetsPerDay": 5,
+    "maxBetsPerSport": 3,
+    "notes": "Quality over quantity. Only bet off-market lines."
+  },
+
+  "blacklist": {
+    "betTypes": ["props"],
+    "sports": ["americanfootball_ncaaf"],
+    "scenarios": [
+      "NCAAB totals (23.1% historical)",
+      "NFL props (44% historical)",
+      "Any bet solely based on money% divergence"
+    ]
+  },
+
+  "fundMapping": {
+    "SharpFund": {
+      "strategy": "Takes bets where sharp book line movement confirms edge",
+      "trigger": "Pinnacle line moved 1+ points toward our side after we identify the off-market line"
+    },
+    "VectorFund": {
+      "strategy": "Market consensus edge - off-market lines where we get 1.5+ points better than sharp consensus",
+      "trigger": "Line deviation >= 1.5 points from sharp book consensus"
+    },
+    "ContraFund": {
+      "strategy": "Contrarian plays where public is heavy on one side AND we have a better line than consensus",
+      "trigger": "70%+ public on opposite side AND 1+ point line edge"
+    },
+    "CatalystFund": {
+      "strategy": "Situational edges - rest advantages, travel spots, scheduling, injuries",
+      "trigger": "Clear situational factor AND 1+ point line edge"
+    }
+  }
+}

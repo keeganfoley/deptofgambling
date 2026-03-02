@@ -1,23 +1,23 @@
 {
-  "totalBets": 699,
-  "wins": 376,
-  "losses": 321,
+  "totalBets": 704,
+  "wins": 377,
+  "losses": 325,
   "pushes": 2,
-  "winRate": "53.95",
-  "totalWinnings": 44856.26,
-  "totalLossesAmount": 40040,
+  "winRate": 53.7,
+  "totalWinnings": 45048.85,
+  "totalLossesAmount": 40440,
   "avgWin": 119.3,
   "avgLoss": -124.74,
-  "avgProfitPerBet": 6.89,
+  "avgProfitPerBet": 6.55,
   "medianProfit": 0,
   "largestWin": 345,
   "largestLoss": -250,
-  "profitFactor": 1.12,
+  "profitFactor": 1.11,
   "maxWinStreak": 9,
   "maxLossStreak": 8,
   "currentStreak": -1,
-  "totalCapitalRisked": 87265.0,
-  "unitsRisked": 872.65,
+  "totalCapitalRisked": 87765.0,
+  "unitsRisked": 877.65,
   "maxDrawdown": -2368.3,
   "maxDrawdownPercent": -5.07,
   "maxDrawdownPeak": "2026-01-10",
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 46691.55,
   "maxDrawdownTroughBalance": 44323.25,
   "currentDrawdown": {
-    "amount": -1875.29,
-    "percentage": -4.02,
-    "daysSincePeak": 45,
+    "amount": -2182.7,
+    "percentage": -4.67,
+    "daysSincePeak": 46,
     "peakBalance": 46691.55,
     "peakDate": "2026-01-10",
-    "currentBalance": 44816.26
+    "currentBalance": 44508.85
   },
   "sharpeRatio": 2.72,
   "sharpeRatioNote": "100-day sample",
@@ -40,28 +40,28 @@
   "clvTrackingStartDate": "2025-11-27",
   "rollingPerformance": {
     "last7Days": {
-      "wins": 17,
-      "losses": 24,
+      "wins": 18,
+      "losses": 28,
       "pushes": 0,
-      "pnl": -953.99,
+      "pnl": -1261.4,
       "roi": -23.27,
-      "bets": 41
+      "bets": 46
     },
     "last30Days": {
-      "wins": 91,
-      "losses": 94,
+      "wins": 92,
+      "losses": 98,
       "pushes": 0,
-      "pnl": -549.39,
+      "pnl": -856.8,
       "roi": -2.97,
-      "bets": 185
+      "bets": 190
     },
     "last3Days": {
-      "wins": 10,
-      "losses": 8,
+      "wins": 11,
+      "losses": 12,
       "pushes": 0,
-      "pnl": 126.67,
+      "pnl": -180.74,
       "roi": 7.04,
-      "bets": 18
+      "bets": 23
     }
   },
   "daysGreenStreak": {

@@ -1,0 +1,2145 @@
+{
+  "timestamp": "2026-02-11T23:33:35.159Z",
+  "sportsScanned": [
+    "NBA",
+    "NCAAB",
+    "NHL",
+    "NFL"
+  ],
+  "requestsUsed": 75,
+  "requestsRemaining": 19925,
+  "opportunities": [
+    {
+      "gameId": "c09c552bcc0d68d3e96c860980ae1563",
+      "sport": "basketball_nba",
+      "sportLabel": "NBA",
+      "homeTeam": "Toronto Raptors",
+      "awayTeam": "Detroit Pistons",
+      "gameTime": "2026-02-12T00:30:00Z",
+      "market": "spreads",
+      "side": "Toronto Raptors",
+      "betDescription": "Toronto Raptors +1",
+      "sharpConsensus": -1,
+      "bestLine": 1,
+      "bestBook": "BetRivers",
+      "bestOdds": -118,
+      "edge": 2,
+      "allLines": [
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": -1,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "1xBet",
+          "bookKey": "onexbet",
+          "line": -1.5,
+          "odds": 108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "MyBookie.ag",
+          "bookKey": "mybookieag",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:30Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": -1.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:17Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": -1.5,
+          "odds": -102,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:11Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": -1,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 1,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:53Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": -1,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "LeoVegas (SE)",
+          "bookKey": "leovegas_se",
+          "line": -1,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (SE)",
+          "bookKey": "unibet_se",
+          "line": -1,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Tipico",
+          "bookKey": "tipico_de",
+          "line": 1.5,
+          "odds": -130,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:21Z"
+        },
+        {
+          "book": "Fanatics",
+          "bookKey": "fanatics",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "Matchbook",
+          "bookKey": "matchbook",
+          "line": 1,
+          "odds": -111,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -1,
+          "odds": -104,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": -1.5,
+          "odds": -102,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -1,
+          "odds": -108,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:59Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -1,
+          "odds": -104,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": -1,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Everygame",
+          "bookKey": "everygame",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:39Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -1,
+          "odds": -104,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -1,
+          "odds": -108,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -1,
+          "odds": -104,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": -1,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "recommendedFund": "VectorFund",
+      "fundReason": "2 point edge vs sharp consensus — significant market discrepancy"
+    },
+    {
+      "gameId": "6c0605c60b07c6bc9b381b4b9c87c8bd",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Santa Clara Broncos",
+      "awayTeam": "Seattle Redhawks",
+      "gameTime": "2026-02-12T03:00:00Z",
+      "market": "spreads",
+      "side": "Santa Clara Broncos",
+      "betDescription": "Santa Clara Broncos -11.5",
+      "sharpConsensus": -13,
+      "bestLine": -11.5,
+      "bestBook": "FanDuel",
+      "bestOdds": -120,
+      "edge": 1.5,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -13,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -13,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": -11.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": -12.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:12Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": -12.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": -12.5,
+          "odds": -125,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": -12.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": -12.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": -12.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:10Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": -12.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -12.5,
+          "odds": -112,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": -12.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": -12.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:44Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -13,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -13,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -12.5,
+          "odds": -112,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "1e29ea38e9c7789166418c9a3544bff9",
+      "sport": "basketball_nba",
+      "sportLabel": "NBA",
+      "homeTeam": "Cleveland Cavaliers",
+      "awayTeam": "Washington Wizards",
+      "gameTime": "2026-02-12T00:10:00Z",
+      "market": "totals",
+      "side": "Under",
+      "betDescription": "Under 239.5",
+      "sharpConsensus": 238.5,
+      "bestLine": 239.5,
+      "bestBook": "BetMGM",
+      "bestOdds": -115,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 239.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:17Z"
+        },
+        {
+          "book": "Codere (IT)",
+          "bookKey": "codere_it",
+          "line": 238.5,
+          "odds": -114,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "MyBookie.ag",
+          "bookKey": "mybookieag",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:30Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 238.5,
+          "odds": -111,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Betsson",
+          "bookKey": "betsson",
+          "line": 238.5,
+          "odds": -111,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:25Z"
+        },
+        {
+          "book": "1xBet",
+          "bookKey": "onexbet",
+          "line": 238.5,
+          "odds": -104,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:11Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 238.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Tipico",
+          "bookKey": "tipico_de",
+          "line": 239.5,
+          "odds": -133,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:21Z"
+        },
+        {
+          "book": "LeoVegas (SE)",
+          "bookKey": "leovegas_se",
+          "line": 239,
+          "odds": -113,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:53Z"
+        },
+        {
+          "book": "Unibet (SE)",
+          "bookKey": "unibet_se",
+          "line": 239,
+          "odds": -113,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 239,
+          "odds": -113,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Fanatics",
+          "bookKey": "fanatics",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 238.5,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 239.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Matchbook",
+          "bookKey": "matchbook",
+          "line": 233,
+          "odds": 146,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 239,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:59Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 239,
+          "odds": -114,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Everygame",
+          "bookKey": "everygame",
+          "line": 239,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:39Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 238.5,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 239,
+          "odds": -114,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 238.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "fa53065fb88985857fe9cfe5372477dc",
+      "sport": "basketball_nba",
+      "sportLabel": "NBA",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "New York Knicks",
+      "gameTime": "2026-02-12T00:30:00Z",
+      "market": "totals",
+      "side": "Over",
+      "betDescription": "Over 223.5",
+      "sharpConsensus": 224.5,
+      "bestLine": 223.5,
+      "bestBook": "FanDuel",
+      "bestOdds": -115,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 223.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 224.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:17Z"
+        },
+        {
+          "book": "Codere (IT)",
+          "bookKey": "codere_it",
+          "line": 225.5,
+          "odds": -112,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "MyBookie.ag",
+          "bookKey": "mybookieag",
+          "line": 225.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:30Z"
+        },
+        {
+          "book": "1xBet",
+          "bookKey": "onexbet",
+          "line": 223.5,
+          "odds": -106,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Betsson",
+          "bookKey": "betsson",
+          "line": 224.5,
+          "odds": -116,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:25Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 224.5,
+          "odds": -116,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 224.5,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:11Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 224.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 224.5,
+          "odds": -113,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:53Z"
+        },
+        {
+          "book": "LeoVegas (SE)",
+          "bookKey": "leovegas_se",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (SE)",
+          "bookKey": "unibet_se",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Tipico",
+          "bookKey": "tipico_de",
+          "line": 225.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:21Z"
+        },
+        {
+          "book": "Fanatics",
+          "bookKey": "fanatics",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "Matchbook",
+          "bookKey": "matchbook",
+          "line": 222.5,
+          "odds": -127,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 224,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 224.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 224,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:59Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 224,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 225.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Everygame",
+          "bookKey": "everygame",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:39Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 225,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 224,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 224,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 225.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 225,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 1 pts — sharp movement detected"
+    },
+    {
+      "gameId": "fa53065fb88985857fe9cfe5372477dc",
+      "sport": "basketball_nba",
+      "sportLabel": "NBA",
+      "homeTeam": "Philadelphia 76ers",
+      "awayTeam": "New York Knicks",
+      "gameTime": "2026-02-12T00:30:00Z",
+      "market": "totals",
+      "side": "Under",
+      "betDescription": "Under 225.5",
+      "sharpConsensus": 224.5,
+      "bestLine": 225.5,
+      "bestBook": "MyBookie.ag",
+      "bestOdds": -110,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 223.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:17Z"
+        },
+        {
+          "book": "Codere (IT)",
+          "bookKey": "codere_it",
+          "line": 225.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "MyBookie.ag",
+          "bookKey": "mybookieag",
+          "line": 225.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:30Z"
+        },
+        {
+          "book": "1xBet",
+          "bookKey": "onexbet",
+          "line": 223.5,
+          "odds": -102,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Betsson",
+          "bookKey": "betsson",
+          "line": 224.5,
+          "odds": -111,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:25Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 224.5,
+          "odds": -111,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 224.5,
+          "odds": -112,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:11Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 224.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 224.5,
+          "odds": -113,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:53Z"
+        },
+        {
+          "book": "LeoVegas (SE)",
+          "bookKey": "leovegas_se",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (SE)",
+          "bookKey": "unibet_se",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Tipico",
+          "bookKey": "tipico_de",
+          "line": 225.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:21Z"
+        },
+        {
+          "book": "Fanatics",
+          "bookKey": "fanatics",
+          "line": 224.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "Matchbook",
+          "bookKey": "matchbook",
+          "line": 222.5,
+          "odds": 118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 224,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 224.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 224,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:59Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 224,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 225.5,
+          "odds": -109,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Everygame",
+          "bookKey": "everygame",
+          "line": 224,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:39Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 225,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 224,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 224,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 225.5,
+          "odds": -109,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 225,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 1 pts — sharp movement detected"
+    },
+    {
+      "gameId": "1ad953fef0955a0aa7ed634326688a91",
+      "sport": "basketball_nba",
+      "sportLabel": "NBA",
+      "homeTeam": "Utah Jazz",
+      "awayTeam": "Sacramento Kings",
+      "gameTime": "2026-02-12T02:10:00Z",
+      "market": "totals",
+      "side": "Under",
+      "betDescription": "Under 231",
+      "sharpConsensus": 230,
+      "bestLine": 231,
+      "bestBook": "BetRivers",
+      "bestOdds": -115,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 230.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Codere (IT)",
+          "bookKey": "codere_it",
+          "line": 230.5,
+          "odds": -119,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 230.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:17Z"
+        },
+        {
+          "book": "MyBookie.ag",
+          "bookKey": "mybookieag",
+          "line": 230,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:30Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 230,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 229.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 230,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "1xBet",
+          "bookKey": "onexbet",
+          "line": 230.5,
+          "odds": -106,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 230.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 230,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:11Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 230,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Tipico",
+          "bookKey": "tipico_de",
+          "line": 230.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:21Z"
+        },
+        {
+          "book": "Betsson",
+          "bookKey": "betsson",
+          "line": 230.5,
+          "odds": -114,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:25Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 230.5,
+          "odds": -114,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Matchbook",
+          "bookKey": "matchbook",
+          "line": 234.5,
+          "odds": -161,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 230.5,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "LeoVegas (SE)",
+          "bookKey": "leovegas_se",
+          "line": 230.5,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Unibet (SE)",
+          "bookKey": "unibet_se",
+          "line": 230.5,
+          "odds": -108,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 231,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:53Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 230,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:59Z"
+        },
+        {
+          "book": "Fanatics",
+          "bookKey": "fanatics",
+          "line": 230,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 229.5,
+          "odds": 101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 230,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 230,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Everygame",
+          "bookKey": "everygame",
+          "line": 230.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:39Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 230,
+          "odds": -107,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:32:52Z"
+        },
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 230,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 229.5,
+          "odds": 101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:07Z"
+        },
+        {
+          "book": "BetAnything",
+          "bookKey": "betanysports",
+          "line": 230,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "31481fc4fb8d821b57480d609c50d5f8",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Stetson Hatters",
+      "awayTeam": "Jacksonville Dolphins",
+      "gameTime": "2026-02-12T00:00:00Z",
+      "market": "spreads",
+      "side": "Jacksonville Dolphins",
+      "betDescription": "Jacksonville Dolphins -1",
+      "sharpConsensus": -2,
+      "bestLine": -1,
+      "bestBook": "Bovada",
+      "bestOdds": -110,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -2,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -2,
+          "odds": -106,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": -1.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": -1.5,
+          "odds": -114,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:42Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": -1.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": -2,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:12Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": -1.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": -1.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": -1.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": -1.5,
+          "odds": -106,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -1.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": -1,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": -1.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:10Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -2,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -2,
+          "odds": -106,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -1.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "ac6922fc08f7acc27afef9e13071cb81",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Northern Illinois Huskies",
+      "awayTeam": "Bowling Green Falcons",
+      "gameTime": "2026-02-12T01:00:00Z",
+      "market": "spreads",
+      "side": "Bowling Green Falcons",
+      "betDescription": "Bowling Green Falcons -6.5",
+      "sharpConsensus": -7.5,
+      "bestLine": -6.5,
+      "bestBook": "BetRivers",
+      "bestOdds": -117,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -7.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -7.5,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": -7.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": -6.5,
+          "odds": -132,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:42Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -7.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": -7.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": -7,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:44Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": -6.5,
+          "odds": -117,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": -6.5,
+          "odds": -117,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": -7.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": -7.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": -7.5,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": -7.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "1 point edge with sharp book confirmation"
+    },
+    {
+      "gameId": "e58c0b2a029d420d62a5214145834e82",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Lipscomb Bisons",
+      "awayTeam": "Eastern Kentucky Colonels",
+      "gameTime": "2026-02-12T01:00:00Z",
+      "market": "spreads",
+      "side": "Eastern Kentucky Colonels",
+      "betDescription": "Eastern Kentucky Colonels +6.5",
+      "sharpConsensus": 5.5,
+      "bestLine": 6.5,
+      "bestBook": "DraftKings",
+      "bestOdds": -115,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 5.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 5.5,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 5.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 6.5,
+          "odds": -114,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:42Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 5.5,
+          "odds": -104,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:12Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 5.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 6.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 6.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 6.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 6.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 6,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 6,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 5.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:10Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 5.5,
+          "odds": -105,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 5.5,
+          "odds": -101,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 6,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "5e18d16554d03bda34e32300ba933fab",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Texas State Bobcats",
+      "awayTeam": "Troy Trojans",
+      "gameTime": "2026-02-12T01:00:00Z",
+      "market": "spreads",
+      "side": "Texas State Bobcats",
+      "betDescription": "Texas State Bobcats +5.5",
+      "sharpConsensus": 4.5,
+      "bestLine": 5.5,
+      "bestBook": "BetRivers",
+      "bestOdds": -120,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 4.5,
+          "odds": -112,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 4.5,
+          "odds": -108,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 4.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "Nordic Bet",
+          "bookKey": "nordicbet",
+          "line": 5.5,
+          "odds": -132,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:42Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 4.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:12Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 4.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 4.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 5,
+          "odds": -109,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 4.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:44Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 4.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:10Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 5.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 5.5,
+          "odds": -120,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 4.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 4.5,
+          "odds": -112,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 4.5,
+          "odds": -108,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 5,
+          "odds": -109,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "Pinnacle off consensus by 0.5 pts — sharp movement detected"
+    },
+    {
+      "gameId": "5d3d0b10eeafdcdf9404e24a2c990bd5",
+      "sport": "basketball_ncaab",
+      "sportLabel": "NCAAB",
+      "homeTeam": "Texas A&M Aggies",
+      "awayTeam": "Missouri Tigers",
+      "gameTime": "2026-02-12T02:00:00Z",
+      "market": "spreads",
+      "side": "Missouri Tigers",
+      "betDescription": "Missouri Tigers +7.5",
+      "sharpConsensus": 6.5,
+      "bestLine": 7.5,
+      "bestBook": "DraftKings",
+      "bestOdds": -115,
+      "edge": 1,
+      "allLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 6.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 6.5,
+          "odds": -106,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "FanDuel",
+          "bookKey": "fanduel",
+          "line": 6.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "888sport",
+          "bookKey": "sport888",
+          "line": 6.5,
+          "odds": -118,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "GTbets",
+          "bookKey": "gtbets",
+          "line": 6.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:12Z"
+        },
+        {
+          "book": "BetRivers",
+          "bookKey": "betrivers",
+          "line": 6.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:54Z"
+        },
+        {
+          "book": "Unibet (NL)",
+          "bookKey": "unibet_nl",
+          "line": 6.5,
+          "odds": -109,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "DraftKings",
+          "bookKey": "draftkings",
+          "line": 7.5,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:55Z"
+        },
+        {
+          "book": "BetMGM",
+          "bookKey": "betmgm",
+          "line": 6.5,
+          "odds": -105,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:22Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 6.5,
+          "odds": -102,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Bovada",
+          "bookKey": "bovada",
+          "line": 7,
+          "odds": -115,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "BetUS",
+          "bookKey": "betus",
+          "line": 6.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:32:44Z"
+        },
+        {
+          "book": "Caesars",
+          "bookKey": "williamhill_us",
+          "line": 6.5,
+          "odds": -110,
+          "isSharp": false,
+          "lastUpdate": "2026-02-11T23:31:10Z"
+        }
+      ],
+      "sharpLines": [
+        {
+          "book": "BetOnline.ag",
+          "bookKey": "betonlineag",
+          "line": 6.5,
+          "odds": -110,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:09Z"
+        },
+        {
+          "book": "LowVig.ag",
+          "bookKey": "lowvig",
+          "line": 6.5,
+          "odds": -106,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        },
+        {
+          "book": "Pinnacle",
+          "bookKey": "pinnacle",
+          "line": 6.5,
+          "odds": -102,
+          "isSharp": true,
+          "lastUpdate": "2026-02-11T23:33:08Z"
+        }
+      ],
+      "recommendedFund": "SharpFund",
+      "fundReason": "1 point edge with sharp book confirmation"
+    }
+  ],
+  "gamesScanned": 124,
+  "marketsAnalyzed": 1347
+}
