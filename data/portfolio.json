@@ -1,17 +1,17 @@
 {
-  "asOfDate": "2026-03-02",
+  "asOfDate": "2026-03-03",
   "combined": {
-    "balance": 44653.76,
+    "balance": 44745.82,
     "startingBalance": 40000,
-    "netPL": 4653.76,
-    "roi": 11.63,
+    "netPL": 4745.82,
+    "roi": 11.86,
     "record": {
-      "wins": 380,
-      "losses": 327,
+      "wins": 383,
+      "losses": 329,
       "pushes": 2
     },
-    "winRate": 53.75,
-    "unitsWon": 46.54,
+    "winRate": 53.79,
+    "unitsWon": 47.46,
     "sharpe": 2.72
   },
   "funds": {
@@ -35,17 +35,17 @@
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 12751.24,
+      "balance": 12838.30,
       "startingBalance": 10000,
-      "netPL": 2751.24,
-      "roi": 27.51,
+      "netPL": 2838.30,
+      "roi": 28.38,
       "record": {
-        "wins": 167,
-        "losses": 136,
+        "wins": 169,
+        "losses": 137,
         "pushes": 0
       },
-      "winRate": 55.12,
-      "unitsWon": 27.51,
+      "winRate": 55.23,
+      "unitsWon": 28.38,
       "color": "#22c55e",
       "status": "active"
     },
@@ -69,17 +69,17 @@
     "CatalystFund": {
       "name": "Catalyst Fund",
       "tagline": "Situational opportunities",
-      "balance": 11284.52,
+      "balance": 11289.52,
       "startingBalance": 10000,
-      "netPL": 1284.52,
-      "roi": 12.85,
+      "netPL": 1289.52,
+      "roi": 12.90,
       "record": {
-        "wins": 47,
-        "losses": 38,
+        "wins": 48,
+        "losses": 39,
         "pushes": 1
       },
-      "winRate": 55.29,
-      "unitsWon": 12.85,
+      "winRate": 54.55,
+      "unitsWon": 12.90,
       "color": "#8b5cf6",
       "status": "active"
     }

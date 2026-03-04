@@ -1,14 +1,14 @@
 {
-  "totalBets": 709,
-  "wins": 380,
-  "losses": 327,
+  "totalBets": 714,
+  "wins": 383,
+  "losses": 329,
   "pushes": 2,
-  "winRate": 53.75,
-  "totalWinnings": 45493.76,
-  "totalLossesAmount": 40640,
-  "avgWin": 119.3,
-  "avgLoss": -124.74,
-  "avgProfitPerBet": 6.55,
+  "winRate": 53.79,
+  "totalWinnings": 45785.82,
+  "totalLossesAmount": 40840,
+  "avgWin": 119.54,
+  "avgLoss": -124.13,
+  "avgProfitPerBet": 6.65,
   "medianProfit": 0,
   "largestWin": 345,
   "largestLoss": -250,
@@ -16,8 +16,8 @@
   "maxWinStreak": 9,
   "maxLossStreak": 8,
   "currentStreak": 1,
-  "totalCapitalRisked": 88265.0,
-  "unitsRisked": 882.65,
+  "totalCapitalRisked": 88765.0,
+  "unitsRisked": 887.65,
   "maxDrawdown": -2368.3,
   "maxDrawdownPercent": -5.07,
   "maxDrawdownPeak": "2026-01-10",
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 46691.55,
   "maxDrawdownTroughBalance": 44323.25,
   "currentDrawdown": {
-    "amount": -2037.79,
-    "percentage": -4.36,
-    "daysSincePeak": 51,
+    "amount": -1945.73,
+    "percentage": -4.17,
+    "daysSincePeak": 52,
     "peakBalance": 46691.55,
     "peakDate": "2026-01-10",
-    "currentBalance": 44653.76
+    "currentBalance": 44745.82
   },
   "sharpeRatio": 2.72,
   "sharpeRatioNote": "100-day sample",
@@ -65,7 +65,7 @@
     }
   },
   "daysGreenStreak": {
-    "current": 1,
+    "current": 2,
     "best": 6
   },
   "edgeValidation": {
@@ -118,33 +118,33 @@
       "sport": "NBA",
       "emoji": "\ud83c\udfc0",
       "record": {
-        "wins": 130,
-        "losses": 96,
+        "wins": 131,
+        "losses": 97,
         "pushes": 0,
-        "total": 226
+        "total": 228
       },
-      "wins": 130,
-      "losses": 96,
-      "winRate": 57.52,
-      "roi": 10.52,
-      "pnl": 2818.48,
-      "unitsWon": 28.1848
+      "wins": 131,
+      "losses": 97,
+      "winRate": 57.46,
+      "roi": 10.36,
+      "pnl": 2814.63,
+      "unitsWon": 28.1463
     },
     "NCAAB": {
       "sport": "NCAAB",
       "emoji": "\ud83c\udf93",
       "record": {
-        "wins": 106,
-        "losses": 88,
+        "wins": 108,
+        "losses": 89,
         "pushes": 0,
-        "total": 194
+        "total": 197
       },
-      "wins": 106,
-      "losses": 88,
-      "winRate": 54.64,
-      "roi": 4.12,
-      "pnl": 799.05,
-      "unitsWon": 7.9905
+      "wins": 108,
+      "losses": 89,
+      "winRate": 54.82,
+      "roi": 4.61,
+      "pnl": 894.97,
+      "unitsWon": 8.9497
     },
     "NFL": {
       "sport": "NFL",
