@@ -1,68 +1,68 @@
 {
-  "asOfDate": "2026-03-03",
+  "asOfDate": "2026-03-04",
   "combined": {
-    "balance": 44745.82,
+    "balance": 45216.38,
     "startingBalance": 40000,
-    "netPL": 4745.82,
-    "roi": 11.86,
+    "netPL": 5216.38,
+    "roi": 13.04,
     "record": {
-      "wins": 383,
+      "wins": 388,
       "losses": 329,
       "pushes": 2
     },
-    "winRate": 53.79,
-    "unitsWon": 47.46,
-    "sharpe": 2.72
+    "winRate": 54.11,
+    "unitsWon": 52.16,
+    "sharpe": 2.75
   },
   "funds": {
     "VectorFund": {
       "name": "Flagship Vector Fund",
       "tagline": "Model-driven edge detection",
-      "balance": 9623.67,
+      "balance": 9805.49,
       "startingBalance": 10000,
-      "netPL": -376.33,
-      "roi": -3.76,
+      "netPL": -194.51,
+      "roi": -1.95,
       "record": {
-        "wins": 134,
+        "wins": 136,
         "losses": 128,
         "pushes": 1
       },
-      "winRate": 51.15,
-      "unitsWon": -3.76,
+      "winRate": 51.52,
+      "unitsWon": -1.95,
       "color": "#1a1a1a",
       "status": "active"
     },
     "SharpFund": {
       "name": "Sharp Fund",
       "tagline": "Following the smart money",
-      "balance": 12838.30,
+      "balance": 13027.04,
       "startingBalance": 10000,
-      "netPL": 2838.30,
-      "roi": 28.38,
+      "netPL": 3027.04,
+      "roi": 30.27,
       "record": {
-        "wins": 169,
+        "wins": 171,
         "losses": 137,
         "pushes": 0
       },
-      "winRate": 55.23,
-      "unitsWon": 28.38,
+      "winRate": 55.52,
+      "unitsWon": 30.27,
       "color": "#22c55e",
       "status": "active"
     },
     "ContraFund": {
       "name": "Contra Fund",
       "tagline": "Fading the public",
-      "balance": 10994.33,
+      "balance": 11094.33,
       "startingBalance": 10000,
-      "netPL": 994.33,
-      "roi": 9.94,
+      "netPL": 1094.33,
+      "roi": 10.94,
       "record": {
-        "wins": 32,
+        "wins": 33,
         "losses": 25,
         "pushes": 0
       },
-      "winRate": 56.14,
-      "unitsWon": 9.94,
+      "winRate": 56.90,
+      "unitsWon": 10.94,
       "color": "#f97316",
       "status": "active"
     },
