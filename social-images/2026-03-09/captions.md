@@ -15,3 +15,19 @@ MAR 9 PICKS
 5 picks | 5u | $500
 
 #SportsBetting #FreePicks #GamblingTwitter
+
+## Instagram (results + daily report + portfolio)
+MAR 9 | 3-2 | +$71 | Day 102 | $44,926 (+12.31% ROI) #sportsbetting #deptofgambling #freepicks
+
+## Twitter (results)
+MAR 9: 3-2 | +$71
+
+✅ MONT +4.5
+✅ DEN +6.5
+✅ UTA +7
+❌ GASO +5.5
+❌ WEB +3.5
+
+Day 102 | $44,926 | +12.31% ROI
+
+#SportsBetting #FreePicks #GamblingTwitter

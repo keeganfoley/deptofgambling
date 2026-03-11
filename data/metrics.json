@@ -1,23 +1,23 @@
 {
-  "totalBets": 739,
-  "wins": 397,
-  "losses": 340,
+  "totalBets": 744,
+  "wins": 400,
+  "losses": 342,
   "pushes": 2,
-  "winRate": 53.87,
-  "totalWinnings": 46708.93,
-  "totalLossesAmount": 41440,
-  "avgWin": 119,
-  "avgLoss": -122.6,
-  "avgProfitPerBet": 6.61,
+  "winRate": 53.91,
+  "totalWinnings": 46995.71,
+  "totalLossesAmount": 41640,
+  "avgWin": 117.5,
+  "avgLoss": -121.8,
+  "avgProfitPerBet": 7.2,
   "medianProfit": 0,
   "largestWin": 345,
   "largestLoss": -250,
   "profitFactor": 1.13,
   "maxWinStreak": 9,
   "maxLossStreak": 8,
-  "currentStreak": -1,
-  "totalCapitalRisked": 90265,
-  "unitsRisked": 902.65,
+  "currentStreak": 2,
+  "totalCapitalRisked": 90765,
+  "unitsRisked": 907.65,
   "maxDrawdown": -2368.3,
   "maxDrawdownPercent": -5.07,
   "maxDrawdownPeak": "2026-01-10",
@@ -25,12 +25,12 @@
   "maxDrawdownPeakBalance": 46691.55,
   "maxDrawdownTroughBalance": 44323.25,
   "currentDrawdown": {
-    "amount": -1836.47,
-    "percentage": -3.93,
-    "daysSincePeak": 57,
+    "amount": -1678.79,
+    "percentage": -3.6,
+    "daysSincePeak": 58,
     "peakBalance": 46691.55,
     "peakDate": "2026-01-10",
-    "currentBalance": 44855.08
+    "currentBalance": 45012.76
   },
   "sharpeRatio": 2.62,
   "sharpeRatioNote": "100-day sample",
@@ -43,42 +43,42 @@
       "wins": 17,
       "losses": 13,
       "pushes": 0,
-      "pnl": 346.23,
-      "roi": 11.54,
+      "pnl": 340.96,
+      "roi": 11.37,
       "bets": 30
     },
     "last30Days": {
-      "wins": 101,
-      "losses": 104,
+      "wins": 104,
+      "losses": 106,
       "pushes": 0,
-      "pnl": -633.69,
-      "roi": -3.09,
-      "bets": 205
+      "pnl": -546.9,
+      "roi": -2.6,
+      "bets": 210
     },
     "last3Days": {
-      "wins": 6,
-      "losses": 9,
+      "wins": 7,
+      "losses": 8,
       "pushes": 0,
-      "pnl": -361.3,
-      "roi": -24.09,
+      "pnl": -160.66,
+      "roi": -10.71,
       "bets": 15
     }
   },
   "daysGreenStreak": {
-    "current": 0,
+    "current": 2,
     "best": 6
   },
   "edgeValidation": {
     "lowEdge": {
       "min": 0,
       "max": 5,
-      "wins": 104,
-      "losses": 74,
+      "wins": 107,
+      "losses": 76,
       "pushes": 1,
-      "pnl": 2961.69,
-      "roi": 16.55,
-      "bets": 179,
-      "winRate": 58.43
+      "pnl": 3048.48,
+      "roi": 16.57,
+      "bets": 184,
+      "winRate": 58.47
     },
     "midEdge": {
       "min": 5,
@@ -103,7 +103,7 @@
       "winRate": 49.39
     },
     "isCorrelated": false,
-    "totalBetsWithEdge": 656
+    "totalBetsWithEdge": 661
   },
   "evAnalysis": {
     "totalExpectedValue": 5975,
@@ -119,32 +119,32 @@
       "emoji": "\ud83c\udfc0",
       "record": {
         "wins": 135,
-        "losses": 100,
+        "losses": 101,
         "pushes": 0,
-        "total": 235
+        "total": 236
       },
       "wins": 135,
-      "losses": 100,
-      "winRate": 57.45,
-      "roi": 12.29,
-      "pnl": 2888.44,
-      "unitsWon": 28.8844
+      "losses": 101,
+      "winRate": 57.2,
+      "roi": 11.82,
+      "pnl": 2788.44,
+      "unitsWon": 27.8844
     },
     "NCAAB": {
       "sport": "NCAAB",
       "emoji": "\ud83c\udf93",
       "record": {
-        "wins": 112,
-        "losses": 91,
+        "wins": 115,
+        "losses": 92,
         "pushes": 0,
-        "total": 203
+        "total": 207
       },
-      "wins": 112,
-      "losses": 91,
-      "winRate": 55.17,
-      "roi": 5.22,
-      "pnl": 1059.53,
-      "unitsWon": 10.5953
+      "wins": 115,
+      "losses": 92,
+      "winRate": 55.56,
+      "roi": 6.02,
+      "pnl": 1246.31,
+      "unitsWon": 12.4631
     },
     "NFL": {
       "sport": "NFL",
