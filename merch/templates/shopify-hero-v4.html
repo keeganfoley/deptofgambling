@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1920px;
+    height: 720px;
+  }
+  .hero {
+    width: 1920px;
+    height: 720px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111 35%, #0d0d0d 65%, #0a0a0a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Subtle radial glow behind main logo */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 600px;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.02) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  /* Gold accent lines */
+  .top-line {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent 10%, #b8860b 30%, #daa520 50%, #b8860b 70%, transparent 90%);
+  }
+  .bottom-line {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent 10%, #b8860b 30%, #daa520 50%, #b8860b 70%, transparent 90%);
+  }
+  /* Corner accents */
+  .corner { position: absolute; width: 50px; height: 50px; z-index: 1; }
+  .corner-tl { top: 18px; left: 18px; border-top: 1px solid rgba(184,134,11,0.25); border-left: 1px solid rgba(184,134,11,0.25); }
+  .corner-tr { top: 18px; right: 18px; border-top: 1px solid rgba(184,134,11,0.25); border-right: 1px solid rgba(184,134,11,0.25); }
+  .corner-bl { bottom: 18px; left: 18px; border-bottom: 1px solid rgba(184,134,11,0.25); border-left: 1px solid rgba(184,134,11,0.25); }
+  .corner-br { bottom: 18px; right: 18px; border-bottom: 1px solid rgba(184,134,11,0.25); border-right: 1px solid rgba(184,134,11,0.25); }
+
+  /* Left side: main GamblingShirts logo */
+  .main-logo {
+    position: relative;
+    z-index: 2;
+    flex-shrink: 0;
+  }
+  .main-logo img {
+    width: 520px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 30px rgba(0,0,0,0.5));
+  }
+
+  .divider {
+    width: 2px;
+    height: 320px;
+    background: linear-gradient(to bottom, transparent, #b8860b, #daa520, #b8860b, transparent);
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Right side: text + D.O.G. seal badge */
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+  }
+  .presented-by {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .presented-by img {
+    width: 56px;
+    height: 56px;
+    display: block;
+    filter: drop-shadow(0 2px 8px rgba(184,134,11,0.2));
+  }
+  .presented-by span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #b8860b;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+  .headline {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 52px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  .sub {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #999;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .shop-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0a0a0a;
+    background: linear-gradient(135deg, #daa520, #b8860b);
+    padding: 14px 44px;
+    border-radius: 3px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="top-line"></div>
+    <div class="bottom-line"></div>
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+
+    <div class="main-logo">
+      <img src="/Users/keeganfoley/Downloads/ChatGPT Image Mar 5, 2026, 10_24_11 AM.png">
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="content">
+      <div class="presented-by">
+        <img src="/Users/keeganfoley/Downloads/gambling_logo_transparent_fixed.png">
+        <span>Department of Gambling</span>
+      </div>
+      <div class="headline">Browse Our<br>Latest Products</div>
+      <div class="sub">Official Merch Collection</div>
+      <a class="shop-btn" href="#">Shop All</a>
+    </div>
+
+    <div class="bottom-line"></div>
+  </div>
+</body>
+</html>

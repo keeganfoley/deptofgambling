@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Merch Highlight</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1080px;
+      height: 1920px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(180deg, #4a7cb8 0%, #3a5a8a 40%, #1a2d4a 100%);
+      position: relative;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .icon {
+      position: relative;
+      z-index: 1;
+    }
+
+    .icon svg {
+      width: 400px;
+      height: 400px;
+      filter: drop-shadow(0 0 50px rgba(251, 191, 36, 0.3));
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="icon">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- T-shirt -->
+      <path d="M20 12 L8 18 L12 30 L18 27 L18 54 C18 55.1 18.9 56 20 56 L44 56 C45.1 56 46 55.1 46 54 L46 27 L52 30 L56 18 L44 12 C44 12 42 20 32 20 C22 20 20 12 20 12Z" fill="#fbbf24"/>
+    </svg>
+  </div>
+</body>
+</html>

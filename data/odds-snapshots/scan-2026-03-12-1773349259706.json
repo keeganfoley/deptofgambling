@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-03-12T21:00:59.693Z",
+  "sportsScanned": [
+    "NBA",
+    "NCAAB",
+    "NHL",
+    "NFL"
+  ],
+  "requestsUsed": 0,
+  "requestsRemaining": 0,
+  "opportunities": [],
+  "gamesScanned": 0,
+  "marketsAnalyzed": 0
+}

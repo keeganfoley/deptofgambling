@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The System - Slide 1</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    .container {
+      width: 1080px;
+      height: 1350px;
+      position: relative;
+      background: linear-gradient(180deg, #0a1628 0%, #0d1f3c 50%, #061224 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .grid-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-image:
+        linear-gradient(rgba(251,191,36,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(251,191,36,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .corner-accent {
+      position: absolute;
+      width: 110px;
+      height: 110px;
+      border: 3px solid rgba(251,191,36,0.25);
+      z-index: 2;
+    }
+    .corner-accent.tl { top: 16px; left: 16px; border-right: none; border-bottom: none; }
+    .corner-accent.tr { top: 16px; right: 16px; border-left: none; border-bottom: none; }
+    .corner-accent.bl { bottom: 16px; left: 16px; border-right: none; border-top: none; }
+    .corner-accent.br { bottom: 16px; right: 16px; border-left: none; border-top: none; }
+
+    .candles-bg {
+      position: absolute;
+      bottom: 40px; left: 0; right: 0;
+      height: 300px; opacity: 0.03;
+      display: flex; align-items: flex-end; justify-content: center; gap: 16px; padding: 0 40px;
+    }
+    .candle { display: flex; flex-direction: column; align-items: center; }
+    .wick { width: 3px; border-radius: 2px; }
+    .cbody { width: 14px; border-radius: 3px; }
+    .candle.g .wick, .candle.g .cbody { background: #22c55e; }
+    .candle.r .wick, .candle.r .cbody { background: #dc2626; }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 60px 40px;
+    }
+
+    .logo { width: 120px; height: 120px; margin-bottom: 20px; }
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 30px rgba(251,191,36,0.35));
+    }
+
+    .title {
+      font-size: 62px;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 3px;
+      text-align: center;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 10px;
+      color: #fbbf24;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      width: 400px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(251,191,36,0.5), transparent);
+      margin-bottom: 40px;
+    }
+
+    .concept-box {
+      width: 100%;
+      background: linear-gradient(135deg, rgba(251,191,36,0.08) 0%, rgba(20,35,60,0.9) 50%, rgba(251,191,36,0.04) 100%);
+      border: 2px solid rgba(251,191,36,0.3);
+      border-radius: 20px;
+      padding: 40px 45px;
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .concept-text {
+      font-size: 28px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.9);
+      text-align: center;
+      line-height: 1.6;
+    }
+    .concept-text .gold { color: #fbbf24; font-weight: 700; }
+    .concept-text .white { color: white; font-weight: 700; }
+
+    .arrow-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      margin-bottom: 45px;
+      width: 100%;
+    }
+
+    .capital-box {
+      background: rgba(30, 41, 59, 0.6);
+      border: 2px solid rgba(255,255,255,0.15);
+      border-radius: 16px;
+      padding: 25px 40px;
+      text-align: center;
+    }
+    .capital-label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 8px;
+    }
+    .capital-value {
+      font-size: 52px;
+      font-weight: 900;
+      font-family: 'JetBrains Mono', monospace;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .arrow-icon {
+      font-size: 40px;
+      color: #fbbf24;
+    }
+
+    .capital-box.current {
+      border-color: #22c55e;
+      box-shadow: 0 0 30px rgba(34, 197, 94, 0.15);
+    }
+    .capital-box.current .capital-value {
+      color: #22c55e;
+    }
+
+    .pillars {
+      display: flex;
+      gap: 16px;
+      width: 100%;
+      margin-bottom: 45px;
+    }
+
+    .pillar {
+      flex: 1;
+      background: rgba(30, 41, 59, 0.5);
+      border: 2px solid rgba(251,191,36,0.2);
+      border-radius: 14px;
+      padding: 28px 20px;
+      text-align: center;
+    }
+
+    .pillar-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .pillar-title {
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: #fbbf24;
+      margin-bottom: 8px;
+    }
+
+    .pillar-desc {
+      font-size: 16px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.5;
+    }
+
+    .tagline {
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      text-align: center;
+      letter-spacing: 2px;
+    }
+    .tagline .gold { color: #fbbf24; }
+
+    .footer {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid rgba(251,191,36,0.12);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .footer-side {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+    .footer-center {
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: rgba(255,255,255,0.55);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="grid-bg"></div>
+    <div class="corner-accent tl"></div>
+    <div class="corner-accent tr"></div>
+    <div class="corner-accent bl"></div>
+    <div class="corner-accent br"></div>
+
+    <div class="candles-bg">
+      <div class="candle g"><div class="wick" style="height:130px"></div><div class="cbody" style="height:75px"></div></div>
+      <div class="candle r"><div class="wick" style="height:95px"></div><div class="cbody" style="height:48px"></div></div>
+      <div class="candle g"><div class="wick" style="height:150px"></div><div class="cbody" style="height:85px"></div></div>
+      <div class="candle r"><div class="wick" style="height:75px"></div><div class="cbody" style="height:42px"></div></div>
+      <div class="candle g"><div class="wick" style="height:120px"></div><div class="cbody" style="height:68px"></div></div>
+      <div class="candle g"><div class="wick" style="height:140px"></div><div class="cbody" style="height:80px"></div></div>
+      <div class="candle r"><div class="wick" style="height:100px"></div><div class="cbody" style="height:52px"></div></div>
+      <div class="candle g"><div class="wick" style="height:160px"></div><div class="cbody" style="height:90px"></div></div>
+      <div class="candle r"><div class="wick" style="height:85px"></div><div class="cbody" style="height:40px"></div></div>
+      <div class="candle g"><div class="wick" style="height:135px"></div><div class="cbody" style="height:72px"></div></div>
+      <div class="candle g"><div class="wick" style="height:145px"></div><div class="cbody" style="height:82px"></div></div>
+      <div class="candle r"><div class="wick" style="height:92px"></div><div class="cbody" style="height:46px"></div></div>
+      <div class="candle g"><div class="wick" style="height:125px"></div><div class="cbody" style="height:70px"></div></div>
+      <div class="candle g"><div class="wick" style="height:155px"></div><div class="cbody" style="height:88px"></div></div>
+      <div class="candle r"><div class="wick" style="height:88px"></div><div class="cbody" style="height:44px"></div></div>
+      <div class="candle g"><div class="wick" style="height:130px"></div><div class="cbody" style="height:74px"></div></div>
+      <div class="candle r"><div class="wick" style="height:78px"></div><div class="cbody" style="height:38px"></div></div>
+      <div class="candle g"><div class="wick" style="height:142px"></div><div class="cbody" style="height:78px"></div></div>
+      <div class="candle g"><div class="wick" style="height:165px"></div><div class="cbody" style="height:92px"></div></div>
+      <div class="candle r"><div class="wick" style="height:96px"></div><div class="cbody" style="height:50px"></div></div>
+      <div class="candle g"><div class="wick" style="height:148px"></div><div class="cbody" style="height:84px"></div></div>
+    </div>
+
+    <div class="content">
+      <div class="logo"><img src="https://deptofgambling.com/logo.png" alt="DoG"></div>
+
+      <div class="title">DEPARTMENT OF<br>GAMBLING</div>
+      <div class="subtitle">A SPORTS BETTING HEDGE FUND</div>
+
+      <div class="divider"></div>
+
+      <div class="concept-box">
+        <div class="concept-text">
+          We split <span class="gold">$40,000</span> across <span class="gold">4 specialized funds</span>,
+          each hunting a <span class="white">different type of edge</span>.
+          Every bet is tracked with <span class="gold">full transparency</span>.
+        </div>
+      </div>
+
+      <div class="arrow-section">
+        <div class="capital-box">
+          <div class="capital-label">STARTED WITH</div>
+          <div class="capital-value">$40,000</div>
+        </div>
+        <div class="arrow-icon">&#10230;</div>
+        <div class="capital-box current">
+          <div class="capital-label">CURRENT BALANCE</div>
+          <div class="capital-value">$45,216</div>
+        </div>
+      </div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-icon">&#128200;</div>
+          <div class="pillar-title">4 FUNDS</div>
+          <div class="pillar-desc">Each fund targets a unique market edge</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">&#128176;</div>
+          <div class="pillar-title">FLAT STAKES</div>
+          <div class="pillar-desc">$100/bet, no conviction scaling</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">&#128269;</div>
+          <div class="pillar-title">TRANSPARENT</div>
+          <div class="pillar-desc">Every pick posted before the game</div>
+        </div>
+      </div>
+
+      <div class="tagline">Swipe to see <span class="gold">the four funds</span> &#10230;</div>
+
+      <div class="footer">
+        <div class="footer-side">EST. NOV 2025</div>
+        <div class="footer-center">DEPTOFGAMBLING.COM</div>
+        <div class="footer-side">1 OF 3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

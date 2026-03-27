@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2400px;
+    height: 800px;
+  }
+  .hero {
+    width: 2400px;
+    height: 800px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111 40%, #0d0d0d 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Subtle gold accent line at top */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #b8860b, #daa520, #b8860b, transparent);
+  }
+  /* Subtle gold accent line at bottom */
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #b8860b, #daa520, #b8860b, transparent);
+  }
+  .seal img {
+    width: 360px;
+    height: auto;
+    display: block;
+  }
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 80px;
+    color: #ffffff;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    line-height: 1.1;
+  }
+  .divider-line {
+    width: 300px;
+    height: 2px;
+    background: linear-gradient(to right, #b8860b, #daa520, transparent);
+  }
+  .subtitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    color: #888;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="seal">
+      <img src="/Users/keeganfoley/Downloads/gambling_logo_transparent_fixed.png">
+    </div>
+    <div class="text">
+      <div class="title">Department<br>of Gambling</div>
+      <div class="divider-line"></div>
+      <div class="subtitle">Official Merch</div>
+    </div>
+  </div>
+</body>
+</html>

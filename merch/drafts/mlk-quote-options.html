@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Oswald:wght@300;400;500;600;700&family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a0a0a;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+  .label {
+    color: #555;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    text-align: center;
+  }
+  .option {
+    width: 800px;
+    min-height: 500px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+  }
+
+  /* Placeholder portrait */
+  .portrait {
+    width: 280px;
+    height: 320px;
+    border: 2px dashed #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  /* ===================== */
+  /* OPTION A — Classic Serif */
+  /* ===================== */
+  .option-a .quote {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 52px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+  .option-a .divider {
+    width: 80px;
+    height: 2px;
+    background: #ffffff;
+    margin-bottom: 20px;
+  }
+  .option-a .attribution {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+
+  /* ===================== */
+  /* OPTION B — Bold Condensed */
+  /* ===================== */
+  .option-b .quote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 72px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 4px;
+    line-height: 1.05;
+    margin-bottom: 16px;
+  }
+  .option-b .attribution {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 22px;
+    color: #666;
+    letter-spacing: 8px;
+  }
+
+  /* ===================== */
+  /* OPTION C — Elegant Italic */
+  /* ===================== */
+  .option-c .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 54px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .option-c .dash {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    color: #888;
+    letter-spacing: 3px;
+  }
+
+  /* ===================== */
+  /* OPTION D — Modern Clean */
+  /* ===================== */
+  .option-d .quote {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+  .option-d .divider {
+    width: 40px;
+    height: 3px;
+    background: #fff;
+    margin-bottom: 24px;
+  }
+  .option-d .attribution {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #666;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+  }
+
+  /* ===================== */
+  /* OPTION E — Statement / Poster */
+  /* ===================== */
+  .option-e {
+    position: relative;
+  }
+  .option-e .big-quotes {
+    font-family: 'Playfair Display', serif;
+    font-size: 200px;
+    color: #222;
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    line-height: 1;
+  }
+  .option-e .quote {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+  }
+  .option-e .divider {
+    width: 100%;
+    max-width: 400px;
+    height: 1px;
+    background: #444;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+  }
+  .option-e .attribution {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #888;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* ===================== */
+  /* OPTION F — Stacked Heavy */
+  /* ===================== */
+  .option-f .quote-line {
+    font-family: 'DM Serif Display', serif;
+    font-size: 64px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.1;
+  }
+  .option-f .quote-line.highlight {
+    color: #ffffff;
+    font-size: 80px;
+  }
+  .option-f .attribution-box {
+    margin-top: 28px;
+    border: 1px solid #444;
+    padding: 10px 30px;
+    display: inline-block;
+  }
+  .option-f .attribution {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <!-- OPTION A -->
+  <div class="label">A — Classic Serif</div>
+  <div class="option option-a">
+    <div class="portrait">Portrait Here</div>
+    <div class="quote">"Put It All On Black"</div>
+    <div class="divider"></div>
+    <div class="attribution">— Martin Luther King Jr.</div>
+  </div>
+
+  <!-- OPTION B -->
+  <div class="label">B — Bold Condensed</div>
+  <div class="option option-b">
+    <div class="portrait">Portrait Here</div>
+    <div class="quote">"PUT IT ALL<br>ON BLACK"</div>
+    <div class="attribution">— Martin Luther King Jr.</div>
+  </div>
+
+  <!-- OPTION C -->
+  <div class="label">C — Elegant Italic</div>
+  <div class="option option-c">
+    <div class="portrait">Portrait Here</div>
+    <div class="quote">"Put It All On Black"</div>
+    <div class="dash">— Martin Luther King Jr.</div>
+  </div>
+
+  <!-- OPTION D -->
+  <div class="label">D — Modern Clean</div>
+  <div class="option option-d">
+    <div class="portrait">Portrait Here</div>
+    <div class="quote">"Put It All<br>On Black"</div>
+    <div class="divider"></div>
+    <div class="attribution">Martin Luther King Jr.</div>
+  </div>
+
+  <!-- OPTION E -->
+  <div class="label">E — Statement Poster</div>
+  <div class="option option-e">
+    <div class="big-quotes">"</div>
+    <div class="portrait">Portrait Here</div>
+    <div class="quote">PUT IT ALL<br>ON BLACK</div>
+    <div class="divider"></div>
+    <div class="attribution">Martin Luther King Jr.</div>
+  </div>
+
+  <!-- OPTION F -->
+  <div class="label">F — Stacked Heavy</div>
+  <div class="option option-f">
+    <div class="portrait">Portrait Here</div>
+    <div class="quote-line">Put It All</div>
+    <div class="quote-line highlight">On Black</div>
+    <div class="attribution-box">
+      <div class="attribution">Martin Luther King Jr.</div>
+    </div>
+  </div>
+
+</body>
+</html>

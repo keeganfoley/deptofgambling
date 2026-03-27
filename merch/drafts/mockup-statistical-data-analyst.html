@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #1a1a1a; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: system-ui; gap: 60px; padding: 40px; }
+
+  .shirt-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .label {
+    color: #888;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .shirt {
+    width: 340px;
+    height: 420px;
+    background: #111;
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+  }
+  /* Collar */
+  .shirt::before {
+    content: '';
+    width: 60px;
+    height: 30px;
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    border-bottom: 2px solid #333;
+    border-radius: 0 0 30px 30px;
+    position: absolute;
+    top: 0;
+  }
+  /* Sleeves */
+  .sleeve-left, .sleeve-right {
+    position: absolute;
+    top: 35px;
+    width: 70px;
+    height: 120px;
+    background: #111;
+    border: 2px solid #333;
+    border-radius: 0 0 20px 20px;
+  }
+  .sleeve-left { left: -35px; transform: rotate(15deg); border-top: none; }
+  .sleeve-right { right: -35px; transform: rotate(-15deg); border-top: none; }
+  .shirt-body {
+    border: 2px solid #333;
+    border-top: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 60px;
+  }
+
+  /* OPTION A - Left Chest Corporate */
+  .option-a .design {
+    padding-left: 40px;
+    padding-top: 30px;
+  }
+  .option-a .dog-logo {
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .option-a .title {
+    color: #e0e0e0;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  /* OPTION B - Center Minimal */
+  .option-b .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+  }
+  .option-b .title {
+    color: #e0e0e0;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  /* OPTION C - University/Dept Style */
+  .option-c .design {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    gap: 8px;
+  }
+  .option-c .dept {
+    color: #e0e0e0;
+    font-size: 13px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .option-c .main-text {
+    color: #e0e0e0;
+    font-size: 32px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Georgia, serif;
+  }
+  .option-c .sub {
+    color: #888;
+    font-size: 12px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .option-c .line {
+    width: 60%;
+    height: 1px;
+    background: #444;
+  }
+
+  /* OPTION D - Badge Style */
+  .option-d .design {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+  }
+  .badge {
+    width: 200px;
+    background: #1a1a1a;
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  .badge .badge-header {
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333;
+    width: 100%;
+    text-align: center;
+  }
+  .badge .photo-box {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 10px;
+  }
+  .badge .badge-name {
+    color: #e0e0e0;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .badge .badge-title {
+    color: #aaa;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .badge .badge-clearance {
+    font-size: 9px;
+    color: #ef4444;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-top: 6px;
+    border-top: 1px solid #333;
+    width: 100%;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Option A: Left Chest Corporate -->
+  <div class="shirt-container">
+    <div class="label">A — Corporate</div>
+    <div class="shirt option-a">
+      <div class="sleeve-left"></div>
+      <div class="sleeve-right"></div>
+      <div class="shirt-body">
+        <div class="design">
+          <div class="dog-logo">D.O.G.</div>
+          <div class="title">Statistical Data Analyst</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B: Center Minimal -->
+  <div class="shirt-container">
+    <div class="label">B — Minimal</div>
+    <div class="shirt option-b">
+      <div class="sleeve-left"></div>
+      <div class="sleeve-right"></div>
+      <div class="shirt-body">
+        <div class="design">
+          <div class="title">Risk<br>Management</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C: University/Dept -->
+  <div class="shirt-container">
+    <div class="label">C — University</div>
+    <div class="shirt option-c">
+      <div class="sleeve-left"></div>
+      <div class="sleeve-right"></div>
+      <div class="shirt-body">
+        <div class="design">
+          <div class="dept">Department of</div>
+          <div class="main-text">Gambling</div>
+          <div class="line"></div>
+          <div class="sub">Research Division</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option D: Badge -->
+  <div class="shirt-container">
+    <div class="label">D — Badge</div>
+    <div class="shirt option-d">
+      <div class="sleeve-left"></div>
+      <div class="sleeve-right"></div>
+      <div class="shirt-body">
+        <div class="design">
+          <div class="badge">
+            <div class="badge-header">D.O.G.</div>
+            <div class="photo-box">[PHOTO]</div>
+            <div class="badge-name">[REDACTED]</div>
+            <div class="badge-title">Statistical Data Analyst</div>
+            <div class="badge-clearance">Clearance: Degen</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

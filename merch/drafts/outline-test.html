@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+    padding: 60px;
+    font-family: system-ui;
+  }
+  .label {
+    color: #888;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .row {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+  .sample {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .sample-label {
+    color: #666;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .bg {
+    width: 500px;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+  .bg-white { background: #ffffff; }
+  .bg-black { background: #111111; }
+  .bg-navy { background: #1e3a5f; }
+  .bg-grey { background: #b0b0b0; }
+  .bg-forest { background: #2d5a3d; }
+  .bg-red { background: #8b2020; }
+
+  .portrait { width: 300px; }
+  .portrait img { width: 100%; height: auto; display: block; }
+
+  .text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: -90px;
+  }
+
+  /* === OPTION A: White text + black stroke === */
+  .option-a .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 46px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.15;
+    -webkit-text-stroke: 2px #000000;
+    paint-order: stroke fill;
+  }
+  .option-a .attribution {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px #000000;
+    paint-order: stroke fill;
+  }
+  /* Invert portrait for dark bg */
+  .option-a.on-dark .portrait img { filter: invert(1); }
+
+  /* === OPTION B: Black text + white stroke === */
+  .option-b .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 46px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.15;
+    -webkit-text-stroke: 3px #ffffff;
+    paint-order: stroke fill;
+  }
+  .option-b .attribution {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: #000000;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 2px #ffffff;
+    paint-order: stroke fill;
+  }
+
+  /* === OPTION C: White text + thick text-shadow outline === */
+  .option-c .quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 46px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.15;
+    text-shadow:
+      -2px -2px 0 #000, 2px -2px 0 #000,
+      -2px 2px 0 #000, 2px 2px 0 #000,
+      0 -2px 0 #000, 0 2px 0 #000,
+      -2px 0 0 #000, 2px 0 0 #000;
+  }
+  .option-c .attribution {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 20px;
+    color: #ffffff;
+    letter-spacing: 3px;
+    text-shadow:
+      -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000, 1px 1px 0 #000;
+  }
+  .option-c.on-dark .portrait img { filter: invert(1); }
+</style>
+</head>
+<body>
+
+  <!-- OPTION A: White text + black stroke -->
+  <div class="label">A — White Text + Black Outline</div>
+  <div class="row">
+    <div class="sample">
+      <div class="sample-label">White Shirt</div>
+      <div class="bg bg-white">
+        <div class="portrait"><img src="churchill-portrait.png"></div>
+        <div class="text-block option-a">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Black Shirt</div>
+      <div class="bg bg-black">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block option-a on-dark">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Navy Shirt</div>
+      <div class="bg bg-navy">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block option-a on-dark">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION B: Black text + white stroke -->
+  <div class="label">B — Black Text + White Outline</div>
+  <div class="row">
+    <div class="sample">
+      <div class="sample-label">White Shirt</div>
+      <div class="bg bg-white">
+        <div class="portrait"><img src="churchill-portrait.png"></div>
+        <div class="text-block option-b">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Black Shirt</div>
+      <div class="bg bg-black">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block option-b">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Navy Shirt</div>
+      <div class="bg bg-navy">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block option-b">
+          <div class="quote">"Cash Out Is For Quitters"</div>
+          <div class="attribution">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OPTION C: Original approach (separate files) -->
+  <div class="label">C — Original (No Outline, Separate Files)</div>
+  <div class="row">
+    <div class="sample">
+      <div class="sample-label">White Shirt (black text)</div>
+      <div class="bg bg-white">
+        <div class="portrait"><img src="churchill-portrait.png"></div>
+        <div class="text-block" style="margin-top:-90px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:46px;color:#000;text-align:center;line-height:1.15;">"Cash Out Is For Quitters"</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;font-size:20px;color:#555;letter-spacing:3px;">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Black Shirt (white text)</div>
+      <div class="bg bg-black">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block" style="margin-top:-90px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:46px;color:#fff;text-align:center;line-height:1.15;">"Cash Out Is For Quitters"</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;font-size:20px;color:#ccc;letter-spacing:3px;">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+    <div class="sample">
+      <div class="sample-label">Navy Shirt (white text)</div>
+      <div class="bg bg-navy">
+        <div class="portrait"><img src="churchill-portrait.png" style="filter:invert(1)"></div>
+        <div class="text-block" style="margin-top:-90px;">
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:700;font-style:italic;font-size:46px;color:#fff;text-align:center;line-height:1.15;">"Cash Out Is For Quitters"</div>
+          <div style="font-family:'Cormorant Garamond',serif;font-weight:400;font-style:italic;font-size:20px;color:#ccc;letter-spacing:3px;">— Winston Churchill</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
